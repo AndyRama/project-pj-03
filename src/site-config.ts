@@ -3,7 +3,7 @@ export const SiteConfig = {
   description: "Platforme de cours ",
   prodUrl: "https://school.unlcoaching.com",
   domain: "school.unlcoaching.com",
-  appIcon: "/images/icon.png",
+  appIcon: "/images/Unl.png",
   company: {
     name: "Unlcoaching Inc.",
     address: "1234 Main St, New York, NY 10001",
