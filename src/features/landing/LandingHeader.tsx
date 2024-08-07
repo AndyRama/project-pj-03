@@ -77,20 +77,23 @@ export function LandingHeader() {
           style={{
             opacity: useTransform(scrollYBoundedProgressDelayed, [0, 1], [1, 0]),
           }}
-          className="flex items-center gap-4 text-sm font-medium text-muted-foreground max-sm:hidden"
+          className="flex items-center gap-4 text-sm font-medium text-muted-foreground max-sm:hidden sm:gap-4"
         >
           {topRoutes.map((route) => (
             <a href={route.path} key={route.path}>
               {route.label}
             </a>
           ))}
+          {/* <AuthButtonClient /> */}
           <ThemeToggle />
-          <AuthButtonClient />
         </motion.nav>
-        <div className="z-20 sm:hidden">
+        
+        <div className="z-20 flex items-center gap-2 px-2 sm:hidden">        
+        {/* <AuthButtonClient /> */}
           <Sheet>
+                <ThemeToggle />
             <SheetTrigger>
-              <Menu className="w-5 h-5" />
+              <Menu className="h-5 w-5" />
             </SheetTrigger>
             <SheetContent className="flex flex-col gap-4">
               <div className="flex flex-col gap-4">
@@ -107,5 +110,4 @@ export function LandingHeader() {
     </motion.header>
   );
 }
-
 const clamp = (number: number, min: number, max: number) => Math.min(Math.max(number, min), max);

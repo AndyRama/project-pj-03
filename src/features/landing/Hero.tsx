@@ -10,19 +10,18 @@ export const Hero = () => {
   return (
     <main className="relative m-auto my-12 flex min-h-[700px] w-full max-w-7xl items-center gap-4 px-8 max-lg:flex-col">
       <div className="relative flex flex-1 flex-col items-start gap-4 lg:gap-6 xl:gap-8">
-        <Typography variant="h1" className="!leading-tight">
-          Write the best content and{" "}
+        <Typography variant="h1" className="text-5xl !leading-tight">
+          Jeremy Prat{" "}
           <span className="inline-block -rotate-2 bg-foreground text-background">
-            Grow your{" "}
+           Coaching{" "}
             <span className="relative inline-block">
-              <span>business</span>
+              <span>Personnel</span>
               <CircleSvg className="fill-primary" />
             </span>
           </span>
         </Typography>
         <Typography variant="large">
-          Build for Thread, create, schedule and publish your content to your
-          account with AI.
+        Un allier entraînement rigoureux et aide à la nutrition équilibrée pour un mode de vie sain et durable.
         </Typography>
 
         <Link
