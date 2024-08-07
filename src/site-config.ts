@@ -1,25 +1,25 @@
 export const SiteConfig = {
-  title: "Now.ts",
-  description: "A template description for Now.ts",
-  prodUrl: "https://demo.nowts.app",
-  domain: "demo.nowts.app",
+  title: "Unl - school ",
+  description: "Platforme de cours ",
+  prodUrl: "https://school.unlcoaching.com",
+  domain: "school.unlcoaching.com",
   appIcon: "/images/icon.png",
   company: {
-    name: "NowTS Inc.",
+    name: "Unlcoaching Inc.",
     address: "1234 Main St, New York, NY 10001",
   },
   brand: {
     primary: "#007291",
   },
   email: {
-    from: "NowTS <nowts@resend.dev>", // Replace this with your domaine email
-    contact: "contact@nowts.app",
+    from: "Unlcoaching <Unlcoaching@resend.dev>", // Replace this with your domaine email
+    contact: "contact@Unlcoaching.app",
   },
   maker: {
-    image: "https://melvynx.com/images/me/twitter-en.jpg",
-    website: "https://melvynx.com",
-    twitter: "https://twitter.com/melvyn_me",
-    name: "Melvynx",
+    image: "",
+    website: "https://andyramaroson.com",
+    twitter: "https://x.com/AndyRamaroson",
+    name: "test",
   },
   auth: {
     password: false as boolean,

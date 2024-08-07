@@ -26,15 +26,15 @@ export default function HomePage() {
 
       <Hero />
 
-      <StatsSection />
+      {/* <StatsSection /> */}
 
-      <BentoGridSection />
+      {/* <BentoGridSection /> */}
 
-      <PainSection />
+      {/* <PainSection /> */}
 
       <SectionDivider />
 
-      <ReviewTriple
+      {/* <ReviewTriple
         reviews={[
           {
             image: "https://i.pravatar.cc/300?u=a1",
@@ -55,20 +55,20 @@ export default function HomePage() {
             role: "Entrepreneur",
           },
         ]}
-      />
+      /> */}
 
       <SectionDivider />
 
-      <ReviewSingle
+      {/* <ReviewSingle
         image="https://i.pravatar.cc/300?u=5"
         name="Michel"
         review={`Threader **has completely transformed** the way I manage my social media content. The ability to schedule posts and use AI for content suggestions **has saved me hours each week.**`}
         role="Digital Marketer"
         compagnyImage="https://1000logos.net/wp-content/uploads/2017/03/McDonalds-Logo-2003.png"
         key={1}
-      />
+      /> */}
 
-      <FeaturesSection
+      {/* <FeaturesSection
         features={[
           {
             badge: "⏰ Schedule",
@@ -130,13 +130,12 @@ export default function HomePage() {
             ),
           },
         ]}
-      />
+      /> */}
 
-      <CTAImageSection />
 
-      <CTASectionCard />
+      {/* <CTASectionCard /> */}
 
-      <CtaSection />
+      {/* <CtaSection /> */}
 
       <Pricing
         cards={[
@@ -184,7 +183,7 @@ export default function HomePage() {
             question: "What is Threader?",
             answer:
               "Threader is an innovative platform designed to help you write, schedule, and publish content to your account with the assistance of AI, enhancing your business's online presence.",
-          },
+            },
           {
             question: "How does AI Content Generation work?",
             answer:
@@ -193,12 +192,12 @@ export default function HomePage() {
           {
             question: "Can I schedule my threads in advance?",
             answer:
-              "Yes, with Threader, you can schedule your threads for a specific time, allowing you to maintain a consistent online presence without the need to manually post every day.",
+            "Yes, with Threader, you can schedule your threads for a specific time, allowing you to maintain a consistent online presence without the need to manually post every day.",
           },
           {
             question: "What is the Now.TS project?",
             answer:
-              "Now.TS is a new project announced on our platform that enables users to create professional Next.js applications in days, streamlining the development process.",
+            "Now.TS is a new project announced on our platform that enables users to create professional Next.js applications in days, streamlining the development process.",
           },
           {
             question: "How can I get more followers?",
@@ -208,7 +207,7 @@ export default function HomePage() {
           {
             question: "What are the benefits of posting with Threader?",
             answer:
-              "Posting with Threader allows you to schedule posts, avoid daily manual postings, track your scheduled content easily, and maintain consistency in your online activity.",
+            "Posting with Threader allows you to schedule posts, avoid daily manual postings, track your scheduled content easily, and maintain consistency in your online activity.",
           },
           {
             question: "What pricing plans does Threader offer?",
@@ -226,7 +225,7 @@ export default function HomePage() {
             image: "https://i.pravatar.cc/300?u=b1",
             name: "Eva",
             review:
-              "Since I started using Threader, my content creation process has been streamlined. The AI suggestions are spot on, helping me to connect better with my audience. Highly recommend for anyone looking to elevate their content game.",
+            "Since I started using Threader, my content creation process has been streamlined. The AI suggestions are spot on, helping me to connect better with my audience. Highly recommend for anyone looking to elevate their content game.",
             role: "Content Creator",
           },
           {
@@ -240,21 +239,21 @@ export default function HomePage() {
             image: "https://i.pravatar.cc/300?u=b3",
             name: "Mia",
             review:
-              "The analytics provided by Threader are invaluable. They've given me insights into what my audience loves, helping me double my engagement rate in just a few months.",
+            "The analytics provided by Threader are invaluable. They've given me insights into what my audience loves, helping me double my engagement rate in just a few months.",
             role: "Digital Marketer",
           },
           {
             image: "https://i.pravatar.cc/300?u=b4",
             name: "Noah",
             review:
-              "I was skeptical about AI-generated content, but Threader changed my mind. The content feels personal and has significantly increased my interaction rates.",
+            "I was skeptical about AI-generated content, but Threader changed my mind. The content feels personal and has significantly increased my interaction rates.",
             role: "Blogger",
           },
           {
             image: "https://i.pravatar.cc/300?u=b5",
             name: "Isabella",
             review:
-              "Threader's user interface is incredibly user-friendly. I was able to onboard my team in no time, and we've seen a marked improvement in our social media performance.",
+            "Threader's user interface is incredibly user-friendly. I was able to onboard my team in no time, and we've seen a marked improvement in our social media performance.",
             role: "Team Leader",
           },
           {
@@ -283,9 +282,9 @@ export default function HomePage() {
             name: "Charlotte",
             review:
               "I appreciate the flexibility in Threader's pricing plans. It's accessible for creators at any stage of their journey, from beginners to established influencers.",
-            role: "Entrepreneur",
-          },
-          {
+              role: "Entrepreneur",
+            },
+            {
             image: "https://i.pravatar.cc/300?u=b10",
             name: "James",
             review:
@@ -294,6 +293,8 @@ export default function HomePage() {
           },
         ]}
       />
+
+      <CTAImageSection />
 
       <EmailFormSection />
 

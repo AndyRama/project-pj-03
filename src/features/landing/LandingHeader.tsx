@@ -6,15 +6,14 @@ import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 import { useEffect } from "react";
 import { AuthButtonClient } from "../auth/AuthButtonClient";
 import { ThemeToggle } from "../theme/ThemeToggle";
+import { Sheet, SheetTrigger, SheetContent } from "../../components/ui/sheet";
+import { Menu } from "react-feather"; 
+import Link from "next/link"; 
 
 function useBoundedScroll(threshold: number) {
   const { scrollY } = useScroll();
   const scrollYBounded = useMotionValue(0);
-  const scrollYBoundedProgress = useTransform(
-    scrollYBounded,
-    [0, threshold],
-    [0, 1],
-  );
+  const scrollYBoundedProgress = useTransform(scrollYBounded, [0, threshold], [0, 1]);
 
   useEffect(() => {
     const onChange = (current: number) => {
@@ -45,11 +44,15 @@ function useBoundedScroll(threshold: number) {
 
 export function LandingHeader() {
   const { scrollYBoundedProgress } = useBoundedScroll(400);
-  const scrollYBoundedProgressDelayed = useTransform(
-    scrollYBoundedProgress,
-    [0, 0.75, 1],
-    [0, 0, 1],
-  );
+  const scrollYBoundedProgressDelayed = useTransform(scrollYBoundedProgress, [0, 0.75, 1], [0, 0, 1]);
+
+  const topRoutes = [
+    { path: "#features", label: "Accueil" },
+    { path: "#pricing", label: "Prestations" },
+    { path: "#features", label: "Blog" },
+    { path: "#pricing", label: "Team" },
+    { path: "/posts", label: "Contact" }
+  ];
 
   return (
     <motion.header
@@ -58,42 +61,51 @@ export function LandingHeader() {
       }}
       className="fixed inset-x-0 z-50 flex h-20 w-screen shadow backdrop-blur-md"
     >
-      <div className="mx-auto flex w-full max-w-3xl items-center justify-between px-4 lg:px-8">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 lg:px-8">
         <div className="flex items-center gap-1">
           <LogoSvg size={24} />
           <motion.p
             style={{
-              scale: useTransform(
-                scrollYBoundedProgressDelayed,
-                [0, 1],
-                [1, 0.9],
-              ),
+              scale: useTransform(scrollYBoundedProgressDelayed, [0, 1], [1, 0.9]),
             }}
-            className="flex origin-left items-center text-xl font-semibold uppercase max-sm:hidden"
+            className="flex origin-left items-center text-xl font-semibold uppercase "
           >
             {SiteConfig.title}
           </motion.p>
         </div>
         <motion.nav
           style={{
-            opacity: useTransform(
-              scrollYBoundedProgressDelayed,
-              [0, 1],
-              [1, 0],
-            ),
+            opacity: useTransform(scrollYBoundedProgressDelayed, [0, 1], [1, 0]),
           }}
-          className="flex items-center gap-4 text-sm font-medium text-muted-foreground"
+          className="flex items-center gap-4 text-sm font-medium text-muted-foreground max-sm:hidden"
         >
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="/posts">Blog</a>
-          <AuthButtonClient />
+          {topRoutes.map((route) => (
+            <a href={route.path} key={route.path}>
+              {route.label}
+            </a>
+          ))}
           <ThemeToggle />
+          <AuthButtonClient />
         </motion.nav>
+        <div className="z-20 sm:hidden">
+          <Sheet>
+            <SheetTrigger>
+              <Menu className="w-5 h-5" />
+            </SheetTrigger>
+            <SheetContent className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4">
+                {topRoutes.map((route) => (
+                  <Link href={route.path} key={route.path} className="text-sm font-medium hover:text-[#FDAB04]">
+                    {route.label}
+                  </Link>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </motion.header>
   );
 }
 
-const clamp = (number: number, min: number, max: number) =>
-  Math.min(Math.max(number, min), max);
+const clamp = (number: number, min: number, max: number) => Math.min(Math.max(number, min), max);

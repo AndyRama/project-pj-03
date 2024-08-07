@@ -2,7 +2,7 @@ import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
 import { SiteConfig } from "@/site-config";
 import Link from "next/link";
-import { Maker } from "../maker/Maker";
+// import { Maker } from "../maker/Maker";
 
 export const Footer = () => {
   return (
@@ -15,13 +15,13 @@ export const Footer = () => {
               <Typography>{SiteConfig.company.name}</Typography>
               <Typography>{SiteConfig.company.address}</Typography>
             </div>
-            <Maker />
+            {/* <Maker /> */}
             <Typography variant="muted" className="italic">
               © {new Date().getFullYear()} {SiteConfig.company.name} - All
               rights reserved.
             </Typography>
           </div>
-          <div className="flex flex-col items-end gap-4">
+          <div className="flex flex-row items-end gap-4 md:flex-col">
             <Typography variant="large">Legal</Typography>
             <Typography
               as={Link}
