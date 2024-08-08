@@ -1,5 +1,5 @@
 export const SiteConfig = {
-  title: "unlcoaching",
+  title: "Unlcoaching",
   description: "Platforme de cours ",
   prodUrl: "https://school.unlcoaching.com",
   domain: "school.unlcoaching.com",

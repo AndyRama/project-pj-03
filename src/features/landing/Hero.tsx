@@ -12,26 +12,41 @@ export const Hero = () => {
       {/* Image - main - bg-cover  */}
       <div
         // eslint-disable-next-line tailwindcss/enforces-negative-arbitrary-values
-        className="md-h-[110vh] -mt-[156px] bg-cover bg-fixed "
+        className="-mt-[40px] h-[130vh] bg-cover bg-fixed md:-mt-[46px] md:h-[90vh] "
         style={{
           backgroundImage: `url('/images/salle-de-sport.jpg')`,
         }}
       >
-        <div className="relative m-auto my-12 flex min-h-[700px] w-full max-w-7xl items-center gap-4 px-8 max-md:flex-col">
-          <div className="relative flex flex-1 flex-col items-start gap-4 lg:gap-6 xl:gap-8">
-            <Typography variant="h1" className="text-5xl !leading-tight">
-              <span className="inline-block -rotate-2 text-6xl text-white ">
+        <div className="relative m-auto my-12 flex min-h-[800px] w-full max-w-7xl items-center gap-4 px-8 max-md:flex-col">
+          <div className="relative mt-20 flex flex-1 flex-col items-start gap-8 md:gap-4 lg:gap-8">
+          <Typography variant="h3" className="text-3xl !leading-tight">
+              <span className="inline-block text-white ">
+                 <br />
+                <span className="relative inline-block px-4">
+                  <span className="text-5xl font-bold">+ 350</span>
+                  <br />
+                  <span className="text-sm">Transformations réussit</span>
+                </span>
+                <span className="relative inline-block px-4">
+                  <span className="text-5xl font-bold">+ 8</span>
+                  <br />
+                  <span className="text-sm font-semibold">Années expériences</span>
+                </span>
+              </span>
+            </Typography>
+            <Typography variant="h1" className="text-3xl !leading-tight">
+              <span className="inline-block -rotate-2 text-6xl ">
                 Jeremy Prat <br />
                 <span className="relative inline-block">
-                  <span>Coaching</span>
+                  <span className="text-white">Coaching</span>
                   <br />
-                  <span className="text-6xl ">Personnel</span>
+                  <span className="text-6xl">Personnel</span>
                   <CircleSvg className="fill-primary" />
                 </span>
               </span>
             </Typography>
-            <Typography variant="large">
-              Allier entraînement rigoureux et nutrition équilibrée pour un mode
+            <Typography variant="large" className="text-white">
+              Allier entraînement rigoureux et nutrition équilibrée <br/>   pour un mode
               de vie sain et durable.
             </Typography>
 
@@ -59,11 +74,11 @@ export const Hero = () => {
               1200+ followers
             </ReviewSmall>
           </div>
-          <div className="flex flex-1 justify-end px-8">
+          <div className="flex flex-1 justify-end ">
             <img
               src="/images/jeremy.jpg"
-              className="max-w-md rounded-md object-contain max-md:max-w-md"
-              alt="Hero images"
+              className="max-w-lg rounded-md object-contain px-8 max-md:max-w-md md:px-4"
+              alt="Hero images profile jeremy prat"
             />
           </div>
         </div>

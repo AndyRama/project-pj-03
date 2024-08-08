@@ -1,10 +1,10 @@
 "use client";
 
-import { LogoSvg } from "@/components/svg/LogoSvg";
+import { LogoSvg } from "@/components/svg/Logo";
 import { SiteConfig } from "@/site-config";
 import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 import { useEffect } from "react";
-import { AuthButtonClient } from "../auth/AuthButtonClient";
+// import { AuthButtonClient } from "../auth/AuthButtonClient";
 import { ThemeToggle } from "../theme/ThemeToggle";
 import { Sheet, SheetTrigger, SheetContent } from "../../components/ui/sheet";
 import { Menu } from "react-feather"; 
@@ -47,11 +47,11 @@ export function LandingHeader() {
   const scrollYBoundedProgressDelayed = useTransform(scrollYBoundedProgress, [0, 0.75, 1], [0, 0, 1]);
 
   const topRoutes = [
-    { path: "#features", label: "Accueil" },
-    { path: "#pricing", label: "Prestations" },
-    { path: "#features", label: "Blog" },
-    { path: "#pricing", label: "Team" },
-    { path: "/posts", label: "Contact" }
+    { path: "#", label: "Accueil" },
+    { path: "/prestations", label: "Prestations" },
+    { path: "/posts", label: "Blog" },
+    { path: "/team", label: "Team" },
+    { path: "/contact", label: "Contact" }
   ];
 
   return (
@@ -68,7 +68,7 @@ export function LandingHeader() {
             style={{
               scale: useTransform(scrollYBoundedProgressDelayed, [0, 1], [1, 0.9]),
             }}
-            className="flex origin-left items-center text-xl font-semibold uppercase "
+            className="flex origin-left items-center text-2xl font-semibold uppercase text-orange-500 "
           >
             {SiteConfig.title}
           </motion.p>
@@ -77,7 +77,7 @@ export function LandingHeader() {
           style={{
             opacity: useTransform(scrollYBoundedProgressDelayed, [0, 1], [1, 0]),
           }}
-          className="flex items-center gap-4 text-sm font-medium text-muted-foreground max-sm:hidden sm:gap-4"
+          className="flex items-center gap-4 text-sm font-medium max-sm:hidden sm:gap-4"
         >
           {topRoutes.map((route) => (
             <a href={route.path} key={route.path}>
@@ -85,15 +85,14 @@ export function LandingHeader() {
             </a>
           ))}
           {/* <AuthButtonClient /> */}
-          <ThemeToggle />
+        <ThemeToggle/>
         </motion.nav>
         
         <div className="z-20 flex items-center gap-2 px-2 sm:hidden">        
         {/* <AuthButtonClient /> */}
           <Sheet>
-                <ThemeToggle />
             <SheetTrigger>
-              <Menu className="h-5 w-5" />
+              <Menu className="size-5" />
             </SheetTrigger>
             <SheetContent className="flex flex-col gap-4">
               <div className="flex flex-col gap-4">
@@ -105,6 +104,7 @@ export function LandingHeader() {
               </div>
             </SheetContent>
           </Sheet>
+          <ThemeToggle />
         </div>
       </div>
     </motion.header>

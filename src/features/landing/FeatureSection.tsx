@@ -15,7 +15,7 @@ export const FeaturesSection = ({
   return (
     <SectionLayout size="sm" className="relative " id="features">
       <div className="relative flex flex-col gap-16 lg:gap-28">
-        <div className="flex flex-col items-center gap-2">
+        {/* <div className="flex flex-col items-center gap-2">
           <Badge>The features you NEED.</Badge>
           <Typography variant="h2" className="m-auto max-w-xl text-center">
             More than a post schedulure, we will help you <u>grow</u>.
@@ -29,7 +29,7 @@ export const FeaturesSection = ({
             eaque esse a doloremque, iusto libero eligendi, animi minus
             architecto. Modi, consectetur?
           </Typography>
-        </div>
+        </div> */}
         {features.map((f, i) => {
           return (
             <FeatureLine
