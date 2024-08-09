@@ -29,27 +29,35 @@ export default function HomePage() {
       <FeaturesSection
         features={[
           {
-            badge: "⏰ Schedule",
-            title: "Schedule your post",
-            description: "Schedule your post on the Threader in a few clicks.",
+            badge: "Mes valeurs",
+            title: "Qui suis-je ?",
+            description:
+              "Bienvenue dans mon univers, je suis Jeremy, un ancien militaire qui a trouvé sa passion dans le coaching sportif et athléte de haut niveau en tant qu'athlète compétitif en Men's Physique IFBB.",
+            description1:
+              "Fort de mon expérience dans l'armée, j'ai forgé ma détermination et mon engagement envers l'excellence, que ce soit sur le plan physique ou mental.",
+            description2:
+              "Mon parcours m'a conduit à briller sur des scènes nationales et internationales telles que le championnat de France et la Diamond Cup, où j'ai pu démontrer mon savoir-faire et ma passion pour le fitness. Ma mission est simple: vous aider à réaliser vos objectifs de fitness, qu'ils soient modestes ou ambitieux.",
+
             component: (
               <Image
-                src="/images/placeholder1.gif"
+                src="/images/jeremy2.jpg"
                 alt=""
                 width={200}
                 height={100}
-                className="h-auto w-full object-cover"
+                className="h-auto w-full rounded-md object-cover"
               />
             ),
           },
           {
-            badge: "📅 Calendar",
-            title: "See what you scheduled",
+            badge: "Mes valeurs",
+            title: "Philosophie",
             description:
-              "With the calendar view, you can see what you scheduled and when.",
+              "Allier entraînement rigoureux et nutrition équilibrée pour un mode de vie sain et durable. Je crois fermement que la réussite en matière de fitness réside dans un équilibre entre un entraînement bien structuré et une alimentation adaptée.",
+            description1: "",
+            description2: "",
             component: (
               <Image
-                src="/images/placeholder1.gif"
+                src="/images/colaborate.jpg"
                 alt=""
                 width={200}
                 height={100}
@@ -96,12 +104,15 @@ export default function HomePage() {
       <FeaturesSection
         features={[
           {
-            badge: "⏰ Schedule",
-            title: "Schedule your post",
-            description: "Schedule your post on the Threader in a few clicks.",
+            badge: "Mes valeurs",
+            title: "Mon approche",
+            description:
+              "Ma passion pour le fitness et la santé globale m'a amené à devenir coach sportif, spécialisé dans les transformations physiques, la perte de poids, la préparation aux compétitions, et plus encore.",
+            description1: "",
+            description2: "",
             component: (
               <Image
-                src="/images/placeholder1.gif"
+                src="/images/jeremy4.jpg"
                 alt=""
                 width={200}
                 height={100}
@@ -113,64 +124,7 @@ export default function HomePage() {
       />
       {/* BLOG CONTENT */}
 
-      <FeaturesSection
-        features={[
-          {
-            badge: "⏰ Schedule",
-            title: "Schedule your post",
-            description: "Schedule your post on the Threader in a few clicks.",
-            component: (
-              <Image
-                src="/images/placeholder1.gif"
-                alt=""
-                width={200}
-                height={100}
-                className="h-auto w-full object-cover"
-              />
-            ),
-          },
-        ]}
-      />
-
-      <FeaturesSection
-        features={[
-          {
-            badge: "⏰ Schedule",
-            title: "Schedule your post",
-            description: "Schedule your post on the Threader in a few clicks.",
-            component: (
-              <Image
-                src="/images/placeholder1.gif"
-                alt=""
-                width={200}
-                height={100}
-                className="h-auto w-full object-cover"
-              />
-            ),
-          },
-        ]}
-      />
-
-      <FeaturesSection
-        features={[
-          {
-            badge: "⏰ Schedule",
-            title: "Schedule your post",
-            description: "Schedule your post on the Threader in a few clicks.",
-            component: (
-              <Image
-                src="/images/placeholder1.gif"
-                alt=""
-                width={200}
-                height={100}
-                className="h-auto w-full object-cover"
-              />
-            ),
-          },
-        ]}
-      />
-
-<ReviewGrid
+      <ReviewGrid
         reviews={[
           {
             image: "https://i.pravatar.cc/300?u=b1",

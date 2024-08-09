@@ -4,7 +4,7 @@ import { LogoSvg } from "@/components/svg/Logo";
 import { SiteConfig } from "@/site-config";
 import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 import { useEffect } from "react";
-// import { AuthButtonClient } from "../auth/AuthButtonClient";
+import { AuthButtonClient } from "../auth/AuthButtonClient";
 import type { PropsWithChildren } from "react";
 import { ThemeToggle } from "../theme/ThemeToggle";
 import { Sheet, SheetTrigger, SheetContent } from "../../components/ui/sheet";
@@ -48,11 +48,11 @@ export function HeaderBase({ children }: PropsWithChildren) {
   const scrollYBoundedProgressDelayed = useTransform(scrollYBoundedProgress, [0, 0.75, 1], [0, 0, 1]);
 
   const topRoutes = [
-    { path: "#", label: "Accueil" },
-    { path: "/prestations", label: "Prestations" },
+    { path: "/", label: "Accueil" },
     { path: "/posts", label: "Blog" },
-    { path: "/team", label: "Team" },
-    { path: "/contact", label: "Contact" }
+    { path: "/contact", label: "Contact" },
+    { path: "/prestations", label: "Prestations" },
+    { path: "/team", label: "Team" }
   ];
 
   return (
@@ -85,12 +85,12 @@ export function HeaderBase({ children }: PropsWithChildren) {
               {route.label}
             </a>
           ))}
-          {/* <AuthButtonClient /> */}
         <ThemeToggle/>
+        <AuthButtonClient />
         </motion.nav>
         
         <div className="z-20 flex items-center gap-2 px-2 sm:hidden">        
-        {/* <AuthButtonClient /> */}
+        <ThemeToggle />
           <Sheet>
             <SheetTrigger>
               <Menu className="size-5" />
@@ -105,7 +105,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
               </div>
             </SheetContent>
           </Sheet>
-          <ThemeToggle />
+          <AuthButtonClient />
         </div>
       </div>
     </motion.header>

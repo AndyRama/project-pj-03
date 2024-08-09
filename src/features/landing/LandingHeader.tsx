@@ -4,7 +4,7 @@ import { LogoSvg } from "@/components/svg/Logo";
 import { SiteConfig } from "@/site-config";
 import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 import { useEffect } from "react";
-// import { AuthButtonClient } from "../auth/AuthButtonClient";
+import { AuthButtonClient } from "../auth/AuthButtonClient";
 import { ThemeToggle } from "../theme/ThemeToggle";
 import { Sheet, SheetTrigger, SheetContent } from "../../components/ui/sheet";
 import { Menu } from "react-feather"; 
@@ -47,11 +47,11 @@ export function LandingHeader() {
   const scrollYBoundedProgressDelayed = useTransform(scrollYBoundedProgress, [0, 0.75, 1], [0, 0, 1]);
 
   const topRoutes = [
-    { path: "#", label: "Accueil" },
-    { path: "/prestations", label: "Prestations" },
+    { path: "/", label: "Accueil" },
     { path: "/posts", label: "Blog" },
-    { path: "/team", label: "Team" },
-    { path: "/contact", label: "Contact" }
+    { path: "/contact", label: "Contact" },
+    { path: "/prestations", label: "Prestations" },
+    { path: "/team", label: "Team" }
   ];
 
   return (
@@ -68,7 +68,7 @@ export function LandingHeader() {
             style={{
               scale: useTransform(scrollYBoundedProgressDelayed, [0, 1], [1, 0.9]),
             }}
-            className="flex origin-left items-center text-2xl font-semibold uppercase text-orange-500 "
+            className="hidden origin-left items-center text-3xl font-bold text-orange-500 md:flex "
           >
             {SiteConfig.title}
           </motion.p>
@@ -84,18 +84,19 @@ export function LandingHeader() {
               {route.label}
             </a>
           ))}
-          {/* <AuthButtonClient /> */}
-        <ThemeToggle/>
+          <ThemeToggle/>
+          <AuthButtonClient />
         </motion.nav>
         
         <div className="z-20 flex items-center gap-2 px-2 sm:hidden">        
-        {/* <AuthButtonClient /> */}
+          <ThemeToggle />
+          <AuthButtonClient />
           <Sheet>
             <SheetTrigger>
               <Menu className="size-5" />
             </SheetTrigger>
             <SheetContent className="flex flex-col gap-4">
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4">                
                 {topRoutes.map((route) => (
                   <Link href={route.path} key={route.path} className="text-sm font-medium hover:text-[#FDAB04]">
                     {route.label}
@@ -104,7 +105,7 @@ export function LandingHeader() {
               </div>
             </SheetContent>
           </Sheet>
-          <ThemeToggle />
+        
         </div>
       </div>
     </motion.header>
