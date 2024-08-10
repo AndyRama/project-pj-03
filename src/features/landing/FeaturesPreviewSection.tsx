@@ -12,7 +12,7 @@ type Feature = {
   label: string;
   icon: ReactNode;
   gif: string;
-  description: string;
+  description: string; 
 };
 
 export type FeaturesPreviewProps = {

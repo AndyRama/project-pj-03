@@ -25,7 +25,7 @@ export type SectionLayoutProps = {
 } & ComponentPropsWithoutRef<"div">;
 
 export const SectionLayout = ({
-  size = "base",
+  size = "lg",
   variant = "default",
   className,
   containerClassName,
