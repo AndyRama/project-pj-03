@@ -134,7 +134,7 @@ export default function HomePage() {
       <div className="flex flex-col items-center gap-2">
         <Badge>Retour de ma formation</Badge>
         <Typography variant="h2" className="m-auto max-w-xl text-center">
-        Ce qu'ils pensent de mes <u>services</u>!
+        Ce qu'ils pensent de mes <u>services </u>!
         </Typography>      
       </div>
 
