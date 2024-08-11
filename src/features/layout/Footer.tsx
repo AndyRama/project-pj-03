@@ -43,10 +43,10 @@ export const Footer = () => {
       <Layout className="mt-12">
         <LayoutContent className="flex justify-between max-sm:flex-col">
           <div className="flex flex-col gap-4 ">
-            <div className="space-y-1">
-              <Typography variant="h3">{SiteConfig.title}</Typography>
-              <Typography>{SiteConfig.company.name}</Typography>
-              <Typography>{SiteConfig.company.address}</Typography>
+            <div className="space-y-1 ">
+              <Typography variant="h3" className="text-orange-500">{SiteConfig.title}</Typography>
+              <Typography className="text-white">{SiteConfig.company.name}</Typography>
+              <Typography className="text-white">{SiteConfig.company.address}</Typography>
             </div>
             <div className="mt-5 flex">
               <Link href="#" aria-label="Instagram" className="mr-4 text-2xl text-white hover:text-orange-200">
