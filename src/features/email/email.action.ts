@@ -29,6 +29,6 @@ export const addEmailAction = action
 
       return { email };
     } catch {
-      throw new ActionError("The email is already in use");
+      throw new ActionError("Cette email est déja utilisé !");
     }
   });

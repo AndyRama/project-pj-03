@@ -91,7 +91,7 @@ export const EmailForm = ({
                   <FormItem className="relative w-full">
                     <FormControl>
                       <Input
-                        className="rounded-lg border-accent-foreground/20 bg-accent px-4 py-6 text-lg focus-visible:ring-foreground"
+                        className="border-accent-foreground/20 bg-accent px-4 py-6 text-lg focus-visible:ring-foreground"
                         placeholder="Ton email"
                         {...field}
                       />
@@ -113,7 +113,7 @@ export const EmailForm = ({
                 <AlertCircle size={20} />
                 <AlertTitle>{submit.error.message}</AlertTitle>
                 <AlertDescription>
-                  Try another email address or contact us.
+                  Essaye un autre email ou contact nous.
                 </AlertDescription>
               </Alert>
             )}

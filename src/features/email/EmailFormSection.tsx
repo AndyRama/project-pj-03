@@ -16,7 +16,7 @@ export const EmailFormSection = () => {
       <div className="relative m-auto flex max-w-xl flex-col gap-4 text-center">
         <Typography
           variant="small"
-          className="font-extrabold uppercase text-gradient bg-gradient-to-r from-orange-600 via-red-400 to-yellow-400 "
+          className="font-extrabold uppercase text-primary"
         >
           Rejoinds la communauté 
         </Typography>
@@ -26,15 +26,15 @@ export const EmailFormSection = () => {
           actualité.
           </span>
         </Typography>
+        <div className="mx-auto mt-6 w-full max-w-md text-black">
+          <EmailForm
+            submitButtonLabel="Join"
+            successMessage="Merci d'avoir rejoint la communauté!"
+          />
+        </div>
         <Typography variant="h3">
           Je partage de nombreux conseils et pratique chaques semaines dans mes articles !
         </Typography>
-        <div className="mx-auto mt-6 w-full max-w-md">
-          <EmailForm
-            submitButtonLabel="Join"
-            successMessage="Merci d'avoir rejoint la communauté !"
-          />
-        </div>
       </div>
     </SectionLayout>
   );
