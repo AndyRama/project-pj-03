@@ -1,3 +1,5 @@
+import { Badge } from "@/components/ui/badge";
+import { Typography } from "@/components/ui/typography";
 import { EmailFormSection } from "@/features/email/EmailFormSection";
 import { FeaturesSection } from "@/features/landing/FeatureSection";
 import { Hero } from "@/features/landing/Hero";
@@ -122,7 +124,19 @@ export default function HomePage() {
           },
         ]}
       />
-      {/* BLOG CONTENT */}
+      {/* Blog Content */}
+
+
+      <SectionDivider />
+
+
+      {/* Reviews Grid Content */}
+      <div className="flex flex-col items-center gap-2">
+        <Badge>Retour de ma formation</Badge>
+        <Typography variant="h2" className="m-auto max-w-xl text-center">
+        Ce qu'ils pensent de mes <u>services</u>!
+        </Typography>      
+      </div>
 
       <ReviewGrid
         reviews={[

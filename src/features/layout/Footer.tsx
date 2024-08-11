@@ -40,7 +40,7 @@ const footerContent = {
 export const Footer = () => {
   return (
     <footer className="bg-[#1D1D1D]">
-      <Layout className="mt-12">
+      <Layout className="mt-12 pb-12">
         <LayoutContent className="flex justify-between max-sm:flex-col">
           <div className="flex flex-col gap-4 ">
             <div className="space-y-1 ">
