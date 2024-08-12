@@ -1,3 +1,5 @@
+"use client" 
+
 import { Badge } from "@/components/ui/badge";
 import { Typography } from "@/components/ui/typography";
 import { EmailFormSection } from "@/features/email/EmailFormSection";
@@ -10,6 +12,7 @@ import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
 import { Footer } from "@/features/layout/Footer";
 import Image from "next/image";
 import CardGrid from "@/features/landing/CardGrid";
+import RecentBlog from "@/features/landing/RecentBlog";
 
 export default function HomePage() {
   return (
@@ -64,7 +67,7 @@ export default function HomePage() {
 
       <SectionDivider />
 
-      <CardGrid/>
+      <CardGrid />
 
       <SectionDivider />
 
@@ -90,19 +93,18 @@ export default function HomePage() {
         ]}
       />
 
-
       {/* Blog Content */}
 
+      <RecentBlog />
 
       <SectionDivider />
-
 
       {/* Reviews Grid Content */}
       <div className="flex flex-col items-center gap-2">
         <Badge>Retour de ma formation</Badge>
         <Typography variant="h2" className="m-auto max-w-xl text-center">
-        Ce qu'ils pensent de mes <u>services </u>!
-        </Typography>      
+          Ce qu'ils pensent de mes <u>services </u>!
+        </Typography>
       </div>
 
       <ReviewGrid

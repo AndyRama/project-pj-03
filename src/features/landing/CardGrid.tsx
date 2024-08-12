@@ -40,7 +40,7 @@ export const CardImage = ({ title, years, image, index }: CardImageProps) => {
             width={400}
             height={400}
             className="h-[300px] w-full object-cover object-center transition-all
-                duration-300 ease-in-out group-hover:scale-[1.1]"
+                duration-300 ease-in-out group-hover:scale-110"
           />
         </CardHeader>
         <CardContent>
@@ -53,7 +53,7 @@ export const CardImage = ({ title, years, image, index }: CardImageProps) => {
   )
 }
 
-export const CardGridImage = ({ className }: { className?: string }) => {
+export const CardGridImage = () => {
   const cards = [
     {
       title: '#Arcachon #Team #Vélo #Event',
@@ -78,12 +78,12 @@ export const CardGridImage = ({ className }: { className?: string }) => {
   ];
 
   return (
-    <Layout className={`container mx-auto rounded-md px-4 ${className}`}>
-      <div className="mb-2 mt-[-18rem] justify-center py-16 md:mt-0 md:flex">
+    <Layout>
+      <div className="container mx-auto -mt-32 mb-2 justify-center rounded-md md:flex md:px-4">
         <div
           className="mx-auto mt-10 grid
            w-full grid-cols-1 gap-6 text-gray-500 md:grid-cols-2 
-           lg:w-10/12 lg:grid-cols-2 xl:grid-cols-4"
+           lg:w-10/12 lg:grid-cols-4"
         >
           {cards.slice(0, 4).map((card, index) => (
             <CardImage
