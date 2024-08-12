@@ -1,18 +1,18 @@
-"use client" 
+"use client";
 
 import { Badge } from "@/components/ui/badge";
 import { Typography } from "@/components/ui/typography";
 import { EmailFormSection } from "@/features/email/EmailFormSection";
 import { FeaturesSection } from "@/features/landing/FeatureSection";
+import { FeatureProgram } from "@/features/landing/FeatureProgram";
 import { Hero } from "@/features/landing/Hero";
 import { LandingHeader } from "@/features/landing/LandingHeader";
 import { SectionDivider } from "@/features/landing/SectionDivider";
-
+import CardGrid from "@/features/landing/CardGrid";
+// import RecentBlog from "@/features/landing/RecentBlog";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
 import { Footer } from "@/features/layout/Footer";
 import Image from "next/image";
-import CardGrid from "@/features/landing/CardGrid";
-import RecentBlog from "@/features/landing/RecentBlog";
 
 export default function HomePage() {
   return (
@@ -95,7 +95,66 @@ export default function HomePage() {
 
       {/* Blog Content */}
 
-      <RecentBlog />
+      {/* <RecentBlog /> */}
+
+      <SectionDivider />
+
+      <FeatureProgram
+        features={[
+          {
+            badge: "Mes valeurs",
+            title: "Qui suis-je ?",
+            description:
+              "Bienvenue dans mon univers, je suis Jeremy, un ancien militaire qui a trouvé sa passion dans le coaching sportif et athléte de haut niveau en tant qu'athlète compétitif en Men's Physique IFBB.",
+            component: (
+              <Image
+                src="/images/post3.jpg"
+                alt=""
+                width={200}
+                height={100}
+                className="h-auto w-full rounded-md object-cover"
+              />
+            ),
+            description1: "",
+            description2: "",
+          },
+          {
+            badge: "Mes valeurs",
+            title: "Philosophie",
+            description:
+              "Allier entraînement rigoureux et nutrition équilibrée pour un mode de vie sain et durable. Je crois fermement que la réussite en matière de fitness réside dans un équilibre entre un entraînement bien structuré et une alimentation adaptée.",
+            description1: "",
+            description2: "",
+            component: (
+              <Image
+                src="/images/post5.jpg"
+                alt=""
+                width={200}
+                height={100}
+                className="h-auto w-full object-cover"
+              />
+            ),
+          },
+          {
+            badge: "Mes valeurs",
+            title: "Qui suis-je ?",
+            description:
+              "Bienvenue dans mon univers, je suis Jeremy, un ancien militaire qui a trouvé sa passion dans le coaching sportif et athléte de haut niveau en tant qu'athlète compétitif en Men's Physique IFBB.",
+            description1: "",
+            description2: "",
+
+            component: (
+              <Image
+                src="/images/post4.jpg"
+                alt=""
+                width={200}
+                height={100}
+                className="h-auto w-full rounded-md object-cover"
+              />
+            ),
+          },
+        ]}
+      />
 
       <SectionDivider />
 
