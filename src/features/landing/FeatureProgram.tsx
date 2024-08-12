@@ -1,11 +1,13 @@
-"use client";
-
 import { DotPattern } from "@/components/svg/DotPattern";
 import { Badge } from "@/components/ui/badge";
 import { Typography } from "@/components/ui/typography";
 import { ClientMarkdown } from "@/features/markdown/ClientMarkdown";
 import type { ReactNode } from "react";
 import { SectionLayout } from "./SectionLayout";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { Heart } from "lucide-react";
+import Link from "next/link";
 
 export const FeatureProgram = ({
   features,
@@ -45,7 +47,7 @@ type FeatureLineProps = {
 
 export const FeatureLine = (props: FeatureLineProps) => {
   return (
-    <div className="flex items-center gap-4  max-lg:!flex-col">
+    <div className="flex items-center gap-4 max-lg:flex-col">
       <div className="flex flex-1 flex-col items-start gap-4 px-4">
         <Badge color="pink">{props.badge}</Badge>
         <Typography variant="h2" className="">
@@ -60,6 +62,19 @@ export const FeatureLine = (props: FeatureLineProps) => {
         <ClientMarkdown className="prose-lg">
           {props.description2}
         </ClientMarkdown>
+
+        {/* Bouton action */}
+        <Link
+          href="#pricing"
+          className={cn(
+            buttonVariants({ size: "lg", variant: "default" }),
+            "text-white border hover:border-orange-500 hover:text-orange-500",
+          )}
+        >
+          {/* <Heart size={20} className="mr-2 hover:bg-orange-500" /> */}
+          Je change de vie !
+        </Link>
+
       </div>
       <div className="w-full max-w-md">
         <DotPattern>{props.component}</DotPattern>

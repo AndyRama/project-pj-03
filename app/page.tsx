@@ -99,13 +99,23 @@ export default function HomePage() {
 
       <SectionDivider />
 
+      {/* FeaturedProgram Content */}
+      <div className="flex flex-col items-center gap-2">
+        <Typography variant="p" className="max-w-xl font-bold text-orange-500">
+          Programmes
+        </Typography>
+        <Typography variant="h2" className="max-w-xl">
+          Mes services
+        </Typography>
+      </div>
+
       <FeatureProgram
         features={[
           {
-            badge: "Mes valeurs",
-            title: "Qui suis-je ?",
+            badge: "Débutant",
+            title: "Pack 1 Musculation | Homme Femme",
             description:
-              "Bienvenue dans mon univers, je suis Jeremy, un ancien militaire qui a trouvé sa passion dans le coaching sportif et athléte de haut niveau en tant qu'athlète compétitif en Men's Physique IFBB.",
+              "Coaching spécialisé pour les athlètes : si la compétition, le dépassement de soi et la discipline sont essentiels à votre vie et à votre bien-être, se fixer des objectifs concrets est un moyen efficace de les atteindre. Je vous propose un suivi musculation et alimentaire personnalisés pour relever les défis que vous vous fixerez.",
             component: (
               <Image
                 src="/images/post3.jpg"
@@ -119,10 +129,10 @@ export default function HomePage() {
             description2: "",
           },
           {
-            badge: "Mes valeurs",
-            title: "Philosophie",
+            badge: "Intermédiaire",
+            title: "Pack 2 Musculation | Homme Femme",
             description:
-              "Allier entraînement rigoureux et nutrition équilibrée pour un mode de vie sain et durable. Je crois fermement que la réussite en matière de fitness réside dans un équilibre entre un entraînement bien structuré et une alimentation adaptée.",
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus pariatur soluta corrupti quisquam illo ducimus adipisci recusandae possimus tempora esse, aspernatur repudiandae cupiditate ipsum enim, quibusdam porro odio sit. Quis!",
             description1: "",
             description2: "",
             component: (
@@ -136,10 +146,10 @@ export default function HomePage() {
             ),
           },
           {
-            badge: "Mes valeurs",
-            title: "Qui suis-je ?",
+            badge: "Confirmé",
+            title: "Pack 3 Musculation | Homme Femme",
             description:
-              "Bienvenue dans mon univers, je suis Jeremy, un ancien militaire qui a trouvé sa passion dans le coaching sportif et athléte de haut niveau en tant qu'athlète compétitif en Men's Physique IFBB.",
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus pariatur soluta corrupti quisquam illo ducimus adipisci recusandae possimus tempora esse, aspernatur repudiandae cupiditate ipsum enim, quibusdam porro odio sit. Quis!",
             description1: "",
             description2: "",
 
@@ -160,7 +170,9 @@ export default function HomePage() {
 
       {/* Reviews Grid Content */}
       <div className="flex flex-col items-center gap-2">
-        <Badge>Retour de ma formation</Badge>
+        <Typography variant="p" className="max-w-xl font-bold text-orange-500">
+          Retour de ma formation
+        </Typography>
         <Typography variant="h2" className="m-auto max-w-xl text-center">
           Ce qu'ils pensent de mes <u>services </u>!
         </Typography>
