@@ -19,7 +19,7 @@ export const SiteConfig = {
     image: "",
     website: "https://andyramaroson.com",
     twitter: "https://x.com/AndyRamaroson",
-    name: "test",
+    name: "Jérémy Prat",
   },
   auth: {
     password: false as boolean,

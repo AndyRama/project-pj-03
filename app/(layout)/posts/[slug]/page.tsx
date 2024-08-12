@@ -38,8 +38,8 @@ export async function generateMetadata({
     description: post.attributes.description,
     keywords: post.attributes.keywords,
     authors: {
-      name: "Melvynx",
-      url: "https://melvynx.com",
+      name: "Jeremy Prat",
+      url: "https://unlcoaching.com",
     },
   };
 }

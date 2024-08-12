@@ -1,5 +1,4 @@
 import React from 'react'
-// import { BiSolidHeart } from 'react-icons/bi'
 import { FaInstagramSquare, FaFacebook, FaLinkedin } from 'react-icons/fa'
 import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
@@ -87,16 +86,6 @@ export const Footer = () => {
               </div>
             ))}
           </div>
-
-          {/* <div className="flex flex-row items-end gap-4 md:flex-col">
-            <Typography variant="large">Legal</Typography>
-            <Typography as={Link} variant="muted" className="hover:underline" href="/legal/terms">
-              Terms
-            </Typography>
-            <Typography as={Link} variant="muted" className="hover:underline" href="/legal/privacy">
-              Privacy
-            </Typography>
-          </div> */}
         </LayoutContent>
       </Layout>
     </footer>

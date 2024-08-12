@@ -1,14 +1,14 @@
-import { Typography } from "@/components/ui/typography";
+// import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
 import { Pricing } from "@/features/landing/pricing/PricingSection";
 import { FAQSection } from "@/features/landing/FAQSection";
+import { SubHero } from "@/features/landing/SubHero";
+
 
 export default function page() {
   return (
     <div>
-      <div className="flex w-full items-center justify-center bg-card p-8 lg:p-0">
-        <Typography variant="h1">Page pricing</Typography>
-      </div>
+      <SubHero className={""} title={"Prestations"} subTitle={"Toutes mes"} />
       <Layout>
         <LayoutContent className="prose m-auto mb-8 w-full dark:prose-invert">
           <Pricing

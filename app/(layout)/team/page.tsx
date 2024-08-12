@@ -1,17 +1,19 @@
-import { Typography } from "@/components/ui/typography";
+// import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
+import { SubHero } from "@/features/landing/SubHero";
 
 export default function page() {
   return (
-    <div>
-      <div className="flex w-full items-center justify-center bg-card p-8 lg:p-12">
-        <Typography variant="h1">Page Team</Typography>
-      </div>
-      <Layout>
-        <LayoutContent className="prose m-auto mb-8 dark:prose-invert">
+    <>
+      <SubHero
+        className={""}
+        title={"Le Coeur de la team"}
+        subTitle={"Nos valeurs"}
+      />
 
-        </LayoutContent>
+      <Layout>
+        <LayoutContent className="prose m-auto mb-8 dark:prose-invert"></LayoutContent>
       </Layout>
-    </div>
+    </>
   );
 }
