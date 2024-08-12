@@ -7,17 +7,9 @@ import { LandingHeader } from "@/features/landing/LandingHeader";
 import { SectionDivider } from "@/features/landing/SectionDivider";
 
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
-import { ReviewTriple } from "@/features/landing/review/ReviewTriple";
 import { Footer } from "@/features/layout/Footer";
 import Image from "next/image";
-
-// import { BentoGridSection } from "@/features/landing/BentoSection";
-// import { PainSection } from "@/features/landing/Pain";
-// import { StatsSection } from "@/features/landing/StatsSection";
-// import { CTASectionCard } from "@/features/landing/cta/CTACardSection";
-// import { CTAImageSection } from "@/features/landing/cta/CTAImageSection";
-// import { CtaSection } from "@/features/landing/cta/CTASection";
-// import { ReviewSingle } from "@/features/landing/review/ReviewSingle";
+import CardGrid from "@/features/landing/CardGrid";
 
 export default function HomePage() {
   return (
@@ -70,36 +62,9 @@ export default function HomePage() {
         ]}
       />
 
-      {/* <StatsSection /> */}
-
-      {/* <BentoGridSection /> */}
-
-      {/* <PainSection /> */}
-
       <SectionDivider />
 
-      <ReviewTriple
-        reviews={[
-          {
-            image: "https://i.pravatar.cc/300?u=a1",
-            name: "Sophie",
-            review: `Threader **has completely transformed the way I manage my social media** content. The ability to schedule posts and use AI for content suggestions has saved me hours each week.`,
-            role: "Digital Marketer",
-          },
-          {
-            image: "https://i.pravatar.cc/300?u=a2",
-            name: "Alex",
-            review: `Using Threader has significantly boosted my online engagement. **The analytics tool helps me understand what works**, allowing me to refine my strategy and grow my follower base.`,
-            role: "Social Media Influencer",
-          },
-          {
-            image: "https://i.pravatar.cc/300?u=a3",
-            name: "Jordan",
-            review: `The ease of scheduling and the AI-generated content features are game-changers. **Threader's user-friendly interface** makes it perfect for anyone looking to enhance their online presence.`,
-            role: "Entrepreneur",
-          },
-        ]}
-      />
+      <CardGrid/>
 
       <SectionDivider />
 
@@ -124,6 +89,8 @@ export default function HomePage() {
           },
         ]}
       />
+
+
       {/* Blog Content */}
 
 
@@ -214,25 +181,6 @@ export default function HomePage() {
       />
 
       <EmailFormSection />
-
-      {/* <ReviewSingle
-        image="https://i.pravatar.cc/300?u=5"
-        name="Michel"
-        review={`Threader **has completely transformed** the way I manage my social media content. The ability to schedule posts and use AI for content suggestions **has saved me hours each week.**`}
-        role="Digital Marketer"
-        compagnyImage="https://1000logos.net/wp-content/uploads/2017/03/McDonalds-Logo-2003.png"
-        key={1}
-      /> */}
-
-      {/* <CTASectionCard /> */}
-
-      {/* <CtaSection /> */}
-
-      {/* <CTAImageSection /> */}
-
-      {/* <EmailFormSection /> */}
-
-      {/* <SectionDivider /> */}
 
       <Footer />
     </div>
