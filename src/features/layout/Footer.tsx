@@ -39,23 +39,24 @@ const footerContent = {
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#1D1D1D]">
+    <footer>
+      <hr className="bg-[#09090b]"/>
       <Layout className="mt-12 pb-12">
         <LayoutContent className="flex justify-between max-sm:flex-col">
           <div className="flex flex-col gap-4 ">
             <div className="space-y-1 ">
-              <Typography variant="h3" className="text-orange-500">{SiteConfig.title}</Typography>
-              <Typography className="text-white">{SiteConfig.company.name}</Typography>
-              <Typography className="text-white">{SiteConfig.company.address}</Typography>
+              <Typography variant="h2" className="text-orange-500">{SiteConfig.title}</Typography>
+              <Typography >{SiteConfig.company.name}</Typography>
+              <Typography >{SiteConfig.company.address}</Typography>
             </div>
-            <div className="mt-5 flex">
-              <Link href="#" aria-label="Instagram" className="mr-4 text-2xl text-white hover:text-orange-200">
+            <div className="mt-4 flex">
+              <Link href="#" aria-label="Instagram" className="mr-4 text-2xl hover:text-orange-500  ">
                 <FaInstagramSquare />
               </Link>
-              <Link href="#" aria-label="Facebook" className="mr-4 text-2xl text-white hover:text-orange-200">
+              <Link href="#" aria-label="Facebook" className="mr-4 text-2xl hover:text-orange-500 ">
                 <FaFacebook />
               </Link>
-              <Link href="#" aria-label="LinkedIn" className="text-2xl text-white hover:text-orange-200">
+              <Link href="#" aria-label="LinkedIn" className="text-2xl hover:text-orange-500 ">
                 <FaLinkedin />
               </Link>
             </div>
@@ -71,7 +72,7 @@ export const Footer = () => {
                     <li key={link.label} className="mb-2">
                       <Link
                         href={link.href}
-                        className={`text-white transition-all ease-in-out hover:text-orange-500 ${link.badge ? 'flex items-center gap-2' : ''}`}
+                        className={`transition-all ease-in-out hover:text-orange-500 ${link.badge ? 'flex items-center gap-2' : ''}`}
                       >
                         {link.label}
                         {link.badge && (

@@ -46,7 +46,7 @@ type FeatureLineProps = {
 export const FeatureLine = (props: FeatureLineProps) => {
   return (
     <div className="flex items-center gap-4 odd:flex-row-reverse max-lg:!flex-col">
-      <div className="flex flex-1 flex-col items-start gap-4">
+      <div className="flex flex-1 flex-col items-start gap-4 px-4">
         <Badge color="pink">{props.badge}</Badge>
         <Typography variant="h2" className="">
           {props.title}
