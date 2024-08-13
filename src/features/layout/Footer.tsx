@@ -41,7 +41,7 @@ export const Footer = () => {
     <footer>
       <hr className="bg-[#09090b]"/>
       <Layout className="mt-12 pb-12">
-        <LayoutContent className="flex justify-between max-sm:flex-col">
+        <LayoutContent className="flex justify-around max-sm:flex-col">
           <div className="flex flex-col gap-4 ">
             <div className="space-y-1 ">
               <Typography variant="h2" className="text-orange-500">{SiteConfig.title}</Typography>

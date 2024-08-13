@@ -1,6 +1,7 @@
 // import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
 import { Pricing } from "@/features/prestations/pricing/PricingSection";
+import { PricingEbook } from "@/features/prestations/ebook/PricingSectionEbook";
 import { FAQSection } from "@/features/landing/FAQSection";
 import { SubHero } from "@/features/landing/SubHero";
 import { SectionDivider } from "@/features/landing/SectionDivider";
@@ -11,6 +12,7 @@ export default function page() {
       <SubHero className="" title={"Prestations"} subTitle={"Toutes mes"} />
       <Layout>
         <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
+          {/* Pricing Pack */}
           <Pricing
             cards={[
               {
@@ -143,6 +145,144 @@ export default function page() {
           />
 
           <SectionDivider />
+
+          {/* Pricing Ebook */}
+          <PricingEbook
+            cards={[
+              {
+                isPopular: false,
+                type: "monthly",
+                id: "premium",
+                title: "Ebook 1",
+                subtitle: "Nutrition & Alimentation",
+                price: "Free",
+                barredPrice: 0,
+                currency: "€",
+                features: [
+                  "Pack adapté aux débutants dans la musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                  "Communication WhatsApp & Email avec visio ou call chaque mois.",
+                  "Acces à mon application de training.",
+                ],
+                cta: "Télécharger",
+                ctaSubtitle: "",
+                priceId: "",
+              },
+              {
+                isPopular: true,
+                type: "monthly",
+                id: "premium",
+                title: "Ebook 2",
+                subtitle: "esprit & mental",
+                price: "15€",
+                barredPrice: 0,
+                currency: "€",
+                features: [
+                  "Pack adapté aux débutants dans la musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                  "Communication WhatsApp & Email avec visio ou call chaque mois.",
+                  "Acces à mon application de training.",
+                ],
+                cta: "Commander",
+                ctaSubtitle: "",
+                priceId: "",
+              },
+              {
+                isPopular: true,
+                type: "monthly",
+                id: "premium",
+                title: "Ebook 3",
+                subtitle: "esprit & mental",
+                price: "15€",
+                barredPrice: 0,
+                currency: "€",
+                features: [
+                  "Pack adapté aux débutants dans la musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                  "Communication WhatsApp & Email avec visio ou call chaque mois.",
+                  "Acces à mon application de training.",
+                ],
+                cta: "Commander",
+                ctaSubtitle: "",
+                priceId: "",
+              },
+              {
+                isPopular: true,
+                type: "monthly",
+                id: "premium",
+                title: "Ebook 4",
+                subtitle: "esprit & mental",
+                price: "15",
+                barredPrice: 0,
+                currency: "€",
+                features: [
+                  "Pack adapté aux débutants dans la musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                  "Communication WhatsApp & Email avec visio ou call chaque mois.",
+                  "Acces à mon application de training.",
+                ],
+                cta: "Commander",
+                ctaSubtitle: "",
+                priceId: "",
+              },
+              {
+                isPopular: true,
+                type: "monthly",
+                id: "premium",
+                title: "Ebook 5",
+                subtitle: "esprit & mental",
+                price: "15€",
+                barredPrice: 0,
+                currency: "€",
+                features: [
+                  "Pack adapté aux débutants dans la musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                  "Communication WhatsApp & Email avec visio ou call chaque mois.",
+                  "Acces à mon application de training.",
+                ],
+                cta: "Commander",
+                ctaSubtitle: "",
+                priceId: "",
+              },
+              {
+                isPopular: true,
+                type: "monthly",
+                id: "premium",
+                title: "Ebook 6",
+                subtitle: "esprit & mental",
+                price: "15€",
+                barredPrice: 0,
+                currency: "€",
+                features: [
+                  "Pack adapté aux débutants dans la musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                  "Communication WhatsApp & Email avec visio ou call chaque mois.",
+                  "Acces à mon application de training.",
+                ],
+                cta: "Commander",
+                ctaSubtitle: "",
+                priceId: "",
+              },
+            ]}
+          />
 
           <FAQSection
             faq={[

@@ -3,13 +3,13 @@
 import { useState } from "react";
 import { Typography } from "@/components/ui/typography";
 import { SectionLayout } from "../../landing/SectionLayout";
-import { PricingCard, type PricingCardProps } from "../pricing/PricingCard";
+import { PricingCard, type PricingCardProps } from "../ebook/PricingCardEbook";
 
 export type PricingProps = {
   cards: PricingCardProps[];
 };
 
-export const Pricing = (props: PricingProps) => {
+export const PricingEbook = (props: PricingProps) => {
   const [visibleCards, setVisibleCards] = useState(3);
 
   const showMoreCards = () => {
@@ -27,9 +27,9 @@ export const Pricing = (props: PricingProps) => {
           variant="small"
           className="font-extrabold uppercase text-primary"
         >
-          Pack
+          Autres contenus
         </Typography>
-        <Typography variant="h2">Musculation / Perte de poids</Typography>
+        <Typography variant="h2">Les E-Books</Typography>
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
         {props.cards.slice(0, visibleCards).map((card, i) => (
@@ -41,7 +41,7 @@ export const Pricing = (props: PricingProps) => {
           onClick={showMoreCards}
           className="right-0 mt-4 bg-primary bg-gradient-to-r from-orange-400 to-orange-700 px-4 py-2 text-black hover:bg-transparent hover:text-white"
         >
-          Abonnement 1 mois
+          voir plus de contenue
         </button>
       )}
     </SectionLayout>
