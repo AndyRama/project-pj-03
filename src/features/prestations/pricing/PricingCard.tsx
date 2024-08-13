@@ -37,21 +37,22 @@ export const PricingCard = (props: PricingCardProps) => {
       {props.isPopular ? (
         <div className="absolute inset-x-0 top-0 flex items-center justify-center">
           <Badge className="-translate-y-1/2 bg-orange-500 text-white">
-            Popular
+            Nouveauté
           </Badge>
         </div>
       ) : null}
-      <CardHeader className="flex flex-col items-center gap-6 lg:gap-8">
+      <CardHeader className="flex flex-col items-center gap-1">
         <p className="text-center text-xl font-bold uppercase text-white">
            Programme niveau
         </p>
-        <span className="gap-4 text-center text-lg font-bold uppercase text-orange-500">
+        <p className="gap-1 text-center text-lg text-orange-500">
           {props.title}
-        </span>
+        </p>
         <Separator className="bg-white" />
         <div className="flex items-end justify-center gap-2">
-          <p className="text-3xl text-orange-500 md:text-4xl">
-            {props.price}€/mois
+          <p className="text-2xl text-orange-500 md:text-3xl">
+            {props.price}€ 
+            <span className="text-md">/ Mois</span>
           </p>
         </div>
           <Typography variant="p" className="text-xl text-white">
@@ -60,13 +61,13 @@ export const PricingCard = (props: PricingCardProps) => {
         <BuyButton
           variant={props.isPopular ? "default" : "outline"}
           priceId={props.priceId}
-          className="w-full bg-gradient-to-r from-orange-500 to-orange-800 text-white hover:bg-transparent hover:text-black"
+          className="w-full bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
         >
           {props.cta}
         </BuyButton>
         <ul className="flex w-full flex-col gap-3 lg:gap-4">
           {props.features.map((feature, i) => (
-            <li key={i} className="flex items-center gap-1 text-white">
+            <li key={i} className="flex items-center gap-2 text-white">
               <Check className="text-orange-500" size={20} />
               <Typography variant="muted" className="flex-1 text-white">
                 {feature}
