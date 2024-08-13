@@ -3,72 +3,141 @@ import { Layout, LayoutContent } from "@/features/page/layout";
 import { Pricing } from "@/features/landing/pricing/PricingSection";
 import { FAQSection } from "@/features/landing/FAQSection";
 import { SubHero } from "@/features/landing/SubHero";
-
+import { SectionDivider } from "@/features/landing/SectionDivider";
 
 export default function page() {
   return (
     <div>
-      <SubHero className={""} title={"Prestations"} subTitle={"Toutes mes"} />
+      <SubHero className="" title={"Prestations"} subTitle={"Toutes mes"} />
       <Layout>
-        <LayoutContent className="prose m-auto mb-8 w-full dark:prose-invert">
+        <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
           <Pricing
             cards={[
               {
+                isPopular: true,
                 type: "monthly",
-                id: "Free",
-                title: "Threader Free",
-                subtitle: "Perfect for tiny creator",
-                price: 0,
-                currency: "USD",
+                id: "premium",
+                title: "Débutant (1mois)",
+                subtitle: "(1 * 150€ / 1 mois)",
+                price: 149,
+                barredPrice: 159,
+                currency: "€",
                 features: [
-                  "Scehdule 1 post in advance",
-                  "See what you scheduled",
-                  "Auto-repost your thread",
+                  "Pack adapté aux débutants dans la musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Accompagnement sur les divers TCA ou problématique de santé.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
                 ],
-                cta: "Start now",
-                ctaSubtitle: "Free forever",
+                cta: "Choisir ce plan ",
+                ctaSubtitle: "",
                 priceId: "",
               },
               {
                 isPopular: true,
                 type: "monthly",
                 id: "premium",
-                title: "Threader Premium",
-                subtitle: "Perfect for content creator",
-                price: 49,
-                barredPrice: 59,
-                currency: "USD",
+                title: "Débutant (1mois)",
+                subtitle: "(1 * 150€ / 1 mois)",
+                price: 149,
+                barredPrice: 159,
+                currency: "€",
                 features: [
-                  "Schedule Infinite post in advance",
-                  "See what you scheduled",
-                  "Auto-repost your thread",
-                  "Preview your post",
+                  "Pack adapté aux débutants dans la musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Accompagnement sur les divers TCA ou problématique de santé.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
                 ],
-                cta: "Start 7 days trial",
-                ctaSubtitle: "Then $49/month",
+                cta: "Choisir ce plan ",
+                ctaSubtitle: "",
                 priceId: "",
               },
               {
                 isPopular: true,
                 type: "monthly",
                 id: "premium",
-                title: "Threader Premium",
-                subtitle: "Perfect for content creator",
-                price: 49,
-                barredPrice: 59,
-                currency: "USD",
+                title: "Débutant (1mois)",
+                subtitle: "(1 * 150€ / 1 mois)",
+                price: 149,
+                barredPrice: 159,
+                currency: "€",
                 features: [
-                  "Schedule Infinite post in advance",
-                  "See what you scheduled",
-                  "Auto-repost your thread",
-                  "Preview your post",
+                  "Pack adapté aux débutants dans la musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Accompagnement sur les divers TCA ou problématique de santé.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
                 ],
-                cta: "Start 7 days trial",
-                ctaSubtitle: "Then $49/month",
+                cta: "Choisir ce plan ",
+                ctaSubtitle: "",
+                priceId: "",
+              },
+              {
+                isPopular: true,
+                type: "monthly",
+                id: "premium",
+                title: "Débutant (1mois)",
+                subtitle: "(1 * 150€ / 1 mois)",
+                price: 149,
+                barredPrice: 159,
+                currency: "€",
+                features: [
+                  "Pack adapté aux débutants dans la musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Accompagnement sur les divers TCA ou problématique de santé.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                ],
+                cta: "Choisir ce plan ",
+                ctaSubtitle: "",
+                priceId: "",
+              },
+              {
+                isPopular: true,
+                type: "monthly",
+                id: "premium",
+                title: "Débutant (1mois)",
+                subtitle: "(1 * 150€ / 1 mois)",
+                price: 149,
+                barredPrice: 159,
+                currency: "€",
+                features: [
+                  "Pack adapté aux débutants dans la musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Accompagnement sur les divers TCA ou problématique de santé.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                ],
+                cta: "Choisir ce plan ",
+                ctaSubtitle: "",
+                priceId: "",
+              },
+              {
+                isPopular: true,
+                type: "monthly",
+                id: "premium",
+                title: "Débutant (1mois) (1mois)",
+                subtitle: "(1 * 150€ / 1 mois)",
+                price: 149,
+                barredPrice: 159,
+                currency: "€",
+                features: [
+                  "Pack adapté aux débutants dans la musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Accompagnement sur les divers TCA ou problématique de santé.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                ],
+                cta: "Choisir ce plan ",
+                ctaSubtitle: "",
                 priceId: "",
               },
             ]}
           />
+
+         <SectionDivider/>
+
           <FAQSection
             faq={[
               {
