@@ -287,39 +287,32 @@ export default function page() {
           <FAQSection
             faq={[
               {
-                question: "What is Threader?",
+                question: "Qu'est-ce que unlcoaching.com ?",
                 answer:
-                  "Threader is an innovative platform designed to help you write, schedule, and publish content to your account with the assistance of AI, enhancing your business's online presence.",
+                  "Unlcoaching est une plateforme dédiée au coaching sportif et au développement personnel. Elle aide les utilisateurs à atteindre leurs objectifs de santé et de bien-être grâce à des programmes de coaching personnalisés et des articles de blog informatifs.",
               },
               {
-                question: "How does AI Content Generation work?",
+                question: "Quels services propose unlcoaching.com ?",
                 answer:
-                  "Our AI Content Generation feature leverages the power of artificial intelligence to create unique and engaging content for your Threads, making content creation easier and more efficient.",
+                  "Nous proposons une gamme de services, y compris des séances de coaching individuel, des programmes de remise en forme, et un blog regorgeant de conseils sur la nutrition, l'entraînement et le développement personnel.",
               },
               {
-                question: "Can I schedule my threads in advance?",
+                question:
+                  "Comment puis-je m'inscrire à un programme de coaching ?",
                 answer:
-                  "Yes, with Threader, you can schedule your threads for a specific time, allowing you to maintain a consistent online presence without the need to manually post every day.",
+                  "Vous pouvez vous inscrire à un programme en visitant notre page d'accueil et en sélectionnant l'option 'S'inscrire'. Vous serez guidé à travers un processus simple pour choisir le programme qui correspond le mieux à vos besoins.",
               },
               {
-                question: "What is the Now.TS project?",
+                question:
+                  "Quels sont les avantages du coaching avec unlcoaching.com ?",
                 answer:
-                  "Now.TS is a new project announced on our platform that enables users to create professional Next.js applications in days, streamlining the development process.",
+                  "Le coaching avec unlcoaching.com vous permet de bénéficier de l'expertise d'un coach professionnel Jérémy Prat, d'un programme personnalisé adapté à vos objectifs, et d'un suivi continu pour garantir vos progrès.",
               },
               {
-                question: "How can I get more followers?",
+                question:
+                  "Quels sont les prix des services offerts par unlcoaching.com ?",
                 answer:
-                  "To gain more followers, focus on creating content related to Next.js, as our analysis shows it's highly engaging. Utilize our research tools to understand trends and improve your content strategy.",
-              },
-              {
-                question: "What are the benefits of posting with Threader?",
-                answer:
-                  "Posting with Threader allows you to schedule posts, avoid daily manual postings, track your scheduled content easily, and maintain consistency in your online activity.",
-              },
-              {
-                question: "What pricing plans does Threader offer?",
-                answer:
-                  "Threader offers two pricing plans: THREADER FREE, perfect for tiny creators, allowing you to schedule 1 post in advance; and THREADER PREMIUM, ideal for content creators, offering unlimited scheduling, post previews, and auto-reposting features.",
+                  "Nous offrons plusieurs plans tarifaires adaptés à différents besoins, allant des sessions de coaching individuelles aux programmes complets sur plusieurs mois. Pour plus de détails, veuillez consulter notre page dédiée aux tarifs.",
               },
             ]}
           />
