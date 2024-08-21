@@ -1,5 +1,6 @@
 import SubHero from "@/features/landing/SubHero";
 import { Layout, LayoutContent } from "@/features/page/layout";
+import { EmailFormSection } from "@/features/email/EmailFormSection";
 
 export default function page() {
   return (
@@ -10,8 +11,10 @@ export default function page() {
         subTitle={"Pour me"}
       />
       <Layout>
-        <LayoutContent className="prose m-auto mb-8 dark:prose-invert"></LayoutContent>
+        <LayoutContent className="prose m-auto mb-8 dark:prose-invert">
+        </LayoutContent>
       </Layout>
+      <EmailFormSection />
     </>
   );
 }

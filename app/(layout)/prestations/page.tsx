@@ -6,6 +6,8 @@ import { FAQSection } from "@/features/landing/FAQSection";
 import { SubHero } from "@/features/landing/SubHero";
 import { SectionDivider } from "@/features/landing/SectionDivider";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
+import { EmailFormSection } from "@/features/email/EmailFormSection";
+
 
 export default function page() {
   return (
@@ -402,6 +404,9 @@ export default function page() {
               },
             ]}
           />
+
+        <EmailFormSection />
+
         </LayoutContent>
       </Layout>
     </div>
