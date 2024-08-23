@@ -49,6 +49,64 @@ export const StoryCard = ({ alt, width, height, img, index, tailwindClass }: Sto
   )
 }
 
+export const StoryText = () => {
+  const storyText = {
+    heading: 'Chère communauté,',
+    p1: "Je tiens à exprimer ma profonde gratitude pour votre soutien continu et votre engagement envers notre programme de formation en ligne. Vos retours positifs et votre enthousiasme sont une source d'inspiration constante pour moi. Voir vos progrès et savoir que ma formation vous aide à atteindre vos objectifs me remplit de fierté et de satisfaction. Votre réussite est ma plus grande récompense, et je suis honoré de faire partie de votre parcours.",
+    p2: "N'hésitez pas à partager vos expériences et vos réalisations avec moi et avec le reste de la communauté. Ensemble, nous pouvons continuer à apprendre, à grandir et à nous surpasser. Merci encore pour votre confiance et votre soutien. J'ai hâte de continuer à travailler avec vous et à célébrer vos succès futurs.",
+    signature: '/images/Fake_Signature.svg',
+    name: 'Jeremy Prat |',
+    roleTitle: 'Coach Sportif',
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: { delay: 0.3, duration: 0.5 },
+      }}
+      viewport={{ once: true }}
+      className="mx-auto mt-32 w-full flex-col text-left lg:flex lg:w-6/12"
+    >
+      {storyText.heading && (
+        <h2 className="mb-5 text-2xl text-white md:text-3xl">
+          {storyText.heading}
+        </h2>
+      )}
+
+      {storyText.p1 && (
+        <p className="mb-7 leading-relaxed text-white">
+          {storyText.p1}
+        </p>
+      )}
+
+      {storyText.p2 && (
+        <p className="mb-7 leading-relaxed text-white">
+          {storyText.p2}
+        </p>
+      )}
+
+      <p>
+        <Image
+          src={storyText.signature}
+          alt={storyText.name}
+          width={338}
+          height={113}
+          className="mb-2 block w-48"
+        />
+        <strong className="mb-2 block font-medium text-white">
+          {storyText.name + ' '}
+          <span className="text-orange-500">
+            {storyText.roleTitle}
+          </span>
+        </strong>
+      </p>
+    </motion.div>
+  )
+}
+
 export const StoryCardGrid = () => {
   const storyContent = {
     column1: {
@@ -178,6 +236,7 @@ export const StoryCardGrid = () => {
           ))}
         </div>
       </div>
+      <StoryText />
     </Layout>
   )
 }
