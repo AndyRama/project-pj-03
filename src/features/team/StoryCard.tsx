@@ -34,7 +34,7 @@ export const StoryCard = ({ alt, width, height, img, index, tailwindClass }: Sto
       viewport={{ once: true }}
       className="group relative overflow-hidden rounded"
     >
-      <Card className="bg-transparent">
+      <Card className= "border-none bg-transparent">
         <CardHeader className="p-0">
           <Image
             src={img}
@@ -58,19 +58,21 @@ export const StoryCardGrid = () => {
           alt: 'Team',
           width: 1188,
           height: 1413,
-          tailwindClass: 'h-56 lg:h-96',
+          tailwindClass: 'mt-32 pb-10 h-56 lg:h-full',
         },
         {
           img: '/images/story2.jpg',
           alt: 'Woman making a plan',
           width: 1188,
           height: 1413,
+          tailwindClass: 'pb-10',
         },
         {
           img: '/images/story3.jpg',
           alt: 'Woman making a plan',
           width: 1188,
           height: 1413,
+          tailwindClass: 'h-full pb-10',
         },
       ],
     },
@@ -81,21 +83,21 @@ export const StoryCardGrid = () => {
           alt: 'White curvy building',
           width: 1188,
           height: 1413,
-          tailwindClass: 'h-56 lg:h-96',
+          tailwindClass: 'mt-10 h-56 lg:h-96 pb-10',
         },
         {
           img: '/images/story5.jpg',
           alt: 'White curvy building',
           width: 1188,
           height: 1413,
-          tailwindClass: 'h-56 lg:h-96',
+          tailwindClass: 'h-56 lg:h-96 pb-10 ',
         },
         {
           img: '/images/story6.jpg',
           alt: 'White curvy building',
           width: 1188,
           height: 1413,
-          tailwindClass: 'h-56 lg:h-96',
+          tailwindClass: 'h-56 lg:h-full pb-10',
         },
         {
           img: '/images/story7.jpg',
@@ -113,19 +115,21 @@ export const StoryCardGrid = () => {
           alt: 'Man writing a plan',
           width: 1188,
           height: 1413,
-          tailwindClass: 'mt-20',
+          tailwindClass: 'mt-32 pb-10 h-full',
         },
         {
           img: '/images/story9.jpg',
           alt: 'Production',
           width: 1188,
           height: 1413,
+          tailwindClass: 'pb-10',
         },
         {
           img: '/images/story1.png',
           alt: 'Man writing a plan',
           width: 1188,
           height: 1413,
+          tailwindClass: 'h-full pb-10',
         },
       ],
     },
@@ -133,8 +137,8 @@ export const StoryCardGrid = () => {
 
   return (
     <Layout>
-      <div className="container mx-auto -mt-32 mb-2 justify-center rounded-md md:flex md:px-4">
-        <div className="space-y-6 md:w-4/12">
+      <div className="container mx-auto mb-2 justify-center rounded-md md:flex md:px-4">
+        <div className="px-4 md:w-4/12">
           {storyContent.column1.imgs.map((card, index) => (
             <StoryCard
               key={index}
@@ -147,7 +151,7 @@ export const StoryCardGrid = () => {
             />
           ))}
         </div>
-        <div className="space-y-6 md:w-4/12">
+        <div className="px-4 md:w-4/12">
           {storyContent.column2.imgs.map((card, index) => (
             <StoryCard
               key={index + storyContent.column1.imgs.length}
@@ -160,7 +164,7 @@ export const StoryCardGrid = () => {
             />
           ))}
         </div>
-        <div className="space-y-6 md:w-4/12">
+        <div className="px-4 md:w-4/12">
           {storyContent.column3.imgs.map((card, index) => (
             <StoryCard
               key={index + storyContent.column1.imgs.length + storyContent.column2.imgs.length}
