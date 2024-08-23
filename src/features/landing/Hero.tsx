@@ -82,7 +82,7 @@ const HeroDescription = () => (
 
 const HeroButton = () => (
   <Link
-    href="#pricing"
+    href="/team"
     className={cn(
       buttonVariants({ size: "lg", variant: "default" }),
       "text-white border hover:border-orange-500 hover:text-orange-500",

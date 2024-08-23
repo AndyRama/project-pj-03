@@ -1,4 +1,5 @@
 import { SubHero } from "@/features/landing/SubHero";
+import { SideHero } from "@/features/landing/SideHero";
 import { EmailFormSection } from "@/features/email/EmailFormSection";
 import { StoryCardGrid } from "@/features/team/StoryCard";
 
@@ -10,7 +11,11 @@ export default function page() {
         title={"Le Coeur de la team"}
         subTitle={"Nos valeurs"}
       />
+
       <StoryCardGrid />
+
+      <SideHero className={"mt-20"} />
+      
       <EmailFormSection />
     </>
   );

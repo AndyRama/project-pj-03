@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CircleSvg } from "@/components/svg/CircleSvg";
 
 const subHeroContent = {
   heading: {
