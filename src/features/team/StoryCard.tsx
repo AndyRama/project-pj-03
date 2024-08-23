@@ -116,7 +116,7 @@ export const StoryCardGrid = () => {
           alt: 'Team',
           width: 1188,
           height: 1413,
-          tailwindClass: 'mt-32 pb-10 h-56 lg:h-full',
+          tailwindClass: 'mt-10 md:mt-32 pb-10 h-full',
         },
         {
           img: '/images/story2.jpg',
@@ -148,14 +148,14 @@ export const StoryCardGrid = () => {
           alt: 'White curvy building',
           width: 1188,
           height: 1413,
-          tailwindClass: 'h-56 lg:h-96 pb-10 ',
+          tailwindClass: 'h-full lg:h-100 pb-10 ',
         },
         {
           img: '/images/story6.jpg',
           alt: 'White curvy building',
           width: 1188,
           height: 1413,
-          tailwindClass: 'h-56 lg:h-full pb-10',
+          tailwindClass: 'h-66 lg:h-100  pb-10',
         },
         {
           img: '/images/story7.jpg',
@@ -173,14 +173,14 @@ export const StoryCardGrid = () => {
           alt: 'Man writing a plan',
           width: 1188,
           height: 1413,
-          tailwindClass: 'mt-32 pb-10 h-full',
+          tailwindClass: 'mt-10 md:mt-32 pb-10 h-full',
         },
         {
           img: '/images/story9.jpg',
           alt: 'Production',
           width: 1188,
           height: 1413,
-          tailwindClass: 'pb-10',
+          tailwindClass: 'pb-10 h-56',
         },
         {
           img: '/images/story1.png',
