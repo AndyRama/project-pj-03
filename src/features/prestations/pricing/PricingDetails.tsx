@@ -52,7 +52,7 @@ export const PricingDetails: React.FC<{ className?: string }> = ({ className }) 
           <Typography variant="h3" className="text-center text-orange-500">
             Ce que tu obtiens
           </Typography>
-          <Typography variant="h2" className="mb-20 text-center text-white">
+          <Typography variant="h2" className="mb-20 text-center">
             Détails de mon offre
           </Typography>
           <div className="justify-center lg:flex">
@@ -76,7 +76,7 @@ export const PricingDetails: React.FC<{ className?: string }> = ({ className }) 
                     >
                       <div>
                     
-                        <Typography variant="h3" className="mb-4 flex text-white">
+                        <Typography variant="h3" className="mb-4 flex ">
                         <span className="mr-4 text-3xl text-orange-500">
                         <feature.icon />
                       </span>
@@ -84,7 +84,7 @@ export const PricingDetails: React.FC<{ className?: string }> = ({ className }) 
                         </Typography>
                         <Typography
                           variant="p"
-                          className="mb-7 text-justify leading-relaxed text-white text-opacity-75"
+                          className="mb-7 text-justify leading-relaxed  text-opacity-75"
                         >
                           <span>• </span>
                           {feature.description}

@@ -104,7 +104,7 @@ const HeroReviews = () => (
       "https://i.pravatar.cc/300?u=100",
     ]}
   >
-    1200+ followers
+    8200+ followers <br/> sur instagram
   </ReviewSmall>
 );
 

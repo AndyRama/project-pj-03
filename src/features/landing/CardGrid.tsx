@@ -32,7 +32,7 @@ export const CardImage = ({ title, years, image, index }: CardImageProps) => {
       viewport={{ once: true }}
       className="group relative overflow-hidden rounded"
     >
-      <Card className="bg-transparent">
+      <Card className="border-none bg-transparent">
         <CardHeader className="p-0">
           <Image
             src={image}
