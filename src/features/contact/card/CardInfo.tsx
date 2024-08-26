@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MdHome, MdContactPhone, MdContactMail, MdContactPage } from 'react-icons/md';
+import { MdHome, MdContactPhone, MdContactMail } from 'react-icons/md';
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Typography } from "@/components/ui/typography";
 
@@ -70,8 +70,8 @@ export const CardInfo = ({ className }: CardInfoProps) => {
             className="group relative h-[460px] overflow-hidden rounded-md bg-[#2F2E2E] p-4 duration-300 hover:shadow-2xl"
           >
             <Card className="border-none bg-transparent">
-              <CardHeader className="flex items-start gap-3 p-0">
-                <MdContactPage className="bg/10 mr-2 mt-2 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
+              <CardHeader className="ml-4 flex items-start gap-3 p-0">
+                {/* <MdContactPage className="bg/10 mr-2 mt-2 rounded-sm border-orange-500 bg-orange-500 text-orange-500" /> */}
                 <Typography className="text-3xl text-white">
                   Me contacter
                 </Typography>

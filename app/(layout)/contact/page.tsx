@@ -8,7 +8,7 @@ export default function page() {
     <>
       <SubHero className={""} title={"contacter"} subTitle={"Pour me"} />
 
-      <CardContact className="prose m-auto mb-8 dark:prose-invert" />
+      <CardContact/>
 
       <EmailFormSection />
     </>

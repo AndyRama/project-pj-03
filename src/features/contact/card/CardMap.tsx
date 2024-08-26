@@ -1,22 +1,23 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { MdHome } from 'react-icons/md';
+import React from "react";
+import { motion } from "framer-motion";
+import { MdHome } from "react-icons/md";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Typography } from "@/components/ui/typography";
 
 const CardMapContent = {
   heading: {
-    title: '',
-    subTitle: '',
-    description: '',
+    title: "",
+    subTitle: "",
+    description: "",
   },
   step: [
     {
-      title: 'Categories',
-      description: 'Lorem ipsum dolor sit, amet consecte Mollitia ipsum ectetur repellat!',
-      title1: 'Alimentation',
+      title: "Categories",
+      description:
+        "Lorem ipsum dolor sit, amet consecte Mollitia ipsum ectetur repellat!",
+      title1: "Alimentation",
     },
   ],
 };
@@ -43,11 +44,13 @@ export const CardMap = ({ className }: CardMapProps) => {
             }}
             viewport={{ once: true }}
             whileHover={{ y: -10, transition: { duration: 0.1 } }}
-            className="group relative h-[460px] overflow-hidden rounded-md bg-[#2F2E2E] duration-300 hover:shadow-2xl"
+            className="group relative h-[460px] overflow-hidden rounded-md bg-[#2F2E2E] p-4 duration-300 hover:shadow-2xl"
           >
             <Card className="border-none bg-transparent">
-              <CardHeader className="flex items-start gap-3 p-0">
-                <MdHome className="bg/10 mr-2 mt-2 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
+              <CardHeader className="ml-4 flex flex-row gap-3 p-0">
+                {/* <span>
+                  <MdHome className="bg/10 mr-2 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
+                </span> */}
                 <Typography className="text-3xl text-white">
                   Localisation
                 </Typography>

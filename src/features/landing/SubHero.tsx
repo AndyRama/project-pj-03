@@ -19,7 +19,7 @@ export const SubHero = ({ className, title, subTitle }: { className: string, tit
       {/* Image - main - bg-cover */}
       <div
         // eslint-disable-next-line tailwindcss/enforces-negative-arbitrary-values
-        className="-mt-[150px] h-[648px] w-full bg-cover bg-center lg:h-[929px]"
+        className="-mt-[150px] h-[648px] w-full bg-cover bg-center lg:h-[900px]"
         style={{
           backgroundImage: `url('/images/salle-de-sport.jpg')`,
         }}
