@@ -42,15 +42,12 @@ export const PricingCard = (props: PricingCardProps) => {
         </div>
       ) : null}
       <CardHeader className="flex flex-col items-center gap-1">
-        {/* <p className="text-center text-xl font-bold uppercase text-white">
-           E-Book
-        </p> */}
-       <Typography variant="h2" className="text-orange-500">
-            {props.title}
-          </Typography>
+        <Typography variant="h2" className="text-orange-500">
+          {props.title}
+        </Typography>
         <Typography variant="p" className="text-xl text-white">
-            {props.subtitle}
-          </Typography>
+          {props.subtitle}
+        </Typography>
         <Separator className="bg-white" />
         <div className="flex items-end justify-center gap-2">
           <p className="text-2xl text-orange-500 md:text-3xl">
@@ -58,7 +55,7 @@ export const PricingCard = (props: PricingCardProps) => {
             {/* <span className="text-md">/ Mois</span> */}
           </p>
         </div>
-        
+
         <BuyButton
           variant={props.isPopular ? "default" : "outline"}
           priceId={props.priceId}

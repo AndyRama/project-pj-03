@@ -10,10 +10,12 @@ export default function page() {
         title={"contacter"}
         subTitle={"Pour me"}
       />
+
       <Layout>
         <LayoutContent className="prose m-auto mb-8 dark:prose-invert">
         </LayoutContent>
       </Layout>
+      
       <EmailFormSection />
     </>
   );

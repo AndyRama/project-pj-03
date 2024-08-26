@@ -79,7 +79,7 @@ export const CardGridImage = () => {
 
   return (
     <Layout>
-      <div className="container mx-auto -mt-32 mb-2 justify-center rounded-md md:flex md:px-4">
+      <div className="container mx-auto -mt-32 mb-2 justify-center rounded-r-md md:flex md:px-4">
         <div
           className="mx-auto mt-10 grid
            w-full grid-cols-1 gap-6 text-gray-500 md:grid-cols-2 

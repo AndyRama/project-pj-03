@@ -18,7 +18,7 @@ export const PostCard = (props: PostCardProps) => {
     <Link href={`/posts/${props.post.slug}`}>
       <Card className="transition-all hover:shadow-xl">
         <CardHeader className="h-fit">
-          <AspectRatio ratio={16 / 9} className="overflow-hidden rounded-md">
+          <AspectRatio ratio={16 / 9} className="overflow-hidden">
             <img
               src={props.post.attributes.coverUrl}
               alt={props.post.attributes.title}
