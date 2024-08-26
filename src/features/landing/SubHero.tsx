@@ -19,14 +19,14 @@ export const SubHero = ({ className, title, subTitle }: { className: string, tit
       {/* Image - main - bg-cover */}
       <div
         // eslint-disable-next-line tailwindcss/enforces-negative-arbitrary-values
-        className="-mt-[150px] h-[40vh] w-full bg-cover bg-center lg:h-[86vh]"
+        className="-mt-[150px] h-[60vh] w-full bg-cover bg-center lg:h-[86vh]"
         style={{
           backgroundImage: `url('/images/salle-de-sport.jpg')`,
         }}
       >
         <div className="mx-auto items-center justify-between lg:flex lg:w-10/12">
           <div className="container mx-auto px-4 pt-20">
-            <div className="mx-auto mt-[75px] text-center md:mt-[150px] lg:max-w-3xl">
+            <div className="mx-auto mt-[120px] text-center lg:mt-[280px] lg:max-w-3xl">
               {/* Subtitle */}
               {subTitle && (
                 <motion.span
