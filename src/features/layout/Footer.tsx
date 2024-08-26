@@ -48,7 +48,7 @@ export const Footer = () => {
               <Typography >{SiteConfig.company.name}</Typography>
               <Typography >{SiteConfig.company.address}</Typography>
             </div>
-            <div className="mt-4 flex">
+            <div className="mt-4 flex pb-10">
               <Link href="#" aria-label="Instagram" className="mr-4 text-2xl hover:text-orange-500  ">
                 <FaInstagramSquare />
               </Link>
@@ -62,7 +62,7 @@ export const Footer = () => {
            
           </div>
 
-          <div className=" grid grid-cols-2 gap-4 sm:grid-cols-3">
+          <div className=" max-sm-mx-auto grid grid-cols-3 gap-4">
             {footerContent.footerLinks.map((item) => (
               <div key={item.heading}>
                 <Typography variant="large" className="mb-3 text-gray-400">{item.heading}</Typography>
@@ -75,7 +75,7 @@ export const Footer = () => {
                       >
                         {link.label}
                         {link.badge && (
-                          <span className="ml-2 rounded-full border border-orange-500 bg-orange-100 px-1 py-0.5 text-[10px] text-orange-500">
+                          <span className="ml-2 rounded-full border border-orange-500 bg-orange-100 px-1 py-0.5 text-[10px] text-orange-500 ">
                             {link.badge}
                           </span>
                         )}

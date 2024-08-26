@@ -7,7 +7,7 @@ export const SideHero = ({ className }: { className: string }) => {
     <section className={`${className}`}>
       {/* Image - main - bg-cover */}
       <div
-        className="h-[40vh] w-full bg-cover bg-center lg:h-[86vh]"
+        className="sticky h-[432px] w-full bg-cover bg-center lg:h-[780px]"
         style={{
           backgroundImage: `url('/images/groupArcachon.jpg')`,
         }}
