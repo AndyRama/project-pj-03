@@ -1,24 +1,15 @@
 import SubHero from "@/features/landing/SubHero";
-import { Layout, LayoutContent } from "@/features/page/layout";
+// import { Layout, LayoutContent } from "@/features/page/layout";
 import { EmailFormSection } from "@/features/email/EmailFormSection";
-import {CardInfo} from "@/features/contact/card/CardInfo";
-
+import CardContact from "@/features/contact/card/CardContact";
 
 export default function page() {
   return (
     <>
-      <SubHero
-        className={""}
-        title={"contacter"}
-        subTitle={"Pour me"}
-      />
-        <CardInfo/>
+      <SubHero className={""} title={"contacter"} subTitle={"Pour me"} />
 
-      <Layout>
-        <LayoutContent className="prose m-auto mb-8 dark:prose-invert">
-        </LayoutContent>
-      </Layout>
-      
+      <CardContact className="prose m-auto mb-8 dark:prose-invert" />
+
       <EmailFormSection />
     </>
   );

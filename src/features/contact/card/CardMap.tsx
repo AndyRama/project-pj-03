@@ -2,32 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MdHome, MdContactPhone, MdContactMail, MdContactPage } from 'react-icons/md';
+import { MdHome } from 'react-icons/md';
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Typography } from "@/components/ui/typography";
 
-const iconMapping: { [key: string]: JSX.Element } = {
-  icon1: (
-    <MdHome className="bg/10 mr-2 mt-2 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
-  ),
-  icon2: (
-    <MdContactPhone className="bg/10 mr-2 mt-1 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
-  ),
-  icon3: (
-    <MdContactMail className="bg/10 mr-2 mt-1 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
-  ),
-};
-
-const CardInfoContent: {
-  heading: {
-    title: string;
-    subTitle: string;
-    description: string;
-  };
-  step: {
-    [key: string]: string;
-  }[];
-} = {
+const CardMapContent = {
   heading: {
     title: '',
     subTitle: '',
@@ -35,27 +14,24 @@ const CardInfoContent: {
   },
   step: [
     {
-      title1: '5 Washington Square, New York, USA',
-      icon1: 'icon1',
-      title2: '+1 212 425 8617',
-      icon2: 'icon2',
-      title3: 'information@office.com',
-      icon3: 'icon3',
+      title: 'Categories',
+      description: 'Lorem ipsum dolor sit, amet consecte Mollitia ipsum ectetur repellat!',
+      title1: 'Alimentation',
     },
   ],
 };
 
-export type CardInfoProps = {
+export type CardMapProps = {
   className?: string;
 };
 
-export const CardInfo = ({ className }: CardInfoProps) => {
+export const CardMap = ({ className }: CardMapProps) => {
   return (
     <section className={className}>
       <div className="w-[360px] md:w-[330px] md:pl-0 xl:ml-[-16px] xl:w-[350px]">
-        {CardInfoContent.step.map((step, index) => (
+        {CardMapContent.step.map((step, index) => (
           <motion.div
-            key={index}
+            key={step.title}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{
               opacity: 1,
@@ -67,28 +43,23 @@ export const CardInfo = ({ className }: CardInfoProps) => {
             }}
             viewport={{ once: true }}
             whileHover={{ y: -10, transition: { duration: 0.1 } }}
-            className="group relative h-[460px] overflow-hidden rounded-md bg-[#2F2E2E] p-4 duration-300 hover:shadow-2xl"
+            className="group relative h-[460px] overflow-hidden rounded-md bg-[#2F2E2E] duration-300 hover:shadow-2xl"
           >
             <Card className="border-none bg-transparent">
               <CardHeader className="flex items-start gap-3 p-0">
-                <MdContactPage className="bg/10 mr-2 mt-2 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
+                <MdHome className="bg/10 mr-2 mt-2 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
                 <Typography className="text-3xl text-white">
-                  Me contacter
+                  Localisation
                 </Typography>
               </CardHeader>
               <CardContent>
-                {['title1', 'title2', 'title3'].map((titleKey, idx) => (
-                  <div className="mt-3 flex" key={idx}>
-                    <span className="text-2xl">
-                      {iconMapping[step[`icon${idx + 1}`]]}
-                    </span>
-                    <Typography
-                      className="relative pb-2 text-xl text-white duration-300 ease-in-out before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-full before:scale-x-0 before:bg-orange-500 before:transition-all before:content-[''] hover:text-gray-500 hover:before:scale-x-100"
-                    >
-                      {step[titleKey]}
-                    </Typography>
-                  </div>
-                ))}
+                <iframe
+                  className="mt-5 h-[350px] w-full rounded-md"
+                  src={
+                    "https://www.google.com/maps/embed/v1/place?key=AIzaSyBwOWZ_C1sw6lYJhxYk_LJJCI2uM9GW8IA&q=220 avenue de l'argonne,merignac,bordeaux,france"
+                  }
+                  allowFullScreen
+                ></iframe>
               </CardContent>
             </Card>
           </motion.div>
@@ -98,4 +69,4 @@ export const CardInfo = ({ className }: CardInfoProps) => {
   );
 };
 
-export default CardInfo;
+export default CardMap;
