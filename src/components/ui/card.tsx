@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import type { VariantProps } from "class-variance-authority";
 import { cva } from "class-variance-authority";
 
-const cardVariants = cva("rounded-md shadow-sm", {
+const cardVariants = cva("shadow-sm", {
   variants: {
     variant: {
       default: "border bg-card text-card-foreground",
@@ -35,7 +35,7 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    className={cn("flex flex-col rounded-md space-y-1.5 p-6", className)}
     {...props}
   />
 ));
