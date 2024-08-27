@@ -44,7 +44,7 @@ const CardPricing = ({ className }: CardPricingProps) => {
           >
             <div className="relative mb-10 mt-1 flex flex-col items-start gap-3 px-2 lg:px-4">
               <div className="flex items-center text-2xl">
-                {/* <BiLayer className="bg/10 mr-2 rounded-sm border-orange-500 bg-orange-500 text-orange-500" /> */}
+                <BiLayer className="bg/10 mr-2 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
                 <h2 className="text-3xl text-white">Prestations</h2>
               </div>
               <p className="mb-2 text-justify text-[15px] leading-relaxed text-gray-500 transition-all duration-300 ease-in-out group-hover:text-white">

@@ -71,7 +71,7 @@ export const CardInfo = ({ className }: CardInfoProps) => {
           >
             <Card className="border-none bg-transparent">
               <CardHeader className="ml-4 flex items-start gap-3 p-0">
-                {/* <MdContactPage className="bg/10 mr-2 mt-2 rounded-sm border-orange-500 bg-orange-500 text-orange-500" /> */}
+                {/* <MdCosntactPage className="bg/10 mr-2 mt-2 rounded-sm border-orange-500 bg-orange-500 text-orange-500" /> */}
                 <Typography className="text-3xl text-white">
                   Me contacter
                 </Typography>

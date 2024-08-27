@@ -43,6 +43,7 @@ function useBoundedScroll(threshold: number) {
   return { scrollYBounded, scrollYBoundedProgress };
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function HeaderBase({ children }: PropsWithChildren) {
   const { scrollYBoundedProgress } = useBoundedScroll(400);
   const scrollYBoundedProgressDelayed = useTransform(scrollYBoundedProgress, [0, 0.75, 1], [0, 0, 1]);

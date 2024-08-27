@@ -6,7 +6,7 @@ import React from "react";
 
 export const FloatingLegalFooter: React.FC = () => {
   return (
-    <div className="mb-2 border-t border-t-gray-100 pt-2 text-center text-white">
+    <div className="mb-2 border-t border-t-gray-100 pt-2 text-center text-muted-foreground">
       <div className="mx-auto items-center text-center text-sm">
         &copy; 2024{" "}
         <Link href="/" className="text-orange-500">
