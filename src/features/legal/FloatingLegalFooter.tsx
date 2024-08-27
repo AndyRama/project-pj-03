@@ -1,23 +1,40 @@
 import { SiteConfig } from "@/site-config";
 import Image from "next/image";
 import Link from "next/link";
+import { BiSolidHeart } from "react-icons/bi";
+import React from "react";
 
-export const FloatingLegalFooter = () => {
+export const FloatingLegalFooter: React.FC = () => {
   return (
-    <div className="fixed bottom-2 right-2 flex items-center gap-2">
-      <Link
-        className="text-xs text-muted-foreground hover:underline"
-        href="/legal/privacy"
-      >
-        Privacy
-      </Link>
-      <Link
-        className="text-xs text-muted-foreground hover:underline"
-        href="/legal/terms"
-      >
-        Terms
-      </Link>
-      <Image src={SiteConfig.appIcon} width={12} height={12} alt="app icon" />
+    <div className="mb-2 border-t border-t-gray-100 pt-2 text-center text-white">
+      <div className="mx-auto items-center text-center text-sm">
+        &copy; 2024{" "}
+        <Link href="/" className="text-orange-500">
+          Unlcoaching{" "}
+        </Link>
+        Tous droits réservés. Crée avec{" "}
+        <BiSolidHeart className="mx-1 inline-block text-red-400" />
+        par{" "}
+        <Link href="/" className="text-orange-500">
+          Andy Ramaroson
+        </Link>
+      </div>
+
+      <div className="fixed bottom-2 right-2 flex items-center gap-2">
+        <Link
+          className="text-xs text-muted-foreground hover:underline"
+          href="/legal/privacy"
+        >
+          Privacy
+        </Link>
+        <Link
+          className="text-xs text-muted-foreground hover:underline"
+          href="/legal/terms"
+        >
+          Terms
+        </Link>
+        <Image src={SiteConfig.appIcon} width={12} height={12} alt="app icon" />
+      </div>
     </div>
   );
 };

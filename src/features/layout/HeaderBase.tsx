@@ -64,7 +64,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 lg:px-8">
         <div className="flex items-center gap-1">
-          <LogoSvg size={24} />
+          <LogoSvg size={24}/>
           <motion.p
             style={{
               scale: useTransform(scrollYBoundedProgressDelayed, [0, 1], [1, 0.9]),
