@@ -48,6 +48,7 @@ export const Footer = () => {
               <Typography >{SiteConfig.company.name}</Typography>
               <Typography >{SiteConfig.company.address}</Typography>
             </div>
+
             <div className="mt-4 flex pb-10">
               <Link href="#" aria-label="Instagram" className="mr-4 text-2xl hover:text-orange-500  ">
                 <FaInstagramSquare />
@@ -58,8 +59,7 @@ export const Footer = () => {
               <Link href="#" aria-label="LinkedIn" className="text-2xl hover:text-orange-500 ">
                 <FaLinkedin />
               </Link>
-            </div>
-           
+            </div>           
           </div>
 
           <div className=" max-sm-mx-auto grid grid-cols-3 gap-4">

@@ -7,16 +7,16 @@ export const EmailFormSection = () => {
   return (
     <SectionLayout
       size="xl"
-      className="relative -mb-28 flex w-full flex-col items-center px-0"
+      className="relative flex w-full flex-col items-center px-0"
     >
       <div
-        className="relative h-[648px] w-full bg-cover bg-center lg:h-[929px]"
+        className="relative -mb-28 h-[648px] w-full bg-cover bg-center lg:h-[929px]"
         style={{
           backgroundImage: `url('/images/salle-de-sport.jpg')`,
         }}
       >
         <div className="mx-auto flex h-full max-w-xl flex-col items-center gap-4 text-center">
-          <LogoSvg className="mt-32" />
+          <LogoSvg className="mt-56" />
           <Typography
             variant="small"
             className="font-extrabold uppercase text-primary"

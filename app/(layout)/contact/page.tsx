@@ -1,7 +1,6 @@
 import SubHero from "@/features/landing/SubHero";
-// import { Layout, LayoutContent } from "@/features/page/layout";
-import { EmailFormSection } from "@/features/email/EmailFormSection";
 import CardContact from "@/features/contact/card/CardContact";
+import { EmailFormSection } from "@/features/email/EmailFormSection";
 
 export default function page() {
   return (
