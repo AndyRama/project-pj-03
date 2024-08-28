@@ -77,7 +77,7 @@ export function LandingHeader() {
           style={{
             opacity: useTransform(scrollYBoundedProgressDelayed, [0, 1], [1, 0]),
           }}
-          className="flex items-center gap-4 text-sm font-medium max-sm:hidden sm:gap-4"
+          className="md:flex items-center gap-4 text-sm font-medium hidden sm:gap-4"
         >
           {topRoutes.map((route) => (
             <a href={route.path} key={route.path}>
@@ -85,10 +85,11 @@ export function LandingHeader() {
             </a>
           ))}
           <ThemeToggle/>
-          <AuthButtonClient />
         </motion.nav>
-        
-        <div className="z-20 flex items-center gap-2 px-2 sm:hidden">        
+        <div className="hidden md:contents">
+          <AuthButtonClient />
+        </div>
+        <div className="z-20 flex items-center gap-2 px-2 md:hidden">        
           <ThemeToggle />
           <AuthButtonClient />
           <Sheet>
