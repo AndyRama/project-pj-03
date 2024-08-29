@@ -52,7 +52,7 @@ export type CardInfoProps = {
 export const CardInfo = ({ className }: CardInfoProps) => {
   return (
     <section className={className}>
-      <div className="w-[360px] md:w-[330px] md:pl-0 xl:ml-[-16px] xl:w-[350px]">
+      <div className="w-[360px] md:w-[330px] xl:w-[380px]">
         {CardInfoContent.step.map((step, index) => (
           <motion.div
             key={index}
@@ -67,7 +67,7 @@ export const CardInfo = ({ className }: CardInfoProps) => {
             }}
             viewport={{ once: true }}
             whileHover={{ y: -10, transition: { duration: 0.1 } }}
-            className="group relative h-[460px] overflow-hidden rounded-md bg-[#2F2E2E] p-4 duration-300 hover:shadow-2xl"
+            className="group relative h-[460px] overflow-hidden bg-[#2F2E2E] p-4 duration-300 hover:shadow-2xl"
           >
             <Card className="border-none bg-transparent">
               <CardHeader className="ml-4 flex items-start gap-3 p-0">

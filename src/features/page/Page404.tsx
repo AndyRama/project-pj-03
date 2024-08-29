@@ -2,20 +2,22 @@ import { ContactSupportDialog } from "@/features/contact/support/ContactSupportD
 import Link from "next/link";
 import { buttonVariants } from "../../components/ui/button";
 import { Typography } from "../../components/ui/typography";
+import { LogoSvg } from "@/components/svg/Logo";
 
 export function Page404() {
   return (
     <main className="flex flex-col items-center gap-8">
+      <LogoSvg size={24}/>
       <div className="space-y-3 text-center">
         <Typography variant="code">404</Typography>
-        <Typography variant="h1">Page not found</Typography>
+        <Typography variant="h1">Page non trouvée</Typography>
         <Typography>
-          Sorry, we couldn't find the page you're looking for.
+          Désolé, nous n'avons pas pu trouver la page que vous recherchez.
         </Typography>
       </div>
       <div className="flex items-center gap-4">
         <Link href="/" className={buttonVariants({ variant: "invert" })}>
-          Go back home
+          Page d'accueil
         </Link>
         <ContactSupportDialog />
       </div>

@@ -98,7 +98,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
               [1, 0],
             ),
           }}
-          className="hidden items-center gap-4 text-sm font-medium sm:gap-4 md:flex"
+          className="hidden items-center gap-4 text-sm font-medium sm:gap-4 lg:flex"
         >
           {topRoutes.map((route) => (
             <Link
@@ -111,12 +111,12 @@ export function HeaderBase({ children }: PropsWithChildren) {
           ))}
           <ThemeToggle />
         </motion.nav>
-        <div className="hidden md:contents">
+        <div className="hidden lg:contents">
           <AuthButtonClient />
         </div>
-        <div className="z-20 flex items-center gap-2 px-4 md:hidden">
+        <div className="z-20 flex items-center gap-2 px-4 lg:hidden">
           <ThemeToggle />
-          <AuthButtonClient />
+          
 
           <Sheet>
             <SheetTrigger>
@@ -142,7 +142,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
 
                 <Typography
                   variant="h3"
-                  className="text-center text-lg !leading-tight"
+                  className="text-left text-lg !leading-tight"
                 >
                   Menu
                 </Typography>
@@ -163,24 +163,10 @@ export function HeaderBase({ children }: PropsWithChildren) {
                 ))}
               </div>
               <hr />
-
-              <Typography
-                variant="h3"
-                className="text-center text-lg !leading-tight"
-              >
-                Menu 1
-              </Typography>
-
+              <AuthButtonClient />
+              
               <hr />
-
-              <Typography
-                variant="h3"
-                className="text-center text-lg !leading-tight"
-              >
-                Menu 2
-              </Typography>
-              <hr />
-              <Button className="absolute bottom-1 -ml-6 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]">
+              <Button className="bottom-1 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]">
                 Rejoingnez-nous !
               </Button>
             </SheetContent>

@@ -14,13 +14,13 @@ const footerContent = {
         { href: '/posts', label: 'Blog' },
         { href: '/contact', label: 'Contact' },
         { href: '/prestations', label: 'Prestations' },
-        { href: '/team', label: 'Team', badge: 'Coup de 🧡' },
+        { href: '/team', label: 'Team', badge: 'Nouveau' },
       ],
     },
     {
       heading: 'Pack',
       links: [
-        { href: '/prestations/#pack', label: 'Débutant', badge: 'New' },
+        { href: '/prestations/#pack', label: 'Débutant' },
         { href: '/prestations/#pack', label: 'Intermédiaire' },
         { href: '/prestations/#pack', label: 'Confirmé' },
       ],
@@ -29,8 +29,8 @@ const footerContent = {
       heading: 'Ressources',
       links: [
         { href: '/posts', label: 'Blog' },
-        { href: '/', label: 'School' },
-        { href: '/prestations/#E-Books', label: 'E-Books', badge: 'New' },
+        { href: '/', label: 'School' , badge: 'Nouveau' },
+        { href: '/prestations/#E-Books', label: 'E-Books' },
       ],
     },
   ],
@@ -71,7 +71,7 @@ export const Footer = () => {
                     <li key={link.label} className="mb-2">
                       <Link
                         href={link.href}
-                        className={`transition-all ease-in-out hover:text-orange-500 ${link.badge ? 'flex items-center gap-2' : ''}`}
+                        className={`transition-all ease-in-out hover:text-orange-500 ${link.badge ? 'flex items-center gap-0 md:gap-2' : ''}`}
                       >
                         {link.label}
                         {link.badge && (

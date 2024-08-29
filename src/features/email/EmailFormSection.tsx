@@ -15,8 +15,8 @@ export const EmailFormSection = () => {
           backgroundImage: `url('/images/salle-de-sport.jpg')`,
         }}
       >
-        <div className="mx-auto flex h-full max-w-xl flex-col items-center gap-4 text-center">
-          <LogoSvg className="mt-56" />
+        <div className="mx-auto flex h-full max-w-xl flex-col items-center gap-4 px-2 text-center">
+          <LogoSvg className="mt-24 lg:mt-56" />
           <Typography
             variant="small"
             className="font-extrabold uppercase text-primary"

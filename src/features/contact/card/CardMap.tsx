@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { MdHome } from "react-icons/md";
+// import { MdHome } from "react-icons/md";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Typography } from "@/components/ui/typography";
 
@@ -29,7 +29,7 @@ export type CardMapProps = {
 export const CardMap = ({ className }: CardMapProps) => {
   return (
     <section className={className}>
-      <div className="w-[360px] md:w-[330px] md:pl-0 xl:ml-[-16px] xl:w-[350px]">
+      <div className="w-[360px] md:w-[330px] xl:w-[380px]">
         {CardMapContent.step.map((step, index) => (
           <motion.div
             key={step.title}
@@ -44,7 +44,7 @@ export const CardMap = ({ className }: CardMapProps) => {
             }}
             viewport={{ once: true }}
             whileHover={{ y: -10, transition: { duration: 0.1 } }}
-            className="group relative h-[460px] overflow-hidden rounded-md bg-[#2F2E2E] p-4 duration-300 hover:shadow-2xl"
+            className="group relative h-[460px] overflow-hidden bg-[#2F2E2E] p-4 duration-300 hover:shadow-2xl"
           >
             <Card className="border-none bg-transparent">
               <CardHeader className="ml-4 flex flex-row gap-3 p-0">

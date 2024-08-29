@@ -25,7 +25,7 @@ export type CardPricingProps = {
 const CardPricing = ({ className }: CardPricingProps) => {
   return (
     <section className={className}>
-      <div className="w-[360px] md:w-[330px] md:pl-0 xl:ml-[-16px] xl:w-[350px]">
+      <div className="w-[360px] md:w-[330px] xl:w-[380px]">
         {CardPricingContent.step.map((step, index) => (
           <motion.div
             key={step.title}
@@ -40,7 +40,7 @@ const CardPricing = ({ className }: CardPricingProps) => {
             }}
             viewport={{ once: true }}
             whileHover={{ y: -10, transition: { duration: 0.1 } }}
-            className="group relative h-[460px] w-full overflow-hidden rounded-md bg-[#2F2E2E] p-4 duration-300 hover:shadow-2xl"
+            className="group relative h-[460px] w-full overflow-hidden bg-[#2F2E2E] p-4 duration-300 hover:shadow-2xl"
           >
             <div className="relative mb-10 mt-1 flex flex-col items-start gap-3 px-2 lg:px-4">
               <div className="flex items-center text-2xl">
@@ -51,7 +51,7 @@ const CardPricing = ({ className }: CardPricingProps) => {
                 {step.description}
               </p>
               <Link href={step.btn.href}>
-                <p className="text-white">{step.btn.label}</p>
+                <p className="border border-orange-500 px-8 text-white">{step.btn.label}</p>
               </Link>
             </div>
           </motion.div>
