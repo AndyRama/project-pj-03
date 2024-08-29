@@ -410,9 +410,9 @@ export default function page() {
               },
             ]}
           />
-        <EmailFormSection />
         </LayoutContent>
       </Layout>
+        <EmailFormSection />
     </>
   );
 }
