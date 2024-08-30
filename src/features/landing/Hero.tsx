@@ -109,10 +109,10 @@ const HeroReviews = () => (
 );
 
 const HeroImage = () => (
-  <div className="mt-20 flex flex-1 justify-end">
+  <div className="mt-20 flex flex-1 justify-end rounded-md">
     <img
       src="/images/jeremy.jpg"
-      className="max-w-md object-contain px-4 max-md:max-w-lg"
+      className="max-w-md rounded-md object-contain px-4 max-md:max-w-lg"
       alt="Hero images profile Jeremy Prat"
     />
   </div>

@@ -25,7 +25,7 @@ export type CardPricingProps = {
 const CardPricing = ({ className }: CardPricingProps) => {
   return (
     <section className={className}>
-      <div className="w-[360px] md:w-[330px] xl:w-[380px]">
+      <div className="w-[330px] xl:w-[380px]">
         {CardPricingContent.step.map((step, index) => (
           <motion.div
             key={step.title}

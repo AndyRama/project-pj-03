@@ -52,7 +52,7 @@ export type CardInfoProps = {
 export const CardInfo = ({ className }: CardInfoProps) => {
   return (
     <section className={className}>
-      <div className="w-[360px] md:w-[330px] xl:w-[380px]">
+      <div className="w-[330px] xl:w-[380px]">
         {CardInfoContent.step.map((step, index) => (
           <motion.div
             key={index}

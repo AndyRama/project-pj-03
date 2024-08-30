@@ -30,17 +30,16 @@ export const CardImage = ({ title, years, image, index }: CardImageProps) => {
         },
       }}
       viewport={{ once: true }}
-      className="group relative overflow-hidden rounded"
+      className="group relative overflow-hidden"
     >
-      <Card className="border-none bg-transparent">
+      <Card className="border-none bg-transparent ">
         <CardHeader className="p-0">
           <Image
             src={image}
             alt={title}
             width={400}
             height={400}
-            className="h-[300px] w-full object-cover object-center transition-all
-                duration-300 ease-in-out group-hover:scale-110"
+            className="h-[300px] w-full object-cover object-center transition-all duration-300 ease-in-out group-hover:scale-110"
           />
         </CardHeader>
         <CardContent>
