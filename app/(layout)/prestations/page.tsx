@@ -6,7 +6,6 @@ import { FAQSection } from "@/features/landing/FAQSection";
 import { SubHero } from "@/features/landing/SubHero";
 import { SectionDivider } from "@/features/landing/SectionDivider";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
-import { EmailFormSection } from "@/features/email/EmailFormSection";
 import { PricingDetails } from "@/features/prestations/pricing/PricingDetails";
 
 export default function page() {
@@ -412,7 +411,6 @@ export default function page() {
           />
         </LayoutContent>
       </Layout>
-        <EmailFormSection />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import { SubHero } from "@/features/landing/SubHero";
 import { SideHero } from "@/features/landing/SideHero";
-import { EmailFormSection } from "@/features/email/EmailFormSection";
 import { StoryCardGrid } from "@/features/team/StoryCard";
 import { Typography } from "@/components/ui/typography";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
@@ -102,8 +101,6 @@ export default function page() {
           },
         ]}
       />
-      
-      <EmailFormSection />
     </>
   );
 }
