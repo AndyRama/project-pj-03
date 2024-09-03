@@ -14,9 +14,9 @@ export default function Page() {
 
       <CardContact/>
 
-      <div className="flex justify-center mt-10">
+      <div className="mt-10 flex justify-center">
         <button 
-          className="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600"
+          className="rounded bg-orange-500 px-4 py-2 text-white hover:bg-orange-600"
           onClick={() => setShowForm(!showForm)}
         >
           {showForm ? "Masquer le formulaire" : "Formulaire d'inscription"}

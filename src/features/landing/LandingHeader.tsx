@@ -13,6 +13,9 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 
+import { ContactFeedbackPopover } from "@/features/contact/feedback/ContactFeedbackPopover";
+import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
+
 function useBoundedScroll(threshold: number) {
   const { scrollY } = useScroll();
   const scrollYBounded = useMotionValue(0);
@@ -108,9 +111,10 @@ export function LandingHeader({ children }: PropsWithChildren) {
             >
               {route.label}
               {route.badge && (
-                      <span className="ml-2 rounded-full border border-orange-500 bg-orange-100 px-1 text-[10px] text-orange-500">
-                        {route.badge}
-                      </span>)}
+                <span className="ml-2 rounded-full border border-orange-500 bg-orange-100 px-1 text-[10px] text-orange-500">
+                  {route.badge}
+                </span>
+              )}
             </Link>
           ))}
           <ThemeToggle />
@@ -121,7 +125,6 @@ export function LandingHeader({ children }: PropsWithChildren) {
 
         <div className="z-20 flex items-center gap-2 px-4 lg:hidden">
           <ThemeToggle />
-
           <Sheet>
             <SheetTrigger>
               <Menu className="size-8" />
@@ -143,34 +146,46 @@ export function LandingHeader({ children }: PropsWithChildren) {
                     {SiteConfig.title}
                   </motion.p>
                 </div>
-
-                <Typography
-                  variant="h3"
-                  className="text-left text-lg !leading-tight"
-                >
-                  Menu
-                </Typography>
+                <hr />
+                <div className="flex flex-row items-center justify-around">
+                  <Typography
+                    variant="h3"
+                    className="text-left text-lg !leading-tight"
+                  >
+                    Menu Principal
+                  </Typography>
+                  <AuthButtonClient />
+                </div>
                 <hr />
                 {topRoutes.map((route) => (
                   <Link
                     href={route.path}
                     key={route.path}
-                    className="relative text-sm font-medium hover:text-[#FDAB04]"
+                    className="relative text-left text-sm font-medium hover:text-[#FDAB04]"
                   >
                     {route.label}
                     {route.badge && (
-                      <span className="ml-2 rounded-full border border-orange-500 bg-orange-100 px-1 text-[10px] text-orange-500">
+                      <span className="ml-2  border border-orange-500 bg-orange-100 px-1 text-[10px] text-orange-500">
                         {route.badge}
                       </span>
                     )}
                   </Link>
                 ))}
               </div>
+              <hr />
 
+              <ContactSupportDialog>
+                <Button variant="outline" size="sm">
+                  Support
+                </Button>
+              </ContactSupportDialog>
+              <ContactFeedbackPopover>
+                <Button variant="outline" size="sm">
+                  Feedback
+                </Button>
+              </ContactFeedbackPopover>
               <hr />
-              <AuthButtonClient />
-              <hr />
-              <Button className="bottom-1 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]">
+              <Button className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]">
                 Rejoingnez-nous !
               </Button>
               <hr />

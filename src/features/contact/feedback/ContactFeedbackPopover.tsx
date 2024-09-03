@@ -63,7 +63,7 @@ export const ContactFeedbackPopover = (props: ContactFeedbackPopoverProps) => {
           <Button variant="outline">Feedback</Button>
         )}
       </PopoverTrigger>
-      <PopoverContent className="p-0">
+      <PopoverContent className="mt-5 p-0">
         <Form
           form={form}
           onSubmit={async (v) => onSubmit(v)}

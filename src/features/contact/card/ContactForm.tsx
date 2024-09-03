@@ -24,7 +24,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className }) => {
       className={`${className}`}
     >
       <div className="container mx-auto px-4">
-        <div className="mb-32 items-stretch lg:flex">
+        <div className="items-sticky mb-32 lg:flex">
           {/* Contact - Left - Image */}
           <div id="Form" className="flex-1 lg:w-6/12">
             <Image
