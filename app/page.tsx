@@ -41,7 +41,7 @@ export default function HomePage() {
                 alt=""
                 width={200}
                 height={100}
-                className="h-auto w-full rounded-md object-cover"
+                className="h-auto w-full rounded-[10px] object-cover"
               />
             ),
           },
@@ -58,7 +58,7 @@ export default function HomePage() {
                 alt=""
                 width={200}
                 height={100}
-                className="h-auto w-full object-cover"
+                className="h-auto w-full rounded-[10px] object-cover"
               />
             ),
           },
@@ -86,7 +86,7 @@ export default function HomePage() {
                 alt=""
                 width={200}
                 height={100}
-                className="h-auto w-full object-cover"
+                className="h-auto w-full rounded-[10px] object-cover"
               />
             ),
           },
@@ -122,7 +122,7 @@ export default function HomePage() {
                 alt=""
                 width={200}
                 height={100}
-                className="h-auto w-full rounded-md object-cover"
+                className="h-auto w-full rounded-[8px] object-cover"
               />
             ),
             description1: "",
@@ -141,7 +141,7 @@ export default function HomePage() {
                 alt=""
                 width={200}
                 height={100}
-                className="h-auto w-full object-cover"
+              className="h-auto w-full rounded-[8px] object-cover"
               />
             ),
           },
@@ -159,7 +159,7 @@ export default function HomePage() {
                 alt=""
                 width={200}
                 height={100}
-                className="h-auto w-full rounded-md object-cover"
+              className="h-auto w-full rounded-[8px] object-cover"
               />
             ),
           },

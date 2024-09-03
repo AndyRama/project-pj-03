@@ -116,7 +116,6 @@ export function HeaderBase({ children }: PropsWithChildren) {
         </div>
         <div className="z-20 flex items-center gap-2 px-4 lg:hidden">
           <ThemeToggle />
-          
 
           <Sheet>
             <SheetTrigger>
@@ -164,7 +163,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
               </div>
               <hr />
               <AuthButtonClient />
-              
+
               <hr />
               <Button className="bottom-1 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]">
                 Rejoingnez-nous !

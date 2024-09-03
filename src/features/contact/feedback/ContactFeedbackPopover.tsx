@@ -115,7 +115,7 @@ export const ContactFeedbackPopover = (props: ContactFeedbackPopoverProps) => {
                 </FormItem>
               )}
             />
-            <Button type="submit" variant="outline">
+            <Button type="submit" variant="outline" size="sm">
               Send
             </Button>
           </div>

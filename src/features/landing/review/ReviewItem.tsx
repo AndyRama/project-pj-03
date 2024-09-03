@@ -26,11 +26,11 @@ export type ReviewItemProps = {
 
 export const ReviewItem = ({ className, ...props }: ReviewItemProps) => {
   return (
-    <Card className={cn("h-fit", className)} {...props}>
+    <Card className={cn("h-fit, rounded-[10px]", className)} {...props}>
       <CardHeader>
         <ClientMarkdown className="citation">{props.review}</ClientMarkdown>
       </CardHeader>
-      <CardContent className="flex items-center gap-2 rounded-lg bg-background pt-6">
+      <CardContent className="flex items-center gap-2 bg-background pt-6">
         <div>
           <Avatar>
             <AvatarFallback>{props.name[0]}</AvatarFallback>

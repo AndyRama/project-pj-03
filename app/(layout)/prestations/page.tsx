@@ -4,7 +4,6 @@ import { Pricing } from "@/features/prestations/pricing/PricingSection";
 import { PricingEbook } from "@/features/prestations/ebook/PricingSectionEbook";
 import { FAQSection } from "@/features/landing/FAQSection";
 import { SubHero } from "@/features/landing/SubHero";
-import { SectionDivider } from "@/features/landing/SectionDivider";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
 import { PricingDetails } from "@/features/prestations/pricing/PricingDetails";
 
@@ -146,10 +145,44 @@ export default function page() {
             ]}
           />
 
-          <SectionDivider />
+          {/* <SectionDivider /> */}
 
           {/* Pricing Details */}
           <PricingDetails />
+
+          {/* FAQ Section */}
+          <FAQSection
+            faq={[
+              {
+                question: "Qu'est-ce que unlcoaching.com ?",
+                answer:
+                  "Unlcoaching est une plateforme dédiée au coaching sportif et au développement personnel. Elle aide les utilisateurs à atteindre leurs objectifs de santé et de bien-être grâce à des programmes de coaching personnalisés et des articles de blog informatifs.",
+              },
+              {
+                question: "Quels services propose unlcoaching.com ?",
+                answer:
+                  "Nous proposons une gamme de services, y compris des séances de coaching individuel, des programmes de remise en forme, et un blog regorgeant de conseils sur la nutrition, l'entraînement et le développement personnel.",
+              },
+              {
+                question:
+                  "Comment puis-je m'inscrire à un programme de coaching ?",
+                answer:
+                  "Vous pouvez vous inscrire à un programme en visitant notre page d'accueil et en sélectionnant l'option 'S'inscrire'. Vous serez guidé à travers un processus simple pour choisir le programme qui correspond le mieux à vos besoins.",
+              },
+              {
+                question:
+                  "Quels sont les avantages du coaching avec unlcoaching.com ?",
+                answer:
+                  "Le coaching avec unlcoaching.com vous permet de bénéficier de l'expertise d'un coach professionnel Jérémy Prat, d'un programme personnalisé adapté à vos objectifs, et d'un suivi continu pour garantir vos progrès.",
+              },
+              {
+                question:
+                  "Quels sont les prix des services offerts par unlcoaching.com ?",
+                answer:
+                  "Nous offrons plusieurs plans tarifaires adaptés à différents besoins, allant des sessions de coaching individuelles aux programmes complets sur plusieurs mois. Pour plus de détails, veuillez consulter notre page dédiée aux tarifs.",
+              },
+            ]}
+          />
 
           {/* Pricing Ebook */}
           <PricingEbook
@@ -293,7 +326,7 @@ export default function page() {
             <Typography
               variant="p"
               className="max-w-xl font-bold text-orange-500"
-              >
+            >
               Retour de ma formation
             </Typography>
             <Typography variant="h2" className="m-auto max-w-xl text-center">
@@ -373,39 +406,6 @@ export default function page() {
                 review:
                   "The customer support team at Threader is fantastic. They've been quick to respond and helpful with any questions I've had. Great service overall.",
                 role: "Customer",
-              },
-            ]}
-          />
-
-          <FAQSection
-            faq={[
-              {
-                question: "Qu'est-ce que unlcoaching.com ?",
-                answer:
-                  "Unlcoaching est une plateforme dédiée au coaching sportif et au développement personnel. Elle aide les utilisateurs à atteindre leurs objectifs de santé et de bien-être grâce à des programmes de coaching personnalisés et des articles de blog informatifs.",
-              },
-              {
-                question: "Quels services propose unlcoaching.com ?",
-                answer:
-                  "Nous proposons une gamme de services, y compris des séances de coaching individuel, des programmes de remise en forme, et un blog regorgeant de conseils sur la nutrition, l'entraînement et le développement personnel.",
-              },
-              {
-                question:
-                  "Comment puis-je m'inscrire à un programme de coaching ?",
-                answer:
-                  "Vous pouvez vous inscrire à un programme en visitant notre page d'accueil et en sélectionnant l'option 'S'inscrire'. Vous serez guidé à travers un processus simple pour choisir le programme qui correspond le mieux à vos besoins.",
-              },
-              {
-                question:
-                  "Quels sont les avantages du coaching avec unlcoaching.com ?",
-                answer:
-                  "Le coaching avec unlcoaching.com vous permet de bénéficier de l'expertise d'un coach professionnel Jérémy Prat, d'un programme personnalisé adapté à vos objectifs, et d'un suivi continu pour garantir vos progrès.",
-              },
-              {
-                question:
-                  "Quels sont les prix des services offerts par unlcoaching.com ?",
-                answer:
-                  "Nous offrons plusieurs plans tarifaires adaptés à différents besoins, allant des sessions de coaching individuelles aux programmes complets sur plusieurs mois. Pour plus de détails, veuillez consulter notre page dédiée aux tarifs.",
               },
             ]}
           />

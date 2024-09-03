@@ -82,7 +82,7 @@ export default async function RoutePage(props: PageParams<{}>) {
             </div>
           </LayoutContent>
         ) : (
-          <LayoutContent className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <LayoutContent className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => (
               <PostCard key={post.slug} post={post} />
             ))}

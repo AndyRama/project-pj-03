@@ -23,9 +23,7 @@ export const Hero = () => {
             <HeroButton />
             <HeroReviews />
           </div>
-          <div className="px-4">
-            <HeroImage />
-          </div>
+          <HeroImage />
         </div>
       </div>
     </main>
@@ -84,7 +82,7 @@ const HeroButton = () => (
   <Link
     href="/team"
     className={cn(
-      buttonVariants({ size: "lg", variant: "default" }),
+      buttonVariants({ size: "md", variant: "default" }),
       "text-white border hover:border-orange-500 hover:text-orange-500",
     )}
   >
@@ -104,15 +102,15 @@ const HeroReviews = () => (
       "https://i.pravatar.cc/300?u=100",
     ]}
   >
-    8200+ followers <br/> sur instagram
+    8200+ followers <br /> sur instagram
   </ReviewSmall>
 );
 
 const HeroImage = () => (
-  <div className="mt-20 flex flex-1 justify-end rounded-md">
+  <div className="mt-20 flex flex-1 justify-end">
     <img
       src="/images/jeremy.jpg"
-      className="max-w-md rounded-md object-contain px-4 max-md:max-w-lg"
+      className="w-[350px] max-w-lg rounded-[10px] object-contain sm:w-[480px] md:w-full"
       alt="Hero images profile Jeremy Prat"
     />
   </div>

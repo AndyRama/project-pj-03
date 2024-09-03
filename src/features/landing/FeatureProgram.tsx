@@ -67,7 +67,7 @@ export const FeatureLine = (props: FeatureLineProps) => {
         <Link
           href="#pricing"
           className={cn(
-            buttonVariants({ size: "lg", variant: "default" }),
+            buttonVariants({ size: "md", variant: "default" }),
             "text-white border hover:border-orange-500 hover:text-orange-500",
           )}
         >
