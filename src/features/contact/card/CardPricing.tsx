@@ -1,17 +1,22 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { BiLayer } from 'react-icons/bi';
+import React from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+// import { BiLayer } from "react-icons/bi";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Typography } from "@/components/ui/typography";
 
 const CardPricingContent = {
+  heading: {
+    title: 'Prestations',
+    subTitle: '',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ipsum et repellat!',
+  },
   step: [
     {
-      title: 'Pricing',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ipsum et repellat!',
       btn: {
-        href: '/prestations',
+        href: "/prestations",
         label: "Plus d'information",
       },
     },
@@ -28,7 +33,7 @@ const CardPricing = ({ className }: CardPricingProps) => {
       <div className="w-[330px] xl:w-[380px]">
         {CardPricingContent.step.map((step, index) => (
           <motion.div
-            key={step.title}
+            key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{
               opacity: 1,
@@ -42,18 +47,23 @@ const CardPricing = ({ className }: CardPricingProps) => {
             whileHover={{ y: -10, transition: { duration: 0.1 } }}
             className="group relative h-[460px] w-full overflow-hidden bg-[#2F2E2E] p-4 duration-300 hover:shadow-2xl"
           >
-            <div className="relative mb-10 mt-1 flex flex-col items-start gap-3 px-2 lg:px-4">
-              <div className="flex items-center text-2xl">
-                <BiLayer className="bg/10 mr-2 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
-                <h2 className="text-3xl text-white">Prestations</h2>
-              </div>
-              <p className="mb-2 text-justify text-[15px] leading-relaxed text-gray-500 transition-all duration-300 ease-in-out group-hover:text-white">
-                {step.description}
-              </p>
-              <Link href={step.btn.href}>
-                <p className="border border-orange-500 text-white">{step.btn.label}</p>
-              </Link>
-            </div>
+            <Card className="border-none bg-transparent">
+              <CardHeader className="ml-4 flex flex-row gap-3 p-0">
+                <Typography className="text-3xl text-white">
+                  {CardPricingContent.heading.title}
+                </Typography>
+              </CardHeader>
+              <CardContent>
+                <Typography className="mb-2 text-justify text-[15px] leading-relaxed text-gray-500 transition-all duration-300 ease-in-out group-hover:text-white">
+                  {CardPricingContent.heading.description}
+                </Typography>
+                <Link href={step.btn.href}>
+                  <Typography className="cursor-pointer border border-orange-500 px-8 py-2 text-white">
+                    {step.btn.label}
+                  </Typography>
+                </Link>
+              </CardContent>
+            </Card>
           </motion.div>
         ))}
       </div>

@@ -48,16 +48,13 @@ export const CardMap = ({ className }: CardMapProps) => {
           >
             <Card className="border-none bg-transparent">
               <CardHeader className="ml-4 flex flex-row gap-3 p-0">
-                {/* <span>
-                  <MdHome className="bg/10 mr-2 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
-                </span> */}
                 <Typography className="text-3xl text-white">
                   Localisation
                 </Typography>
               </CardHeader>
               <CardContent>
                 <iframe
-                  className="mt-5 h-[350px] w-full rounded-md"
+                  className="mt-8 h-[350px] w-full rounded-md"
                   src={
                     "https://www.google.com/maps/embed/v1/place?key=AIzaSyBwOWZ_C1sw6lYJhxYk_LJJCI2uM9GW8IA&q=220 avenue de l'argonne,merignac,bordeaux,france"
                   }
