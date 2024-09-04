@@ -1,9 +1,9 @@
+import { LogoSvg } from "@/components/svg/Logo";
 import type { NavigationLinkGroups } from "@/features/navigation/navigation.type";
-import { LayoutDashboard, Settings, User2 } from "lucide-react";
+import { LayoutDashboard, Settings, Earth, UsersRound, SquareRadical, Mailbox } from "lucide-react";
 
 export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
   {
-    title: "Menu",
     links: [
       {
         title: "Tableau de bord",
@@ -22,8 +22,13 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
     links: [
       {
         title: "Users",
-        icon: <User2 />,
+        icon: <UsersRound />,
         url: "/users",
+      },
+      {
+        title: "Campagne Email",
+        icon: <Mailbox />,
+        url: "#",
       },
     ],
   },
@@ -31,40 +36,30 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
     title: "Application",
     links: [
       {
-        title: "School-unlcoaching.com",
-        icon: <LayoutDashboard />,
-        url: "#",
+        title: "School-Unlcoaching",
+        icon: <LogoSvg />,
+        url: "/unlcoaching.com",
       },
+      {
+        title: "Unlcoaching",
+        icon: <LogoSvg />,
+        url: "/",
+      },      
     ],
   },
   {
-    title: "Site Map",
+    title: "Performance",
     links: [
       {
-        title: "Accueil",
-        icon: <User2 />,
-        url: "/",
+        title: "Performance",
+        icon: <SquareRadical />,
+        url: "#",
       },
       {
-        title: "Blog",
-        icon: <User2 />,
-        url: "/blog",
-      },
-      {
-        title: "Contact",
-        icon: <User2 />,
-        url: "/contact",
-      },
-      {
-        title: "Prestations",
-        icon: <User2 />,
-        url: "/prestations",
-      },
-      {
-        title: "Team",
-        icon: <User2 />,
-        url: "/team",
-      },
+        title: "Co2",
+        icon: <Earth />,
+        url: "#",
+      },  
     ],
   },
 ];
