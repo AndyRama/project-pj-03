@@ -12,6 +12,8 @@ import { Menu } from "react-feather";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
+import { ContactFeedbackPopover } from "@/features/contact/feedback/ContactFeedbackPopover";
+import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
 
 function useBoundedScroll(threshold: number) {
   const { scrollY } = useScroll();
@@ -138,19 +140,22 @@ export function HeaderBase({ children }: PropsWithChildren) {
                     {SiteConfig.title}
                   </motion.p>
                 </div>
-
-                <Typography
-                  variant="h3"
-                  className="text-left text-lg !leading-tight"
-                >
-                  Menu
-                </Typography>
+                <hr />
+                <div className="flex flex-row items-center justify-around">
+                  <AuthButtonClient />
+                  <Typography
+                    variant="h3"
+                    className="text-left text-lg !leading-tight"
+                  >
+                    Menu Principal
+                  </Typography>
+                </div>
                 <hr />
                 {topRoutes.map((route) => (
                   <Link
                     href={route.path}
                     key={route.path}
-                    className="relative text-sm font-medium hover:text-[#FDAB04]"
+                    className="relative text-left text-sm font-medium hover:text-[#FDAB04]"
                   >
                     {route.label}
                     {route.badge && (
@@ -162,12 +167,22 @@ export function HeaderBase({ children }: PropsWithChildren) {
                 ))}
               </div>
               <hr />
-              <AuthButtonClient />
 
+             <ContactSupportDialog>
+                <Button variant="outline" size="md">
+                  Support
+                </Button>
+              </ContactSupportDialog>
+              <ContactFeedbackPopover>
+                <Button variant="outline" size="md">
+                  Feedback
+                </Button>
+              </ContactFeedbackPopover>
               <hr />
-              <Button className="bottom-1 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]">
+              <Button size="md" className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]">
                 Rejoingnez-nous !
               </Button>
+              <hr />
             </SheetContent>
           </Sheet>
         </div>

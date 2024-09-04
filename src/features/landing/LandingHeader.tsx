@@ -12,7 +12,6 @@ import { Menu } from "react-feather";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
-
 import { ContactFeedbackPopover } from "@/features/contact/feedback/ContactFeedbackPopover";
 import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
 
@@ -148,13 +147,13 @@ export function LandingHeader({ children }: PropsWithChildren) {
                 </div>
                 <hr />
                 <div className="flex flex-row items-center justify-around">
+                  <AuthButtonClient />
                   <Typography
                     variant="h3"
                     className="text-left text-lg !leading-tight"
                   >
                     Menu Principal
                   </Typography>
-                  <AuthButtonClient />
                 </div>
                 <hr />
                 {topRoutes.map((route) => (
@@ -165,7 +164,7 @@ export function LandingHeader({ children }: PropsWithChildren) {
                   >
                     {route.label}
                     {route.badge && (
-                      <span className="ml-2 border rounded-full border-orange-500 bg-orange-100 px-1 text-[10px] text-orange-500">
+                      <span className="ml-2 rounded-full border border-orange-500 bg-orange-100 px-1 text-[10px] text-orange-500">
                         {route.badge}
                       </span>
                     )}
