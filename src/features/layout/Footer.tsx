@@ -33,6 +33,13 @@ const footerContent = {
         { href: '/prestations/#E-Books', label: 'E-Books' },
       ],
     },
+    {
+      heading: 'Autres',
+      links: [
+        { href: '#', label: 'LightHouse' },
+        { href: '#', label: 'Co²' , badge: 'Nouveau' },
+      ],
+    },
   ],
 }
 
@@ -62,7 +69,7 @@ export const Footer = () => {
             </div>           
           </div>
 
-          <div className=" max-sm-mx-auto grid grid-cols-3 gap-4">
+          <div className=" max-sm-mx-auto grid grid-cols-2 gap-4 md:grid-cols-4">
             {footerContent.footerLinks.map((item) => (
               <div key={item.heading}>
                 <Typography variant="large" className="mb-3 text-gray-400">{item.heading}</Typography>

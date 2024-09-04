@@ -172,6 +172,10 @@ export function LandingHeader({ children }: PropsWithChildren) {
                 ))}
               </div>
               <hr />
+              <Button size="md" className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]">
+                Rejoingnez-nous !
+              </Button>
+              <hr />
 
               <ContactSupportDialog>
                 <Button variant="outline" size="md">
@@ -184,10 +188,7 @@ export function LandingHeader({ children }: PropsWithChildren) {
                 </Button>
               </ContactFeedbackPopover>
               <hr />
-              <Button size="md" className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]">
-                Rejoingnez-nous !
-              </Button>
-              <hr />
+        
             </SheetContent>
           </Sheet>
         </div>

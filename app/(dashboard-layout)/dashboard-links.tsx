@@ -1,6 +1,14 @@
 import { LogoSvg } from "@/components/svg/Logo";
 import type { NavigationLinkGroups } from "@/features/navigation/navigation.type";
-import { LayoutDashboard, Settings, Earth, UsersRound, SquareRadical, Mailbox } from "lucide-react";
+import {
+  LayoutDashboard,
+  Settings,
+  Earth,
+  UsersRound,
+  SquareRadical,
+  CircleDollarSign,
+  Mails,
+} from "lucide-react";
 
 export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
   {
@@ -26,32 +34,37 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         url: "/users",
       },
       {
-        title: "Campagne Email",
-        icon: <Mailbox />,
-        url: "#",
+        title: "Resend",
+        icon: <Mails />,
+        url: "https://www.resend.com",
+      },
+      {
+        title: "Stripe",
+        icon: <CircleDollarSign />,
+        url: "https://www.resend.com",
       },
     ],
   },
-    {
+  {
     title: "Application",
     links: [
       {
         title: "School-Unlcoaching",
         icon: <LogoSvg />,
-        url: "/unlcoaching.com",
+        url: "https://www.unlcoaching.com",
       },
       {
         title: "Unlcoaching",
         icon: <LogoSvg />,
         url: "/",
-      },      
+      },
     ],
   },
   {
     title: "Performance",
     links: [
       {
-        title: "Performance",
+        title: "LightHouse",
         icon: <SquareRadical />,
         url: "#",
       },
@@ -59,7 +72,7 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         title: "Co2",
         icon: <Earth />,
         url: "#",
-      },  
+      },
     ],
   },
 ];

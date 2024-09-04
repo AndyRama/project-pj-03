@@ -2,28 +2,19 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MdHome, MdContactPhone, MdContactMail} from 'react-icons/md';
+import { House, Smartphone, Mail } from 'lucide-react';
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Typography } from "@/components/ui/typography";
 
 const iconMapping: { [key: string]: JSX.Element } = {
   icon1: (
-    <MdHome className="bg/10 mr-2 mt-2 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
+    <House className="bg/10 mr-2 mt-2 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
   ),
   icon2: (
-    <MdContactPhone className="bg/10 mr-2 mt-1 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
+    <Smartphone className="bg/10 mr-2 mt-1 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
   ),
   icon3: (
-    <MdContactMail className="bg/10 mr-2 mt-1 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
-  ),
-  icon4: (
-    <MdContactMail className="bg/10 mr-2 mt-1 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
-  ),
-  icon5: (
-    <MdContactMail className="bg/10 mr-2 mt-1 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
-  ),
-  icon6: (
-    <MdContactMail className="bg/10 mr-2 mt-1 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
+    <Mail className="bg/10 mr-2 mt-1 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
   ),
 };
 
@@ -50,12 +41,6 @@ const CardInfoContent: {
       icon2: 'icon2',
       title3: 'information@office.com',
       icon3: 'icon3',
-      title4: 'Instagram',
-      icon4: 'icon4',
-      title5: 'Facebook',
-      icon5: 'icon5',
-      title6: 'School App.',
-      icon6: 'icon6',
     },
   ],
 };

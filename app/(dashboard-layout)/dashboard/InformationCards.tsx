@@ -7,7 +7,7 @@ export default function InformationCards() {
     <div className="flex w-full items-center gap-4 max-lg:flex-col lg:gap-8">
       <Card className="w-full flex-1">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Total likes</CardTitle>
+          <CardTitle className="text-sm font-medium">Total Ventes Abonnements </CardTitle>
           <Heart className="size-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
@@ -19,7 +19,7 @@ export default function InformationCards() {
       </Card>
       <Card className="w-full flex-1">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Total ventes</CardTitle>
+          <CardTitle className="text-sm font-medium">Total ventes Ebooks </CardTitle>
           <MessageCircle className="size-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>

@@ -167,7 +167,10 @@ export function HeaderBase({ children }: PropsWithChildren) {
                 ))}
               </div>
               <hr />
-
+              <Button size="md" className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]">
+                Rejoingnez-nous !
+              </Button>
+              <hr />
              <ContactSupportDialog>
                 <Button variant="outline" size="md">
                   Support
@@ -178,10 +181,6 @@ export function HeaderBase({ children }: PropsWithChildren) {
                   Feedback
                 </Button>
               </ContactFeedbackPopover>
-              <hr />
-              <Button size="md" className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]">
-                Rejoingnez-nous !
-              </Button>
               <hr />
             </SheetContent>
           </Sheet>
