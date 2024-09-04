@@ -1,7 +1,7 @@
 "use client";
 
 const SUBSCRIBERS: { date: string; amount: number }[] = [
-  { date: "2023-05-01", amount: 12000 },
+  { date: "2023-05-01", amount: 4000 },
   { date: "2023-05-02", amount: 12050 },
   { date: "2023-05-03", amount: 12120 },
   { date: "2023-05-04", amount: 12200 },
@@ -51,14 +51,14 @@ export const SubscribersChart = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Subscriber Growth</CardTitle>
+        <CardTitle>Croissance des ventes</CardTitle>
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={200}>
           <AreaChart
             data={SUBSCRIBERS}
             margin={{ top: 0, right: 20, bottom: 0, left: 20 }}
-            title="Subscriber growth"
+            title="Croissance des ventes"
           >
             <CartesianGrid
               strokeDasharray="5 5"

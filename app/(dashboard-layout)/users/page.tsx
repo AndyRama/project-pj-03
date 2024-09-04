@@ -14,7 +14,7 @@ export default async function RoutePage(props: PageParams<{}>) {
   return (
     <Layout>
       <LayoutHeader>
-        <LayoutTitle>Demo Shart</LayoutTitle>
+        <LayoutTitle>Tableau récaptitulatif des applications</LayoutTitle>
       </LayoutHeader>
       <LayoutActions className="flex gap-2">
         <Button variant="outline">Delete</Button>

@@ -8,6 +8,7 @@ import { z } from "zod";
  * So if you make all properties optional, the first schema will always match
  * and the second schema will never be used
  */
+
 export const SettingsDetailsFormSchema = z.object({
   name: z.string(),
   email: z.string().email(),

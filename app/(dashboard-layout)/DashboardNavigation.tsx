@@ -82,6 +82,11 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
               </nav>
               {/* Desktop header */}
               <nav className="flex items-center space-x-1 max-lg:hidden">
+                <ContactSupportDialog>
+                  <Button variant="default" size="sm">
+                    Support
+                  </Button>
+                </ContactSupportDialog>
                 <ContactFeedbackPopover>
                   <Button variant="outline" size="sm">
                     Feedback

@@ -24,7 +24,7 @@ export default async function RoutePage(props: PageParams<{}>) {
           <Card>
             <CardHeader>
               <CardTitle className="text-lg font-light">
-                Thread Created
+                Articles Created
               </CardTitle>
               <CardTitle>201</CardTitle>
             </CardHeader>
@@ -32,21 +32,47 @@ export default async function RoutePage(props: PageParams<{}>) {
           <Card>
             <CardHeader>
               <CardTitle className="text-lg font-light">
-                Thread Published
+                Articles Published
               </CardTitle>
               <CardTitle>177</CardTitle>
             </CardHeader>
           </Card>
           <Card className="flex-1">
             <CardHeader>
-              <CardTitle className="text-lg font-light">Actions</CardTitle>
+              <CardTitle className="text-lg font-light">
+                Actions Posts
+              </CardTitle>
             </CardHeader>
-            <CardContent className="flex gap-2">
+            <CardContent className="flex justify-end gap-1">
               <Link
                 className={buttonVariants({ size: "sm", variant: "outline" })}
-                href="/dashboard/posts/new"
+                href="#"
               >
-                New post
+                New
+              </Link>
+              <Link
+                className={buttonVariants({ size: "sm", variant: "invert" })}
+                href="#"
+              >
+                Update
+              </Link>
+            </CardContent>
+          </Card>
+          <Card className="flex-1">
+            <CardHeader>
+              <CardTitle className="text-lg font-light">
+                Actions Posts
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="flex justify-end gap-1">
+              <Link
+                className={buttonVariants({
+                  size: "sm",
+                  variant: "destructive",
+                })}
+                href="#"
+              >
+                Delete
               </Link>
             </CardContent>
           </Card>

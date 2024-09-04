@@ -13,6 +13,7 @@ import CardGrid from "@/features/landing/CardGrid";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
 import { Footer } from "@/features/layout/Footer";
 import Image from "next/image";
+import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
 
 export default function HomePage() {
   return (
@@ -254,8 +255,8 @@ export default function HomePage() {
       />
 
       <EmailFormSection />
-
-      <Footer />
+      <Footer/>
+      <FloatingLegalFooter/>
     </div>
   );
 }
