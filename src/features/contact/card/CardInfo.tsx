@@ -16,6 +16,9 @@ const iconMapping: { [key: string]: JSX.Element } = {
   icon3: (
     <MdContactMail className="bg/10 mr-2 mt-1 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
   ),
+  icon4: (
+    <MdContactMail className="bg/10 mr-2 mt-1 rounded-sm border-orange-500 bg-orange-500 text-orange-500" />
+  ),
 };
 
 const CardInfoContent: {
@@ -41,6 +44,8 @@ const CardInfoContent: {
       icon2: 'icon2',
       title3: 'information@office.com',
       icon3: 'icon3',
+      title4: 'information@office.com',
+      icon4: 'icon3',
     },
   ],
 };
@@ -73,11 +78,11 @@ export const CardInfo = ({ className }: CardInfoProps) => {
               <CardHeader className="ml-4 flex items-start gap-3 p-0">
                 {/* <MdCosntactPage className="bg/10 mr-2 mt-2 rounded-sm border-orange-500 bg-orange-500 text-orange-500" /> */}
                 <Typography className="text-3xl text-white">
-                  Me contacter
+                  Mes coordonnées
                 </Typography>
               </CardHeader>
               <CardContent>
-                {['title1', 'title2', 'title3'].map((titleKey, idx) => (
+                {['title1', 'title2', 'title3','title4'].map((titleKey, idx) => (
                   <div className="mt-3 flex" key={idx}>
                     <span className="text-2xl">
                       {iconMapping[step[`icon${idx + 1}`]]}

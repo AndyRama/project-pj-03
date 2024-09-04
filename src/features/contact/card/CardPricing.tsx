@@ -51,7 +51,7 @@ const CardPricing = ({ className }: CardPricingProps) => {
                 {step.description}
               </p>
               <Link href={step.btn.href}>
-                <p className="border border-orange-500 px-8 text-white">{step.btn.label}</p>
+                <p className="border border-orange-500 text-white">{step.btn.label}</p>
               </Link>
             </div>
           </motion.div>

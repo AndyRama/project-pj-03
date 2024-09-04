@@ -15,8 +15,8 @@ const CardContact = ({ className }: CardContactProps) => (
       <div className="flex justify-around">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <CardInfo className="mb-10 w-full px-0 md:pr-4 lg:px-4" />
-          <CardMap className="mb-10 w-full px-0 lg:px-4" />
-          <CardPricing className="mb-10 w-full px-0 lg:px-4" />
+          <CardMap className="mb-10 w-full px-0  md:pr-4 lg:px-4" />
+          <CardPricing className="mb-10 w-full px-0  md:pr-4 lg:px-4" />
         </div>
       </div>
     </div>
