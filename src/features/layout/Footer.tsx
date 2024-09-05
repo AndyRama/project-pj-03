@@ -25,21 +25,6 @@ const footerContent = {
         { href: '/prestations/#pack', label: 'Confirmé' },
       ],
     },
-    {
-      heading: 'Ressources',
-      links: [
-        { href: '/posts', label: 'Blog' },
-        { href: '/', label: 'School' , badge: 'Nouveau' },
-        { href: '/prestations/#E-Books', label: 'E-Books' },
-      ],
-    },
-    {
-      heading: 'Autres',
-      links: [
-        { href: '#', label: 'LightHouse' },
-        { href: '#', label: 'Co²' , badge: 'Nouveau' },
-      ],
-    },
   ],
 }
 

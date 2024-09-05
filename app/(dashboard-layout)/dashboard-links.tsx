@@ -3,11 +3,12 @@ import type { NavigationLinkGroups } from "@/features/navigation/navigation.type
 import {
   LayoutDashboard,
   Settings,
-  Earth,
   UsersRound,
-  SquareRadical,
   CircleDollarSign,
   Mails,
+  FilePen,
+  ClipboardX,
+  ListTodo,
 } from "lucide-react";
 
 export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
@@ -26,22 +27,33 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
     ],
   },
   {
+    title: "Dashboard Blog",
+    links: [
+      {
+        title: "Tous les articles",
+        icon: <ListTodo />,
+        url: "#",
+      },
+      {
+        title: "Create",
+        icon: <FilePen />,
+        url: "#",
+      },
+      {
+        title: "Delete",
+        icon: <ClipboardX />,
+        url: "#",
+      },
+    ],
+  },
+  
+  {
     title: "Utilisateurs",
     links: [
       {
         title: "Users",
         icon: <UsersRound />,
         url: "/users",
-      },
-      {
-        title: "Resend",
-        icon: <Mails />,
-        url: "https://www.resend.com",
-      },
-      {
-        title: "Stripe",
-        icon: <CircleDollarSign />,
-        url: "https://www.resend.com",
       },
     ],
   },
@@ -61,17 +73,17 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
     ],
   },
   {
-    title: "Performance",
+    title: "Services",
     links: [
       {
-        title: "LightHouse",
-        icon: <SquareRadical />,
-        url: "#",
+        title: "Resend",
+        icon: <Mails />,
+        url: "https://www.resend.com",
       },
       {
-        title: "Co2",
-        icon: <Earth />,
-        url: "#",
+        title: "Stripe",
+        icon: <CircleDollarSign />,
+        url: "https://www.resend.com",
       },
     ],
   },
