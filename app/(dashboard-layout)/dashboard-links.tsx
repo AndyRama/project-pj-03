@@ -2,7 +2,6 @@ import { LogoSvg } from "@/components/svg/Logo";
 import type { NavigationLinkGroups } from "@/features/navigation/navigation.type";
 import {
   LayoutDashboard,
-  Settings,
   UsersRound,
   CircleDollarSign,
   Mails,
@@ -19,62 +18,37 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         icon: <LayoutDashboard />,
         url: "/dashboard",
       },
-      {
-        title: "Paramètres",
-        icon: <Settings />,
-        url: "/settings",
-      },
     ],
   },
+
   {
-    title: "Dashboard Blog",
+    title: "Gestion Flux",
     links: [
       {
-        title: "Tous les articles",
+        title: "Articles",
         icon: <ListTodo />,
         url: "#",
       },
       {
-        title: "Create",
+        title: "FeedBack",
         icon: <FilePen />,
         url: "#",
       },
       {
-        title: "Delete",
+        title: "Support",
         icon: <ClipboardX />,
         url: "#",
-      },
-    ],
-  },
-  
-  {
-    title: "Utilisateurs",
-    links: [
-      {
-        title: "Users",
-        icon: <UsersRound />,
-        url: "/users",
-      },
-    ],
-  },
-  {
-    title: "Application",
-    links: [
-      {
-        title: "School-Unlcoaching",
-        icon: <LogoSvg />,
-        url: "https://www.unlcoaching.com",
-      },
-      {
-        title: "Unlcoaching",
-        icon: <LogoSvg />,
-        url: "/",
       },
     ],
   },
   {
     title: "Services",
     links: [
+      {
+        title: "Users",
+        icon: <UsersRound />,
+        url: "/users",
+      },
       {
         title: "Resend",
         icon: <Mails />,
@@ -84,6 +58,31 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         title: "Stripe",
         icon: <CircleDollarSign />,
         url: "https://www.resend.com",
+      },
+    ],
+  },
+  // {
+  //   title: "Applications",
+  //   links: [
+  //     {
+  //       title: "School-Unlcoaching",
+  //       icon: <LogoSvg />,
+  //       url: "https://www.unlcoaching.com",
+  //     },
+  //     {
+  //       title: "Unlcoaching",
+  //       icon: <LogoSvg />,
+  //       url: "/",
+  //     },
+  //   ],
+  // },
+  {
+    title: "Dashboard",
+    links: [
+      {
+        title: "School-Unlcoaching",
+        icon: <LogoSvg />,
+        url: "https://www.unlcoaching.com",
       },
     ],
   },

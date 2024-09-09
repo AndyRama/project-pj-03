@@ -20,9 +20,17 @@ const footerContent = {
     {
       heading: 'Pack',
       links: [
-        { href: '/prestations/#pack', label: 'Débutant' },
+        { href: '/prestations/#pack', label: 'Débutant', badge: 'Nouveau' },
         { href: '/prestations/#pack', label: 'Intermédiaire' },
         { href: '/prestations/#pack', label: 'Confirmé' },
+      ],
+    },
+    {
+      heading: 'Pack',
+      links: [
+        { href: '/blog', label: 'Blog' },
+        { href: '#', label: 'School', badge: 'Nouveau' },
+        { href: '/prestations/#pack', label: 'E-Books' },
       ],
     },
   ],
@@ -54,7 +62,7 @@ export const Footer = () => {
             </div>           
           </div>
 
-          <div className=" max-sm-mx-auto grid grid-cols-2 gap-4 md:grid-cols-4">
+          <div className=" max-sm-mx-auto justify-beteween grid grid-cols-3 gap-4">
             {footerContent.footerLinks.map((item) => (
               <div key={item.heading}>
                 <Typography variant="large" className="mb-3 text-gray-400">{item.heading}</Typography>
