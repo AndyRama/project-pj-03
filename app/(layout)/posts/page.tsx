@@ -10,6 +10,7 @@ import {
   LayoutHeader,
   // LayoutTitle,
 } from "@/features/page/layout";
+
 import type { PageParams } from "@/types/next";
 import { FileQuestion } from "lucide-react";
 import Link from "next/link";

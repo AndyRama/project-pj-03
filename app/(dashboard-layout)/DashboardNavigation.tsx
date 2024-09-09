@@ -87,11 +87,11 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
                     Support
                   </Button>
                 </ContactSupportDialog>
-                <ContactFeedbackPopover>
+                {/* <ContactFeedbackPopover>
                   <Button variant="outline" size="sm">
                     Feedback
                   </Button>
-                </ContactFeedbackPopover>
+                </ContactFeedbackPopover> */}
                 <ThemeToggle />
               </nav>
             </div>

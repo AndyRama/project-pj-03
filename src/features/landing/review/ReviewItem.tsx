@@ -22,19 +22,22 @@ export type ReviewItemProps = {
    * The image of the user.
    */
   image: string;
+
 } & ComponentPropsWithoutRef<"div">;
 
 export const ReviewItem = ({ className, ...props }: ReviewItemProps) => {
   return (
-    <Card className={cn("h-fit, rounded-[10px]", className)} {...props}>
+    <Card className={cn("h-fit rounded-[10px]", className)} {...props} role="article" aria-labelledby={`review-${props.name}`}>
       <CardHeader>
-        <ClientMarkdown className="citation">{props.review}</ClientMarkdown>
+        <ClientMarkdown className="citation">
+          {props.review}
+        </ClientMarkdown>
       </CardHeader>
-      <CardContent className="flex items-center gap-2 bg-background pt-6">
+      <CardContent className="flex items-center gap-2 bg-background pt-6" role="group" aria-label="User information">
         <div>
           <Avatar>
             <AvatarFallback>{props.name[0]}</AvatarFallback>
-            <AvatarImage src={props.image} alt="user image" />
+            <AvatarImage src={props.image} alt={`${props.name}'s avatar`} />
           </Avatar>
         </div>
         <div>

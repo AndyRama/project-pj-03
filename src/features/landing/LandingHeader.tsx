@@ -12,7 +12,6 @@ import { Menu } from "react-feather";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
-import { ContactFeedbackPopover } from "@/features/contact/feedback/ContactFeedbackPopover";
 import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
 
 function useBoundedScroll(threshold: number) {
@@ -181,14 +180,7 @@ export function LandingHeader({ children }: PropsWithChildren) {
                 <Button variant="outline" size="md">
                   Support
                 </Button>
-              </ContactSupportDialog>
-              <ContactFeedbackPopover>
-                <Button variant="outline" size="md">
-                  Feedback
-                </Button>
-              </ContactFeedbackPopover>
-              <hr />
-        
+              </ContactSupportDialog>        
             </SheetContent>
           </Sheet>
         </div>

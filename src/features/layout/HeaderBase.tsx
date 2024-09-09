@@ -12,7 +12,7 @@ import { Menu } from "react-feather";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
-import { ContactFeedbackPopover } from "@/features/contact/feedback/ContactFeedbackPopover";
+// import { ContactFeedbackPopover } from "@/features/contact/feedback/ContactFeedbackPopover";
 import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
 
 function useBoundedScroll(threshold: number) {
@@ -176,11 +176,6 @@ export function HeaderBase({ children }: PropsWithChildren) {
                   Support
                 </Button>
               </ContactSupportDialog>
-              <ContactFeedbackPopover>
-                <Button variant="outline" size="md">
-                  Feedback
-                </Button>
-              </ContactFeedbackPopover>
               <hr />
             </SheetContent>
           </Sheet>

@@ -61,21 +61,6 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
       },
     ],
   },
-  // {
-  //   title: "Applications",
-  //   links: [
-  //     {
-  //       title: "School-Unlcoaching",
-  //       icon: <LogoSvg />,
-  //       url: "https://www.unlcoaching.com",
-  //     },
-  //     {
-  //       title: "Unlcoaching",
-  //       icon: <LogoSvg />,
-  //       url: "/",
-  //     },
-  //   ],
-  // },
   {
     title: "Dashboard",
     links: [
