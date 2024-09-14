@@ -1,14 +1,21 @@
+import { promises as fs } from 'fs';
+import path from 'path';
 import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
 import { MDXRemote } from "next-mdx-remote-client/rsc";
 
-import { readFile } from 'fs/promises';
-import path from 'path';
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), 'content', 'privacy.mdx');
+  const fileContent = await fs.readFile(filePath, 'utf8');
 
-// Get data file privacy @/content/privacy.mdx
-const markdown = await readFile(path.join(process.cwd(), 'content', 'cvgs', 'privacy.mdx'), 'utf8');
+  return {
+    props: {
+      markdown: fileContent,
+    },
+  };
+}
 
-export default function page() {
+export default function Page({ markdown }: { markdown: string }) {
   return (
     <div>
       <div className="flex w-full items-center justify-center bg-card p-8 lg:p-12">
