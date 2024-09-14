@@ -1,5 +1,5 @@
 import type { NavigationLinkGroups } from "@/features/navigation/navigation.type";
-import { AlertCircle, Coins, Mail, User2 } from "lucide-react";
+import { AlertCircle, Coins, Mail, User2, ListTodo, FileKey2, FileLock2,Carrot  } from "lucide-react";
 
 export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
   {
@@ -15,7 +15,22 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
     ],
   },
   {
+    title: "Services",
+    links: [
+      { url: "/account/plan", title: "Plan alimentaire", icon: <Carrot  /> },
+      { url: "/account/courses", title: "Courses", icon: <ListTodo /> }
+
+    ],
+  },
+  {
     title: "EMAIL SETTINGS",
     links: [{ url: "/account/email", title: "Settings", icon: <Mail /> }],
+  },
+  {
+    title: "Condition de ventes",
+    links: [
+      { url: "/legal/privacy", title: "Privacy", icon: <FileKey2 /> },
+      { url: "/legal/terms", title: "Terms", icon: <FileLock2 /> },
+    ],
   },
 ];

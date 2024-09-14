@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { AuthButton } from "@/features/auth/AuthButton";
 import { SignInButton } from "@/features/auth/SignInButton";
 import { UserDropdown } from "@/features/auth/UserDropdown";
-import { ContactFeedbackPopover } from "@/features/contact/feedback/ContactFeedbackPopover";
 import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
 import {
   Layout,
@@ -17,8 +16,8 @@ import { SiteConfig } from "@/site-config";
 import Image from "next/image";
 import Link from "next/link";
 import type { PropsWithChildren } from "react";
-import { DesktopVerticalMenu } from "../../src/features/navigation/DesktopVerticalMenu";
-import { MobileDropdownMenu } from "../../src/features/navigation/MobileDropdownMenu";
+import { DesktopVerticalMenu } from "@/features/navigation/DesktopVerticalMenu";
+import { MobileDropdownMenu } from "@/features/navigation/MobileDropdownMenu";
 import { DASHBOARD_LINKS } from "./dashboard-links";
 
 export const DashboardNavigation = async (props: PropsWithChildren) => {
@@ -40,7 +39,9 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
           </Link>
         </div>
         <div className="h-10" />
+        {user ? (
         <DesktopVerticalMenu links={DASHBOARD_LINKS} />
+        ) : null}
         <div className="flex-1" />
         {user ? (
           <UserDropdown>
@@ -87,11 +88,6 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
                     Support
                   </Button>
                 </ContactSupportDialog>
-                {/* <ContactFeedbackPopover>
-                  <Button variant="outline" size="sm">
-                    Feedback
-                  </Button>
-                </ContactFeedbackPopover> */}
                 <ThemeToggle />
               </nav>
             </div>

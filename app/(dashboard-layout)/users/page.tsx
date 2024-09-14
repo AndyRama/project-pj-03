@@ -16,13 +16,15 @@ export default async function RoutePage(props: PageParams<{}>) {
       <LayoutHeader>
         <LayoutTitle>Tableau récaptitulatif des applications</LayoutTitle>
       </LayoutHeader>
-      <LayoutActions className="flex gap-2">
+      <LayoutActions className="hidden gap-6 lg:flex">
         <Button variant="outline">Delete</Button>
         <Button variant="invert">Create</Button>
       </LayoutActions>
-      <LayoutContent className="flex  gap-6">
-        <UsersChart />
+      <LayoutContent className="mt-10 flex flex-wrap justify-center gap-2 md:mt-20 md:gap-6">
         <DonutChart />
+        <DonutChart />
+        <UsersChart />
+        <UsersChart />
       </LayoutContent>
     </Layout>
   );

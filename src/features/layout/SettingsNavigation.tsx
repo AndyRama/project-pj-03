@@ -7,6 +7,7 @@ import Link from "next/link";
 type SettingLink = {
   href: string;
   label: string;
+  badge: string;
 };
 
 export const SettingsNavigation = ({ links }: { links: SettingLink[] }) => {

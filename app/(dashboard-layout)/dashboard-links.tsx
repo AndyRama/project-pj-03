@@ -1,13 +1,12 @@
-import { LogoSvg } from "@/components/svg/Logo";
 import type { NavigationLinkGroups } from "@/features/navigation/navigation.type";
 import {
   LayoutDashboard,
-  UsersRound,
-  CircleDollarSign,
-  Mails,
+  Settings,
+  ChartPie,
   FilePen,
-  ClipboardX,
-  ListTodo,
+  TextSelect,
+  MonitorSmartphone,
+  MessageCircleMore,
 } from "lucide-react";
 
 export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
@@ -18,26 +17,21 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         icon: <LayoutDashboard />,
         url: "/dashboard",
       },
+
+      {
+        title: "Paramètres",
+        icon: <Settings />,
+        url: "/settings",
+      },
     ],
   },
-
   {
-    title: "Gestion Flux",
+    title: "Statistique",
     links: [
       {
-        title: "Articles",
-        icon: <ListTodo />,
-        url: "#",
-      },
-      {
-        title: "FeedBack",
-        icon: <FilePen />,
-        url: "#",
-      },
-      {
-        title: "Support",
-        icon: <ClipboardX />,
-        url: "#",
+        title: "Users",
+        icon: <ChartPie />,
+        url: "/users",
       },
     ],
   },
@@ -45,28 +39,28 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
     title: "Services",
     links: [
       {
-        title: "Users",
-        icon: <UsersRound />,
-        url: "/users",
+        title: "Plan alimentaire",
+        icon: <TextSelect />,
+        url: "/instructor",
       },
       {
-        title: "Resend",
-        icon: <Mails />,
-        url: "https://www.resend.com",
-      },
-      {
-        title: "Stripe",
-        icon: <CircleDollarSign />,
-        url: "https://www.resend.com",
+        title: "Créer un cour",
+        icon: <FilePen />,
+        url: "/courses",
       },
     ],
   },
   {
-    title: "Dashboard",
+    title: "Maintenance",
     links: [
       {
-        title: "School-Unlcoaching",
-        icon: <LogoSvg />,
+        title: "Support",
+        icon: <MonitorSmartphone />,
+        url: "https://www.unlcoaching.com",
+      },
+      {
+        title: "FeedBack",
+        icon: <MessageCircleMore />,
         url: "https://www.unlcoaching.com",
       },
     ],

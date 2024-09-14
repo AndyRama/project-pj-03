@@ -1,15 +1,23 @@
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Layout,
   LayoutContent,
   LayoutHeader,
   LayoutTitle,
+  LayoutActions,
 } from "@/features/page/layout";
 import type { PageParams } from "@/types/next";
 import Link from "next/link";
 import InformationCards from "./InformationCards";
 import { SubscribersChart } from "./SubscribersChart";
+import {
+  Database,
+  ReceiptEuro,
+  Mails,
+  Building2,
+  TrendingUp,
+} from "lucide-react";
 
 export default async function RoutePage(props: PageParams<{}>) {
   return (
@@ -21,63 +29,104 @@ export default async function RoutePage(props: PageParams<{}>) {
         <InformationCards />
         <SubscribersChart />
         <div className="flex flex-wrap items-start gap-4">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg font-light">
-                Articles Created
-              </CardTitle>
-              <CardTitle>201</CardTitle>
-            </CardHeader>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg font-light">
-                Articles Published
-              </CardTitle>
-              <CardTitle>177</CardTitle>
-            </CardHeader>
-          </Card>
           <Card className="flex-1">
-            <CardHeader>
-              <CardTitle className="text-lg font-light">
-                Actions Posts
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="flex justify-end gap-1">
-              <Link
-                className={buttonVariants({ size: "sm", variant: "outline" })}
-                href="#"
-              >
-                New
-              </Link>
-              <Link
-                className={buttonVariants({ size: "sm", variant: "invert" })}
-                href="#"
-              >
-                Update
-              </Link>
-            </CardContent>
-          </Card>
-          <Card className="flex-1">
-            <CardHeader>
-              <CardTitle className="text-lg font-light">
-                Actions Posts
-              </CardTitle>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-lg font-light">Audience</CardTitle>
+              <TrendingUp className="size-4 text-muted-foreground" />
             </CardHeader>
             <CardContent className="flex justify-end gap-1">
               <Link
                 className={buttonVariants({
                   size: "sm",
-                  variant: "destructive",
+                  variant: "outline",
                 })}
-                href="#"
+                href="https://plausible.io/login"
+                target="_blank"
               >
-                Delete
+                Plausible
+              </Link>
+            </CardContent>
+          </Card>
+          <Card className="flex-1">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-lg font-light">Paiement</CardTitle>
+              <ReceiptEuro className="size-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent className="flex justify-end gap-1">
+              <Link
+                className={buttonVariants({ size: "sm", variant: "outline" })}
+                href="https://www.stripe.com"
+                target="_blank"
+              >
+                Stripe
+              </Link>
+            </CardContent>
+          </Card>
+          <Card className="flex-1">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-lg font-light">Hebergement</CardTitle>
+              <Building2 className="size-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent className="flex justify-end gap-1">
+              <Link
+                className={buttonVariants({
+                  size: "sm",
+                  variant: "outline",
+                })}
+                href="https://www.vercel.com"
+                target="_blank"
+              >
+                vercel
+              </Link>
+            </CardContent>
+          </Card>
+          <Card className="flex-1">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-lg font-light">Emailling</CardTitle>
+              <Mails className="size-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent className="flex justify-end gap-1">
+              <Link
+                className={buttonVariants({
+                  size: "sm",
+                  variant: "outline",
+                })}
+                href="https://www.resend.com"
+                target="_blank"
+              >
+                Resend
+              </Link>
+            </CardContent>
+          </Card>
+          <Card className="flex-1">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-lg font-light">
+                Base de donnée
+              </CardTitle>
+              <Database className="size-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent className="flex justify-end gap-1">
+              <Link
+                className={buttonVariants({
+                  size: "sm",
+                  variant: "outline",
+                })}
+                href="https://console.neon.tech/login"
+                target="_blank"
+              >
+                NeonDB
               </Link>
             </CardContent>
           </Card>
         </div>
       </LayoutContent>
+      <LayoutActions className="flex gap-6">
+        <Link href="https://project-pj-03.vercel.app/dashboard" target="_blank" passHref>
+          <Button variant="default" size="sm">
+            Dashboard Unlcoaching
+          </Button>
+        </Link>
+      </LayoutActions>
     </Layout>
   );
 }

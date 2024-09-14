@@ -23,13 +23,14 @@ const footerContent = {
         { href: '/prestations/#pack', label: 'Débutant', badge: 'Nouveau' },
         { href: '/prestations/#pack', label: 'Intermédiaire' },
         { href: '/prestations/#pack', label: 'Confirmé' },
+        { href: '/prestations/#E-Books', label: 'E-Books',  badge: 'Nouveau' },
       ],
     },
     {
-      heading: 'Pack',
+      heading: 'Autres',
       links: [
-        { href: '/blog', label: 'Blog' },
-        { href: '/prestations/#E-Books', label: 'E-Books',  badge: 'Nouveau' },
+        { href: 'https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fproject-pj-03.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#', label: 'SEO', target: '_blank'  },
+        { href: 'https://www.websitecarbon.com/website/project-pj-03-vercel-app/', label: 'Co²', target: '_blank'  },
       ],
     },
   ],
@@ -66,7 +67,7 @@ export const Footer = () => {
               <div key={item.heading}>
                 <Typography variant="large" className="mb-3 text-gray-400">{item.heading}</Typography>
                 <ul>
-                  {item.links.map((link) => (
+                  {item.links.map((link: { href: string; label: string; badge?: string; target?: string }) => (
                     <li key={link.label} className="mb-2">
                       <Link
                         href={link.href}

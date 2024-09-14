@@ -51,7 +51,7 @@ export const SubscribersChart = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Croissance des ventes</CardTitle>
+        <CardTitle>Croissance Audience</CardTitle>
       </CardHeader>
       <CardContent>
         <ResponsiveContainer width="100%" height={200}>
