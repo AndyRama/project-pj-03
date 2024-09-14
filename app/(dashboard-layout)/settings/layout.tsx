@@ -26,10 +26,12 @@ export default async function RouteLayout(
             {
               href: `/settings`,
               label: "General",
+              badge: ""
             },
             {
               href: `/settings/notifications`,
               label: "Invoices",
+              badge: ""
             },
           ]}
         />
