@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { requiredAuth } from "@/lib/auth/helper";
-import { PlanForm } from "./PlanForm";
+// import { PlanForm } from "./PlanForm";
 
 export default async function PlanPage() {
   const user = await requiredAuth();
@@ -13,7 +13,7 @@ export default async function PlanPage() {
           <CardTitle>Formulaire</CardTitle>
         </CardHeader>
         <CardContent>
-          <PlanForm defaultValues={user} />
+          {/* <PlanForm defaultValues={user} /> */}
         </CardContent>
       </Card>
       
