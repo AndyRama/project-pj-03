@@ -4,26 +4,20 @@ import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
 import { MDXRemote } from "next-mdx-remote-client/rsc";
 
-export async function getStaticProps() {
+export default async function Page() {
+  // Read the markdown file on the server
   const filePath = path.join(process.cwd(), 'content', 'privacy.mdx');
   const fileContent = await fs.readFile(filePath, 'utf8');
 
-  return {
-    props: {
-      markdown: fileContent,
-    },
-  };
-}
-
-export default function Page({ markdown }: { markdown: string }) {
   return (
     <div>
       <div className="flex w-full items-center justify-center bg-card p-8 lg:p-12">
         <Typography variant="h1">Privacy</Typography>
       </div>
       <Layout>
-        <LayoutContent className="prose mb-8 dark:prose-invert">
-          <MDXRemote source={markdown} />
+        <LayoutContent className="prose m-auto mb-8 dark:prose-invert">
+          {/* Render the markdown content */}
+          <MDXRemote source={fileContent} />
         </LayoutContent>
       </Layout>
     </div>
