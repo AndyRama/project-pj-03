@@ -2,7 +2,11 @@ import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
 import { MDXRemote } from "next-mdx-remote-client/rsc";
 
-const markdown = "test";
+import { readFile } from 'fs/promises';
+import path from 'path';
+
+// Get data file privacy @/content/privacy.mdx
+const markdown = await readFile(path.join(process.cwd(), 'content', 'cvgs', 'privacy.mdx'), 'utf8');
 
 export default function page() {
   return (
