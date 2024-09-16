@@ -41,7 +41,7 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
       {
         title: "Plan alimentaire",
         icon: <TextSelect />,
-        url: "/instructor",
+        url: "/alimentaire",
       },
       {
         title: "Créer un cour",
@@ -56,12 +56,12 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
       {
         title: "Support",
         icon: <MonitorSmartphone />,
-        url: "https://www.unlcoaching.com",
+        url: "#",
       },
       {
         title: "FeedBack",
         icon: <MessageCircleMore />,
-        url: "https://www.unlcoaching.com",
+        url: "#",
       },
     ],
   },

@@ -3,6 +3,14 @@ import { AlertCircle, Coins, Mail, User2, ListTodo, FileKey2, FileLock2,Carrot  
 
 export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
   {
+    title: "MES SERVICES",
+    links: [
+      { url: "/account/alimentaire", title: "Plan alimentaire", icon: <Carrot  /> },
+      { url: "/account/courses", title: "Courses", icon: <ListTodo /> }
+
+    ],
+  },
+  {
     title: "PERSONAL INFORMATION",
     links: [
       { url: "/account", title: "Profile", icon: <User2 /> },
@@ -12,14 +20,6 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
         icon: <AlertCircle />,
       },
       { url: "/account/billing", title: "Billing", icon: <Coins /> },
-    ],
-  },
-  {
-    title: "Services",
-    links: [
-      { url: "/account/plan", title: "Plan alimentaire", icon: <Carrot  /> },
-      { url: "/account/courses", title: "Courses", icon: <ListTodo /> }
-
     ],
   },
   {

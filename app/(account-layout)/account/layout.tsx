@@ -23,8 +23,6 @@ export default async function RouteLayout(props: LayoutParams<{}>) {
         </Alert>
       ) : null}
       {props.children}
-
-      <FloatingLegalFooter/>
     </>
   );
 }

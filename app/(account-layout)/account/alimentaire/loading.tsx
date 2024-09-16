@@ -5,7 +5,7 @@ export default function PageLoading() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Create Your Plan</CardTitle>
+        <CardTitle>Formulaire en cours de chargement</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
         <Skeleton className="h-8 w-full" />
