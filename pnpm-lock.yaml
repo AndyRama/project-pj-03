@@ -125,9 +125,6 @@ importers:
       nanoid:
         specifier: ^5.0.7
         version: 5.0.7
-      next:
-        specifier: 14.2.5
-        version: 14.2.5(@babel/core@7.24.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.8)
       next-auth:
         specifier: 5.0.0-beta.19
         version: 5.0.0-beta.19(next@14.2.5(@babel/core@7.24.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.8))(react@18.3.1)
@@ -282,6 +279,9 @@ importers:
       micromatch:
         specifier: ' 4.0.8'
         version: 4.0.8
+      next:
+        specifier: 14.2.5
+        version: 14.2.5(@babel/core@7.24.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.8)
       postcss:
         specifier: ^8.4.39
         version: 8.4.39
