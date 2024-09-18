@@ -11,7 +11,6 @@ const footerContent = {
       heading: 'Site Map',
       links: [
         { href: '/', label: 'Accueil' },
-        { href: '/posts', label: 'Blog' },
         { href: '/contact', label: 'Contact' },
         { href: '/prestations', label: 'Prestations' },
         { href: '/team', label: 'Team', badge: 'Nouveau' },
@@ -20,16 +19,22 @@ const footerContent = {
     {
       heading: 'Pack',
       links: [
-        { href: '/prestations/#pack', label: 'Débutant', badge: 'Nouveau' },
+        { href: '/prestations/#pack', label: 'Débutant' },
         { href: '/prestations/#pack', label: 'Intermédiaire' },
         { href: '/prestations/#pack', label: 'Confirmé' },
-        { href: '/prestations/#E-Books', label: 'E-Books',  badge: 'Nouveau' },
       ],
     },
     {
-      heading: 'Autres',
+      heading: 'Ressources',
       links: [
-        { href: 'https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fproject-pj-03.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#', label: 'SEO', target: '_blank'  },
+        { href: '/posts', label: 'Blog', badge: 'Nouveau' },
+        { href: '/prestations/#E-Books', label: 'E-Books'},
+      ],
+    },
+    {
+      heading: 'Performance',
+      links: [
+        { href: 'https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fproject-pj-03.vercel.app%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#', label: 'LightHouse', target: '_blank'  },
         { href: 'https://www.websitecarbon.com/website/project-pj-03-vercel-app/', label: 'Co²', target: '_blank'  },
       ],
     },
@@ -62,7 +67,7 @@ export const Footer = () => {
             </div>           
           </div>
 
-          <div className=" max-sm-mx-auto justify-beteween grid grid-cols-3 gap-4">
+          <div className=" max-sm-mx-auto justify-beteween grid grid-cols-2 gap-4 md:grid-cols-4">
             {footerContent.footerLinks.map((item) => (
               <div key={item.heading}>
                 <Typography variant="large" className="mb-3 text-gray-400">{item.heading}</Typography>

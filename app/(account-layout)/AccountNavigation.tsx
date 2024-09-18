@@ -9,8 +9,11 @@ import type { PropsWithChildren } from "react";
 import { DesktopVerticalMenu } from "../../src/features/navigation/DesktopVerticalMenu";
 import { MobileDropdownMenu } from "../../src/features/navigation/MobileDropdownMenu";
 import { ACCOUNT_LINKS } from "./account-links";
+import { auth } from "@/lib/auth/helper";
 
 export const AccountNavigation = async (props: PropsWithChildren) => {
+  const user = await auth();
+
   return (
     <div className="flex min-h-full flex-col">
       <header className="w-full border-b bg-background max-lg:sticky max-lg:top-0 max-lg:z-40">
@@ -36,7 +39,9 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
       </header>
       {/* Desktop ONLY Navigation bar */}
       <Layout className="flex flex-row items-start gap-4">
-        <DesktopVerticalMenu links={ACCOUNT_LINKS} className="max-lg:hidden" />
+        {user? (
+          <DesktopVerticalMenu links={ACCOUNT_LINKS} className="max-lg:hidden" />
+        ): null}
         <Separator className="max-lg:hidden" orientation="vertical" />
         <main className="flex-1">{props.children}</main>
       </Layout>

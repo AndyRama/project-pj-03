@@ -27,16 +27,6 @@ export default function InformationCards() {
           <p className="text-xs text-muted-foreground">+5.2% depuis le mois dernier</p>
         </CardContent>
       </Card>
-      {/* <Card className="w-full flex-1">
-        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Impressions</CardTitle>
-          <Activity className="size-4 text-muted-foreground" />
-        </CardHeader>
-        <CardContent>
-          <div className="text-2xl font-bold">1211</div>
-          <p className="text-xs text-muted-foreground">+22.5% depuis le mois dernier</p>
-        </CardContent>
-      </Card> */}
       <Card className="w-full flex-1">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium">Tendance ventes</CardTitle>

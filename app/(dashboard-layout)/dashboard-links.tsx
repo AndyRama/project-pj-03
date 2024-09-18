@@ -2,9 +2,6 @@ import type { NavigationLinkGroups } from "@/features/navigation/navigation.type
 import {
   LayoutDashboard,
   Settings,
-  ChartPie,
-  FilePen,
-  TextSelect,
   MonitorSmartphone,
   MessageCircleMore,
 } from "lucide-react";
@@ -22,31 +19,6 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         title: "Paramètres",
         icon: <Settings />,
         url: "/settings",
-      },
-    ],
-  },
-  {
-    title: "Statistique",
-    links: [
-      {
-        title: "Users",
-        icon: <ChartPie />,
-        url: "/users",
-      },
-    ],
-  },
-  {
-    title: "Services",
-    links: [
-      {
-        title: "Plan alimentaire",
-        icon: <TextSelect />,
-        url: "/alimentaire",
-      },
-      {
-        title: "Créer un cour",
-        icon: <FilePen />,
-        url: "/courses",
       },
     ],
   },

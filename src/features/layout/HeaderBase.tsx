@@ -62,11 +62,10 @@ export function HeaderBase({ children }: PropsWithChildren) {
 
   const topRoutes = [
     { path: "/", label: "Accueil" },
-    { path: "/posts", label: "Blog" },
+    { path: "/posts", label: "Blog", badge: "New" },
     { path: "/contact", label: "Contact" },
     { path: "/prestations", label: "Prestations" },
     { path: "/team", label: "Team" },
-    { path: "/", label: "School", badge: "New" },
   ];
 
   return (
