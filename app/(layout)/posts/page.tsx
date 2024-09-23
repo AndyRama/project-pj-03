@@ -8,7 +8,7 @@ import {
   LayoutContent,
   LayoutDescription,
   LayoutHeader,
-  // LayoutTitle,
+  LayoutTitle,
 } from "@/features/page/layout";
 
 import type { PageParams } from "@/types/next";
@@ -42,7 +42,7 @@ export default async function RoutePage(props: PageParams<{}>) {
       <SubHero className={""} title={"Dernier articles"} subTitle={"Mon blog"} />
       <Layout>
         <LayoutHeader>
-          {/* <LayoutTitle>Blog</LayoutTitle> */}
+          <LayoutTitle>Blog</LayoutTitle>
           {activeTags ? (
             <LayoutDescription>
               Posts tagged with: {activeTags.join(", ")}

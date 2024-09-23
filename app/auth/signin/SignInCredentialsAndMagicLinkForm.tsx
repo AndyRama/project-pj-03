@@ -41,11 +41,8 @@ export const SignInCredentialsAndMagicLinkForm = () => {
         password: values.password,
         callbackUrl: searchParams.get("callbackUrl") ?? undefined,
       });
-    } else {
-      await signIn("resend", {
-        email: values.email,
-        callbackUrl: searchParams.get("callbackUrl") ?? undefined,
-      });
+
+      
     }
   }
 
