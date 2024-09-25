@@ -27,7 +27,7 @@ export const PostCard = (props: PostCardProps) => {
           <img
             src={props.post.attributes.coverUrl}
             alt={props.post.attributes.title}
-            className="size-full rounded-t object-cover"
+            className="size-full rounded-t object-cover p-0"
           />
         </AspectRatio>
       </CardHeader>

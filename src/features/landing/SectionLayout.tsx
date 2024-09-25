@@ -49,7 +49,7 @@ export const SectionLayout = ({
     >
       <div
         className={cn(
-          "m-auto px-4 py-20 lg:py-28",
+          "m-auto py-20 lg:py-28",
           {
             "max-w-4xl": size === "sm",
             "max-w-5xl": size === "base",

@@ -20,7 +20,7 @@ export const Pricing = (props: PricingProps) => {
     <SectionLayout
       size="lg"
       id="pricing"
-      className="flex w-full flex-col flex-wrap items-center gap-16"
+      className="flex w-full flex-col flex-wrap items-center gap-0 md:gap-16"
     >
       <div className="space-y-2 text-center">
         <Typography
