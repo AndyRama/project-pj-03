@@ -89,7 +89,7 @@ export default async function RoutePage(props: PostParams) {
 
         <LayoutDescription className="mt-4 text-center drop-shadow-sm">
           {postTags?.length ? (
-            <div className="flex justify-center gap-2 p-4">
+            <div className="flex flex-wrap justify-center gap-2 p-4">
               {postTags.map((tag: string, index: number) => (
                 <span key={tag}>
                   <Link
