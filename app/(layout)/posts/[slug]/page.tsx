@@ -73,11 +73,9 @@ export default async function RoutePage(props: PostParams) {
   return (
     <Layout>
       <LayoutContent>
-        {/* <span> */}
-          <Link className={buttonVariants({ variant: "link" })} href="/posts">
-            <ArrowLeft size={16} /> Back
-          </Link>
-        {/* </span> */}
+        <Link className={buttonVariants({ variant: "link" })} href="/posts">
+          <ArrowLeft size={16} /> Back
+        </Link>
 
         <LayoutTitle className="mx-auto max-w-4xl text-center text-3xl drop-shadow-sm lg:text-5xl xl:text-6xl">
           {post.attributes.title}
@@ -89,19 +87,21 @@ export default async function RoutePage(props: PostParams) {
           </Typography>
         </LayoutDescription>
 
-        {/* Display the post's tags as links */}
         <LayoutDescription className="mt-4 text-center drop-shadow-sm">
           {postTags?.length ? (
             <div className="flex justify-center gap-2 p-4">
               {postTags.map((tag: string, index: number) => (
                 <span key={tag}>
                   <Link
+                    key={tag}
                     href={{
-                      pathname: "/posts",
-                      query: { tag },
+                      pathname: `/posts`,
+                      query: {
+                        tag: tag, 
+                      }
                     }}
                   >
-                    <Badge variant="outline" className="hover:text-orange-500">
+                    <Badge variant="outline" className="text-md hover:text-orange-500">
                       {tag}
                     </Badge>
                   </Link>

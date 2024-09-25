@@ -13,6 +13,7 @@ import { formatDate } from "@/lib/format/date";
 
 type PostCardProps = {
   post: Post;
+  id: String;
 };
 
 export const PostCard = (props: PostCardProps) => {
