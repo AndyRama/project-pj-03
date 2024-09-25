@@ -10,14 +10,14 @@ import {
   LayoutHeader,
   LayoutTitle,
 } from "@/features/page/layout";
-import { formatDateAndTime } from "@/lib/format/date";
+import { formatDate } from "@/lib/format/date";
 import { logger } from "@/lib/logger";
 import { SiteConfig } from "@/site-config";
 import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { calculateReadingTime } from "../../../../src/features/posts/calculate-reading-time";
+// import { calculateReadingTime } from "../../../../src/features/posts/calculate-reading-time";
 import type { PostParams } from "../../../../src/features/posts/post-manager";
 import {
   getCurrentPost,
@@ -67,49 +67,73 @@ export default async function RoutePage(props: PostParams) {
     notFound();
   }
 
+  // Assuming tags are in post.attributes.tags
+  const postTags = post.attributes.tags;
+
   return (
     <Layout>
       <LayoutContent>
-        <Link className={buttonVariants({ variant: "link" })} href="/posts">
-          <ArrowLeft size={16} /> Back
-        </Link>
+        <span>
+          <Link className={buttonVariants({ variant: "link" })} href="/posts">
+            <ArrowLeft size={16} /> Back
+          </Link>
+        </span>
+
+        <LayoutTitle className="mx-auto w-[550px] text-center text-3xl drop-shadow-sm lg:text-6xl">
+          {post.attributes.title}
+        </LayoutTitle>
+        <LayoutDescription className="mt-4 text-center drop-shadow-sm">
+          {formatDate(new Date(post.attributes.date))} · Created by{" "}
+          <Typography variant="link" as={Link} href={SiteConfig.maker.website}>
+            {SiteConfig.maker.name}
+          </Typography>
+        </LayoutDescription>
+
+        {/* Display the post's tags as links */}
+        <LayoutDescription className="mt-4 text-center drop-shadow-sm">
+          {postTags?.length ? (
+            <div className="flex justify-center gap-2 p-4">
+              {postTags.map((tag: string, index: number) => (
+                <span key={tag}>
+                  <Link
+                    href={{
+                      pathname: "/posts",
+                      query: { tag },
+                    }}
+                  >
+                    <Badge variant="outline" className="hover:text-orange-500">
+                      {tag}
+                    </Badge>
+                  </Link>
+                  {index < postTags.length - 1 ? ` | ` : ``}
+                </span>
+              ))}
+            </div>
+          ) : (
+            <Typography variant="link" as={Link} href="#">
+              aucune categories
+            </Typography>
+          )}
+        </LayoutDescription>
       </LayoutContent>
       <LayoutHeader
         style={{
           backgroundImage: `url(${post.attributes.coverUrl})`,
-          // center the image
           backgroundPosition: "center",
-          // set the image to cover all the space
           backgroundSize: "cover",
         }}
-        className="overflow-hidden rounded-lg"
+        className="h-[600px] w-[200px] overflow-hidden rounded-lg"
       >
-        <div className="flex w-full flex-col gap-2 bg-black/50 p-10 text-white backdrop-blur">
-          {post.attributes.status === "draft" ? (
-            <Badge className="w-fit" variant="secondary">
-              Draft
-            </Badge>
-          ) : null}
-          <LayoutTitle className="drop-shadow-sm">
-            {post.attributes.title}
-          </LayoutTitle>
-          <LayoutDescription className="drop-shadow-sm">
-            Published by {formatDateAndTime(new Date(post.attributes.date))} · Reading
-            time {calculateReadingTime(post.content)} minutes · Created by{" "}
-            <Typography
-              variant="link"
-              as={Link}
-              href={SiteConfig.maker.website}
-            >
-              {SiteConfig.maker.name}
-            </Typography>
-          </LayoutDescription>
-        </div>
+        {post.attributes.status === "draft" ? (
+          <Badge className="w-fit" variant="secondary">
+            Draft
+          </Badge>
+        ) : null}
       </LayoutHeader>
       <Separator />
       <LayoutContent>
         <ServerMdx
-          className="prose mb-8 dark:prose-invert lg:prose-lg xl:prose-xl"
+          className="prose mx-auto mb-8 dark:prose-invert lg:prose-lg xl:prose-xl"
           source={post.content}
         />
       </LayoutContent>
