@@ -27,7 +27,7 @@ function RecentBlog() {
       ) : (
         <LayoutContent className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {posts.map((post) => (
-            <PostCard key={post.slug} post={post} />
+            <PostCard id="Blog" key={post.slug} post={post} />
           ))}
         </LayoutContent>
       )}
