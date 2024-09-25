@@ -7,8 +7,8 @@ import { cva } from "class-variance-authority";
 const cardVariants = cva("shadow-sm", {
   variants: {
     variant: {
-      default: "border bg-card text-card-foreground",
-      background: "text-background-foreground border bg-background",
+      default: "border bg-[#2F2E2E]  text-card-foreground",
+      background: "text-background-foreground rounded-md border bg-background",
       error: "border border-destructive bg-background text-foreground",
     },
   },
@@ -48,7 +48,7 @@ const CardTitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
-      "text-2xl font-semibold leading-none tracking-tight",
+      "text-lg font-semibold leading-none tracking-tight text-orange-500",
       className,
     )}
     {...props}

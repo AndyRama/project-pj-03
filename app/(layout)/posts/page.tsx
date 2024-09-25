@@ -2,8 +2,6 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { SubHero } from "@/features/landing/SubHero";
-// import CardCategory from "@/features/posts/CardCategory";
-
 
 import {
   Layout,
@@ -87,8 +85,7 @@ export default async function RoutePage(props: PageParams<{}>) {
             </div>
           </LayoutContent>
         ) : (
-          <LayoutContent className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* <CardCategory/> */}
+          <LayoutContent className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {posts.map((post) => (
               <PostCard key={post.slug} post={post} />
             ))}

@@ -10,7 +10,7 @@ import {
   LayoutHeader,
   LayoutTitle,
 } from "@/features/page/layout";
-import { formatDate } from "@/lib/format/date";
+import { formatDateAndTime } from "@/lib/format/date";
 import { logger } from "@/lib/logger";
 import { SiteConfig } from "@/site-config";
 import { ArrowLeft } from "lucide-react";
@@ -94,7 +94,7 @@ export default async function RoutePage(props: PostParams) {
             {post.attributes.title}
           </LayoutTitle>
           <LayoutDescription className="drop-shadow-sm">
-            Published by {formatDate(new Date(post.attributes.date))} · Reading
+            Published by {formatDateAndTime(new Date(post.attributes.date))} · Reading
             time {calculateReadingTime(post.content)} minutes · Created by{" "}
             <Typography
               variant="link"
