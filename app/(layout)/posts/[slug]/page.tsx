@@ -122,7 +122,7 @@ export default async function RoutePage(props: PostParams) {
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}
-        className="h-[600px] w-[200px] overflow-hidden rounded-lg"
+        className="h-[600px] overflow-hidden rounded-lg"
       >
         {post.attributes.status === "draft" ? (
           <Badge className="w-fit" variant="secondary">
