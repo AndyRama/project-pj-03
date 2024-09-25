@@ -73,13 +73,13 @@ export default async function RoutePage(props: PostParams) {
   return (
     <Layout>
       <LayoutContent>
-        <span>
+        {/* <span> */}
           <Link className={buttonVariants({ variant: "link" })} href="/posts">
             <ArrowLeft size={16} /> Back
           </Link>
-        </span>
+        {/* </span> */}
 
-        <LayoutTitle className="mx-auto w-[550px] text-center text-3xl drop-shadow-sm lg:text-6xl">
+        <LayoutTitle className="mx-auto max-w-4xl text-center text-3xl drop-shadow-sm lg:text-5xl xl:text-6xl">
           {post.attributes.title}
         </LayoutTitle>
         <LayoutDescription className="mt-4 text-center drop-shadow-sm">
@@ -122,7 +122,7 @@ export default async function RoutePage(props: PostParams) {
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}
-        className="h-[600px] overflow-hidden rounded-lg"
+        className="h-[400px] overflow-hidden rounded-lg md:h-[600px]"
       >
         {post.attributes.status === "draft" ? (
           <Badge className="w-fit" variant="secondary">
