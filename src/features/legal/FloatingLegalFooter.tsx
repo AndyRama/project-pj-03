@@ -33,7 +33,7 @@ export const FloatingLegalFooter: React.FC = () => {
         >
           Terms
         </Link>
-        <Image src={SiteConfig.appIcon} width={12} height={12} alt="app icon" />
+        {/* <Image src={SiteConfig.appIcon} width={12} height={12} alt="app icon" /> */}
       </div>
     </div>
   );

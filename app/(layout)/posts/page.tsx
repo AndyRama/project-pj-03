@@ -2,13 +2,15 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { SubHero } from "@/features/landing/SubHero";
+// import CardCategory from "@/features/posts/CardCategory";
+
 
 import {
   Layout,
   LayoutContent,
   LayoutDescription,
   LayoutHeader,
-  // LayoutTitle,
+  LayoutTitle,
 } from "@/features/page/layout";
 
 import type { PageParams } from "@/types/next";
@@ -42,14 +44,16 @@ export default async function RoutePage(props: PageParams<{}>) {
       <SubHero className={""} title={"Dernier articles"} subTitle={"Mon blog"} />
       <Layout>
         <LayoutHeader>
-          {/* <LayoutTitle>Blog</LayoutTitle> */}
+          <LayoutTitle> 
           {activeTags ? (
-            <LayoutDescription>
-              Posts tagged with: {activeTags.join(", ")}
+            <LayoutDescription className="text-orange-500">
+              {activeTags.join(", ")}
             </LayoutDescription>
           ) : null}
+          </LayoutTitle>
+       
         </LayoutHeader>
-        <LayoutContent className="flex flex-wrap gap-2">
+        <LayoutContent className="flex flex-wrap items-center gap-2">
           {tags.map((tag) => (
             <Link
               key={tag}
@@ -84,6 +88,7 @@ export default async function RoutePage(props: PageParams<{}>) {
           </LayoutContent>
         ) : (
           <LayoutContent className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {/* <CardCategory/> */}
             {posts.map((post) => (
               <PostCard key={post.slug} post={post} />
             ))}
