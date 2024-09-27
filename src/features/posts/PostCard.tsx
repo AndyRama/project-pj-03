@@ -46,10 +46,10 @@ export const PostCard = (props: PostCardProps) => {
         <CardTitle>{props.post.attributes.title}</CardTitle>
         <CardDescription className="pb-8">{props.post.attributes.description}</CardDescription>
         <div className="flex items-center justify-between">
-          <Link href={`/posts/${props.post.slug}`} className="rounded-[8px] border border-gray-600 px-8 text-white hover:border-orange-500">
+          <Link href={`/posts/${props.post.slug}`} className="rounded-[5px] border border-gray-600 px-4 text-white hover:border-orange-500 xl:px-8">
             Lire l&apos;article 
           </Link>
-          <span className="text-orange-500 ">Lecture 5 min</span>
+          {/* <span className="text-orange-500 ">Lecture 5 min</span> */}
         </div>
       </CardContent>
     </Card>

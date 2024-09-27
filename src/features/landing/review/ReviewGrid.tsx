@@ -14,7 +14,7 @@ export const ReviewGrid = (props: ReviewGridProps) => {
         <ReviewItem
           {...review}
           key={review.image}
-          className="p-6 mb-4 break-inside-avoid-column"
+          className="mb-4 break-inside-avoid-column p-6"
         />
       ))}
     </SectionLayout>

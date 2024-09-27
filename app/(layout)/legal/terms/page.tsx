@@ -11,8 +11,8 @@ export default async function Page() {
 
   return (
     <div>
-      <div className="flex w-full items-center justify-center bg-card p-8 lg:p-12">
-        <Typography variant="h1">Terms</Typography>
+      <div className="flex w-full items-center justify-center bg-card p-8 text-center lg:p-12">
+        <Typography variant="h1">Mentions légales <br/> & Politique de confidentialité</Typography>
       </div>
       <Layout>
         <LayoutContent className="prose m-auto mb-8 dark:prose-invert">

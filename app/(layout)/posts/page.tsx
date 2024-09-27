@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { SubHero } from "@/features/landing/SubHero";
+import CardCategorie from "@/features/landing/CardCategorie";
 
 import {
   Layout,
@@ -39,30 +40,34 @@ export default async function RoutePage(props: PageParams<{}>) {
 
   return (
     <>
-      <SubHero className={""} title={"Dernier articles"} subTitle={"Mon blog"} />
+      <SubHero
+        className={""}
+        title={"Dernier articles"}
+        subTitle={"Mon blog"}
+      />
       <Layout>
         <LayoutHeader>
-          <LayoutTitle> 
-          {activeTags ? (
-            <LayoutDescription className="text-orange-500">
-              {activeTags.join(", ")}
-            </LayoutDescription>
-          ) : null}
+          <LayoutTitle>
+            {activeTags ? (
+              <LayoutDescription className="text-orange-500">
+                {activeTags.join(", ")}
+              </LayoutDescription>
+            ) : null}
           </LayoutTitle>
         </LayoutHeader>
 
-        <LayoutContent className="flex flex-wrap items-center gap-2">
+        <LayoutContent className=" content flex flex-wrap items-center gap-2 xl:hidden">
           {tags.map((tag) => (
             <Link
               key={tag}
               href={{
                 pathname: `/posts`,
                 query: {
-                  tag: tag, 
+                  tag: tag,
                 },
                 hash: "Blog", // id="Blog"
               }}
-              scroll={false} 
+              scroll={false}
             >
               <Badge
                 variant={activeTags?.includes(tag) ? "default" : "outline"}
@@ -88,11 +93,14 @@ export default async function RoutePage(props: PageParams<{}>) {
             </div>
           </LayoutContent>
         ) : (
-          <LayoutContent className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-            {posts.map((post) => (
-              <PostCard  id="Blog" key={post.slug} post={post} />
-            ))}
-          </LayoutContent>
+          <div className="flex flex-row ">
+            <CardCategorie className="mr-10" />
+            <LayoutContent className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {posts.map((post) => (
+                <PostCard id="Blog" key={post.slug} post={post} />
+              ))}
+            </LayoutContent>
+          </div>
         )}
       </Layout>
     </>
