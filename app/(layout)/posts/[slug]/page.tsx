@@ -23,6 +23,7 @@ import {
   getCurrentPost,
   getPosts,
 } from "../../../../src/features/posts/post-manager";
+import CardCategorie from "@/features/landing/CardCategorie";
 
 export async function generateMetadata({
   params,
@@ -97,11 +98,14 @@ export default async function RoutePage(props: PostParams) {
                     href={{
                       pathname: `/posts`,
                       query: {
-                        tag: tag, 
-                      }
+                        tag: tag,
+                      },
                     }}
                   >
-                    <Badge variant="outline" className="text-md hover:text-orange-500">
+                    <Badge
+                      variant="outline"
+                      className="text-md hover:text-orange-500"
+                    >
                       {tag}
                     </Badge>
                   </Link>
@@ -132,10 +136,16 @@ export default async function RoutePage(props: PostParams) {
       </LayoutHeader>
       <Separator />
       <LayoutContent>
-        <ServerMdx
-          className="prose mx-auto mb-8 dark:prose-invert lg:prose-lg xl:prose-xl"
-          source={post.content}
-        />
+        <div className="justify-center md:flex md:flex-row ">
+          <div className="flex-col">
+            <CardCategorie className="hidden h-[400px] md:flex mb-10" />
+            <CardCategorie className="hidden h-[400px] md:flex " />
+          </div>
+          <ServerMdx
+            className="prose mx-auto mb-8 dark:prose-invert lg:prose-lg xl:prose-xl lg:mx-20"
+            source={post.content}
+          />
+        </div>
       </LayoutContent>
     </Layout>
   );

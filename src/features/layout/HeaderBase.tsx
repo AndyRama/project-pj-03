@@ -62,7 +62,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
 
   const topRoutes = [
     { path: "/", label: "Accueil" },
-    { path: "/posts", label: "Blog", badge: "New" },
+    { path: "/posts", label: "Blog"},
     { path: "/contact", label: "Contact" },
     { path: "/prestations", label: "Prestations" },
     { path: "/team", label: "Team" },
@@ -117,7 +117,6 @@ export function HeaderBase({ children }: PropsWithChildren) {
         </div>
         <div className="z-20 flex items-center gap-2 px-4 lg:hidden">
           <ThemeToggle />
-
           <Sheet>
             <SheetTrigger>
               <Menu className="size-8" />
@@ -157,11 +156,11 @@ export function HeaderBase({ children }: PropsWithChildren) {
                     className="relative text-left text-sm font-medium hover:text-[#FDAB04]"
                   >
                     {route.label}
-                    {route.badge && (
+                    {/* {route.badge && (
                       <span className="ml-2 rounded-full border border-orange-500 bg-orange-100 px-1 text-[10px] text-orange-500">
                         {route.badge}
                       </span>
-                    )}
+                    )} */}
                   </Link>
                 ))}
               </div>

@@ -63,7 +63,7 @@ export function LandingHeader({ children }: PropsWithChildren) {
     { path: "/", label: "Accueil" },
     { path: "/posts", label: "Blog" },
     { path: "/contact", label: "Contact" },
-    { path: "/prestations", label: "Prestations",badge: "Nouveau" },
+    { path: "/prestations", label: "Prestations"},
     { path: "/team", label: "Team" },
   ];
 
@@ -107,11 +107,11 @@ export function LandingHeader({ children }: PropsWithChildren) {
               className="relative flex items-center"
             >
               {route.label}
-              {route.badge && (
+              {/* {route.badge && (
                 <span className="ml-2 rounded-full border border-orange-500 bg-orange-100 px-1 text-[10px] text-orange-500">
                   {route.badge}
                 </span>
-              )}
+              )} */}
             </Link>
           ))}
           <ThemeToggle />
@@ -161,11 +161,11 @@ export function LandingHeader({ children }: PropsWithChildren) {
                     className="relative text-left text-sm font-medium hover:text-[#FDAB04]"
                   >
                     {route.label}
-                    {route.badge && (
+                    {/* {route.badge && (
                       <span className="ml-2 rounded-full border border-orange-500 bg-orange-100 px-1 text-[10px] text-orange-500">
                         {route.badge}
                       </span>
-                    )}
+                    )} */}
                   </Link>
                 ))}
               </div>

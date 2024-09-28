@@ -119,6 +119,7 @@ const CardCategorie: React.FC<CardCategorieProps> = ({ className }) => {
           ))}
         </motion.div>
       </div>
+
     </section>
   );
 };
