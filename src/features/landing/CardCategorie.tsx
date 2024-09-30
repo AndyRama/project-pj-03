@@ -51,14 +51,6 @@ const CardCategoriesContent = {
       },
     },
     {
-      title: "Complément",
-      icon: "icon2",
-      btn: {
-        href: "/posts/?tag=Complement+alimentaire#Blog",
-        label: "Complément Alim.",
-      },
-    },
-    {
       title: "Entraînement",
       icon: "icon3",
       btn: {
@@ -72,6 +64,14 @@ const CardCategoriesContent = {
       btn: {
         href: "/posts/?tag=Competition#Blog",
         label: "Competition",
+      },
+    },
+    {
+      title: "Complément",
+      icon: "icon2",
+      btn: {
+        href: "/posts/?tag=Complement+alimentaire#Blog",
+        label: "Complément Alim.",
       },
     },
     {
