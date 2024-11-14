@@ -9,7 +9,7 @@ import { Hero } from "@/features/landing/Hero";
 import { LandingHeader } from "@/features/landing/LandingHeader";
 import { SectionDivider } from "@/features/landing/SectionDivider";
 import CardGrid from "@/features/landing/CardGrid";
-// import RecentBlog from "@/features/landing/RecentBlog";
+import RecentBlog from "@/features/landing/RecentBlog";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
 import { Footer } from "@/features/layout/Footer";
 import Image from "next/image";
@@ -96,7 +96,7 @@ export default function HomePage() {
 
       {/* Blog Content */}
 
-      {/* <RecentBlog /> */}
+      <RecentBlog />
 
       <SectionDivider />
 

@@ -56,7 +56,7 @@ export default async function RoutePage(props: PageParams<{}>) {
           </LayoutTitle>
         </LayoutHeader>
 
-        <LayoutContent className=" content flex flex-wrap items-center gap-2 xl:hidden">
+        <LayoutContent className=" content flex flex-wrap items-center gap-2">
           {tags.map((tag) => (
             <Link
               key={tag}
@@ -65,7 +65,7 @@ export default async function RoutePage(props: PageParams<{}>) {
                 query: {
                   tag: tag,
                 },
-                hash: "Blog", // id="Blog"
+                hash: "Blog",
               }}
               scroll={false}
             >
@@ -94,8 +94,8 @@ export default async function RoutePage(props: PageParams<{}>) {
           </LayoutContent>
         ) : (
           <div className="flex flex-row ">
-            <CardCategorie className="mr-0 xl:mr-10" />
-            <LayoutContent className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {/* <CardCategorie className="mr-0 hidden lg:mr-10 xl:contents" /> */}
+            <LayoutContent className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {posts.map((post) => (
                 <PostCard id="Blog" key={post.slug} post={post} />
               ))}

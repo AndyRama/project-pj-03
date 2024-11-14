@@ -145,8 +145,6 @@ export default function page() {
             ]}
           />
 
-          {/* <SectionDivider /> */}
-
           {/* Pricing Details */}
           <PricingDetails />
 

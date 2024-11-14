@@ -88,7 +88,7 @@ const CardCategoriesContent = {
 const CardCategorie: React.FC<CardCategorieProps> = ({ className }) => {
   return (
     <section className={className}>
-      <div className="hidden w-auto xl:contents">
+      <div className="w-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{
