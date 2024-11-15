@@ -11,10 +11,10 @@ export function ThemeToggle() {
     <Button
       variant="ghost"
       size="sm"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(theme === "light" ? "light" : "dark")}
     >
-      <Sun className="light:hidden h-6 w-[1.3rem]" />
-      <Moon className="light:block hidden size-6" />
+      <Sun className="h-6 w-[1.3rem] dark:hidden" />
+      <Moon className="hidden size-6 dark:block" />
       <span className="sr-only">Toggle theme</span>
     </Button>
   );

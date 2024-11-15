@@ -9,7 +9,8 @@ import { Hero } from "@/features/landing/Hero";
 import { LandingHeader } from "@/features/landing/LandingHeader";
 import { SectionDivider } from "@/features/landing/SectionDivider";
 import CardGrid from "@/features/landing/CardGrid";
-import RecentBlog from "@/features/landing/RecentBlog";
+// import RecentBlog from "@/features/landing/RecentBlog";
+import RecentPosts from "@/features/landing/RecentPosts";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
 import { Footer } from "@/features/layout/Footer";
 import Image from "next/image";
@@ -96,7 +97,21 @@ export default function HomePage() {
 
       {/* Blog Content */}
 
-      <RecentBlog />
+      {/* <RecentBlog /> */}
+
+      <SectionDivider/>
+
+      <div className="flex flex-col items-center gap-2">
+        <Typography variant="p" className="max-w-xl font-bold text-orange-500">
+          Recentes
+        </Typography>
+        <Typography variant="h2" className="max-w-xl">
+          Blog
+        </Typography>
+      </div>
+      <div className="mt-28">
+        <RecentPosts />
+      </div>
 
       <SectionDivider />
 
@@ -142,7 +157,7 @@ export default function HomePage() {
                 alt=""
                 width={200}
                 height={100}
-              className="h-auto w-full rounded-[8px] object-cover"
+                className="h-auto w-full rounded-[8px] object-cover"
               />
             ),
           },
@@ -160,7 +175,7 @@ export default function HomePage() {
                 alt=""
                 width={200}
                 height={100}
-              className="h-auto w-full rounded-[8px] object-cover"
+                className="h-auto w-full rounded-[8px] object-cover"
               />
             ),
           },
@@ -223,40 +238,12 @@ export default function HomePage() {
               "Auto-reposting with Threader is a feature I didn't know I needed. It's great for getting more mileage out of your best content without any extra effort.",
             role: "Freelancer",
           },
-          {
-            image: "https://i.pravatar.cc/300?u=b7",
-            name: "Sophia",
-            review:
-              "Joining the Threader community has opened up networking opportunities with fellow content creators. It's more than just a tool; it's a platform for growth.",
-            role: "Influencer",
-          },
-          {
-            image: "https://i.pravatar.cc/300?u=b8",
-            name: "Elijah",
-            review:
-              "The calendar view in Threader helps me visualize my content strategy for the entire month. It's been a game changer for my planning process.",
-            role: "Strategist",
-          },
-          {
-            image: "https://i.pravatar.cc/300?u=b9",
-            name: "Charlotte",
-            review:
-              "I appreciate the flexibility in Threader's pricing plans. It's accessible for creators at any stage of their journey, from beginners to established influencers.",
-            role: "Entrepreneur",
-          },
-          {
-            image: "https://i.pravatar.cc/300?u=b10",
-            name: "James",
-            review:
-              "The customer support team at Threader is fantastic. They've been quick to respond and helpful with any questions I've had. Great service overall.",
-            role: "Customer",
-          },
         ]}
       />
 
       <EmailFormSection />
-      <Footer/>
-      <FloatingLegalFooter/>
+      <Footer />
+      <FloatingLegalFooter />
     </div>
   );
 }
