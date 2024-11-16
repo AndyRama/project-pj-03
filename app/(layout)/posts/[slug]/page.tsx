@@ -139,7 +139,6 @@ export default async function RoutePage(props: PostParams) {
         <div className="justify-center md:flex md:flex-row ">
           <div className="flex-col">
             <CardCategorie className="mb-10 hidden h-[400px] md:flex" />
-            <CardCategorie className="hidden h-[400px] md:flex " />
           </div>
           <ServerMdx
             className="prose mx-auto mb-8 dark:prose-invert lg:prose-lg xl:prose-xl lg:mx-20"
