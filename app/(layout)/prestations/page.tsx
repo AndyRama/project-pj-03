@@ -6,6 +6,7 @@ import { FAQSection } from "@/features/landing/FAQSection";
 import { SubHero } from "@/features/landing/SubHero";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
 import { PricingDetails } from "@/features/prestations/pricing/PricingDetails";
+import { PricingDetailsPlus } from "@/features/prestations/pricing/PricingDetailsPlus";
 
 export default function page() {
   return (
@@ -146,7 +147,7 @@ export default function page() {
           />
 
           {/* Pricing Details */}
-          <PricingDetails />
+          <PricingDetailsPlus />
 
             {/* Pricing Ebook */}
             <PricingEbook
@@ -262,6 +263,8 @@ export default function page() {
             ]}
           />
 
+          <PricingDetails />
+
           {/* FAQ Section */}
           <FAQSection
             faq={[
@@ -326,13 +329,6 @@ export default function page() {
                 role: "Social Media Manager",
               },
               {
-                image: "https://i.pravatar.cc/300?u=b3",
-                name: "Mia",
-                review:
-                  "The analytics provided by Threader are invaluable. They've given me insights into what my audience loves, helping me double my engagement rate in just a few months.",
-                role: "Digital Marketer",
-              },
-              {
                 image: "https://i.pravatar.cc/300?u=b4",
                 name: "Noah",
                 review:
@@ -347,13 +343,6 @@ export default function page() {
                 role: "Team Leader",
               },
               {
-                image: "https://i.pravatar.cc/300?u=b6",
-                name: "Oliver",
-                review:
-                  "Auto-reposting with Threader is a feature I didn't know I needed. It's great for getting more mileage out of your best content without any extra effort.",
-                role: "Freelancer",
-              },
-              {
                 image: "https://i.pravatar.cc/300?u=b7",
                 name: "Sophia",
                 review:
@@ -366,21 +355,7 @@ export default function page() {
                 review:
                   "The calendar view in Threader helps me visualize my content strategy for the entire month. It's been a game changer for my planning process.",
                 role: "Strategist",
-              },
-              {
-                image: "https://i.pravatar.cc/300?u=b9",
-                name: "Charlotte",
-                review:
-                  "I appreciate the flexibility in Threader's pricing plans. It's accessible for creators at any stage of their journey, from beginners to established influencers.",
-                role: "Entrepreneur",
-              },
-              {
-                image: "https://i.pravatar.cc/300?u=b10",
-                name: "James",
-                review:
-                  "The customer support team at Threader is fantastic. They've been quick to respond and helpful with any questions I've had. Great service overall.",
-                role: "Customer",
-              },
+              },       
             ]}
           />
         </LayoutContent>
