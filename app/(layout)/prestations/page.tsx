@@ -265,40 +265,6 @@ export default function page() {
 
           <PricingDetails />
 
-          {/* FAQ Section */}
-          <FAQSection
-            faq={[
-              {
-                question: "Qu'est-ce que unlcoaching.com ?",
-                answer:
-                  "Unlcoaching est une plateforme dédiée au coaching sportif et au développement personnel. Elle aide les utilisateurs à atteindre leurs objectifs de santé et de bien-être grâce à des programmes de coaching personnalisés et des articles de blog informatifs.",
-              },
-              {
-                question: "Quels services propose unlcoaching.com ?",
-                answer:
-                  "Nous proposons une gamme de services, y compris des séances de coaching individuel, des programmes de remise en forme, et un blog regorgeant de conseils sur la nutrition, l'entraînement et le développement personnel.",
-              },
-              {
-                question:
-                  "Comment puis-je m'inscrire à un programme de coaching ?",
-                answer:
-                  "Vous pouvez vous inscrire à un programme en visitant notre page d'accueil et en sélectionnant l'option 'S'inscrire'. Vous serez guidé à travers un processus simple pour choisir le programme qui correspond le mieux à vos besoins.",
-              },
-              {
-                question:
-                  "Quels sont les avantages du coaching avec unlcoaching.com ?",
-                answer:
-                  "Le coaching avec unlcoaching.com vous permet de bénéficier de l'expertise d'un coach professionnel Jérémy Prat, d'un programme personnalisé adapté à vos objectifs, et d'un suivi continu pour garantir vos progrès.",
-              },
-              {
-                question:
-                  "Quels sont les prix des services offerts par unlcoaching.com ?",
-                answer:
-                  "Nous offrons plusieurs plans tarifaires adaptés à différents besoins, allant des sessions de coaching individuelles aux programmes complets sur plusieurs mois. Pour plus de détails, veuillez consulter notre page dédiée aux tarifs.",
-              },
-            ]}
-          />
-
           <div className="flex flex-col items-center gap-2">
             <Typography
               variant="p"
@@ -332,7 +298,7 @@ export default function page() {
                 image: "https://i.pravatar.cc/300?u=b4",
                 name: "Noah",
                 review:
-                  "I was skeptical about AI-generated content, but Threader changed my mind. The content feels personal and has significantly increased my interaction rates.",
+                "I was skeptical about AI-generated content, but Threader changed my mind. The content feels personal and has significantly increased my interaction rates.",
                 role: "Blogger",
               },
               {
@@ -346,18 +312,51 @@ export default function page() {
                 image: "https://i.pravatar.cc/300?u=b7",
                 name: "Sophia",
                 review:
-                  "Joining the Threader community has opened up networking opportunities with fellow content creators. It's more than just a tool; it's a platform for growth.",
+                "Joining the Threader community has opened up networking opportunities with fellow content creators. It's more than just a tool; it's a platform for growth.",
                 role: "Influencer",
               },
               {
                 image: "https://i.pravatar.cc/300?u=b8",
                 name: "Elijah",
                 review:
-                  "The calendar view in Threader helps me visualize my content strategy for the entire month. It's been a game changer for my planning process.",
+                "The calendar view in Threader helps me visualize my content strategy for the entire month. It's been a game changer for my planning process.",
                 role: "Strategist",
               },       
             ]}
           />
+            {/* FAQ Section */}
+            <FAQSection
+              faq={[
+                {
+                  question: "Qu'est-ce que unlcoaching.com ?",
+                  answer:
+                    "Unlcoaching est une plateforme dédiée au coaching sportif et au développement personnel. Elle aide les utilisateurs à atteindre leurs objectifs de santé et de bien-être grâce à des programmes de coaching personnalisés et des articles de blog informatifs.",
+                },
+                {
+                  question: "Quels services propose unlcoaching.com ?",
+                  answer:
+                    "Nous proposons une gamme de services, y compris des séances de coaching individuel, des programmes de remise en forme, et un blog regorgeant de conseils sur la nutrition, l'entraînement et le développement personnel.",
+                },
+                {
+                  question:
+                    "Comment puis-je m'inscrire à un programme de coaching ?",
+                  answer:
+                    "Vous pouvez vous inscrire à un programme en visitant notre page d'accueil et en sélectionnant l'option 'S'inscrire'. Vous serez guidé à travers un processus simple pour choisir le programme qui correspond le mieux à vos besoins.",
+                },
+                {
+                  question:
+                    "Quels sont les avantages du coaching avec unlcoaching.com ?",
+                  answer:
+                    "Le coaching avec unlcoaching.com vous permet de bénéficier de l'expertise d'un coach professionnel Jérémy Prat, d'un programme personnalisé adapté à vos objectifs, et d'un suivi continu pour garantir vos progrès.",
+                },
+                {
+                  question:
+                    "Quels sont les prix des services offerts par unlcoaching.com ?",
+                  answer:
+                    "Nous offrons plusieurs plans tarifaires adaptés à différents besoins, allant des sessions de coaching individuelles aux programmes complets sur plusieurs mois. Pour plus de détails, veuillez consulter notre page dédiée aux tarifs.",
+                },
+              ]}
+            />
         </LayoutContent>
       </Layout>
     </>

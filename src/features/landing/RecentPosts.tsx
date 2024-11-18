@@ -64,39 +64,39 @@ export const RecentPosts = () => {
   const posts: Post[] = [
     {
       attributes: {
-        title: 'Arcachon : Découvrez l’événement cycliste incontournable',
-        description: 'Un aperçu du Team Vélo en 2023.',
-        date: '2023-07-15',
-        coverUrl: '/images/groupArcachon.jpg',
+        title: 'Le sommeil est capital dans la pratique sportive.',
+        description: 'Découvrez pourquoi le sommeil est un pilier essentiel pour optimiser vos performances sportives. Explorez ses bienfaits sur la récupération, la progression et l’équilibre général, et apprenez à améliorer votre qualité de sommeil pour atteindre vos objectifs.',
+        date: '2024-11-12',
+        coverUrl: '/images/post4.jpg',
       },
-      slug: 'arcachon-event-2023',
+      slug: '2024-02-12_Le_sommeil_est_capital_dans_la_pratique_sportive',
     },
     {
       attributes: {
-        title: 'Compétition de Fitness en France',
-        description: 'Préparez-vous pour la saison 2024 avec nos conseils.',
-        date: '2024-01-20',
-        coverUrl: '/images/fitnessFrance.jpg',
+        title: 'Comment perdre du poids de manière saine et durable',
+        description: 'Explorez nos conseils pour perdre du poids de façon saine et durable. Découvrez des stratégies éprouvées pour allier alimentation équilibrée, activité physique adaptée et habitudes de vie saines, tout en préservant votre bien-être.',
+        date: '2024-11-13',
+        coverUrl: '/images/post2.jpg',
       },
-      slug: 'fitness-competition-2024',
+      slug: '2024-02-11_Comment_perdre_du_poids_de_maniere_saine_et_durable',
     },
     {
       attributes: {
-        title: 'Rééducation et remise en forme : Guide essentiel',
-        description: 'Retour en forme après une blessure.',
-        date: '2023-05-30',
-        coverUrl: '/images/reducation.jpg',
+        title: 'La salle de sport quand on débute',
+        description: 'Découvrez notre guide complet pour bien commencer à la salle de sport. Conseils pratiques, erreurs à éviter et astuces pour rester motivé, tout ce qu’il faut savoir pour transformer votre première expérience en réussite !',
+        date: '2024-11-14',
+        coverUrl: '/images/salle-de-sport.jpg',
       },
-      slug: 'reeducation-guide-2023',
+      slug: '2024-02-09_La-salle-de-sport-quand-on-debute',
     },
     {
       attributes: {
-        title: 'Préparation concours avec Jeremy Prat',
-        description: 'Découvrez les coulisses d’une préparation réussie.',
-        date: '2024-09-12',
-        coverUrl: '/images/coaching.jpg',
+        title: 'Guide complet des compléments alimentaires dans le sport ',
+        description: 'Découvrez notre guide complet sur les compléments alimentaires pour sportifs. Types, bienfaits, précautions et conseils pour optimiser vos performances en toute sécurité et apprenez à choisir les compléments adaptés à vos objectifs et à votre pratique.',
+        date: '2024-11-15',
+        coverUrl: '/images/post1.jpg',
       },
-      slug: 'concours-prepa-2024',
+      slug: '2024-02-13_Guide_complet_des_complements_alimentaires_dans_le_sports',
     },
   ];
 
