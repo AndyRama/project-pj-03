@@ -96,7 +96,7 @@ export const RecentPosts = () => {
         date: '2024-11-15',
         coverUrl: '/images/post1.jpg',
       },
-      slug: '2024-11-15_Guide_complet_des_complements_alimentaires_dans_le_sports',
+      slug: '2024-11-11_Guide-complet-des-complements-alimentaire-dans-le-sport',
     },
   ];
 
