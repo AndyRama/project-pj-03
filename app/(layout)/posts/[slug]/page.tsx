@@ -147,7 +147,7 @@ export default async function RoutePage(props: PostParams) {
           />
         </div>
       </LayoutContent>
-      <div className="flex flex-col items-center justify-center gap-2">
+      <div className="flex flex-col items-center gap-2">
         <Typography variant="p" className="max-w-xl font-bold text-orange-500">
           Recentes
         </Typography>

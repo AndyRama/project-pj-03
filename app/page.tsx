@@ -197,20 +197,6 @@ export default function HomePage() {
       <ReviewGrid
         reviews={[
           {
-            image: "https://i.pravatar.cc/300?u=b1",
-            name: "Eva",
-            review:
-              "Since I started using Threader, my content creation process has been streamlined. The AI suggestions are spot on, helping me to connect better with my audience. Highly recommend for anyone looking to elevate their content game.",
-            role: "Content Creator",
-          },
-          {
-            image: "https://i.pravatar.cc/300?u=b2",
-            name: "Lucas",
-            review:
-              "Threader's scheduling feature is a lifesaver. It allows me to plan my content calendar efficiently, ensuring I never miss posting on the optimal days and times. Fantastic tool for social media managers.",
-            role: "Social Media Manager",
-          },
-          {
             image: "https://i.pravatar.cc/300?u=b3",
             name: "Mia",
             review:
@@ -223,6 +209,20 @@ export default function HomePage() {
             review:
               "I was skeptical about AI-generated content, but Threader changed my mind. The content feels personal and has significantly increased my interaction rates.",
             role: "Blogger",
+          },
+          {
+            image: "https://i.pravatar.cc/300?u=b1",
+            name: "Eva",
+            review:
+              "Since I started using Threader, my content creation process has been streamlined. The AI suggestions are spot on, helping me to connect better with my audience. Highly recommend for anyone looking to elevate their content game.",
+            role: "Content Creator",
+          },
+          {
+            image: "https://i.pravatar.cc/300?u=b2",
+            name: "Lucas",
+            review:
+              "Threader's scheduling feature is a lifesaver. It allows me to plan my content calendar efficiently, ensuring I never miss posting on the optimal days and times. Fantastic tool for social media managers.",
+            role: "Social Media Manager",
           },
           {
             image: "https://i.pravatar.cc/300?u=b5",

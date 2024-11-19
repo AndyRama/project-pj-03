@@ -51,13 +51,6 @@ export default function page() {
             role: "Digital Marketer",
           },
           {
-            image: "https://i.pravatar.cc/300?u=b4",
-            name: "Noah",
-            review:
-              "I was skeptical about AI-generated content, but Threader changed my mind. The content feels personal and has significantly increased my interaction rates.",
-            role: "Blogger",
-          },
-          {
             image: "https://i.pravatar.cc/300?u=b5",
             name: "Isabella",
             review:
@@ -77,27 +70,6 @@ export default function page() {
             review:
               "Joining the Threader community has opened up networking opportunities with fellow content creators. It's more than just a tool; it's a platform for growth.",
             role: "Influencer",
-          },
-          {
-            image: "https://i.pravatar.cc/300?u=b8",
-            name: "Elijah",
-            review:
-              "The calendar view in Threader helps me visualize my content strategy for the entire month. It's been a game changer for my planning process.",
-            role: "Strategist",
-          },
-          {
-            image: "https://i.pravatar.cc/300?u=b9",
-            name: "Charlotte",
-            review:
-              "I appreciate the flexibility in Threader's pricing plans. It's accessible for creators at any stage of their journey, from beginners to established influencers.",
-            role: "Entrepreneur",
-          },
-          {
-            image: "https://i.pravatar.cc/300?u=b10",
-            name: "James",
-            review:
-              "The customer support team at Threader is fantastic. They've been quick to respond and helpful with any questions I've had. Great service overall.",
-            role: "Customer",
           },
         ]}
       />
