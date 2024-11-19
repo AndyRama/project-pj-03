@@ -24,6 +24,7 @@ import {
   getPosts,
 } from "../../../../src/features/posts/post-manager";
 import CardCategorie from "@/features/landing/CardCategorie";
+import RecentPosts from "@/features/landing/RecentPosts";
 
 export async function generateMetadata({
   params,
@@ -146,6 +147,17 @@ export default async function RoutePage(props: PostParams) {
           />
         </div>
       </LayoutContent>
+      <div className="flex flex-col items-center justify-center gap-2">
+        <Typography variant="p" className="max-w-xl font-bold text-orange-500">
+          Recentes
+        </Typography>
+        <Typography variant="h2" className="max-w-xl">
+          Blog
+        </Typography>
+      </div>
+      <div className="mt-28">
+        <RecentPosts />
+      </div>
     </Layout>
   );
 }

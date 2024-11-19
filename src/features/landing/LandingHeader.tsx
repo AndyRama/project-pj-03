@@ -6,13 +6,13 @@ import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 import { useEffect } from "react";
 import { AuthButtonClient } from "../auth/AuthButtonClient";
 import type { PropsWithChildren } from "react";
-import { ThemeToggle } from "../theme/ThemeToggle";
+// import { ThemeToggle } from "../theme/ThemeToggle";
 import { Sheet, SheetTrigger, SheetContent } from "../../components/ui/sheet";
 import { Menu } from "react-feather";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
-import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
+// import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
 
 function useBoundedScroll(threshold: number) {
   const { scrollY } = useScroll();
@@ -63,7 +63,7 @@ export function LandingHeader({ children }: PropsWithChildren) {
     { path: "/", label: "Accueil" },
     { path: "/posts", label: "Blog" },
     { path: "/contact", label: "Contact" },
-    { path: "/prestations", label: "Prestations"},
+    { path: "/prestations", label: "Prestations" },
     { path: "/team", label: "Team" },
   ];
 
@@ -114,14 +114,20 @@ export function LandingHeader({ children }: PropsWithChildren) {
               )} */}
             </Link>
           ))}
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </motion.nav>
         <div className="hidden lg:contents">
-          <AuthButtonClient />
+          {/* <AuthButtonClient /> */}
+          <Button
+            size="sm"
+            className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
+          >
+            Rejoingnez-nous !
+          </Button>
         </div>
 
         <div className="z-20 flex items-center gap-2 px-4 lg:hidden">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <Sheet>
             <SheetTrigger>
               <Menu className="size-8" />
@@ -170,16 +176,19 @@ export function LandingHeader({ children }: PropsWithChildren) {
                 ))}
               </div>
               <hr />
-              <Button size="md" className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]">
+              <Button
+                size="md"
+                className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
+              >
                 Rejoingnez-nous !
               </Button>
               <hr />
 
-              <ContactSupportDialog>
+              {/* <ContactSupportDialog>
                 <Button variant="outline" size="md">
                   Support
                 </Button>
-              </ContactSupportDialog>        
+              </ContactSupportDialog> */}
             </SheetContent>
           </Sheet>
         </div>
