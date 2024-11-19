@@ -30,20 +30,6 @@ export default function page() {
       <ReviewGrid
         reviews={[
           {
-            image: "https://i.pravatar.cc/300?u=b1",
-            name: "Eva",
-            review:
-              "Since I started using Threader, my content creation process has been streamlined. The AI suggestions are spot on, helping me to connect better with my audience. Highly recommend for anyone looking to elevate their content game.",
-            role: "Content Creator",
-          },
-          {
-            image: "https://i.pravatar.cc/300?u=b2",
-            name: "Lucas",
-            review:
-              "Threader's scheduling feature is a lifesaver. It allows me to plan my content calendar efficiently, ensuring I never miss posting on the optimal days and times. Fantastic tool for social media managers.",
-            role: "Social Media Manager",
-          },
-          {
             image: "https://i.pravatar.cc/300?u=b3",
             name: "Mia",
             review:
@@ -56,6 +42,20 @@ export default function page() {
             review:
               "Threader's user interface is incredibly user-friendly. I was able to onboard my team in no time, and we've seen a marked improvement in our social media performance.",
             role: "Team Leader",
+          },
+          {
+            image: "https://i.pravatar.cc/300?u=b1",
+            name: "Eva",
+            review:
+              "Since I started using Threader, my content creation process has been streamlined. The AI suggestions are spot on, helping me to connect better with my audience. Highly recommend for anyone looking to elevate their content game.",
+            role: "Content Creator",
+          },
+          {
+            image: "https://i.pravatar.cc/300?u=b2",
+            name: "Lucas",
+            review:
+              "Threader's scheduling feature is a lifesaver. It allows me to plan my content calendar efficiently, ensuring I never miss posting on the optimal days and times. Fantastic tool for social media managers.",
+            role: "Social Media Manager",
           },
           {
             image: "https://i.pravatar.cc/300?u=b6",
