@@ -69,7 +69,7 @@ export const RecentPosts = () => {
         date: '2024-11-12',
         coverUrl: '/images/post4.jpg',
       },
-      slug: '2024-02-12_Le_sommeil_est_capital_dans_la_pratique_sportive',
+      slug: '2024-11-12_Le_sommeil_est_capital_dans_la_pratique_sportive',
     },
     {
       attributes: {
@@ -78,7 +78,7 @@ export const RecentPosts = () => {
         date: '2024-11-13',
         coverUrl: '/images/post2.jpg',
       },
-      slug: '2024-02-11_Comment_perdre_du_poids_de_maniere_saine_et_durable',
+      slug: '2024-11-13_Comment_perdre_du_poids_de_maniere_saine_et_durable',
     },
     {
       attributes: {
@@ -87,7 +87,7 @@ export const RecentPosts = () => {
         date: '2024-11-14',
         coverUrl: '/images/salle-de-sport.jpg',
       },
-      slug: '2024-02-09_La-salle-de-sport-quand-on-debute',
+      slug: '2024-11-14_La-salle-de-sport-quand-on-debute',
     },
     {
       attributes: {
@@ -96,7 +96,7 @@ export const RecentPosts = () => {
         date: '2024-11-15',
         coverUrl: '/images/post1.jpg',
       },
-      slug: '2024-02-13_Guide_complet_des_complements_alimentaires_dans_le_sports',
+      slug: '2024-11-15_Guide_complet_des_complements_alimentaires_dans_le_sports',
     },
   ];
 
