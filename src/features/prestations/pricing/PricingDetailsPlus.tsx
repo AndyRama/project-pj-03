@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { BiHardHat, BiPaintRoll, BiNote, BiLayer } from "react-icons/bi";
+import { BiNote} from "react-icons/bi";
 import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
 
@@ -16,7 +16,7 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    icon: BiHardHat,
+    icon: BiNote,
     title: "Qu'est-ce que l'unlcoaching ?",
     description:
       "Unlcoaching est un concept/service unique proposé par [Nom de votre site]. Il s'agit de [ rapide description du concept]. Les principaux aspects de unlcoaching incluent :",
@@ -27,6 +27,18 @@ const features: Feature[] = [
     ],
     description2:
       "Ce qui distingue Unlcoaching des méthodes traditionnelles de coaching est [explication de la différence principale]. Pour en savoir plus sur Unlcoaching et comment il peut vous aider à atteindre vos objectifs de fitness, consultez notre page dédiée [lien vers la page] ou contactez-nous pour une consultation personnalisée.",
+  },
+  {
+    icon: BiNote,
+    title: "Proposez-vous des services de coaching individuel ?",
+    description:
+      "Oui, nous proposons des services de coaching personnalisé. Nos options incluent :",
+    bullets: [
+      "• Coaching en ligne avec suivi hebdomadaire",
+      "• Sessions d'entraînement en personne (selon votre localisation)",
+      "• Plans d'entraînement et de nutrition sur mesure",
+    ],
+    description2: "Pour plus de détails ou pour réserver une consultation, veuillez nous contacter via notre page de contact.",
   },
   {
     icon: BiNote,
@@ -44,19 +56,7 @@ const features: Feature[] = [
       "Pour plus d'informations ou pour réserver une séance d'évaluation, n'hésitez pas à me contacter via la page Contact du site ou par email à [ adresse email].",
   },
   {
-    icon: BiLayer,
-    title: "Proposez-vous des services de coaching individuel ?",
-    description:
-      "Oui, nous proposons des services de coaching personnalisé. Nos options incluent :",
-    bullets: [
-      "• Coaching en ligne avec suivi hebdomadaire",
-      "• Sessions d'entraînement en personne (selon votre localisation)",
-      "• Plans d'entraînement et de nutrition sur mesure",
-    ],
-    description2: "Pour plus de détails ou pour réserver une consultation, veuillez nous contacter via notre page de contact.",
-  },
-  {
-    icon: BiPaintRoll,
+    icon: BiNote,
     title: "Je débute dans le fitness, par où devrais-je commencer ?",
     description: "Pour bien débuter dans le fitness, je vous invite à suivre ces étapes :",
     bullets: [
@@ -83,7 +83,7 @@ const features: Feature[] = [
     description2: "",
   },
   {
-    icon: BiLayer,
+    icon: BiNote,
     title: "Comment puis-je contacter l'équipe de [Nom du site] ?",
     description: "Vous pouvez nous contacter de plusieurs façons :",
     bullets: [
@@ -94,7 +94,7 @@ const features: Feature[] = [
     description2: "",
   },
   {
-    icon: BiPaintRoll,
+    icon: BiNote,
     title: "Comment puis-je m'inscrire à un programme de coaching ?",
     description: "Pour vous inscrire à un programme de coaching, suivez ces étapes :",
     bullets: [

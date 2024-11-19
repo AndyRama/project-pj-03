@@ -2,7 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { BiHardHat, BiPaintRoll, BiNote, BiLayer } from "react-icons/bi";
+import { IoFitness } from "react-icons/io5";
+import { MdOutlineSportsKabaddi, MdSportsMartialArts, MdOutlineFitnessCenter  } from "react-icons/md";
 import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
 
@@ -15,25 +16,25 @@ interface Feature {
 const PricingContentDetails: { features: Feature[] } = {
   features: [
     {
-      icon: BiHardHat,
+      icon: MdOutlineFitnessCenter,
       title: "Transformation Physique",
       description:
         "Prise de masse musculaire : Si votre objectif est de sculpter et tonifier votre corps, gagner en volume, la méthode adaptée est la prise de masse musculaire. Elle repose sur un entrainement adapté et rigoureux et également sur une alimentation saine, variée, riche en protéines (animales et/ou végétales) et en glucides. Pour cela, je vous propose des programmes musculation et alimentaire adaptés à vos objectifs et à votre niveau.",
     },
     {
-      icon: BiNote,
+      icon: MdOutlineSportsKabaddi ,
       title: "Préparation aux Compétitions",
       description:
         "Coaching spécialisé pour les athlètes : si la compétition, le dépassement de soi et la discipline sont essentiels à votre vie et à votre bien-être, se fixer des objectifs concrets est un moyen efficace de les atteindre. Je vous propose un suivi musculation et alimentaire personnalisés pour relever les défis que vous vous fixerez. En tant qu’athlète, je sais également que le mental est mis à rude épreuve lors des préparations. Je serais également présent pour vous écouter et vous rebooster lorsque cela sera nécessaire.",
     },
     {
-      icon: BiLayer,
+      icon: MdSportsMartialArts ,
       title: "Maintien de l'Activité Physique",
       description:
         "Perte de poids : Si votre objectif est la perte de masse grasse, la méthode adaptée repose sur une alimentation saine et raisonnée et sur un entrainement rigoureux. L’objectif étant certes la perte de poids mais surtout que celle-ci s’inscrive dans la durée. Pour cela il est nécessaire d’avoir un suivi régulier et personnalisé et surtout d’avancer main dans la main avec moi. Le mental jouant un très grand rôle, vous devez garder en tête que je suis également présent pour être à votre écoute. Je suis convaincu que pour réussir, notre relation doit être basée sur la confiance et la transparence.",
     },
     {
-      icon: BiPaintRoll,
+      icon: IoFitness,
       title: "Support pour TCA",
       description:
         "Coaching spécialisé pour les candidats aux concours de police, pompier, armée, gendarmerie. La réussite de ces concours et des carrières requiert une très bonne santé physique et mentale. En tant qu’ancien militaire, je connais parfaitement les facultés requises pour réussir ces concours et je peux vous apporter un suivi personnalisé et efficace.",
