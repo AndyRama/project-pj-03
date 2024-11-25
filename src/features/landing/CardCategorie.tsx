@@ -108,7 +108,7 @@ const CardCategorie: React.FC<CardCategorieProps> = ({ className }) => {
           {CardCategoriesContent.categories.map((category, idx) => (
             <div key={idx} className="my-3 flex items-center">
               <Link href={category.btn.href}>
-                <span className="flex items-center text-3xl">
+                <span className="flex items-center text-3xl text-black" >
                   {iconMapping[category.icon]}
                   <h3 className="inline-block pb-2 text-xl text-white transition-all duration-300 hover:text-gray-500">
                     {category.title}
