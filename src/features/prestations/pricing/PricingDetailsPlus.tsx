@@ -42,21 +42,6 @@ const features: Feature[] = [
   },
   {
     icon: BiNote,
-    title: "Proposez-vous des coachings individuels ?",
-    description:
-      "Oui, je propose des coachings individuels personnalisés pour répondre aux besoins spécifiques de chaque client. Voici ce que vous devez savoir :",
-    bullets: [
-      "• Je propose des séances en personne et en ligne, selon votre préférence et votre localisation.",
-      "• Mes coachings englobent l'entraînement physique, la nutrition, la préparation mentale et la planification de programmes adaptés à vos objectifs.",
-      "• Chaque programme est conçu sur mesure, qu'il s'agisse de perte de poids, de gain musculaire, d'amélioration des performances ou de préparation à une compétition.",
-      "• Nous pouvons établir un planning adapté à vos besoins, que ce soit pour des séances hebdomadaires ou un suivi à plus long terme.",
-      "• Les tarifs varient en fonction du type et de la fréquence du coaching. Je vous invite à me contacter pour obtenir un devis personnalisé.",
-    ],
-    description2:
-      "Pour plus d'informations ou pour réserver une séance d'évaluation, n'hésitez pas à me contacter via la page Contact du site ou par email à [ adresse email].",
-  },
-  {
-    icon: BiNote,
     title: "Je débute dans le fitness, par où devrais-je commencer ?",
     description: "Pour bien débuter dans le fitness, je vous invite à suivre ces étapes :",
     bullets: [
@@ -69,6 +54,21 @@ const features: Feature[] = [
       "7. Écoutez votre corps et progressez graduellement.",
     ],
     description2: "N'hésitez pas à me contacter pour un coaching personnalisé.",
+  },
+  {
+    icon: BiNote,
+    title: "Proposez-vous des coachings individuels ?",
+    description:
+      "Oui, je propose des coachings individuels personnalisés pour répondre aux besoins spécifiques de chaque client. Voici ce que vous devez savoir :",
+    bullets: [
+      "• Je propose des séances en personne et en ligne, selon votre préférence et votre localisation.",
+      "• Mes coachings englobent l'entraînement physique, la nutrition, la préparation mentale et la planification de programmes adaptés à vos objectifs.",
+      "• Chaque programme est conçu sur mesure, qu'il s'agisse de perte de poids, de gain musculaire, d'amélioration des performances ou de préparation à une compétition.",
+      "• Nous pouvons établir un planning adapté à vos besoins, que ce soit pour des séances hebdomadaires ou un suivi à plus long terme.",
+      "• Les tarifs varient en fonction du type et de la fréquence du coaching. Je vous invite à me contacter pour obtenir un devis personnalisé.",
+    ],
+    description2:
+      "Pour plus d'informations ou pour réserver une séance d'évaluation, n'hésitez pas à me contacter via la page Contact du site ou par email à [ adresse email].",
   },
   {
     icon: BiNote,
