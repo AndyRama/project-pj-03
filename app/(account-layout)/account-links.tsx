@@ -21,7 +21,7 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
   {
     title: "Condition de ventes",
     links: [
-      { url: "/legal/privacy", title: "Privacy", icon: <FileKey2 /> },
+      { url: "/legal/cvg", title: "Cvg", icon: <FileKey2 /> },
       { url: "/legal/terms", title: "Terms", icon: <FileLock2 /> },
     ],
   },
