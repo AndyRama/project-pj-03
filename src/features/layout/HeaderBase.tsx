@@ -12,6 +12,7 @@ import { Menu } from "react-feather";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
+
 // import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
 
 function useBoundedScroll(threshold: number) {
@@ -51,7 +52,7 @@ function useBoundedScroll(threshold: number) {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function LandingHeader({ children }: PropsWithChildren) {
+export function HeaderBase({ children }: PropsWithChildren) {
   const { scrollYBoundedProgress } = useBoundedScroll(400);
   const scrollYBoundedProgressDelayed = useTransform(
     scrollYBoundedProgress,
