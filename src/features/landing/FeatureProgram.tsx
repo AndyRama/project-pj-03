@@ -50,16 +50,16 @@ export const FeatureLine = (props: FeatureLineProps) => {
     <div className="flex items-center gap-4 max-lg:flex-col">
       <div className="flex flex-1 flex-col items-start gap-4 px-4">
         <Badge color="pink">{props.badge}</Badge>
-        <Typography variant="h2" className="">
+        <Typography variant="h2" className="text-white ">
           {props.title}
         </Typography>
-        <ClientMarkdown className="prose-lg">
+        <ClientMarkdown className="text-white prose-lg">
           {props.description}
         </ClientMarkdown>
-        <ClientMarkdown className="prose-lg">
+        <ClientMarkdown className="text-white prose-lg">
           {props.description1}
         </ClientMarkdown>
-        <ClientMarkdown className="prose-lg">
+        <ClientMarkdown className="text-white prose-lg">
           {props.description2}
         </ClientMarkdown>
 
