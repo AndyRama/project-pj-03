@@ -5,7 +5,7 @@ export const SiteConfig = {
   domain: "school.unlcoaching.com",
   appIcon: "/images/Unl.png",
   company: {
-    name: "Unlcoaching",
+    name: "Unlcoaching Inc.",
     address: "239 AVENUE PASTEUR , 33600 PESSAC France",
   },
   brand: {

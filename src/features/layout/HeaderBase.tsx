@@ -62,7 +62,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
 
   const topRoutes = [
     { path: "/", label: "Accueil" },
-    { path: "/posts", label: "Blog"},
+    { path: "/posts", label: "Blog" },
     { path: "/contact", label: "Contact" },
     { path: "/prestations", label: "Prestations" },
     { path: "/team", label: "Team" },
@@ -113,7 +113,9 @@ export function HeaderBase({ children }: PropsWithChildren) {
           {/* <ThemeToggle /> */}
         </motion.nav>
         <div className="hidden lg:contents">
-          <AuthButtonClient />
+          <Button size="md" className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]">
+            Rejoingnez-nous !
+          </Button>
         </div>
         <div className="z-20 flex items-center gap-2 px-4 lg:hidden">
           {/* <ThemeToggle /> */}
@@ -140,7 +142,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
                 </div>
                 <hr />
                 <div className="flex flex-row items-center justify-around">
-                  <AuthButtonClient />
+                  {/* <AuthButtonClient /> */}
                   <Typography
                     variant="h3"
                     className="text-left text-lg !leading-tight"
@@ -168,13 +170,6 @@ export function HeaderBase({ children }: PropsWithChildren) {
               <Button size="md" className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]">
                 Rejoingnez-nous !
               </Button>
-              <hr />
-             <ContactSupportDialog>
-                <Button variant="outline" size="md">
-                  Support
-                </Button>
-              </ContactSupportDialog>
-              <hr />
             </SheetContent>
           </Sheet>
         </div>

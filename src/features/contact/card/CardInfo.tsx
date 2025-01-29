@@ -35,11 +35,11 @@ const CardInfoContent: {
   },
   step: [
     {
-      title1: '5 Washington Square, New York, USA',
+      title1: '239 AVENUE PASTEUR , 33600 PESSAC France',
       icon1: 'icon1',
       title2: '+1 212 425 8617',
       icon2: 'icon2',
-      title3: 'information@office.com',
+      title3: 'contact@Unlcoaching.app',
       icon3: 'icon3',
     },
   ],

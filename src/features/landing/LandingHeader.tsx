@@ -117,7 +117,6 @@ export function LandingHeader({ children }: PropsWithChildren) {
           {/* <ThemeToggle /> */}
         </motion.nav>
         <div className="hidden lg:contents">
-          {/* <AuthButtonClient /> */}
           <Button
             size="sm"
             className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
