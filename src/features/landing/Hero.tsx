@@ -107,7 +107,7 @@ const HeroReviews = () => (
 );
 
 const HeroImage = () => (
-  <div className="mt-20 hidden flex-1 justify-end md:flex">
+  <div className="mt-20 xl:mt-30 flex-1 justify-end md:flex">
     <img
       src="/images/jeremy.jpg"
       className="w-[350px] max-w-lg rounded-[10px] object-contain sm:w-[480px] md:w-full"

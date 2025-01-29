@@ -16,7 +16,7 @@ export const ClientMarkdown = ({
       <Markdown
         rehypePlugins={rehypePlugins}
         remarkPlugins={remarkPlugins}
-        className={cn("", className)}
+        className={cn("text-white", className)}
         {...props}
       >
         {children}
