@@ -1,12 +1,12 @@
 export const SiteConfig = {
   title: "Unlcoaching",
-  description: "Platforme de cours ",
-  prodUrl: "https://school.unlcoaching.com",
+  description: "Coaching personnel avec Jérémy Prat",
+  prodUrl: "https://unlcoaching.com",
   domain: "school.unlcoaching.com",
   appIcon: "/images/Unl.png",
   company: {
-    name: "Unlcoaching Inc.",
-    address: "1234 Main St, New York, NY 10001",
+    name: "Unlcoaching",
+    address: "239 AVENUE PASTEUR , 33600 PESSAC France",
   },
   brand: {
     primary: "#007291",
