@@ -16,16 +16,16 @@ export const Maker = () => {
           Made by{" "}
           <Link
             className="font-extrabold text-blue-500 hover:underline"
-            href="https://melvynx.com"
+            href="https://unlcoaching.com"
           >
             {SiteConfig.maker.name}
           </Link>
         </Typography>
         <Link
-          href={SiteConfig.maker.twitter}
+          href={SiteConfig.maker.X}
           className="text-xs text-muted-foreground transition-colors hover:text-foreground hover:underline"
         >
-          Follow me on Twitter
+          Follow me on X
         </Link>
       </div>
     </div>
