@@ -16,7 +16,7 @@ export const ClientMarkdown = ({
       <Markdown
         rehypePlugins={rehypePlugins}
         remarkPlugins={remarkPlugins}
-        className={cn("prose dark:prose-invert", className)}
+        className={cn("", className)}
         {...props}
       >
         {children}
