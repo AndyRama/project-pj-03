@@ -109,7 +109,7 @@
     "eslint-plugin-tailwindcss": "^3.17.4",
     "globals": "^15.8.0",
     "micromatch": "4.0.8",
-    "next": "14.2.10",
+    "next": "14.2.21",
     "postcss": "^8.4.39",
     "prettier": "^3.3.3",
     "prisma": "^5.17.0",
