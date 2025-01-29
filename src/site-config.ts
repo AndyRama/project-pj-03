@@ -17,8 +17,8 @@ export const SiteConfig = {
   },
   maker: {
     image: "",
-    website: "https://andyramaroson.com",
-    twitter: "https://x.com/AndyRamaroson",
+    website: "https://unlcoaching.com",
+    X: "https://x.com/unlcoaching",
     name: "Jérémy Prat",
   },
   auth: {

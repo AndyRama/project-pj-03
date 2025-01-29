@@ -20,7 +20,7 @@ export const Hero = () => {
             <HeroStatistics />
             <HeroTitle />
             <HeroDescription />
-            {/* <HeroButton /> */}
+            <HeroButton />
             <HeroReviews />
           </div>
           <HeroImage />

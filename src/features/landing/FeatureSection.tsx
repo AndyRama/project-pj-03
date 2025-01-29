@@ -51,13 +51,13 @@ export const FeatureLine = (props: FeatureLineProps) => {
         <Typography variant="h2" className="">
           {props.title}
         </Typography>
-        <ClientMarkdown className="prose-lg">
+        <ClientMarkdown >
           {props.description}
         </ClientMarkdown>
-        <ClientMarkdown className="prose-lg">
+        <ClientMarkdown >
           {props.description1}
         </ClientMarkdown>
-        <ClientMarkdown className="prose-lg">
+        <ClientMarkdown >
           {props.description2}
         </ClientMarkdown>
       </div>
