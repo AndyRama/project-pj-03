@@ -4,7 +4,7 @@ import { LogoSvg } from "@/components/svg/Logo";
 import { SiteConfig } from "@/site-config";
 import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 import { useEffect } from "react";
-import { AuthButtonClient } from "../auth/AuthButtonClient";
+// import { AuthButtonClient } from "../auth/AuthButtonClient";
 import type { PropsWithChildren } from "react";
 // import { ThemeToggle } from "../theme/ThemeToggle";
 import { Sheet, SheetTrigger, SheetContent } from "../../components/ui/sheet";

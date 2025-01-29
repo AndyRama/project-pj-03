@@ -4,16 +4,15 @@ import { LogoSvg } from "@/components/svg/Logo";
 import { SiteConfig } from "@/site-config";
 import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 import { useEffect } from "react";
-import { AuthButtonClient } from "../auth/AuthButtonClient";
+// import { AuthButtonClient } from "../auth/AuthButtonClient";
 import type { PropsWithChildren } from "react";
-import { ThemeToggle } from "../theme/ThemeToggle";
+// import { ThemeToggle } from "../theme/ThemeToggle";
 import { Sheet, SheetTrigger, SheetContent } from "../../components/ui/sheet";
 import { Menu } from "react-feather";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
-// import { ContactFeedbackPopover } from "@/features/contact/feedback/ContactFeedbackPopover";
-import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
+// import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
 
 function useBoundedScroll(threshold: number) {
   const { scrollY } = useScroll();
@@ -52,7 +51,7 @@ function useBoundedScroll(threshold: number) {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function HeaderBase({ children }: PropsWithChildren) {
+export function LandingHeader({ children }: PropsWithChildren) {
   const { scrollYBoundedProgress } = useBoundedScroll(400);
   const scrollYBoundedProgressDelayed = useTransform(
     scrollYBoundedProgress,
@@ -108,15 +107,24 @@ export function HeaderBase({ children }: PropsWithChildren) {
               className="relative flex items-center"
             >
               {route.label}
+              {/* {route.badge && (
+                <span className="ml-2 rounded-full border border-orange-500 bg-orange-100 px-1 text-[10px] text-orange-500">
+                  {route.badge}
+                </span>
+              )} */}
             </Link>
           ))}
           {/* <ThemeToggle /> */}
         </motion.nav>
         <div className="hidden lg:contents">
-          <Button size="md" className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]">
+          <Button
+            size="sm"
+            className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
+          >
             Rejoingnez-nous !
           </Button>
         </div>
+
         <div className="z-20 flex items-center gap-2 px-4 lg:hidden">
           {/* <ThemeToggle /> */}
           <Sheet>
@@ -126,7 +134,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
             <SheetContent className="flex flex-col gap-4">
               <div className="relative flex flex-col gap-4">
                 <div className="flex flex-row gap-1">
-                  <LogoSvg size={24} />
+                  <LogoSvg size={12} />
                   <motion.p
                     style={{
                       scale: useTransform(
@@ -167,9 +175,19 @@ export function HeaderBase({ children }: PropsWithChildren) {
                 ))}
               </div>
               <hr />
-              <Button size="md" className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]">
+              <Button
+                size="md"
+                className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
+              >
                 Rejoingnez-nous !
               </Button>
+              <hr />
+
+              {/* <ContactSupportDialog>
+                <Button variant="outline" size="md">
+                  Support
+                </Button>
+              </ContactSupportDialog> */}
             </SheetContent>
           </Sheet>
         </div>
