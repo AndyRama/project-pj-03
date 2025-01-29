@@ -151,7 +151,7 @@ export function LandingHeader({ children }: PropsWithChildren) {
                 </div>
                 <hr />
                 <div className="flex flex-row items-center justify-around">
-                  <AuthButtonClient />
+                  {/* <AuthButtonClient /> */}
                   <Typography
                     variant="h3"
                     className="text-left text-lg !leading-tight"

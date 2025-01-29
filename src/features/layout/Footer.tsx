@@ -48,15 +48,15 @@ export const Footer = () => {
             </div>
 
             <div className="mt-4 flex pb-10">
-              <Link href="#" aria-label="Instagram" className="mr-4 text-2xl hover:text-orange-500  ">
+              <Link href="https://www.instagram.com/unlcoaching.school/" aria-label="Instagram" className="mr-4 text-2xl hover:text-orange-500  ">
                 <FaInstagramSquare />
               </Link>
-              <Link href="#" aria-label="Facebook" className="mr-4 text-2xl hover:text-orange-500 ">
+              <Link href="https://www.facebook.com/Unlcoaching" aria-label="Facebook" className="mr-4 text-2xl hover:text-orange-500 ">
                 <FaFacebook />
               </Link>
-              <Link href="#" aria-label="LinkedIn" className="text-2xl hover:text-orange-500 ">
+              {/* <Link href="#" aria-label="LinkedIn" className="text-2xl hover:text-orange-500 ">
                 <FaLinkedin />
-              </Link>
+              </Link> */}
             </div>           
           </div>
 

@@ -110,13 +110,13 @@ export function HeaderBase({ children }: PropsWithChildren) {
               {route.label}
             </Link>
           ))}
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </motion.nav>
         <div className="hidden lg:contents">
           <AuthButtonClient />
         </div>
         <div className="z-20 flex items-center gap-2 px-4 lg:hidden">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <Sheet>
             <SheetTrigger>
               <Menu className="size-8" />
