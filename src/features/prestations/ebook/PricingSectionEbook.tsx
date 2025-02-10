@@ -12,9 +12,9 @@ export type PricingProps = {
 export const PricingEbook = (props: PricingProps) => {
   const [visibleCards, setVisibleCards] = useState(3);
 
-  const showMoreCards = () => {
-    setVisibleCards(visibleCards + 3);
-  };
+  // const showMoreCards = () => {
+  //   setVisibleCards(visibleCards + 3);
+  // };
 
   return (
     <SectionLayout
@@ -36,14 +36,15 @@ export const PricingEbook = (props: PricingProps) => {
           <PricingCard key={i} {...card} />
         ))}
       </div>
-      {visibleCards < props.cards.length && (
+      
+      {/* {visibleCards < props.cards.length && (
         <button
           onClick={showMoreCards}
           className="right-0 mt-4 bg-primary bg-gradient-to-r from-orange-400 to-orange-700 px-4 py-2 text-black hover:bg-transparent hover:text-white"
         >
           voir plus de contenue
         </button>
-      )}
+      )} */}
     </SectionLayout>
   );
 };
