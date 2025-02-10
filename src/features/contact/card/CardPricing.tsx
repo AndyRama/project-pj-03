@@ -11,7 +11,7 @@ const CardPricingContent = {
   heading: {
     title: 'Prestations',
     subTitle: '',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ipsum et repellat!',
+    description: 'Vous pouvez retrouver toutes nos prestations, services et ressources sur cette page',
   },
   step: [
     {

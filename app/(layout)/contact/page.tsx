@@ -14,7 +14,7 @@ export default function Page() {
 
       <CardContact/>
 
-      <div className="mt-10 flex justify-center lg:justify-end">
+      {/* <div className="mt-10 flex justify-center lg:justify-end">
         <button 
           className="mr-0 rounded bg-orange-500 px-4 py-2 text-white hover:bg-transparent lg:mr-20 xl:mr-32 2xl:mr-80"
           onClick={() => setShowForm(!showForm)}
@@ -23,7 +23,7 @@ export default function Page() {
         </button>
       </div>
 
-      {showForm && <ContactForm className="mt-20" />}
+      {showForm && <ContactForm className="mt-20" />} */}
     </>
   );
 }

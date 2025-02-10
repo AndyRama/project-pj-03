@@ -39,7 +39,7 @@ const CardInfoContent: {
       icon1: 'icon1',
       title2: '+1 212 425 8617',
       icon2: 'icon2',
-      title3: 'contact@Unlcoaching.app',
+      title3: 'contact@Unlcoaching.com',
       icon3: 'icon3',
     },
   ],

@@ -56,7 +56,7 @@ export const CardMap = ({ className }: CardMapProps) => {
                 <iframe
                   className="mt-8 h-[350px] w-full rounded-md"
                   src={
-                    "https://www.google.com/maps/embed/v1/place?key=AIzaSyBwOWZ_C1sw6lYJhxYk_LJJCI2uM9GW8IA&q=220 avenue de l'argonne,merignac,bordeaux,france"
+                    "https://www.google.com/maps/embed/v1/place?key=AIzaSyBwOWZ_C1sw6lYJhxYk_LJJCI2uM9GW8IA&q=239 AVENUE PASTEUR ,pessac,france"
                   }
                   allowFullScreen
                 ></iframe>
