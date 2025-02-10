@@ -69,14 +69,7 @@ export const PricingCard = (props: PricingCardProps) => {
           ))}
         </ul>
       </CardHeader>
-      {/* <BuyButton
-          variant={props.isPopular ? "default" : "outline"}
-          priceId={props.priceId}
-          className="w-full bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
-        >
-          {props.cta}
-      </BuyButton> */}
-      <Link href={props.link} className="w-full">
+      <Link href={props.link} target="_blank" className="w-full">
         <Button
             variant={props.isPopular ? "default" : "outline"}
             className="w-full bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
