@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { BiNote} from "react-icons/bi";
+import { BiNote } from "react-icons/bi";
 import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
 
@@ -19,14 +19,15 @@ const features: Feature[] = [
     icon: BiNote,
     title: "Qu'est-ce que l'unlcoaching ?",
     description:
-      "Unlcoaching est un concept/service unique proposé par [Nom de votre site]. Il s'agit de [ rapide description du concept]. Les principaux aspects de unlcoaching incluent :",
+      "UUnlcoaching est un service de coaching unique, alliant entraînement physique, conseils nutritionnels et soutien mental. Notre approche personnalisée se distingue par l’attention portée à chaque individu, afin de vous aider à atteindre vos objectifs de fitness et de bien-être.",
     bullets: [
-      "• [Point clé 1]",
-      "• [Point clé 2]",
-      "• [Point clé 3]",
+      "Nos Services de Coaching Individuel :",
+      "• Coaching en ligne : Suivi hebdomadaire et interactions régulières.",
+      "• Séances en personne : Disponible selon votre localisation",
+      "• Programmes sur mesure : Entraînement et nutrition adaptés à vos besoins spécifiques.",
     ],
     description2:
-      "Ce qui distingue Unlcoaching des méthodes traditionnelles de coaching est [explication de la différence principale]. Pour en savoir plus sur Unlcoaching et comment il peut vous aider à atteindre vos objectifs de fitness, consultez notre page dédiée [lien vers la page] ou contactez-nous pour une consultation personnalisée.",
+      "Ce qui distingue Unlcoaching des méthodes traditionnelles de coaching est [explication de la différence principale]. Pour en savoir plus sur Unlcoaching et comment il peut vous aider à atteindre vos objectifs de fitness, consultez notre page dédiée Prestations ou contactez-nous pour une consultation personnalisée.",
   },
   {
     icon: BiNote,
@@ -68,7 +69,7 @@ const features: Feature[] = [
       "• Les tarifs varient en fonction du type et de la fréquence du coaching. Je vous invite à me contacter pour obtenir un devis personnalisé.",
     ],
     description2:
-      "Pour plus d'informations ou pour réserver une séance d'évaluation, n'hésitez pas à me contacter via la page Contact du site ou par email à [ adresse email].",
+      "Pour plus d'informations ou pour réserver une séance d'évaluation, n'hésitez pas à me contacter via la page Contact du site ou par email à contact@unlcoachingcom.",
   },
   {
     icon: BiNote,
@@ -84,12 +85,12 @@ const features: Feature[] = [
   },
   {
     icon: BiNote,
-    title: "Comment puis-je contacter l'équipe de [Nom du site] ?",
+    title: "Comment puis-je contacter l'équipe de Unlcoaching ?",
     description: "Vous pouvez nous contacter de plusieurs façons :",
     bullets: [
-      "• Par email à : [@email.com]",
+      "• Par email à : contact@unlcoaching.com",
       "• Via le formulaire de contact sur notre site",
-      "• Sur nos réseaux sociaux : [liens vers profils] Nous nous efforçons de répondre à toutes les requêtes dans un délai de 48 heures.",
+      "• Sur nos réseaux sociaux : [liens Facebook et Instagram en bas de page] Nous nous efforçons de répondre à toutes les requêtes dans un délai de 48 heures.",
     ],
     description2: "",
   },
@@ -120,10 +121,10 @@ export const PricingDetailsPlus: React.FC<{ className?: string }> = ({ className
       <Layout>
         <LayoutContent className="container mx-auto px-4">
           <Typography variant="h3" className="text-center text-orange-500">
-            Ce que tu obtiens
+            Notre concept
           </Typography>
           <Typography variant="h2" className="mb-20 text-center">
-            Détails de mon offre
+            Unlcoaching
           </Typography>
           <div className="justify-center lg:flex">
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">

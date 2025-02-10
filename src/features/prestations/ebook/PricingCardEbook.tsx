@@ -55,18 +55,10 @@ export const PricingCard = (props: PricingCardProps) => {
             {/* <span className="text-md">/ Mois</span> */}
           </p>
         </div>
-
-        <BuyButton
-          variant={props.isPopular ? "default" : "outline"}
-          priceId={props.priceId}
-          className="w-full bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
-        >
-          {props.cta}
-        </BuyButton>
         <ul className="flex w-full flex-col gap-3 lg:gap-4">
           {props.features.map((feature, i) => (
             <li key={i} className="flex items-center gap-2 text-white">
-              <Check className="text-orange-500" size={20} />
+              {/* <Check className="text-orange-500" size={20} /> */}
               <Typography variant="muted" className="flex-1 text-white">
                 {feature}
               </Typography>
@@ -74,6 +66,13 @@ export const PricingCard = (props: PricingCardProps) => {
           ))}
         </ul>
       </CardHeader>
+      <BuyButton
+          variant={props.isPopular ? "default" : "outline"}
+          priceId={props.priceId}
+          className="w-full bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
+        >
+          {props.cta}
+        </BuyButton>
       <CardFooter className="flex flex-col items-stretch gap-2">
         <Typography variant="muted" className="text-white">
           {props.ctaSubtitle}
