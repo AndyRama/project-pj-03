@@ -69,7 +69,7 @@ const features: Feature[] = [
       "• Les tarifs varient en fonction du type et de la fréquence du coaching. Je vous invite à me contacter pour obtenir un devis personnalisé.",
     ],
     description2:
-      "Pour plus d'informations ou pour réserver une séance d'évaluation, n'hésitez pas à me contacter via la page Contact du site ou par email à contact@unlcoachingcom.",
+      "Pour plus d'informations ou pour réserver une séance d'évaluation, n'hésitez pas à me contacter via la page Contact du site ou par email à contact@unlcoaching.com.",
   },
   {
     icon: BiNote,
@@ -107,7 +107,7 @@ const features: Feature[] = [
       "6. Après confirmation de votre paiement, vous recevrez un email avec les détails de votre programme et les prochaines étapes.",
       "7. Un coach vous contactera dans les 24-48 heures pour planifier votre première session ou pour discuter de votre plan personnalisé.",
     ],
-    description2: "Si vous avez des questions spécifiques avant de vous inscrire, n'hésitez pas à nous contacter via notre formulaire en ligne ou par email à [@email.com].",
+    description2: "Si vous avez des questions spécifiques avant de vous inscrire, n'hésitez pas à nous contacter via notre formulaire en ligne ou par email à contact@unlcoaching.com.",
   },
 ];
 

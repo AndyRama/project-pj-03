@@ -1,10 +1,12 @@
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card, CardFooter, CardHeader } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Typography } from "@/components/ui/typography";
-import { BuyButton } from "@/features/stripe/BuyButton";
+// import { BuyButton } from "@/features/stripe/BuyButton";
 import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 export type PricingCardProps = {
   isPopular?: boolean;
@@ -66,13 +68,21 @@ export const PricingCard = (props: PricingCardProps) => {
           ))}
         </ul>
       </CardHeader>
-      <BuyButton
+      {/* <BuyButton
           variant={props.isPopular ? "default" : "outline"}
           priceId={props.priceId}
           className="w-full bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
         >
           {props.cta}
-        </BuyButton>
+      </BuyButton> */}
+      <Link href="/images/E-bookFree.pdf" className="w-full">
+        <Button
+            variant={props.isPopular ? "default" : "outline"}
+            className="w-full bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
+          >
+            Télécharger
+        </Button>
+      </Link>
       <CardFooter className="flex flex-col items-stretch gap-2">
         <Typography variant="muted" className="text-white">
           {props.ctaSubtitle}
