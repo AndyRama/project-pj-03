@@ -166,6 +166,7 @@ export default function page() {
                 cta: "Télécharger",
                 ctaSubtitle: "",
                 priceId: "",
+                link: "/images/E-bookFree.pdf",
               },
               {
                 isPopular: true,
@@ -182,6 +183,7 @@ export default function page() {
                 cta: "Télécharger",
                 ctaSubtitle: "",
                 priceId: "",
+                link: "#",
               },
               {
                 isPopular: true,
@@ -198,6 +200,7 @@ export default function page() {
                 cta: "Télécharger",
                 ctaSubtitle: "",
                 priceId: "",
+                link: "#",
               },
               // {
               //   isPopular: true,
@@ -216,6 +219,7 @@ export default function page() {
               //   cta: "Télécharger",
               //   ctaSubtitle: "",
               //   priceId: "",
+              //   link:"#",
               // },
               // {
               //   isPopular: true,
@@ -234,6 +238,7 @@ export default function page() {
               //   cta: "Télécharger",
               //   ctaSubtitle: "",
               //   priceId: "",
+              //   link:"#",
               // },
               // {
               //   isPopular: true,
@@ -252,6 +257,7 @@ export default function page() {
               //   cta: "Télécharger",
               //   ctaSubtitle: "",
               //   priceId: "",
+              //   link:"#",
               // },
             ]}
           />

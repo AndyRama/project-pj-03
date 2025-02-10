@@ -22,6 +22,7 @@ export type PricingCardProps = {
   ctaSubtitle: string;
   priceId: string;
   className?: string;
+  link: string;
 };
 
 export const PricingCard = (props: PricingCardProps) => {
@@ -75,7 +76,7 @@ export const PricingCard = (props: PricingCardProps) => {
         >
           {props.cta}
       </BuyButton> */}
-      <Link href="/images/E-bookFree.pdf" className="w-full">
+      <Link href={props.link} className="w-full">
         <Button
             variant={props.isPopular ? "default" : "outline"}
             className="w-full bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
