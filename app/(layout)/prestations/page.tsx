@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react";
 import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
