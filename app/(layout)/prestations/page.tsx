@@ -16,7 +16,7 @@ const pricingData = {
   debutant: {
     threeMonths: {
       isPopular: true,
-      type: "monthly",
+      type: "monthly" as "monthly",
       id: "premium",
       title: "Débutant (3 mois)",
       subtitle: "(3 * 150€ / 3 mois)",
@@ -149,9 +149,33 @@ const pricingData = {
 
 export default function Page() {
   // État pour le plan sélectionné ("debutant", "intermediaire" ou "confirme")
-  const [selectedPlan, setSelectedPlan] = useState("debutant");
+  type PlanType = "debutant" | "intermediaire" | "confirme";
+  const [selectedPlan, setSelectedPlan] = useState<PlanType>("debutant");
 
-  const handleToggle = (planType) => {
+  interface Plan {
+    isPopular: boolean;
+    type: string;
+    id: string;
+    title: string;
+    subtitle: string;
+    price: number | string;
+    barredPrice: number;
+    currency: string;
+    features: string[];
+    cta: string;
+    ctaSubtitle: string;
+    priceId: string;
+    link?: string;
+  }
+
+  interface PricingData {
+    [key: string]: {
+      threeMonths: Plan;
+      oneMonth: Plan;
+    };
+  }
+
+  const handleToggle = (planType: PlanType) => {
     setSelectedPlan(planType);
   };
 
