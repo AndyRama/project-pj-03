@@ -16,7 +16,7 @@ const pricingData = {
   debutant: {
     threeMonths: {
       isPopular: true,
-      type: "monthly" as "monthly",
+      type: "monthly",
       id: "premium",
       title: "Débutant (3 mois)",
       subtitle: "(3 * 150€ / 3 mois)",
