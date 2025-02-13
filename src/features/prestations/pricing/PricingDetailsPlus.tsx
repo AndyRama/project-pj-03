@@ -19,7 +19,7 @@ const features: Feature[] = [
     icon: BiNote,
     title: "Qu'est-ce que l'unlcoaching ?",
     description:
-      "UUnlcoaching est un service de coaching unique, alliant entraînement physique, conseils nutritionnels et soutien mental. Notre approche personnalisée se distingue par l’attention portée à chaque individu, afin de vous aider à atteindre vos objectifs de fitness et de bien-être.",
+      "Unlcoaching est un service de coaching unique, alliant entraînement physique, conseils nutritionnels et soutien mental. Notre approche personnalisée se distingue par l’attention portée à chaque individu, afin de vous aider à atteindre vos objectifs de fitness et de bien-être.",
     bullets: [
       "Nos Services de Coaching Individuel :",
       "• Coaching en ligne : Suivi hebdomadaire et interactions régulières.",
