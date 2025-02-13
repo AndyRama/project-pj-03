@@ -10,7 +10,7 @@ export class ActionError extends Error {
 
 type HandleReturnedServerError = (e: Error) => string;
 
-const handleReturnedServerError: HandleReturnedServerError = (e) => {
+const handleServerError: HandleReturnedServerError = (e) => {
   if (e instanceof ActionError) {
     return e.message;
   }
@@ -19,7 +19,7 @@ const handleReturnedServerError: HandleReturnedServerError = (e) => {
 };
 
 export const action = createSafeActionClient({
-  handleReturnedServerError,
+  handleServerError,
 });
 
 const getUser = async () => {
@@ -40,7 +40,7 @@ const getUser = async () => {
 };
 
 export const authAction = createSafeActionClient({
-  handleReturnedServerError,
+  handleServerError,
 }).use(async ({ next }) => {
   const user = await getUser();
 
