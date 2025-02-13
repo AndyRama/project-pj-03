@@ -1,6 +1,3 @@
-"use client"
-
-import { useState } from "react";
 import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
 import { Pricing } from "@/features/prestations/pricing/PricingSection";
@@ -11,225 +8,147 @@ import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
 import { PricingDetails } from "@/features/prestations/pricing/PricingDetails";
 import { PricingDetailsPlus } from "@/features/prestations/pricing/PricingDetailsPlus";
 
-// Données factorisées pour les 3 types de plan, avec 2 offres (3 mois et 1 mois)
-const pricingData = {
-  debutant: {
-    threeMonths: {
-      isPopular: true,
-      type: "monthly",
-      id: "premium",
-      title: "Débutant (3 mois)",
-      subtitle: "(3 * 150€ / 3 mois)",
-      price: 150,
-      barredPrice: 169,
-      currency: "€",
-      features: [
-        "Pack adapté aux débutants dans la musculation.",
-        "Programme de musculation personnalisé en fonction de tes objectifs.",
-        "Accompagnement sur les divers troubles du comportement (TCA) ou problématique de santé.",
-        "Plan alimentaire adapté à tes besoins.",
-        "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
-        "Communication WhatsApp & Email avec visio ou call chaque mois.",
-        "Accès à mon application de training.",
-      ],
-      cta: "Choisir ce plan",
-      ctaSubtitle: "",
-      priceId: "",
-    },
-    oneMonth: {
-      isPopular: true,
-      type: "monthly",
-      id: "premium",
-      title: "Débutant (1 mois)",
-      subtitle: "(1 * 150€ / 1 mois)",
-      price: 150,
-      barredPrice: 169,
-      currency: "€",
-      features: [
-        "Pack adapté aux initiés ayant déjà des bases en musculation.",
-        "Programme de musculation personnalisé en fonction de tes objectifs.",
-        "Plan alimentaire adapté à tes besoins.",
-        "Accompagnement sur les divers TCA ou problématique de santé.",
-        "Bilan mensuel par email après 4 semaines.",
-      ],
-      cta: "Choisir ce plan",
-      ctaSubtitle: "",
-      priceId: "",
-    },
-  },
-  intermediaire: {
-    threeMonths: {
-      isPopular: false,
-      type: "monthly",
-      id: "premium",
-      title: "Intermédiaire (3 mois)",
-      subtitle: "(3 * 150€ / 3 mois)",
-      price: 150,
-      barredPrice: 169,
-      currency: "€",
-      features: [
-        "Pack adapté aux débutants dans la musculation.",
-        "Programme de musculation personnalisé en fonction de tes objectifs.",
-        "Accompagnement sur les divers troubles du comportement (TCA) ou problématique de santé.",
-        "Plan alimentaire adapté à tes besoins.",
-        "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
-        "Communication WhatsApp & Email avec visio ou call chaque mois.",
-        "Accès à mon application de training.",
-      ],
-      cta: "Choisir ce plan",
-      ctaSubtitle: "",
-      priceId: "",
-    },
-    oneMonth: {
-      isPopular: false,
-      type: "monthly",
-      id: "premium",
-      title: "Intermédiaire (1 mois)",
-      subtitle: "(1 * 150€ / 1 mois)",
-      price: 150,
-      barredPrice: 169,
-      currency: "€",
-      features: [
-        "Pack adapté aux initiés ayant déjà des bases en musculation.",
-        "Programme de musculation personnalisé en fonction de tes objectifs.",
-        "Plan alimentaire adapté à tes besoins.",
-        "Accompagnement sur les divers TCA ou problématique de santé.",
-        "Bilan mensuel par email après 4 semaines.",
-      ],
-      cta: "Choisir ce plan",
-      ctaSubtitle: "",
-      priceId: "",
-    },
-  },
-  confirme: {
-    threeMonths: {
-      isPopular: true,
-      type: "monthly",
-      id: "premium",
-      title: "Confirmé (3 mois)",
-      subtitle: "(3 * 150€ / 3 mois)",
-      price: 150,
-      barredPrice: 169,
-      currency: "€",
-      features: [
-        "Pack adapté aux débutants dans la musculation.",
-        "Programme de musculation personnalisé en fonction de tes objectifs.",
-        "Accompagnement sur les divers troubles du comportement (TCA) ou problématique de santé.",
-        "Plan alimentaire adapté à tes besoins.",
-        "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
-        "Communication WhatsApp & Email avec visio ou call chaque mois.",
-        "Accès à mon application de training.",
-      ],
-      cta: "Choisir ce plan",
-      ctaSubtitle: "",
-      priceId: "",
-    },
-    oneMonth: {
-      isPopular: true,
-      type: "monthly",
-      id: "premium",
-      title: "Confirmé (1 mois)",
-      subtitle: "(1 * 150€ / 1 mois)",
-      price: 150,
-      barredPrice: 169,
-      currency: "€",
-      features: [
-        "Pack adapté aux initiés ayant déjà des bases en musculation.",
-        "Programme de musculation personnalisé en fonction de tes objectifs.",
-        "Plan alimentaire adapté à tes besoins.",
-        "Accompagnement sur les divers TCA ou problématique de santé.",
-        "Bilan mensuel par email après 4 semaines.",
-      ],
-      cta: "Choisir ce plan",
-      ctaSubtitle: "",
-      priceId: "",
-    },
-  },
-};
-
-export default function Page() {
-  // État pour le plan sélectionné ("debutant", "intermediaire" ou "confirme")
-  type PlanType = "debutant" | "intermediaire" | "confirme";
-  const [selectedPlan, setSelectedPlan] = useState<PlanType>("debutant");
-
-  interface Plan {
-    isPopular: boolean;
-    type: string;
-    id: string;
-    title: string;
-    subtitle: string;
-    price: number | string;
-    barredPrice: number;
-    currency: string;
-    features: string[];
-    cta: string;
-    ctaSubtitle: string;
-    priceId: string;
-    link?: string;
-  }
-
-  interface PricingData {
-    [key: string]: {
-      threeMonths: Plan;
-      oneMonth: Plan;
-    };
-  }
-
-  const handleToggle = (planType: PlanType) => {
-    setSelectedPlan(planType);
-  };
-
-  // On récupère les 2 offres (3 mois et 1 mois) du plan sélectionné
-  const cards = [
-    pricingData[selectedPlan].threeMonths,
-    pricingData[selectedPlan].oneMonth,
-  ];
-
+export default function page() {
   return (
     <>
-      <SubHero className="" title="Prestations" subTitle="Toutes mes" />
+      <SubHero className="" title={"Prestations"} subTitle={"Toutes mes"} />
       <Layout>
         <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
-          {/* Boutons toggle pour changer de plan */}
-          <div className="flex justify-center space-x-4 mb-8">
-            <button
-              onClick={() => handleToggle("debutant")}
-              className={`px-4 py-2 rounded ${
-                selectedPlan === "debutant"
-                  ? "bg-orange-500 text-white"
-                  : "bg-gray-200 text-gray-700"
-              }`}
-            >
-              Débutant
-            </button>
-            <button
-              onClick={() => handleToggle("intermediaire")}
-              className={`px-4 py-2 rounded ${
-                selectedPlan === "intermediaire"
-                  ? "bg-orange-500 text-white"
-                  : "bg-gray-200 text-gray-700"
-              }`}
-            >
-              Intermédiaire
-            </button>
-            <button
-              onClick={() => handleToggle("confirme")}
-              className={`px-4 py-2 rounded ${
-                selectedPlan === "confirme"
-                  ? "bg-orange-500 text-white"
-                  : "bg-gray-200 text-gray-700"
-              }`}
-            >
-              Confirmé
-            </button>
-          </div>
-
-          {/* Composant Pricing qui reçoit les 2 cartes correspondant au plan sélectionné */}
-          <Pricing cards={cards} />
+          {/* Pricing Pack */}
+          <Pricing
+            cards={[
+              {
+                isPopular: true,
+                type: "monthly",
+                id: "premium",
+                title: "Débutant (4 mois)",
+                subtitle: "(3 * 150€ / 3 mois)",
+                price: 150,
+                barredPrice: 169,
+                currency: "€",
+                features: [
+                  "Pack adapté aux débutants dans la musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                  "Communication WhatsApp & Email avec visio ou call chaque mois.",
+                  "Acces à mon application de training.",
+                ],
+                cta: "Choisir ce plan ",
+                ctaSubtitle: "",
+                priceId: "",
+              },
+              {
+                isPopular: false,
+                type: "monthly",
+                id: "premium",
+                title: "Intermédiaire (4 mois)",
+                subtitle: "(3 * 150€ / 3 mois)",
+                price: 150,
+                barredPrice: 169,
+                currency: "€",
+                features: [
+                  "Pack adapté aux débutants dans la musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                  "Communication WhatsApp & Email avec visio ou call chaque mois.",
+                  "Acces à mon application de training.",
+                ],
+                cta: "Choisir ce plan ",
+                ctaSubtitle: "",
+                priceId: "",
+              },
+              {
+                isPopular: true,
+                type: "monthly",
+                id: "premium",
+                title: "Confirmé (4 mois)",
+                subtitle: "(3 * 150€ / 3 mois)",
+                price: 150,
+                barredPrice: 169,
+                currency: "€",
+                features: [
+                  "Pack adapté aux débutants dans la musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                  "Communication WhatsApp & Email avec visio ou call chaque mois.",
+                  "Acces à mon application de training.",
+                ],
+                cta: "Choisir ce plan ",
+                ctaSubtitle: "",
+                priceId: "",
+              },
+              {
+                isPopular: true,
+                type: "monthly",
+                id: "premium",
+                title: "Débutant (1 mois)",
+                subtitle: "(1 * 150€ / 1 mois)",
+                price: 150,
+                barredPrice: 169,
+                currency: "€",
+                features: [
+                  "Pack adapté aux initiés ayant déjà des bases en musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Accompagnement sur les divers TCA ou problématique de santé.",
+                  "Bilan mensuel par email après 4 semaines.",
+                ],
+                cta: "Choisir ce plan ",
+                ctaSubtitle: "",
+                priceId: "",
+              },
+              {
+                isPopular: true,
+                type: "monthly",
+                id: "premium",
+                title: "Intermédiaire (1 mois)",
+                subtitle: "(1 * 150€ / 1 mois)",
+                price: 150,
+                barredPrice: 169,
+                currency: "€",
+                features: [
+                  "Pack adapté aux initiés ayant déjà des bases en musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Accompagnement sur les divers TCA ou problématique de santé.",
+                  "Bilan mensuel par email après 4 semaines.",
+                ],
+                cta: "Choisir ce plan ",
+                ctaSubtitle: "",
+                priceId: "",
+              },
+              {
+                isPopular: true,
+                type: "monthly",
+                id: "premium",
+                title: "Confirmé (1mois)",
+                subtitle: "(1 * 150€ / 1 mois)",
+                price: 150,
+                barredPrice: 169,
+                currency: "€",
+                features: [
+                  "Pack adapté aux initiés ayant déjà des bases en musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Plan alimentaire adapté à tes besoins.",
+                  "Accompagnement sur les divers TCA ou problématique de santé.",
+                  "Bilan mensuel par email après 4 semaines.",
+                ],
+                cta: "Choisir ce plan ",
+                ctaSubtitle: "",
+                priceId: "",
+              },
+            ]}
+          />
 
           <PricingDetails />
 
-          {/* Exemple de section pour les eBooks */}
+          {/* Pricing Ebook */}
           <PricingEbook
             cards={[
               {
@@ -254,12 +173,12 @@ export default function Page() {
                 type: "monthly",
                 id: "premium",
                 title: "Ebook 2",
-                subtitle: "Esprit & Mental",
+                subtitle: "esprit & mental",
                 price: "Free",
                 barredPrice: 0,
                 currency: "€",
                 features: [
-                  "Découvrez des techniques et conseils pour renforcer votre mental et optimiser vos performances.",
+                  "Découvrez des techniques et conseils pour renforcer votre mental et optimiser vos performances, essentiels pour atteindre vos objectifs.",
                 ],
                 cta: "Télécharger",
                 ctaSubtitle: "",
@@ -271,21 +190,79 @@ export default function Page() {
                 type: "monthly",
                 id: "premium",
                 title: "Ebook 3",
-                subtitle: "Esprit & Mental",
+                subtitle: "esprit & mental",
                 price: "Free",
                 barredPrice: 0,
                 currency: "€",
                 features: [
-                  "Profitez de conseils pratiques pour améliorer votre entraînement et maximiser vos résultats.",
+                  "Profitez de conseils pratiques pour améliorer votre entraînement et maximiser vos résultats grâce à une approche holistique.",
                 ],
                 cta: "Télécharger",
                 ctaSubtitle: "",
                 priceId: "",
                 link: "#",
               },
+              // {
+              //   isPopular: true,
+              //   type: "monthly",
+              //   id: "premium",
+              //   title: "Ebook 4",
+              //   subtitle: "esprit & mental",
+              //   price: "Free",
+              //   barredPrice: 0,
+              //   currency: "€",
+              //   features: [
+              //     "Pack adapté aux débutants dans la musculation.",
+              //     "Programme de musculation personnalisé en fonction de tes objectifs.",
+              //     "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+              //   ],
+              //   cta: "Télécharger",
+              //   ctaSubtitle: "",
+              //   priceId: "",
+              //   link:"#",
+              // },
+              // {
+              //   isPopular: true,
+              //   type: "monthly",
+              //   id: "premium",
+              //   title: "Ebook 5",
+              //   subtitle: "esprit & mental",
+              //   price: "Free",
+              //   barredPrice: 0,
+              //   currency: "€",
+              //   features: [
+              //     "Pack adapté aux débutants dans la musculation.",
+              //     "Programme de musculation personnalisé en fonction de tes objectifs.",
+              //     "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+              //   ],
+              //   cta: "Télécharger",
+              //   ctaSubtitle: "",
+              //   priceId: "",
+              //   link:"#",
+              // },
+              // {
+              //   isPopular: true,
+              //   type: "monthly",
+              //   id: "premium",
+              //   title: "Ebook 6",
+              //   subtitle: "esprit & mental",
+              //   price: "Free",
+              //   barredPrice: 0,
+              //   currency: "€",
+              //   features: [
+              //     "Pack adapté aux débutants dans la musculation.",
+              //     "Programme de musculation personnalisé en fonction de tes objectifs.",
+              //     "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+              //   ],
+              //   cta: "Télécharger",
+              //   ctaSubtitle: "",
+              //   priceId: "",
+              //   link:"#",
+              // },
             ]}
           />
 
+          {/* Pricing Details */}
           <PricingDetailsPlus />
 
           <div className="flex flex-col items-center gap-2">
@@ -296,10 +273,11 @@ export default function Page() {
               Retour de ma formation
             </Typography>
             <Typography variant="h2" className="m-auto max-w-xl text-center">
-              Ce qu'ils pensent de mes <u>services</u>!
+              Ce qu'ils pensent de mes <u>services </u>!
             </Typography>
           </div>
 
+          {/* Reviews Grid Content */}
           <ReviewGrid
             reviews={[
               {
@@ -346,7 +324,7 @@ export default function Page() {
               },
             ]}
           />
-
+          {/* FAQ Section */}
           <FAQSection
             faq={[
               {
@@ -369,7 +347,7 @@ export default function Page() {
                 question:
                   "Quels sont les avantages du coaching avec unlcoaching.com ?",
                 answer:
-                  "Le coaching avec unlcoaching.com vous permet de bénéficier de l'expertise d'un coach professionnel, d'un programme personnalisé adapté à vos objectifs, et d'un suivi continu pour garantir vos progrès.",
+                  "Le coaching avec unlcoaching.com vous permet de bénéficier de l'expertise d'un coach professionnel Jérémy Prat, d'un programme personnalisé adapté à vos objectifs, et d'un suivi continu pour garantir vos progrès.",
               },
               {
                 question:
