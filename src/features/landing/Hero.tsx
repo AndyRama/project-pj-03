@@ -5,6 +5,7 @@ import { Heart } from "lucide-react";
 import Link from "next/link";
 import { Typography } from "../../components/ui/typography";
 import { ReviewSmall } from "./review/ReviewSmall";
+import { ShimmerButton } from "@/components/magicui/shimmer-button";
 
 export const Hero = () => {
   return (
@@ -78,9 +79,23 @@ const HeroDescription = () => (
   </Typography>
 );
 
+// const HeroButton = () => (
+//   <Link
+//     href="/team"
+//     className={cn(
+//       buttonVariants({ size: "md", variant: "default" }),
+//       "text-white border hover:border-orange-500 hover:text-orange-500",
+//     )}
+//   >
+//     <Heart size={20} className="mr-2 hover:bg-orange-500" />
+//     de la Team !
+//   </Link>
+// );
+
 const HeroButton = () => (
-  <Link
+  <ShimmerButton
     href="/team"
+    background="hsl(var(--primary))"
     className={cn(
       buttonVariants({ size: "md", variant: "default" }),
       "text-white border hover:border-orange-500 hover:text-orange-500",
@@ -88,8 +103,18 @@ const HeroButton = () => (
   >
     <Heart size={20} className="mr-2 hover:bg-orange-500" />
     de la Team !
-  </Link>
+  </ShimmerButton>
 );
+
+
+
+{/* <ShimmerButton
+href="/signin"
+background="hsl(var(--primary))"
+className="rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+>
+Get started
+</ShimmerButton> */}
 
 const HeroReviews = () => (
   <ReviewSmall
