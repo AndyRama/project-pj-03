@@ -5,7 +5,6 @@ import { Heart } from "lucide-react";
 import Link from "next/link";
 import { Typography } from "../../components/ui/typography";
 import { ReviewSmall } from "./review/ReviewSmall";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
 
 export const Hero = () => {
   return (
@@ -79,39 +78,18 @@ const HeroDescription = () => (
   </Typography>
 );
 
-// const HeroButton = () => (
-//   <Link
-//     href="/team"
-//     className={cn(
-//       buttonVariants({ size: "md", variant: "default" }),
-//       "text-white border hover:border-orange-500 hover:text-orange-500",
-//     )}
-//   >
-//     <Heart size={20} className="mr-2 hover:bg-orange-500" />
-//     de la Team !
-//   </Link>
-// );
-
 const HeroButton = () => (
-  <ShimmerButton
+  <Link
     href="/team"
-    background="hsl(var(--primary))"
-    className="rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
-    >
+    className={cn(
+      buttonVariants({ size: "md", variant: "default" }),
+      "text-white border hover:border-orange-500 hover:text-orange-500",
+    )}
+  >
     <Heart size={20} className="mr-2 hover:bg-orange-500" />
     de la Team !
-  </ShimmerButton>
+  </Link>
 );
-
-
-
-{/* <ShimmerButton
-href="/signin"
-background="hsl(var(--primary))"
-className="rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
->
-Get started
-</ShimmerButton> */}
 
 const HeroReviews = () => (
   <ReviewSmall
@@ -129,7 +107,7 @@ const HeroReviews = () => (
 );
 
 const HeroImage = () => (
-  <div className="mt-20 xl:mt-30 flex-1 justify-end md:flex">
+  <div className="xl:mt-30 mt-20 flex-1 justify-end md:flex">
     <img
       src="/images/jeremy.jpg"
       className="w-[350px] max-w-lg rounded-[10px] object-contain sm:w-[480px] md:w-full"
