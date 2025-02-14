@@ -98,7 +98,7 @@ const HeroButton = () => (
     background="hsl(var(--primary))"
     className={cn(
       buttonVariants({ size: "md", variant: "default" }),
-      "text-white border hover:border-orange-500 hover:text-orange-500",
+      "text-white border hover:border-orange-500 hover:text-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500",
     )}
   >
     <Heart size={20} className="mr-2 hover:bg-orange-500" />
