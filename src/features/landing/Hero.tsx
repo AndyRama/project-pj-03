@@ -96,11 +96,8 @@ const HeroButton = () => (
   <ShimmerButton
     href="/team"
     background="hsl(var(--primary))"
-    className={cn(
-      buttonVariants({ size: "md", variant: "default" }),
-      "text-white border hover:border-orange-500 hover:text-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500",
-    )}
-  >
+    className="rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
+    >
     <Heart size={20} className="mr-2 hover:bg-orange-500" />
     de la Team !
   </ShimmerButton>
