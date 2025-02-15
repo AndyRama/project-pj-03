@@ -23,17 +23,17 @@ export const FloatingLegalFooter: React.FC = () => {
       <div className="fixed bottom-2 right-2 flex items-center gap-2">
         <Link
           className="text-xs text-muted-foreground hover:underline"
-          href="/legal/terms"
+          href="/legalMdx/terms"
         >
           Terms
         </Link>
         <Link
           className="text-xs text-muted-foreground hover:underline"
-          href="/legal/cvg"
+          href="/legalMdx/cvg"
         >
           Cvg
         </Link>
-        {/* <Image src={SiteConfig.appIcon} width={12} height={12} alt="app icon" /> */}
+        <Image src={SiteConfig.appIcon} width={12} height={12} alt="app icon" />
       </div>
     </div>
   );
