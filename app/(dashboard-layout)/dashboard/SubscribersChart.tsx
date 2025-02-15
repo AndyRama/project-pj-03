@@ -72,7 +72,7 @@ export const SubscribersChart = () => {
               fontSize={10}
               tickLine={false}
               axisLine={false}
-              interval={2} // Affiche une étiquette tous les 2 mois
+              interval={1} // Affiche une étiquette tous les 2 mois
             />
             <YAxis
               domain={[0, 100]}
