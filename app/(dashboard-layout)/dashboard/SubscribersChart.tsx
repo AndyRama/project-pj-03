@@ -1,17 +1,21 @@
 "use client";
 
 const SUBSCRIBERS: { date: string; amount: number }[] = [
-  { date: "2024-09-02", amount: 0 },
-  { date: "2024-10-02", amount: 5 },
-  { date: "2024-11-02", amount: 10 },
-  { date: "2024-12-02", amount: 15 },
-  { date: "2025-01-02", amount: 20 },
-  { date: "2025-02-02", amount: 25 },
-  { date: "2025-03-02", amount: 30 },
-  { date: "2025-04-02", amount: 35 },
-  { date: "2025-05-02", amount: 40 },
-  { date: "2025-06-02", amount: 45 },
-  { date: "2025-07-02", amount: 50 },
+  { date: "2024-05-02", amount: 0 },
+  { date: "2024-06-02", amount: 5 },
+  { date: "2024-07-02", amount: 10 },
+  { date: "2024-08-02", amount: 15 },
+  { date: "2024-09-02", amount: 20 },
+  { date: "2024-10-02", amount: 25 },
+  { date: "2024-11-02", amount: 30 },
+  { date: "2024-12-02", amount: 35 },
+  { date: "2025-01-02", amount: 40 },
+  { date: "2025-02-02", amount: 45 },
+  { date: "2025-03-02", amount: 50 },
+  { date: "2025-04-02", amount: 55 },
+  { date: "2025-05-02", amount: 60 },
+  { date: "2025-06-02", amount: 65 },
+  { date: "2025-07-02", amount: 70 },
 ];
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
