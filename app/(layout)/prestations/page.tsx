@@ -7,6 +7,7 @@ import { SubHero } from "@/features/landing/SubHero";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
 import { PricingDetails } from "@/features/prestations/pricing/PricingDetails";
 import { PricingDetailsPlus } from "@/features/prestations/pricing/PricingDetailsPlus";
+import { EmailFormSection } from "@/features/email/EmailFormSection";
 
 export default function page() {
   return (
@@ -357,6 +358,7 @@ export default function page() {
               },
             ]}
           />
+          <EmailFormSection />
         </LayoutContent>
       </Layout>
     </>

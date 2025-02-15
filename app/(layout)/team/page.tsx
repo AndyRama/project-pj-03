@@ -3,6 +3,7 @@ import { SideHero } from "@/features/landing/SideHero";
 import { StoryCardGrid } from "@/features/team/StoryCard";
 import { Typography } from "@/components/ui/typography";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
+import { EmailFormSection } from "@/features/email/EmailFormSection";
 
 export default function page() {
   return (
@@ -73,6 +74,7 @@ export default function page() {
           },
         ]}
       />
+      <EmailFormSection />
     </>
   );
 }

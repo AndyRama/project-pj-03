@@ -2,6 +2,8 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { SubHero } from "@/features/landing/SubHero";
+import { EmailFormSection } from "@/features/email/EmailFormSection";
+{/* <EmailFormSection /> */}
 
 import {
   Layout,
@@ -100,6 +102,7 @@ export default async function RoutePage(props: PageParams<{}>) {
             </LayoutContent>
           </div>
         )}
+        <EmailFormSection />
       </Layout>
     </>
   );
