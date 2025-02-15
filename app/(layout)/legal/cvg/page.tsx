@@ -5,7 +5,7 @@ import { SectionLayout } from '@/features/landing/SectionLayout';
 
 const CvgPage = () => {
   return (
-    <SectionLayout size="lg" variant="default" className="mx-auto max-w-4xl p-6">
+    <SectionLayout size="lg" variant="default" className="mx-auto max-w-7xl p-6">
       {/* Header */}
       <header className="mb-8">
         <Typography variant="h1" className="mb-2 text-3xl font-bold">
@@ -21,7 +21,7 @@ const CvgPage = () => {
       {/* Introduction */}
       <section className="mb-8">
         <Typography variant="p" className="mb-4">
-          Bienvenue et merci pour votre confiance. Vous trouverez ci-après les Conditions Générales de Vente applicables aux programmes Unlcoaching. 
+          Bienvenue et merci pour votre confiance. Vous trouverez ci-après les Conditions Générales de Vente applicables aux programmes Unlcoaching.
           Veuillez noter que Coach Jeremy Prat met à la disposition de ses Clients et des Utilisateurs de son site un service client que vous pouvez contacter de la manière suivante :
         </Typography>
 
