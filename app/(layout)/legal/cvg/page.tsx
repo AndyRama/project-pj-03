@@ -506,6 +506,94 @@ const CvgPage = () => {
           </Typography>
         </div>
       </section>
+      
+      <hr className="my-6" />
+
+      {/* Garantie */}
+      <section className="mb-8">
+        <Typography variant="h2" className="mb-4 text-2xl font-semibold">
+          GARANTIE
+        </Typography>
+        <div className="space-y-4">
+          <Typography variant="p">
+            Sauf dans les conditions des garanties légales ou commerciales consenties éventuellement applicables, la Société n'est tenue à aucune obligation de résultat et ne fournit aucune garantie expresse ou implicite, et ce y compris, sans que cette énumération ne soit limitative, relative à la continuité, à la performance, au résultat, à la pérennité du Service fourni, qui sont soumis à un aléa.
+          </Typography>
+
+          <Typography variant="p">
+            Le prix du Service ne comprend en aucun cas les frais à engager par le Client dans le cadre de ses activités pour atteindre ses objectifs et tout montant de frais, par exemple de publicité, est toujours fourni à titre purement indicatif dans le cadre du Service.
+          </Typography>
+
+          <Typography variant="p">
+            Les éventuels objectifs, témoignages de réussite ou exemples présentés par la Société sur le Site et dans le cadre du Service supposent la mise en œuvre concrète et effective de l'ensemble des conseils, techniques et outils éventuellement fournis dans le cadre du Service et ne constituent en aucun cas une promesse de gain ou de résultat.
+          </Typography>
+        </div>
+      </section>
+
+      <hr className="my-6" />
+
+      {/* Responsabilité */}
+      <section className="mb-8">
+        <Typography variant="h2" className="mb-4 text-2xl font-semibold">
+          RESPONSABILITÉ
+        </Typography>
+        <div className="space-y-4">
+          <Typography variant="h3" className="mb-2 text-xl font-medium">
+            Responsabilité des Utilisateurs et Clients
+          </Typography>
+          <Typography variant="p">
+            L'Utilisateur ou le Client est seul responsable des interprétations qu'il fait des informations fournies au titre des Services, des conseils qu'il déduit ou qui lui ont été fournis dans le cadre des Services et des adaptations réalisées pour ses activités propres. L'exploitation des informations se fait sous la seule responsabilité du Client et à ses risques et périls, ce que le Client accepte expressément.
+          </Typography>
+
+          <Typography variant="p">
+            Le Client reconnaît qu'il a bénéficié d'informations et de conseils suffisants avant de s'engager et a conscience que tout résultat recherché comporte, par nature, des risques et demande des efforts conséquents.
+          </Typography>
+
+          <Typography variant="h3" className="mb-2 mt-4 text-xl font-medium">
+            Limitation de responsabilité
+          </Typography>
+          <Typography variant="p">
+            Quel que soit le type de formule du Service sélectionné par le Client professionnel, la responsabilité de la Société est expressément limitée à l'indemnisation des dommages directs prouvés par le Client professionnel. En aucun cas, la responsabilité de la Société ne saurait être engagée au titre des dommages indirects.
+          </Typography>
+
+          <Typography variant="p" className="font-medium">
+            EN TOUT ÉTAT DE CAUSE, LA RESPONSABILITÉ DE LA SOCIÉTÉ EST PLAFONNÉE À L'ÉGARD DES PROFESSIONNELS AU MONTANT DU PRIX PAYÉ HORS TAXES PAR LE CLIENT EN CONTREPARTIE DE LA FOURNITURE DU SERVICE DANS LE CADRE DUQUEL S'INSCRIT LE LITIGE.
+          </Typography>
+        </div>
+      </section>
+
+      <hr className="my-6" />
+
+      {/* Litiges */}
+      <section className="mb-8">
+        <Typography variant="h2" className="mb-4 text-2xl font-semibold">
+          LITIGES
+        </Typography>
+        <div className="space-y-4">
+          <Typography variant="h3" className="mb-2 text-xl font-medium">
+            Résolution amiable
+          </Typography>
+          <Typography variant="p">
+            En cas de litige, le Client s'adressera en priorité à la Société pour tenter de trouver une solution amiable.
+          </Typography>
+
+          <Typography variant="h3" className="mb-2 text-xl font-medium">
+            Médiation
+          </Typography>
+          <Typography variant="p">
+            En cas de difficulté dans l'application du présent contrat, le Client consommateur résidant en Europe a la possibilité, avant toute action en justice, de solliciter le recours d'un médiateur de la consommation identifiable sur le site{' '}
+            <Link href="https://www.economie.gouv.fr/mediation-conso" className="text-blue-500 hover:underline">
+              https://www.economie.gouv.fr/mediation-conso
+            </Link>
+          </Typography>
+
+          <Typography variant="h3" className="mb-2 text-xl font-medium">
+            Litige entre professionnels
+          </Typography>
+          <Typography variant="p" className="font-medium">
+            EN CAS DE LITIGE SURVENANT ENTRE UN CLIENT PROFESSIONNEL ET LA SOCIÉTÉ, IL EST ATTRIBUÉ COMPÉTENCE EXCLUSIVE AUX TRIBUNAUX DANS LE RESSORT DE LA VILLE DU SIÈGE DE LA SOCIÉTÉ.
+          </Typography>
+        </div>
+      </section>
     </SectionLayout>
   );
 };
