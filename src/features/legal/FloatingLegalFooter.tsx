@@ -23,7 +23,7 @@ export const FloatingLegalFooter: React.FC = () => {
       <div className="fixed bottom-2 right-2 flex items-center gap-2">
         <Link
           className="text-xs text-muted-foreground hover:underline"
-          href="/legalMdx/terms"
+          href="/legal/terms"
         >
           Terms
         </Link>
