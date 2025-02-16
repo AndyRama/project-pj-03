@@ -31,7 +31,7 @@ export const PricingEbook = (props: PricingProps) => {
         </Typography>
         <Typography variant="h2">Les E-Books</Typography>
       </div>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-4">
         {props.cards.slice(0, visibleCards).map((card, i) => (
           <PricingCard key={i} {...card} />
         ))}
