@@ -43,7 +43,7 @@ export const PricingCard = (props: PricingCardProps) => {
       ) : null}
       <CardHeader className="flex flex-col items-center gap-1">
         <p className="text-center text-xl font-bold uppercase text-white">
-           Programme niveau
+          Programme niveau
         </p>
         <p className="gap-1 text-center text-lg text-orange-500">
           {props.title}
@@ -51,20 +51,14 @@ export const PricingCard = (props: PricingCardProps) => {
         <Separator className="bg-white" />
         <div className="flex items-end justify-center gap-2">
           <p className="text-2xl text-orange-500 md:text-3xl">
-            {props.price}€ 
+            {props.price}€
             <span className="text-md">/ Mois</span>
           </p>
         </div>
-          <Typography variant="p" className="text-xl text-white">
-            {props.subtitle}
-          </Typography>
-        <BuyButton
-          variant={props.isPopular ? "default" : "outline"}
-          priceId={props.priceId}
-          className="w-full bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
-        >
-          {props.cta}
-        </BuyButton>
+        <Typography variant="p" className="text-xl text-white">
+          {props.subtitle}
+        </Typography>
+
         <ul className="flex w-full flex-col gap-3 lg:gap-4">
           {props.features.map((feature, i) => (
             <li key={i} className="flex items-center gap-2 text-white">
@@ -75,6 +69,13 @@ export const PricingCard = (props: PricingCardProps) => {
             </li>
           ))}
         </ul>
+        <BuyButton
+          variant={props.isPopular ? "default" : "outline"}
+          priceId={props.priceId}
+          className="w-full bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
+        >
+          {props.cta}
+        </BuyButton>
       </CardHeader>
       <CardFooter className="flex flex-col items-stretch gap-2">
         <Typography variant="muted" className="text-white">
