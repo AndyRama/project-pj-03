@@ -206,6 +206,7 @@ const CvgPage = () => {
           </li>
         </ul>
       </section>
+
       <hr className="my-6" />
 
       {/* Droit de Rétractation */}
@@ -227,7 +228,7 @@ const CvgPage = () => {
         </ul>
 
         {/* Modèle de formulaire de rétractation */}
-        <div className="mt-6 rounded-lg bg-gray-50 p-6">
+        <div className="mt-6 rounded-lg p-6">
           <Typography variant="h3" className="mb-4 text-xl font-semibold">
             MODÈLE DE FORMULAIRE DE RÉTRACTATION
           </Typography>
