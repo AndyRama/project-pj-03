@@ -29,7 +29,7 @@ export const FloatingLegalFooter: React.FC = () => {
         </Link>
         <Link
           className="text-xs text-muted-foreground hover:underline"
-          href="/legalMdx/cvg"
+          href="/legal/cvg"
         >
           Cvg
         </Link>
