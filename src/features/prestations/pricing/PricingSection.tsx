@@ -31,7 +31,7 @@ export const Pricing = (props: PricingProps) => {
         </Typography>
         <Typography variant="h2">Musculation / Perte de poids</Typography>
       </div>
-      <div className="grid grid-cols-1 gap-1 md:grid-cols-3 md:gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
         {props.cards.slice(0, visibleCards).map((card, i) => (
           <PricingCard key={i} {...card} />
         ))}
@@ -39,7 +39,7 @@ export const Pricing = (props: PricingProps) => {
       {visibleCards < props.cards.length && (
         <button
           onClick={showMoreCards}
-          className="right-0 mt-4 rounded-md bg-primary bg-gradient-to-r from-orange-400 to-orange-700 px-4 py-2 text-black hover:bg-transparent hover:text-white"
+          className="right-0 mt-4 rounded-[10px] bg-primary bg-gradient-to-r from-orange-400 to-orange-700 px-4 py-2 text-black hover:bg-transparent hover:text-white"
         >
           Abonnement 1 mois
         </button>

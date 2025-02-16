@@ -70,7 +70,7 @@ export const PricingCard = (props: PricingCardProps) => {
       <Link href={props.link} target="_blank" className="w-full">
         <Button
             variant={props.isPopular ? "default" : "outline"}
-            className="w-full rounded-md bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
+            className="w-full rounded-[10px] bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
           >
             Télécharger
         </Button>
