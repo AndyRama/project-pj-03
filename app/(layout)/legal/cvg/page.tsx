@@ -5,7 +5,7 @@ import { SectionLayout } from '@/features/landing/SectionLayout';
 
 const CvgPage = () => {
   return (
-    <SectionLayout size="lg" variant="default" className="mx-auto max-w-7xl p-6">
+    <SectionLayout size="lg" variant="default" className="mx-auto mt-[-22] max-w-7xl p-6">
       {/* Header */}
       <header>
         <Typography variant="h1" className="mb-2 text-3xl font-bold">
@@ -506,7 +506,7 @@ const CvgPage = () => {
           </Typography>
         </div>
       </section>
-      
+
       <hr className="my-6" />
 
       {/* Garantie */}
