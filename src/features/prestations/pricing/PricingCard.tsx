@@ -72,7 +72,7 @@ export const PricingCard = (props: PricingCardProps) => {
         <BuyButton
           variant={props.isPopular ? "default" : "outline"}
           priceId={props.priceId}
-          className="w-full bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
+          className="w-full rounded-md bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
         >
           {props.cta}
         </BuyButton>

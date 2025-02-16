@@ -39,7 +39,7 @@ export const Pricing = (props: PricingProps) => {
       {visibleCards < props.cards.length && (
         <button
           onClick={showMoreCards}
-          className="right-0 mt-4 bg-primary bg-gradient-to-r from-orange-400 to-orange-700 px-4 py-2 text-black hover:bg-transparent hover:text-white"
+          className="right-0 mt-4 rounded-md bg-primary bg-gradient-to-r from-orange-400 to-orange-700 px-4 py-2 text-black hover:bg-transparent hover:text-white"
         >
           Abonnement 1 mois
         </button>

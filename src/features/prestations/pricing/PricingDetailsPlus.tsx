@@ -2,9 +2,11 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { BiNote } from "react-icons/bi";
 import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
+import { FaLightbulb, FaUserEdit, FaRegCalendarCheck, FaChartLine, FaHandsHelping } from 'react-icons/fa';
+import { GiBrain } from 'react-icons/gi';
+import { BiNote } from "react-icons/bi";
 
 interface Feature {
   icon: React.ElementType;
@@ -16,7 +18,7 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    icon: BiNote,
+    icon: FaLightbulb,
     title: "Qu'est-ce que l'unlcoaching ?",
     description:
       "Unlcoaching est un service de coaching unique, alliant entraînement physique, conseils nutritionnels et soutien mental. Notre approche personnalisée se distingue par l’attention portée à chaque individu, afin de vous aider à atteindre vos objectifs de fitness et de bien-être.",
@@ -30,7 +32,7 @@ const features: Feature[] = [
       "Ce qui distingue Unlcoaching des méthodes traditionnelles de coaching est [explication de la différence principale]. Pour en savoir plus sur Unlcoaching et comment il peut vous aider à atteindre vos objectifs de fitness, consultez notre page dédiée Prestations ou contactez-nous pour une consultation personnalisée.",
   },
   {
-    icon: BiNote,
+    icon: FaUserEdit,
     title: "Proposez-vous des services de coaching individuel ?",
     description:
       "Oui, nous proposons des services de coaching personnalisé. Nos options incluent :",
@@ -42,7 +44,7 @@ const features: Feature[] = [
     description2: "Pour plus de détails ou pour réserver une consultation, veuillez nous contacter via notre page de contact.",
   },
   {
-    icon: BiNote,
+    icon: FaChartLine,
     title: "Je débute dans le fitness, par où devrais-je commencer ?",
     description: "Pour bien débuter dans le fitness, je vous invite à suivre ces étapes :",
     bullets: [
@@ -57,7 +59,7 @@ const features: Feature[] = [
     description2: "N'hésitez pas à me contacter pour un coaching personnalisé.",
   },
   {
-    icon: BiNote,
+    icon: FaRegCalendarCheck ,
     title: "Proposez-vous des coachings individuels ?",
     description:
       "Oui, je propose des coachings individuels personnalisés pour répondre aux besoins spécifiques de chaque client. Voici ce que vous devez savoir :",
@@ -72,7 +74,7 @@ const features: Feature[] = [
       "Pour plus d'informations ou pour réserver une séance d'évaluation, n'hésitez pas à me contacter via la page Contact du site ou par email à contact@unlcoaching.com.",
   },
   {
-    icon: BiNote,
+    icon: GiBrain,
     title: "Comment puis-je commencer si je suis débutant dans le fitness ?",
     description: "Pour les débutants, nous recommandons de :",
     bullets: [
@@ -95,7 +97,7 @@ const features: Feature[] = [
     description2: "",
   },
   {
-    icon: BiNote,
+    icon: FaHandsHelping ,
     title: "Comment puis-je m'inscrire à un programme de coaching ?",
     description: "Pour vous inscrire à un programme de coaching, suivez ces étapes :",
     bullets: [

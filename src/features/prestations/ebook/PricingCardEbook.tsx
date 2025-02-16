@@ -3,9 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardFooter, CardHeader } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Typography } from "@/components/ui/typography";
-// import { BuyButton } from "@/features/stripe/BuyButton";
 import { cn } from "@/lib/utils";
-import { Check } from "lucide-react";
 import Link from "next/link";
 
 export type PricingCardProps = {
@@ -72,7 +70,7 @@ export const PricingCard = (props: PricingCardProps) => {
       <Link href={props.link} target="_blank" className="w-full">
         <Button
             variant={props.isPopular ? "default" : "outline"}
-            className="w-full bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
+            className="w-full rounded-md bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
           >
             Télécharger
         </Button>
