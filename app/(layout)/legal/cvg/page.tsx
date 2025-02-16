@@ -7,7 +7,7 @@ const CvgPage = () => {
   return (
     <SectionLayout size="lg" variant="default" className="mx-auto max-w-7xl p-6">
       {/* Header */}
-      <header className="mb-8">
+      <header>
         <Typography variant="h1" className="mb-2 text-3xl font-bold">
           Conditions Générales de Vente
         </Typography>
