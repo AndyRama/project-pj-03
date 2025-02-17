@@ -25,7 +25,7 @@ import {
 } from "../../../../src/features/posts/post-manager";
 import CardCategorie from "@/features/landing/CardCategorie";
 import RecentPosts from "@/features/landing/RecentPosts";
-import EmailFormSection from "@features/landing/EmailFormSection";
+import { EmailFormSection } from "@/features/email/EmailFormSection";
 
 export async function generateMetadata({
   params,
