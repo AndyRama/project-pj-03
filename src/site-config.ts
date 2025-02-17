@@ -2,7 +2,7 @@ export const SiteConfig = {
   title: "Unlcoaching",
   description: "Coaching personnel avec Jérémy Prat",
   prodUrl: "https://unlcoaching.com",
-  domain: "school.unlcoaching.com",
+  domain: "unlcoaching.com",
   appIcon: "/images/Unl.png",
   company: {
     name: "Unlcoaching Inc.",
@@ -12,8 +12,8 @@ export const SiteConfig = {
     primary: "#007291",
   },
   email: {
-    from: "Unlcoaching <Unlcoaching@resend.dev>", // Replace this with your domaine email
-    contact: "contact@Unlcoaching.app",
+    from: "Unlcoaching <jeremmy@unlcoaching.com>", // Replace this with your domaine email
+    contact: "contact@Unlcoaching.com",
   },
   maker: {
     image: "",
