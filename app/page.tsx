@@ -39,7 +39,7 @@ export default function HomePage() {
 
             component: (
               <Image
-                src="https://6bgmuvxxtethvgjd.public.blob.vercel-storage.com/jeremy2-aUDt4hhiK2qGo5mf12mA55AISth2Yl.jpg"
+                url="https://6bgmuvxxtethvgjd.public.blob.vercel-storage.com/jeremy2-aUDt4hhiK2qGo5mf12mA55AISth2Yl.jpg"
                 alt=""
                 width={200}
                 height={100}

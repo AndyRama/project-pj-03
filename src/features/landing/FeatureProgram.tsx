@@ -6,7 +6,6 @@ import type { ReactNode } from "react";
 import { SectionLayout } from "./SectionLayout";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Heart } from "lucide-react";
 import Link from "next/link";
 
 export const FeatureProgram = ({
@@ -71,7 +70,6 @@ export const FeatureLine = (props: FeatureLineProps) => {
             "text-white border hover:border-orange-500 hover:text-orange-500",
           )}
         >
-          {/* <Heart size={20} className="mr-2 hover:bg-orange-500" /> */}
           Je change de vie !
         </Link>
 
