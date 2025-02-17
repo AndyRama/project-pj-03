@@ -25,6 +25,7 @@ import {
 } from "../../../../src/features/posts/post-manager";
 import CardCategorie from "@/features/landing/CardCategorie";
 import RecentPosts from "@/features/landing/RecentPosts";
+import EmailFormSection from "@features/landing/EmailFormSection";
 
 export async function generateMetadata({
   params,
@@ -158,6 +159,7 @@ export default async function RoutePage(props: PostParams) {
       <div className="mt-28">
         <RecentPosts />
       </div>
+      <EmailFormSection />
     </Layout>
   );
 }
