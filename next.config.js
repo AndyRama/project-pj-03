@@ -3,7 +3,7 @@ const { withPlausibleProxy } = require("next-plausible");
 
 const nextConfig = {
   images: {
-    domains: ['6bgmuvxxtethvgjd.public.blob.vercel-storage.com'],
+    domains: ['https://res.cloudinary.com'],
   },
 };
 
