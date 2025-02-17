@@ -6,7 +6,7 @@ import React from "react";
 
 export const FloatingLegalFooter: React.FC = () => {
   return (
-    <div className="mb-2 border-t border-t-gray-100 pt-2 text-center text-muted-foreground">
+    <div className="border-t-white-100 mb-2 border-t pt-2 text-center text-muted-foreground">
       <div className="mx-auto items-center text-center text-sm">
         &copy; 2024{" "}
         <Link href="/" className="text-orange-500">
@@ -15,7 +15,7 @@ export const FloatingLegalFooter: React.FC = () => {
         Tous droits réservés. Crée avec{" "}
         <BiSolidHeart className="mx-1 inline-block text-red-400" />
         par{" "}
-        <Link href="/" className="text-orange-500">
+        <Link href="www.andyramaroson.com" className="text-orange-500">
           Andy Ramaroson
         </Link>
       </div>
