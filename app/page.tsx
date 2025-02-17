@@ -40,7 +40,7 @@ export default function HomePage() {
             component: (
               <Image
                 src="https://6bgmuvxxtethvgjd.public.blob.vercel-storage.com/jeremy2-aUDt4hhiK2qGo5mf12mA55AISth2Yl.jpg"
-                alt="image de jeremy profile droit"
+                alt="image de jeremy profile"
                 width={200}
                 height={100}
                 className="h-auto w-full rounded-[10px] object-cover"
@@ -56,7 +56,7 @@ export default function HomePage() {
             description2: "",
             component: (
               <Image
-                src="https://6bgmuvxxtethvgjd.public.blob.vercel-storage.com/colaborate-v1ne72BcvVIjNWRdiPqcynOFf1YZWE.jpg"
+                src="/colaborate-v1ne72BcvVIjNWRdiPqcynOFf1YZWE.jpg"
                 alt="Colaboration avec un suivi"
                 width={200}
                 height={100}
