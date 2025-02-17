@@ -21,40 +21,11 @@ const TermsPage = () => {
           Éditeur
         </Typography>
         <Typography variant="p" className="mb-4">
-          Unlcoaching, une Société par Actions Simplifiée (SAS) :       
+          Unlcoaching est une Entreprise individuelle(EI) dont le siège social est situé au <br />
+          Adresse du siège : 239 avenue Pasteur, 33600 PESSAC, France,<br />
+          représentée par Jérémy Prat en qualité de Représentant légal,<br />
+          N° SIREN : 823 996 566   
         </Typography>
-        <ul>
-          <li>
-            <Typography variant="p">
-              Capital social : 3 000 €
-            </Typography>
-          </li> 
-          <li>
-            <Typography variant="p">
-              Adresse du siège : 239 avenue Pasteur, 33600 PESSAC, France
-            </Typography>
-          </li>
-          <li>
-            <Typography variant="p">
-              Représentant légal : Jérémy Prat
-            </Typography>
-          </li>
-          <li>
-            <Typography variant="p">
-              Forme juridique : Entreprise individuelle
-            </Typography>
-          </li>   
-          <li>
-            <Typography variant="p">
-              SIREN : 823 996 566
-             </Typography>
-          </li>
-          <li>
-            <Typography variant="p">
-              SIREN : 823 996 566
-            </Typography>
-          </li>
-        </ul>
         <ul className="ml-6 space-y-2">
           <li>
             <Typography variant="p">
