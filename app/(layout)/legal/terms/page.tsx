@@ -21,8 +21,8 @@ const TermsPage = () => {
           Éditeur
         </Typography>
         <Typography variant="p" className="mb-4">
-          Unlcoaching est une Entreprise individuelle(EI) dont le siège social est situé au <br />
-          Adresse du siège : 239 avenue Pasteur, 33600 PESSAC, France,<br />
+          Unlcoaching est une Entreprise individuelle(E.I) dont le siège social est situé au 
+          Adresse du siège : 239 avenue Pasteur, 33600 PESSAC, France,
           représentée par Jérémy Prat en qualité de Représentant légal,<br />
           N° SIREN : 823 996 566   
         </Typography>
@@ -56,7 +56,7 @@ const TermsPage = () => {
           Hébergeur
         </Typography>
         <Typography variant="p">
-          Unlcoaching.fr est hébergé par Vercel, dont le siège social est situé au Vercel Inc. 340 S Lemon Ave #4133WALNUT, California 91789
+          Unlcoaching.fr est hébergé par Vercel Inc, dont le siège social est situé au Vercel Inc. 340 S Lemon Ave #4133WALNUT, California 91789
         </Typography>
       </section>
 

@@ -94,7 +94,7 @@ export default async function RoutePage(props: PageParams<{}>) {
             </div>
           </LayoutContent>
         ) : (
-          <div className=" mx-auto flex max-w-7xl flex-row">
+          <div className=" mx-auto max-w-7xl flex-row">
             <LayoutContent className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 ">
               {posts.map((post) => (
                 <PostCard id="Blog" key={post.slug} post={post} />
@@ -102,8 +102,8 @@ export default async function RoutePage(props: PageParams<{}>) {
             </LayoutContent>
           </div>
         )}
-        <EmailFormSection />
       </Layout>
+      <EmailFormSection />
     </>
   );
 }
