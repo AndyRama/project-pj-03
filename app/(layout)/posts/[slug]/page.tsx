@@ -74,92 +74,94 @@ export default async function RoutePage(props: PostParams) {
   const postTags = post.attributes.tags;
 
   return (
-    <Layout>
-      <LayoutContent>
-        <Link className={buttonVariants({ variant: "link" })} href="/posts">
-          <ArrowLeft size={16} /> Back
-        </Link>
+    <>
+      <Layout>
+        <LayoutContent>
+          <Link className={buttonVariants({ variant: "link" })} href="/posts">
+            <ArrowLeft size={16} /> Back
+          </Link>
 
-        <LayoutTitle className="mx-auto max-w-4xl text-center text-3xl drop-shadow-sm lg:text-5xl xl:text-6xl">
-          {post.attributes.title}
-        </LayoutTitle>
-        <LayoutDescription className="mt-4 text-center drop-shadow-sm">
-          {formatDate(new Date(post.attributes.date))} · Created by{" "}
-          <Typography variant="link" as={Link} href={SiteConfig.maker.website}>
-            {SiteConfig.maker.name}
-          </Typography>
-        </LayoutDescription>
-
-        <LayoutDescription className="mt-4 text-center drop-shadow-sm">
-          {postTags?.length ? (
-            <div className="flex flex-wrap justify-center gap-2 p-4">
-              {postTags.map((tag: string, index: number) => (
-                <span key={tag}>
-                  <Link
-                    key={tag}
-                    href={{
-                      pathname: `/posts`,
-                      query: {
-                        tag: tag,
-                      },
-                    }}
-                  >
-                    <Badge
-                      variant="outline"
-                      className="text-md hover:text-orange-500"
-                    >
-                      {tag}
-                    </Badge>
-                  </Link>
-                  {index < postTags.length - 1 ? ` | ` : ``}
-                </span>
-              ))}
-            </div>
-          ) : (
-            <Typography variant="link" as={Link} href="#">
-              aucune categories
+          <LayoutTitle className="mx-auto max-w-4xl text-center text-3xl drop-shadow-sm lg:text-5xl xl:text-6xl">
+            {post.attributes.title}
+          </LayoutTitle>
+          <LayoutDescription className="mt-4 text-center drop-shadow-sm">
+            {formatDate(new Date(post.attributes.date))} · Created by{" "}
+            <Typography variant="link" as={Link} href={SiteConfig.maker.website}>
+              {SiteConfig.maker.name}
             </Typography>
-          )}
-        </LayoutDescription>
-      </LayoutContent>
-      <LayoutHeader
-        style={{
-          backgroundImage: `url(${post.attributes.coverUrl})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}
-        className="h-[400px] overflow-hidden rounded-lg md:h-[600px]"
-      >
-        {post.attributes.status === "draft" ? (
-          <Badge className="w-fit" variant="secondary">
-            Draft
-          </Badge>
-        ) : null}
-      </LayoutHeader>
-      <Separator />
-      <LayoutContent>
-        <div className="justify-center md:flex md:flex-row ">
-          <div className="flex-col">
-            <CardCategorie className="mb-10 hidden h-[400px] md:flex" />
+          </LayoutDescription>
+
+          <LayoutDescription className="mt-4 text-center drop-shadow-sm">
+            {postTags?.length ? (
+              <div className="flex flex-wrap justify-center gap-2 p-4">
+                {postTags.map((tag: string, index: number) => (
+                  <span key={tag}>
+                    <Link
+                      key={tag}
+                      href={{
+                        pathname: `/posts`,
+                        query: {
+                          tag: tag,
+                        },
+                      }}
+                    >
+                      <Badge
+                        variant="outline"
+                        className="text-md hover:text-orange-500"
+                      >
+                        {tag}
+                      </Badge>
+                    </Link>
+                    {index < postTags.length - 1 ? ` | ` : ``}
+                  </span>
+                ))}
+              </div>
+            ) : (
+              <Typography variant="link" as={Link} href="#">
+                aucune categories
+              </Typography>
+            )}
+          </LayoutDescription>
+        </LayoutContent>
+        <LayoutHeader
+          style={{
+            backgroundImage: `url(${post.attributes.coverUrl})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+          className="h-[400px] overflow-hidden rounded-lg md:h-[600px]"
+        >
+          {post.attributes.status === "draft" ? (
+            <Badge className="w-fit" variant="secondary">
+              Draft
+            </Badge>
+          ) : null}
+        </LayoutHeader>
+        <Separator />
+        <LayoutContent>
+          <div className="justify-center md:flex md:flex-row ">
+            <div className="flex-col">
+              <CardCategorie className="mb-10 hidden h-[400px] md:flex" />
+            </div>
+            <ServerMdx
+              className="prose mx-auto mb-8 dark:prose-invert lg:prose-lg xl:prose-xl lg:mx-20"
+              source={post.content}
+            />
           </div>
-          <ServerMdx
-            className="prose mx-auto mb-8 dark:prose-invert lg:prose-lg xl:prose-xl lg:mx-20"
-            source={post.content}
-          />
+        </LayoutContent>
+        <div className="flex flex-col items-center gap-2">
+          <Typography variant="p" className="max-w-xl font-bold text-orange-500">
+            Recentes
+          </Typography>
+          <Typography variant="h2" className="max-w-xl">
+            Blog
+          </Typography>
         </div>
-      </LayoutContent>
-      <div className="flex flex-col items-center gap-2">
-        <Typography variant="p" className="max-w-xl font-bold text-orange-500">
-          Recentes
-        </Typography>
-        <Typography variant="h2" className="max-w-xl">
-          Blog
-        </Typography>
-      </div>
-      <div className="mt-28">
-        <RecentPosts />
-      </div>
+        <div className="mt-28">
+          <RecentPosts />
+        </div>
+      </Layout>
       <EmailFormSection />
-    </Layout>
+    </>
   );
 }
