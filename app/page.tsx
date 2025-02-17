@@ -39,8 +39,8 @@ export default function HomePage() {
 
             component: (
               <Image
-                src="https://6bgmuvxxtethvgjd.public.blob.vercel-storage.com/jeremy2-aUDt4hhiK2qGo5mf12mA55AISth2Yl.jpg"
-                alt="image de jeremy profile"
+                src="/images/jeremy2.jpg"
+                alt=""
                 width={200}
                 height={100}
                 className="h-auto w-full rounded-[10px] object-cover"
@@ -56,8 +56,8 @@ export default function HomePage() {
             description2: "",
             component: (
               <Image
-                src="/colaborate-v1ne72BcvVIjNWRdiPqcynOFf1YZWE.jpg"
-                alt="Colaboration avec un suivi"
+                src="/images/colaborate.jpg"
+                alt=""
                 width={200}
                 height={100}
                 className="h-auto w-full rounded-[10px] object-cover"
@@ -84,7 +84,7 @@ export default function HomePage() {
             description2: "",
             component: (
               <Image
-                src="https://6bgmuvxxtethvgjd.public.blob.vercel-storage.com/jeremy4-Qmtf8KcNvki9Wqphc74bg05KsLw4Dw.jpg"
+                src="/images/jeremy4.jpg"
                 alt=""
                 width={200}
                 height={100}
@@ -134,7 +134,7 @@ export default function HomePage() {
               "Coaching spécialisé pour les athlètes : si la compétition, le dépassement de soi et la discipline sont essentiels à votre vie et à votre bien-être, se fixer des objectifs concrets est un moyen efficace de les atteindre. Je vous propose un suivi musculation et alimentaire personnalisés pour relever les défis que vous vous fixerez.",
             component: (
               <Image
-                src="https://6bgmuvxxtethvgjd.public.blob.vercel-storage.com/post3-669z0yvjiS15NFLQPMwJSTC28OUlvO.jpg"
+                src="/images/post3.jpg"
                 alt=""
                 width={200}
                 height={100}
@@ -153,7 +153,7 @@ export default function HomePage() {
             description2: "",
             component: (
               <Image
-                src="https://6bgmuvxxtethvgjd.public.blob.vercel-storage.com/post5-ae4G4xUoZKq43UtQQbYfCAyVv0vOV1.jpg"
+                src="/images/post5.jpg"
                 alt=""
                 width={200}
                 height={100}
