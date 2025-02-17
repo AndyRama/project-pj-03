@@ -21,25 +21,57 @@ const TermsPage = () => {
           Éditeur
         </Typography>
         <Typography variant="p" className="mb-4">
-          Unlcoaching SAS au capital de 3 000 €, dont le siège social est situé au 12 rue Dora Maar, 37100 Tours, représentée par Kévin Descoubes, en qualité de Président, immatriculée au RCS de Tours B 807 774 021 (SIREN 807774021).
+          Unlcoaching, une Société par Actions Simplifiée (SAS) :       
         </Typography>
+        <ul>
+          <li>
+            <Typography variant="p">
+              Capital social : 3 000 €
+            </Typography>
+          </li> 
+          <li>
+            <Typography variant="p">
+              Adresse du siège : 239 avenue Pasteur, 33600 PESSAC, France
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="p">
+              Représentant légal : Jérémy Prat
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="p">
+              Forme juridique : Entreprise individuelle
+            </Typography>
+          </li>   
+          <li>
+            <Typography variant="p">
+              SIREN : 823 996 566
+             </Typography>
+          </li>
+          <li>
+            <Typography variant="p">
+              SIREN : 823 996 566
+            </Typography>
+          </li>
+        </ul>
         <ul className="ml-6 space-y-2">
           <li>
             <Typography variant="p">
-              N° de téléphone : 09 84 37 56 28
+              N° de téléphone : 06 84 37 56 28
             </Typography>
           </li>
           <li>
             <Typography variant="p">
               Adresse mail : {' '}
-              <Link href="mailto:contact@unlcoaching.fr" className="text-blue-500 hover:underline">
-                contact@unlcoaching.fr
+              <Link href="mailto:contact@unlcoaching.com" className="text-blue-500 hover:underline">
+                contact@unlcoaching.com
               </Link>
             </Typography>
           </li>
           <li>
             <Typography variant="p">
-              Identification TVA : FR78807774021
+              Identification TVA : FR 00 823996566
             </Typography>
           </li>
         </ul>
@@ -53,7 +85,7 @@ const TermsPage = () => {
           Hébergeur
         </Typography>
         <Typography variant="p">
-          Unlcoaching.fr est hébergé par Unlcoaching SAS, dont le siège social est situé au 12 rue Dora Maar, 37100 Tours.
+          Unlcoaching.fr est hébergé par Vercel, dont le siège social est situé au Vercel Inc. 340 S Lemon Ave #4133WALNUT, California 91789
         </Typography>
       </section>
 
@@ -65,7 +97,9 @@ const TermsPage = () => {
           Accès au site
         </Typography>
         <Typography variant="p">
-          Tous les éléments présents sur le site, y compris les marques, photographies, textes, commentaires, illustrations, images animées ou non, séquences vidéo, sons, ainsi que toutes les applications informatiques, sont protégés par les lois en vigueur sur la propriété intellectuelle. Ils sont la propriété exclusive de l'éditeur ou de ses partenaires. Toute reproduction ou utilisation, sous quelque forme que ce soit, sans autorisation écrite préalable, est strictement interdite.
+          Tous les éléments présents sur le site, y compris les marques, photographies, textes, commentaires, illustrations, images animées ou non, séquences vidéo,
+          sons, ainsi que toutes les applications informatiques, sont protégés par les lois en vigueur sur la propriété intellectuelle. Ils sont la propriété exclusive
+          de l'éditeur ou de ses partenaires. Toute reproduction ou utilisation, sous quelque forme que ce soit, sans autorisation écrite préalable, est strictement interdite.
         </Typography>
       </section>
 
@@ -89,12 +123,12 @@ const TermsPage = () => {
           <ul className="ml-6 space-y-2">
             <li>
               <Typography variant="p">
-                Par courrier : Unlcoaching SAS, 12 rue Dora Maar, 37100 Tours
+                Par email : Unlcoaching contact@unlcoaching.com avec object supression de mes données
               </Typography>
             </li>
             <li>
               <Typography variant="p">
-                Par email : contact@unlcoaching.fr
+                Puis un email de confirmation vous sera envoyé attestant de la suppression de notre base de données de unlcoaching
               </Typography>
             </li>
           </ul>
@@ -141,7 +175,8 @@ const TermsPage = () => {
           Loi applicable
         </Typography>
         <Typography variant="p">
-          Les présentes mentions légales sont régies par la loi française. En cas de litige, la juridiction compétente est celle du siège social de l'éditeur.
+          Les présentes mentions légales sont régies par la loi française. En cas de litige, la juridiction compétente est celle
+          du siège social de l'éditeur.
         </Typography>
       </section>
 
@@ -159,6 +194,9 @@ const TermsPage = () => {
           <Typography variant="p">
             <strong>Crédits photos :</strong> © https://unsplash.com/
           </Typography>
+          <Typography variant="p">
+            <strong>Photographe :</strong> xxxxxxxxxxxx
+          </Typography>
         </div>
       </section>
 
@@ -171,7 +209,7 @@ const TermsPage = () => {
         </Typography>
         <Typography variant="p">
           Pour toute question, veuillez nous contacter à l'adresse suivante :{' '}
-          <Link href="mailto:contact@unlcoaching.fr" className="text-blue-500 hover:underline">
+          <Link href="mailto:contact@unlcoaching.com" className="text-blue-500 hover:underline">
             contact@unlcoaching.fr
           </Link>
         </Typography>

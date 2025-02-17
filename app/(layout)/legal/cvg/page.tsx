@@ -22,7 +22,8 @@ const CvgPage = () => {
       <section className="mb-8">
         <Typography variant="p" className="mb-4">
           Bienvenue et merci pour votre confiance. Vous trouverez ci-après les Conditions Générales de Vente applicables aux programmes Unlcoaching.
-          Veuillez noter que Coach Jeremy Prat met à la disposition de ses Clients et des Utilisateurs de son site un service client qui peut être contacté selon les modalités suivantes :
+          Veuillez noter que Coach Jeremy Prat met à la disposition de ses Clients et des Utilisateurs de son site un service client qui peut être contacté
+          selon les modalités suivantes :
         </Typography>
 
         <ul className="ml-6 list-disc space-y-2">
@@ -59,7 +60,7 @@ const CvgPage = () => {
           <li>
             <Typography variant="p">
               <strong>La « Société » </strong>
-              désigne Coach Jeremy Prat, représentée par Emeric Le Saec, en sa qualité de chef d'entreprise, dont le siège social est situé à Dubai Silicon Oasis, DDP, Building A2, Dubai, United Arab Emirates.
+              désigne Coach Jeremy Prat, représentée par Emeric Le Saec, en sa qualité de chef d'entreprise, dont le siège social est situé à 239 AVENUE PASTEUR , 33600 PESSAC France.
             </Typography>
           </li>
           <li>
@@ -89,8 +90,8 @@ const CvgPage = () => {
               désigne toutes les prestations de services disponibles à la Commande sur le Site, et notamment les Services de :
             </Typography>
             <ul className="ml-6 mt-2 list-disc space-y-2">
-              <li>Conférence en ligne de type webinaire (retransmission, ou inscription à un événement en direct)</li>
-              <li>Formations en ligne (fourniture de contenu numérique sous forme de documents, vidéos, podcasts, ebooks, supports PowerPoint, etc.) constituant les supports de formations</li>
+              <li>Conférence en ligne de type webinaire (retransmission, ou inscription à un événement en direct)[Pas encore en service]</li>
+              <li>Formations en ligne (fourniture de contenu numérique sous forme de documents, vidéos, podcasts, ebooks, supports PowerPoint, etc.) constituant les supports de formations[Pas encore en service]</li>
               <li>Documents téléchargeables de type ebook</li>
               <li>Accompagnement personnalisé de type coaching, à distance ou en présentiel</li>
               <li>Programmes d'entrainements personnalisés</li>
@@ -112,7 +113,9 @@ const CvgPage = () => {
           <li>
             <Typography variant="p">
               <strong>Les « Conditions Générales de Vente » ou « CGV » </strong>
-              désignent les présentes conditions générales de vente, applicables dans le cadre de la relation contractuelle entre la Société et ses Clients, qui comprennent la politique de confidentialité éventuellement disponible sur le Site et tout élément du Site auquel elles renvoient expressément.
+              désignent les présentes conditions générales de vente, applicables dans le cadre de la relation contractuelle entre la Société 
+              et ses Clients, qui comprennent la politique de confidentialité éventuellement disponible sur le Site et tout élément du Site 
+              auquel elles renvoient expressément.
             </Typography>
           </li>
         </ul>
@@ -126,10 +129,14 @@ const CvgPage = () => {
           DURÉE DU SERVICE
         </Typography>
         <Typography variant="p" className="mb-4">
-          Le Service est fourni au Client pendant la durée spécifiée sur le Site au moment de la Commande. Dans le cadre de l'offre de contenus numériques ou services numériques, le Client est expressément informé que le bénéfice de certaines promotions est conditionné à une durée minimale d'engagement, qui lui sera précisée au moment de sa Commande.
+          Le Service est fourni au Client pendant la durée spécifiée sur le Site au moment de la Commande. Dans le cadre de l'offre de contenus numériques
+          ou services numériques, le Client est expressément informé que le bénéfice de certaines promotions est conditionné à une durée minimale d'engagement,
+          qui lui sera précisée au moment de sa Commande.
         </Typography>
         <Typography variant="p" className="mb-4">
-          Lorsqu'aucune durée n'est définie, le Service reste accessible pendant au moins six mois après la délivrance complète du Service, et la Société pourra retirer les accès à tout moment par la suite. En cas d'achat d'une formation en ligne ou d'une offre d'accès à du contenu numérique, des supports sont fournis en version PDF, audio ou vidéo qu'il appartient au Client de télécharger dans leur dernière version avant l'expiration de ses droits d'accès.
+          Lorsqu'aucune durée n'est définie, le Service reste accessible pendant au moins six mois après la délivrance complète du Service, et la Société pourra
+          retirer les accès à tout moment par la suite. En cas d'achat d'une formation en ligne ou d'une offre d'accès à du contenu numérique, des supports sont
+          fournis en version PDF, audio ou vidéo qu'il appartient au Client de télécharger dans leur dernière version avant l'expiration de ses droits d'accès.
         </Typography>
       </section>
 
@@ -141,7 +148,8 @@ const CvgPage = () => {
           ABONNEMENTS
         </Typography>
         <Typography variant="p" className="mb-4">
-          <strong>Abonnement avec période d'engagement.</strong> L'abonnement est souscrit par le Client pour une durée minimale de 6 mois. La validation de la Commande emporte un engagement ferme et irrévocable de régler le prix total du Service pour la durée initiale d'abonnement prévue.
+          <strong>Abonnement avec période d'engagement.</strong> L'abonnement est souscrit par le Client pour une durée minimale de 1 mois ou 3 mois. La validation
+          de la Commande emporte un engagement ferme et irrévocable de régler le prix total du Service pour la durée initiale d'abonnement prévue.
         </Typography>
       </section>
 
@@ -149,28 +157,56 @@ const CvgPage = () => {
 
       {/* Commande */}
       <section className="mb-8">
-        <Typography variant="h2" className="mb-4 text-2xl font-semibold">
-          COMMANDE
-        </Typography>
-        <ul className="ml-6 list-disc space-y-4">
-          <li>
+      <Typography variant="h2" className="mb-4 text-2xl font-semibold">
+    COMMANDE
+  </Typography>
+  <ul className="ml-6 list-disc space-y-4">
+    <li>
+      <Typography variant="p">
+        <strong>Commande sur le Site.</strong>{" "}
+        <p className="mt-2">
+          Le client suit un processus en plusieurs étapes. Une fois le service choisi, il accède à une page dédiée où il doit :
+        </p>
+        <ul className="ml-6 mt-2 list-disc">
+          <li>Fournir ses coordonnées personnelles</li>
+          <li>Sélectionner son mode de paiement (paiement intégral ou échelonné)</li>
+        </ul>
+        <p className="mt-2">
+          Il est important de noter que le client est entièrement responsable des 
+          informations fournies. Il doit notamment s'assurer de disposer d'une 
+          adresse email valide, celle-ci étant nécessaire pour :
+        </p>
+        <ul className="ml-6 mt-2 list-disc">
+          <li>Recevoir la confirmation de commande</li>
+        </ul>
+        <p className="mt-2">
+          Concernant les données personnelles (âge, poids, taille), celles-ci sont uniquement collectées dans le but d'élaborer un plan alimentaire 
+          personnalisé. Aucune autre utilisation n'en sera faite.
+        </p>
+        <p className="mt-2">
+          La société se dégage de toute responsabilité en cas d'utilisation d'une fausse identité par le client.
+        </p>
+      </Typography>
+    </li>
+    <li>
+      <Typography variant="p">
+        <strong>Obligation de paiement.</strong>{" "}
+        Toute Commande reçue par la Société est réputée ferme et définitive, 
+        entraînant l'adhésion et l'acceptation pleine et entière des CGV, ainsi 
+        que l'obligation de paiement de tout Service commandé.
+      </Typography>
+    </li>
+    <li>
+      <Typography variant="p">
+        <strong>Signature électronique.</strong>{" "}
+        La fourniture en ligne des coordonnées bancaires et la validation finale 
+        de la Commande valent preuve de l'accord du Client, de l'exigibilité des 
+        sommes dues, ainsi que de la signature et de l'acceptation expresse de 
+        toutes les opérations effectuées lors de la Commande sur le Site.
+      </Typography>
             <Typography variant="p">
-              <strong>Commande sur le Site.</strong> Après avoir sélectionné le Service sur le Site, le Client est dirigé vers une page de Commande où il renseigne ses coordonnées et choisit les modalités de paiement (paiement unique ou échelonné, mode de paiement). Le Client est seul responsable de l'exactitude des informations fournies et garantit la Société contre toute fausse identité. En particulier, il doit disposer d'une boîte mail fonctionnelle pour recevoir la confirmation de sa Commande ainsi que ses codes d'accès au Service.
-            </Typography>
-          </li>
-          <li>
-            <Typography variant="p">
-              <strong>Obligation de paiement.</strong> Toute Commande reçue par la Société est réputée ferme et définitive, entraînant l'adhésion et l'acceptation pleine et entière des CGV, ainsi que l'obligation de paiement de tout Service commandé.
-            </Typography>
-          </li>
-          <li>
-            <Typography variant="p">
-              <strong>Signature électronique.</strong> La fourniture en ligne des coordonnées bancaires et la validation finale de la Commande valent preuve de l'accord du Client, de l'exigibilité des sommes dues, ainsi que de la signature et de l'acceptation expresse de toutes les opérations effectuées lors de la Commande sur le Site.
-            </Typography>
-          </li>
-          <li>
-            <Typography variant="p">
-              <strong>Validation de la Commande.</strong> Après avoir lu et accepté les CGV sur la page de Commande, le Client est redirigé vers une page récapitulative où il fournit ses coordonnées bancaires avant de valider son paiement.
+              <strong>Validation de la Commande.</strong> Après avoir lu et accepté les CGV sur la page de Commande, le Client est redirigé
+              vers une page récapitulative où il fournit ses coordonnées bancaires avant de valider son paiement.
             </Typography>
           </li>
         </ul>
@@ -186,22 +222,26 @@ const CvgPage = () => {
         <ul className="ml-6 list-disc space-y-4">
           <li>
             <Typography variant="p">
-              <strong>Tarifs applicables.</strong> Le Service est délivré aux tarifs en vigueur figurant sur le Site lors de l'enregistrement de la Commande. Les prix sont indiqués en euros et incluent la TVA applicable au jour de la Commande.
+              <strong>Tarifs applicables.</strong> Le Service est délivré aux tarifs en vigueur figurant sur le Site lors de l'enregistrement de la Commande.
+               Les prix sont indiqués en euros et incluent la TVA applicable au jour de la Commande.
             </Typography>
           </li>
           <li>
             <Typography variant="p">
-              <strong>Exigibilité des sommes.</strong> La validation de la Commande rend exigibles toutes les sommes dues. En validant sa Commande, le Client autorise la Société (ou ses partenaires, prestataires de services de paiement) à envoyer des instructions à sa banque pour débiter son compte.
+              <strong>Exigibilité des sommes.</strong> La validation de la Commande rend exigibles toutes les sommes dues. En validant sa Commande, le Client
+               autorise la Société (ou ses partenaires, prestataires de services de paiement) à envoyer des instructions à sa banque pour débiter son compte.
             </Typography>
           </li>
           <li>
             <Typography variant="p">
-              <strong>Mode de paiement.</strong> Pour régler sa Commande, le Client dispose de l'ensemble des modes de paiement proposés sur le Site. Le paiement s'effectue par prélèvement SEPA ou via les informations de carte bancaire communiquées.
+              <strong>Mode de paiement.</strong> Pour régler sa Commande, le Client dispose de l'ensemble des modes de paiement proposés sur le Site. Le paiement 
+              s'effectue par prélèvement STRIPE ou via les informations de carte bancaire communiquées.
             </Typography>
           </li>
           <li>
             <Typography variant="p">
-              <strong>Facilités de paiement.</strong> Si la Société propose un règlement échelonné d'un prix forfaitaire, il ne s'agit pas d'un paiement sans engagement ou d'un abonnement mensualisé, mais d'un échéancier. La totalité du prix correspondant à la somme des paiements échelonnés reste due.
+              <strong>Facilités de paiement.</strong> Si la Société propose un règlement échelonné d'un prix forfaitaire, il ne s'agit pas d'un paiement sans
+               engagement ou d'un abonnement mensualisé, mais d'un échéancier. La totalité du prix correspondant à la somme des paiements échelonnés reste due.
             </Typography>
           </li>
         </ul>
@@ -217,12 +257,16 @@ const CvgPage = () => {
         <ul className="ml-6 list-disc space-y-4">
           <li>
             <Typography variant="p">
-              <strong>Délai.</strong> Le Client peut se rétracter du contrat conclu avec la Société sans donner de motif dans un délai de quatorze jours calendaires commençant le jour suivant la Commande. Si le délai expire un samedi, un dimanche ou un jour férié, il est prorogé jusqu'à l'expiration de la dernière heure du premier jour ouvrable suivant.
+              <strong>Délai.</strong> Le Client peut se rétracter du contrat conclu avec la Société sans donner de motif dans un délai de quatorze jours
+              calendaires commençant le jour suivant la Commande. Si le délai expire un samedi, un dimanche ou un jour férié, il est prorogé jusqu'à l'expiration
+              de la dernière heure du premier jour ouvrable suivant.
             </Typography>
           </li>
           <li>
             <Typography variant="p">
-              <strong>Exercice.</strong> Pour exercer le droit de rétractation, le Client notifie à contact@team-ricco.com, sa décision de rétractation du présent contrat au moyen d'une déclaration dénuée d'ambiguïté. En cas de rétractation, la Société rembourse le prix réglé au plus tard quatorze jours à compter du jour après réception de la décision de rétractation.
+              <strong>Exercice.</strong> Pour exercer le droit de rétractation, le Client notifie à contact@team-ricco.com, sa décision de rétractation du présent
+               contrat au moyen d'une déclaration dénuée d'ambiguïté. En cas de rétractation, la Société rembourse le prix réglé au plus tard quatorze jours à compter
+               du jour après réception de la décision de rétractation.
             </Typography>
           </li>
         </ul>
@@ -236,7 +280,7 @@ const CvgPage = () => {
             Veuillez compléter et renvoyer le présent formulaire uniquement si vous souhaitez vous rétracter du contrat.
           </Typography>
           <Typography variant="p" className="mb-4">
-            A l'attention de Coach Ricco FZCO, basé à Dubai Silicon Oasis, DDP, Building A1, Dubai, United Arab Emirates, joignable au +33646230279 ou par email à l'adresse contact@team-ricco.com :
+            A l'attention de Coach Jérémy Prat, basé à 239 AVENUE PASTEUR , 33600 PESSAC France, joignable au +33646230279 ou par email à l'adresse contact@unlcoaching.com :
           </Typography>
           <div className="space-y-2">
             <Typography variant="p">Je/nous (_) vous notifie/notifions (_) par la présente ma/notre (_) rétractation du contrat portant pour la prestation de services (_) ci-dessous :</Typography>
@@ -257,7 +301,8 @@ const CvgPage = () => {
           <ul className="ml-6 list-disc space-y-2">
             <li>
               <Typography variant="p">
-                Fourniture de services pleinement exécutés avant la fin du délai de rétractation et dont l'exécution a commencé après accord préalable exprès du consommateur et renoncement exprès à son droit de rétractation
+                Fourniture de services pleinement exécutés avant la fin du délai de rétractation et dont l'exécution a commencé après accord préalable exprès du
+                consommateur et renoncement exprès à son droit de rétractation
               </Typography>
             </li>
             <li>
@@ -289,22 +334,27 @@ const CvgPage = () => {
         <ul className="ml-6 list-disc space-y-4">
           <li>
             <Typography variant="p">
-              <strong>Accès au Site.</strong> Le Site est accessible gratuitement à toute personne disposant d'un accès à Internet. Tous les coûts afférents à l'accès au Site sont exclusivement à la charge de l'Utilisateur. La Société ne pourra être tenue responsable de dommages matériels liés à l'utilisation du Site.
+              <strong>Accès au Site.</strong> Le Site est accessible gratuitement à toute personne disposant d'un accès à Internet. 
+              Tous les coûts afférents à l'accès au Site sont exclusivement à la charge de l'Utilisateur. La Société ne pourra être 
+              tenue responsable de dommages matériels liés à l'utilisation du Site.
             </Typography>
           </li>
           <li>
             <Typography variant="p">
-              <strong>Accès au Service.</strong> La Société fournira les Identifiants permettant d'accéder au Service au plus tard dans un délai de 24 heures à compter de la Commande, sous réserve de l'acceptation du paiement par la banque du Client.
+              <strong>Accès au Service.</strong> La Société fournira les liens pour que l'utilisateur puisse crée son compte avec ces identifiants lui permettant d'accéder
+              au Service au plus tard dans un délai de 24 heures à compter de la Commande, sous réserve de l'acceptation du paiement par la banque du Client.
             </Typography>
           </li>
           <li>
             <Typography variant="p">
-              <strong>Caractère individuel et personnel des Identifiants.</strong> Tout Identifiant de connexion fourni par la Société au Client est strictement personnel, individuel, confidentiel et intransmissible. Le Client s'engage à ne souscrire au Service qu'à des fins exclusivement personnelles.
+              <strong>Caractère individuel et personnel des Identifiants.</strong> Tout Identifiant de connexion fourni par la Société au Client est strictement personnel,
+              individuel, confidentiel et intransmissible. Le Client s'engage à ne souscrire au Service qu'à des fins exclusivement personnelles.
             </Typography>
           </li>
           <li>
             <Typography variant="p">
-              <strong>Maintenance.</strong> Le Site peut faire l'objet d'opérations de maintenance et la Société se réserve la possibilité d'interrompre, de suspendre momentanément ou de modifier sans préavis l'accès à tout ou partie du Site ou du Service.
+              <strong>Maintenance.</strong> Le Site peut faire l'objet d'opérations de maintenance et la Société se réserve la possibilité d'interrompre, de suspendre
+              momentanément ou de modifier sans préavis l'accès à tout ou partie du Site ou du Service.
             </Typography>
           </li>
         </ul>
@@ -318,24 +368,30 @@ const CvgPage = () => {
           GARANTIE LÉGALE
         </Typography>
         <Typography variant="p" className="mb-4 font-semibold">
-          LE CLIENT EST EXPRESSÉMENT INFORMÉ QUE CETTE GARANTIE NE S'APPLIQUE PAS AUX CLIENTS PROFESSIONNELS ET AUX SERVICES AUTRES QUE LES SERVICES NUMÉRIQUES, QUE LE PROFESSIONNEL UTILISE OU NON DES FORMATS OU DES MOYENS NUMÉRIQUES POUR CRÉER LE PRODUIT DU SERVICE, LE FOURNIR OU LE TRANSMETTRE AU CONSOMMATEUR.
+          LE CLIENT EST EXPRESSÉMENT INFORMÉ QUE CETTE GARANTIE NE S'APPLIQUE PAS AUX CLIENTS PROFESSIONNELS ET AUX SERVICES AUTRES QUE LES SERVICES NUMÉRIQUES,
+          QUE LE PROFESSIONNEL UTILISE OU NON DES FORMATS OU DES MOYENS NUMÉRIQUES POUR CRÉER LE PRODUIT DU SERVICE, LE FOURNIR OU LE TRANSMETTRE AU CONSOMMATEUR.
         </Typography>
 
         <div className="space-y-4">
           <Typography variant="p">
-            Le consommateur dispose d'un délai de deux ans à compter de la fourniture du contenu numérique ou du service numérique pour obtenir la mise en œuvre de la garantie légale de conformité en cas d'apparition d'un défaut de conformité. Durant un délai d'un an à compter de la date de fourniture, le consommateur n'est tenu d'établir que l'existence du défaut de conformité et non la date d'apparition de celui-ci.
+            Le consommateur dispose d'un délai de deux ans à compter de la fourniture du contenu numérique ou du service numérique pour obtenir la mise en œuvre
+            de la garantie légale de conformité en cas d'apparition d'un défaut de conformité. Durant un délai d'un an à compter de la date de fourniture, le consommateur
+            n'est tenu d'établir que l'existence du défaut de conformité et non la date d'apparition de celui-ci.
           </Typography>
 
           <Typography variant="p">
-            La garantie légale de conformité emporte obligation de fournir toutes les mises à jour nécessaires au maintien de la conformité du contenu numérique ou du service numérique.
+            La garantie légale de conformité emporte obligation de fournir toutes les mises à jour nécessaires au maintien de la conformité du contenu numérique
+            ou du service numérique.
           </Typography>
 
           <Typography variant="p">
-            La garantie légale de conformité donne au consommateur droit à la mise en conformité du contenu numérique ou du service numérique sans retard injustifié suivant sa demande, sans frais et sans inconvénient majeur pour lui.
+            La garantie légale de conformité donne au consommateur droit à la mise en conformité du contenu numérique ou du service numérique sans retard injustifié 
+            suivant sa demande, sans frais et sans inconvénient majeur pour lui.
           </Typography>
 
           <Typography variant="p">
-            Le consommateur peut obtenir une réduction du prix en conservant le contenu numérique ou le service numérique ou il peut mettre fin au contrat en se faisant rembourser intégralement contre renoncement au contenu numérique ou au service numérique, si :
+            Le consommateur peut obtenir une réduction du prix en conservant le contenu numérique ou le service numérique ou il peut mettre fin au contrat
+            en se faisant rembourser intégralement contre renoncement au contenu numérique ou au service numérique, si :
           </Typography>
 
           <ul className="ml-6 list-decimal space-y-2">
@@ -394,7 +450,7 @@ const CvgPage = () => {
           </Typography>
 
           <Typography variant="p">
-            Toute demande d'exercice peut être adressée par email à l'adresse contact@team-ricco.com. Toute personne concernée par un traitement dispose d'un droit de réclamation auprès de la Commission Nationale Informatique et Libertés.
+            Toute demande d'exercice peut être adressée par email à l'adresse contact@unlcoaching.com Toute personne concernée par un traitement dispose d'un droit de réclamation auprès de la Commission Nationale Informatique et Libertés.
           </Typography>
         </div>
       </section>

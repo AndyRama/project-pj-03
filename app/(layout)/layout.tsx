@@ -1,7 +1,6 @@
 import { Footer } from "@/features/layout/Footer";
 import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
 import { Header } from "@/features/layout/Header";
-// import { EmailFormSection } from "@/features/email/EmailFormSection";
 import type { PropsWithChildren } from "react";
 
 export default function RouteLayout(props: PropsWithChildren) {
@@ -9,9 +8,8 @@ export default function RouteLayout(props: PropsWithChildren) {
     <div className="flex min-h-full flex-col">
       <Header />
       <div className="mt-32 min-h-full flex-1">{props.children}</div>
-      {/* <EmailFormSection /> */}
       <Footer />
-      <FloatingLegalFooter/>
+      <FloatingLegalFooter />
     </div>
   );
 }
