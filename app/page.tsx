@@ -39,7 +39,7 @@ export default function HomePage() {
 
             component: (
               <Image
-                src="https://res.cloudinary.com/dbtnehfrf/image/upload/v1739824682/jeremy2_y9y23f.jpg"
+                src="/images/jeremy2.jpg"
                 alt=""
                 width={200}
                 height={100}

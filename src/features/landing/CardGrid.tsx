@@ -26,7 +26,7 @@ export const CardImage = ({ title, years, image, index }: CardImageProps) => {
         y: 0,
         transition: {
           delay,
-          duration: 0.5,
+          duration: 0.9,
         },
       }}
       viewport={{ once: true }}
