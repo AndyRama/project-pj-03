@@ -50,7 +50,7 @@ export const FeatureLine = (props: FeatureLineProps) => {
     target: imageRef,
     offset: ["start end", "end start"],
   });
-  const imgY = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
+  const imgY = useTransform(scrollYProgress, [0, 1], ["20%", "-50%"]);
 
   return (
     <div className="flex items-center gap-4 odd:flex-row-reverse max-lg:!flex-col">
