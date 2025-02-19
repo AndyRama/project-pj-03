@@ -118,12 +118,14 @@ export function HeaderBase({ children }: PropsWithChildren) {
           {/* <ThemeToggle /> */}
         </motion.nav>
         <div className="hidden lg:contents">
-          <Button
-            size="sm"
-            className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
-          >
-            Rejoingnez-nous !
-          </Button>
+          <Link href="/team">
+            <Button
+              size="sm"
+              className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
+            >
+              Rejoingnez-nous !
+            </Button>
+          </Link>
         </div>
 
         <div className="z-20 flex items-center gap-2 px-4 lg:hidden">
@@ -176,12 +178,15 @@ export function HeaderBase({ children }: PropsWithChildren) {
                 ))}
               </div>
               <hr />
-              <Button
-                size="md"
-                className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
-              >
-                Rejoingnez-nous !
-              </Button>
+              <Link href="/team">
+                <Button
+
+                  size="md"
+                  className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
+                >
+                  Rejoingnez-nous !
+                </Button>
+              </Link>
               <hr />
 
               {/* <ContactSupportDialog>
