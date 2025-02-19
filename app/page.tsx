@@ -212,14 +212,14 @@ export default function HomePage() {
           },
           {
             image: "https://i.pravatar.cc/300?u=b1",
-            name: "Sophie L",
+            name: "Thomas G.",
             review:
               "Le programme perte de poids de Jeremy m'a complètement transformée ! En 3 mois, j'ai non seulement atteint mes objectifs, mais j'ai aussi appris à aimer le sport. Les entraînements étaient variés et toujours adaptés à mes capacités.",
             role: "29 ans",
           },
           {
             image: "https://i.pravatar.cc/300?u=b2",
-            name: "Thomas G.",
+            name: "Sophie L.",
             review:
               "Je recommande Jeremy à 100 % ! Il ne s'agit pas juste d'un coach qui donne des exercices, mais d'un vrai accompagnateur. Grâce à lui, j'ai perdu 10 kg en 5 mois et j'ai adopté de nouvelles habitudes de vie que je n'aurais jamais imaginées.",
             role: "Social Media Manager",
