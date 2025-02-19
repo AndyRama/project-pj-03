@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaInstagramSquare, FaFacebook, FaLinkedin } from 'react-icons/fa'
+import { FaInstagramSquare, FaFacebook } from 'react-icons/fa'
 import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
 import { SiteConfig } from "@/site-config";
@@ -54,9 +54,6 @@ export const Footer = () => {
               <Link href="https://www.facebook.com/Unlcoaching" aria-label="Facebook" className="mr-4 text-2xl hover:text-orange-500 ">
                 <FaFacebook />
               </Link>
-              {/* <Link href="#" aria-label="LinkedIn" className="text-2xl hover:text-orange-500 ">
-                <FaLinkedin />
-              </Link> */}
             </div>           
           </div>
 

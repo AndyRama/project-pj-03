@@ -118,7 +118,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
           {/* <ThemeToggle /> */}
         </motion.nav>
         <div className="hidden lg:contents">
-          <Link href="/team">
+          <Link href="/prestations/#pack">
             <Button
               size="sm"
               className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
@@ -178,7 +178,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
                 ))}
               </div>
               <hr />
-              <Link href="/team">
+              <Link href="/prestations/#pack">
                 <Button
 
                   size="md"
