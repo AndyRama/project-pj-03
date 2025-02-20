@@ -32,45 +32,45 @@ export default function page() {
         reviews={[
           {
             image: "https://i.pravatar.cc/300?u=b3",
-            name: "Mia",
+            name: "Marie D.",
             review:
-              "The analytics provided by Threader are invaluable. They've given me insights into what my audience loves, helping me double my engagement rate in just a few months.",
-            role: "Digital Marketer",
+              "Grâce au programme de Jeremy, j'ai perdu 12 kg en 4 mois tout en tonifiant mon corps. Il m'a accompagné à chaque étape, avec des conseils sur l'entraînement et l'alimentation. Je me sens enfin bien dans ma peau ! Merci Jeremy !",
+            role: "34 ans",
           },
           {
-            image: "https://i.pravatar.cc/300?u=b5",
-            name: "Isabella",
+            image: "https://i.pravatar.cc/300?u=b4",
+            name: "Alexandre P.",
             review:
-              "Threader's user interface is incredibly user-friendly. I was able to onboard my team in no time, and we've seen a marked improvement in our social media performance.",
-            role: "Team Leader",
+              "Je n'avais jamais vraiment fait de sport avant, mais Jeremy a su s'adapter à mon niveau et me motiver. J'ai non seulement perdu 8 kg, mais j'ai aussi retrouvé de l'énergie et de la confiance en moi. Ses packs sont complets et très efficaces.",
+            role: "42 ans",
           },
           {
             image: "https://i.pravatar.cc/300?u=b1",
-            name: "Eva",
+            name: "Thomas G.",
             review:
-              "Since I started using Threader, my content creation process has been streamlined. The AI suggestions are spot on, helping me to connect better with my audience. Highly recommend for anyone looking to elevate their content game.",
-            role: "Content Creator",
+              "Le programme perte de poids de Jeremy m'a complètement transformée ! En 3 mois, j'ai non seulement atteint mes objectifs, mais j'ai aussi appris à aimer le sport. Les entraînements étaient variés et toujours adaptés à mes capacités.",
+            role: "29 ans",
           },
           {
             image: "https://i.pravatar.cc/300?u=b2",
-            name: "Lucas",
+            name: "Sophie L.",
             review:
-              "Threader's scheduling feature is a lifesaver. It allows me to plan my content calendar efficiently, ensuring I never miss posting on the optimal days and times. Fantastic tool for social media managers.",
+              "Je recommande Jeremy à 100 % ! Il ne s'agit pas juste d'un coach qui donne des exercices, mais d'un vrai accompagnateur. Grâce à lui, j'ai perdu 10 kg en 5 mois et j'ai adopté de nouvelles habitudes de vie que je n'aurais jamais imaginées.",
             role: "Social Media Manager",
           },
           {
-            image: "https://i.pravatar.cc/300?u=b6",
-            name: "Oliver",
+            image: "https://i.pravatar.cc/300?u=b5",
+            name: "Élodie C.",
             review:
-              "Auto-reposting with Threader is a feature I didn't know I needed. It's great for getting more mileage out of your best content without any extra effort.",
-            role: "Freelancer",
+              "Je cherchais un coach pour me remettre en forme et perdre du poids avant mon mariage, et Jeremy a été incroyable ! En seulement 3 mois, j'ai perdu 7 kg et je me sens plus forte et plus confiante que jamais. Ses conseils nutritionnels sont un vrai plus.",
+            role: "25 ans",
           },
           {
-            image: "https://i.pravatar.cc/300?u=b7",
-            name: "Sophia",
+            image: "https://i.pravatar.cc/300?u=b6",
+            name: "Lucas M.",
             review:
-              "Joining the Threader community has opened up networking opportunities with fellow content creators. It's more than just a tool; it's a platform for growth.",
-            role: "Influencer",
+              "Je pensais qu'il était trop tard pour moi pour me remettre au sport, mais Jeremy m'a prouvé le contraire. J'ai perdu 5 kg en douceur et gagné en endurance. Ses packs sont bien pensés, accessibles, et il est toujours disponible pour répondre à mes questions.",
+            role: "50 ans",
           },
         ]}
       />

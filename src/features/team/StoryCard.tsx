@@ -248,7 +248,7 @@ export const StoryCardGrid: React.FC = () => {
           alt: "Man writing a plan",
           width: 1188,
           height: 1413,
-          tailwindClass: "h-96 pb-10",
+          tailwindClass: "h-full pb-10",
         },
       ],
     },
