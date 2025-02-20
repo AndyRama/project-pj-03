@@ -19,7 +19,7 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
     links: [
       { url: "/account/alimentaire", title: "Plan alimentaire", icon: <Carrot  /> },
       { url: "/account/courses", title: "Browse", icon: <Compass /> },
-      { url: "/account/courses", title: "LeadBoard", icon: <ListTodo /> },
+      { url: "/account/leadboard", title: "LeadBoard", icon: <ListTodo /> },
     ],
   },
   {
