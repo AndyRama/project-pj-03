@@ -10,7 +10,6 @@ import {
   LayoutHeader,
   LayoutTitle,
 } from "@/features/page/layout";
-import { ThemeToggle } from "@/features/theme/ThemeToggle";
 import { auth } from "@/lib/auth/helper";
 import { SiteConfig } from "@/site-config";
 import Image from "next/image";
@@ -78,7 +77,6 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
               {/* Mobile header */}
               <nav className="flex items-center space-x-1 lg:hidden">
                 <AuthButton />
-                <ThemeToggle />
                 <MobileDropdownMenu links={DASHBOARD_LINKS} />
               </nav>
               {/* Desktop header */}
@@ -88,7 +86,6 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
                     Support
                   </Button>
                 </ContactSupportDialog>
-                <ThemeToggle />
               </nav>
             </div>
           </div>

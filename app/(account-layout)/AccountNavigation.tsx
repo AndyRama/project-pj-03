@@ -1,7 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import { AuthButton } from "@/features/auth/AuthButton";
 import { Layout } from "@/features/page/layout";
-import { ThemeToggle } from "@/features/theme/ThemeToggle";
 import { SiteConfig } from "@/site-config";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,7 +31,6 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
 
           <nav className="flex flex-1 items-center justify-end space-x-1">
             <AuthButton />
-            <ThemeToggle />
             <MobileDropdownMenu className="lg:hidden" links={ACCOUNT_LINKS} />
           </nav>
         </div>
@@ -43,7 +41,7 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
           <DesktopVerticalMenu links={ACCOUNT_LINKS} className="max-lg:hidden" />
         ): null}
         <Separator className="max-lg:hidden" orientation="vertical" />
-        <main className="flex-1">{props.children}</main>
+        <main className="flex-1 px-4">{props.children}</main>
       </Layout>
     </div>
   );
