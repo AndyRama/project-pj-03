@@ -23,6 +23,21 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
     ],
   },
   {
+    title: "Services",
+    links: [
+      {
+        title: "Plan alimentaire",
+        icon: <TextSelect />,
+        url: "/alimentaire",
+      },
+      {
+        title: "Créer un cour",
+        icon: <FilePen />,
+        url: "/courses",
+      },
+    ],
+  },
+  {
     title: "Maintenance",
     links: [
       {
