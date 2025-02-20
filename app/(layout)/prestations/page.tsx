@@ -162,7 +162,7 @@ export default function page() {
                 barredPrice: 0,
                 currency: "€",
                 features: [
-                  "Téléchargez votre guide complet pour adopter une alimentation saine et performante, spécialement conçu pour accompagner en musculation",
+                  "Téléchargez votre guide complet pour adopter une alimentation saine et performante, spécialement conçu pour vous accompagnez en musculation",
                 ],
                 cta: "Télécharger",
                 ctaSubtitle: "",
