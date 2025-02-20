@@ -220,7 +220,7 @@ export const StoryCardGrid: React.FC = () => {
           alt: "Man writing a plan",
           width: 1188,
           height: 1413,
-          tailwindClass: "mt-10 md:mt-32 pb-10 h-96",
+          tailwindClass: "mt-10 md:mt-32 pb-10 h-full",
         },
         {
           img: "/images/story9.jpg",
@@ -244,7 +244,7 @@ export const StoryCardGrid: React.FC = () => {
           tailwindClass: "h-full pb-10",
         },
         {
-          img: "/images/story.jpg",
+          img: "/images/story19.jpg",
           alt: "Man writing a plan",
           width: 1188,
           height: 1413,
