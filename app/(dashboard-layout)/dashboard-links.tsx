@@ -2,6 +2,8 @@ import type { NavigationLinkGroups } from "@/features/navigation/navigation.type
 import {
   LayoutDashboard,
   Settings,
+  FilePen,
+  TextSelect,
   MonitorSmartphone,
   MessageCircleMore,
 } from "lucide-react";
