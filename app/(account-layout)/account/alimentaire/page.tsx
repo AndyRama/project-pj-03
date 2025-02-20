@@ -27,8 +27,10 @@ const AlimentairePage: React.FC = () => {
   useEffect(() => {
     if (status === 'unauthenticated') {
       router.push('/api/auth/signin');
+    } else if (session) {
+      console.log('User session:', session);
     }
-  }, [status, router]);
+  }, [status, router, session]);
 
   // Show loading state while checking authentication
   if (status === 'loading') {
@@ -45,7 +47,7 @@ const AlimentairePage: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     try {
       const response = await fetch('/api/alimentaire', {
         method: 'POST',
