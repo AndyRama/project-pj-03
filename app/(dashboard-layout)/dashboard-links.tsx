@@ -40,10 +40,10 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
     ],
   },
   {
-    title: "Maintenance",
+    title: "Audience",
     links: [
       {
-        title: "Support",
+        title: "Subscribe",
         icon: <MonitorSmartphone />,
         url: "#",
       },
