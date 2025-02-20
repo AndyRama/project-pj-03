@@ -21,7 +21,7 @@ export default async function EditProfilePage() {
   });
 
   return (
-    <div className="flex flex-col gap-4 px-4 lg:gap-8">
+    <div className="flex flex-col gap-4 p-4 lg:gap-8">
       <Card>
         <CardHeader>
           <div className="flex items-center gap-2">

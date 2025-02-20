@@ -56,7 +56,7 @@ export default async function RoutePage(props: PageParams<{}>) {
           </LayoutTitle>
         </LayoutHeader>
 
-        <LayoutContent className="content mx-auto max-w-7xl flex-wrap items-center gap-2 px-2">
+        <LayoutContent className="content mx-auto mr-4 max-w-7xl flex-wrap items-center gap-2 px-2">
           {tags.map((tag) => (
             <Link
               key={tag}

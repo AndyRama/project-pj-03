@@ -6,7 +6,7 @@ export default function InformationCards() {
   return (
     <div className="flex w-full items-center gap-4 max-lg:flex-col lg:gap-8">
       <Card className="w-full flex-1">
-        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+        <CardHeader className="flex flex-row items-center justify-between space-y-0 p-4 pb-2">
           <CardTitle className="text-sm font-medium">Total Ventes en ligne</CardTitle>
           <ReceiptEuro  className="size-4 text-muted-foreground" />
         </CardHeader>
@@ -18,7 +18,7 @@ export default function InformationCards() {
         </CardContent>
       </Card>
       <Card className="w-full flex-1">
-        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+        <CardHeader className="flex flex-row items-center justify-between space-y-0 p-4 pb-2">
           <CardTitle className="text-sm font-medium">New subscribers</CardTitle>
           <FilePen className="size-4 text-muted-foreground" />
         </CardHeader>
@@ -28,7 +28,7 @@ export default function InformationCards() {
         </CardContent>
       </Card>
       <Card className="w-full flex-1">
-        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+        <CardHeader className="flex flex-row items-center justify-between space-y-0 p-4 pb-2">
           <CardTitle className="text-sm font-medium">nombre article</CardTitle>
           <TrendingUp  className="size-4 text-muted-foreground" />
         </CardHeader>
