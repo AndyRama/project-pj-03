@@ -12,6 +12,7 @@ import type { ReactNode } from "react";
 import "./code-theme.scss";
 import "./globals.scss";
 import { Providers } from "./providers";
+import { SessionProvider } from 'next-auth/react';
 
 export const metadata: Metadata = {
   title: SiteConfig.title,
@@ -37,16 +38,18 @@ export default function RootLayout({
             GeistSans.variable,
           )}
         >
-          <Providers>
-            <NextTopLoader
-              delay={100}
-              showSpinner={false}
-              color="hsl(var(--primary))"
-            />
-            {children}
-            {modal}
-            <TailwindIndicator />
-          </Providers>
+          <SessionProvider>
+            <Providers>
+              <NextTopLoader
+                delay={100}
+                showSpinner={false}
+                color="hsl(var(--primary))"
+              />
+              {children}
+              {modal}
+              <TailwindIndicator />
+            </Providers>
+          </SessionProvider>
         </body>
       </html>
     </>

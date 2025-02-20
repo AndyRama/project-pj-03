@@ -78,7 +78,7 @@ export const FormUnsavedBar = <T extends FieldValues>(props: FormProps<T>) => {
                 >
                   Save{" "}
                   <KeyboardShortcut>
-                    <CmdOrOption /> S
+                    <CmdOrOption /> 
                   </KeyboardShortcut>
                 </LoadingButton>
               </motion.div>
