@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
-import { FaLightbulb, FaRegCalendarCheck, FaHandsHelping } from 'react-icons/fa';
-import { GiBrain } from 'react-icons/gi';
+import { FaUserEdit,FaLightbulb, FaRegCalendarCheck, FaHandsHelping } from 'react-icons/fa';
 import { BiNote } from "react-icons/bi";
 import { MdOutlineSportsKabaddi, MdOutlineFitnessCenter  } from "react-icons/md";
 
