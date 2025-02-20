@@ -162,7 +162,7 @@ export default function page() {
                 barredPrice: 0,
                 currency: "€",
                 features: [
-                  "Téléchargez votre guide complet pour adopter une alimentation saine et performante, spécialement conçu pour accompagner vos débuts en musculation",
+                  "Téléchargez votre guide complet pour adopter une alimentation saine et performante, spécialement conçu pour accompagner en musculation",
                 ],
                 cta: "Télécharger",
                 ctaSubtitle: "",
@@ -191,7 +191,7 @@ export default function page() {
                 type: "monthly",
                 id: "premium",
                 title: "Ebook 3",
-                subtitle: "esprit & mental",
+                subtitle: "compétition",
                 price: "Free",
                 barredPrice: 0,
                 currency: "€",

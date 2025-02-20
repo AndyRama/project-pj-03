@@ -4,9 +4,10 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
-import { FaLightbulb, FaUserEdit, FaRegCalendarCheck, FaChartLine, FaHandsHelping } from 'react-icons/fa';
+import { FaLightbulb, FaRegCalendarCheck, FaHandsHelping } from 'react-icons/fa';
 import { GiBrain } from 'react-icons/gi';
 import { BiNote } from "react-icons/bi";
+import { MdOutlineSportsKabaddi, MdOutlineFitnessCenter  } from "react-icons/md";
 
 interface Feature {
   icon: React.ElementType;
@@ -44,7 +45,7 @@ const features: Feature[] = [
     description2: "Pour plus de détails ou pour réserver une consultation, veuillez nous contacter via notre page de contact.",
   },
   {
-    icon: FaChartLine,
+    icon: MdOutlineSportsKabaddi,
     title: "Je débute dans le fitness, par où devrais-je commencer ?",
     description: "Pour bien débuter dans le fitness, je vous invite à suivre ces étapes :",
     bullets: [
@@ -74,7 +75,7 @@ const features: Feature[] = [
       "Pour plus d'informations ou pour réserver une séance d'évaluation, n'hésitez pas à me contacter via la page Contact du site ou par email à contact@unlcoaching.com.",
   },
   {
-    icon: GiBrain,
+    icon: MdOutlineFitnessCenter,
     title: "Comment puis-je commencer si je suis débutant dans le fitness ?",
     description: "Pour les débutants, nous recommandons de :",
     bullets: [
