@@ -99,7 +99,7 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
             <Layout>
               <LayoutHeader>
                 <LayoutTitle>
-                  Sorry, you need to be authenticated to access this resource.
+                   Désolé, vous devez être authentifié pour accéder à cette ressource.
                 </LayoutTitle>
               </LayoutHeader>
               <LayoutContent className="flex gap-4">

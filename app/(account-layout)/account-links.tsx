@@ -29,7 +29,7 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
   {
     title: "Mention légal",
     links: [
-      { url: "/legal/cvg", title: "Cgv", icon: <FileKey2 /> },
+      { url: "/account/cgv", title: "Cgv", icon: <FileKey2 /> },
       { url: "/legal/terms", title: "Terms", icon: <FileLock2 /> },
     ],
   },

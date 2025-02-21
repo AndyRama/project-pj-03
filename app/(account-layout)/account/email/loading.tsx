@@ -9,7 +9,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export default function PageLoading() {
   return (
-    <Card>
+    <Card className="p-4">
       <CardHeader>
         <CardTitle>Mail settings</CardTitle>
         <CardDescription>
