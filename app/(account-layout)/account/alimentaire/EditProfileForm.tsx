@@ -19,14 +19,14 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { createVerifyEmailAction } from "../verify-email/verify-email.action";
 import { updateProfileAction } from "./edit-profile.action";
-import type { ProfileFormType } from "./edit-profile.schema";
+import type { AlimentaireFormType } from "./edit-profile.schema";
 import { AlimentaireFormSchema } from "./edit-profile.schema";
 
-type EditProfileFormProps = {
+type AlimentaireFormProps = {
   defaultValues: User;
 };
 
-export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
+export const AlimentaireForm = ({ defaultValues }: AlimentaireFormProps) => {
   const form = useZodForm({
     schema: AlimentaireFormSchema,
     defaultValues: defaultValues,
@@ -34,7 +34,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
   const router = useRouter();
 
   const updateProfileMutation = useMutation({
-    mutationFn: async (values: ProfileFormType) => {
+    mutationFn: async (values: AlimentaireFormType) => {
       const result = await updateProfileAction(values);
 
       if (values.email !== defaultValues.email) {
