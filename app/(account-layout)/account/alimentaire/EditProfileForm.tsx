@@ -68,7 +68,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
         name="name"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Name</FormLabel>
+            <FormLabel>First name</FormLabel>
             <FormControl>
               <Input placeholder="" {...field} value={field.value ?? ""} />
             </FormControl>
@@ -83,7 +83,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
         render={({ field }) => (
           <FormItem>
             <FormLabel className="flex items-center gap-1">
-              <span>Email</span>
+              <span>Last name</span>
               {defaultValues.emailVerified ? (
                 <InlineTooltip title="Email verified. If you change your email, you will need to verify it again.">
                   <BadgeCheck size={16} />
@@ -102,7 +102,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
         name="name"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Name</FormLabel>
+            <FormLabel>Age</FormLabel>
             <FormControl>
               <Input placeholder="" {...field} value={field.value ?? ""} />
             </FormControl>
@@ -116,7 +116,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
         name="name"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Name</FormLabel>
+            <FormLabel>Size</FormLabel>
             <FormControl>
               <Input placeholder="" {...field} value={field.value ?? ""} />
             </FormControl>
@@ -130,7 +130,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
         name="name"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Name</FormLabel>
+            <FormLabel>weight</FormLabel>
             <FormControl>
               <Input placeholder="" {...field} value={field.value ?? ""} />
             </FormControl>
