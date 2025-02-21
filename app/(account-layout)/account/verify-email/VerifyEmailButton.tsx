@@ -12,11 +12,11 @@ export const VerifyEmailButton = () => {
       const result = await createVerifyEmailAction("");
 
       if (result?.serverError) {
-        toast.error(result.serverError ?? "An error occurred");
+        toast.error(result.serverError ?? "Une erreur s'est produite");
         return;
       }
 
-      toast.success("Email sent");
+      toast.success("Email a été envoyé");
     },
   });
 

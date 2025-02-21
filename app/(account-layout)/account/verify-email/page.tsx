@@ -76,11 +76,11 @@ export default async function RoutePage(props: PageParams<{}>) {
     return (
       <Card variant="error">
         <CardHeader>
-          <CardTitle>User not found</CardTitle>
+          <CardTitle>Utilisateur introuvable</CardTitle>
         </CardHeader>
         <CardFooter>
           <Link className={buttonVariants()} href="/account">
-            Account
+            Compte
           </Link>
         </CardFooter>
       </Card>
@@ -91,11 +91,11 @@ export default async function RoutePage(props: PageParams<{}>) {
     return (
       <Card>
         <CardHeader>
-          <CardTitle>Email verified.</CardTitle>
+          <CardTitle>Email verifier</CardTitle>
         </CardHeader>
         <CardFooter>
           <Link className={buttonVariants()} href="/account">
-            Account
+            Compte
           </Link>
         </CardFooter>
       </Card>

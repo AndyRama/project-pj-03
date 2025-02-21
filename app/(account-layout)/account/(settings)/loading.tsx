@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export default function PageLoading() {
   return (
-    <Card>
+    <Card className="p-4">
       <CardHeader>
         <CardTitle>Edit your profile</CardTitle>
       </CardHeader>

@@ -1,11 +1,10 @@
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Layout,
   LayoutContent,
   LayoutHeader,
   LayoutTitle,
-  LayoutActions,
 } from "@/features/page/layout";
 import type { PageParams } from "@/types/next";
 import Link from "next/link";
@@ -120,13 +119,6 @@ export default async function RoutePage(props: PageParams<{}>) {
           </Card>
         </div>
       </LayoutContent>
-      <LayoutActions className="flex gap-6">
-        <Link href="https://project-pj-03.vercel.app/dashboard" target="_blank" passHref>
-          <Button variant="default" size="sm">
-            Dashboard Unlcoaching
-          </Button>
-        </Link>
-      </LayoutActions>
     </Layout>
   );
 }
