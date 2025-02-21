@@ -2,7 +2,6 @@ import type { NavigationLinkGroups } from "@/features/navigation/navigation.type
 import {
   LayoutDashboard,
   Settings,
-  FilePen,
   TextSelect,
   MonitorSmartphone,
   MessageCircleMore,
@@ -32,11 +31,11 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         icon: <TextSelect />,
         url: "/alimentaire",
       },
-      {
-        title: "Créer un cour",
-        icon: <FilePen />,
-        url: "/courses",
-      },
+      // {
+      //   title: "Créer un cour",
+      //   icon: <FilePen />,
+      //   url: "/courses",
+      // },
     ],
   },
   {
