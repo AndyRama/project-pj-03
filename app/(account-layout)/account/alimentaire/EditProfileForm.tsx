@@ -79,11 +79,25 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
       />
       <FormField
         control={form.control}
+        name="name"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Last name</FormLabel>
+            <FormControl>
+              <Input placeholder="" {...field} value={field.value ?? ""} />
+            </FormControl>
+
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <FormField
+        control={form.control}
         name="email"
         render={({ field }) => (
           <FormItem>
             <FormLabel className="flex items-center gap-1">
-              <span>Last name</span>
+              <span>Email</span>
               {defaultValues.emailVerified ? (
                 <InlineTooltip title="Email verified. If you change your email, you will need to verify it again.">
                   <BadgeCheck size={16} />
@@ -104,7 +118,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
           <FormItem>
             <FormLabel>Age</FormLabel>
             <FormControl>
-              <Input placeholder="" {...field} value={field.value ?? ""} />
+              <Input placeholder="" {...field} value={field.value ?? "34"} />
             </FormControl>
 
             <FormMessage />
@@ -118,7 +132,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
           <FormItem>
             <FormLabel>Size</FormLabel>
             <FormControl>
-              <Input placeholder="" {...field} value={field.value ?? ""} />
+              <Input placeholder="" {...field} value={field.value ?? "1.60"} />
             </FormControl>
 
             <FormMessage />
@@ -132,7 +146,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
           <FormItem>
             <FormLabel>weight</FormLabel>
             <FormControl>
-              <Input placeholder="" {...field} value={field.value ?? ""} />
+              <Input placeholder="" {...field} value={field.value ?? "59"} />
             </FormControl>
 
             <FormMessage />
