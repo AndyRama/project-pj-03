@@ -79,20 +79,6 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
       />
       <FormField
         control={form.control}
-        name="name"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Last name</FormLabel>
-            <FormControl>
-              <Input placeholder="" {...field} value={field.value ?? ""} />
-            </FormControl>
-
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-      <FormField
-        control={form.control}
         name="email"
         render={({ field }) => (
           <FormItem>
@@ -113,7 +99,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
       />
        <FormField
         control={form.control}
-        name="name"
+        name="age"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Age</FormLabel>
@@ -127,7 +113,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
       />
        <FormField
         control={form.control}
-        name="name"
+        name="size"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Size</FormLabel>
@@ -141,7 +127,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
       />
        <FormField
         control={form.control}
-        name="name"
+        name="weight"
         render={({ field }) => (
           <FormItem>
             <FormLabel>weight</FormLabel>
