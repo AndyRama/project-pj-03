@@ -7,7 +7,7 @@ import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
 
 const TermsPage = () => {
   return (
-    <SectionLayout size="lg" variant="default" className="mx-auto max-w-7xl p-4">
+    <SectionLayout size="lg" variant="default" className="mx-auto max-w-7xl">
       {/* Header */}
       <header>
         <Typography variant="h1" className="mb-2 text-3xl font-bold">
@@ -37,7 +37,7 @@ const TermsPage = () => {
           <li>
             <Typography variant="p">
               Adresse mail : {' '}
-              <Link href="mailto:contact@unlcoaching.com" className="text-blue-500 hover:underline">
+              <Link href="mailto:contact@unlcoaching.com" className="text-orange-500 hover:underline">
                 contact@unlcoaching.com
               </Link>
             </Typography>
@@ -182,7 +182,7 @@ const TermsPage = () => {
         </Typography>
         <Typography variant="p">
           Pour toute question, veuillez nous contacter à l'adresse suivante :{' '}
-          <Link href="mailto:contact@unlcoaching.com" className="text-blue-500 hover:underline">
+          <Link href="mailto:contact@unlcoaching.com" className="text-orange-500 hover:underline">
             contact@unlcoaching.fr
           </Link>
         </Typography>

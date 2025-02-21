@@ -7,7 +7,7 @@ import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
 
 const CvgPage = () => {
   return (
-    <SectionLayout size="lg" variant="default" className="mx-auto max-w-7xl p-4">
+    <SectionLayout size="lg" variant="default" className="mx-auto max-w-7xl">
       {/* Header */}
       <header>
         <Typography variant="h1" className="mb-2 text-3xl font-bold">
@@ -39,7 +39,7 @@ const CvgPage = () => {
               Par email à l'adresse :{' '}
               <Link
                 href="mailto:contact@unlcoaching.com"
-                className="text-blue-500 hover:underline"
+                className="text-orange-500 hover:underline"
               >
                 contact@unlcoaching.com
               </Link>
@@ -73,7 +73,7 @@ const CvgPage = () => {
                 href="https://unlcoaching.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:underline"
+                className="text-orange-500 hover:underline"
               >
                 https://unlcoaching.com
               </Link>
@@ -639,7 +639,7 @@ const CvgPage = () => {
           </Typography>
           <Typography variant="p">
             En cas de difficulté dans l'application du présent contrat, le Client consommateur résidant en Europe a la possibilité, avant toute action en justice, de solliciter le recours d'un médiateur de la consommation identifiable sur le site{' '}
-            <Link href="https://www.economie.gouv.fr/mediation-conso" className="text-blue-500 hover:underline">
+            <Link href="https://www.economie.gouv.fr/mediation-conso" className="text-orange-500 hover:underline">
               https://www.economie.gouv.fr/mediation-conso
             </Link>
           </Typography>
