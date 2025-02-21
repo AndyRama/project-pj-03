@@ -1,7 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { AuthButton } from "@/features/auth/AuthButton";
-import { Layout, LayoutHeader, } from "@/features/page/layout";
+import { Layout, } from "@/features/page/layout";
 import { SiteConfig } from "@/site-config";
 import Image from "next/image";
 import Link from "next/link";
@@ -46,11 +46,9 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
       <Layout className="flex flex-row items-start gap-4">
         {user? (
           <DesktopVerticalMenu links={ACCOUNT_LINKS} className="max-lg:hidden" />
-        ): null}
-        <Separator className="max-lg:hidden" orientation="vertical" />
-        <LayoutHeader>
+        ): <Separator className="max-lg:hidden" orientation="vertical" /> }
+        <Separator className="max-lg:hidden" orientation="vertical" /> 
         <main className="flex-1 px-4">{props.children}</main>
-        </LayoutHeader>
       </Layout>
     </div>
   );
