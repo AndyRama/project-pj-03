@@ -1,13 +1,54 @@
-import React from 'react';
 
-const AlimentairePlanPage: React.FC = () => {
+import React from 'react';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { requiredAuth } from "@/lib/auth/helper";
+import { displayName } from "@/lib/format/displayName";
+import { prisma } from "@/lib/prisma";
+import { EditPasswordForm } from "./EditPasswordForm";
+import { EditProfileForm } from "./EditProfileForm";
+
+export default async function EditPlanAlimentairePage() {
+  const user = await requiredAuth();
+
+  const hasPassword = await prisma.user.count({
+    where: {
+      id: user.id,
+      passwordHash: {
+        not: null,
+      },
+    },
+  });
+
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="mb-4 text-2xl font-bold">Create plan alimentaire</h1>
-      <p>Welcome to the Alimentaire page. Here you can create and manage your plan alimentaire.</p>
-      {/* Add more components or functionality for course creation here */}
+    <div className="flex flex-col gap-4 p-4 lg:gap-8">
+      <Card className="p-4">
+        <CardHeader>
+          <div className="flex items-center gap-2">
+            <Avatar className="size-16">
+              <AvatarFallback>{user.email.slice(0, 2)}</AvatarFallback>
+              {user.image ? <AvatarImage src={user.image} /> : null}
+            </Avatar>
+
+            <CardTitle>{displayName(user)}</CardTitle>
+          </div>
+        </CardHeader>
+        <CardContent>
+          <EditProfileForm defaultValues={user} />
+        </CardContent>
+      </Card>
+      {hasPassword ? (
+        <>
+          <Card>
+            <CardHeader>
+              <CardTitle>Change Password</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <EditPasswordForm />
+            </CardContent>
+          </Card>
+        </>
+      ) : null}
     </div>
   );
-};
-
-export default AlimentairePlanPage;
+}
