@@ -13,14 +13,14 @@ export default function RouteError({ error }: ErrorParams) {
   }, [error]);
 
   return (
-    <Card>
+    <Card className="p-4">
       <CardHeader>
         <CardTitle>
-          You need to be authenticated to access this resource.
+          Vous devez être authentifié pour accéder à cette page.
         </CardTitle>
       </CardHeader>
       <CardFooter>
-        <SignInButton variant="invert" size="lg" />
+        <SignInButton variant="invert" size="md" />
       </CardFooter>
     </Card>
   );

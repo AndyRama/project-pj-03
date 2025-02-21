@@ -5,7 +5,7 @@ import { SectionLayout } from '@/features/landing/SectionLayout';
 
 const CvgPage = () => {
   return (
-    <SectionLayout size="lg" variant="default" className="mx-auto max-w-7xl p-6">
+    <SectionLayout size="lg" variant="default" className="mx-auto max-w-7xl p-4">
       {/* Header */}
       <header>
         <Typography variant="h1" className="mb-2 text-3xl font-bold">
