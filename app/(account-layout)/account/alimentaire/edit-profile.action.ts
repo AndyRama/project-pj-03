@@ -10,11 +10,11 @@ import { env } from "@/lib/env";
 import { prisma } from "@/lib/prisma";
 import {
   EditPasswordFormSchema,
-  ProfileFormSchema,
+  AlimentaireFormSchema,
 } from "./edit-profile.schema";
 
 export const updateProfileAction = authAction
-  .schema(ProfileFormSchema)
+  .schema(AlimentaireFormSchema)
   .action(async ({ parsedInput: input, ctx }) => {
     const previousEmail = ctx.user.email;
 
@@ -26,6 +26,9 @@ export const updateProfileAction = authAction
         name: input.name,
         email: input.email,
         emailVerified: previousEmail === input.email ? undefined : null,
+        age: input.age,
+        size: input.size,
+        weight: input.weight,
       },
     });
 
