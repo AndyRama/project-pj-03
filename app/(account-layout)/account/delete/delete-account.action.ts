@@ -40,7 +40,7 @@ export const deleteAccountAction = authAction.action(async ({ ctx }) => {
 
   await sendEmail({
     from: SiteConfig.email.from,
-    subject: "Your account has been deleted",
+    subject: "Ton compte à bien été supprimé",
     to: user.email,
     react: DeleteAccountEmail({
       email: user.email,

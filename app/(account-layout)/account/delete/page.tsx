@@ -14,13 +14,13 @@ import { deleteAccountAction } from "./delete-account.action";
 
 export default function DeleteProfilePage() {
   return (
-    <Card>
+    <Card className="p-4">
       <CardHeader>
-        <CardTitle>Delete your profile</CardTitle>
+        <CardTitle>Supression du compte</CardTitle>
         <CardDescription>
-          Deleting your account means that all your personal data will be
-          permanently erased and your ongoing subscription will be terminated.
-          Please be aware that this action is irreversible.
+           La suppression de votre compte signifie que toutes vos données personnelles
+           seront définitivement effacé et votre abonnement en cours sera résilié.
+          Attention, cette action est irréversible.Un email sera envoyé . 
         </CardDescription>
       </CardHeader>
       <CardContent>

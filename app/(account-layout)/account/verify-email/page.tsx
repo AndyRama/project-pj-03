@@ -15,7 +15,7 @@ export default async function RoutePage(props: PageParams<{}>) {
 
   if (success) {
     return (
-      <Card>
+      <Card className="p-4">
         <CardHeader>
           <CardTitle>Email verified</CardTitle>
         </CardHeader>
@@ -30,7 +30,7 @@ export default async function RoutePage(props: PageParams<{}>) {
 
   if (!token) {
     return (
-      <Card variant="error">
+      <Card className="p-4" variant="error">
         <CardHeader>
           <CardTitle>Invalid Token</CardTitle>
         </CardHeader>
@@ -53,7 +53,7 @@ export default async function RoutePage(props: PageParams<{}>) {
 
   if (!email) {
     return (
-      <Card variant="error">
+      <Card className="p-4" variant="error">
         <CardHeader>
           <CardTitle>Invalid token</CardTitle>
         </CardHeader>
@@ -74,7 +74,7 @@ export default async function RoutePage(props: PageParams<{}>) {
 
   if (!user) {
     return (
-      <Card variant="error">
+      <Card className="p-4" variant="error">
         <CardHeader>
           <CardTitle>Utilisateur introuvable</CardTitle>
         </CardHeader>
@@ -89,7 +89,7 @@ export default async function RoutePage(props: PageParams<{}>) {
 
   if (user.emailVerified) {
     return (
-      <Card>
+      <Card className="p-4">
         <CardHeader>
           <CardTitle>Email verifier</CardTitle>
         </CardHeader>

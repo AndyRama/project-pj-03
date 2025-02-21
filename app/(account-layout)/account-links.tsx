@@ -1,9 +1,9 @@
 import type { NavigationLinkGroups } from "@/features/navigation/navigation.type";
-import { AlertCircle, Coins, Mail, User2, FileKey2, FileLock2,Carrot } from "lucide-react";
+import { AlertCircle, Coins, Mail, User2, FileKey2, FileLock2,Carrot,ListTodo,Compass } from "lucide-react";
 
 export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
   {
-    title: "PERSONAL INFORMATION",
+    title: "Information Personnelle",
     links: [
       { url: "/account", title: "Profile", icon: <User2 /> },
       {
@@ -15,21 +15,21 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
     ],
   },
   {
-    title: "MES SERVICES",
+    title: "Mes services",
     links: [
       { url: "/account/alimentaire", title: "Plan alimentaire", icon: <Carrot  /> },
-      // { url: "/account/courses", title: "Browse", icon: <Compass /> },
-      // { url: "/account/leadboard", title: "LeadBoard", icon: <ListTodo /> },
+      { url: "/account/courses", title: "Browse", icon: <Compass /> },
+      { url: "/account/leadboard", title: "LeadBoard", icon: <ListTodo /> },
     ],
   },
   {
-    title: "EMAIL SETTINGS",
+    title: "Email paramètre",
     links: [{ url: "/account/email", title: "Settings", icon: <Mail /> }],
   },
   {
-    title: "Condition de ventes",
+    title: "Mention légal",
     links: [
-      { url: "/legal/cvg", title: "Cvg", icon: <FileKey2 /> },
+      { url: "/legal/cvg", title: "Cgv", icon: <FileKey2 /> },
       { url: "/legal/terms", title: "Terms", icon: <FileLock2 /> },
     ],
   },

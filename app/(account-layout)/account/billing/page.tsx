@@ -20,11 +20,11 @@ export default async function DeleteProfilePage() {
 
   if (!user.stripeCustomerId) {
     return (
-      <Card variant="error">
+      <Card className="p-4" variant="error">
         <CardHeader>
-          <CardTitle>You account is not linked to a billing account</CardTitle>
+          <CardTitle>Votre compte n'est pas lié à un compte de facturation</CardTitle>
           <CardDescription>
-            You can't do nothing. Please contact the support.
+            Vous ne pouvez rien faire. Veuillez contacter le support.
           </CardDescription>
         </CardHeader>
         <CardFooter>
@@ -42,7 +42,7 @@ export default async function DeleteProfilePage() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Billing information</CardTitle>
+        <CardTitle>Facturation information</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         <Typography>
@@ -52,7 +52,7 @@ export default async function DeleteProfilePage() {
           className={cn(buttonVariants({ variant: "outline" }), "w-fit")}
           href={stripeSession.url}
         >
-          Update billing information
+          Actualiser les informations 
         </Link>
       </CardContent>
     </Card>
