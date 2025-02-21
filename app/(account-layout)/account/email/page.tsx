@@ -33,7 +33,7 @@ export default async function MailProfilePage() {
   }
 
   return (
-    <Card>
+    <Card className="p-4">
       <CardHeader>
         <CardTitle>Mail settings</CardTitle>
         <CardDescription>
