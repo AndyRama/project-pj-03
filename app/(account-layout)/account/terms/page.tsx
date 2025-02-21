@@ -7,6 +7,7 @@ import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
 
 const TermsPage = () => {
   return (
+    <>
     <SectionLayout size="lg" variant="default" className="mx-auto max-w-7xl">
       {/* Header */}
       <header>
@@ -187,9 +188,10 @@ const TermsPage = () => {
           </Link>
         </Typography>
       </section>
-      <Footer />
-      <FloatingLegalFooter />
     </SectionLayout>
+    <Footer />
+    <FloatingLegalFooter />
+    </>
   );
 };
 
