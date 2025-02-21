@@ -30,7 +30,7 @@ export default async function RoutePage(props: PageParams<{}>) {
         <SubscribersChart />
         <div className="flex flex-wrap items-start gap-4">
           <Card className="flex-1">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 p-4 pb-2">
               <CardTitle className="text-lg font-light">Audience</CardTitle>
               <TrendingUp className="size-4 text-muted-foreground" />
             </CardHeader>
@@ -48,7 +48,7 @@ export default async function RoutePage(props: PageParams<{}>) {
             </CardContent>
           </Card>
           <Card className="flex-1">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 p-4 pb-2">
               <CardTitle className="text-lg font-light">Paiement</CardTitle>
               <ReceiptEuro className="size-4 text-muted-foreground" />
             </CardHeader>
@@ -63,7 +63,7 @@ export default async function RoutePage(props: PageParams<{}>) {
             </CardContent>
           </Card>
           <Card className="flex-1">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 p-4 pb-2">
               <CardTitle className="text-lg font-light">Hebergement</CardTitle>
               <Building2 className="size-4 text-muted-foreground" />
             </CardHeader>
@@ -81,7 +81,7 @@ export default async function RoutePage(props: PageParams<{}>) {
             </CardContent>
           </Card>
           <Card className="flex-1">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 p-4 pb-2">
               <CardTitle className="text-lg font-light">Emailling</CardTitle>
               <Mails className="size-4 text-muted-foreground" />
             </CardHeader>
@@ -99,7 +99,7 @@ export default async function RoutePage(props: PageParams<{}>) {
             </CardContent>
           </Card>
           <Card className="flex-1">
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 p-4 pb-2">
               <CardTitle className="text-lg font-light">
                 Base de donnée
               </CardTitle>
