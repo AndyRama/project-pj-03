@@ -31,6 +31,13 @@ const footerContent = {
         { href: '/prestations/#E-Books', label: 'E-Books'},
       ],
     },
+    {
+      heading: 'Compte',
+      links: [
+        { href: '/account', label: 'User' },
+        { href: '/dashboard', label: 'Admin'},
+      ],
+    },
   ],
 }
 
@@ -57,7 +64,7 @@ export const Footer = () => {
             </div>           
           </div>
 
-          <div className=" max-sm-mx-auto justify-beteween grid grid-cols-3 gap-4 md:grid-cols-4">
+          <div className=" max-sm-mx-auto justify-beteween grid grid-cols-2 gap-4 md:grid-cols-4">
             {footerContent.footerLinks.map((item) => (
               <div key={item.heading}>
                 <Typography variant="large" className="mb-3 text-gray-400">{item.heading}</Typography>
