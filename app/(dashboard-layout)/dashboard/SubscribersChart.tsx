@@ -33,7 +33,7 @@ import {
 
 export const SubscribersChart = () => {
   return (
-    <Card>
+    <Card className="p-4">
       <CardHeader>
         <CardTitle>Croissance Audience</CardTitle>
       </CardHeader>

@@ -57,7 +57,7 @@ export const SettingsNotificationForm = ({
       onSubmit={async (v) => mutation.mutateAsync(v)}
       className="flex w-full flex-col gap-6 lg:gap-8"
     >
-      <Card>
+      <Card className="p-4">
         <CardHeader>
           <CardTitle>Notifications</CardTitle>
           <CardDescription>

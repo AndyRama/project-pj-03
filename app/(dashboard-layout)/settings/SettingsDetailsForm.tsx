@@ -56,7 +56,7 @@ export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
       onSubmit={async (v) => mutation.mutateAsync(v)}
       className="flex w-full flex-col gap-6 lg:gap-8"
     >
-      <Card>
+      <Card className="p-4">
         <CardHeader>
           <CardTitle>Name</CardTitle>
           <CardDescription>
