@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
 import { AuthButton } from "@/features/auth/AuthButton";
 import { Layout } from "@/features/page/layout";
 import { SiteConfig } from "@/site-config";
@@ -9,6 +10,8 @@ import { DesktopVerticalMenu } from "../../src/features/navigation/DesktopVertic
 import { MobileDropdownMenu } from "../../src/features/navigation/MobileDropdownMenu";
 import { ACCOUNT_LINKS } from "./account-links";
 import { auth } from "@/lib/auth/helper";
+import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
+
 
 export const AccountNavigation = async (props: PropsWithChildren) => {
   const user = await auth();
@@ -16,7 +19,7 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
   return (
     <div className="flex min-h-full flex-col">
       <header className="w-full border-b bg-background max-lg:sticky max-lg:top-0 max-lg:z-40">
-        <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+        <div className="flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <div className="flex items-center gap-2">
             <Image
               src={SiteConfig.appIcon}
@@ -30,6 +33,11 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
           </div>
 
           <nav className="flex flex-1 items-center justify-end space-x-1">
+            <ContactSupportDialog>
+              <Button variant="default" size="sm">
+                Support
+              </Button>
+            </ContactSupportDialog>
             <AuthButton />
             <MobileDropdownMenu className="lg:hidden" links={ACCOUNT_LINKS} />
           </nav>

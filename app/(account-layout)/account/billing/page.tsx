@@ -40,7 +40,7 @@ export default async function DeleteProfilePage() {
   });
 
   return (
-    <Card>
+    <Card className="p-4">
       <CardHeader>
         <CardTitle>Facturation information</CardTitle>
       </CardHeader>

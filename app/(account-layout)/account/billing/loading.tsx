@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export default function DeleteProfilePage() {
   return (
-    <Card>
+    <Card className="p-4">
       <CardHeader>
         <CardTitle>Billing information</CardTitle>
       </CardHeader>
