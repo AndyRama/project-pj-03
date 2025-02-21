@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InstructorPage: React.FC = () => {
+const PlanPage: React.FC = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="mb-4 text-2xl font-bold">Create plan alimentaire</h1>
@@ -10,4 +10,4 @@ const InstructorPage: React.FC = () => {
   );
 };
 
-export default InstructorPage;
+export default PlanPage;
