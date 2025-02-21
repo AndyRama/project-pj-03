@@ -32,12 +32,14 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
             </Link>
           </div>
 
-          <nav className="flex flex-1 items-center justify-end space-x-1">
+          <nav className="flex items-center justify-end space-x-1 max-lg:hidden">
             <ContactSupportDialog>
               <Button variant="default" size="sm">
                 Support
               </Button>
             </ContactSupportDialog>
+          </nav>
+          <nav className="flex flex-1 items-center justify-end space-x-1">
             <AuthButton />
             <MobileDropdownMenu className="lg:hidden" links={ACCOUNT_LINKS} />
           </nav>
