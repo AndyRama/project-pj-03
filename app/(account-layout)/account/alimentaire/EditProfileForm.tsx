@@ -20,7 +20,7 @@ import { toast } from "sonner";
 import { createVerifyEmailAction } from "../verify-email/verify-email.action";
 import { updateProfileAction } from "./edit-profile.action";
 import type { ProfileFormType } from "./edit-profile.schema";
-import { ProfileFormSchema } from "./edit-profile.schema";
+import { AlimentaireFormSchema } from "./edit-profile.schema";
 
 type EditProfileFormProps = {
   defaultValues: User;
@@ -28,7 +28,7 @@ type EditProfileFormProps = {
 
 export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
   const form = useZodForm({
-    schema: ProfileFormSchema,
+    schema: AlimentaireFormSchema,
     defaultValues: defaultValues,
   });
   const router = useRouter();
@@ -104,7 +104,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
           <FormItem>
             <FormLabel>Age</FormLabel>
             <FormControl>
-              <Input placeholder="" {...field} value={field.value ?? "34"} />
+              <Input placeholder="" {...field} value={field.value ?? ""} />
             </FormControl>
 
             <FormMessage />
@@ -118,7 +118,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
           <FormItem>
             <FormLabel>Size</FormLabel>
             <FormControl>
-              <Input placeholder="" {...field} value={field.value ?? "1.60"} />
+              <Input placeholder="" {...field} value={field.value ?? ""} />
             </FormControl>
 
             <FormMessage />
@@ -132,7 +132,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
           <FormItem>
             <FormLabel>weight</FormLabel>
             <FormControl>
-              <Input placeholder="" {...field} value={field.value ?? "59"} />
+              <Input placeholder="" {...field} value={field.value ?? ""} />
             </FormControl>
 
             <FormMessage />
