@@ -3,9 +3,7 @@ import {
   LayoutDashboard,
   Settings,
   TextSelect,
-  MonitorSmartphone,
-  MessageCircleMore,
-} from "lucide-react";
+  } from "lucide-react";
 
 export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
   {
@@ -38,19 +36,19 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
       // },
     ],
   },
-  {
-    title: "Audience",
-    links: [
-      {
-        title: "Subscribe",
-        icon: <MonitorSmartphone />,
-        url: "#",
-      },
-      {
-        title: "FeedBack",
-        icon: <MessageCircleMore />,
-        url: "#",
-      },
-    ],
-  },
+  // {
+  //   title: "Audience",
+  //   links: [
+  //     {
+  //       title: "Subscribe",
+  //       icon: <MonitorSmartphone />,
+  //       url: "#",
+  //     },
+  //     {
+  //       title: "FeedBack",
+  //       icon: <MessageCircleMore />,
+  //       url: "#",
+  //     },
+  //   ],
+  // },
 ];
