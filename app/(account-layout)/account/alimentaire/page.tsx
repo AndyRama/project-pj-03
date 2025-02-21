@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,9 +6,16 @@ import { displayName } from "@/lib/format/displayName";
 import { prisma } from "@/lib/prisma";
 import { EditPasswordForm } from "./EditPasswordForm";
 import { EditProfileForm } from "./EditProfileForm";
+import { EditAlimentaireForm } from "./EditAlimentaireForm";
 
 export default async function EditPlanAlimentairePage() {
   const user = await requiredAuth();
+
+  const alimentaire = await prisma.alimentaire.findFirst({
+    where: {
+      userId: user.id,
+    },
+  });
 
   const hasPassword = await prisma.user.count({
     where: {
@@ -22,6 +28,14 @@ export default async function EditPlanAlimentairePage() {
 
   return (
     <div className="flex flex-col gap-4 p-4 lg:gap-8">
+      <Card className="p-4">
+        <CardHeader>
+          <CardTitle>Plan Alimentaire Information</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <EditAlimentaireForm defaultValues={alimentaire ?? undefined} />
+        </CardContent>
+      </Card>
       <Card className="p-4">
         <CardHeader>
           <div className="flex items-center gap-2">
