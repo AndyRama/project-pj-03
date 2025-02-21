@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { Typography } from "@/components/ui/typography";
 import { SectionLayout } from '@/features/landing/SectionLayout';
+import { Footer } from "@/features/layout/Footer";
+import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
 
 const CvgPage = () => {
   return (
@@ -649,6 +651,8 @@ const CvgPage = () => {
             EN CAS DE LITIGE SURVENANT ENTRE UN CLIENT PROFESSIONNEL ET LA SOCIÉTÉ, IL EST ATTRIBUÉ COMPÉTENCE EXCLUSIVE AUX TRIBUNAUX DANS LE RESSORT DE LA VILLE DU SIÈGE DE LA SOCIÉTÉ.
           </Typography>
         </div>
+       <Footer />
+       <FloatingLegalFooter />
       </section>
     </SectionLayout>
   );

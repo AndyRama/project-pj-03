@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { Typography } from "@/components/ui/typography";
 import { SectionLayout } from '@/features/landing/SectionLayout';
+import { Footer } from "@/features/layout/Footer";
+import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
 
 const TermsPage = () => {
   return (
@@ -185,6 +187,8 @@ const TermsPage = () => {
           </Link>
         </Typography>
       </section>
+      <Footer />
+      <FloatingLegalFooter />
     </SectionLayout>
   );
 };
