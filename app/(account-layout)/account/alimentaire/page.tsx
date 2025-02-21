@@ -6,7 +6,7 @@ import { requiredAuth } from "@/lib/auth/helper";
 import { displayName } from "@/lib/format/displayName";
 import { prisma } from "@/lib/prisma";
 import { EditPasswordForm } from "./EditPasswordForm";
-import { EditProfileForm } from "./EditProfileForm";
+import { AlimentaireForm } from "./AlimentaireForm";
 
 export default async function EditPlanAlimentairePage() {
   const user = await requiredAuth();
@@ -34,7 +34,7 @@ export default async function EditPlanAlimentairePage() {
           </div>
         </CardHeader>
         <CardContent>
-          <EditProfileForm defaultValues={user} />
+          <AlimentaireForm defaultValues={user} />
         </CardContent>
       </Card>
       {hasPassword ? (
