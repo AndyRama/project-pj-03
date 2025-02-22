@@ -4,7 +4,7 @@ import { LogoSvg } from "@/components/svg/Logo";
 import { SiteConfig } from "@/site-config";
 import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 import { useEffect } from "react";
-// import { AuthButtonClient } from "../auth/AuthButtonClient";
+import { AuthButtonClient } from "../auth/AuthButtonClient";
 import type { PropsWithChildren } from "react";
 // import { ThemeToggle } from "../theme/ThemeToggle";
 import { Sheet, SheetTrigger, SheetContent } from "../../components/ui/sheet";
@@ -13,7 +13,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 
-// import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
+import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
 
 function useBoundedScroll(threshold: number) {
   const { scrollY } = useScroll();
@@ -129,7 +129,6 @@ export function HeaderBase({ children }: PropsWithChildren) {
         </div>
 
         <div className="z-20 flex items-center gap-2 px-4 lg:hidden">
-          {/* <ThemeToggle /> */}
           <Sheet>
             <SheetTrigger>
               <Menu className="size-8" />
@@ -153,7 +152,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
                 </div>
                 <hr />
                 <div className="flex flex-row items-center justify-around">
-                  {/* <AuthButtonClient /> */}
+                  <AuthButtonClient />
                   <Typography
                     variant="h3"
                     className="text-left text-lg !leading-tight"
@@ -189,11 +188,11 @@ export function HeaderBase({ children }: PropsWithChildren) {
               </Link>
               <hr />
 
-              {/* <ContactSupportDialog>
+              <ContactSupportDialog>
                 <Button variant="outline" size="md">
                   Support
                 </Button>
-              </ContactSupportDialog> */}
+              </ContactSupportDialog>
             </SheetContent>
           </Sheet>
         </div>

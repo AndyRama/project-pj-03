@@ -39,16 +39,26 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         icon: <FilePen />,
         url: "/courses",
       },
+      {
+        title: "Créer un post",
+        icon: <FilePen />,
+        url: "/posts",
+      },
     ],
   },
   {
-    title: "Audience",
+    title: "Utilisateurs",
     links: [
       {
         title: "User",
         icon: <User2 />,
         url: "/users",
       },
+    ]
+  },
+  {
+    title: "Audience",
+    links: [
       {
         title: "Subscribe",
         icon: <MonitorSmartphone />,

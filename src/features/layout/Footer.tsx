@@ -17,18 +17,11 @@ const footerContent = {
       ],
     },
     {
-      heading: 'Pack',
-      links: [
-        { href: '/prestations/#pack', label: 'Débutant' },
-        { href: '/prestations/#pack', label: 'Intermédiaire' },
-        { href: '/prestations/#pack', label: 'Confirmé' },
-      ],
-    },
-    {
       heading: 'Ressources',
       links: [
         { href: '/posts', label: 'Blog', badge: 'Nouveau' },
         { href: '/prestations/#E-Books', label: 'E-Books'},
+        { href: '/prestations/#pack', label: 'Packs' },
       ],
     },
     {
