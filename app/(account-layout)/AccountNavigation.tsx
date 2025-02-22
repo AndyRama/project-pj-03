@@ -1,6 +1,5 @@
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { AuthButton } from "@/features/auth/AuthButton";
 import { Layout, } from "@/features/page/layout";
 import { SiteConfig } from "@/site-config";
 import Image from "next/image";
@@ -37,7 +36,6 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
                 Support
               </Button>
             </ContactSupportDialog>
-            <AuthButton />
             <MobileDropdownMenu className="lg:hidden" links={ACCOUNT_LINKS} />
           </nav>
         </div>

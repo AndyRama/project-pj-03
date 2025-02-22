@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { AuthButton } from "@/features/auth/AuthButton";
 import { SignInButton } from "@/features/auth/SignInButton";
 import { UserDropdown } from "@/features/auth/UserDropdown";
-import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
 import {
   Layout,
   LayoutContent,
