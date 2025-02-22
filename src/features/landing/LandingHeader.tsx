@@ -65,6 +65,7 @@ export function LandingHeader({ children }: PropsWithChildren) {
     { path: "/contact", label: "Contact" },
     { path: "/prestations", label: "Prestations" },
     { path: "/team", label: "Team" },
+    { path: "/account", label: "Compte" },
   ];
 
   return (
