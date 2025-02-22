@@ -5,6 +5,8 @@ import { SignInButton } from "@/features/auth/SignInButton";
 import { logger } from "@/lib/logger";
 import type { ErrorParams } from "@/types/next";
 import { useEffect } from "react";
+import { AuthButton } from "@/features/auth/AuthButton";
+
 
 export default function RouteError({ error }: ErrorParams) {
   useEffect(() => {
