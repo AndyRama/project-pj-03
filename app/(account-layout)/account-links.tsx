@@ -19,16 +19,13 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
     links: [
       { url: "/account/alimentaire", title: "Plan alimentaire", icon: <Carrot  /> },
       // { url: "/account/courses", title: "Browse", icon: <Compass /> },
-      { url: "/account/leadboard", title: "LeadBoard", icon: <ListTodo /> },
+      // { url: "/account/leadboard", title: "LeadBoard", icon: <ListTodo /> },
     ],
   },
   {
-    title: "Email paramètre",
-    links: [{ url: "/account/email", title: "Settings", icon: <Mail /> }],
-  },
-  {
-    title: "Mention légal",
+    title: "Configuration",
     links: [
+      { url: "/account/email", title: "Paramètres", icon: <Mail /> },
       { url: "/account/cgv", title: "Cgv", icon: <FileKey2 /> },
       { url: "/account/terms", title: "Terms", icon: <FileLock2 /> },
     ],
