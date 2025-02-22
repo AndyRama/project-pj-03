@@ -83,7 +83,7 @@ export const AlimentaireForm = ({ defaultValues }: AlimentaireFormProps) => {
         render={({ field }) => (
           <FormItem>
             <FormLabel className="flex items-center gap-1">
-              <span>Email</span>
+              <span>Last name</span>
               {defaultValues.emailVerified ? (
                 <InlineTooltip title="Email verified. If you change your email, you will need to verify it again.">
                   <BadgeCheck size={16} />
