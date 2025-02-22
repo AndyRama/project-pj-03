@@ -31,7 +31,7 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
               {SiteConfig.title}
             </Link>
           </div>
-          <nav className="hidden items-center justify-end space-x-1 md:flex md:flex-1">
+          <nav className="flex flex-1 items-center justify-end space-x-1">
             <ContactSupportDialog>
               <Button variant="default" size="sm" className="mr-4">
                 Support

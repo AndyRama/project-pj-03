@@ -23,11 +23,6 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         icon: <Settings />,
         url: "/settings",
       },
-      {
-        title: "Compte",
-        icon: <Settings />,
-        url: "/account",
-      },
     ],
   },
   {
@@ -54,7 +49,12 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
     title: "Utilisateurs",
     links: [
       {
-        title: "User",
+        title: "Mon compte",
+        icon: <Settings />,
+        url: "/account",
+      },
+      {
+        title: "Utilisateurs",
         icon: <User2 />,
         url: "/users",
       },
