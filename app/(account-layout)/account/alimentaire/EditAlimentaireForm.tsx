@@ -12,9 +12,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { SubmitButton } from "@/features/form/SubmitButton";
 import { toast } from "sonner";
-import { editPasswordAction } from "./edit-profile.action";
-import type { EditPasswordFormType } from "./edit-profile.schema";
-import { EditPasswordFormSchema } from "./edit-profile.schema";
+import { editPasswordAction } from "./edit-alimentaire.action";
+import type { EditPasswordFormType } from "./edit-alimentaire.schema";
+import { EditPasswordFormSchema } from "./edit-alimentaire.schema";
 
 export const EditPasswordForm = () => {
   const form = useZodForm({

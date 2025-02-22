@@ -11,7 +11,7 @@ import { prisma } from "@/lib/prisma";
 import {
   EditPasswordFormSchema,
   AlimentaireFormSchema,
-} from "./edit-profile.schema";
+} from "./edit-alimentaire.schema";
 
 export const updateProfileAction = authAction
   .schema(AlimentaireFormSchema)
