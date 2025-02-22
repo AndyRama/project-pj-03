@@ -79,14 +79,6 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
                 <AuthButton />
                 <MobileDropdownMenu links={DASHBOARD_LINKS} />
               </nav>
-              {/* Desktop header */}
-              <nav className="flex items-center space-x-1 max-lg:hidden">
-                <ContactSupportDialog>
-                  <Button variant="default" size="sm">
-                    Support
-                  </Button>
-                </ContactSupportDialog>
-              </nav>
             </div>
           </div>
         </header>
@@ -104,11 +96,6 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
               </LayoutHeader>
               <LayoutContent className="flex gap-4">
                 <SignInButton />
-                <ContactSupportDialog>
-                  <Button variant="secondary" size="sm">
-                    Contact support
-                  </Button>
-                </ContactSupportDialog>
               </LayoutContent>
             </Layout>
           )}
