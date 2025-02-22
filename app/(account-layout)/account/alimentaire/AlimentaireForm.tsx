@@ -18,9 +18,9 @@ import { BadgeCheck } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { createVerifyEmailAction } from "../verify-email/verify-email.action";
-import { updateProfileAction } from "./edit-profile.action";
-import type { AlimentaireFormType } from "./edit-profile.schema";
-import { AlimentaireFormSchema } from "./edit-profile.schema";
+import { updateProfileAction } from "./edit-alimentaire.action";
+import type { AlimentaireFormType } from "./edit-alimentaire.schema";
+import { AlimentaireFormSchema } from "./edit-alimentaire.schema";
 
 type AlimentaireFormProps = {
   defaultValues: User;
