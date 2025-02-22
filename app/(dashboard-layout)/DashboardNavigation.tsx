@@ -60,7 +60,7 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
       <div className="flex-1">
         {/* Header */}
         <header className="w-full border-b bg-background max-lg:sticky max-lg:top-0 max-lg:z-40">
-          <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+          <div className="flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
             <div className="flex items-center gap-2 lg:hidden">
               <Image
                 src={SiteConfig.appIcon}
