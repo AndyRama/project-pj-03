@@ -21,7 +21,7 @@ const footerContent = {
       links: [
         { href: '/posts', label: 'Blog', badge: 'Nouveau' },
         { href: '/prestations/#E-Books', label: 'E-Books'},
-        { href: '/prestations/#pack', label: 'Packs' },
+        { href: '/prestations/#pack', label: 'Packs',badge: 'Nouveau' },
       ],
     },
     {

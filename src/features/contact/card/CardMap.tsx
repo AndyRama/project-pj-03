@@ -29,7 +29,7 @@ export type CardMapProps = {
 export const CardMap = ({ className }: CardMapProps) => {
   return (
     <section className={className}>
-      <div className="w-[330px] xl:w-[380px]">
+      <div className="rounded-[10px] w-[330px] xl:w-[380px]">
         {CardMapContent.step.map((step, index) => (
           <motion.div
             key={step.title}

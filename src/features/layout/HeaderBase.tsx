@@ -66,6 +66,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
     { path: "/contact", label: "Contact" },
     { path: "/prestations", label: "Prestations" },
     { path: "/team", label: "Team" },
+    { path: "/compte", label: "Compte" },
   ];
 
   return (
@@ -151,7 +152,6 @@ export function HeaderBase({ children }: PropsWithChildren) {
                 </div>
                 <hr />
                 <div className="flex flex-row items-center justify-around">
-                  <AuthButtonClient />
                   <Typography
                     variant="h3"
                     className="text-left text-lg !leading-tight"
@@ -178,7 +178,6 @@ export function HeaderBase({ children }: PropsWithChildren) {
               <hr />
               <Link href="/prestations/#pack">
                 <Button
-
                   size="md"
                   className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
                 >

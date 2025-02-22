@@ -62,14 +62,14 @@ export const ContactSupportDialog = (props: ContactSupportDialogProps) => {
         {props.children ? (
           props.children
         ) : (
-          <Button variant="outline">Contact support</Button>
+          <Button variant="outline">Contacte support</Button>
         )}
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Contact Support</DialogTitle>
+          <DialogTitle>Contacte Support</DialogTitle>
           <DialogDescription>
-            Fill the form bellow or send an email to{" "}
+            Remplissez le formulaire ci-dessous ou envoyez un email à{" "}
             <Link
               className="text-primary"
               href={`mailto:${SiteConfig.email.contact}`}
@@ -104,7 +104,7 @@ export const ContactSupportDialog = (props: ContactSupportDialogProps) => {
             name="subject"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Subject</FormLabel>
+                <FormLabel>Objet</FormLabel>
                 <FormControl>
                   <Input {...field} />
                 </FormControl>
@@ -117,7 +117,7 @@ export const ContactSupportDialog = (props: ContactSupportDialogProps) => {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message</FormLabel>
+                <FormLabel>votre message</FormLabel>
                 <FormControl>
                   <Textarea {...field} />
                 </FormControl>
@@ -125,7 +125,7 @@ export const ContactSupportDialog = (props: ContactSupportDialogProps) => {
               </FormItem>
             )}
           />
-          <Button type="submit">Send</Button>
+          <Button type="submit">Envoyé</Button>
         </Form>
       </DialogContent>
     </Dialog>

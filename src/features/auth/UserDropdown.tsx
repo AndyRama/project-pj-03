@@ -35,14 +35,17 @@ export const UserDropdown = ({ children }: PropsWithChildren) => {
         <DropdownMenuItem asChild>
           <Link href="/account">
             <Settings className="mr-2 size-4" />
-            Settings
+            Configuration
           </Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
+
+        {/* secure if user is coatch can acces*/}
+
         <DropdownMenuItem asChild>
           <Link href="/dashboard">
             <LayoutDashboard className="mr-2 size-4" />
-            Dashboard
+            Tableau de bord
           </Link>
         </DropdownMenuItem>
 
@@ -61,7 +64,7 @@ export const UserDropdown = ({ children }: PropsWithChildren) => {
             ) : (
               <LogOut className="mr-2 size-4" />
             )}
-            <span>Logout</span>
+            <span>Deconexion</span>
           </DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>

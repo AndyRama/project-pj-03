@@ -69,7 +69,7 @@ export const CardInfo = ({ className }: CardInfoProps) => {
             whileHover={{ y: -10, transition: { duration: 0.1 } }}
             className="group relative h-[460px] overflow-hidden bg-[#2F2E2E] p-4 duration-300 hover:shadow-2xl"
           >
-            <Card className="border-none bg-transparent ">
+            <Card className="rounded-[10px] border-none bg-transparent ">
               <CardHeader className="ml-4 flex flex-row gap-3 p-0">
                 <Typography className="text-3xl text-white">
                   Mes coordonnées
