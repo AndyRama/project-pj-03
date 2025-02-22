@@ -18,11 +18,15 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         icon: <LayoutDashboard />,
         url: "/dashboard",
       },
-
       {
         title: "Paramètres",
         icon: <Settings />,
         url: "/settings",
+      },
+      {
+        title: "Compte",
+        icon: <Settings />,
+        url: "/account",
       },
     ],
   },
