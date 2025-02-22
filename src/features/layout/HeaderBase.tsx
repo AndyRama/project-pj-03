@@ -115,7 +115,6 @@ export function HeaderBase({ children }: PropsWithChildren) {
               )} */}
             </Link>
           ))}
-          {/* <ThemeToggle /> */}
         </motion.nav>
         <div className="hidden lg:contents">
           <Link href="/prestations/#pack">

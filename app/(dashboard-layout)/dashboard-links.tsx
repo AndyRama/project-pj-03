@@ -42,7 +42,7 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
       {
         title: "Créer un post",
         icon: <FilePen />,
-        url: "/posts",
+        url: "/blog",
       },
     ],
   },
