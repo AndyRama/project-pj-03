@@ -34,11 +34,6 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         url: "/alimentaire",
       },
       {
-        title: "Créer un cour",
-        icon: <FilePen />,
-        url: "/courses",
-      },
-      {
         title: "Créer un post",
         icon: <FilePen />,
         url: "/blog",
@@ -49,30 +44,15 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
     title: "Utilisateurs",
     links: [
       {
-        title: "Mon compte",
-        icon: <Settings />,
-        url: "/account",
-      },
-      {
         title: "Utilisateurs",
         icon: <User2 />,
         url: "/users",
       },
+      {
+        title: "Mon compte",
+        icon: <Settings />,
+        url: "/account",
+      },
     ]
-  },
-  {
-    title: "Audience",
-    links: [
-      {
-        title: "Subscribe",
-        icon: <MonitorSmartphone />,
-        url: "#",
-      },
-      {
-        title: "FeedBack",
-        icon: <MessageCircleMore />,
-        url: "#",
-      },
-    ],
   },
 ];
