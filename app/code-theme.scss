@@ -230,7 +230,7 @@ html.light {
   .token.constant,
   .token.symbol,
   .token.deleted {
-    color: #0550ae;
+    color: #ffa333;
   }
   .token.selector,
   .token.attr-name,
@@ -238,14 +238,14 @@ html.light {
   .token.char,
   .token.builtin,
   .token.inserted {
-    color: #0a3069;
+    color: #e67e00;
   }
   .token.operator,
   .token.entity,
   .token.url,
   .language-css .token.string,
   .style .token.string {
-    color: #0550ae;
+    color: #ff8c00;
   }
   .token.atrule,
   .token.attr-value,
@@ -253,12 +253,12 @@ html.light {
     color: #cf222e;
   }
   .token.function {
-    color: #8250df;
+    color: #b36200;
   }
   .token.regex,
   .token.important,
   .token.variable {
-    color: #0a3069;
+    color: #cc7000;
   }
   .token.important,
   .token.bold {
