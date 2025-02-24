@@ -77,8 +77,8 @@ export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
             )}
           />
         </CardContent>
-      </Card>
-      <Card className="p-4">
+      {/* </Card> */}
+      {/* <Card className="p-4"> */}
         <CardHeader>
           <CardTitle>Email</CardTitle>
           <CardDescription>
