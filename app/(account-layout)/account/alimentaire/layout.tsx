@@ -26,17 +26,23 @@ export default async function RouteLayout(
             Je vous enverrez le plan alimentaire par Email et nous pourrons en discuter ensemble lors
             de notre 1 er call.
           </LayoutDescription>
+          
+          <LayoutActions className="hidden gap-6 lg:flex">
+            <Link href="#" target="_blank">
+              <Button variant="invert">Finalinsez en prenant RDV</Button>
+            </Link>
+          </LayoutActions>
         </LayoutHeader>
         <LayoutContent className="mt-8 flex items-start gap-4 max-lg:flex-col">
           <SettingsNavigation
             links={[
               {
-                href: `/settings`,
+                href: `/alimentaire`,
                 label: "Général",
                 badge: ""
               },
               {
-                href: `/settings/plan`,
+                href: `/alimentaire/plan`,
                 label: "Plan alimentaire",
                 badge: "important"
               },
@@ -45,19 +51,6 @@ export default async function RouteLayout(
           <div className="w-full flex-1">{props.children}</div>
         </LayoutContent>
 
-      </Layout>
-      <Layout>
-        <LayoutTitle>Plan Alimentaire</LayoutTitle>
-        <LayoutHeader>
-          <LayoutDescription>
-            Prennez rendez-vous pous notre 1er call, qui sera fait en viso details dans la page de Calendly.
-          </LayoutDescription>
-        </LayoutHeader>
-        <LayoutActions className="hidden gap-6 lg:flex">
-          <Link href="#" target="_blank">
-            <Button variant="invert">Finalinsez en prenant RDV</Button>
-          </Link>
-        </LayoutActions>
       </Layout>
     </>
   );

@@ -100,6 +100,28 @@ export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
           />
         </CardContent>
       </Card>
+      <Card className="p-4">
+        <CardHeader>
+          <CardTitle>Poids</CardTitle>
+          <CardDescription>
+            Use a valid email address to receive important notifications.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input placeholder="" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </CardContent>
+      </Card>
     </FormUnsavedBar>
   );
 };
