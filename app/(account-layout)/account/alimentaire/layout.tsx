@@ -32,12 +32,12 @@ export default async function RouteLayout(
           <SettingsNavigation
             links={[
               {
-                href: `account/alimentaire`,
+                href: `/alimentaire`,
                 label: "Général",
                 badge: ""
               },
               {
-                href: `account/alimentaire/plan`,
+                href: `alimentaire/plan`,
                 label: "Plan alimentaire",
                 badge: ""
               },
@@ -45,7 +45,7 @@ export default async function RouteLayout(
           />
           <div className="w-full flex-1">{props.children}</div>
         </LayoutContent>
-        <LayoutActions className="lg:flex-end hidden gap-6 lg:flex">
+        <LayoutActions className="hidden gap-6 lg:flex lg:items-end">
             <Link href="#" target="_blank">
               <Button variant="invert">Finalinsez en prenant un rendez-vous</Button>
             </Link>
