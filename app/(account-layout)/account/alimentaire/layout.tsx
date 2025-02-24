@@ -26,12 +26,7 @@ export default async function RouteLayout(
             Je vous enverrez le plan alimentaire par Email et nous pourrons en discuter ensemble lors
             de notre 1 er call.
           </LayoutDescription>
-          
-          <LayoutActions className="hidden gap-6 lg:flex">
-            <Link href="#" target="_blank">
-              <Button variant="invert">Finalinsez en prenant RDV</Button>
-            </Link>
-          </LayoutActions>
+
         </LayoutHeader>
         <LayoutContent className="mt-8 flex items-start gap-4 max-lg:flex-col">
           <SettingsNavigation
@@ -55,7 +50,11 @@ export default async function RouteLayout(
           />
           <div className="w-full flex-1">{props.children}</div>
         </LayoutContent>
-
+        <LayoutActions className="hidden gap-6 lg:flex">
+            <Link href="#" target="_blank">
+              <Button variant="invert">Finalinsez en prenant RDV</Button>
+            </Link>
+        </LayoutActions>
       </Layout>
     </>
   );

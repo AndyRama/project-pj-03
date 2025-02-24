@@ -58,7 +58,7 @@ export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
     >
       <Card className="p-4">
         <CardHeader>
-          <CardTitle>Age</CardTitle>
+          <CardTitle>Email</CardTitle>
           <CardDescription>
             Use a valid email address to receive important notifications.
           </CardDescription>
