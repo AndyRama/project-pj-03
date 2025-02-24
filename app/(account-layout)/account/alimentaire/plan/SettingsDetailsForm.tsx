@@ -19,11 +19,11 @@ import { FormUnsavedBar } from "@/features/form/FormUnsavedBar";
 import { useMutation } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { updateSettingsAction } from "./settings.action";
+import { updateSettingsAction } from "./../settings.action";
 import {
   SettingsDetailsFormSchema,
   type SettingsDetailsFormType,
-} from "./settings.schema";
+} from "./../settings.schema";
 
 type ProductFormProps = {
   defaultValues: SettingsDetailsFormType;
@@ -56,50 +56,6 @@ export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
       onSubmit={async (v) => mutation.mutateAsync(v)}
       className="flex w-full flex-col gap-6 lg:gap-8"
     >
-      <Card className="p-4">
-        <CardHeader>
-          <CardTitle>Name</CardTitle>
-          <CardDescription>
-            Use a descriptive name to help you identify this product/bundle.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder="" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </CardContent>
-      </Card>
-      <Card className="p-4">
-        <CardHeader>
-          <CardTitle>Email</CardTitle>
-          <CardDescription>
-            Use a valid email address to receive important notifications.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder="" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </CardContent>
-      </Card>
       <Card className="p-4">
         <CardHeader>
           <CardTitle>Age</CardTitle>

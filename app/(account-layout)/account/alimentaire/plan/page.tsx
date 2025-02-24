@@ -1,12 +1,12 @@
 import type { PageParams } from "@/types/next";
-import { SettingsNotificationForm } from "./SettingsNotificationForm";
+import { SettingsDetailsForm } from "./../plan/SettingsDetailsForm";
 
 export default async function RoutePage(props: PageParams<{}>) {
   return (
-    <SettingsNotificationForm
+    <SettingsDetailsForm
       defaultValues={{
-        invoices: false,
-        promotions: true,
+        name: "",
+        email: "",
       }}
     />
   );
