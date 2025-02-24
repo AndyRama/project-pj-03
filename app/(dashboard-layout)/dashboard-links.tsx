@@ -5,8 +5,6 @@ import {
   Settings,
   TextSelect,
   FilePen,
-  MonitorSmartphone,
-  MessageCircleMore,
   } from "lucide-react";
 
 

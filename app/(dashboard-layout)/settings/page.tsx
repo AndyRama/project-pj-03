@@ -9,8 +9,8 @@ export default async function RoutePage(props: PageParams<{}>) {
   return (
     <SettingsDetailsForm
       defaultValues={{
-        name: "Jérémy",
-        email: "jérémy@gmail.com",
+        name: "",
+        email: "",
       }}
     />
   );

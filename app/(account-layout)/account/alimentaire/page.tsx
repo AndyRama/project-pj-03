@@ -1,13 +1,17 @@
-import React from 'react';
+import type { PageParams } from "@/types/next";
+import { SettingsDetailsForm } from "./SettingsDetailsForm";
 
-const AlimentairePlan: React.FC = () => {
+export default async function RoutePage(props: PageParams<{}>) {
+  /**
+   * Usually in this page you would fetch the data from the database
+   * So the form mount with the current data
+   */
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="mb-4 text-2xl font-bold">Explore all Leadboard</h1>
-      <p>Welcome to the leadboard page. Here you can begin to explore some ressources.</p>
-      {/* Add more components or functionality for course creation here */}
-    </div>
+    <SettingsDetailsForm
+      defaultValues={{
+        name: "",
+        email: "",
+      }}
+    />
   );
-};
-
-export default AlimentairePlan;
+}
