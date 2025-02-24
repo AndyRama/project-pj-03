@@ -31,13 +31,18 @@ export default async function RouteLayout(
           links={[
             {
               href: `/settings`,
-              label: "Utilisateur",
+              label: "1.Utilisateur",
               badge: ""
             },
             {
               href: `/settings/notifications`,
-              label: "information",
-              badge: ""
+              label: "2.information",
+              badge: "important"
+            },
+            {
+              href: `/settings/notifications`,
+              label: "3.Booking visio",
+              badge: "new"
             },
           ]}
         />
