@@ -39,20 +39,15 @@ export default async function RouteLayout(
               {
                 href: `alimentaire/plan`,
                 label: "Plan alimentaire",
-                badge: "important"
-              },
-              {
-                href: `alimentaire/book`,
-                label: "Rendez-vous",
-                badge: "important"
+                badge: ""
               },
             ]}
           />
           <div className="w-full flex-1">{props.children}</div>
         </LayoutContent>
-        <LayoutActions className="hidden gap-6 lg:flex">
+        <LayoutActions className="lg:flex-end hidden gap-6 lg:flex">
             <Link href="#" target="_blank">
-              <Button variant="invert">Finalinsez en prenant RDV</Button>
+              <Button variant="invert">Finalinsez en prenant un rendez-vous</Button>
             </Link>
         </LayoutActions>
       </Layout>
