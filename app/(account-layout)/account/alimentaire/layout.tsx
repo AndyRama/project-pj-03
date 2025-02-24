@@ -32,12 +32,12 @@ export default async function RouteLayout(
           <SettingsNavigation
             links={[
               {
-                href: `/`,
+                href: `account/alimentaire`,
                 label: "Général",
                 badge: ""
               },
               {
-                href: `/plan`,
+                href: `account/alimentaire/plan`,
                 label: "Plan alimentaire",
                 badge: ""
               },
