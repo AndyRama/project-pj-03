@@ -80,7 +80,7 @@ export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
       </Card>
       <Card className="p-4">
         <CardHeader>
-          <CardTitle>Poids</CardTitle>
+          <CardTitle>Taille</CardTitle>
           <CardDescription>
             Use a valid email address to receive important notifications.
           </CardDescription>
