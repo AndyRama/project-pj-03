@@ -24,6 +24,7 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
     title: "Mes services",
     links: [
       { url: "/account/alimentaire", title: "Plan alimentaire", icon: <Carrot  /> },
+      { url: "#", title: "Call visio", icon: <User2 /> },
     ],
   },
   {
