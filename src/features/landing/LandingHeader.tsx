@@ -4,7 +4,6 @@ import { LogoSvg } from "@/components/svg/Logo";
 import { SiteConfig } from "@/site-config";
 import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 import { useEffect } from "react";
-import { AuthButtonClient } from "../auth/AuthButtonClient";
 import type { PropsWithChildren } from "react";
 import { Sheet, SheetTrigger, SheetContent } from "../../components/ui/sheet";
 import { Menu } from "react-feather";
@@ -109,6 +108,14 @@ export function LandingHeader({ children }: PropsWithChildren) {
           ))}
         </motion.nav>
         <div className="hidden lg:contents">
+          <Link href="/account">
+            <Button
+              size="sm"
+              className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
+            >
+              SignIn
+            </Button>
+          </Link>
           <Link href="/dashboard">
             <Button
               size="sm"
@@ -116,7 +123,6 @@ export function LandingHeader({ children }: PropsWithChildren) {
             >
               Admin
             </Button>
-            <AuthButtonClient />
           </Link>
         </div>
 
@@ -160,22 +166,27 @@ export function LandingHeader({ children }: PropsWithChildren) {
                     className="relative text-left text-sm font-medium hover:text-[#FDAB04]"
                   >
                     {route.label}
-                    {/* {route.badge && (
-                      <span className="ml-2 rounded-full border border-orange-500 bg-orange-100 px-1 text-[10px] text-orange-500">
-                        {route.badge}
-                      </span>
-                    )} */}
                   </Link>
                 ))}
               </div>
               <hr />
-              <Button
-                size="md"
-                className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
-              >
-                Rejoingnez-nous !
-              </Button>
+              <Link href="/account">
+                <Button
+                  size="sm"
+                  className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
+                >
+                  SignIn
+                </Button>
+              </Link>
               <hr />
+              <Link href="/dashboard">
+                <Button
+                  size="sm"
+                  className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
+                >
+                  Admin
+                </Button>
+              </Link>
             </SheetContent>
           </Sheet>
         </div>

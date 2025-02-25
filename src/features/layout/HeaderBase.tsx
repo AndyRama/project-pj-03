@@ -170,7 +170,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
                 ))}
               </div>
               <hr />
-              <Link href="/dashboard">
+              <Link href="/account">
                 <Button
                   size="sm"
                   className="mr-4 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
