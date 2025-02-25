@@ -1,4 +1,7 @@
 import React from 'react';
+import Link from "next/link";
+import { CalendarClock } from "lucide-react";
+
 
 const BookingPage: React.FC = () => {
   return (
@@ -6,6 +9,18 @@ const BookingPage: React.FC = () => {
       <h1 className="mb-4 text-2xl font-bold">Prendre rendez-vous</h1>
       <p>Welcome to the create Plan page. Here you can create and manage your plan alimentaire.</p>
       {/* Add more components or functionality for course creation here */}
+      <Link
+        href={"https://cal.com/dr-sarah-johnson"}
+        className="relative flex items-center"
+      >
+        <div className="size-4">
+          <CalendarClock />
+        </div>
+        <span>
+          Prendre un rendez-vous visio
+        </span>
+
+      </Link>
     </div>
   );
 };
