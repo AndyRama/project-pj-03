@@ -23,12 +23,7 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
     title: "Plan alimentaire",
     links: [
       { url: "/account/alimentaire", title: "Formulaire", icon: <Carrot /> },
-    ],
-  },
-  {
-    title: "Rendez-vous",
-    links: [
-      { url: "/account/booking", title: "booking", icon: <CalendarClock /> },
+      { url: "https://cal.com/dr-sarah-johnson/20min", title: "Booking", icon: <CalendarClock /> },
     ],
   },
   {
