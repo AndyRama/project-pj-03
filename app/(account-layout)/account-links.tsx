@@ -9,6 +9,13 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
     ],
   },
   {
+    title: "Plan alimentaire",
+    links: [
+      { url: "/account/alimentaire", title: "Formulaire", icon: <Carrot  /> },
+      // { url: "account/alimentaire/booking", title: "Call visio", icon: <User2 /> },
+    ],
+  },
+  {
     title: "Information Personnelle",
     links: [
       { url: "/account", title: "Profile", icon: <User2 /> },
@@ -18,13 +25,6 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
         icon: <AlertCircle />,
       },
       { url: "/account/billing", title: "Billing", icon: <Coins /> },
-    ],
-  },
-  {
-    title: "Mes services",
-    links: [
-      { url: "/account/alimentaire", title: "Plan alimentaire", icon: <Carrot  /> },
-      // { url: "account/alimentaire/booking", title: "Call visio", icon: <User2 /> },
     ],
   },
   {
