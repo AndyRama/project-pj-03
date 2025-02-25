@@ -74,7 +74,7 @@ model Feedback {
   user      User?    @relation(fields: [userId], references: [id])
 }
 
-model Alimentaire {
+model AlimentaireProfile {
   id        String   @id @default(cuid())
   firstName String
   lastName  String
