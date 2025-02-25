@@ -64,7 +64,7 @@ export const SettingsAlimentaireForm = ({ defaultValues }: ProductFormProps) => 
           </CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4">
             <FormField
               control={form.control}
               name="firstName"
@@ -116,7 +116,7 @@ export const SettingsAlimentaireForm = ({ defaultValues }: ProductFormProps) => 
               </FormItem>
             )}
           />
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4">
             <FormField
               control={form.control}
               name="size"
