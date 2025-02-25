@@ -1,18 +1,11 @@
 import type { NavigationLinkGroups } from "@/features/navigation/navigation.type";
-import { AlertCircle, Coins, Mail, User2, FileKey2, FileLock2, Carrot, ArrowLeft } from "lucide-react";
+import { AlertCircle, Coins, Mail, User2, FileKey2, FileLock2, Carrot, ArrowLeft, TvMinimal } from "lucide-react";
 
 export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
   {
     title: "",
     links: [
       { url: "/", title: "Retour", icon: <ArrowLeft  /> },
-    ],
-  },
-  {
-    title: "Plan alimentaire",
-    links: [
-      { url: "/account/alimentaire", title: "Formulaire", icon: <Carrot  /> },
-      // { url: "account/alimentaire/booking", title: "Call visio", icon: <User2 /> },
     ],
   },
   {
@@ -25,6 +18,13 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
         icon: <AlertCircle />,
       },
       { url: "/account/billing", title: "Billing", icon: <Coins /> },
+    ],
+  },
+  {
+    title: "Plan alimentaire",
+    links: [
+      { url: "/account/alimentaire", title: "Formulaire", icon: <Carrot  /> },
+      { url: "/account/booking", title: "visio", icon: <TvMinimal /> },
     ],
   },
   {

@@ -60,7 +60,7 @@ export const SettingsAlimentaireForm = ({ defaultValues }: ProductFormProps) => 
         <CardHeader>
           <CardTitle>Informations personnelles</CardTitle>
           <CardDescription>
-            Veuillez remplir vos informations personnelles pour créer votre plan alimentaire personnalisé.
+            Veuillez remplir vos informations personnelles.
           </CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
