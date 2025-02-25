@@ -26,7 +26,6 @@ export default async function RoutePage(props: PageParams<{}>) {
       </LayoutHeader>
       <LayoutContent className="flex flex-col gap-4 lg:gap-8">
         <InformationCards />
-        <SubscribersChart />
         <div className="flex flex-wrap items-start gap-4">
           <Card className="flex-1">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 p-4 pb-2">
@@ -118,6 +117,7 @@ export default async function RoutePage(props: PageParams<{}>) {
             </CardContent>
           </Card>
         </div>
+        <SubscribersChart />
       </LayoutContent>
     </Layout>
   );
