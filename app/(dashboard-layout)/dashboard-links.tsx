@@ -39,16 +39,11 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
     ],
   },
   {
-    title: "Utilisateurs",
+    title: "Utilisateur",
     links: [
       {
-        title: "Utilisateurs",
-        icon: <User2 />,
-        url: "/users",
-      },
-      {
         title: "Mon compte",
-        icon: <Settings />,
+        icon: <User2 />,
         url: "/account",
       },
     ]

@@ -17,14 +17,18 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
         title: "Delete profile",
         icon: <AlertCircle />,
       },
-      { url: "/account/billing", title: "Billing", icon: <Coins /> },
     ],
   },
   {
     title: "Plan alimentaire",
     links: [
       { url: "/account/alimentaire", title: "Formulaire", icon: <Carrot /> },
-      { url: "/account/booking", title: "visio", icon: <CalendarClock /> },
+    ],
+  },
+  {
+    title: "Rendez-vous",
+    links: [
+      { url: "/account/booking", title: "booking", icon: <CalendarClock /> },
     ],
   },
   {
@@ -37,6 +41,7 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
   {
     title: "Mention légal",
     links: [
+      { url: "/account/billing", title: "Billing", icon: <Coins /> },
       { url: "/account/cgv", title: "Cgv", icon: <FileKey2 /> },
       { url: "/account/terms", title: "Terms", icon: <FileLock2 /> },
     ],
