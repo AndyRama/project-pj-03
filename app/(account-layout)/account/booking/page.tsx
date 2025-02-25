@@ -14,7 +14,7 @@ import {
 const BookingPage: React.FC = () => {
   return (
     <>
-      <Card>
+      <Card className="p-4">
         <CardHeader>
           <CardTitle className="mb-4 text-2xl font-bold">
             Prendre rendez-vous
@@ -27,6 +27,7 @@ const BookingPage: React.FC = () => {
         <CardContent>
           <Link
             href={"https://cal.com/dr-sarah-johnson"}
+            target='_blank'
             className={cn(
               buttonVariants({ size: "md", variant: "default" }),
               "text-white border hover:border-orange-500 hover:text-orange-500",

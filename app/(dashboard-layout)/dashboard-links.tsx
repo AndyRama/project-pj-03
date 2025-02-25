@@ -4,7 +4,6 @@ import {
   LayoutDashboard,
   Settings,
   TextSelect,
-  FilePen,
   } from "lucide-react";
 
 
@@ -30,11 +29,6 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         title: "Plan alimentaire",
         icon: <TextSelect />,
         url: "/alimentaire",
-      },
-      {
-        title: "Créer un post",
-        icon: <FilePen />,
-        url: "/blog",
       },
     ],
   },

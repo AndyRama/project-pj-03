@@ -3,7 +3,7 @@ import React from 'react';
 
 const EbookPage: React.FC = () => {
 	return (
-		<div className="mx-auto p-4">
+		<div className="mx-auto">
 			<PricingEbook
 				cards={[
 					{
