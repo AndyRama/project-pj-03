@@ -4,15 +4,13 @@ import { LogoSvg } from "@/components/svg/Logo";
 import { SiteConfig } from "@/site-config";
 import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
 import { useEffect } from "react";
-// import { AuthButtonClient } from "../auth/AuthButtonClient";
+import { AuthButtonClient } from "../auth/AuthButtonClient";
 import type { PropsWithChildren } from "react";
-// import { ThemeToggle } from "../theme/ThemeToggle";
 import { Sheet, SheetTrigger, SheetContent } from "../../components/ui/sheet";
 import { Menu } from "react-feather";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
-// import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
 
 function useBoundedScroll(threshold: number) {
   const { scrollY } = useScroll();
@@ -108,26 +106,22 @@ export function LandingHeader({ children }: PropsWithChildren) {
               className="relative flex items-center"
             >
               {route.label}
-              {/* {route.badge && (
-                <span className="ml-2 rounded-full border border-orange-500 bg-orange-100 px-1 text-[10px] text-orange-500">
-                  {route.badge}
-                </span>
-              )} */}
             </Link>
           ))}
-          {/* <ThemeToggle /> */}
         </motion.nav>
         <div className="hidden lg:contents">
-          <Button
-            size="sm"
-            className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
-          >
-            Rejoingnez-nous !
-          </Button>
+          <AuthButtonClient />
+          <Link href="/dashboard">
+            <Button
+              size="sm"
+              className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
+            >
+              Admin
+            </Button>
+          </Link>
         </div>
 
         <div className="z-20 flex items-center gap-2 px-4 lg:hidden">
-          {/* <ThemeToggle /> */}
           <Sheet>
             <SheetTrigger>
               <Menu className="size-8" />
