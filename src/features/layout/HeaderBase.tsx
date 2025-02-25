@@ -11,7 +11,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
-import { AuthButtonClient } from "../auth/AuthButtonClient";
 
 function useBoundedScroll(threshold: number) {
   const { scrollY } = useScroll();
@@ -110,6 +109,14 @@ export function HeaderBase({ children }: PropsWithChildren) {
           ))}
         </motion.nav>
         <div className="hidden lg:contents">
+          <Link href="/account">
+            <Button
+              size="sm"
+              className="mr-4 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
+            >
+              SignIn
+            </Button>
+          </Link>
           <Link href="/dashboard">
             <Button
               size="sm"
@@ -117,7 +124,6 @@ export function HeaderBase({ children }: PropsWithChildren) {
             >
               Admin
             </Button>
-            <AuthButtonClient />
           </Link>
         </div>
 
@@ -169,9 +175,17 @@ export function HeaderBase({ children }: PropsWithChildren) {
                   size="sm"
                   className="mr-4 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
                 >
+                  SignIn
+                </Button>
+              </Link>
+              <hr />
+              <Link href="/dashboard">
+                <Button
+                  size="sm"
+                  className="mr-4 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
+                >
                   Admin
                 </Button>
-                <AuthButtonClient />
               </Link>
               <hr />
               <ContactSupportDialog>
