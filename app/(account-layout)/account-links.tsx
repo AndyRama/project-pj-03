@@ -29,8 +29,8 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
   {
     title: "Ressources",
     links: [
-      { url: "/posts", title: "Blog", icon: <StickyNote /> },
-      { url: "/account/ebook", title: "Ebook", icon: <BookOpenText  /> },
+      { url: "/account/ebook", title: "Ebooks", icon: <BookOpenText  /> },
+      { url: "/posts", title: "Posts", icon: <StickyNote /> },
     ],
   },
   {
