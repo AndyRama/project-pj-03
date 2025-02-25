@@ -5,7 +5,7 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
   {
     title: "",
     links: [
-      { url: "/", title: "Retour", icon: <ArrowLeft  /> },
+      { url: "/", title: "Retour", icon: <ArrowLeft /> },
     ],
   },
   {
@@ -23,13 +23,23 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
   {
     title: "Plan alimentaire",
     links: [
-      { url: "/account/alimentaire", title: "Formulaire", icon: <Carrot  /> },
+      { url: "/account/alimentaire", title: "Formulaire", icon: <Carrot /> },
       { url: "/account/booking", title: "visio", icon: <TvMinimal /> },
     ],
   },
   {
-    title: "Configuration",
-    links: [{ url: "/account/email", title: "Mails", icon: <Mail /> }],
+    title: "Plan alimentaire",
+    links: [
+      { url: "/account/alimentaire", title: "Formulaire", icon: <Carrot /> },
+      { url: "/account/booking", title: "visio", icon: <TvMinimal /> },
+    ],
+  },
+  {
+    title: "Ressources",
+    links: [
+      { url: "/posts", title: "Mails", icon: <Mail /> },
+      { url: "/prestations#E-Books", title: "visio", icon: <TvMinimal /> },
+    ],
   },
   {
     title: "Mention légal",
