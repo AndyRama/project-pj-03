@@ -17,6 +17,7 @@ import type { PropsWithChildren } from "react";
 import { DesktopVerticalMenu } from "@/features/navigation/DesktopVerticalMenu";
 import { MobileDropdownMenu } from "@/features/navigation/MobileDropdownMenu";
 import { DASHBOARD_LINKS } from "./dashboard-links";
+import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
 
 export const DashboardNavigation = async (props: PropsWithChildren) => {
   const user = await auth();
@@ -38,7 +39,7 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
         </div>
         <div className="h-10" />
         {user ? (
-        <DesktopVerticalMenu links={DASHBOARD_LINKS} />
+          <DesktopVerticalMenu links={DASHBOARD_LINKS} />
         ) : null}
         <div className="flex-1" />
         {user ? (
@@ -72,13 +73,16 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
               </Link>
             </div>
 
-            <div className="flex flex-1 items-center justify-end space-x-4">
-              {/* Mobile header */}
-              <nav className="flex items-center space-x-1 lg:hidden">
-                <AuthButton />
-                <MobileDropdownMenu links={DASHBOARD_LINKS} />
-              </nav>
-            </div>
+            <nav className="flex flex-1 items-center justify-end space-x-1">
+              <ContactSupportDialog>
+                <Button variant="default" size="sm" className="mr-4">
+                  Support
+                </Button>
+              </ContactSupportDialog>
+              <AuthButton />
+              <MobileDropdownMenu className="lg:hidden" links={DASHBOARD_LINKS} />
+            </nav>
+
           </div>
         </header>
 
@@ -90,7 +94,7 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
             <Layout>
               <LayoutHeader>
                 <LayoutTitle>
-                   Désolé, vous devez être authentifié pour accéder à cette ressource.
+                  Désolé, vous devez être authentifié pour accéder à cette ressource.
                 </LayoutTitle>
               </LayoutHeader>
               <LayoutContent className="flex gap-4">
@@ -99,7 +103,7 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
             </Layout>
           )}
         </main>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 };
