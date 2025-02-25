@@ -14,12 +14,25 @@ export const SettingsDetailsFormSchema = z.object({
   email: z.string().email(),
 });
 
+export const SettingsAlimentaireFormSchema = z.object({
+  firstName: z.string().min(1, "Le prénom est requis"),
+  lastName: z.string().min(1, "Le nom est requis"),
+  age: z.string().refine((val: string) => !isNaN(Number(val)) && Number(val) > 0, {
+    message: "L'âge doit être un nombre positif",
+  }),
+  size: z.string().refine((val: string) => !isNaN(Number(val)) && Number(val) > 0, {
+    message: "La taille doit être un nombre positif",
+  }),
+  weight: z.string().refine((val: string) => !isNaN(Number(val)) && Number(val) > 0, {
+    message: "Le poids doit être un nombre positif",
+  }),
+});
+
 export const SettingsNotificationFormSchema = z.object({
   invoices: z.boolean(),
   promotions: z.boolean(),
 });
 
 export type SettingsDetailsFormType = z.infer<typeof SettingsDetailsFormSchema>;
-export type SettingsNotificationFormType = z.infer<
-  typeof SettingsNotificationFormSchema
->;
+export type SettingsAlimentaireFormType = z.infer<typeof SettingsAlimentaireFormSchema>;
+export type SettingsNotificationFormType = z.infer<typeof SettingsNotificationFormSchema>;

@@ -19,34 +19,34 @@ import { FormUnsavedBar } from "@/features/form/FormUnsavedBar";
 import { useMutation } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { updateSettingsAction } from "./../settings.action";
+import { updateSettingsAction } from "../settings.action";
 import {
-  SettingsDetailsFormSchema,
-  type SettingsDetailsFormType,
-} from "./../settings.schema";
+  SettingsAlimentaireFormSchema,
+  type SettingsAlimentaireFormType,
+} from "../settings.schema";
 
 type ProductFormProps = {
-  defaultValues: SettingsDetailsFormType;
+  defaultValues: SettingsAlimentaireFormType;
 };
 
 export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
   const form = useZodForm({
-    schema: SettingsDetailsFormSchema,
+    schema: SettingsAlimentaireFormSchema,
     defaultValues,
   });
   const router = useRouter();
 
   const mutation = useMutation({
-    mutationFn: async (values: SettingsDetailsFormType) => {
+    mutationFn: async (values: SettingsAlimentaireFormType) => {
       const result = await updateSettingsAction(values);
 
       if (!result || result.serverError) {
-        toast.error("Failed to update settings");
-        throw new Error("Failed to update settings");
+        toast.error("Échec de la mise à jour des paramètres");
+        throw new Error("Échec de la mise à jour des paramètres");
       }
 
       router.refresh();
-      form.reset(result.data as SettingsDetailsFormType);
+      form.reset(result.data as SettingsAlimentaireFormType);
     },
   });
 
@@ -58,68 +58,92 @@ export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
     >
       <Card className="p-4">
         <CardHeader>
-          <CardTitle>Age</CardTitle>
+          <CardTitle>Informations personnelles</CardTitle>
           <CardDescription>
-            Use a valid email address to receive important notifications.
+            Veuillez remplir vos informations personnelles pour créer votre plan alimentaire personnalisé.
           </CardDescription>
         </CardHeader>
-        <CardContent>
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder="" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+        <CardContent className="flex flex-col gap-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <FormField
+              control={form.control}
+              name="firstName"
+              render={({ field }) => (
+                <FormItem>
+                  <CardTitle className="text-sm font-medium mb-2">Prénom</CardTitle>
+                  <FormControl>
+                    <Input placeholder="Votre prénom" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="lastName"
+              render={({ field }) => (
+                <FormItem>
+                  <CardTitle className="text-sm font-medium mb-2">Nom</CardTitle>
+                  <FormControl>
+                    <Input placeholder="Votre nom" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
         </CardContent>
       </Card>
+
       <Card className="p-4">
         <CardHeader>
-          <CardTitle>Taille</CardTitle>
+          <CardTitle>Mensurations</CardTitle>
           <CardDescription>
-            Use a valid email address to receive important notifications.
+            Ces informations sont essentielles pour adapter votre plan alimentaire à vos besoins spécifiques.
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="flex flex-col gap-4">
           <FormField
             control={form.control}
-            name="email"
+            name="age"
             render={({ field }) => (
               <FormItem>
+                <CardTitle className="text-sm font-medium mb-2">Âge</CardTitle>
                 <FormControl>
-                  <Input placeholder="" {...field} />
+                  <Input type="number" placeholder="Votre âge" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-        </CardContent>
-      </Card>
-      <Card className="p-4">
-        <CardHeader>
-          <CardTitle>Poids</CardTitle>
-          <CardDescription>
-            Use a valid email address to receive important notifications.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder="" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <FormField
+              control={form.control}
+              name="size"
+              render={({ field }) => (
+                <FormItem>
+                  <CardTitle className="text-sm font-medium mb-2">Taille (cm)</CardTitle>
+                  <FormControl>
+                    <Input type="number" placeholder="Votre taille en cm" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="weight"
+              render={({ field }) => (
+                <FormItem>
+                  <CardTitle className="text-sm font-medium mb-2">Poids (kg)</CardTitle>
+                  <FormControl>
+                    <Input type="number" placeholder="Votre poids en kg" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
         </CardContent>
       </Card>
     </FormUnsavedBar>
