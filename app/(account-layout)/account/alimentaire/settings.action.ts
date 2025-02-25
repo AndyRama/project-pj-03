@@ -3,8 +3,6 @@
 import { authAction } from "@/lib/backend/safe-actions";
 import { z } from "zod";
 import {
-  // SettingsDetailsFormSchema,
-  // SettingsNotificationFormSchema,
   SettingsAlimentaireFormSchema,
 } from "./settings.schema";
 

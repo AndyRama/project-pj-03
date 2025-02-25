@@ -1,5 +1,5 @@
 import type { NavigationLinkGroups } from "@/features/navigation/navigation.type";
-import { AlertCircle, Coins, Mail, User2, FileKey2, FileLock2, Carrot, ArrowLeft, TvMinimal } from "lucide-react";
+import { AlertCircle, Coins, BookOpenText, User2, FileKey2, FileLock2, Carrot, ArrowLeft, CalendarClock, StickyNote  } from "lucide-react";
 
 export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
   {
@@ -24,21 +24,14 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
     title: "Plan alimentaire",
     links: [
       { url: "/account/alimentaire", title: "Formulaire", icon: <Carrot /> },
-      { url: "/account/booking", title: "visio", icon: <TvMinimal /> },
-    ],
-  },
-  {
-    title: "Plan alimentaire",
-    links: [
-      { url: "/account/alimentaire", title: "Formulaire", icon: <Carrot /> },
-      { url: "/account/booking", title: "visio", icon: <TvMinimal /> },
+      { url: "/account/booking", title: "visio", icon: <CalendarClock /> },
     ],
   },
   {
     title: "Ressources",
     links: [
-      { url: "/posts", title: "Mails", icon: <Mail /> },
-      { url: "/prestations#E-Books", title: "visio", icon: <TvMinimal /> },
+      { url: "/posts", title: "Blog", icon: <StickyNote /> },
+      { url: "/prestations#E-Books", title: "Ebook", icon: <BookOpenText  /> },
     ],
   },
   {
