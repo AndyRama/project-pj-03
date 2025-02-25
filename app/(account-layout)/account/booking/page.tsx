@@ -14,15 +14,15 @@ import {
 const BookingPage: React.FC = () => {
   return (
     <>
-      <Card className="p-4">
+      <Card>
         <CardHeader>
           <CardTitle className="mb-4 text-2xl font-bold">
             Prendre rendez-vous
           </CardTitle>
           <CardDescription>
-            Welcome to the create Plan page. Here you can create and manage your plan alimentaire.
+           Lors de notre appel, nous ferons le point sur vos objectifs et votre plan alimentaire afin d'ajuster votre programme
+           pour des résultats optimaux. Mon but est de vous accompagner avec des conseils personnalisés et adaptés à votre mode de vie.
           </CardDescription>
-          {/* Add more components or functionality for course creation here */}
         </CardHeader>
         <CardContent>
           <Link
@@ -33,25 +33,8 @@ const BookingPage: React.FC = () => {
             )}
           >
             <CalendarClock size={20} className="mr-2 hover:bg-orange-500" />
-            Prendre un rendez-vous visio
+            Prendre rendez-vous
           </Link>
-
-          {/* <Button
-            variant="destructive"
-            onClick={() => {
-              enqueueDialog({
-                title: "Prise de rendez-vous",
-                description: "Vous allez être rediriger vers le calendrier de Jérémy Prat",
-                action: {
-                  label: "Prise de rendez-vous",
-                  onClick: async () => {
-                    redirect("https://cal.com/dr-sarah-johnson");
-
-                  },
-                },
-              });
-            }}
-          /> */}
         </CardContent>
       </Card >
     </>
