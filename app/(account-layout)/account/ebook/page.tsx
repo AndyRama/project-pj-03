@@ -3,7 +3,7 @@ import React from 'react';
 
 const EbookPage: React.FC = () => {
 	return (
-		<div className="container mx-auto p-4">
+		<div className="mx-auto p-4">
 			<h1 className="mb-4 text-2xl font-bold">Explore all Ebook</h1>
 			<p>Welcome to the Ebook page. Here you can begin to explore some ressources.</p>
 			{/* Add more components or functionality for course creation here */}
