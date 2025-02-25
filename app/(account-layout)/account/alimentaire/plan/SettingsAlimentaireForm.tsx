@@ -29,7 +29,7 @@ type ProductFormProps = {
   defaultValues: SettingsAlimentaireFormType;
 };
 
-export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
+export const SettingsAlimentaireForm = ({ defaultValues }: ProductFormProps) => {
   const form = useZodForm({
     schema: SettingsAlimentaireFormSchema,
     defaultValues,
@@ -70,7 +70,7 @@ export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
               name="firstName"
               render={({ field }) => (
                 <FormItem>
-                  <CardTitle className="text-sm font-medium mb-2">Prénom</CardTitle>
+                  <CardTitle className="mb-2 text-sm font-medium">Prénom</CardTitle>
                   <FormControl>
                     <Input placeholder="Votre prénom" {...field} />
                   </FormControl>
@@ -83,7 +83,7 @@ export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
               name="lastName"
               render={({ field }) => (
                 <FormItem>
-                  <CardTitle className="text-sm font-medium mb-2">Nom</CardTitle>
+                  <CardTitle className="mb-2 text-sm font-medium">Nom</CardTitle>
                   <FormControl>
                     <Input placeholder="Votre nom" {...field} />
                   </FormControl>
@@ -108,7 +108,7 @@ export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
             name="age"
             render={({ field }) => (
               <FormItem>
-                <CardTitle className="text-sm font-medium mb-2">Âge</CardTitle>
+                <CardTitle className="mb-2 text-sm font-medium">Âge</CardTitle>
                 <FormControl>
                   <Input type="number" placeholder="Votre âge" {...field} />
                 </FormControl>
@@ -122,7 +122,7 @@ export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
               name="size"
               render={({ field }) => (
                 <FormItem>
-                  <CardTitle className="text-sm font-medium mb-2">Taille (cm)</CardTitle>
+                  <CardTitle className="mb-2 text-sm font-medium">Taille (cm)</CardTitle>
                   <FormControl>
                     <Input type="number" placeholder="Votre taille en cm" {...field} />
                   </FormControl>
@@ -135,7 +135,7 @@ export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
               name="weight"
               render={({ field }) => (
                 <FormItem>
-                  <CardTitle className="text-sm font-medium mb-2">Poids (kg)</CardTitle>
+                  <CardTitle className="mb-2 text-sm font-medium">Poids (kg)</CardTitle>
                   <FormControl>
                     <Input type="number" placeholder="Votre poids en kg" {...field} />
                   </FormControl>

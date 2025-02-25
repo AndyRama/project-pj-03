@@ -1,5 +1,5 @@
 import type { PageParams } from "@/types/next";
-import { SettingsDetailsForm } from "../SettingsDetailsForm";
+import { SettingsAlimentaireForm } from "./SettingsAlimentaireForm";
 
 export default async function RoutePage(props: PageParams<{}>) {
   /**
@@ -7,7 +7,7 @@ export default async function RoutePage(props: PageParams<{}>) {
    * So the form mount with the current data
    */
   return (
-    <SettingsDetailsForm
+    <SettingsAlimentaireForm
       defaultValues={{
         firstName: "",
         lastName: "",
