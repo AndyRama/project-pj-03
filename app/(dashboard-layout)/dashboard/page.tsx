@@ -30,7 +30,7 @@ export default async function RoutePage(props: PageParams<{}>) {
         <div className="flex flex-wrap items-start gap-4">
           <Card className="flex-1">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 p-4 pb-2">
-              <CardTitle className="text-lg font-light">Audience</CardTitle>
+              <CardTitle className="text-lg font-light">Cal.com</CardTitle>
               <TrendingUp className="size-4 text-muted-foreground" />
             </CardHeader>
             <CardContent className="flex justify-end gap-1">
@@ -39,10 +39,10 @@ export default async function RoutePage(props: PageParams<{}>) {
                   size: "sm",
                   variant: "outline",
                 })}
-                href="https://plausible.io/login"
+                href="https://cal.com/login"
                 target="_blank"
               >
-                Plausible
+                Calendrier
               </Link>
             </CardContent>
           </Card>

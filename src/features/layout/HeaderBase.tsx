@@ -11,6 +11,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
+import { AuthButtonClient } from "../auth/AuthButtonClient";
 
 function useBoundedScroll(threshold: number) {
   const { scrollY } = useScroll();
@@ -63,7 +64,6 @@ export function HeaderBase({ children }: PropsWithChildren) {
     { path: "/contact", label: "Contact" },
     { path: "/prestations", label: "Prestations" },
     { path: "/team", label: "Team" },
-    { path: "/account", label: "Compte" },
   ];
 
   return (
@@ -106,21 +106,17 @@ export function HeaderBase({ children }: PropsWithChildren) {
               className="relative flex items-center"
             >
               {route.label}
-              {/* {route.badge && (
-                <span className="ml-2 rounded-full border border-orange-500 bg-orange-100 px-1 text-[10px] text-orange-500">
-                  {route.badge}
-                </span>
-              )} */}
             </Link>
           ))}
         </motion.nav>
         <div className="hidden lg:contents">
-          <Link href="/prestations/#pack">
+         <AuthButtonClient/>
+          <Link href="/dashboard">
             <Button
               size="sm"
               className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
             >
-              Rejoingnez-nous !
+              Admin
             </Button>
           </Link>
         </div>
@@ -164,11 +160,6 @@ export function HeaderBase({ children }: PropsWithChildren) {
                     className="relative text-left text-sm font-medium hover:text-[#FDAB04]"
                   >
                     {route.label}
-                    {/* {route.badge && (
-                      <span className="ml-2 rounded-full border border-orange-500 bg-orange-100 px-1 text-[10px] text-orange-500">
-                        {route.badge}
-                      </span>
-                    )} */}
                   </Link>
                 ))}
               </div>
@@ -182,7 +173,6 @@ export function HeaderBase({ children }: PropsWithChildren) {
                 </Button>
               </Link>
               <hr />
-
               <ContactSupportDialog>
                 <Button variant="outline" size="md">
                   Support
