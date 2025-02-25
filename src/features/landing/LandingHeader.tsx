@@ -63,7 +63,6 @@ export function LandingHeader({ children }: PropsWithChildren) {
     { path: "/contact", label: "Contact" },
     { path: "/prestations", label: "Prestations" },
     { path: "/team", label: "Team" },
-    { path: "/account", label: "Compte" },
   ];
 
   return (
@@ -110,7 +109,6 @@ export function LandingHeader({ children }: PropsWithChildren) {
           ))}
         </motion.nav>
         <div className="hidden lg:contents">
-          <AuthButtonClient />
           <Link href="/dashboard">
             <Button
               size="sm"
@@ -118,6 +116,7 @@ export function LandingHeader({ children }: PropsWithChildren) {
             >
               Admin
             </Button>
+            <AuthButtonClient />
           </Link>
         </div>
 
@@ -177,12 +176,6 @@ export function LandingHeader({ children }: PropsWithChildren) {
                 Rejoingnez-nous !
               </Button>
               <hr />
-
-              {/* <ContactSupportDialog>
-                <Button variant="outline" size="md">
-                  Support
-                </Button>
-              </ContactSupportDialog> */}
             </SheetContent>
           </Sheet>
         </div>
