@@ -110,14 +110,14 @@ export function HeaderBase({ children }: PropsWithChildren) {
           ))}
         </motion.nav>
         <div className="hidden lg:contents">
-         <AuthButtonClient/>
           <Link href="/dashboard">
             <Button
               size="sm"
-              className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
+              className="mr-4 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
             >
               Admin
             </Button>
+            <AuthButtonClient />
           </Link>
         </div>
 
@@ -164,13 +164,14 @@ export function HeaderBase({ children }: PropsWithChildren) {
                 ))}
               </div>
               <hr />
-              <Link href="/prestations/#pack">
+              <Link href="/dashboard">
                 <Button
-                  size="md"
-                  className="bottom-0 w-full border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
+                  size="sm"
+                  className="mr-4 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
                 >
-                  Rejoingnez-nous !
+                  Admin
                 </Button>
+                <AuthButtonClient />
               </Link>
               <hr />
               <ContactSupportDialog>
