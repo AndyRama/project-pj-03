@@ -3,13 +3,13 @@
 import { authAction } from "@/lib/backend/safe-actions";
 import { z } from "zod";
 import {
-  SettingsDetailsFormSchema,
-  SettingsNotificationFormSchema,
+  // SettingsDetailsFormSchema,
+  // SettingsNotificationFormSchema,
   SettingsAlimentaireFormSchema,
 } from "./settings.schema";
 
 export const updateSettingsAction = authAction
-  .schema(z.union([SettingsDetailsFormSchema, SettingsNotificationFormSchema, SettingsAlimentaireFormSchema]))
+  .schema(SettingsAlimentaireFormSchema)
   .action(async ({ parsedInput: input }) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     // Log des données reçues pour debug

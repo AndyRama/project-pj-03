@@ -9,10 +9,10 @@ import { z } from "zod";
  * and the second schema will never be used
  */
 
-export const SettingsDetailsFormSchema = z.object({
-  name: z.string(),
-  email: z.string().email(),
-});
+// export const SettingsDetailsFormSchema = z.object({
+//   name: z.string(),
+//   email: z.string().email(),
+// });
 
 export const SettingsAlimentaireFormSchema = z.object({
   firstName: z.string().min(1, "Le prénom est requis"),
@@ -28,11 +28,11 @@ export const SettingsAlimentaireFormSchema = z.object({
   }),
 });
 
-export const SettingsNotificationFormSchema = z.object({
-  invoices: z.boolean(),
-  promotions: z.boolean(),
-});
+// export const SettingsNotificationFormSchema = z.object({
+//   invoices: z.boolean(),
+//   promotions: z.boolean(),
+// });
 
-export type SettingsDetailsFormType = z.infer<typeof SettingsDetailsFormSchema>;
+// export type SettingsDetailsFormType = z.infer<typeof SettingsDetailsFormSchema>;
 export type SettingsAlimentaireFormType = z.infer<typeof SettingsAlimentaireFormSchema>;
-export type SettingsNotificationFormType = z.infer<typeof SettingsNotificationFormSchema>;
+// export type SettingsNotificationFormType = z.infer<typeof SettingsNotificationFormSchema>;

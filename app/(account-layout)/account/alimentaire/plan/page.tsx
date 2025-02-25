@@ -1,5 +1,5 @@
 import type { PageParams } from "@/types/next";
-import { SettingsAlimentaireForm } from "./SettingsAlimentaireForm";
+import { SettingsAlimentaireForm } from "../SettingsAlimentaireForm";
 
 export default async function RoutePage(props: PageParams<{}>) {
   /**

@@ -19,11 +19,11 @@ import { FormUnsavedBar } from "@/features/form/FormUnsavedBar";
 import { useMutation } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { updateSettingsAction } from "../settings.action";
+import { updateSettingsAction } from "./settings.action";
 import {
   SettingsAlimentaireFormSchema,
   type SettingsAlimentaireFormType,
-} from "../settings.schema";
+} from "./settings.schema";
 
 type ProductFormProps = {
   defaultValues: SettingsAlimentaireFormType;

@@ -1,13 +1,10 @@
-import Link from "next/link";
 import {
   Layout,
   LayoutContent,
   LayoutDescription,
   LayoutHeader,
   LayoutTitle,
-  LayoutActions,
 } from "@/features/page/layout";
-import { Button } from "@/components/ui/button";
 import type { LayoutParams } from "@/types/next";
 import { SettingsNavigation } from "@/features/layout/SettingsNavigation";
 
@@ -32,12 +29,7 @@ export default async function RouteLayout(
           <SettingsNavigation
             links={[
               {
-                href: `/alimentaire`,
-                label: "Général",
-                badge: ""
-              },
-              {
-                href: `alimentaire/plan`,
+                href: `alimentaire`,
                 label: "Plan alimentaire",
                 badge: ""
               },
@@ -45,11 +37,6 @@ export default async function RouteLayout(
           />
           <div className="w-full flex-1">{props.children}</div>
         </LayoutContent>
-        <LayoutActions className="hidden gap-6 lg:flex lg:items-end">
-            <Link href="#" target="_blank">
-              <Button variant="invert">Finalinsez en prenant un rendez-vous</Button>
-            </Link>
-        </LayoutActions>
       </Layout>
     </>
   );
