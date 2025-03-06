@@ -24,6 +24,10 @@ export default function HomePage() {
 
       <Hero />
 
+      <div className="transform-gpu blur-3xl">
+        <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+      </div>
+
       <FeaturesSection
         features={[
           {
@@ -66,11 +70,19 @@ export default function HomePage() {
         ]}
       />
 
+      <div className="transform-gpu blur-3xl">
+        <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+      </div>
+
       <SectionDivider />
 
       <CardGrid />
 
       <SectionDivider />
+
+      <div className="transform-gpu blur-3xl">
+        <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+      </div>
 
       <FeaturesSection
         features={[
@@ -93,6 +105,10 @@ export default function HomePage() {
           },
         ]}
       />
+
+      <div className="transform-gpu blur-3xl">
+        <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+      </div>
 
       {/* Blog Content */}
 
@@ -120,6 +136,10 @@ export default function HomePage() {
         <Typography variant="h2" className="max-w-xl">
           Mes services
         </Typography>
+      </div>
+
+      <div className="transform-gpu blur-3xl">
+        <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
       </div>
 
       <FeatureProgram
@@ -178,6 +198,10 @@ export default function HomePage() {
           },
         ]}
       />
+
+      <div className="transform-gpu blur-3xl">
+        <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+      </div>
 
       <SectionDivider />
 
