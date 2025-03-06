@@ -1,11 +1,11 @@
 import type { NavigationLinkGroups } from "@/features/navigation/navigation.type";
-import { AlertCircle, Coins, BookOpenText, User2, FileKey2, FileLock2, Carrot, ArrowLeft, CalendarClock, StickyNote  } from "lucide-react";
+import { AlertCircle, Coins, User2, FileKey2, FileLock2, Carrot, Home, CalendarClock  } from "lucide-react";
 
 export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
   {
     title: "",
     links: [
-      { url: "/", title: "Retour", icon: <ArrowLeft /> },
+      { url: "/", title: "Home Page", icon: <Home /> },
     ],
   },
   {
@@ -26,13 +26,13 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
       { url: "/account/booking", title: "Booking", icon: <CalendarClock /> },
     ],
   },
-  {
-    title: "Ressources",
-    links: [
-      { url: "/account/ebook", title: "Ebooks", icon: <BookOpenText  /> },
-      { url: "/posts", title: "Posts", icon: <StickyNote /> },
-    ],
-  },
+  // {
+  //   title: "Ressources",
+  //   links: [
+  //     { url: "/account/ebook", title: "Ebooks", icon: <BookOpenText  /> },
+  //     { url: "/posts", title: "Posts", icon: <StickyNote /> },
+  //   ],
+  // },
   {
     title: "Mention légal",
     links: [
