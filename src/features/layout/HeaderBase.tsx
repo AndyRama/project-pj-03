@@ -62,7 +62,6 @@ export function HeaderBase({ children }: PropsWithChildren) {
     { path: "/posts", label: "Blog" },
     { path: "/contact", label: "Contact" },
     { path: "/prestations", label: "Prestations" },
-    { path: "/team", label: "Team" },
   ];
 
   return (
@@ -109,12 +108,12 @@ export function HeaderBase({ children }: PropsWithChildren) {
           ))}
         </motion.nav>
         <div className="hidden lg:contents">
-          <Link href="/account">
+          <Link href="/team">
             <Button
               size="sm"
               className="mr-4 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
             >
-              SignIn
+              Rejoignez-nous !
             </Button>
           </Link>
           {/* <Link href="/dashboard">

@@ -35,7 +35,7 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
       {
         title: "Agenda",
         icon: <CalendarClock />,
-        url: "/alimentaire",
+        url: "/agenda",
       },
     ],
   },
