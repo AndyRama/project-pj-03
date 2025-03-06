@@ -116,14 +116,6 @@ export function LandingHeader({ children }: PropsWithChildren) {
               SignIn
             </Button>
           </Link>
-          <Link href="/dashboard">
-            <Button
-              size="sm"
-              className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
-            >
-              Admin
-            </Button>
-          </Link>
         </div>
 
         <div className="z-20 flex items-center gap-2 px-4 lg:hidden">
@@ -176,15 +168,6 @@ export function LandingHeader({ children }: PropsWithChildren) {
                   className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
                 >
                   SignIn
-                </Button>
-              </Link>
-              <hr />
-              <Link href="/dashboard">
-                <Button
-                  size="sm"
-                  className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
-                >
-                  Admin
                 </Button>
               </Link>
             </SheetContent>
