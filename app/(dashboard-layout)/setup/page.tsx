@@ -22,7 +22,7 @@ export default async function RoutePage(props: PageParams) {
       </LayoutHeader>
       <LayoutContent>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-4">
-          <Card className="w-full">
+          <Card className="p-4">
             <CardHeader>
               <CardTitle>Support</CardTitle>
               <CardDescription>
@@ -34,7 +34,7 @@ export default async function RoutePage(props: PageParams) {
             </CardHeader>
           </Card>
 
-          <Card className="w-full">
+          <Card className="p-4">
             <CardHeader>
               <CardTitle>Compte cal.com </CardTitle>
               <CardDescription>
@@ -46,7 +46,7 @@ export default async function RoutePage(props: PageParams) {
             </CardHeader>
           </Card>
 
-          <Card className="w-full">
+          <Card className="p-4">
             <CardHeader>
               <CardTitle>Compte Namecheap</CardTitle>
               <CardDescription>
@@ -58,7 +58,7 @@ export default async function RoutePage(props: PageParams) {
             </CardHeader>
           </Card>
 
-          <Card className="w-full">
+          <Card className="p-4">
             <CardHeader>
               <CardTitle>Compte NeonDb</CardTitle>
               <CardDescription>
@@ -70,7 +70,7 @@ export default async function RoutePage(props: PageParams) {
             </CardHeader>
           </Card>
 
-          <Card className="w-full">
+          <Card className="p-4">
             <CardHeader>
               <CardTitle>Compte Gmail</CardTitle>
               <CardDescription>
@@ -82,7 +82,7 @@ export default async function RoutePage(props: PageParams) {
             </CardHeader>
           </Card>
 
-          <Card className="w-full">
+          <Card className="p-4">
             <CardHeader>
               <CardTitle>Compte Github</CardTitle>
               <CardDescription>
@@ -94,7 +94,7 @@ export default async function RoutePage(props: PageParams) {
             </CardHeader>
           </Card>
 
-          <Card className="w-full">
+          <Card className="p-4">
             <CardHeader>
               <CardTitle>Compte Vercel</CardTitle>
               <CardDescription>
@@ -106,7 +106,7 @@ export default async function RoutePage(props: PageParams) {
             </CardHeader>
           </Card>
 
-          <Card className="w-full">
+          <Card className="p-4">
             <CardHeader>
               <CardTitle>Compte Resend</CardTitle>
               <CardDescription>
@@ -118,7 +118,7 @@ export default async function RoutePage(props: PageParams) {
             </CardHeader>
           </Card>
 
-          <Card className="w-full">
+          <Card className="p-4">
             <CardHeader>
               <CardTitle>Compte Stripe</CardTitle>
               <CardDescription>

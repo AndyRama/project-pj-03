@@ -1,5 +1,5 @@
-import { buttonVariants } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+// import { buttonVariants } from "@/components/ui/button";
+// import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Layout,
   LayoutContent,
@@ -7,16 +7,16 @@ import {
   LayoutTitle,
 } from "@/features/page/layout";
 import type { PageParams } from "@/types/next";
-import Link from "next/link";
+// import Link from "next/link";
 import InformationCards from "./InformationCards";
 import { SubscribersChart } from "./SubscribersChart";
-import {
-  Database,
-  ReceiptEuro,
-  Mails,
-  Building2,
-  TrendingUp,
-} from "lucide-react";
+// import {
+//   Database,
+//   ReceiptEuro,
+//   Mails,
+//   Building2,
+//   TrendingUp,
+// } from "lucide-react";
 
 export default async function RoutePage(props: PageParams<{}>) {
   return (
@@ -26,7 +26,7 @@ export default async function RoutePage(props: PageParams<{}>) {
       </LayoutHeader>
       <LayoutContent className="flex flex-col gap-4 lg:gap-8">
         <InformationCards />
-        <div className="flex flex-wrap items-start gap-4">
+        {/* <div className="flex flex-wrap items-start gap-4">
           <Card className="flex-1">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 p-4 pb-2">
               <CardTitle className="text-lg font-light">Cal.com</CardTitle>
@@ -116,7 +116,7 @@ export default async function RoutePage(props: PageParams<{}>) {
               </Link>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
         <SubscribersChart />
       </LayoutContent>
     </Layout>
