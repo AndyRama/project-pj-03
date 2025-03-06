@@ -29,7 +29,7 @@ export default async function RoutePage(props: PageParams) {
                 Contacter moi directement pour un support
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default">Support</Button>
+                <Button variant="default" className="rounded-[10px] hover:border-orange-600 hover:text-orange-600">Support</Button>
               </div>
             </CardHeader>
           </Card>
@@ -41,7 +41,7 @@ export default async function RoutePage(props: PageParams) {
                 Pour la gestion du calendrier et évenement
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default">Calendrier</Button>
+                <Button variant="default" className="rounded-[10px] hover:border-orange-600 hover:text-orange-600">Calendrier</Button>
               </div>
             </CardHeader>
           </Card>
@@ -53,7 +53,7 @@ export default async function RoutePage(props: PageParams) {
                 Permet de gérer le nom de domaine
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default">Namecheap</Button>
+                <Button variant="default" className="rounded-[10px] hover:border-orange-600 hover:text-orange-600">Namecheap</Button>
               </div>
             </CardHeader>
           </Card>
@@ -65,7 +65,7 @@ export default async function RoutePage(props: PageParams) {
                 Pour la base de donnée de l'application
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default">Neon</Button>
+                <Button variant="default" className="rounded-[10px] hover:border-orange-600 hover:text-orange-600">Neon</Button>
               </div>
             </CardHeader>
           </Card>
@@ -77,7 +77,7 @@ export default async function RoutePage(props: PageParams) {
                 Adresse: dr.sarah.johson@gmail.com
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default">Gmail</Button>
+                <Button variant="default" className="rounded-[10px] hover:border-orange-600 hover:text-orange-600">Gmail</Button>
               </div>
             </CardHeader>
           </Card>
@@ -89,7 +89,7 @@ export default async function RoutePage(props: PageParams) {
                 Depot du code source de l'application
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default">Github</Button>
+                <Button variant="default" className="rounded-[10px] hover:border-orange-600 hover:text-orange-600">Github</Button>
               </div>
             </CardHeader>
           </Card>
@@ -101,7 +101,7 @@ export default async function RoutePage(props: PageParams) {
                 Gestion de Hébergement
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default">Vercel</Button>
+                <Button variant="default" className="rounded-[10px] hover:border-orange-600 hover:text-orange-600">Vercel</Button>
               </div>
             </CardHeader>
           </Card>
@@ -113,7 +113,7 @@ export default async function RoutePage(props: PageParams) {
                 Emailling pour l'application
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default">Resend</Button>
+                <Button variant="default" className="rounded-[10px] hover:border-orange-600 hover:text-orange-600">Resend</Button>
               </div>
             </CardHeader>
           </Card>
@@ -125,7 +125,7 @@ export default async function RoutePage(props: PageParams) {
                 Paiement avec module stripe
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default">Stripe</Button>
+                <Button variant="default" className="rounded-[10px] hover:border-orange-600 hover:text-orange-600">Stripe</Button>
               </div>
             </CardHeader>
           </Card>
