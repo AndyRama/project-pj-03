@@ -22,11 +22,6 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         icon: <Settings />,
         url: "/settings",
       },
-      {
-        title: "Paramètres",
-        icon: <SlidersHorizontal />,
-        url: "/setup",
-      },
     ],
   },
   {
@@ -51,6 +46,11 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         title: "Mon compte",
         icon: <User2 />,
         url: "/account",
+      },
+      {
+        title: "Gestion",
+        icon: <SlidersHorizontal />,
+        url: "/setup",
       },
     ]
   },
