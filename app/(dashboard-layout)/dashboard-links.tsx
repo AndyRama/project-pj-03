@@ -28,14 +28,19 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
     title: "Services",
     links: [
       {
+        title: "Agenda",
+        icon: <CalendarClock />,
+        url: "/agenda",
+      },
+      {
         title: "Plan alimentaire",
         icon: <TextSelect />,
         url: "/alimentaire",
       },
       {
-        title: "Agenda",
-        icon: <CalendarClock />,
-        url: "/agenda",
+        title: "Gestion",
+        icon: <SlidersHorizontal />,
+        url: "/setup",
       },
     ],
   },
@@ -46,11 +51,6 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         title: "Mon compte",
         icon: <User2 />,
         url: "/account",
-      },
-      {
-        title: "Gestion",
-        icon: <SlidersHorizontal />,
-        url: "/setup",
       },
     ]
   },
