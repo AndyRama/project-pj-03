@@ -108,7 +108,7 @@ export function LandingHeader({ children }: PropsWithChildren) {
           ))}
         </motion.nav>
         <div className="hidden lg:contents">
-          <Link href="/prestation#concept">
+          <Link href="/#concept">
             <Button
               size="sm"
               className="mr-4 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
