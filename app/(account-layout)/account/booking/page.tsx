@@ -26,15 +26,14 @@ const BookingPage: React.FC = () => {
         </CardHeader>
         <CardContent>
           <Link
-            href={"https://cal.com/dr-sarah-johnson"}
-            target='_blank'
+            href="/account/booking/cabinet"
             className={cn(
               buttonVariants({ size: "md", variant: "default" }),
               "text-white border hover:border-orange-500 hover:text-orange-500",
             )}
           >
             <CalendarClock size={20} className="mr-2 hover:bg-orange-500" />
-            Prendre rendez-vous
+            Programmer notre 1er Rdv
           </Link>
         </CardContent>
       </Card >

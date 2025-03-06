@@ -5,11 +5,11 @@ import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 // import Navigation from "@/components/Navigation";
 import { Home, CalendarClock } from "lucide-react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
-export default function AppointmentBooking() {
-	const router = useRouter();
+export default function AppointmentPage() {
+	// const router = useRouter();
 
 	useEffect(() => {
 		(async function () {
@@ -25,10 +25,6 @@ export default function AppointmentBooking() {
 		})();
 	}, []);
 
-	const fadeIn = {
-		hidden: { opacity: 0, y: 20 },
-		visible: { opacity: 1, y: 0 }
-	};
 
 	return (
 		<>
