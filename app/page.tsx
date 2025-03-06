@@ -27,8 +27,9 @@ export default function HomePage() {
       <motion.div 
         className="mt-16"
         initial={{ y: -50, opacity: 0 }} 
-        animate={{ y: 0, opacity: 1 }} 
+        whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
       />
 
       <LandingHeader />
@@ -38,8 +39,9 @@ export default function HomePage() {
       <motion.div
         className="transform-gpu blur-3xl"
         initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
+        whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
       </motion.div>
@@ -47,8 +49,9 @@ export default function HomePage() {
       {/* Section "Qui suis-je ?" et "Philosophie" */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <FeaturesSection
           features={[
@@ -64,8 +67,9 @@ export default function HomePage() {
               component: (
                 <motion.div
                   initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 1 }}
+                  viewport={{ once: true }}
                 >
                   <Image
                     src="/images/jeremy2.jpg"
@@ -87,8 +91,9 @@ export default function HomePage() {
               component: (
                 <motion.div
                   initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 1, delay: 0.2 }}
+                  viewport={{ once: true }}
                 >
                   <Image
                     src="/images/colaborate.jpg"
@@ -107,8 +112,9 @@ export default function HomePage() {
       <motion.div
         className="transform-gpu blur-3xl"
         initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
+        whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
       </motion.div>
@@ -118,8 +124,9 @@ export default function HomePage() {
       {/* CardGrid Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <CardGrid />
       </motion.div>
@@ -129,8 +136,9 @@ export default function HomePage() {
       <motion.div
         className="transform-gpu blur-3xl"
         initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
+        whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
       </motion.div>
@@ -138,8 +146,9 @@ export default function HomePage() {
       {/* Section "Mon approche" */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <FeaturesSection
           features={[
@@ -153,8 +162,9 @@ export default function HomePage() {
               component: (
                 <motion.div
                   initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 1 }}
+                  viewport={{ once: true }}
                 >
                   <Image
                     src="/images/jeremy4.jpg"
@@ -173,8 +183,9 @@ export default function HomePage() {
       <motion.div
         className="transform-gpu blur-3xl"
         initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
+        whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
       </motion.div>
@@ -184,8 +195,9 @@ export default function HomePage() {
       {/* Blog Content */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <div className="flex flex-col items-center gap-2">
           <Typography variant="p" className="max-w-xl font-bold text-orange-500">
@@ -199,8 +211,9 @@ export default function HomePage() {
       <motion.div
         className="mt-28"
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <RecentPosts />
       </motion.div>
@@ -210,8 +223,9 @@ export default function HomePage() {
       {/* FeaturedProgram Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <div className="flex flex-col items-center gap-2" id="concept">
           <Typography variant="p" className="max-w-xl font-bold text-orange-500">
@@ -225,16 +239,18 @@ export default function HomePage() {
       <motion.div
         className="transform-gpu blur-3xl"
         initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
+        whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
       </motion.div>
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <FeatureProgram
           features={[
@@ -246,8 +262,9 @@ export default function HomePage() {
               component: (
                 <motion.div
                   initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 1 }}
+                  viewport={{ once: true }}
                 >
                   <Image
                     src="/images/post3.jpg"
@@ -271,8 +288,9 @@ export default function HomePage() {
               component: (
                 <motion.div
                   initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 1, delay: 0.2 }}
+                  viewport={{ once: true }}
                 >
                   <Image
                     src="/images/post5.jpg"
@@ -294,8 +312,9 @@ export default function HomePage() {
               component: (
                 <motion.div
                   initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 1, delay: 0.4 }}
+                  viewport={{ once: true }}
                 >
                   <Image
                     src="/images/post4.jpg"
@@ -314,8 +333,9 @@ export default function HomePage() {
       <motion.div
         className="transform-gpu blur-3xl"
         initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
+        whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
       </motion.div>
@@ -325,8 +345,9 @@ export default function HomePage() {
       {/* Reviews Grid Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <div className="flex flex-col items-center gap-2">
           <Typography variant="p" className="max-w-xl font-bold text-orange-500">
@@ -340,8 +361,9 @@ export default function HomePage() {
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         <ReviewGrid
           reviews={[
