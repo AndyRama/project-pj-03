@@ -207,7 +207,7 @@ export default function page() {
           />
 
           {/* Pricing Details */}
-          <PricingDetailsPlus />
+          <PricingDetailsPlus/>
 
           <div className="flex flex-col items-center gap-2">
             <Typography

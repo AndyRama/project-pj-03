@@ -108,12 +108,12 @@ export function LandingHeader({ children }: PropsWithChildren) {
           ))}
         </motion.nav>
         <div className="hidden lg:contents">
-          <Link href="/account">
+          <Link href="/prestation#concept">
             <Button
               size="sm"
-              className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
+              className="mr-4 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
             >
-              SignIn
+              Rejoignez-nous !
             </Button>
           </Link>
         </div>
@@ -162,12 +162,12 @@ export function LandingHeader({ children }: PropsWithChildren) {
                 ))}
               </div>
               <hr />
-              <Link href="/account">
+              <Link href="/#concept">
                 <Button
                   size="sm"
-                  className="bottom-0 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
+                  className="mr-4 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
                 >
-                  SignIn
+                  Rejoignez-nous !
                 </Button>
               </Link>
             </SheetContent>

@@ -113,7 +113,7 @@ export default function HomePage() {
       <SectionDivider />
 
       {/* FeaturedProgram Content */}
-      <div className="flex flex-col items-center gap-2">
+      <div className="flex flex-col items-center gap-2" id="concept">
         <Typography variant="p" className="max-w-xl font-bold text-orange-500">
           Programmes
         </Typography>
