@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
-import { FaUserEdit,FaLightbulb, FaRegCalendarCheck, FaHandsHelping } from 'react-icons/fa';
+import { FaUserEdit, FaLightbulb, FaRegCalendarCheck, FaHandsHelping } from 'react-icons/fa';
 import { BiNote } from "react-icons/bi";
-import { MdOutlineSportsKabaddi, MdOutlineFitnessCenter  } from "react-icons/md";
+import { MdOutlineSportsKabaddi, MdOutlineFitnessCenter } from "react-icons/md";
 
 interface Feature {
   icon: React.ElementType;
@@ -59,7 +59,7 @@ const features: Feature[] = [
     description2: "N'hésitez pas à me contacter pour un coaching personnalisé.",
   },
   {
-    icon: FaRegCalendarCheck ,
+    icon: FaRegCalendarCheck,
     title: "Proposez-vous des coachings individuels ?",
     description:
       "Oui, je propose des coachings individuels personnalisés pour répondre aux besoins spécifiques de chaque client. Voici ce que vous devez savoir :",
@@ -97,7 +97,7 @@ const features: Feature[] = [
     description2: "",
   },
   {
-    icon: FaHandsHelping ,
+    icon: FaHandsHelping,
     title: "Comment puis-je m'inscrire à un programme de coaching ?",
     description: "Pour vous inscrire à un programme de coaching, suivez ces étapes :",
     bullets: [
@@ -120,6 +120,9 @@ export const PricingDetailsPlus: React.FC<{ className?: string }> = ({ className
 
   return (
     <section className={`pb-20 ${className}`}>
+      <div className="transform-gpu blur-3xl">
+        <div className="absolute right-0 -z-20 h-64 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+      </div>
       <Layout>
         <LayoutContent className="container mx-auto px-4">
           <Typography variant="h3" className="text-center text-orange-500">
@@ -184,6 +187,9 @@ export const PricingDetailsPlus: React.FC<{ className?: string }> = ({ className
           </div>
         </LayoutContent>
       </Layout>
+      <div className="transform-gpu blur-3xl">
+        <div className="absolute left-0 -z-20 h-64 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+      </div>
     </section>
   );
 };
