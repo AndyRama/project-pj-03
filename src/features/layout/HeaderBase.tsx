@@ -117,14 +117,14 @@ export function HeaderBase({ children }: PropsWithChildren) {
               SignIn
             </Button>
           </Link>
-          <Link href="/dashboard">
+          {/* <Link href="/dashboard">
             <Button
               size="sm"
               className="mr-4 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
             >
               Admin
             </Button>
-          </Link>
+          </Link> */}
         </div>
 
         <div className="z-20 flex items-center gap-2 px-4 lg:hidden">
@@ -178,15 +178,15 @@ export function HeaderBase({ children }: PropsWithChildren) {
                   SignIn
                 </Button>
               </Link>
-              <hr />
-              <Link href="/dashboard">
+              {/* <hr /> */}
+              {/* <Link href="/dashboard">
                 <Button
                   size="sm"
                   className="mr-4 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
                 >
                   Admin
                 </Button>
-              </Link>
+              </Link> */}
               <hr />
               <ContactSupportDialog>
                 <Button variant="outline" size="md">
