@@ -3,13 +3,17 @@
 import Link from "next/link";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
-// import Navigation from "@/components/Navigation";
-import { Home, CalendarClock } from "lucide-react";
-// import { useRouter } from "next/navigation";
+import {
+	Layout,
+	LayoutActions,
+	LayoutHeader,
+	LayoutTitle,
+	LayoutContent
+} from "@/features/page/layout";
+import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function AppointmentPage() {
-	// const router = useRouter();
 
 	useEffect(() => {
 		(async function () {
@@ -27,31 +31,26 @@ export default function AppointmentPage() {
 
 
 	return (
-		<>
-			<div className="mx-auto flex items-center gap-6 px-4">
-				<div className="grid gap-8 lg:grid-cols-[1fr,400px]">
-					<div className="flex space-y-6">
-						<Link href="https://docto-mu.vercel.app">
-							<Button variant="ghost" className="flex-row items-center gap-2">
-								<Home className="size-4" />
-							  	Home
-							</Button>
-						</Link>
-						<Link href="https://docto-mu.vercel.app/account/booking">
-							<Button variant="ghost" className="flex-row items-center gap-2">
-								<CalendarClock className="size-4" />
-							  	Mes rendez-vous
-							</Button>
-						</Link>
-					</div>
-				</div>
-			</div>
-			<Cal
-				namespace="20min-merignac"
-				calLink="dr-sarah-johnson/20min-merignac"
-				style={{ width: "100%", height: "100%", overflow: "auto" }}
-				config={{ layout: "month_view" }}
-			/>
-		</>
+		<Layout>
+			<LayoutHeader>
+				<LayoutTitle>Rendez-vous</LayoutTitle>
+			</LayoutHeader>
+			<LayoutActions className="flex gap-2">
+				<Link href="/account/booking/calendar">
+					<Button variant="outline">
+						<ArrowLeft className="size-4" />
+						Retour
+					</Button>
+				</Link>
+			</LayoutActions>
+			<LayoutContent>
+				<Cal
+					namespace="20min-vendays"
+					calLink="dr-sarah-johnson/20min-vendays"
+					style={{ width: "100%", height: "100%", marginTop: "20px", overflow: "auto" }}
+					config={{ layout: "month_view" }}
+				/>
+			</LayoutContent>
+		</Layout>
 	);
 }

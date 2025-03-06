@@ -26,7 +26,7 @@ const BookingPage: React.FC = () => {
         </CardHeader>
         <CardContent>
           <Link
-            href="/account/booking/cabinet"
+            href="/account/booking/calendar"
             className={cn(
               buttonVariants({ size: "md", variant: "default" }),
               "text-white border hover:border-orange-500 hover:text-orange-500",
