@@ -4,6 +4,8 @@ import {
   LayoutDashboard,
   Settings,
   TextSelect,
+  SlidersHorizontal,
+  CalendarClock,
   } from "lucide-react";
 
 
@@ -20,6 +22,11 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         icon: <Settings />,
         url: "/settings",
       },
+      {
+        title: "Paramètres",
+        icon: <SlidersHorizontal />,
+        url: "/setup",
+      },
     ],
   },
   {
@@ -28,6 +35,11 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
       {
         title: "Plan alimentaire",
         icon: <TextSelect />,
+        url: "/alimentaire",
+      },
+      {
+        title: "Agenda",
+        icon: <CalendarClock />,
         url: "/alimentaire",
       },
     ],
