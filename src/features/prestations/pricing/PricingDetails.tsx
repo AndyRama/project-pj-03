@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { IoFitness } from "react-icons/io5";
-import { MdOutlineSportsKabaddi, MdSportsMartialArts, MdOutlineFitnessCenter  } from "react-icons/md";
+import { MdOutlineSportsKabaddi, MdSportsMartialArts, MdOutlineFitnessCenter } from "react-icons/md";
 import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
 
@@ -22,13 +22,13 @@ const PricingContentDetails: { features: Feature[] } = {
         "Prise de masse musculaire : Si votre objectif est de sculpter et tonifier votre corps, gagner en volume, la méthode adaptée est la prise de masse musculaire. Elle repose sur un entrainement adapté et rigoureux et également sur une alimentation saine, variée, riche en protéines (animales et/ou végétales) et en glucides. Pour cela, je vous propose des programmes musculation et alimentaire adaptés à vos objectifs et à votre niveau.",
     },
     {
-      icon: MdOutlineSportsKabaddi ,
+      icon: MdOutlineSportsKabaddi,
       title: "Préparation aux Compétitions",
       description:
         "Coaching spécialisé pour les athlètes : si la compétition, le dépassement de soi et la discipline sont essentiels à votre vie et à votre bien-être, se fixer des objectifs concrets est un moyen efficace de les atteindre. Je vous propose un suivi musculation et alimentaire personnalisés pour relever les défis que vous vous fixerez. En tant qu’athlète, je sais également que le mental est mis à rude épreuve lors des préparations. Je serais également présent pour vous écouter et vous rebooster lorsque cela sera nécessaire.",
     },
     {
-      icon: MdSportsMartialArts ,
+      icon: MdSportsMartialArts,
       title: "Maintien de l'Activité Physique",
       description:
         "Perte de poids : Si votre objectif est la perte de masse grasse, la méthode adaptée repose sur une alimentation saine et raisonnée et sur un entrainement rigoureux. L’objectif étant certes la perte de poids mais surtout que celle-ci s’inscrive dans la durée. Pour cela il est nécessaire d’avoir un suivi régulier et personnalisé et surtout d’avancer main dans la main avec moi. Le mental jouant un très grand rôle, vous devez garder en tête que je suis également présent pour être à votre écoute. Je suis convaincu que pour réussir, notre relation doit être basée sur la confiance et la transparence.",
@@ -45,10 +45,10 @@ const PricingContentDetails: { features: Feature[] } = {
 export const PricingDetails: React.FC<{ className?: string }> = ({ className }) => {
   return (
     <section className={`pb-20 ${className}`}>
+      <div className="transform-gpu blur-3xl">
+        <div className="absolute left-0 -z-20 h-64 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+      </div>
       <Layout>
-        <div className="transform-gpu blur-3xl">
-          <div className="absolute left-0 -z-20 h-64 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-        </div>
         <LayoutContent className="container mx-auto px-4">
           <Typography variant="h3" className="text-center text-orange-500">
             Ce que tu obtiens
@@ -76,11 +76,11 @@ export const PricingDetails: React.FC<{ className?: string }> = ({ className }) 
                       className="relative z-40 flex items-start gap-3"
                     >
                       <div>
-                    
+
                         <Typography variant="h3" className="mb-4 flex ">
-                        <span className="mr-4 text-3xl text-orange-500">
-                        <feature.icon />
-                      </span>
+                          <span className="mr-4 text-3xl text-orange-500">
+                            <feature.icon />
+                          </span>
                           {feature.title}
                         </Typography>
                         <Typography
