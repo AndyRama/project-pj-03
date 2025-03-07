@@ -34,7 +34,7 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
           </div>
           <nav className="flex flex-1 items-center justify-end space-x-1">
             <ContactSupportDialog>
-              <Button variant="default" size="sm" className="mr-2">
+              <Button variant="default" size="sm" className="md:content mr-2 hidden">
                 Support
               </Button>
             </ContactSupportDialog>

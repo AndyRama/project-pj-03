@@ -13,15 +13,26 @@ export default function RouteError({ error }: ErrorParams) {
   }, [error]);
 
   return (
-    <Card className="p-4">
-      <CardHeader>
-        <CardTitle>
-          Vous devez être authentifié pour accéder à cette page.
-        </CardTitle>
-      </CardHeader>
-      <CardFooter>
-        <SignInButton variant="invert" size="md" />
-      </CardFooter>
-    </Card>
+    <div className="flex h-screen w-full">
+      {/* Empty side navigation */}
+      <div className="w-1/5 bg-gray-100"></div>
+      
+      {/* Main content */}
+      <div className="flex flex-1 items-center justify-center">
+        <Card className="w-full max-w-md p-4">
+          <CardHeader>
+            <CardTitle>
+              Vous devez être authentifié pour accéder à cette page.
+            </CardTitle>
+          </CardHeader>
+          <CardFooter>
+            <SignInButton variant="invert" size="md" />
+          </CardFooter>
+        </Card>
+      </div>
+      
+      {/* Empty side navigation */}
+      <div className="w-1/5 bg-gray-100"></div>
+    </div>
   );
 }
