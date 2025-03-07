@@ -46,7 +46,7 @@ export default function HomePage() {
         viewport={{ once: true }}
       >
       <div className="transform-gpu blur-3xl">
-        <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+        <div className="md:content absolute left-0 -z-20 hidden h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
       </div>
         <FeaturesSection
           features={[
@@ -102,6 +102,9 @@ export default function HomePage() {
             },
           ]}
         />
+        <div className="transform-gpu blur-3xl">
+          <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+        </div>
       </motion.div>
 
       <SectionDivider />
@@ -113,9 +116,6 @@ export default function HomePage() {
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        <div className="transform-gpu blur-3xl">
-          <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-        </div> 
         <CardGrid />
       </motion.div>
 
@@ -129,7 +129,7 @@ export default function HomePage() {
         viewport={{ once: true }}
       >
         <div className="transform-gpu blur-3xl">
-          <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+          <div className="md:content absolute left-0 -z-20 hidden h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
         </div>   
         <FeaturesSection
           features={[
@@ -159,6 +159,9 @@ export default function HomePage() {
             },
           ]}
         />
+        <div className="transform-gpu blur-3xl">
+          <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+        </div> 
       </motion.div>
 
       <SectionDivider />
@@ -170,9 +173,6 @@ export default function HomePage() {
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        <div className="transform-gpu blur-3xl">
-          <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-        </div>
         <div className="flex flex-col items-center gap-2">
           <Typography variant="p" className="max-w-xl font-bold text-orange-500">
             Recentes
@@ -219,7 +219,7 @@ export default function HomePage() {
         viewport={{ once: true }}
       >
       <div className="transform-gpu blur-3xl">
-        <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+        <div className="md:content absolute left-0 -z-20 hidden h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
       </div>
         <FeatureProgram
           features={[
@@ -297,6 +297,9 @@ export default function HomePage() {
             },
           ]}
         />
+        <div className="transform-gpu blur-3xl">
+          <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+        </div>
       </motion.div>
 
       <SectionDivider />
@@ -309,7 +312,7 @@ export default function HomePage() {
         viewport={{ once: true }}
       >
         <div className="transform-gpu blur-3xl">
-          <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+          <div className="md:content absolute left-0 -z-20 hidden h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
         </div>
         <div className="flex flex-col items-center gap-2">
           <Typography variant="p" className="max-w-xl font-bold text-orange-500">
@@ -318,6 +321,9 @@ export default function HomePage() {
           <Typography variant="h2" className="m-auto max-w-xl text-center">
             Ce qu'ils pensent de mes <u>services </u>!
           </Typography>
+        </div>
+        <div className="transform-gpu blur-3xl">
+          <div className="md:content absolute left-0 -z-20 hidden h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
         </div>
       </motion.div>
 
@@ -378,7 +384,7 @@ export default function HomePage() {
       <EmailFormSection />
 
       <Footer />
-      
+
       <FloatingLegalFooter />
     </motion.div>
   );
