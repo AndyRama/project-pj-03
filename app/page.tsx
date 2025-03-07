@@ -17,7 +17,7 @@ import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
 
 export default function HomePage() {
   return (
-    < 
+    <motion.div 
       className="relative flex h-fit flex-col bg-background text-foreground"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
