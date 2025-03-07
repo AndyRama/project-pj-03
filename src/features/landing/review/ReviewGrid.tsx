@@ -1,4 +1,3 @@
-// import { Typography } from "@/components/ui/typography";
 import { SectionLayout } from "../SectionLayout";
 import type { ReviewItemProps } from "./ReviewItem";
 import { ReviewItem } from "./ReviewItem";

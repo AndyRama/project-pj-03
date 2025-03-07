@@ -23,7 +23,7 @@ export const FAQSection = (props: FeaturesPreviewProps) => {
   return (
     <>
       <div className="transform-gpu blur-3xl">
-        <div className="absolute left-0 -z-20 h-64 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+        <div className="absolute right-0 -z-20 h-64 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
       </div>
       <SectionLayout size="lg" className="flex max-lg:flex-col">
         <div className="flex-1 space-y-2">
@@ -52,7 +52,7 @@ export const FAQSection = (props: FeaturesPreviewProps) => {
         </div>
       </SectionLayout>
       <div className="transform-gpu blur-3xl">
-        <div className="absolute right-0 -z-20 h-64 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+        <div className="absolute left-0 -z-20 h-64 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
       </div>
     </>
   );

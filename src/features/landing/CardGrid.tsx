@@ -39,7 +39,7 @@ export const CardImage = ({ title, years, image, index }: CardImageProps) => {
             alt={title}
             width={400}
             height={400}
-            className="h-[300px] w-full rounded-[10px] object-cover object-center transition-all duration-300 ease-in-out hover:rounded-[10px] group-hover:scale-110"
+            className="h-[400px] w-full rounded-[10px] object-cover object-center transition-all duration-300 ease-in-out hover:rounded-[10px] group-hover:scale-110"
           />
         </CardHeader>
         <CardContent>

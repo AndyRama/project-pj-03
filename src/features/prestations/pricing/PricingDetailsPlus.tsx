@@ -121,7 +121,7 @@ export const PricingDetailsPlus: React.FC<{ className?: string }> = ({ className
   return (
     <section className={`pb-20 ${className}`}>
       <div className="transform-gpu blur-3xl">
-        <div className="absolute right-0 -z-20 h-64 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+        <div className="absolute left-0 -z-20 h-64 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
       </div>
       <Layout>
         <LayoutContent className="container mx-auto px-4">
@@ -188,7 +188,7 @@ export const PricingDetailsPlus: React.FC<{ className?: string }> = ({ className
         </LayoutContent>
       </Layout>
       <div className="transform-gpu blur-3xl">
-        <div className="absolute left-0 -z-20 h-64 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+        <div className="absolute right-0 -z-20 h-64 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
       </div>
     </section>
   );
