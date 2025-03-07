@@ -1,6 +1,6 @@
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import React from 'react';
 
 const AlimentairePage: React.FC = () => {
   return (
@@ -8,17 +8,17 @@ const AlimentairePage: React.FC = () => {
       <h1 className="mb-4 text-2xl font-bold">Explore all Alimentaire</h1>
       <p>Welcome to the Alimentaire page. Here you can begin to explore some ressources.</p>
       {/* Add more components or functionality for course creation here */}
-      <Link href="/month 1">
+      <Link href="account/alimentaire/month-1">
         <Button>
           test
         </Button>
        </Link>
-      <Link href="/month 2">
+      <Link href="account/alimentaire/month-2">
         <Button>
           test
         </Button>
        </Link>
-      <Link href="/month 3">
+      <Link href="account/alimentaire/month-3">
         <Button>
           test
         </Button>
