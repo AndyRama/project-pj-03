@@ -43,13 +43,16 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
           </nav>
         </div>
       </header>
+
       {/* Desktop ONLY Navigation bar */}
       <Layout className="flex flex-row items-start gap-4">
         {user ? (
           <DesktopVerticalMenu links={ACCOUNT_LINKS} className="max-lg:hidden" />
         ) : <Separator className="max-lg:hidden" orientation="vertical" />}
         <Separator className="max-lg:hidden" orientation="vertical" />
-        <main className="flex-1 px-4">{props.children}</main>
+        <main className="py-4 lg:max-h-[calc(100vh_-_64px)] lg:flex-1 lg:overflow-auto lg:py-8">
+          {props.children}
+        </main>
       </Layout>
     </div>
   );
