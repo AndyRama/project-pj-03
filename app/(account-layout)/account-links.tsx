@@ -26,19 +26,17 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
       { url: "/account/booking", title: "Booking", icon: <CalendarClock /> },
     ],
   },
-  // {
-  //   title: "Ressources",
-  //   links: [
-  //     { url: "/account/ebook", title: "Ebooks", icon: <BookOpenText  /> },
-  //     { url: "/posts", title: "Posts", icon: <StickyNote /> },
-  //   ],
-  // },
   {
     title: "Mention légal",
     links: [
-      { url: "/account/billing", title: "Billing", icon: <Coins /> },
       { url: "/account/cgv", title: "Cgv", icon: <FileKey2 /> },
       { url: "/account/terms", title: "Terms", icon: <FileLock2 /> },
+    ],
+  },
+  {
+    title: "Abonnement",
+    links: [
+      { url: "/account/billing", title: "Billing", icon: <Coins /> },
     ],
   },
 ];
