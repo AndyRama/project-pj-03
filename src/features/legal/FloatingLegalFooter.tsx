@@ -29,9 +29,9 @@ export const FloatingLegalFooter: React.FC = () => {
         </Link>
         <Link
           className="text-xs text-muted-foreground hover:underline"
-          href="/legal/cvg"
+          href="/legal/cgv"
         >
-          Cvg
+          Cgv
         </Link>
         <Image src={SiteConfig.appIcon} width={12} height={12} alt="app icon" />
       </div>

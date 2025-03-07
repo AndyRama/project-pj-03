@@ -49,8 +49,8 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
         ) : <Separator className="max-lg:hidden" orientation="vertical" />}
         <Separator className="max-lg:hidden" orientation="vertical" />
         <main className="py-4 lg:max-h-[calc(100vh_-_64px)] lg:flex-1 lg:overflow-auto lg:py-8">
-
-          {props.children}</main>
+          {props.children}
+        </main>
       </Layout>
     </div>
   );

@@ -17,7 +17,7 @@ export default function AppointmentPage() {
 
 	useEffect(() => {
 		(async function () {
-			const cal = await getCalApi({ namespace: "consulation-visio-unlcoaching" });
+			const cal = await getCalApi({ namespace: "1rdv" });
 			cal("ui", {
 				cssVarsPerTheme: {
 					light: { "cal-brand": " #ff7f00" },
@@ -45,8 +45,8 @@ export default function AppointmentPage() {
 			</LayoutActions>
 			<LayoutContent>
 				<Cal
-					namespace="consulation-visio-unlcoaching"
-					calLink="dr-sarah-johnson/consulation-visio-unlcoaching"
+					namespace="1rdv"
+					calLink="unlcoaching/1rdv"
 					style={{ width: "100%", height: "100%", marginTop: "20px", overflow: "scroll" }}
 					config={{ layout: "month_view" }}
 				/>
