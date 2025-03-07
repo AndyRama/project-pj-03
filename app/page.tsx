@@ -17,7 +17,7 @@ import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
 
 export default function HomePage() {
   return (
-    <motion.div 
+    < 
       className="relative flex h-fit flex-col bg-background text-foreground"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -36,15 +36,9 @@ export default function HomePage() {
 
       <Hero />
 
-      <motion.div
-        className="transform-gpu blur-3xl"
-        initial={{ scale: 0.8, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
+      <div className="transform-gpu blur-3xl">
         <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-      </motion.div>
+      </div>
 
       {/* Section "Qui suis-je ?" et "Philosophie" */}
       <motion.div
@@ -109,15 +103,9 @@ export default function HomePage() {
         />
       </motion.div>
 
-      <motion.div
-        className="transform-gpu blur-3xl"
-        initial={{ scale: 0.8, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-      </motion.div>
+      <div className="transform-gpu blur-3xl">
+        <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+      </div> 
 
       <SectionDivider />
 
@@ -133,15 +121,9 @@ export default function HomePage() {
 
       <SectionDivider />
 
-      <motion.div
-        className="transform-gpu blur-3xl"
-        initial={{ scale: 0.8, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
+      <div className="transform-gpu blur-3xl">
         <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-      </motion.div>
+      </div>      
 
       {/* Section "Mon approche" */}
       <motion.div
@@ -180,15 +162,9 @@ export default function HomePage() {
         />
       </motion.div>
 
-      <motion.div
-        className="transform-gpu blur-3xl"
-        initial={{ scale: 0.8, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-      </motion.div>
+      <div className="transform-gpu blur-3xl">
+        <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+      </div>
 
       <SectionDivider />
 
@@ -208,6 +184,7 @@ export default function HomePage() {
           </Typography>
         </div>
       </motion.div>
+
       <motion.div
         className="mt-28"
         initial={{ opacity: 0, y: 50 }}
@@ -236,15 +213,10 @@ export default function HomePage() {
           </Typography>
         </div>
       </motion.div>
-      <motion.div
-        className="transform-gpu blur-3xl"
-        initial={{ scale: 0.8, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-      </motion.div>
+
+      <div className="transform-gpu blur-3xl">
+        <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+      </div>
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -330,15 +302,9 @@ export default function HomePage() {
         />
       </motion.div>
 
-      <motion.div
-        className="transform-gpu blur-3xl"
-        initial={{ scale: 0.8, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
+      <div className="transform-gpu blur-3xl">
         <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-      </motion.div>
+      </div>
 
       <SectionDivider />
 
