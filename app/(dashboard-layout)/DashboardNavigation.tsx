@@ -82,7 +82,6 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
               <AuthButton />
               <MobileDropdownMenu className="lg:hidden" links={DASHBOARD_LINKS} />
             </nav>
-
           </div>
         </header>
 

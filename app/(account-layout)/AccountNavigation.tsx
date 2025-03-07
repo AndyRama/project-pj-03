@@ -17,39 +17,40 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
   const user = await auth();
 
   return (
-    <div className="flex h-full flex-col lg:flex-row lg:overflow-hidden">
-      <div className="flex size-full max-w-[240px] flex-col border-r border-border px-2 py-4 max-lg:hidden">
-        {/* <header className="w-full border-b bg-background max-lg:sticky max-lg:top-0 max-lg:z-40"> */}
-        {/* <div className="flex h-16 items-center space-x-2 sm:justify-between sm:space-x-0"> */}
-        <div className="flex items-center gap-2">
-          <Image
-            src={SiteConfig.appIcon}
-            alt="app logo"
-            width={32}
-            height={32}
-            className="ml-2"
-          />
-          <Link href="/" className="text-lg font-bold ">
-            {SiteConfig.title}
-          </Link>
+    <div className="flex min-h-full flex-col">
+      <header className="w-full border-b bg-background max-lg:sticky max-lg:top-0 max-lg:z-40">
+        <div className="flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+          <div className="flex items-center gap-2">
+            <Image
+              src={SiteConfig.appIcon}
+              alt="app logo"
+              width={32}
+              height={32}
+            />
+            <Link href="/" className="text-lg font-bold ">
+              {SiteConfig.title}
+            </Link>
+          </div>
+          <nav className="flex flex-1 items-center justify-end space-x-1">
+            <ContactSupportDialog>
+              <Button variant="default" size="sm" className="mr-4">
+                Support
+              </Button>
+            </ContactSupportDialog>
+            <AuthButton />
+            <MobileDropdownMenu className="lg:hidden" links={ACCOUNT_LINKS} />
+          </nav>
         </div>
-        <nav className="flex flex-1 items-center justify-end space-x-1">
-          <ContactSupportDialog>
-            <Button variant="default" size="sm" className="md:content mr-2 hidden">
-              Support
-            </Button>
-          </ContactSupportDialog>
-          <AuthButton />
-          <MobileDropdownMenu className="lg:hidden" links={ACCOUNT_LINKS} />
-        </nav>
-      </div>
+      </header>
       {/* Desktop ONLY Navigation bar */}
       <Layout className="flex flex-row items-start gap-4">
         {user ? (
           <DesktopVerticalMenu links={ACCOUNT_LINKS} className="max-lg:hidden" />
         ) : <Separator className="max-lg:hidden" orientation="vertical" />}
         <Separator className="max-lg:hidden" orientation="vertical" />
-        <main className="flex-1 px-4">{props.children}</main>
+        <main className="py-4 lg:max-h-[calc(100vh_-_64px)] lg:flex-1 lg:overflow-auto lg:py-8">
+
+          {props.children}</main>
       </Layout>
     </div>
   );
