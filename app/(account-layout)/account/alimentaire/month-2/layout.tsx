@@ -11,7 +11,7 @@ export default async function RouteLayout(
   return (
     <>
       <Layout>
-        <LayoutTitle>Plan Alimentaire month 2</LayoutTitle>
+        <LayoutTitle>Plan Alimentaire  Bilan 2</LayoutTitle>
         <LayoutContent className="mt-8 flex items-start gap-4 max-lg:flex-col">
           <div className="w-full flex-1">{props.children}</div>
         </LayoutContent>
