@@ -30,7 +30,7 @@ export const CardImage = ({ title, years, image, index }: CardImageProps) => {
         },
       }}
       viewport={{ once: true }}
-      className="group relative overflow-hidden"
+      className="group relative"
     >
       <Card className="border-none bg-transparent ">
         <CardHeader className="p-0">
@@ -81,7 +81,7 @@ export const CardGridImage = () => {
       <div className="container mx-auto -mt-32 mb-2 justify-center rounded-r-md md:flex md:px-4">
         <div
           className="mx-auto mt-10 grid
-           w-full grid-cols-1 gap-6 text-gray-500 md:grid-cols-2 
+           w-full grid-cols-1 gap-4 text-gray-500 md:grid-cols-2 md:gap-6 
            lg:w-10/12 lg:grid-cols-4"
         >
           {cards.slice(0, 4).map((card, index) => (
