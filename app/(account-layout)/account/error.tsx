@@ -22,7 +22,6 @@ export default function RouteError({ error }: ErrorParams) {
       <CardFooter>
         <SignInButton variant="invert" size="md" />
       </CardFooter>
-    </Card>
-
+    </Card>    
   );
 }
