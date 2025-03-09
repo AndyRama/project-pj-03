@@ -17,6 +17,8 @@ import {
 import type { PageParams } from "@/types/next";
 import Link from "next/link";
 import { getError } from "./auth-error-mapping";
+import { LogoSvg } from "@/components/svg/Logo";
+
 
 export default async function AuthErrorPage(props: PageParams<{}>) {
   const { errorMessage, error } = getError(props.searchParams.error);
@@ -26,7 +28,8 @@ export default async function AuthErrorPage(props: PageParams<{}>) {
       <HeaderBase />
       <Layout>
         <LayoutHeader>
-          <LayoutTitle>Authentification Error</LayoutTitle>
+           <LogoSvg/>
+          <LayoutTitle>Authentification Erreur</LayoutTitle>
         </LayoutHeader>
         <LayoutContent>
           <Card variant="error">

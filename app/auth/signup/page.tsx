@@ -1,3 +1,4 @@
+import { LogoSvg } from "@/components/svg/Logo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Loader } from "@/components/ui/loader";
 import { Typography } from "@/components/ui/typography";
@@ -38,6 +39,7 @@ export default async function AuthSignInPage() {
       <div className="flex flex-1 items-center justify-center">
         <Card className="w-full max-w-md">
           <CardHeader className="flex flex-col items-center justify-center">
+            <LogoSvg />
             <CardTitle>Sign up</CardTitle>
           </CardHeader>
           <CardContent>
