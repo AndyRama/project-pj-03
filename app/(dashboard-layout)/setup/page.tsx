@@ -29,13 +29,12 @@ export default async function RoutePage(props: PageParams) {
               <CardDescription>
                 Contacter moi directement pour un support
               </CardDescription>
-              <ContactSupportDialog>
-                <Button variant="default" size="sm" className="mr-4">
-                  Support
-                </Button>
-              </ContactSupportDialog>
               <div className="flex flex-row gap-2">
-                <Button variant="default" className="rounded-[10px] border-orange-600 hover:text-orange-600">Support</Button>
+                <ContactSupportDialog>
+                  <Button variant="default" size="sm" className="mr-4">
+                    Support
+                  </Button>
+                </ContactSupportDialog>
               </div>
             </CardHeader>
           </Card>
