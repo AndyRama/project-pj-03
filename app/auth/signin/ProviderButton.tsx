@@ -68,7 +68,7 @@ export const ProviderButton = (props: ProviderButtonProps) => {
     <Button
       className={clsx({
         "border-gray-500 bg-white text-black hover:bg-white": data.name === "Google",
-        // "border-gray-500 bg-black text-white hover:bg-gray-950": data.name === "Github"
+        "border-gray-500 bg-black text-white hover:bg-gray-950": data.name === "Github"
       })}
       size="lg"
       onClick={() => {
