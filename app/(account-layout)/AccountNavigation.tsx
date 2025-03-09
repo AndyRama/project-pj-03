@@ -1,5 +1,4 @@
 import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
 import { Layout, } from "@/features/page/layout";
 import { SiteConfig } from "@/site-config";
 import Image from "next/image";
@@ -10,7 +9,6 @@ import { MobileDropdownMenu } from "../../src/features/navigation/MobileDropdown
 import { ACCOUNT_LINKS } from "./account-links";
 import { auth } from "@/lib/auth/helper";
 import { AuthButton } from "@/features/auth/AuthButton";
-
 
 export const AccountNavigation = async (props: PropsWithChildren) => {
   const user = await auth();
