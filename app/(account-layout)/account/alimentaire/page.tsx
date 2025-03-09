@@ -1,31 +1,20 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import type { PageParams } from "@/types/next";
+import { SettingsAlimentaireForm } from "./SettingsAlimentaireForm";
 
-const AlimentairePage: React.FC = () => {
+export default async function RoutePage(props: PageParams<{}>) {
+  /**
+   * Usually in this page you would fetch the data from the database
+   * So the form mount with the current data
+   */
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="mb-4 text-2xl font-bold">Explore all Alimentaire</h1>
-      <p>Welcome to the Alimentaire page. Here you can begin to explore some ressources.</p>
-      {/* Add more components or functionality for course creation here */}
-      <Link href="/account/alimentaire/month-1">
-        <Button>
-          test
-        </Button>
-       </Link>
-      <Link href="/account/alimentaire/month-2">
-        <Button>
-          test
-        </Button>
-       </Link>
-      <Link href="/account/alimentaire/month-3">
-        <Button>
-          test
-        </Button>
-       </Link>
-    </div>
-    
+    <SettingsAlimentaireForm
+      defaultValues={{
+        firstName: "",
+        lastName: "",
+        age: "",
+        size: "",
+        weight: "",
+      }}
+    />
   );
-};
-
-export default AlimentairePage;
+}
