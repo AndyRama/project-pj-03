@@ -2,6 +2,8 @@
 
 import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { SignInButton } from "@/features/auth/SignInButton";
+import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
+
 import { logger } from "@/lib/logger";
 import type { ErrorParams } from "@/types/next";
 import { useEffect } from "react";
@@ -21,6 +23,11 @@ export default function RouteError({ error }: ErrorParams) {
       </CardHeader>
       <CardFooter>
         <SignInButton variant="invert" size="md" />
+        <ContactSupportDialog>
+          <Button variant="default" size="sm" className="mr-2">
+              Support
+            </Button>
+          </ContactSupportDialog>
       </CardFooter>
     </Card>    
   );

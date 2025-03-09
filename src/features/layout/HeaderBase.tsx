@@ -10,7 +10,6 @@ import { Menu } from "react-feather";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
-import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
 
 function useBoundedScroll(threshold: number) {
   const { scrollY } = useScroll();
@@ -171,11 +170,6 @@ export function HeaderBase({ children }: PropsWithChildren) {
                 </Button>
               </Link>
               <hr />
-              <ContactSupportDialog>
-                <Button variant="outline" size="md">
-                  Support
-                </Button>
-              </ContactSupportDialog>
             </SheetContent>
           </Sheet>
         </div>
