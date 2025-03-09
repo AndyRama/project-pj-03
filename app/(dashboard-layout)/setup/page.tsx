@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import {
   Layout,
   LayoutContent,
@@ -13,6 +12,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import type { PageParams } from "@/types/next";
+import { Button } from "@/components/ui/button";
+import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
 
 export default async function RoutePage(props: PageParams) {
   return (
@@ -21,13 +22,18 @@ export default async function RoutePage(props: PageParams) {
         <LayoutTitle>Setup Page</LayoutTitle>
       </LayoutHeader>
       <LayoutContent>
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
           <Card className="p-4">
             <CardHeader>
               <CardTitle>Support</CardTitle>
               <CardDescription>
                 Contacter moi directement pour un support
               </CardDescription>
+              <ContactSupportDialog>
+                <Button variant="default" size="sm" className="mr-4">
+                  Support
+                </Button>
+              </ContactSupportDialog>
               <div className="flex flex-row gap-2">
                 <Button variant="default" className="rounded-[10px] border-orange-600 hover:text-orange-600">Support</Button>
               </div>
