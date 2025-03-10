@@ -8,7 +8,7 @@ import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
 const CvgPage = () => {
   return (
     <> 
-      <SectionLayout size="lg" variant="default" className="mx-auto mt-[-20px] overflow-hidden ">
+      <SectionLayout size="lg" variant="default" className="mx-auto mt-[-20px]">
         {/* Header */}
         <header>
           <Typography variant="h1" className="mb-2 text-2xl font-bold md:text-3xl">
