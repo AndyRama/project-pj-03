@@ -3,6 +3,7 @@ import {
   LayoutContent,
   LayoutHeader,
   LayoutTitle,
+  LayoutActions,
 } from "@/features/page/layout";
 import {
   Card,
@@ -30,6 +31,9 @@ export default async function RoutePage(props: PageParams) {
       <LayoutHeader>
         <LayoutTitle>Gestion des services</LayoutTitle>
       </LayoutHeader>
+      <LayoutActions>
+        <Button variant="default">05.56.34.94.69</Button>
+      </LayoutActions>
       <LayoutContent>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-4">
           {services.map((service) => (

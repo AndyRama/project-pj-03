@@ -1,13 +1,28 @@
-import React from 'react';
+import { Button } from "@/components/ui/button";
+import {
+  Layout,
+  LayoutContent,
+  LayoutHeader,
+  LayoutTitle,
+  LayoutActions,
+} from "@/features/page/layout";
 
-const AgendaPage: React.FC = () => {
+const AlimentairePlanPage: React.FC = () => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="mb-4 text-2xl font-bold">Create Agenda</h1>
-      <p>Welcome to the Agenda page create. Here you can begin to create some ressources.</p>
-      {/* Add more components or functionality for course creation here */}
+    <div className="mx-auto p-4">
+      <Layout>
+        <LayoutHeader>
+          <LayoutTitle>Agenda | call visio</LayoutTitle>
+        </LayoutHeader>
+        <LayoutActions className="flex gap-2">          
+          <Button variant="outline">Retour</Button>
+          <Button variant="default">Create</Button>
+        </LayoutActions>
+        <LayoutContent>
+        </LayoutContent>
+      </Layout>
     </div>
   );
 };
 
-export default AgendaPage;
+export default AlimentairePlanPage;

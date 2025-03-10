@@ -14,7 +14,7 @@ const CoursesPage: React.FC = () => {
         <LayoutHeader>
           <LayoutTitle>Cours | page Create cours</LayoutTitle>
         </LayoutHeader>
-        <LayoutActions>
+        <LayoutActions className="flex gap-2">
           <Button variant="outline">Retour</Button>
           <Button variant="default">Create</Button>
         </LayoutActions>

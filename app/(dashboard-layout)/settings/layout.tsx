@@ -14,7 +14,7 @@ export default async function RouteLayout(
   return (
     <Layout>
       <LayoutHeader>
-        <LayoutTitle>Settings</LayoutTitle>
+        <LayoutTitle>Paramètre</LayoutTitle>
         <LayoutDescription>
           This is a modern form for your application. Feel free to edit it as
           you like.

@@ -14,7 +14,7 @@ const AlimentairePlanPage: React.FC = () => {
         <LayoutHeader>
           <LayoutTitle>Plan Alimentaire | Tableau des utitlsateurs</LayoutTitle>
         </LayoutHeader>
-        <LayoutActions>
+        <LayoutActions className="flex gap-2">          
           <Button variant="outline">Retour</Button>
           <Button variant="default">Create</Button>
         </LayoutActions>

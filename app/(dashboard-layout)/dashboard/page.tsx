@@ -6,6 +6,7 @@ import {
 } from "@/features/page/layout";
 import type { PageParams } from "@/types/next";
 import { SubscribersChart } from "./SubscribersChart";
+import InformationCards from "./InformationCards";
 
 
 export default async function RoutePage(props: PageParams<{}>) {
@@ -14,7 +15,8 @@ export default async function RoutePage(props: PageParams<{}>) {
       <LayoutHeader>
         <LayoutTitle>Dashboard</LayoutTitle>
       </LayoutHeader>
-      <LayoutContent>     
+      <LayoutContent> 
+        <InformationCards />    
         <SubscribersChart />
       </LayoutContent>
     </Layout>
