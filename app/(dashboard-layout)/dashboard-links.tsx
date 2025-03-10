@@ -17,10 +17,14 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         icon: <LayoutDashboard />,
         url: "/dashboard",
       },
+    ],
+  },
+  {
+    links: [
       {
-        title: "Paramètres",
-        icon: <Settings />,
-        url: "/settings",
+        title: "Gestion",
+        icon: <SlidersHorizontal />,
+        url: "/setup",
       },
     ],
   },
@@ -38,7 +42,7 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         url: "/alimentaire",
       },
       {
-        title: "Gestion",
+        title: "Post",
         icon: <SlidersHorizontal />,
         url: "/setup",
       },
@@ -47,6 +51,11 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
   {
     title: "Utilisateur",
     links: [
+      {
+        title: "Paramètres",
+        icon: <Settings />,
+        url: "/settings",
+      },
       {
         title: "Mon compte",
         icon: <User2 />,

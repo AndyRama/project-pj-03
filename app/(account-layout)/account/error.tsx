@@ -18,7 +18,7 @@ export default function RouteError({ error }: ErrorParams) {
     <Card className="p-4">
       <CardHeader>
         <CardTitle>
-          Vous devez être authentifié pour accéder à cette page.
+          Pour accéder à cette page, Vous devez être authentifié sur le site.
         </CardTitle>
       </CardHeader>
       <CardFooter>
