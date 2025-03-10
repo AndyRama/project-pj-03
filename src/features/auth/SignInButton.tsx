@@ -44,7 +44,7 @@ export const LoggedInButton = ({
   return (
     <UserDropdown>
       <button className="group mt-[-2] size-9 rounded-md">
-        <Avatar className="ml-2 size-full group-active:scale-95">
+        <Avatar className="size-full group-active:scale-95">
           <AvatarFallback className="bg-card">
             {user.email.slice(0, 1).toUpperCase()}
           </AvatarFallback>
