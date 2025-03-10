@@ -3,6 +3,7 @@ import {
   LayoutContent,
   LayoutHeader,
   LayoutTitle,
+  LayoutActions,
 } from "@/features/page/layout";
 
 import {
@@ -21,24 +22,15 @@ export default async function RoutePage(props: PageParams) {
       <LayoutHeader>
         <LayoutTitle>Setup Page</LayoutTitle>
       </LayoutHeader>
+      <LayoutActions className="hidden gap-6 lg:flex">
+        <ContactSupportDialog>
+          <Button variant="default" size="sm" className="mr-4">
+            Support
+          </Button>
+        </ContactSupportDialog>
+      </LayoutActions>
       <LayoutContent>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
-          <Card className="p-4">
-            <CardHeader>
-              <CardTitle>Support</CardTitle>
-              <CardDescription>
-                Contacter moi directement pour un support
-              </CardDescription>
-              <div className="flex flex-row gap-2">
-                <ContactSupportDialog>
-                  <Button variant="default" size="sm" className="mr-4">
-                    Support
-                  </Button>
-                </ContactSupportDialog>
-              </div>
-            </CardHeader>
-          </Card>
-
           <Card className="p-4">
             <CardHeader>
               <CardTitle>Compte cal.com </CardTitle>
@@ -46,7 +38,7 @@ export default async function RoutePage(props: PageParams) {
                 Pour la gestion du calendrier et évenement
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default" className="rounded-[10px] border-orange-600 hover:text-orange-600">Calendrier</Button>
+                <Button variant="default" className="hover: rounded-[10px] border-orange-600 hover:text-orange-600">Calendrier</Button>
               </div>
             </CardHeader>
           </Card>
@@ -58,7 +50,7 @@ export default async function RoutePage(props: PageParams) {
                 Permet de gérer le nom de domaine
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default" className="rounded-[10px] border-orange-600 hover:text-orange-600">Namecheap</Button>
+                <Button variant="default" className="hover: rounded-[10px] border-orange-600 hover:text-orange-600">Namecheap</Button>
               </div>
             </CardHeader>
           </Card>
@@ -70,7 +62,7 @@ export default async function RoutePage(props: PageParams) {
                 Pour la base de donnée de l'application
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default" className="rounded-[10px] border-orange-600 hover:text-orange-600">Neon</Button>
+                <Button variant="default" className="hover: rounded-[10px] border-orange-600 hover:text-orange-600">Neon</Button>
               </div>
             </CardHeader>
           </Card>
@@ -82,7 +74,7 @@ export default async function RoutePage(props: PageParams) {
                 Adresse: dr.sarah.johson@gmail.com
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default" className="rounded-[10px] border-orange-600 hover:text-orange-600">Gmail</Button>
+                <Button variant="default" className="hover: rounded-[10px] border-orange-600 hover:text-orange-600">Gmail</Button>
               </div>
             </CardHeader>
           </Card>
@@ -94,7 +86,7 @@ export default async function RoutePage(props: PageParams) {
                 Depot du code source de l'application
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default" className="rounded-[10px] border-orange-600 hover:text-orange-600">Github</Button>
+                <Button variant="default" className="hover: rounded-[10px] border-orange-600 hover:text-orange-600">Github</Button>
               </div>
             </CardHeader>
           </Card>
@@ -106,7 +98,7 @@ export default async function RoutePage(props: PageParams) {
                 Gestion de Hébergement
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default" className="rounded-[10px] border-orange-600 hover:text-orange-600">Vercel</Button>
+                <Button variant="default" className="hover: rounded-[10px] border-orange-600 hover:text-orange-600">Vercel</Button>
               </div>
             </CardHeader>
           </Card>
@@ -118,7 +110,7 @@ export default async function RoutePage(props: PageParams) {
                 Emailling pour l'application
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default" className="rounded-[10px] border-orange-600 hover:text-orange-600">Resend</Button>
+                <Button variant="default" className="hover: rounded-[10px] border-orange-600 hover:text-orange-600">Resend</Button>
               </div>
             </CardHeader>
           </Card>
@@ -130,7 +122,7 @@ export default async function RoutePage(props: PageParams) {
                 Paiement avec module stripe
               </CardDescription>
               <div className="flex flex-row gap-2">
-                <Button variant="default" className="rounded-[10px] border-orange-600 hover:text-orange-600">Stripe</Button>
+                <Button variant="invert" className="hover: rounded-[10px] border-orange-600 hover:text-orange-600">Stripe</Button>
               </div>
             </CardHeader>
           </Card>
