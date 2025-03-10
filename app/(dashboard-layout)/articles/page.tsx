@@ -1,13 +1,29 @@
-import React from 'react';
+import { Button } from "@/components/ui/button";
+import {
+  Layout,
+  LayoutContent,
+  LayoutHeader,
+  LayoutTitle,
+  LayoutActions,
+} from "@/features/page/layout";
 
 const PostPage: React.FC = () => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="mb-4 text-2xl font-bold">Create Post</h1>
-      <p>Welcome to the posts page create. Here you can begin to create some ressources.</p>
-      {/* Add more components or functionality for course creation here */}
+    <div className="mx-auto p-4">
+      <Layout>
+        <LayoutHeader>
+          <LayoutTitle>Articles | page Create articles</LayoutTitle>
+        </LayoutHeader>
+        <LayoutActions>
+          <Button variant="outline">Retour</Button>
+          <Button variant="default">Create</Button>
+        </LayoutActions>
+        <LayoutContent>
+        </LayoutContent>
+      </Layout>
     </div>
   );
 };
+
 
 export default PostPage;

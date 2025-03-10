@@ -66,10 +66,10 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
     ]
   },
   {
-    title: "Gestion application",
+    title: "Application",
     links: [
       {
-        title: "Gestion",
+        title: "Gestion services",
         icon: <SlidersHorizontal />,
         url: "/gestion",
       },

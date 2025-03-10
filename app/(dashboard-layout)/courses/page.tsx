@@ -1,11 +1,26 @@
-import React from 'react';
+import { Button } from "@/components/ui/button";
+import {
+  Layout,
+  LayoutContent,
+  LayoutHeader,
+  LayoutTitle,
+  LayoutActions,
+} from "@/features/page/layout";
 
 const CoursesPage: React.FC = () => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="mb-4 text-2xl font-bold">Create a cours</h1>
-      <p>Welcome to the courses page. Here you can begin to explore some ressources.</p>
-      {/* Add more components or functionality for course creation here */}
+    <div className="mx-auto p-4">
+      <Layout>
+        <LayoutHeader>
+          <LayoutTitle>Cours | page Create cours</LayoutTitle>
+        </LayoutHeader>
+        <LayoutActions>
+          <Button variant="outline">Retour</Button>
+          <Button variant="default">Create</Button>
+        </LayoutActions>
+        <LayoutContent>
+        </LayoutContent>
+      </Layout>
     </div>
   );
 };

@@ -1,11 +1,26 @@
-import React from 'react';
+import { Button } from "@/components/ui/button";
+import {
+  Layout,
+  LayoutContent,
+  LayoutHeader,
+  LayoutTitle,
+  LayoutActions,
+} from "@/features/page/layout";
 
 const AlimentairePlanPage: React.FC = () => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="mb-4 text-2xl font-bold">Create plan alimentaire</h1>
-      <p>Welcome to the create Plan page. Here you can create and manage your plan alimentaire.</p>
-      {/* Add more components or functionality for course creation here */}
+    <div className="mx-auto p-4">
+      <Layout>
+        <LayoutHeader>
+          <LayoutTitle>Plan Alimentaire | Tableau des utitlsateurs</LayoutTitle>
+        </LayoutHeader>
+        <LayoutActions>
+          <Button variant="outline">Retour</Button>
+          <Button variant="default">Create</Button>
+        </LayoutActions>
+        <LayoutContent>
+        </LayoutContent>
+      </Layout>
     </div>
   );
 };
