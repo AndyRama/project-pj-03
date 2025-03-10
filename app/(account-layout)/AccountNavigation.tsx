@@ -40,7 +40,7 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
           <DesktopVerticalMenu links={ACCOUNT_LINKS} className="max-lg:hidden" />
         ) : <Separator className="max-lg:hidden" orientation="vertical" />}
         <Separator className="max-lg:hidden" orientation="vertical" />
-        <main className="py-4 lg:max-h-[calc(100vh_-_64px)] lg:flex-1 lg:overflow-auto lg:py-8">
+        <main className="py-4 lg:max-h-[calc(100vh_-_64px)] lg:flex-1 lg:overflow-hidden lg:py-8">
           {props.children}
         </main>
       </Layout>
