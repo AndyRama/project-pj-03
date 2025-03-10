@@ -21,19 +21,10 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
     ],
   },
   {
-    links: [
-      {
-        title: "Gestion",
-        icon: <SlidersHorizontal />,
-        url: "/setup",
-      },
-    ],
-  },
-  {
     title: "Services",
     links: [
       {
-        title: "Agenda",
+        title: "Agenda visio",
         icon: <CalendarClock />,
         url: "/agenda",
       },
@@ -41,6 +32,16 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         title: "Plan alimentaire",
         icon: <TextSelect />,
         url: "/alimentaire",
+      },
+    ],
+  },
+  {
+    title: "Ressources",
+    links: [
+      {
+        title: "Courses",
+        icon: <BookOpen />,
+        url: "/courses",
       },
       {
         title: "Article",
@@ -63,5 +64,15 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         url: "/account",
       },
     ]
+  },
+  {
+    title: "Gestion application",
+    links: [
+      {
+        title: "Gestion",
+        icon: <SlidersHorizontal />,
+        url: "/gestion",
+      },
+    ],
   },
 ];

@@ -20,7 +20,7 @@ export default async function RoutePage(props: PageParams) {
   return (
     <Layout>
       <LayoutHeader>
-        <LayoutTitle>Setup Page</LayoutTitle>
+        <LayoutTitle>Gestion des services</LayoutTitle>
       </LayoutHeader>
       <LayoutActions className="hidden gap-6 lg:flex">
         <ContactSupportDialog>

@@ -24,12 +24,12 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
     links: [
       { url: "/account/alimentaire", title: "Formulaire", icon: <Carrot /> },
       { url: "/account/booking", title: "Booking", icon: <CalendarClock /> },
-      { url: "/account/bilan", title: "Bilan", icon: <BookCheck /> },
     ],
   },
   {
     title: "Ressources",
     links: [
+      { url: "/account/bilan", title: "Bilan", icon: <BookCheck /> },
       { url: "/account/courses", title: "Cours", icon: <BookOpen  /> },
     ],
   },
