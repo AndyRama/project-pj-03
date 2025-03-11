@@ -38,6 +38,11 @@ export default async function RouteLayout(
               label: "Booking",
               badge: ""
             },
+            {
+              href: `/account/checkout/bilan`,
+              label: "Bilan M.",
+              badge: ""
+            },
           ]}
         />
         <div className="w-full flex-1">{props.children}</div>

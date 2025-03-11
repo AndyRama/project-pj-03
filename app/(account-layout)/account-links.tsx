@@ -7,13 +7,23 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
     links: [
       { 
         url: "/",
-        title: "Home Page",
+        title: "Home",
         icon: <Home />
       },
     ],
   },
   {
-    title: "Information Personnelle",
+    title: "Plan alimentaire",
+    links: [
+      { 
+        url: "/account/checkout",
+        title: "Welcom",
+        icon: <Sparkles />        
+       },      
+    ],
+  },
+  {
+    title: "Informations Personnelles",
     links: [
       { 
         url: "/account",
@@ -31,21 +41,6 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
         title: "Billing",
         icon: <Coins />
        },
-    ],
-  },
-  {
-    title: "Plan alimentaire",
-    links: [
-      { 
-        url: "/account/checkout",
-        title: "Welcom",
-        icon: <Sparkles />        
-       },      
-      { 
-        url: "/account/bilan",
-        title: "Bilan",
-        icon: <BookCheck />
-      },
     ],
   },
   {
