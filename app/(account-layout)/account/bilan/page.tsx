@@ -1,22 +1,30 @@
+import { Button } from "@/components/ui/button";
 import {
     Layout,
     LayoutContent,
     LayoutTitle,
+    LayoutHeader,
+    LayoutActions,
   } from "@/features/page/layout";
   import type { LayoutParams } from "@/types/next";
-  
+    
   export default async function RouteLayout(
     props: LayoutParams<{ productId: string }>,
   ) {
     return (
-      <>
-        <Layout>
-          <LayoutTitle>Compte | Bilan</LayoutTitle>
-          <LayoutContent className="mt-8 flex items-start gap-4 max-lg:flex-col">
-            <div className="w-full flex-1">{props.children}</div>
-          </LayoutContent>
-        </Layout>
-      </>
+      <div className="mx-auto p-4">
+      <Layout>
+        <LayoutHeader>
+          <LayoutTitle>Bilan mensuel</LayoutTitle>
+        </LayoutHeader>
+        <LayoutActions className="flex gap-2">
+          <Button variant="outline">Retour</Button>
+          <Button variant="default">Create</Button>
+        </LayoutActions>
+        <LayoutContent>
+        </LayoutContent>
+      </Layout>
+    </div>
     );
   }
   
