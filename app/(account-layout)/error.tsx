@@ -25,7 +25,7 @@ export default function RouteError({ error }: ErrorParams) {
       <CardFooter>
         <SignInButton variant="invert" size="md" />
           <ContactSupportDialog>
-            <Button variant="default" size="sm" className="mr-2">
+            <Button variant="default" size="sm" className="ml-2">
               Support
             </Button>
           </ContactSupportDialog>

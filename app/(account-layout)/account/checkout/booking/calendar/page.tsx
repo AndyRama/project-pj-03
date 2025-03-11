@@ -23,7 +23,7 @@ export default function AppointmentPage() {
 					light: { "cal-brand": " #ff7f00" },
 					dark: { "cal-brand": "#fafafa" }
 				},
-				hideEventTypeDetails: true,
+				hideEventTypeDetails: false,
 				layout: "month_view"
 			});
 		})();
