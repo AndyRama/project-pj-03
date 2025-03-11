@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CalendarClock } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+Typography
 
 import {
   Layout,
@@ -16,6 +17,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { Typography } from '@/components/ui/typography';
 
 const BookingPage: React.FC = () => {
   return (
@@ -29,13 +31,39 @@ const BookingPage: React.FC = () => {
                   Prendre rendez-vous
                 </CardTitle>
                 <CardDescription>
-                  Lors de cette première séance en visioconférence, nous allons établir ensemble les bases de votre programme personnalisé. Ce premier échange est essentiel pour comprendre vos objectifs, votre mode de vie et vos besoins spécifiques afin de vous proposer un accompagnement adapté.
-                  Déroulement du Rendez-vous :
-                  ✅ Bilan initial : Nous discuterons de votre niveau actuel, de vos antécédents sportifs et de vos éventuelles contraintes physiques.
-                  ✅ Élaboration du plan alimentaire : En fonction de vos objectifs (perte de poids, prise de masse, tonification...), je vous proposerai des recommandations alimentaires adaptées et faciles à suivre.
-                  ✅ Planification des étapes du mois suivant : Nous mettrons en place un programme d'entraînement progressif et réaliste, avec des objectifs clairs à atteindre chaque semaine.
-                  💡 L’objectif ? Vous donner toutes les clés pour réussir et progresser efficacement, avec un suivi personnalisé et des ajustements réguliers selon vos besoins.
-                  🚀 Prêt à démarrer ? Cette première séance est le point de départ de votre transformation physique et mentale !
+                  <Typography variant="p">
+                    Lors de cette première séance en visioconférence, nous allons établir ensemble les bases de votre programme personnalisé. Ce premier échange est
+                    essentiel pour comprendre vos objectifs, votre mode de vie et vos besoins spécifiques afin de vous proposer un accompagnement adapté.
+                  </Typography>
+                  <ul>
+                    Déroulement du Rendez-vous :
+                    <li>
+                      <Typography variant="p">
+                       ✅ Bilan initial : Nous discuterons de votre niveau actuel, de vos antécédents sportifs et de vos éventuelles contraintes physiques.
+                      </Typography>
+                    </li>
+
+                    <li>
+                      <Typography variant="p">
+                       ✅ Élaboration du plan alimentaire : En fonction de vos objectifs (perte de poids, prise de masse, tonification...), je vous proposerai des recommandations alimentaires adaptées et faciles à suivre.
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography variant="p">
+                       ✅ Planification des étapes du mois suivant : Nous mettrons en place un programme d'entraînement progressif et réaliste, avec des objectifs clairs à atteindre chaque semaine.
+                      </Typography>
+                       </li>
+                    <li>
+                      <Typography variant="p">
+                       💡 L’objectif ? Vous donner toutes les clés pour réussir et progresser efficacement, avec un suivi personnalisé et des ajustements réguliers selon vos besoins.
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography variant="p">
+                        🚀 Prêt à démarrer ? Cette première séance est le point de départ de votre transformation physique et mentale !
+                      </Typography>
+                    </li>
+                  </ul>                  
                 </CardDescription>
               </CardHeader>
               <CardContent>
