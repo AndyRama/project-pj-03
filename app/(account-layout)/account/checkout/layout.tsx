@@ -20,17 +20,17 @@ export default async function RouteLayout(
           J'aurai besoins de quelque information personel a veuille a remplir le formulaire puis prendre rdv en viso
         </LayoutDescription>
       </LayoutHeader>
-      <LayoutContent className="mt-4 flex items-start gap-4 max-lg:flex-col">
+      <LayoutContent className="flex items-start gap-4 max-lg:flex-col">
         <SettingsNavigation
           links={[
             {
               href: `/account/checkout`,
-              label: "1.Personelles",
+              label: "Personelles",
               badge: ""
             },
             {
               href: `/account/checkout/alimentaire`,
-              label: "2.Formulaire",
+              label: "Formulaire",
               badge: ""
             },
             {

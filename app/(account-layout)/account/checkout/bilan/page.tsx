@@ -12,7 +12,6 @@ import {
     props: LayoutParams<{ productId: string }>,
   ) {
     return (
-      <div className="mx-auto p-4">
       <Layout>
         <LayoutHeader>
           <LayoutTitle>Bilan mensuel</LayoutTitle>
@@ -24,7 +23,6 @@ import {
         <LayoutContent>
         </LayoutContent>
       </Layout>
-    </div>
     );
   }
   
