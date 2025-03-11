@@ -36,7 +36,7 @@ export default function AppointmentPage() {
 				<LayoutTitle>Rendez-vous</LayoutTitle>
 			</LayoutHeader>
 			<LayoutActions className="flex gap-2">
-				<Link href="/account/booking/calendar">
+				<Link href="/account/checkout/booking">
 					<Button variant="outline">
 						<ArrowLeft className="size-4" />
 						Retour

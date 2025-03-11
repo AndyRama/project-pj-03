@@ -7,8 +7,6 @@ import { cn } from "@/lib/utils";
 import {
   Layout,
   LayoutContent,
-  LayoutTitle,
-  LayoutHeader,
 } from "@/features/page/layout";
 
 import {
@@ -25,9 +23,6 @@ const BookingPage: React.FC = () => {
     <>
       <div className="mx-auto p-4">
         <Layout>
-          <LayoutHeader>
-            <LayoutTitle>Page reservation | call 1 to 1</LayoutTitle>
-          </LayoutHeader>
           <LayoutContent>
             <Card className="p-4">
               <CardHeader>
