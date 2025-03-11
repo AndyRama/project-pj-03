@@ -58,45 +58,6 @@ export const SettingsAlimentaireForm = ({ defaultValues }: ProductFormProps) => 
     >
       <Card className="p-4">
         <CardHeader>
-          <CardTitle>Informations personnelles</CardTitle>
-          <CardDescription>
-            Veuillez remplir vos informations personnelles.
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="flex flex-col gap-4">
-          <div className="grid grid-cols-1 gap-4">
-            <FormField
-              control={form.control}
-              name="firstName"
-              render={({ field }) => (
-                <FormItem>
-                  <CardTitle className="mb-2 text-sm font-medium">Prénom</CardTitle>
-                  <FormControl>
-                    <Input placeholder="Votre prénom" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="lastName"
-              render={({ field }) => (
-                <FormItem>
-                  <CardTitle className="mb-2 text-sm font-medium">Nom</CardTitle>
-                  <FormControl>
-                    <Input placeholder="Votre nom" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card className="p-4">
-        <CardHeader>
           <CardTitle>Mensurations</CardTitle>
           <CardDescription>
             Ces informations sont essentielles pour adapter votre plan alimentaire à vos besoins spécifiques.
