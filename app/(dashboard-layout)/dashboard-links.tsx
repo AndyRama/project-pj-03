@@ -6,6 +6,7 @@ import {
   TextSelect,
   SlidersHorizontal,
   CalendarClock,
+  BookOpen,
   } from "lucide-react";
 
 
@@ -34,28 +35,18 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
       },
     ],
   },
-  // {
-  //   title: "Ressources",
-  //   links: [
-  //     {
-  //       title: "Courses",
-  //       icon: <BookOpen />,
-  //       url: "/courses",
-  //     },
-  //     {
-  //       title: "Article",
-  //       icon: <BookOpen />,
-  //       url: "/articles",
-  //     },
-  //   ],
-  // },
   {
-    title: "Utilisateur",
+    title: "Application",
     links: [
       {
         title: "Paramètres",
         icon: <Settings />,
         url: "/settings",
+      },
+      {
+        title: "Gestion des services",
+        icon: <SlidersHorizontal />,
+        url: "/gestion",
       },
       {
         title: "Mon compte",
@@ -65,12 +56,17 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
     ]
   },
   {
-    title: "Application",
+    title: "Ressources",
     links: [
       {
-        title: "Gestion services",
-        icon: <SlidersHorizontal />,
-        url: "/gestion",
+        title: "Courses*",
+        icon: <BookOpen />,
+        url: "/courses",
+      },
+      {
+        title: "Article*",
+        icon: <BookOpen />,
+        url: "/articles",
       },
     ],
   },
