@@ -3,7 +3,6 @@ import {
   LayoutContent,
   LayoutHeader,
   LayoutTitle,
-  LayoutActions,
 } from "@/features/page/layout";
 import {
   Card,
@@ -32,9 +31,6 @@ export default async function RoutePage(props: PageParams) {
       <LayoutHeader>
         <LayoutTitle>Gestion des services</LayoutTitle>
       </LayoutHeader>
-      <LayoutActions>
-        <Button variant="default">Contact</Button>
-      </LayoutActions>
       <LayoutContent>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
@@ -43,7 +39,7 @@ export default async function RoutePage(props: PageParams) {
                 <CardTitle>{service.title}</CardTitle>
                 <CardDescription>{service.description}</CardDescription>
                 <div className="flex flex-row gap-2">
-                  <Button asChild className="rounded-[10px] hover:border-orange-600 hover:text-orange-600">
+                  <Button variant="invert" asChild className="rounded-[10px] hover:border hover:border-orange-600 hover:text-orange-600">
                     <Link href={service.link} target="_blank" rel="noopener noreferrer">
                       {service.title.split(" ")[1]}
                     </Link>

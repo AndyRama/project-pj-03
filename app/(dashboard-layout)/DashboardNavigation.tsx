@@ -56,7 +56,7 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
               </Button>
             </UserDropdown>
             <ContactSupportDialog>
-              <Button variant="default" size="sm" className="mr-4">
+              <Button variant="default" size="sm" className="mt-4">
                 Support
               </Button>
             </ContactSupportDialog>
