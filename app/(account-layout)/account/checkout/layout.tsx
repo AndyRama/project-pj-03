@@ -35,12 +35,12 @@ export default async function RouteLayout(
             },
             {
               href: `/account/checkout/booking`,
-              label: "3.Booking",
+              label: "Booking",
               badge: ""
             },
             {
               href: `/account/checkout/bilan`,
-              label: "4.Bilan Mensuel",
+              label: "Bilan Mensuel",
               badge: ""
             },
           ]}

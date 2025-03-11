@@ -10,11 +10,6 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
         title: "Home",
         icon: <ArrowLeft />
       },
-      { 
-        url: "/account/checkout",
-        title: "Get Started",
-        icon: <Sparkles />        
-       },
     ],
   },
   {
@@ -39,9 +34,13 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
     ],
   },
   {
-    title: "Plan alimentaire",
+    title: "",
     links: [
-       
+      { 
+        url: "/account/checkout",
+        title: "Get Started",
+        icon: <Sparkles />        
+       },
     ],
   },
   {

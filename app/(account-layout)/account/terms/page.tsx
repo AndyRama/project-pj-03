@@ -8,7 +8,7 @@ import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
 const TermsPage = () => {
   return (
     <>
-    <SectionLayout size="lg" variant="default" className="mx-auto mt-[-20px]">
+    <SectionLayout size="lg" variant="default" className="mx-auto mt-[-30px] py-0">
       {/* Header */}
       <header>
         <Typography variant="h1" className="mb-2 text-3xl font-bold">
