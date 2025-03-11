@@ -55,8 +55,9 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
                 <span className="max-lg:hidden">{user.name}</span>
               </Button>
             </UserDropdown>
+            {/* Protect with Login */}
             <ContactSupportDialog>
-              <Button variant="default" size="sm" className="mt-4">
+              <Button variant="default" size="sm" className="mt-2">
                 Support
               </Button>
             </ContactSupportDialog>
@@ -81,11 +82,6 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
             </div>
 
             <nav className="flex flex-1 items-center justify-end space-x-1">
-              <ContactSupportDialog>
-                <Button variant="default" size="sm" className="mr-4">
-                  Support
-                </Button>
-              </ContactSupportDialog>
               <AuthButton />
               <MobileDropdownMenu className="lg:hidden" links={DASHBOARD_LINKS} />
             </nav>
@@ -105,11 +101,6 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
               </LayoutHeader>
               <LayoutContent className="flex gap-4">
                 <SignInButton />
-                <ContactSupportDialog>
-                  <Button variant="default" size="sm" className="mr-4">
-                    Support
-                  </Button>
-                </ContactSupportDialog>
               </LayoutContent>
             </Layout>
           )}
