@@ -27,7 +27,7 @@ const BookingPage: React.FC = () => {
           <LayoutContent>
             <Card className="p-4">
               <CardHeader>
-                <CardTitle className="mb-4 text-2xl font-bold">
+                <CardTitle className="mb-4 text-3xl font-bold">
                   Prendre rendez-vous
                 </CardTitle>
                 <CardDescription>

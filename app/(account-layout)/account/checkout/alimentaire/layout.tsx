@@ -10,7 +10,7 @@ export default async function RouteLayout(
   return (    
     <div>
       <Layout>
-        <LayoutContent className="mt-8 flex items-start gap-4 max-lg:flex-col"> 
+        <LayoutContent className="flex items-start gap-4 max-lg:flex-col"> 
           <div className="w-full flex-1">{props.children}</div>
         </LayoutContent>
       </Layout>
