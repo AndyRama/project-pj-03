@@ -43,17 +43,24 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
         ) : null}
         <div className="flex-1" />
         {user ? (
-          <UserDropdown>
-            <Button variant="outline" size="sm">
-              <Avatar className="mr-2 size-6">
-                <AvatarFallback>
-                  {user.email ? user.email.slice(0, 2) : "??"}
-                </AvatarFallback>
-                {user.image && <AvatarImage src={user.image} />}
-              </Avatar>
-              <span className="max-lg:hidden">{user.name}</span>
-            </Button>
-          </UserDropdown>
+          <>
+            <UserDropdown>
+              <Button variant="outline" size="sm">
+                <Avatar className="mr-2 size-6">
+                  <AvatarFallback>
+                    {user.email ? user.email.slice(0, 2) : "??"}
+                  </AvatarFallback>
+                  {user.image && <AvatarImage src={user.image} />}
+                </Avatar>
+                <span className="max-lg:hidden">{user.name}</span>
+              </Button>
+            </UserDropdown>
+            <ContactSupportDialog>
+              <Button variant="default" size="sm" className="mr-4">
+                Support
+              </Button>
+            </ContactSupportDialog>
+          </>
         ) : null}
       </div>
       {/* Main container */}

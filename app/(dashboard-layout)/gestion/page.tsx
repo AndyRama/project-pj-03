@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/card";
 import type { PageParams } from "@/types/next";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const services = [
   { title: "Compte Gmail", description: "Adresse: dr.sarah.johson@gmail.com", link: "https://mail.google.com/" },
@@ -32,10 +33,10 @@ export default async function RoutePage(props: PageParams) {
         <LayoutTitle>Gestion des services</LayoutTitle>
       </LayoutHeader>
       <LayoutActions>
-        <Button variant="default">05.56.34.94.69</Button>
+        <Button variant="default">Contact</Button>
       </LayoutActions>
       <LayoutContent>
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
           {services.map((service) => (
             <Card key={service.title} className="p-4">
               <CardHeader>
@@ -43,9 +44,9 @@ export default async function RoutePage(props: PageParams) {
                 <CardDescription>{service.description}</CardDescription>
                 <div className="flex flex-row gap-2">
                   <Button asChild className="rounded-[10px] hover:border-orange-600 hover:text-orange-600">
-                    <a href={service.link} target="_blank" rel="noopener noreferrer">
+                    <Link href={service.link} target="_blank" rel="noopener noreferrer">
                       {service.title.split(" ")[1]}
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </CardHeader>
