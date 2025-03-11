@@ -24,17 +24,17 @@ export default async function RouteLayout(
         <SettingsNavigation
           links={[
             {
-              href: `/checkout`,
+              href: `/account/checkout`,
               label: "General",
               badge: ""
             },
             {
-              href: `/checkout/alimentaire`,
+              href: `/account/checkout/alimentaire`,
               label: "formulaire",
               badge: ""
             },
             {
-              href: `/checkout/booking`,
+              href: `/account/checkout/booking`,
               label: "Booking",
               badge: ""
             },
