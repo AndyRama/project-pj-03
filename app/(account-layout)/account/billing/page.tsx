@@ -49,7 +49,7 @@ export default async function DeleteProfilePage() {
           Plan : <Typography variant="code">{user.plan}</Typography>
         </Typography>
         <Link
-          className={cn(buttonVariants({ variant: "outline" }), "w-fit")}
+          className={cn(buttonVariants({ variant: "outline", size:"sm" }), "w-fit")}
           href={stripeSession.url}
         >
           Actualiser les informations 
