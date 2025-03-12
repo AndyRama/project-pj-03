@@ -16,8 +16,8 @@ import Link from 'next/link';
 interface Reservation {
   id: string;
   title: string;
-  date: string;         // Format ISO, ex: "2025-03-15T14:30:00Z"
-  clientName: string;   // Nom du client
+  date: string;         
+  clientName: string;   
 }
 
 export default function AgendaPage(): React.ReactElement {
@@ -133,11 +133,11 @@ export default function AgendaPage(): React.ReactElement {
                   return (
                     <div
                       key={reservation.id}
-                      className="flex flex-col items-start justify-between rounded-md border border-gray-200 p-4 shadow-sm md:flex-row md:items-center"
+                      className="flex flex-col items-start justify-between rounded-md border border-orange-500 p-4 shadow-sm md:flex-row md:items-center"
                     >
                       {/* Bloc date/heure/Meet */}
                       <div className="mb-2 md:mb-0">
-                        <Typography variant="p"className="text-sm font-semibold text-gray-700">
+                        <Typography variant="p"className="text-sm font-semibold text-white">
                           {formatReservationDate(reservation.date)}
                         </Typography>
                         <Typography variant="p" className="txt-xs text-gray-500">
@@ -146,7 +146,7 @@ export default function AgendaPage(): React.ReactElement {
                         <Button>
                           <Link 
                             href="#"
-                            className="mt-1 inline-block text-sm text-blue-600 hover:underline">
+                            className="mt-2 inline-block text-sm text-white underline">
                               Rejoindre Google Meet
                           </Link>
                         </Button>
@@ -154,7 +154,7 @@ export default function AgendaPage(): React.ReactElement {
 
                       {/* Bloc titre + description */}
                       <div className="mt-1 md:mx-4 md:mt-0 md:flex-1">
-                        <Typography variant="p" className="text-base font-medium text-gray-900">
+                        <Typography variant="p" className="text-base font-medium text-white">
                           {reservation.title}
                         </Typography>
                         <Typography variant="p" className="text-sm text-gray-600">
