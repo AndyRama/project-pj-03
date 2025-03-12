@@ -1,5 +1,6 @@
-"use client" 
+"use client";
 
+import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import {
   Layout,
@@ -9,20 +10,20 @@ import {
   LayoutActions,
 } from "@/features/page/layout";
 import { Typography } from "@/components/ui/typography";
-import { Button } from "@/components/ui/button";
 
 interface Reservation {
   id: string;
   title: string;
   date: string;
   clientName: string;
-  // Ajoutez ici les autres propriétés selon la structure des données renvoyées par l'API Cal.com
+  // Adaptez les propriétés selon la réponse de l'API Cal.com
 }
 
 export default function BookingPage() {
   const [reservations, setReservations] = useState<Reservation[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {
     async function fetchReservations() {
       try {
@@ -32,7 +33,6 @@ export default function BookingPage() {
         }
         const data: Reservation[] = await res.json();
         setReservations(data);
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
         setError(err.message);
       } finally {
@@ -45,20 +45,18 @@ export default function BookingPage() {
   if (loading) return <p>Chargement...</p>;
   if (error) return <p>{error}</p>;
 
-
   return (
     <div className="mx-auto p-4">
       <Layout>
         <LayoutHeader>
           <LayoutTitle>Agenda | Reservation</LayoutTitle>
         </LayoutHeader>
-        <LayoutActions className="flex gap-2">          
+        <LayoutActions className="flex gap-2">
           <Button variant="outline" size="sm">Retour</Button>
           <Button variant="default" size="sm">Create</Button>
         </LayoutActions>
         <LayoutContent>
           <div>
-            {/* <h1>Mes Réservations</h1> */}
             {reservations.length > 0 ? (
               reservations.map((reservation) => (
                 <div key={reservation.id}>
@@ -76,4 +74,4 @@ export default function BookingPage() {
       </Layout>
     </div>
   );
-};
+}

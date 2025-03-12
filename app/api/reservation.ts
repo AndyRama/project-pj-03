@@ -21,9 +21,9 @@ export default async function handler(
     const reservations = data.data || data;
     res.status(200).json(reservations);
   } catch (error) {
-    console.error("Erreur lors de la récupération des réservations :", error);
+    console.error("Erreur lors de la récupération des réservations 1 :", error);
     res
       .status(500)
-      .json({ error: "Erreur lors de la récupération des réservations" });
+      .json({ error: "Erreur lors de la récupération des réservations 2" });
   }
 }
