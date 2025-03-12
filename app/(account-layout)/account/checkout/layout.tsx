@@ -31,17 +31,12 @@ export default async function RouteLayout(
             {
               href: `/account/checkout/alimentaire`,
               label: "Formulaire",
-              badge: ""
+              badge: "new"
             },
             {
               href: `/account/checkout/booking`,
               label: "Booking",
-              badge: ""
-            },
-            {
-              href: `/account/checkout/bilan`,
-              label: "Bilan Mensuel",
-              badge: ""
+              badge: "new"
             },
           ]}
         />
