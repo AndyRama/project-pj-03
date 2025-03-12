@@ -13,6 +13,8 @@ export async function GET(request: Request) {
       },
     });
     const data = await response.json();
+    console.log(data);
+    
     // Si la réponse est structurée par exemple { data: [...] }
     const reservations = data.data || data;
     return NextResponse.json(reservations);

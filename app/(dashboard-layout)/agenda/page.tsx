@@ -19,7 +19,7 @@ interface Reservation {
   // Adaptez les propriétés selon la réponse de l'API Cal.com
 }
 
-export default function BookingPage() {
+export default function AgendaPage() {
   const [reservations, setReservations] = useState<Reservation[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -28,12 +28,15 @@ export default function BookingPage() {
     async function fetchReservations() {
       try {
         const res = await fetch("/api/reservations");
+        console.log(res)
+        
         if (!res.ok) {
-          throw new Error("Erreur lors de la récupération des réservations");
+          throw new Error("Erreur lors de la récupération des réservations 6");
         }
         const data: Reservation[] = await res.json();
         console.log(data)
         setReservations(data);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
         setError(err.message);
       } finally {
