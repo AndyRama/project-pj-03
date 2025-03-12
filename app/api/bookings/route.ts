@@ -23,7 +23,7 @@ const mockReservations = [
 ];
 
 // Check if we should use mock data (temporarily true for development)
-const USE_MOCK_DATA = true; // Set to false when API is working
+const USE_MOCK_DATA = false; // Set to false when API is working
 
 export async function GET(): Promise<NextResponse> {
   // Use mock data for development/when API key issues exist
