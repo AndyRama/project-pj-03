@@ -17,7 +17,7 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
     <div className="flex min-h-full flex-col">
       <header className="w-full border-b bg-background max-lg:sticky max-lg:top-0 max-lg:z-40">
         <div className="flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-          <div className="flex items-center gap-2">
+          <div className="ml-2 flex items-center gap-2">
             <Image
               src={SiteConfig.appIcon}
               alt="app logo"
