@@ -1,3 +1,5 @@
+"use client" 
+
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import {
@@ -7,6 +9,7 @@ import {
   LayoutTitle,
   LayoutActions,
 } from "@/features/page/layout";
+import { Typography } from "@/components/ui/typography";
 
 interface Reservation {
   id: string;
@@ -59,9 +62,9 @@ export default function BookingPage() {
             {reservations.length > 0 ? (
               reservations.map((reservation) => (
                 <div key={reservation.id}>
-                  <h2>{reservation.title}</h2>
-                  <p>Date: {reservation.date}</p>
-                  <p>Client: {reservation.clientName}</p>
+                  <Typography variant="h2">{reservation.title}</Typography>
+                  <Typography variant="p">Date: {reservation.date}</Typography>
+                  <Typography variant="p">Client: {reservation.clientName}</Typography>
                   {/* Affichez d'autres informations selon la structure réelle des données */}
                 </div>
               ))
