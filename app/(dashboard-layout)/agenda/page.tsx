@@ -72,7 +72,7 @@ export default function AgendaPage(): React.ReactElement {
   // Données de test pour vérifier l'affichage
   const useTestData = () => {
     setReservations([
-      { id: '1', title: 'Premier Rendez-vous en Visioconférence - Coaching Sportif', date: '2025-03-10T09:00:00Z', clientName: 'Jeremy Pratt' },
+      { id: '1', title: 'Premier Rendez-vous  - Coaching Sportif', date: '2025-03-10T09:00:00Z', clientName: 'David' },
       { id: '2', title: 'Deuxième Rendez-vous - Suivi Mensuel', date: '2025-03-15T14:30:00Z', clientName: 'Andy' },
     ]);
     setLoading(false);
@@ -101,15 +101,13 @@ export default function AgendaPage(): React.ReactElement {
           <LayoutTitle>Agenda | Reservation</LayoutTitle>
         </LayoutHeader>
         <LayoutActions className="flex gap-2">
-          {/* <Button variant="outline" size="sm">Retour</Button> */}
-          {/* <Button variant="default" size="sm">Create</Button> */}
           <Button variant="outline" size="sm" onClick={fetchReservations}>Réessayer</Button>
           <Button variant="default" size="sm" onClick={useTestData}>Données test</Button>
         </LayoutActions>
 
         <LayoutContent>
           {debugInfo && (
-            <div className="mb-4 rounded border border-yellow-200 bg-yellow-50 p-3 font-mono text-sm">
+            <div className="mb-4 hidden rounded border border-yellow-200 bg-yellow-50 p-3 font-mono text-sm">
               <Typography variant="p" className="text-yellow-800">
                 Debug: {debugInfo}
               </Typography>
@@ -135,7 +133,7 @@ export default function AgendaPage(): React.ReactElement {
                   return (
                     <div
                       key={reservation.id}
-                      className="flex flex-col items-start justify-between rounded-md border border-gray-200 bg-white p-4 shadow-sm md:flex-row md:items-center"
+                      className="flex flex-col items-start justify-between rounded-md border border-gray-200 p-4 shadow-sm md:flex-row md:items-center"
                     >
                       {/* Bloc date/heure/Meet */}
                       <div className="mb-2 md:mb-0">
@@ -155,17 +153,17 @@ export default function AgendaPage(): React.ReactElement {
                       </div>
 
                       {/* Bloc titre + description */}
-                      <div className="mt-2 md:mx-4 md:mt-0 md:flex-1">
+                      <div className="mt-1 md:mx-4 md:mt-0 md:flex-1">
                         <Typography variant="p" className="text-base font-medium text-gray-900">
                           {reservation.title}
                         </Typography>
                         <Typography variant="p" className="text-sm text-gray-600">
-                          Personnalisé entre {reservation.clientName} et [Autre participant]
+                          Personnalisé entre {reservation.clientName} et Jeremy Prat
                         </Typography>          
                       </div>
 
                       {/* Actions (Annuler / Modifier) */}
-                      <div className="mt-3 flex gap-2 md:mt-0">
+                      <div className="mt-1 flex gap-2 md:mt-0">
                         <Button variant="outline" size="sm">
                           Annuler
                         </Button>
@@ -177,7 +175,7 @@ export default function AgendaPage(): React.ReactElement {
                   );
                 })
               ) : (
-                <div className="rounded-md border border-gray-200 bg-gray-50 p-4">
+                <div className="rounded-md border border-gray-200  p-4">
                   <Typography variant="p" className="text-gray-500">
                     Aucune réservation trouvée.
                   </Typography>
