@@ -32,6 +32,7 @@ export default function BookingPage() {
           throw new Error("Erreur lors de la récupération des réservations");
         }
         const data: Reservation[] = await res.json();
+        console.log(data)
         setReservations(data);
       } catch (err: any) {
         setError(err.message);
