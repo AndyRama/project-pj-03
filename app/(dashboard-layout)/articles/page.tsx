@@ -15,8 +15,8 @@ const PostPage: React.FC = () => {
           <LayoutTitle>Articles | page Create articles</LayoutTitle>
         </LayoutHeader>
         <LayoutActions className="flex gap-2">
-          <Button variant="outline">Retour</Button>
-          <Button variant="default">Create</Button>
+          <Button variant="outline" size="sm">Retour</Button>
+          <Button variant="default" size="sm">Create</Button>
         </LayoutActions>
         <LayoutContent>
         </LayoutContent>

@@ -26,6 +26,7 @@ export default function DeleteProfilePage() {
       <CardContent>
         <Button
           variant="destructive"
+          size="sm"
           onClick={() => {
             enqueueDialog({
               title: "Delete your profile",
