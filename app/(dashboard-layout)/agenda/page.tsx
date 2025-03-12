@@ -1,8 +1,7 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
 import {
   Layout,
   LayoutContent,
@@ -12,12 +11,13 @@ import {
 } from "@/features/page/layout";
 import { Typography } from "@/components/ui/typography";
 import { formatDate } from "@/lib/format/date";
+import Link from 'next/link';
 
 interface Reservation {
   id: string;
   title: string;
-  date: string;
-  clientName: string;
+  date: string;         // Format ISO, ex: "2025-03-15T14:30:00Z"
+  clientName: string;   // Nom du client
 }
 
 export default function AgendaPage(): React.ReactElement {
@@ -31,7 +31,7 @@ export default function AgendaPage(): React.ReactElement {
       setLoading(true);
       setError(null);
       setDebugInfo("Tentative de connexion à /api/agenda...");
-      
+
       const res = await fetch("/api/agenda", {
         method: "GET",
         headers: {
@@ -39,20 +39,18 @@ export default function AgendaPage(): React.ReactElement {
         },
         cache: "no-store",
       });
-      
+
       setDebugInfo(`Statut de la réponse: ${res.status} ${res.statusText}`);
-      
+
       if (!res.ok) {
-        // IMPORTANT: Don't try to read the body twice
         const errorText = await res.text();
         setDebugInfo(`Réponse d'erreur: ${errorText}`);
         throw new Error(`Erreur ${res.status}: ${res.statusText}`);
       }
-      
-      // Parse the JSON response
+
       const data = await res.json();
       setDebugInfo(`Données reçues: ${JSON.stringify(data).substring(0, 100)}...`);
-      
+
       if (Array.isArray(data)) {
         setReservations(data);
       } else {
@@ -71,22 +69,24 @@ export default function AgendaPage(): React.ReactElement {
     fetchReservations();
   }, []);
 
-  // Test data to verify rendering works
+  // Données de test pour vérifier l'affichage
   const useTestData = () => {
     setReservations([
-      { id: '1', title: 'Réservation test 1', date: '2025-03-10T10:00:00Z', clientName: 'Client Test' },
-      { id: '2', title: 'Réservation test 2', date: '2025-03-15T14:30:00Z', clientName: 'Client Demo' }
+      { id: '1', title: 'Premier Rendez-vous en Visioconférence - Coaching Sportif', date: '2025-03-10T09:00:00Z', clientName: 'Jeremy Pratt' },
+      { id: '2', title: 'Deuxième Rendez-vous - Suivi Mensuel', date: '2025-03-15T14:30:00Z', clientName: 'Andy' },
     ]);
     setLoading(false);
     setError(null);
   };
 
+  // Formatage de la date
   const formatReservationDate = (dateString: string) => {
     try {
       const date = new Date(dateString);
       if (isNaN(date.getTime())) {
         return dateString;
       }
+      // formatDate est une fonction perso (ex: "15/03/2025 à 14:30")
       return formatDate(date);
     } catch (error) {
       console.error("Erreur de formatage de date:", error);
@@ -101,18 +101,21 @@ export default function AgendaPage(): React.ReactElement {
           <LayoutTitle>Agenda | Reservation</LayoutTitle>
         </LayoutHeader>
         <LayoutActions className="flex gap-2">
-          <Button variant="outline" size="sm">Retour</Button>
-          <Button variant="default" size="sm">Create</Button>
-          <Button variant="secondary" size="sm" onClick={useTestData}>Données test</Button>
+          {/* <Button variant="outline" size="sm">Retour</Button> */}
+          {/* <Button variant="default" size="sm">Create</Button> */}
           <Button variant="outline" size="sm" onClick={fetchReservations}>Réessayer</Button>
+          <Button variant="default" size="sm" onClick={useTestData}>Données test</Button>
         </LayoutActions>
+
         <LayoutContent>
           {debugInfo && (
             <div className="mb-4 rounded border border-yellow-200 bg-yellow-50 p-3 font-mono text-sm">
-              <Typography variant="p" className="text-yellow-800">Debug: {debugInfo}</Typography>
+              <Typography variant="p" className="text-yellow-800">
+                Debug: {debugInfo}
+              </Typography>
             </div>
           )}
-          
+
           {loading ? (
             <div className="flex h-64 items-center justify-center">
               <p className="text-gray-500">Chargement...</p>
@@ -124,18 +127,60 @@ export default function AgendaPage(): React.ReactElement {
           ) : (
             <div className="space-y-4">
               {reservations.length > 0 ? (
-                reservations.map((reservation) => (
-                  <div key={reservation.id} className="rounded-md border bg-white p-4 shadow-sm">
-                    <Typography variant="h2" className="text-lg font-medium">{reservation.title}</Typography>
-                    <Typography variant="p" className="text-gray-600">
-                      Date: {formatReservationDate(reservation.date)}
-                    </Typography>
-                    <Typography variant="p" className="text-gray-600">Client: {reservation.clientName}</Typography>
-                  </div>
-                ))
+                reservations.map((reservation) => {
+                  // Pour extraire l'heure, on peut faire un substring
+                  const dateObj = new Date(reservation.date);
+                  const heure = dateObj.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+
+                  return (
+                    <div
+                      key={reservation.id}
+                      className="flex flex-col items-start justify-between rounded-md border border-gray-200 bg-white p-4 shadow-sm md:flex-row md:items-center"
+                    >
+                      {/* Bloc date/heure/Meet */}
+                      <div className="mb-2 md:mb-0">
+                        <Typography variant="p"className="text-sm font-semibold text-gray-700">
+                          {formatReservationDate(reservation.date)}
+                        </Typography>
+                        <Typography variant="p" className="txt-xs text-gray-500">
+                          {heure} (Heure locale)
+                        </Typography>
+                        <Button>
+                          <Link 
+                            href="#"
+                            className="mt-1 inline-block text-sm text-blue-600 hover:underline">
+                              Rejoindre Google Meet
+                          </Link>
+                        </Button>
+                      </div>
+
+                      {/* Bloc titre + description */}
+                      <div className="mt-2 md:mx-4 md:mt-0 md:flex-1">
+                        <Typography variant="p" className="text-base font-medium text-gray-900">
+                          {reservation.title}
+                        </Typography>
+                        <Typography variant="p" className="text-sm text-gray-600">
+                          Personnalisé entre {reservation.clientName} et [Autre participant]
+                        </Typography>          
+                      </div>
+
+                      {/* Actions (Annuler / Modifier) */}
+                      <div className="mt-3 flex gap-2 md:mt-0">
+                        <Button variant="outline" size="sm">
+                          Annuler
+                        </Button>
+                        <Button variant="outline" size="sm">
+                          Modifier
+                        </Button>
+                      </div>
+                    </div>
+                  );
+                })
               ) : (
                 <div className="rounded-md border border-gray-200 bg-gray-50 p-4">
-                  <Typography variant="p" className="text-gray-500">Aucune réservation trouvée.</Typography>
+                  <Typography variant="p" className="text-gray-500">
+                    Aucune réservation trouvée.
+                  </Typography>
                 </div>
               )}
             </div>
