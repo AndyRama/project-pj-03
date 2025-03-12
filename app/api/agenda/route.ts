@@ -1,9 +1,20 @@
-// app/api/reservations/route.ts
 import { NextResponse } from "next/server";
 
-export async function GET(request: Request) {
+interface CalApiResponse {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data?: any[]; 
+}
+
+export async function GET(): Promise<NextResponse> {
   const apiKey = process.env.CAL_API_KEY;
   const calEndpoint = "https://api.cal.com/v1/reservations";
+
+  if (!apiKey) {
+    return NextResponse.json(
+      { error: "CAL_API_KEY non configurée" },
+      { status: 500 }
+    );
+  }
 
   try {
     const response = await fetch(calEndpoint, {
@@ -12,11 +23,14 @@ export async function GET(request: Request) {
         "Content-Type": "application/json",
       },
     });
-    const data = await response.json();
-    console.log(data);
+
+    if (!response.ok) {
+      throw new Error(`Erreur API Cal.com: ${response.statusText}`);
+    }
+
+    const data: CalApiResponse = await response.json();
+    const reservations = data.data || [];
     
-    // Si la réponse est structurée par exemple { data: [...] }
-    const reservations = data.data || data;
     return NextResponse.json(reservations);
   } catch (error) {
     console.error("Erreur lors de la récupération des réservations :", error);

@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import {
@@ -19,7 +20,7 @@ interface Reservation {
   // Adaptez les propriétés selon la réponse de l'API Cal.com
 }
 
-export default function AgendaPage() {
+export default function AgendaPage(): React.ReactElement {
   const [reservations, setReservations] = useState<Reservation[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -27,18 +28,15 @@ export default function AgendaPage() {
   useEffect(() => {
     async function fetchReservations() {
       try {
-        const res = await fetch("/api/reservations");
-        console.log(res)
+        const res = await fetch("/api/agenda");
         
         if (!res.ok) {
-          throw new Error("Erreur lors de la récupération des réservations 6");
+          throw new Error("Erreur lors de la récupération des réservations");
         }
         const data: Reservation[] = await res.json();
-        console.log(data)
         setReservations(data);
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      } catch (err: any) {
-        setError(err.message);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Une erreur est survenue');
       } finally {
         setLoading(false);
       }
