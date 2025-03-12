@@ -1,9 +1,5 @@
-// Make sure this file is in the correct location:
-// /app/api/agenda/route.ts
-
 import { NextResponse } from "next/server";
 
-// Define a more specific type for the Cal.com API response
 interface CalApiResponse {
   data?: Array<{
     id: string;
@@ -16,8 +12,6 @@ interface CalApiResponse {
 
 export async function GET(): Promise<NextResponse> {
   const apiKey = process.env.CAL_API_KEY;
-  
-  // Use the correct endpoint from Cal.com documentation
   const calEndpoint = "https://api.cal.com/v1/bookings";
 
   if (!apiKey) {
@@ -36,13 +30,28 @@ export async function GET(): Promise<NextResponse> {
       },
     });
 
+    // Read the response body just once
+    const responseBody = await response.text();
+    
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error(`Cal.com API error: ${response.status} ${response.statusText}`, errorText);
-      throw new Error(`Erreur API Cal.com: ${response.status} ${response.statusText}`);
+      console.error(`Cal.com API error: ${response.status} ${response.statusText}`, responseBody);
+      return NextResponse.json(
+        { error: `Erreur API Cal.com: ${response.status} ${response.statusText}` },
+        { status: response.status }
+      );
     }
-
-    const data: CalApiResponse = await response.json();
+    
+    // Parse the JSON manually after reading the text
+    let data: CalApiResponse;
+    try {
+      data = JSON.parse(responseBody);
+    } catch (parseError) {
+      console.error("Failed to parse API response:", parseError);
+      return NextResponse.json(
+        { error: "Erreur de parsing de la réponse API" },
+        { status: 500 }
+      );
+    }
     
     // Transform the API response to match your Reservation interface
     const reservations = (data.data || []).map(item => ({
@@ -54,7 +63,7 @@ export async function GET(): Promise<NextResponse> {
     
     return NextResponse.json(reservations);
   } catch (error) {
-    console.error("Erreur lors de la récupération des réservations :", error);
+    console.error("Erreur lors de la récupération des réservations:", error);
     return NextResponse.json(
       { error: "Erreur lors de la récupération des réservations" },
       { status: 500 }

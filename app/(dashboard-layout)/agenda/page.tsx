@@ -26,55 +26,48 @@ export default function AgendaPage(): React.ReactElement {
   const [error, setError] = useState<string | null>(null);
   const [debugInfo, setDebugInfo] = useState<string | null>(null);
 
-  useEffect(() => {
-    async function fetchReservations() {
-      try {
-        setLoading(true);
-        setDebugInfo("Tentative de connexion à /api/agenda...");
-        
-        const res = await fetch("/api/agenda", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          cache: "no-store",
-        });
-        
-        setDebugInfo(`Statut de la réponse: ${res.status} ${res.statusText}`);
-        
-        if (!res.ok) {
-          let errorMessage = `Erreur ${res.status}: ${res.statusText}`;
-          
-          try {
-            const errorData = await res.json();
-            if (errorData?.error) {
-              errorMessage = errorData.error;
-            }
-            setDebugInfo(`Détails d'erreur: ${JSON.stringify(errorData)}`);
-          } catch (parseError) {
-            setDebugInfo(`Impossible de parser l'erreur. Texte brut: ${await res.text()}`);
-          }
-          
-          throw new Error(errorMessage);
-        }
-        
-        const data = await res.json();
-        setDebugInfo(`Données reçues: ${JSON.stringify(data).substring(0, 100)}...`);
-        
-        if (Array.isArray(data)) {
-          setReservations(data);
-        } else {
-          setDebugInfo(`Format inattendu: ${typeof data}, contenu: ${JSON.stringify(data)}`);
-          throw new Error("Format de données inattendu");
-        }
-      } catch (err) {
-        console.error("Erreur de chargement:", err);
-        setError(err instanceof Error ? err.message : 'Une erreur est survenue');
-      } finally {
-        setLoading(false);
+  const fetchReservations = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      setDebugInfo("Tentative de connexion à /api/agenda...");
+      
+      const res = await fetch("/api/agenda", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        cache: "no-store",
+      });
+      
+      setDebugInfo(`Statut de la réponse: ${res.status} ${res.statusText}`);
+      
+      if (!res.ok) {
+        // IMPORTANT: Don't try to read the body twice
+        const errorText = await res.text();
+        setDebugInfo(`Réponse d'erreur: ${errorText}`);
+        throw new Error(`Erreur ${res.status}: ${res.statusText}`);
       }
+      
+      // Parse the JSON response
+      const data = await res.json();
+      setDebugInfo(`Données reçues: ${JSON.stringify(data).substring(0, 100)}...`);
+      
+      if (Array.isArray(data)) {
+        setReservations(data);
+      } else {
+        setDebugInfo(`Format inattendu: ${typeof data}, contenu: ${JSON.stringify(data)}`);
+        throw new Error("Format de données inattendu");
+      }
+    } catch (err) {
+      console.error("Erreur de chargement:", err);
+      setError(err instanceof Error ? err.message : 'Une erreur est survenue');
+    } finally {
+      setLoading(false);
     }
-    
+  };
+
+  useEffect(() => {
     fetchReservations();
   }, []);
 
@@ -111,6 +104,7 @@ export default function AgendaPage(): React.ReactElement {
           <Button variant="outline" size="sm">Retour</Button>
           <Button variant="default" size="sm">Create</Button>
           <Button variant="secondary" size="sm" onClick={useTestData}>Données test</Button>
+          <Button variant="outline" size="sm" onClick={fetchReservations}>Réessayer</Button>
         </LayoutActions>
         <LayoutContent>
           {debugInfo && (
@@ -126,9 +120,6 @@ export default function AgendaPage(): React.ReactElement {
           ) : error ? (
             <div className="rounded-md border border-red-200 bg-red-50 p-4">
               <Typography variant="p" className="text-red-500">{error}</Typography>
-              <div className="mt-2">
-                <Button variant="outline" size="sm" onClick={() => setError(null)}>Réessayer</Button>
-              </div>
             </div>
           ) : (
             <div className="space-y-4">
