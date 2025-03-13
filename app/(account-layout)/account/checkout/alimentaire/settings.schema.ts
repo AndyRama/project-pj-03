@@ -9,28 +9,19 @@ import { z } from "zod";
  * and the second schema will never be used
  */
 
-// export const SettingsDetailsFormSchema = z.object({
-//   name: z.string(),
-//   email: z.string().email(),
-// });
-
 export const SettingsAlimentaireFormSchema = z.object({
+  firstName: z.string().min(1, { message: "Le prénom est requis" }),
+  lastName: z.string().min(1, { message: "Le nom est requis" }),
   age: z.string().refine((val: string) => !isNaN(Number(val)) && Number(val) > 0, {
     message: "L'âge doit être un nombre positif",
   }),
   size: z.string().refine((val: string) => !isNaN(Number(val)) && Number(val) > 0, {
     message: "La taille doit être un nombre positif",
   }),
-  weight: z.string().refine((val: string) => !isNaN(Number(val)) && Number(val) > 0, {
-    message: "Le poids doit être un nombre positif",
+  weight: z.string().refine((val: string) => !isNaN(Number(val)) && Number(val) > 0 && Number(val) <= 500, {
+    message: "Le poids doit être un nombre positif et inférieur à 500",
   }),
+  userId: z.string().optional(),
 });
 
-// export const SettingsNotificationFormSchema = z.object({
-//   invoices: z.boolean(),
-//   promotions: z.boolean(),
-// });
-
-// export type SettingsDetailsFormType = z.infer<typeof SettingsDetailsFormSchema>;
 export type SettingsAlimentaireFormType = z.infer<typeof SettingsAlimentaireFormSchema>;
-// export type SettingsNotificationFormType = z.infer<typeof SettingsNotificationFormSchema>;
