@@ -101,8 +101,8 @@ export default function AgendaPage(): React.ReactElement {
           <LayoutTitle>Agenda | Reservation</LayoutTitle>
         </LayoutHeader>
         <LayoutActions className="flex gap-2">
-          <Button variant="outline" size="sm" onClick={fetchReservations}>Réessayer</Button>
-          <Button variant="default" size="sm" onClick={useTestData}>Données test</Button>
+          <Button variant="outline" size="sm" onClick={useTestData}>Données test</Button>
+          <Button variant="default" size="sm" onClick={fetchReservations}>Réessayer</Button>
         </LayoutActions>
 
         <LayoutContent>

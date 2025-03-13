@@ -28,9 +28,14 @@ import {
 type ProductFormProps = {
   defaultValues: SettingsAlimentaireFormType;
   userId: string;
+  profileId?: string;
 };
 
-export const SettingsAlimentaireForm = ({ defaultValues, userId }: ProductFormProps) => {
+export const SettingsAlimentaireForm = ({ 
+  defaultValues, 
+  userId, 
+  profileId 
+}: ProductFormProps) => {
   const form = useZodForm({
     schema: SettingsAlimentaireFormSchema,
     defaultValues,
@@ -41,7 +46,8 @@ export const SettingsAlimentaireForm = ({ defaultValues, userId }: ProductFormPr
     mutationFn: async (values: SettingsAlimentaireFormType) => {
       const result = await updateSettingsAction({
         ...values,
-        userId
+        userId,
+        profileId
       });
 
       if (!result || result.serverError) {
@@ -51,7 +57,13 @@ export const SettingsAlimentaireForm = ({ defaultValues, userId }: ProductFormPr
 
       toast.success("Paramètres mis à jour avec succès");
       router.refresh();
-      form.reset(result.data as SettingsAlimentaireFormType);
+      
+      // Redirect to the alimentaire dashboard after successful update
+      if (profileId) {
+        router.push('/alimentaire');
+      } else {
+        form.reset(result.data as SettingsAlimentaireFormType);
+      }
     },
   });
 
