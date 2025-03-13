@@ -107,7 +107,7 @@ export default function AgendaPage(): React.ReactElement {
 
         <LayoutContent>
           {debugInfo && (
-            <div className="mb-4 hidden rounded border border-yellow-200 bg-yellow-50 p-3 font-mono text-sm">
+            <div className="mb-4 rounded border border-yellow-200 bg-yellow-50 p-3 font-mono text-sm">
               <Typography variant="p" className="text-yellow-800">
                 Debug: {debugInfo}
               </Typography>
