@@ -1,7 +1,7 @@
 import type { PageParams } from "@/types/next";
 import { SettingsAlimentaireForm } from "./SettingsAlimentaireForm";
 import { getAlimentaireProfileAction } from "./settings.action";
-import { auth } from "@/lib/auth";
+import { auth } from "@/lib/auth/auth";
 import type { SettingsAlimentaireFormType } from "./settings.schema";
 
 export default async function RoutePage(props: PageParams<{}>) {
