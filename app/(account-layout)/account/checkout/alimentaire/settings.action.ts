@@ -5,19 +5,16 @@ import { prisma } from "@/lib/prisma";
 import { z } from "zod";
 import {
   SettingsAlimentaireFormSchema,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   type SettingsAlimentaireFormType
 } from "./settings.schema";
 
 export const updateSettingsAction = authAction
   .schema(SettingsAlimentaireFormSchema)
-  .action(async ({ parsedInput: input, session }) => {
+  .action(async ({ parsedInput: input, ctx }) => {
     try {
-      // Ensure we have a valid session and user
-      if (!session?.user?.id) {
-        throw new Error("Utilisateur non authentifié");
-      }
-
-      const userId = input.userId || session.user.id;
+      // Using the authenticated user from context
+      const userId = input.userId || ctx.user.id;
 
       // Check if profile already exists
       const existingProfile = await prisma.alimentaireProfile.findFirst({
@@ -71,13 +68,9 @@ export const updateSettingsAction = authAction
 
 export const getAlimentaireProfileAction = authAction
   .schema(z.object({ userId: z.string().optional() }))
-  .action(async ({ parsedInput: input, session }) => {
+  .action(async ({ parsedInput: input, ctx }) => {
     try {
-      if (!session?.user?.id) {
-        throw new Error("Utilisateur non authentifié");
-      }
-
-      const userId = input.userId || session.user.id;
+      const userId = input.userId || ctx.user.id;
 
       const profile = await prisma.alimentaireProfile.findFirst({
         where: {
@@ -92,7 +85,7 @@ export const getAlimentaireProfileAction = authAction
           age: "",
           size: "",
           weight: "",
-        } as SettingsAlimentaireFormType;
+        };
       }
 
       return {
@@ -101,7 +94,7 @@ export const getAlimentaireProfileAction = authAction
         age: profile.age.toString(),
         size: profile.size.toString(),
         weight: profile.weight.toString(),
-      } as SettingsAlimentaireFormType;
+      };
     } catch (error) {
       console.error("Error fetching alimentaire profile:", error);
       throw error;
