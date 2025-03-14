@@ -12,29 +12,32 @@ import { SectionLayout } from '@/features/landing/SectionLayout';
 export default function SuccessPaymentPage() {
   return (
     <>
-      <SectionLayout size="lg" variant="default" className="mx-auto mt-[-22] max-w-7xl p-6">
+      <SectionLayout size="lg" variant="default" className="max-w-8xl mx-auto mt-[-22] p-6">
         <Layout>
           <LayoutHeader>
-            <LayoutTitle>Merci pour votre achat !</LayoutTitle>
+            <LayoutTitle>🎉Merci pour votre achat !</LayoutTitle>
             <LayoutDescription>
-            Nous sommes ravis de vous accueillir dans notre programme exclusif de coaching personnel et nutrition.
-            Votre abonnement vous ouvre les portes d’un accompagnement sur mesure pour transformer votre bien-être. Voici ce qui vous attend :
+              Nous sommes ravis de vous accueillir dans notre programme exclusif de coaching personnel et nutrition.
+              Votre abonnement vous ouvre les portes d’un accompagnement sur mesure pour transformer votre bien-être. Voici ce qui vous attend :
             </LayoutDescription>
           </LayoutHeader>
           <LayoutContent>
           <LayoutTitle>Programme</LayoutTitle>
             <LayoutDescription>
               ✅ Consultation Personnalisée : Lors de votre première séance en visioconférence, nous établirons ensemble un bilan complet pour comprendre vos objectifs, votre mode de vie et vos attentes.
+            </LayoutDescription>
+            <LayoutDescription>
               ✅ Programme Sur Mesure : En fonction de vos besoins spécifiques – qu’il s’agisse de perdre du poids, de gagner en énergie ou de renforcer votre vitalité – nous élaborerons un plan de coaching et de nutrition adapté, simple et efficace.
+            </LayoutDescription>
+            <LayoutDescription>
               ✅ Suivi et Accompagnement Réguliers : Vous bénéficierez d’un suivi personnalisé, avec des ajustements réguliers pour garantir votre progression et répondre à vos questions à chaque étape.
             </LayoutDescription>
-            <Link href="/" className={buttonVariants({ size: "md" })}>
+            <Link href="/" className={buttonVariants({ size: "md", mt:"12px"})}>
               Crée un compte
             </Link>
             <Link href="/account/checkout" className={buttonVariants({ size: "md" })}>
               Formulaire
-            </Link>
-            
+            </Link>            
           </LayoutContent>
           <LayoutDescription>
             Votre transformation commence dès maintenant ! Un email de confirmation vous a été envoyé avec toutes les instructions pour accéder à votre espace membre et réserver votre première séance.
