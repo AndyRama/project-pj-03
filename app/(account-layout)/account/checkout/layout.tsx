@@ -25,11 +25,11 @@ export default async function RouteLayout(
           links={[
             {
               href: `/account/checkout`,
-              label: "Personelles",
+              label: "Email confirmation",
               badge: ""
             },
             {
-              href: `/account/checkout`,
+              href: `/account/checkout/alimentaire`,
               label: "Formulaire",
               badge: "new"
             },

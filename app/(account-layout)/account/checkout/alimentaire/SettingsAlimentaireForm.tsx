@@ -58,7 +58,6 @@ export const SettingsAlimentaireForm = ({
       toast.success("Paramètres mis à jour avec succès");
       router.refresh();
       
-      // Redirect to the alimentaire dashboard after successful update
       if (profileId) {
         router.push('/alimentaire');
       } else {
@@ -71,103 +70,46 @@ export const SettingsAlimentaireForm = ({
     <FormUnsavedBar
       form={form}
       onSubmit={async (v) => mutation.mutateAsync(v)}
-      className="flex w-[1/2] flex-col gap-6 lg:gap-8"
+      className="flex w-full flex-col gap-6 lg:gap-8"
     >
-      <Card className="p-4">
-        <CardHeader>
-          <CardTitle>Mensurations</CardTitle>
-          <CardDescription>
-            Ces informations sont essentielles pour adapter votre plan alimentaire à vos besoins spécifiques.
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="flex flex-col gap-4">
-          <div className="grid grid-cols-1 gap-4 ">
+      {[
+        { name: "firstName", label: "Prénom", placeholder: "Votre prénom" },
+        { name: "lastName", label: "Nom", placeholder: "Votre nom" },
+        { name: "age", label: "Âge", placeholder: "Votre âge", type: "number" },
+        { name: "size", label: "Taille (cm)", placeholder: "Votre taille en cm", type: "number" },
+        { name: "weight", label: "Poids (kg)", placeholder: "Votre poids en kg", type: "number", step: "0.1" },
+      ].map(({ name, label, placeholder, type = "text", step }) => (
+        <Card key={name} className="p-4">
+          <CardHeader>
+            <CardTitle>{label}</CardTitle>
+            <CardDescription>
+              {`Veuillez renseigner votre ${label.toLowerCase()}.`}
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
             <FormField
               control={form.control}
-              name="firstName"
+              name={name}
               render={({ field }) => (
                 <FormItem>
-                  <CardTitle className="mb-2 text-sm font-medium">Prénom</CardTitle>
                   <FormControl>
-                    <Input placeholder="Votre prénom" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="lastName"
-              render={({ field }) => (
-                <FormItem>
-                  <CardTitle className="mb-2 text-sm font-medium">Nom</CardTitle>
-                  <FormControl>
-                    <Input placeholder="Votre nom" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          <FormField
-            control={form.control}
-            name="age"
-            render={({ field }) => (
-              <FormItem>
-                <CardTitle className="mb-2 text-sm font-medium">Âge</CardTitle>
-                <FormControl>
-                  <Input 
-                    type="number" 
-                    placeholder="Votre âge" 
-                    {...field} 
-                    onChange={(e) => field.onChange(e.target.value)}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <div className="grid grid-cols-1 gap-4 ">
-            <FormField
-              control={form.control}
-              name="size"
-              render={({ field }) => (
-                <FormItem>
-                  <CardTitle className="mb-2 text-sm font-medium">Taille (cm)</CardTitle>
-                  <FormControl>
-                    <Input 
-                      type="number" 
-                      placeholder="Votre taille en cm" 
-                      {...field} 
-                      onChange={(e) => field.onChange(e.target.value)}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="weight"
-              render={({ field }) => (
-                <FormItem>
-                  <CardTitle className="mb-2 text-sm font-medium">Poids (kg)</CardTitle>
-                  <FormControl>
-                    <Input 
-                      type="number" 
-                      placeholder="Votre poids en kg" 
+                    <Input
+                      type={type}
+                      placeholder={placeholder}
                       {...field}
-                      onChange={(e) => field.onChange(e.target.value)}
-                      step="0.1"
+                      {...(type === "number" && {
+                        onChange: (e) => field.onChange(e.target.value),
+                        step,
+                      })}
                     />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-          </div>
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      ))}
     </FormUnsavedBar>
   );
 };
