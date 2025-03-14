@@ -23,13 +23,13 @@ export default async function RouteLayout(
       <LayoutContent className="flex items-start gap-4 max-lg:flex-col">
         <SettingsNavigation
           links={[
-            // {
-            //   href: `/account/checkout`,
-            //   label: "Personelles",
-            //   badge: ""
-            // },
             {
-              href: `/account/checkout/alimentaire`,
+              href: `/account/checkout`,
+              label: "Personelles",
+              badge: ""
+            },
+            {
+              href: `/account/checkout`,
               label: "Formulaire",
               badge: "new"
             },

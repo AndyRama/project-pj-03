@@ -71,7 +71,7 @@ export const SettingsAlimentaireForm = ({
     <FormUnsavedBar
       form={form}
       onSubmit={async (v) => mutation.mutateAsync(v)}
-      className="flex w-full flex-col gap-6 lg:gap-8"
+      className="flex w-[1/2] flex-col gap-6 lg:gap-8"
     >
       <Card className="p-4">
         <CardHeader>
@@ -81,7 +81,7 @@ export const SettingsAlimentaireForm = ({
           </CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 ">
             <FormField
               control={form.control}
               name="firstName"
@@ -127,7 +127,7 @@ export const SettingsAlimentaireForm = ({
               </FormItem>
             )}
           />
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 ">
             <FormField
               control={form.control}
               name="size"
