@@ -16,8 +16,7 @@ export async function GET() {
       },
     });
     
-    // Transformer les données pour correspondre exactement au format attendu
-    // par votre page Agenda existante
+    // Transformer les données pour correspondre exactement au format attendu par page Agenda existante
     const formattedReservations = reservations.map(reservation => ({
       id: reservation.uid,
       title: reservation.title,

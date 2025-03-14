@@ -6,7 +6,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const apiKey = process.env.CAL_API_KEY; // Vérifiez bien que votre clé est définie dans .env.local
-  const calEndpoint = "https://api.cal.com/v1/reservations"; // Adaptez l’URL selon la documentation
+  const calEndpoint = "https://api.cal.com/v2/bookings"; // Adaptez l’URL selon la documentation
 
   try {
     const response = await fetch(calEndpoint, {

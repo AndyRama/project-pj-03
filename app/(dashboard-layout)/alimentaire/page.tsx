@@ -14,8 +14,12 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { prisma } from "@/lib/prisma";
+import Link from "next/link";
+import { auth } from "@/lib/auth/helper";
+import { redirect } from "next/navigation";
 
-// Type pour le modèle AlimentaireProfile
+// Type for AlimentaireProfile model
 type AlimentaireProfile = {
   id: string;
   firstName: string;
@@ -28,9 +32,26 @@ type AlimentaireProfile = {
   userId: string;
 };
 
-const AlimentairePlanPage: React.FC = () => {
-  // Tableau vide pour démonstration
-  const profiles: AlimentaireProfile[] = [];
+export default async function AlimentairePlanPage() {
+  // Check authentication
+  const user = await auth();
+  
+  if (!user?.id) {
+    redirect("/auth/signin");
+  }
+
+  // Fetch all alimentaire profiles
+  let profiles: AlimentaireProfile[] = [];
+  
+  try {
+    profiles = await prisma.alimentaireProfile.findMany({
+      orderBy: {
+        createdAt: 'desc'
+      }
+    });
+  } catch (error) {
+    console.error("Error fetching alimentaire profiles:", error);
+  }
 
   return (
     <div className="mx-auto p-4">
@@ -39,8 +60,12 @@ const AlimentairePlanPage: React.FC = () => {
           <LayoutTitle>Plan Alimentaire | Tableau des utilisateurs</LayoutTitle>
         </LayoutHeader>
         <LayoutActions className="flex gap-2">          
-          <Button variant="outline" size="sm">Retour</Button>
-          <Button variant="default" size="sm">Create</Button>
+          <Button variant="outline" size="sm" asChild>
+            <Link href="/account">Retour</Link>
+          </Button>
+          <Button variant="default" size="sm" asChild>
+            <Link href="/account/checkout/alimentaire">Créer un profil</Link>
+          </Button>
         </LayoutActions>
         <LayoutContent>
           <div className="rounded-md border">
@@ -74,8 +99,20 @@ const AlimentairePlanPage: React.FC = () => {
                       <TableCell>{new Date(profile.createdAt).toLocaleDateString()}</TableCell>
                       <TableCell>
                         <div className="flex gap-2">
-                          <Button variant="outline" size="sm">Modifier</Button>
-                          <Button variant="destructive" size="sm">Supprimer</Button>
+                          <Link href={`/account/checkout/alimentaire?id=${profile.id}`}>
+                            <Button variant="outline" size="sm" asChild>
+                              replanifier
+                            </Button>
+                          </Link>
+                          <Button 
+                            variant="destructive" 
+                            size="sm"
+                            onClick={() => { 
+              
+                            }}
+                          >
+                            Annuler
+                          </Button>
                         </div>
                       </TableCell>
                     </TableRow>
@@ -88,6 +125,4 @@ const AlimentairePlanPage: React.FC = () => {
       </Layout>
     </div>
   );
-};
-
-export default AlimentairePlanPage;
+}
