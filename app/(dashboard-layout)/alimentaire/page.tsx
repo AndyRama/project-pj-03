@@ -22,8 +22,6 @@ import { redirect } from "next/navigation";
 // Type for AlimentaireProfile model
 type AlimentaireProfile = {
   id: string;
-  firstName: string;
-  lastName: string;
   size: number;
   age: number;
   weight: number;
@@ -72,8 +70,6 @@ export default async function AlimentairePlanPage() {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Prénom</TableHead>
-                  <TableHead>Nom</TableHead>
                   <TableHead>Taille (cm)</TableHead>
                   <TableHead>Âge</TableHead>
                   <TableHead>Poids (kg)</TableHead>
@@ -90,8 +86,6 @@ export default async function AlimentairePlanPage() {
                 ) : (
                   profiles.map((profile) => (
                     <TableRow key={profile.id}>
-                      <TableCell>{profile.firstName}</TableCell>
-                      <TableCell>{profile.lastName}</TableCell>
                       <TableCell>{profile.size}</TableCell>
                       <TableCell>{profile.age}</TableCell>
                       <TableCell>{profile.weight}</TableCell>

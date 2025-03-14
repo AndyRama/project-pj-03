@@ -66,7 +66,7 @@ export const SettingsAlimentaireForm = ({
     },
   });
   
-  const someDynamicValue: keyof SettingsAlimentaireFormType = "firstName";
+  const someDynamicValue: keyof SettingsAlimentaireFormType = "age";
 
   return (
     <FormUnsavedBar
@@ -75,8 +75,6 @@ export const SettingsAlimentaireForm = ({
       className="flex w-full flex-col gap-6 lg:gap-8"
     >
       {[
-        { name: "firstName", label: "Prénom", placeholder: "Votre prénom" },
-        { name: "lastName", label: "Nom", placeholder: "Votre nom" },
         { name: "age", label: "Âge", placeholder: "Votre âge", type: "number" },
         { name: "size", label: "Taille (cm)", placeholder: "Votre taille en cm", type: "number" },
         { name: "weight", label: "Poids (kg)", placeholder: "Votre poids en kg", type: "number", step: "0.1" },

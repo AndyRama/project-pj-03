@@ -92,8 +92,6 @@ model Feedback {
 
 model AlimentaireProfile {
   id        String    @id @default(nanoid(11))
-  firstName String
-  lastName  String
   size      Int
   age       Int
   weight    Float

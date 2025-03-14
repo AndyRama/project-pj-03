@@ -43,8 +43,6 @@ export const updateSettingsAction = authAction
             id: existingProfile.id,
           },
           data: {
-            firstName: input.firstName,
-            lastName: input.lastName,
             age: parseInt(input.age),
             size: parseInt(input.size),
             weight: parseFloat(input.weight),
@@ -55,8 +53,6 @@ export const updateSettingsAction = authAction
         // Create new profile
         await prisma.alimentaireProfile.create({
           data: {
-            firstName: input.firstName,
-            lastName: input.lastName,
             age: parseInt(input.age),
             size: parseInt(input.size),
             weight: parseFloat(input.weight),
@@ -70,8 +66,6 @@ export const updateSettingsAction = authAction
       
       // Return the same data for the form update
       return {
-        firstName: input.firstName,
-        lastName: input.lastName,
         age: input.age,
         size: input.size,
         weight: input.weight,
@@ -109,8 +103,6 @@ export const getAlimentaireProfileAction = authAction
 
       if (!profile) {
         return {
-          firstName: "",
-          lastName: "",
           age: "",
           size: "",
           weight: "",
@@ -118,8 +110,6 @@ export const getAlimentaireProfileAction = authAction
       }
 
       return {
-        firstName: profile.firstName,
-        lastName: profile.lastName,
         age: profile.age.toString(),
         size: profile.size.toString(),
         weight: profile.weight.toString(),
