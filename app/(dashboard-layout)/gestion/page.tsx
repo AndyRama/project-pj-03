@@ -23,6 +23,7 @@ const services = [
   { title: "Compte Vercel", description: "Gestion de l'hébergement", link: "https://vercel.com/" },
   { title: "Compte Resend", description: "Emailing pour l'application", link: "https://resend.com/" },
   { title: "Compte Stripe", description: "Paiement avec module Stripe", link: "https://stripe.com/" },
+  { title: "Compte Stripe", description: "creation d'article optimiser SEO", link: "https://stripe.com/" },
 ];
 
 export default async function RoutePage(props: PageParams) {

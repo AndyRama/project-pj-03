@@ -60,11 +60,11 @@ export default async function AlimentairePlanPage() {
           <LayoutTitle>Plan Alimentaire | Tableau des utilisateurs</LayoutTitle>
         </LayoutHeader>
         <LayoutActions className="flex gap-2">          
-          <Button variant="outline" size="sm" asChild>
+          {/* <Button variant="outline" size="sm" asChild>
             <Link href="/account">Retour</Link>
-          </Button>
+          </Button> */}
           <Button variant="default" size="sm" asChild>
-            <Link href="/account/checkout/alimentaire">Créer un profil</Link>
+            <Link href="#">Créer un profil</Link>
           </Button>
         </LayoutActions>
         <LayoutContent>
@@ -97,25 +97,7 @@ export default async function AlimentairePlanPage() {
                       <TableCell>{profile.age}</TableCell>
                       <TableCell>{profile.weight}</TableCell>
                       <TableCell>{new Date(profile.createdAt).toLocaleDateString()}</TableCell>
-                      <TableCell>
-                        <div className="flex gap-2">
-                          <Link href={`/account/checkout/alimentaire?id=${profile.id}`}>
-                            <Button variant="outline" size="sm" asChild>
-                              replanifier
-                            </Button>
-                          </Link>
-                          {/* <Button 
-                            variant="destructive" 
-                            size="sm"
-                            onClick={() => { 
-              
-                            }}
-                          >
-                            Annuler
-                          </Button> */}
-                        </div>
-                      </TableCell>
-                    </TableRow>
+                   </TableRow>
                   ))
                 )}
               </TableBody>
