@@ -66,8 +66,6 @@ export const SettingsAlimentaireForm = ({
     },
   });
   
-  const someDynamicValue: keyof SettingsAlimentaireFormType = "age";
-
   return (
     <FormUnsavedBar
       form={form}
@@ -89,7 +87,7 @@ export const SettingsAlimentaireForm = ({
           <CardContent>
             <FormField
               control={form.control}
-              name={someDynamicValue}
+              name={name as keyof SettingsAlimentaireFormType}  
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
