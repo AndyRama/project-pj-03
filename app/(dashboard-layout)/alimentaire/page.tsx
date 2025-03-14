@@ -1,10 +1,8 @@
-import { Button } from "@/components/ui/button";
 import {
   Layout,
   LayoutContent,
   LayoutHeader,
   LayoutTitle,
-  LayoutActions,
 } from "@/features/page/layout";
 import {
   Table,
@@ -15,7 +13,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { prisma } from "@/lib/prisma";
-import Link from "next/link";
 import { auth } from "@/lib/auth/helper";
 import { redirect } from "next/navigation";
 
@@ -74,20 +71,12 @@ export default async function AlimentairePlanPage() {
         <LayoutHeader>
           <LayoutTitle>Plan Alimentaire | Tableau des utilisateurs</LayoutTitle>
         </LayoutHeader>
-        <LayoutActions className="flex gap-2">          
-          {/* <Button variant="outline" size="sm" asChild>
-            <Link href="/account">Retour</Link>
-          </Button> */}
-          <Button variant="default" size="sm" asChild>
-            <Link href="#">Créer un profil</Link>
-          </Button>
-        </LayoutActions>
         <LayoutContent>
           <div className="rounded-md border">
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Nom</TableHead>
+                  <TableHead>Nom complet</TableHead>
                   <TableHead>Email</TableHead>
                   <TableHead>Taille (cm)</TableHead>
                   <TableHead>Âge</TableHead>

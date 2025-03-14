@@ -25,8 +25,8 @@ export default async function RouteLayout(
           links={[
             {
               href: `/account/checkout`,
-              label: "Email confirmation",
-              badge: ""
+              label: "Contacte",
+              badge: "new"
             },
             {
               href: `/account/checkout/alimentaire`,

@@ -5,7 +5,6 @@ import { SettingsDetailsForm } from "./SettingsDetailsForm";
 import { redirect } from "next/navigation";
 
 export default async function RoutePage(props: PageParams<{}>) {
-  // Get authenticated user
   const user = await auth();
   
   if (!user?.id) {

@@ -16,7 +16,7 @@ export default async function RoutePage(props: PageParams<{}>) {
         <LayoutTitle>Dashboard</LayoutTitle>
       </LayoutHeader>
       <LayoutContent> 
-        <InformationCards />    
+        <InformationCards />  
         <SubscribersChart />
       </LayoutContent>
     </Layout>

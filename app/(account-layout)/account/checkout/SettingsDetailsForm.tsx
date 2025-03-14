@@ -58,9 +58,9 @@ export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
     >
       <Card className="p-4">
         <CardHeader>
-          <CardTitle>FullName</CardTitle>
+          <CardTitle>Nom complet</CardTitle>
           <CardDescription>
-            Use a descriptive name to help you identify this product/bundle.
+            Utilisez un nom descriptif pour nous aider à identifier.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -82,7 +82,7 @@ export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
         <CardHeader>
           <CardTitle>Email</CardTitle>
           <CardDescription>
-            Use a valid email address to receive important notifications.
+            Utilisez une adresse e-mail valide pour recevoir des notifications importantes.
           </CardDescription>
         </CardHeader>
         <CardContent>
