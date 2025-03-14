@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const services = [
+  { title: "Compte Wisewand", description: "creation d'article optimiser SEO", link: "https://wisewand.ai/?fpr=andy78" },
   { title: "Compte Gmail", description: "Adresse: dr.sarah.johson@gmail.com", link: "https://mail.google.com/" },
   { title: "Compte cal.com", description: "Pour la gestion du calendrier et événement", link: "https://cal.com/" },
   { title: "Compte Namecheap", description: "Permet de gérer le nom de domaine", link: "https://www.namecheap.com/" },
@@ -23,7 +24,6 @@ const services = [
   { title: "Compte Vercel", description: "Gestion de l'hébergement", link: "https://vercel.com/" },
   { title: "Compte Resend", description: "Emailing pour l'application", link: "https://resend.com/" },
   { title: "Compte Stripe", description: "Paiement avec module Stripe", link: "https://stripe.com/" },
-  { title: "Compte Stripe", description: "creation d'article optimiser SEO", link: "https://stripe.com/" },
 ];
 
 export default async function RoutePage(props: PageParams) {
