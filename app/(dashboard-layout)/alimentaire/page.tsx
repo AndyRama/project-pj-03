@@ -19,7 +19,7 @@ import Link from "next/link";
 import { auth } from "@/lib/auth/helper";
 import { redirect } from "next/navigation";
 
-// Type for AlimentaireProfile model with user information
+// Base type for AlimentaireProfile model
 type AlimentaireProfile = {
   id: string;
   size: number;
@@ -28,10 +28,14 @@ type AlimentaireProfile = {
   createdAt: Date;
   updatedAt: Date;
   userId: string;
-  user?: {
-    email: string;
-    name: string;
-  };
+};
+
+// Extended type that includes user information
+type AlimentaireProfileWithUser = AlimentaireProfile & {
+  user: {
+    name: string | null;
+    email: string | null;
+  } | null;
 };
 
 export default async function AlimentairePlanPage() {
@@ -42,11 +46,15 @@ export default async function AlimentairePlanPage() {
     redirect("/auth/signin");
   }
   
-  // Fetch all alimentaire profiles with user information
-  let profiles: AlimentaireProfile[] = [];
+  // Initialize with appropriate type
+  let profilesWithUsers: AlimentaireProfileWithUser[] = [];
  
   try {
-    profiles = await prisma.alimentaireProfile.findMany({
+    // Fetch profiles with user data
+    profilesWithUsers = await prisma.alimentaireProfile.findMany({
+      orderBy: {
+        createdAt: 'desc'
+      },
       include: {
         user: {
           select: {
@@ -55,9 +63,6 @@ export default async function AlimentairePlanPage() {
           },
         },
       },
-      orderBy: {
-        createdAt: 'desc'
-      }
     });
   } catch (error) {
     console.error("Error fetching alimentaire profiles:", error);
@@ -91,14 +96,14 @@ export default async function AlimentairePlanPage() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {profiles.length === 0 ? (
+                {profilesWithUsers.length === 0 ? (
                   <TableRow>
-                    <TableCell colSpan={7} className="py-6 text-center text-gray-500">
+                    <TableCell colSpan={6} className="py-6 text-center text-gray-500">
                       Aucun profil alimentaire disponible
                     </TableCell>
                   </TableRow>
                 ) : (
-                  profiles.map((profile) => (
+                  profilesWithUsers.map((profile) => (
                     <TableRow key={profile.id}>
                       <TableCell>{profile.user?.name || 'N/A'}</TableCell>
                       <TableCell>{profile.user?.email || 'N/A'}</TableCell>
