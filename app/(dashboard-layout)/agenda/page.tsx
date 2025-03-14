@@ -214,14 +214,14 @@ export default function AgendaPage(): React.ReactElement {
                         >
                           Annuler
                         </Button>
-                        <Button 
+                        {/* <Button 
                           variant="outline" 
                           size="sm"
                           as={Link}
                           href={`/agenda/edit/${reservation.id}`}
                         >
                           Modifier
-                        </Button>
+                        </Button> */}
                       </div>
                     </div>
                   );
