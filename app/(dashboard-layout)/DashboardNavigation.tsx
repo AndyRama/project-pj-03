@@ -17,10 +17,24 @@ import type { PropsWithChildren } from "react";
 import { DesktopVerticalMenu } from "@/features/navigation/DesktopVerticalMenu";
 import { MobileDropdownMenu } from "@/features/navigation/MobileDropdownMenu";
 import { DASHBOARD_LINKS } from "./dashboard-links";
+import { ACCOUNT_LINKS } from "./../(account-layout)/account-links";
 import { ContactSupportDialog } from "@/features/contact/support/ContactSupportDialog";
 
 export const DashboardNavigation = async (props: PropsWithChildren) => {
   const user = await auth();
+  
+  // Determine which links to display based on user role
+  const getNavigationLinks = () => {
+    if (!user) return [];
+    
+    // Check if user has SUPER_ADMIN role
+    const isSuperAdmin = user.plan === "SUPER_ADMIN";
+    
+    // Return appropriate links based on role
+    return isSuperAdmin ? DASHBOARD_LINKS : ACCOUNT_LINKS;
+  };
+  
+  const navigationLinks = getNavigationLinks();
 
   return (
     <div className="flex h-full flex-col lg:flex-row lg:overflow-hidden">
@@ -39,7 +53,7 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
         </div>
         <div className="h-10" />
         {user ? (
-          <DesktopVerticalMenu links={DASHBOARD_LINKS} />
+          <DesktopVerticalMenu links={navigationLinks} />
         ) : null}
         <div className="flex-1" />
         {user ? (
@@ -83,7 +97,7 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
 
             <nav className="flex flex-1 items-center justify-end space-x-1">
               <AuthButton />
-              <MobileDropdownMenu className="lg:hidden" links={DASHBOARD_LINKS} />
+              <MobileDropdownMenu className="lg:hidden" links={navigationLinks} />
             </nav>
           </div>
         </header>

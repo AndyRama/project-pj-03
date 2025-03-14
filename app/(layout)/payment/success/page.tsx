@@ -12,7 +12,7 @@ import { SectionLayout } from '@/features/landing/SectionLayout';
 export default function SuccessPaymentPage() {
   return (
     <>
-      <SectionLayout size="lg" variant="default" className="max-w-8xl mx-auto mt-[-22] p-6">
+      <SectionLayout size="lg" variant="default" className="mx-auto mt-[-22] max-w-7xl p-6">
         <Layout>
           <LayoutHeader>
             <LayoutTitle>🎉Merci pour votre achat !</LayoutTitle>

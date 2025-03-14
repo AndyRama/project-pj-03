@@ -105,4 +105,5 @@ model AlimentaireProfile {
 enum UserPlan {
   FREE
   PREMIUM
+  SUPER_ADMIN
 }
