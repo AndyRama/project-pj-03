@@ -104,7 +104,7 @@ export default async function AlimentairePlanPage() {
                               replanifier
                             </Button>
                           </Link>
-                          <Button 
+                          {/* <Button 
                             variant="destructive" 
                             size="sm"
                             onClick={() => { 
@@ -112,7 +112,7 @@ export default async function AlimentairePlanPage() {
                             }}
                           >
                             Annuler
-                          </Button>
+                          </Button> */}
                         </div>
                       </TableCell>
                     </TableRow>

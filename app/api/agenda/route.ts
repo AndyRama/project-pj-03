@@ -12,7 +12,7 @@ export async function GET() {
         }
       },
       orderBy: {
-        date: 'asc',
+        date: 'desc',
       },
     });
     
