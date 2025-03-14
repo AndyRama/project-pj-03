@@ -19,7 +19,7 @@ import Link from "next/link";
 import { auth } from "@/lib/auth/helper";
 import { redirect } from "next/navigation";
 
-// Type for AlimentaireProfile model
+// Type for AlimentaireProfile model with user information
 type AlimentaireProfile = {
   id: string;
   size: number;
@@ -28,21 +28,33 @@ type AlimentaireProfile = {
   createdAt: Date;
   updatedAt: Date;
   userId: string;
+  user?: {
+    email: string;
+    name: string;
+  };
 };
 
 export default async function AlimentairePlanPage() {
   // Check authentication
   const user = await auth();
-  
+ 
   if (!user?.id) {
     redirect("/auth/signin");
   }
-
-  // Fetch all alimentaire profiles
-  let profiles: AlimentaireProfile[] = [];
   
+  // Fetch all alimentaire profiles with user information
+  let profiles: AlimentaireProfile[] = [];
+ 
   try {
     profiles = await prisma.alimentaireProfile.findMany({
+      include: {
+        user: {
+          select: {
+            email: true,
+            name: true,
+          },
+        },
+      },
       orderBy: {
         createdAt: 'desc'
       }
@@ -50,7 +62,7 @@ export default async function AlimentairePlanPage() {
   } catch (error) {
     console.error("Error fetching alimentaire profiles:", error);
   }
-
+  
   return (
     <div className="mx-auto p-4">
       <Layout>
@@ -70,6 +82,8 @@ export default async function AlimentairePlanPage() {
             <Table>
               <TableHeader>
                 <TableRow>
+                  <TableHead>Nom</TableHead>
+                  <TableHead>Email</TableHead>
                   <TableHead>Taille (cm)</TableHead>
                   <TableHead>Âge</TableHead>
                   <TableHead>Poids (kg)</TableHead>
@@ -86,11 +100,13 @@ export default async function AlimentairePlanPage() {
                 ) : (
                   profiles.map((profile) => (
                     <TableRow key={profile.id}>
+                      <TableCell>{profile.user?.name || 'N/A'}</TableCell>
+                      <TableCell>{profile.user?.email || 'N/A'}</TableCell>
                       <TableCell>{profile.size}</TableCell>
                       <TableCell>{profile.age}</TableCell>
                       <TableCell>{profile.weight}</TableCell>
                       <TableCell>{new Date(profile.createdAt).toLocaleDateString()}</TableCell>
-                   </TableRow>
+                    </TableRow>
                   ))
                 )}
               </TableBody>
@@ -98,6 +114,6 @@ export default async function AlimentairePlanPage() {
           </div>
         </LayoutContent>
       </Layout>
-    </div>
+    </div> 
   );
 }
