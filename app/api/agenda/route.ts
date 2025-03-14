@@ -16,12 +16,15 @@ export async function GET() {
       },
     });
     
-    // Transformer les données pour correspondre exactement au format attendu par page Agenda existante
+    // Transformer les données pour correspondre exactement au format attendu
+    // par votre page Agenda
     const formattedReservations = reservations.map(reservation => ({
       id: reservation.uid,
       title: reservation.title,
       date: reservation.date.toISOString(),
       clientName: reservation.clientName,
+      status: reservation.status,
+      videoCallUrl: reservation.videoCallUrl,
     }));
     
     return NextResponse.json(formattedReservations);

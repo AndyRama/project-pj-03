@@ -14,10 +14,12 @@ import { formatDate } from "@/lib/format/date";
 import Link from 'next/link';
 
 interface Reservation {
+  videoCallUrl: string;
   id: string;
   title: string;
   date: string;         
   clientName: string;   
+  status: string;
 }
 
 export default function AgendaPage(): React.ReactElement {
@@ -72,8 +74,22 @@ export default function AgendaPage(): React.ReactElement {
   // Données de test pour vérifier l'affichage
   const useTestData = () => {
     setReservations([
-      { id: '1', title: 'Premier Rendez-vous  - Coaching Sportif', date: '2025-03-10T09:00:00Z', clientName: 'David' },
-      { id: '2', title: 'Deuxième Rendez-vous - Suivi Mensuel', date: '2025-03-15T14:30:00Z', clientName: 'Andy' },
+      { 
+        id: '1', 
+        title: 'Premier Rendez-vous - Coaching Sportif', 
+        date: '2025-03-10T09:00:00Z', 
+        clientName: 'David',
+        status: 'ACCEPTED',
+        videoCallUrl: 'https://meet.google.com/abc-def-ghi',
+      },
+      { 
+        id: '2', 
+        title: 'Deuxième Rendez-vous - Suivi Mensuel', 
+        date: '2025-03-15T14:30:00Z', 
+        clientName: 'Andy',
+        status: 'ACCEPTED',
+        videoCallUrl: 'https://meet.google.com/abc-def-ghi',
+      },
     ]);
     setLoading(false);
     setError(null);
@@ -86,11 +102,35 @@ export default function AgendaPage(): React.ReactElement {
       if (isNaN(date.getTime())) {
         return dateString;
       }
-      // formatDate est une fonction perso (ex: "15/03/2025 à 14:30")
       return formatDate(date);
     } catch (error) {
       console.error("Erreur de formatage de date:", error);
       return dateString;
+    }
+  };
+
+  // Fonction pour annuler une réservation
+  const cancelReservation = async (id: string) => {
+    try {
+      setDebugInfo(`Tentative d'annulation de la réservation ${id}...`);
+      
+      const res = await fetch(`/api/agenda/${id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ status: "CANCELLED" }),
+      });
+      
+      if (!res.ok) {
+        throw new Error(`Erreur ${res.status}: ${res.statusText}`);
+      }
+      
+      // Actualiser les réservations après annulation
+      fetchReservations();
+    } catch (err) {
+      console.error("Erreur lors de l'annulation:", err);
+      setError(err instanceof Error ? err.message : "Erreur lors de l'annulation");
     }
   };
 
@@ -126,7 +166,6 @@ export default function AgendaPage(): React.ReactElement {
             <div className="space-y-4">
               {reservations.length > 0 ? (
                 reservations.map((reservation) => {
-                  // Pour extraire l'heure, on peut faire un substring
                   const dateObj = new Date(reservation.date);
                   const heure = dateObj.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
 
@@ -137,19 +176,23 @@ export default function AgendaPage(): React.ReactElement {
                     >
                       {/* Bloc date/heure/Meet */}
                       <div className="mb-2 md:mb-0">
-                        <Typography variant="p"className="text-sm font-semibold text-white">
+                        <Typography variant="p" className="text-sm font-semibold text-white">
                           {formatReservationDate(reservation.date)}
                         </Typography>
                         <Typography variant="p" className="txt-xs text-gray-500">
                           {heure} (Heure locale)
                         </Typography>
-                        <Button>
-                          <Link 
-                            href="#"
-                            className="mt-2 inline-block text-sm text-white underline">
-                              Rejoindre Google Meet
-                          </Link>
-                        </Button>
+                        {reservation.videoCallUrl && (
+                          <Button>
+                            <Link 
+                              href={reservation.videoCallUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="mt-2 inline-block text-sm text-white underline">
+                                Rejoindre Google Meet
+                            </Link>
+                          </Button>
+                        )}
                       </div>
 
                       {/* Bloc titre + description */}
@@ -164,10 +207,19 @@ export default function AgendaPage(): React.ReactElement {
 
                       {/* Actions (Annuler / Modifier) */}
                       <div className="mt-1 flex gap-2 md:mt-0">
-                        <Button variant="outline" size="sm">
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          onClick={() => cancelReservation(reservation.id)}
+                        >
                           Annuler
                         </Button>
-                        <Button variant="outline" size="sm">
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          as={Link}
+                          href={`/agenda/edit/${reservation.id}`}
+                        >
                           Modifier
                         </Button>
                       </div>
@@ -175,7 +227,7 @@ export default function AgendaPage(): React.ReactElement {
                   );
                 })
               ) : (
-                <div className="rounded-md border border-gray-200  p-4">
+                <div className="rounded-md border border-gray-200 p-4">
                   <Typography variant="p" className="text-gray-500">
                     Aucune réservation trouvée.
                   </Typography>
