@@ -28,14 +28,9 @@ import {
 type ProductFormProps = {
   defaultValues: SettingsAlimentaireFormType;
   userId: string;
-  profileId?: string;
 };
 
-export const SettingsAlimentaireForm = ({ 
-  defaultValues, 
-  userId, 
-  profileId 
-}: ProductFormProps) => {
+export const SettingsAlimentaireForm = ({ defaultValues, userId }: ProductFormProps) => {
   const form = useZodForm({
     schema: SettingsAlimentaireFormSchema,
     defaultValues,
@@ -46,8 +41,7 @@ export const SettingsAlimentaireForm = ({
     mutationFn: async (values: SettingsAlimentaireFormType) => {
       const result = await updateSettingsAction({
         ...values,
-        userId,
-        profileId
+        userId
       });
 
       if (!result || result.serverError) {
@@ -57,13 +51,7 @@ export const SettingsAlimentaireForm = ({
 
       toast.success("Paramètres mis à jour avec succès");
       router.refresh();
-      
-      // Redirect to the alimentaire dashboard after successful update
-      if (profileId) {
-        router.push('/alimentaire');
-      } else {
-        form.reset(result.data as SettingsAlimentaireFormType);
-      }
+      form.reset(result.data as SettingsAlimentaireFormType);
     },
   });
 
@@ -71,17 +59,18 @@ export const SettingsAlimentaireForm = ({
     <FormUnsavedBar
       form={form}
       onSubmit={async (v) => mutation.mutateAsync(v)}
-      className="flex w-full flex-col gap-6 lg:gap-8"
+      className="w-half flex flex-col gap-6 lg:gap-8"
     >
       <Card className="p-4">
         <CardHeader>
           <CardTitle>Mensurations</CardTitle>
           <CardDescription>
-            Ces informations sont essentielles pour adapter votre plan alimentaire à vos besoins spécifiques.
+            Ces informations sont essentielles pour adapter votre plan alimentaire à Votre
+            morphologie et besoins spécifiques.
           </CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4">
             <FormField
               control={form.control}
               name="firstName"
@@ -127,7 +116,7 @@ export const SettingsAlimentaireForm = ({
               </FormItem>
             )}
           />
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4">
             <FormField
               control={form.control}
               name="size"
