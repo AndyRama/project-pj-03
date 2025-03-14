@@ -22,7 +22,7 @@ export default function SuccessPaymentPage() {
             </LayoutDescription>
           </LayoutHeader>
           <LayoutContent>
-          <LayoutTitle>Programme</LayoutTitle>
+          <LayoutTitle>💪Programme</LayoutTitle>
             <LayoutDescription>
               ✅ Consultation Personnalisée : Lors de votre première séance en visioconférence, nous établirons ensemble un bilan complet pour comprendre vos objectifs, votre mode de vie et vos attentes.
             </LayoutDescription>
@@ -32,7 +32,7 @@ export default function SuccessPaymentPage() {
             <LayoutDescription>
               ✅ Suivi et Accompagnement Réguliers : Vous bénéficierez d’un suivi personnalisé, avec des ajustements réguliers pour garantir votre progression et répondre à vos questions à chaque étape.
             </LayoutDescription>
-            <Link href="/" className={buttonVariants({ size: "md", mt:"12px"})}>
+            <Link href="/" className={buttonVariants({ size: "md"})}>
               Crée un compte
             </Link>
             <Link href="/account/checkout" className={buttonVariants({ size: "md" })}>
