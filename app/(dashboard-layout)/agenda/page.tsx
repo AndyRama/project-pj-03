@@ -183,20 +183,23 @@ export default function AgendaPage(): React.ReactElement {
                           {heure} (Heure locale)
                         </Typography>
                         {reservation.videoCallUrl && (
-                          <Button>
                             <Link 
                               href={reservation.videoCallUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="mt-2 inline-block text-sm text-white underline">
+                              className="mt-2 inline-block text-sm text-white">
+                              <Button 
+                                variant="outline" 
+                                size="sm"
+                                >
                                 Rejoindre Google Meet
+                              </Button>
                             </Link>
-                          </Button>
                         )}
                       </div>
 
                       {/* Bloc titre + description */}
-                      <div className="mt-1 md:mx-4 md:mt-0 md:flex-1">
+                      <div className="ml-20 mt-1 md:mx-4 md:mt-0 md:flex-1">
                         <Typography variant="p" className="text-base font-medium text-white">
                           {reservation.title}
                         </Typography>
@@ -214,14 +217,6 @@ export default function AgendaPage(): React.ReactElement {
                         >
                           Annuler
                         </Button>
-                        {/* <Button 
-                          variant="outline" 
-                          size="sm"
-                          as={Link}
-                          href={`/agenda/edit/${reservation.id}`}
-                        >
-                          Modifier
-                        </Button> */}
                       </div>
                     </div>
                   );

@@ -1,17 +1,6 @@
-import type { PageParams } from "@/types/next";
-import { SettingsDetailsForm } from "./SettingsDetailsForm";
+import { redirect } from "next/navigation";
 
-export default async function RoutePage(props: PageParams<{}>) {
-  /**
-   * Usually in this page you would fetch the data from the database
-   * So the form mount with the current data
-   */
-  return (
-    <SettingsDetailsForm
-      defaultValues={{
-        name: "",
-        email: "",
-      }}
-    />
-  );
+export default async function RoutePage() {
+  // Redirect to the alimentaire (Formulaire) page by default
+  redirect("/account/checkout/alimentaire");
 }

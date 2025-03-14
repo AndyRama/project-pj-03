@@ -78,7 +78,6 @@ export default async function AlimentairePlanPage() {
                   <TableHead>Âge</TableHead>
                   <TableHead>Poids (kg)</TableHead>
                   <TableHead>Date de création</TableHead>
-                  <TableHead>Actions</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
