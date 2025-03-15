@@ -172,14 +172,14 @@ export default function AgendaPage(): React.ReactElement {
                   return (
                     <div
                       key={reservation.id}
-                      className="flex flex-col items-start justify-between rounded-md border border-orange-500 p-4 shadow-sm md:flex-row md:items-center"
+                      className="flex flex-col items-start justify-between rounded-md border border-orange-500 bg-white p-4 shadow-sm md:flex-row md:items-center"
                     >
                       {/* Bloc date/heure/Meet */}
                       <div className="mb-2 md:mb-0">
-                        <Typography variant="p" className="text-sm font-semibold text-white">
+                        <Typography variant="p" className="text-sm font-semibold text-gray-900">
                           {formatReservationDate(reservation.date)}
                         </Typography>
-                        <Typography variant="p" className="txt-xs text-gray-500">
+                        <Typography variant="p" className="text-xs text-gray-500">
                           {heure} (Heure locale)
                         </Typography>
                         {reservation.videoCallUrl && (
@@ -187,7 +187,7 @@ export default function AgendaPage(): React.ReactElement {
                               href={reservation.videoCallUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="mt-2 inline-block text-sm text-white">
+                              className="mt-2 inline-block text-sm">
                               <Button 
                                 variant="outline" 
                                 size="sm"
@@ -199,8 +199,8 @@ export default function AgendaPage(): React.ReactElement {
                       </div>
 
                       {/* Bloc titre + description */}
-                      <div className="ml-20 mt-1 md:mx-4 md:mt-0 md:flex-1">
-                        <Typography variant="p" className="text-base font-medium text-white">
+                      <div className="ml-0 mt-1 md:mx-4 md:mt-0 md:flex-1">
+                        <Typography variant="p" className="text-base font-medium text-gray-900">
                           {reservation.title}
                         </Typography>
                         <Typography variant="p" className="text-sm text-gray-600">

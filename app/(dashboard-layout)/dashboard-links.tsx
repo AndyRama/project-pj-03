@@ -48,11 +48,6 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         icon: <SlidersHorizontal />,
         url: "/gestion",
       },
-      {
-        title: "Mon compte",
-        icon: <User2 />,
-        url: "/account",
-      },
     ]
   },
   {
@@ -69,5 +64,15 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
         url: "/articles",
       },
     ],
+  },
+  {
+    title: "",
+    links: [
+      {
+        title: "Mon compte",
+        icon: <User2 />,
+        url: "/account",
+      },
+    ]
   },
 ];

@@ -3,16 +3,6 @@ import { AlertCircle, Coins, User2, FileKey2, FileLock2, ArrowLeft, Sparkles, Ca
 
 export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
   {
-    title: "",
-    links: [
-      { 
-        url: "/",
-        title: "Home",
-        icon: <ArrowLeft />
-      },
-    ],
-  },
-  {
     title: "Informations Personnelles",
     links: [
       { 
@@ -65,6 +55,16 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
         url: "/account/terms",
          title: "Terms",
          icon: <FileLock2 />
+      },
+    ],
+  },
+  {
+    title: "",
+    links: [
+      { 
+        url: "/",
+        title: "Home",
+        icon: <ArrowLeft />
       },
     ],
   },
