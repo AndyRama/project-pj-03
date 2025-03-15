@@ -36,8 +36,6 @@ export default function HomePage() {
 
       <Hero />
 
-
-
       {/* Section "Qui suis-je ?" et "Philosophie" */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}

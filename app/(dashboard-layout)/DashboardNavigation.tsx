@@ -104,7 +104,7 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
         </header>
 
         {/* Content of the page */}
-        <main className="py-4 lg:max-h-[calc(100vh_-_64px)] lg:flex-1 lg:overflow-auto lg:py-8">
+        <main className="py-4 lg:max-h-[calc(100vh_-_64px)] lg:flex-1 lg:overflow-auto lg:py-0">
           {user ? (
             props.children
           ) : (

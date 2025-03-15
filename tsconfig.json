@@ -32,6 +32,6 @@
     "tailwind.config.js",
     "app/**/*.ts",
     "app/**/*.tsx"
-, "src/features/layout/SuperAdminHeadertsx"  ],
+  ],
   "exclude": ["node_modules", ".next"]
 }

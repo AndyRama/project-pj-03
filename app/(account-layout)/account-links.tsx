@@ -1,5 +1,5 @@
 import type { NavigationLinkGroups } from "@/features/navigation/navigation.type";
-import { AlertCircle, Coins, User2, FileKey2, FileLock2, ArrowLeft, Sparkles, Carrot } from "lucide-react";
+import { AlertCircle, Coins, User2, FileKey2, FileLock2, ArrowLeft, Sparkles, Carrot, CalendarCheck } from "lucide-react";
 
 export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
   {
@@ -46,6 +46,11 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
         title: "Bilan",
         icon: <Carrot />        
        },
+       { 
+        url: "/account/agenda",
+         title: "Agenda",
+         icon: <CalendarCheck />
+      },
     ],
   },
   {
