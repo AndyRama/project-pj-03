@@ -32,6 +32,7 @@ export const DashboardNavigation = async (props: PropsWithChildren) => {
     
     // Return appropriate links based on role
     return isSuperAdmin ? DASHBOARD_LINKS : ACCOUNT_LINKS;
+
   };
   
   const navigationLinks = getNavigationLinks();
