@@ -1,12 +1,12 @@
-'use client';
+// 'use client';
 
-import { useState } from "react";
+// import { useState } from "react";
 import SubHero from "@/features/landing/SubHero";
 import CardContact from "@/features/contact/card/CardContact";
-import ContactForm from "@/features/contact/card/ContactForm";
+// import ContactForm from "@/features/contact/card/ContactForm";
 
 export default function Page() {
-  const [showForm, setShowForm] = useState(false);
+  // const [showForm, setShowForm] = useState(false);
 
   return (
     <>
