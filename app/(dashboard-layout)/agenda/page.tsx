@@ -22,8 +22,8 @@ interface Reservation {
   videoCallUrl: string;
   id: string;
   title: string;
-  date: string;         
-  clientName: string;   
+  date: string;
+  clientName: string;
   status: string;
 }
 
@@ -89,7 +89,7 @@ export default function AgendaPage(): React.ReactElement {
 
     const filterDay = new Date(dateFilter);
     filterDay.setHours(0, 0, 0, 0);
-    
+
     const nextDay = new Date(filterDay);
     nextDay.setDate(nextDay.getDate() + 1);
 
@@ -102,38 +102,38 @@ export default function AgendaPage(): React.ReactElement {
   }, [dateFilter, reservations]);
 
   // Données de test pour vérifier l'affichage
-  const useTestData = () => {
-    const testData = [
-      { 
-        id: '1', 
-        title: 'Premier Rendez-vous - Coaching Sportif', 
-        date: '2025-03-10T09:00:00Z', 
-        clientName: 'David',
-        status: 'ACCEPTED',
-        videoCallUrl: 'https://meet.google.com/abc-def-ghi',
-      },
-      { 
-        id: '2', 
-        title: 'Deuxième Rendez-vous - Suivi Mensuel', 
-        date: '2025-03-15T14:30:00Z', 
-        clientName: 'Andy',
-        status: 'ACCEPTED',
-        videoCallUrl: 'https://meet.google.com/abc-def-ghi',
-      },
-      { 
-        id: '3', 
-        title: 'Bilan Trimestriel', 
-        date: '2025-03-18T10:00:00Z', 
-        clientName: 'Sophie',
-        status: 'ACCEPTED',
-        videoCallUrl: 'https://meet.google.com/abc-def-ghi',
-      },
-    ];
-    setReservations(testData);
-    setFilteredReservations(testData);
-    setLoading(false);
-    setError(null);
-  };
+  // const useTestData = () => {
+  //   const testData = [
+  //     { 
+  //       id: '1', 
+  //       title: 'Premier Rendez-vous - Coaching Sportif', 
+  //       date: '2025-03-10T09:00:00Z', 
+  //       clientName: 'David',
+  //       status: 'ACCEPTED',
+  //       videoCallUrl: 'https://meet.google.com/abc-def-ghi',
+  //     },
+  //     { 
+  //       id: '2', 
+  //       title: 'Deuxième Rendez-vous - Suivi Mensuel', 
+  //       date: '2025-03-15T14:30:00Z', 
+  //       clientName: 'Andy',
+  //       status: 'ACCEPTED',
+  //       videoCallUrl: 'https://meet.google.com/abc-def-ghi',
+  //     },
+  //     { 
+  //       id: '3', 
+  //       title: 'Bilan Trimestriel', 
+  //       date: '2025-03-18T10:00:00Z', 
+  //       clientName: 'Sophie',
+  //       status: 'ACCEPTED',
+  //       videoCallUrl: 'https://meet.google.com/abc-def-ghi',
+  //     },
+  //   ];
+  //   setReservations(testData);
+  //   setFilteredReservations(testData);
+  //   setLoading(false);
+  //   setError(null);
+  // };
 
   // Formatage de la date
   const formatReservationDate = (dateString: string) => {
@@ -153,7 +153,7 @@ export default function AgendaPage(): React.ReactElement {
   const cancelReservation = async (id: string) => {
     try {
       setDebugInfo(`Tentative d'annulation de la réservation ${id}...`);
-      
+
       const res = await fetch(`/api/agenda/${id}`, {
         method: "PATCH",
         headers: {
@@ -161,11 +161,11 @@ export default function AgendaPage(): React.ReactElement {
         },
         body: JSON.stringify({ status: "CANCELLED" }),
       });
-      
+
       if (!res.ok) {
         throw new Error(`Erreur ${res.status}: ${res.statusText}`);
       }
-      
+
       // Actualiser les réservations après annulation
       fetchReservations();
     } catch (err) {
@@ -186,9 +186,11 @@ export default function AgendaPage(): React.ReactElement {
           <LayoutTitle>Agenda | Reservation</LayoutTitle>
         </LayoutHeader>
         <LayoutActions className="flex flex-wrap gap-2">
-          <Button variant="outline" size="sm" onClick={useTestData}>Données test</Button>
-          <Button variant="default" size="sm" onClick={fetchReservations}>Réessayer</Button>
-          
+          <Link href="https://app.cal.com/bookings/upcoming">
+            <Button variant="outline" size="sm">Cal.com</Button>
+          </Link>
+          <Button variant="default" size="sm" onClick={fetchReservations}>Actualiser</Button>
+
           {/* Filtre par date */}
           <div className="ml-auto flex items-center gap-2">
             <Popover open={calendarOpen} onOpenChange={setCalendarOpen}>
@@ -208,18 +210,18 @@ export default function AgendaPage(): React.ReactElement {
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-0" align="end">
-              <Calendar
-                mode="single"
-                selected={dateFilter || undefined}
-                onSelect={(date: Date | undefined) => {
-                  setDateFilter(date || null);  // Conversion explicite de undefined à null
-                  setCalendarOpen(false);
-                }}
-                initialFocus
-              />
+                <Calendar
+                  mode="single"
+                  selected={dateFilter || undefined}
+                  onSelect={(date: Date | undefined) => {
+                    setDateFilter(date || null);  // Conversion explicite de undefined à null
+                    setCalendarOpen(false);
+                  }}
+                  initialFocus
+                />
               </PopoverContent>
             </Popover>
-            
+
             {dateFilter && (
               <Button
                 variant="ghost"
@@ -281,18 +283,18 @@ export default function AgendaPage(): React.ReactElement {
                           {heure} (Heure locale)
                         </Typography>
                         {reservation.videoCallUrl && (
-                            <Link 
-                              href={reservation.videoCallUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="mt-2 inline-block text-sm">
-                              <Button 
-                                variant="outline" 
-                                size="sm"
-                                >
-                                Rejoindre Google Meet
-                              </Button>
-                            </Link>
+                          <Link
+                            href={reservation.videoCallUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-2 inline-block text-sm">
+                            <Button
+                              variant="outline"
+                              size="sm"
+                            >
+                              Rejoindre Google Meet
+                            </Button>
+                          </Link>
                         )}
                       </div>
 
@@ -304,21 +306,21 @@ export default function AgendaPage(): React.ReactElement {
                         <Typography variant="p" className="text-sm text-gray-600">
                           Personnalisé entre {reservation.clientName} et Jeremy Prat
                         </Typography>
-                        <Typography variant="p" className="mt-1 text-xs font-medium" 
-                          style={{ 
-                            color: reservation.status === 'ACCEPTED' ? 'green' : 
-                                  reservation.status === 'CANCELLED' ? 'red' : 'orange' 
+                        <Typography variant="p" className="mt-1 text-xs font-medium"
+                          style={{
+                            color: reservation.status === 'ACCEPTED' ? 'green' :
+                              reservation.status === 'CANCELLED' ? 'red' : 'orange'
                           }}>
-                          {reservation.status === 'ACCEPTED' ? 'Confirmé' : 
-                           reservation.status === 'CANCELLED' ? 'Annulé' : 'En attente'}
-                        </Typography>            
+                          {reservation.status === 'ACCEPTED' ? 'Confirmé' :
+                            reservation.status === 'CANCELLED' ? 'Annulé' : 'En attente'}
+                        </Typography>
                       </div>
 
                       {/* Actions (Annuler / Modifier) */}
                       <div className="mt-1 flex gap-2 md:mt-0">
                         {reservation.status !== 'CANCELLED' && (
-                          <Button 
-                            variant="outline" 
+                          <Button
+                            variant="outline"
                             size="sm"
                             onClick={() => cancelReservation(reservation.id)}
                           >
