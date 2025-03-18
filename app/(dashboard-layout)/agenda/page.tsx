@@ -101,40 +101,6 @@ export default function AgendaPage(): React.ReactElement {
     setFilteredReservations(filtered);
   }, [dateFilter, reservations]);
 
-  // Données de test pour vérifier l'affichage
-  // const useTestData = () => {
-  //   const testData = [
-  //     { 
-  //       id: '1', 
-  //       title: 'Premier Rendez-vous - Coaching Sportif', 
-  //       date: '2025-03-10T09:00:00Z', 
-  //       clientName: 'David',
-  //       status: 'ACCEPTED',
-  //       videoCallUrl: 'https://meet.google.com/abc-def-ghi',
-  //     },
-  //     { 
-  //       id: '2', 
-  //       title: 'Deuxième Rendez-vous - Suivi Mensuel', 
-  //       date: '2025-03-15T14:30:00Z', 
-  //       clientName: 'Andy',
-  //       status: 'ACCEPTED',
-  //       videoCallUrl: 'https://meet.google.com/abc-def-ghi',
-  //     },
-  //     { 
-  //       id: '3', 
-  //       title: 'Bilan Trimestriel', 
-  //       date: '2025-03-18T10:00:00Z', 
-  //       clientName: 'Sophie',
-  //       status: 'ACCEPTED',
-  //       videoCallUrl: 'https://meet.google.com/abc-def-ghi',
-  //     },
-  //   ];
-  //   setReservations(testData);
-  //   setFilteredReservations(testData);
-  //   setLoading(false);
-  //   setError(null);
-  // };
-
   // Formatage de la date
   const formatReservationDate = (dateString: string) => {
     try {
@@ -186,8 +152,10 @@ export default function AgendaPage(): React.ReactElement {
           <LayoutTitle>Agenda | Reservation</LayoutTitle>
         </LayoutHeader>
         <LayoutActions className="flex flex-wrap gap-2">
-          <Link href="https://app.cal.com/bookings/upcoming">
-            <Button variant="outline" size="sm">Cal.com</Button>
+          <Link href="https://app.cal.com/bookings/upcoming" target="_blank">
+            <Button variant="outline" size="sm">
+              Cal.com
+            </Button>
           </Link>
           <Button variant="default" size="sm" onClick={fetchReservations}>Actualiser</Button>
 
