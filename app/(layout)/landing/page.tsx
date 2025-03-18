@@ -401,7 +401,7 @@ const LandingPage = () => {
 
       {/* Modal de confirmation */}
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="bg-opacity/50 fixed inset-0 z-50 flex items-center justify-center bg-black">
           <div className="max-w-md rounded-xl bg-white p-8">
             <h3 className="mb-4 text-2xl font-bold">Merci pour votre demande !</h3>
             <p className="mb-6 text-gray-600">Nous avons bien reçu votre demande de démo. Un membre de notre équipe vous contactera dans les 24h pour organiser un rendez-vous.</p>
