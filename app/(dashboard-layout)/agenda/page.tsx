@@ -12,6 +12,11 @@ import {
 import { Typography } from "@/components/ui/typography";
 import { formatDate } from "@/lib/format/date";
 import Link from 'next/link';
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { CalendarIcon, FilterIcon, XIcon } from "lucide-react";
+import { format } from "date-fns";
+import { fr } from "date-fns/locale";
 
 interface Reservation {
   videoCallUrl: string;
@@ -24,9 +29,12 @@ interface Reservation {
 
 export default function AgendaPage(): React.ReactElement {
   const [reservations, setReservations] = useState<Reservation[]>([]);
+  const [filteredReservations, setFilteredReservations] = useState<Reservation[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [debugInfo, setDebugInfo] = useState<string | null>(null);
+  const [dateFilter, setDateFilter] = useState<Date | null>(null);
+  const [calendarOpen, setCalendarOpen] = useState<boolean>(false);
 
   const fetchReservations = async () => {
     try {
@@ -55,6 +63,7 @@ export default function AgendaPage(): React.ReactElement {
 
       if (Array.isArray(data)) {
         setReservations(data);
+        setFilteredReservations(data);
       } else {
         setDebugInfo(`Format inattendu: ${typeof data}, contenu: ${JSON.stringify(data)}`);
         throw new Error("Format de données inattendu");
@@ -71,9 +80,30 @@ export default function AgendaPage(): React.ReactElement {
     fetchReservations();
   }, []);
 
+  // Filtrer les réservations selon la date sélectionnée
+  useEffect(() => {
+    if (!dateFilter) {
+      setFilteredReservations(reservations);
+      return;
+    }
+
+    const filterDay = new Date(dateFilter);
+    filterDay.setHours(0, 0, 0, 0);
+    
+    const nextDay = new Date(filterDay);
+    nextDay.setDate(nextDay.getDate() + 1);
+
+    const filtered = reservations.filter(reservation => {
+      const reservationDate = new Date(reservation.date);
+      return reservationDate >= filterDay && reservationDate < nextDay;
+    });
+
+    setFilteredReservations(filtered);
+  }, [dateFilter, reservations]);
+
   // Données de test pour vérifier l'affichage
   const useTestData = () => {
-    setReservations([
+    const testData = [
       { 
         id: '1', 
         title: 'Premier Rendez-vous - Coaching Sportif', 
@@ -90,7 +120,17 @@ export default function AgendaPage(): React.ReactElement {
         status: 'ACCEPTED',
         videoCallUrl: 'https://meet.google.com/abc-def-ghi',
       },
-    ]);
+      { 
+        id: '3', 
+        title: 'Bilan Trimestriel', 
+        date: '2025-03-18T10:00:00Z', 
+        clientName: 'Sophie',
+        status: 'ACCEPTED',
+        videoCallUrl: 'https://meet.google.com/abc-def-ghi',
+      },
+    ];
+    setReservations(testData);
+    setFilteredReservations(testData);
     setLoading(false);
     setError(null);
   };
@@ -134,15 +174,64 @@ export default function AgendaPage(): React.ReactElement {
     }
   };
 
+  // Effacer le filtre de date
+  const clearDateFilter = () => {
+    setDateFilter(null);
+  };
+
   return (
     <div className="mx-auto p-4">
       <Layout>
         <LayoutHeader>
           <LayoutTitle>Agenda | Reservation</LayoutTitle>
         </LayoutHeader>
-        <LayoutActions className="flex gap-2">
+        <LayoutActions className="flex flex-wrap gap-2">
           <Button variant="outline" size="sm" onClick={useTestData}>Données test</Button>
           <Button variant="default" size="sm" onClick={fetchReservations}>Réessayer</Button>
+          
+          {/* Filtre par date */}
+          <div className="ml-auto flex items-center gap-2">
+            <Popover open={calendarOpen} onOpenChange={setCalendarOpen}>
+              <PopoverTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center gap-2"
+                >
+                  <FilterIcon className="size-4" />
+                  {dateFilter ? (
+                    format(dateFilter, "dd MMMM yyyy", { locale: fr })
+                  ) : (
+                    "Filtrer par date"
+                  )}
+                  <CalendarIcon className="ml-2 size-4" />
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-0" align="end">
+              <Calendar
+                mode="single"
+                selected={dateFilter || undefined}
+                onSelect={(date: Date | undefined) => {
+                  setDateFilter(date || null);  // Conversion explicite de undefined à null
+                  setCalendarOpen(false);
+                }}
+                initialFocus
+              />
+              </PopoverContent>
+            </Popover>
+            
+            {dateFilter && (
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={clearDateFilter}
+                className="flex size-8 items-center justify-center p-0"
+              >
+                <XIcon className="size-4" />
+                <span className="sr-only">Effacer le filtre</span>
+              </Button>
+            )}
+          </div>
         </LayoutActions>
 
         <LayoutContent>
@@ -164,8 +253,17 @@ export default function AgendaPage(): React.ReactElement {
             </div>
           ) : (
             <div className="space-y-4">
-              {reservations.length > 0 ? (
-                reservations.map((reservation) => {
+              {dateFilter && (
+                <div className="mb-4 rounded-md border border-blue-100 bg-blue-50 p-3">
+                  <Typography variant="p" className="text-blue-800">
+                    Affichage des rendez-vous du {format(dateFilter, "dd MMMM yyyy", { locale: fr })}
+                    {filteredReservations.length === 0 && " - Aucun rendez-vous trouvé pour cette date"}
+                  </Typography>
+                </div>
+              )}
+
+              {filteredReservations.length > 0 ? (
+                filteredReservations.map((reservation) => {
                   const dateObj = new Date(reservation.date);
                   const heure = dateObj.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
 
@@ -205,18 +303,28 @@ export default function AgendaPage(): React.ReactElement {
                         </Typography>
                         <Typography variant="p" className="text-sm text-gray-600">
                           Personnalisé entre {reservation.clientName} et Jeremy Prat
-                        </Typography>          
+                        </Typography>
+                        <Typography variant="p" className="mt-1 text-xs font-medium" 
+                          style={{ 
+                            color: reservation.status === 'ACCEPTED' ? 'green' : 
+                                  reservation.status === 'CANCELLED' ? 'red' : 'orange' 
+                          }}>
+                          {reservation.status === 'ACCEPTED' ? 'Confirmé' : 
+                           reservation.status === 'CANCELLED' ? 'Annulé' : 'En attente'}
+                        </Typography>            
                       </div>
 
                       {/* Actions (Annuler / Modifier) */}
                       <div className="mt-1 flex gap-2 md:mt-0">
-                        <Button 
-                          variant="outline" 
-                          size="sm"
-                          onClick={() => cancelReservation(reservation.id)}
-                        >
-                          Annuler
-                        </Button>
+                        {reservation.status !== 'CANCELLED' && (
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            onClick={() => cancelReservation(reservation.id)}
+                          >
+                            Annuler
+                          </Button>
+                        )}
                       </div>
                     </div>
                   );
