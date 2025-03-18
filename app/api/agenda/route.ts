@@ -12,6 +12,11 @@ import {
 import { Typography } from "@/components/ui/typography";
 import { formatDate } from "@/lib/format/date";
 import Link from 'next/link';
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { CalendarIcon, FilterIcon, XIcon } from "lucide-react";
+import { format } from "date-fns";
+import { fr } from "date-fns/locale";
 
 interface Reservation {
   videoCallUrl: string;
@@ -22,15 +27,14 @@ interface Reservation {
   status: string;
 }
 
-// Filtres de période disponibles
-type PeriodFilter = '1day' | '3days' | '1week' | 'all';
-
 export default function AgendaPage(): React.ReactElement {
   const [reservations, setReservations] = useState<Reservation[]>([]);
+  const [filteredReservations, setFilteredReservations] = useState<Reservation[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [debugInfo, setDebugInfo] = useState<string | null>(null);
-  const [periodFilter, setPeriodFilter] = useState<PeriodFilter>('all');
+  const [dateFilter, setDateFilter] = useState<Date | null>(null);
+  const [calendarOpen, setCalendarOpen] = useState<boolean>(false);
 
   const fetchReservations = async () => {
     try {
@@ -59,6 +63,7 @@ export default function AgendaPage(): React.ReactElement {
 
       if (Array.isArray(data)) {
         setReservations(data);
+        setFilteredReservations(data);
       } else {
         setDebugInfo(`Format inattendu: ${typeof data}, contenu: ${JSON.stringify(data)}`);
         throw new Error("Format de données inattendu");
@@ -75,68 +80,57 @@ export default function AgendaPage(): React.ReactElement {
     fetchReservations();
   }, []);
 
-  // Données de test pour vérifier l'affichage
-  const useTestData = () => {
-    // Générer des données de test pour une semaine
-    const today = new Date();
-    const testData: Reservation[] = [];
+  // Filtrer les réservations selon la date sélectionnée
+  useEffect(() => {
+    if (!dateFilter) {
+      setFilteredReservations(reservations);
+      return;
+    }
+
+    const filterDay = new Date(dateFilter);
+    filterDay.setHours(0, 0, 0, 0);
     
-    // Ajouter des RDV pour aujourd'hui
-    testData.push({ 
-      id: '1', 
-      title: 'Premier Rendez-vous - Coaching Sportif', 
-      date: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 9, 0).toISOString(), 
-      clientName: 'David',
-      status: 'ACCEPTED',
-      videoCallUrl: 'https://meet.google.com/abc-def-ghi',
-    });
-    
-    testData.push({ 
-      id: '2', 
-      title: 'Deuxième Rendez-vous - Suivi Mensuel', 
-      date: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 14, 30).toISOString(), 
-      clientName: 'Andy',
-      status: 'ACCEPTED',
-      videoCallUrl: 'https://meet.google.com/abc-def-ghi',
-    });
-    
-    // Ajouter des RDV pour demain
-    const tomorrow = new Date(today);
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    testData.push({ 
-      id: '3', 
-      title: 'Session de Yoga', 
-      date: new Date(tomorrow.getFullYear(), tomorrow.getMonth(), tomorrow.getDate(), 10, 0).toISOString(), 
-      clientName: 'Sophie',
-      status: 'ACCEPTED',
-      videoCallUrl: 'https://meet.google.com/jkl-mno-pqr',
-    });
-    
-    // Ajouter des RDV pour dans 3 jours
-    const day3 = new Date(today);
-    day3.setDate(day3.getDate() + 3);
-    testData.push({ 
-      id: '4', 
-      title: 'Bilan Trimestriel', 
-      date: new Date(day3.getFullYear(), day3.getMonth(), day3.getDate(), 11, 15).toISOString(), 
-      clientName: 'Thomas',
-      status: 'ACCEPTED',
-      videoCallUrl: 'https://meet.google.com/stu-vwx-yz',
-    });
-    
-    // Ajouter des RDV pour dans 6 jours
-    const day6 = new Date(today);
-    day6.setDate(day6.getDate() + 6);
-    testData.push({ 
-      id: '5', 
-      title: 'Coaching Nutrition', 
-      date: new Date(day6.getFullYear(), day6.getMonth(), day6.getDate(), 16, 0).toISOString(), 
-      clientName: 'Julie',
-      status: 'ACCEPTED',
-      videoCallUrl: 'https://meet.google.com/123-456-789',
+    const nextDay = new Date(filterDay);
+    nextDay.setDate(nextDay.getDate() + 1);
+
+    const filtered = reservations.filter(reservation => {
+      const reservationDate = new Date(reservation.date);
+      return reservationDate >= filterDay && reservationDate < nextDay;
     });
 
+    setFilteredReservations(filtered);
+  }, [dateFilter, reservations]);
+
+  // Données de test pour vérifier l'affichage
+  const useTestData = () => {
+    const testData = [
+      { 
+        id: '1', 
+        title: 'Premier Rendez-vous - Coaching Sportif', 
+        date: '2025-03-10T09:00:00Z', 
+        clientName: 'David',
+        status: 'ACCEPTED',
+        videoCallUrl: 'https://meet.google.com/abc-def-ghi',
+      },
+      { 
+        id: '2', 
+        title: 'Deuxième Rendez-vous - Suivi Mensuel', 
+        date: '2025-03-15T14:30:00Z', 
+        clientName: 'Andy',
+        status: 'ACCEPTED',
+        videoCallUrl: 'https://meet.google.com/abc-def-ghi',
+      },
+      { 
+        id: '3', 
+        title: 'Bilan Trimestriel', 
+        date: '2025-03-18T10:00:00Z', 
+        clientName: 'Sophie',
+        status: 'ACCEPTED',
+        videoCallUrl: 'https://meet.google.com/abc-def-ghi',
+      },
+    ];
     setReservations(testData);
+    setFilteredReservations(testData);
     setLoading(false);
     setError(null);
   };
@@ -180,134 +174,10 @@ export default function AgendaPage(): React.ReactElement {
     }
   };
 
-  // Filtrer les réservations en fonction de la période sélectionnée
-  const getFilteredReservations = () => {
-    const now = new Date();
-    // Créer un objet Date pour minuit aujourd'hui
-    const todayStart = new Date(now);
-    todayStart.setHours(0, 0, 0, 0);
-    
-    const filteredReservations = reservations.filter(reservation => {
-      const reservationDate = new Date(reservation.date);
-      
-      // Ne montrer que les réservations futures ou d'aujourd'hui
-      if (reservationDate < todayStart) {
-        return false;
-      }
-      
-      switch (periodFilter) {
-        case '1day': {
-          // Aujourd'hui seulement
-          const tomorrow = new Date(todayStart);
-          tomorrow.setDate(tomorrow.getDate() + 1);
-          return reservationDate >= todayStart && reservationDate < tomorrow;
-        }
-        case '3days': {
-          // Aujourd'hui + 2 jours
-          const threeDaysLater = new Date(todayStart);
-          threeDaysLater.setDate(threeDaysLater.getDate() + 3);
-          return reservationDate >= todayStart && reservationDate < threeDaysLater;
-        }
-        case '1week': {
-          // Aujourd'hui + 6 jours
-          const oneWeekLater = new Date(todayStart);
-          oneWeekLater.setDate(oneWeekLater.getDate() + 7);
-          return reservationDate >= todayStart && reservationDate < oneWeekLater;
-        }
-        case 'all':
-        default:
-          return true;
-      }
-    });
-
-    // Trier par date croissante
-    return filteredReservations.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  // Effacer le filtre de date
+  const clearDateFilter = () => {
+    setDateFilter(null);
   };
-
-  // Grouper les réservations par jour
-  const groupReservationsByDay = () => {
-    const filteredReservations = getFilteredReservations();
-    const grouped: { [key: string]: Reservation[] } = {};
-    
-    filteredReservations.forEach((reservation) => {
-      const date = new Date(reservation.date);
-      const dateKey = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
-      
-      if (!grouped[dateKey]) {
-        grouped[dateKey] = [];
-      }
-      grouped[dateKey].push(reservation);
-    });
-    
-    return grouped;
-  };
-
-  // Vérifier si une réservation est la prochaine à venir
-  const isUpcomingReservation = (reservation: Reservation) => {
-    const now = new Date();
-    const reservationDate = new Date(reservation.date);
-    
-    // Si la réservation est aujourd'hui et n'est pas encore passée
-    if (reservationDate.getDate() === now.getDate() && 
-        reservationDate.getMonth() === now.getMonth() && 
-        reservationDate.getFullYear() === now.getFullYear() && 
-        reservationDate >= now) {
-      
-      // Trouver toutes les réservations d'aujourd'hui qui n'ont pas encore eu lieu
-      const todaysUpcomingReservations = reservations
-        .filter(r => {
-          const rDate = new Date(r.date);
-          return rDate.getDate() === now.getDate() && 
-                 rDate.getMonth() === now.getMonth() && 
-                 rDate.getFullYear() === now.getFullYear() && 
-                 rDate >= now;
-        })
-        .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
-      
-      // C'est la prochaine réservation si c'est la première de la liste triée
-      if (todaysUpcomingReservations.length > 0 && todaysUpcomingReservations[0].id === reservation.id) {
-        return true;
-      }
-    }
-    
-    return false;
-  };
-
-  // Formater l'affichage de la date du jour
-  const formatDayHeader = (dateKey: string) => {
-    const [year, month, day] = dateKey.split('-').map(Number);
-    const date = new Date(year, month, day);
-    const today = new Date();
-    
-    const isToday = date.getDate() === today.getDate() && 
-                    date.getMonth() === today.getMonth() && 
-                    date.getFullYear() === today.getFullYear();
-    
-    const options: Intl.DateTimeFormatOptions = { 
-      weekday: 'long', 
-      day: 'numeric', 
-      month: 'long' 
-    };
-    
-    const formattedDate = date.toLocaleDateString('fr-FR', options);
-    
-    return (
-      <div className={`mb-2 mt-4 ${isToday ? 'text-orange-600 font-bold' : 'text-gray-700'}`}>
-        <Typography variant="h3" className="text-lg">
-          {isToday ? `Aujourd'hui - ${formattedDate}` : formattedDate}
-        </Typography>
-      </div>
-    );
-  };
-
-  // Tronquer le titre s'il est trop long
-  const truncateTitle = (title: string, maxLength: number = 40) => {
-    return title.length > maxLength 
-      ? title.substring(0, maxLength) + '...' 
-      : title;
-  };
-
-  const groupedReservations = groupReservationsByDay();
 
   return (
     <div className="mx-auto p-4">
@@ -315,41 +185,52 @@ export default function AgendaPage(): React.ReactElement {
         <LayoutHeader>
           <LayoutTitle>Agenda | Reservation</LayoutTitle>
         </LayoutHeader>
-        
-        <LayoutActions className="flex flex-col gap-2 sm:flex-row">
-          <div className="flex gap-2">
-            <Button 
-              variant={periodFilter === '1day' ? 'default' : 'outline'} 
-              size="sm" 
-              onClick={() => setPeriodFilter('1day')}
-            >
-              1 jour
-            </Button>
-            <Button 
-              variant={periodFilter === '3days' ? 'default' : 'outline'} 
-              size="sm" 
-              onClick={() => setPeriodFilter('3days')}
-            >
-              3 jours
-            </Button>
-            <Button 
-              variant={periodFilter === '1week' ? 'default' : 'outline'} 
-              size="sm" 
-              onClick={() => setPeriodFilter('1week')}
-            >
-              1 semaine
-            </Button>
-            <Button 
-              variant={periodFilter === 'all' ? 'default' : 'outline'} 
-              size="sm" 
-              onClick={() => setPeriodFilter('all')}
-            >
-              Tous
-            </Button>
-          </div>
-          <div className="flex gap-2">
-            <Button variant="outline" size="sm" onClick={useTestData}>Données test</Button>
-            <Button variant="default" size="sm" onClick={fetchReservations}>Réessayer</Button>
+        <LayoutActions className="flex flex-wrap gap-2">
+          <Button variant="outline" size="sm" onClick={useTestData}>Données test</Button>
+          <Button variant="default" size="sm" onClick={fetchReservations}>Réessayer</Button>
+          
+          {/* Filtre par date */}
+          <div className="ml-auto flex items-center gap-2">
+            <Popover open={calendarOpen} onOpenChange={setCalendarOpen}>
+              <PopoverTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center gap-2"
+                >
+                  <FilterIcon className="h-4 w-4" />
+                  {dateFilter ? (
+                    format(dateFilter, "dd MMMM yyyy", { locale: fr })
+                  ) : (
+                    "Filtrer par date"
+                  )}
+                  <CalendarIcon className="ml-2 h-4 w-4" />
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-0" align="end">
+                <Calendar
+                  mode="single"
+                  selected={dateFilter || undefined}
+                  onSelect={(date) => {
+                    setDateFilter(date);
+                    setCalendarOpen(false);
+                  }}
+                  initialFocus
+                />
+              </PopoverContent>
+            </Popover>
+            
+            {dateFilter && (
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={clearDateFilter}
+                className="flex h-8 w-8 items-center justify-center p-0"
+              >
+                <XIcon className="h-4 w-4" />
+                <span className="sr-only">Effacer le filtre</span>
+              </Button>
+            )}
           </div>
         </LayoutActions>
 
@@ -371,76 +252,87 @@ export default function AgendaPage(): React.ReactElement {
               <Typography variant="p" className="text-red-500">{error}</Typography>
             </div>
           ) : (
-            <div className="space-y-2">
-              {Object.keys(groupedReservations).length > 0 ? (
-                Object.entries(groupedReservations).map(([dateKey, dayReservations]) => (
-                  <div key={dateKey}>
-                    {formatDayHeader(dateKey)}
-                    <div className="space-y-3">
-                      {dayReservations.map((reservation) => {
-                        const dateObj = new Date(reservation.date);
-                        const heure = dateObj.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
-                        const isUpcoming = isUpcomingReservation(reservation);
+            <div className="space-y-4">
+              {dateFilter && (
+                <div className="mb-4 rounded-md border border-blue-100 bg-blue-50 p-3">
+                  <Typography variant="p" className="text-blue-800">
+                    Affichage des rendez-vous du {format(dateFilter, "dd MMMM yyyy", { locale: fr })}
+                    {filteredReservations.length === 0 && " - Aucun rendez-vous trouvé pour cette date"}
+                  </Typography>
+                </div>
+              )}
 
-                        return (
-                          <div
-                            key={reservation.id}
-                            className={`flex flex-col items-start justify-between rounded-md border ${isUpcoming ? 'border-orange-500 bg-orange-50' : 'border-gray-200'} bg-white p-4 shadow-sm md:flex-row md:items-center`}
-                          >
-                            {/* Bloc date/heure/Meet */}
-                            <div className="mb-2 md:mb-0">
-                              <Typography variant="p" className="text-sm font-semibold text-gray-900">
-                                {formatReservationDate(reservation.date)}
-                              </Typography>
-                              <Typography variant="p" className="text-xs text-gray-500">
-                                {heure} (Heure locale)
-                              </Typography>
-                              {reservation.videoCallUrl && (
-                                <Link 
-                                  href={reservation.videoCallUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="mt-2 inline-block text-sm">
-                                  <Button 
-                                    variant="outline" 
-                                    size="sm"
-                                    >
-                                    Rejoindre Google Meet
-                                  </Button>
-                                </Link>
-                              )}
-                            </div>
+              {filteredReservations.length > 0 ? (
+                filteredReservations.map((reservation) => {
+                  const dateObj = new Date(reservation.date);
+                  const heure = dateObj.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
 
-                            {/* Bloc titre + description */}
-                            <div className="ml-0 mt-1 md:mx-4 md:mt-0 md:flex-1">
-                              <Typography variant="p" className="text-base font-medium text-gray-900">
-                                {truncateTitle(reservation.title)}
-                              </Typography>
-                              <Typography variant="p" className="text-sm text-gray-600">
-                                Personnalisé entre {reservation.clientName} et Jeremy Prat
-                              </Typography>          
-                            </div>
-
-                            {/* Actions (Annuler / Modifier) */}
-                            <div className="mt-1 flex gap-2 md:mt-0">
+                  return (
+                    <div
+                      key={reservation.id}
+                      className="flex flex-col items-start justify-between rounded-md border border-orange-500 bg-white p-4 shadow-sm md:flex-row md:items-center"
+                    >
+                      {/* Bloc date/heure/Meet */}
+                      <div className="mb-2 md:mb-0">
+                        <Typography variant="p" className="text-sm font-semibold text-gray-900">
+                          {formatReservationDate(reservation.date)}
+                        </Typography>
+                        <Typography variant="p" className="text-xs text-gray-500">
+                          {heure} (Heure locale)
+                        </Typography>
+                        {reservation.videoCallUrl && (
+                            <Link 
+                              href={reservation.videoCallUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="mt-2 inline-block text-sm">
                               <Button 
                                 variant="outline" 
                                 size="sm"
-                                onClick={() => cancelReservation(reservation.id)}
-                              >
-                                Annuler
+                                >
+                                Rejoindre Google Meet
                               </Button>
-                            </div>
-                          </div>
-                        );
-                      })}
+                            </Link>
+                        )}
+                      </div>
+
+                      {/* Bloc titre + description */}
+                      <div className="ml-0 mt-1 md:mx-4 md:mt-0 md:flex-1">
+                        <Typography variant="p" className="text-base font-medium text-gray-900">
+                          {reservation.title}
+                        </Typography>
+                        <Typography variant="p" className="text-sm text-gray-600">
+                          Personnalisé entre {reservation.clientName} et Jeremy Prat
+                        </Typography>
+                        <Typography variant="p" className="mt-1 text-xs font-medium" 
+                          style={{ 
+                            color: reservation.status === 'ACCEPTED' ? 'green' : 
+                                  reservation.status === 'CANCELLED' ? 'red' : 'orange' 
+                          }}>
+                          {reservation.status === 'ACCEPTED' ? 'Confirmé' : 
+                           reservation.status === 'CANCELLED' ? 'Annulé' : 'En attente'}
+                        </Typography>            
+                      </div>
+
+                      {/* Actions (Annuler / Modifier) */}
+                      <div className="mt-1 flex gap-2 md:mt-0">
+                        {reservation.status !== 'CANCELLED' && (
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            onClick={() => cancelReservation(reservation.id)}
+                          >
+                            Annuler
+                          </Button>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                ))
+                  );
+                })
               ) : (
                 <div className="rounded-md border border-gray-200 p-4">
                   <Typography variant="p" className="text-gray-500">
-                    Aucune réservation trouvée pour cette période.
+                    Aucune réservation trouvée.
                   </Typography>
                 </div>
               )}
