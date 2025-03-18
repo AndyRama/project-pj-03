@@ -1,43 +1,90 @@
-import { NextRequest, NextResponse } from 'next/server';
+// app/api/agenda/route.ts
+import { NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
+import { logger } from "@/lib/logger";
 
-// Fonction pour gérer les requêtes GET
-export async function GET(request: NextRequest) {
-  try {
-    // Récupération des données depuis votre base de données ou autre source
-    const reservations = [
-      { 
-        id: '1', 
-        title: 'Premier Rendez-vous - Coaching Sportif', 
-        date: '2025-03-10T09:00:00Z', 
-        clientName: 'David',
-        status: 'ACCEPTED',
-        videoCallUrl: 'https://meet.google.com/abc-def-ghi',
-      },
-      // autres données...
-    ];
-
-    // Retourner les données en JSON
-    return NextResponse.json(reservations);
-  } catch (error) {
-    console.error('Erreur lors de la récupération des réservations:', error);
-    return NextResponse.json(
-      { error: 'Erreur lors de la récupération des réservations' },
-      { status: 500 }
-    );
-  }
+// Définir une interface pour les données de Cal.com
+interface CalBooking {
+  uid?: string;
+  id?: string;
+  title?: string;
+  startTime?: string;
+  date?: string;
+  attendees?: Array<{ name: string }>;
+  status?: string;
+  videoCallUrl?: string;
+  conferenceData?: {
+    entryPoints?: Array<{ uri: string }>;
+  };
 }
 
-// Fonction pour gérer les requêtes PATCH (si nécessaire)
-export async function PATCH(request: NextRequest) {
+export async function GET() {
   try {
-    const data = await request.json();
-    // Logique pour mettre à jour une réservation
-    
-    return NextResponse.json({ success: true });
+    // First try to get reservations from our database
+    const localReservations = await prisma.reservation.findMany({
+      where: {
+        status: {
+          not: "CANCELLED"
+        }
+      },
+      orderBy: {
+        date: 'desc',
+      },
+    });
+   
+    // Also try to fetch from Cal.com if we have an API key
+    let calReservations = [];
+    const apiKey = process.env.CAL_API_KEY;
+   
+    if (apiKey) {
+      try {
+        const calEndpoint = "https://api.cal.com/v2/bookings";
+        const response = await fetch(calEndpoint, {
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            "Content-Type": "application/json"
+          }
+        });
+       
+        if (response.ok) {
+          const data = await response.json();
+          // Process Cal.com data and convert to our format
+          calReservations = (data.data || data).map((booking: CalBooking) => ({
+            id: booking.uid || booking.id || "",
+            title: booking.title || "Rendez-vous",
+            date: new Date(booking.startTime || booking.date || Date.now()).toISOString(),
+            clientName: booking.attendees?.[0]?.name || "Client",
+            status: booking.status || "ACCEPTED",
+            videoCallUrl: booking.videoCallUrl || booking.conferenceData?.entryPoints?.[0]?.uri || null,
+          }));
+        }
+      } catch (calError) {
+        logger.error("Error fetching from Cal.com", calError);
+        // Continue with local reservations even if Cal.com fails
+      }
+    }
+   
+    // Combine and format all reservations
+    const allReservations = [...localReservations, ...calReservations];
+   
+    // Transform all data to match the expected format
+    const formattedReservations = allReservations.map(reservation => ({
+      id: reservation.uid || reservation.id,
+      title: reservation.title,
+      date: reservation.date instanceof Date ? reservation.date.toISOString() : reservation.date,
+      clientName: reservation.clientName,
+      status: reservation.status,
+      videoCallUrl: reservation.videoCallUrl,
+    }));
+   
+    // Sort by date (most recent first)
+    formattedReservations.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+   
+    return NextResponse.json(formattedReservations);
   } catch (error) {
-    console.error('Erreur lors de la mise à jour de la réservation:', error);
+    logger.error("Error fetching reservations", error);
     return NextResponse.json(
-      { error: 'Erreur lors de la mise à jour de la réservation' },
+      { error: "Erreur lors de la récupération des réservations" },
       { status: 500 }
     );
   }
