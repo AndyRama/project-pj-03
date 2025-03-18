@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from "react";
 import {
   Dialog,
@@ -9,7 +11,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import {
-  Form,
+//   Form,
   FormControl,
   FormField,
   FormItem,
