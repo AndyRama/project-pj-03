@@ -11,7 +11,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import {
-//   Form,
   FormControl,
   FormField,
   FormItem,
@@ -69,6 +68,8 @@ interface CalorieCalculatorModalProps {
 
 export function CalorieCalculatorModal({ profileData }: CalorieCalculatorModalProps) {
   const [result, setResult] = useState<CalorieResult | null>(null);
+  const [activeTab, setActiveTab] = useState("calculator");
+  const [isOpen, setIsOpen] = useState(false);
   
   // Initialiser le formulaire avec les données du profil si disponibles
   const form = useForm<CalculatorFormValues>({
@@ -142,18 +143,28 @@ export function CalorieCalculatorModal({ profileData }: CalorieCalculatorModalPr
     try {
       const calorieData = calculateCalories(data);
       setResult(calorieData);
-      // Notification sans utiliser use-toast
-      alert("Calcul effectué avec succès");
+      // Passer automatiquement à l'onglet des résultats
+      setActiveTab("results");
     } catch (error) {
       console.error(error);
       alert("Une erreur est survenue lors du calcul");
     }
   };
 
+  // Réinitialiser le formulaire et les onglets lors de l'ouverture de la modal
+  const handleOpenChange = (open: boolean) => {
+    setIsOpen(open);
+    if (open) {
+      setActiveTab("calculator");
+    }
+  };
+
   return (
-    <Dialog>
+    <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
-        <Button variant="outline">Calculatrice de besoins caloriques</Button>
+        <Button variant={profileData ? "outline" : "default"}>
+          {profileData ? "Modifier le profil" : "Calculatrice de besoins caloriques"}
+        </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[600px]">
         <DialogHeader>
@@ -163,7 +174,7 @@ export function CalorieCalculatorModal({ profileData }: CalorieCalculatorModalPr
           </DialogDescription>
         </DialogHeader>
         
-        <Tabs defaultValue="calculator" className="w-full">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="calculator">Calculatrice</TabsTrigger>
             <TabsTrigger value="results" disabled={!result}>Résultats</TabsTrigger>
@@ -343,6 +354,12 @@ export function CalorieCalculatorModal({ profileData }: CalorieCalculatorModalPr
                     </div>
                   </div>
                 </div>
+                
+                <DialogFooter>
+                  <Button type="button" onClick={() => setActiveTab("calculator")}>
+                    Modifier les paramètres
+                  </Button>
+                </DialogFooter>
               </div>
             )}
           </TabsContent>
