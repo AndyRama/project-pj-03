@@ -16,7 +16,7 @@ import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth/helper";
 import { redirect } from "next/navigation";
 import { CalorieCalculatorModal } from "@/components/ui/CalorieCalculatorModal";
-// import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
 // Base type for AlimentaireProfile model
 type AlimentaireProfile = {
@@ -76,7 +76,7 @@ export default async function AlimentairePlanPage() {
         <LayoutHeader className="flex items-center justify-between">
           <LayoutTitle>Plan Alimentaire | Tableau des utilisateurs</LayoutTitle>
           <div className="flex items-center gap-4">
-            {/* Transmet le profil de l'utilisateur connecté à la modal si disponible */}
+            {/* Bouton simple pour ouvrir la calculatrice */}
             <CalorieCalculatorModal 
               profileData={userProfile ? {
                 id: userProfile.id,
@@ -99,13 +99,12 @@ export default async function AlimentairePlanPage() {
                   <TableHead>Âge</TableHead>
                   <TableHead>Poids (kg)</TableHead>
                   <TableHead>Date de création</TableHead>
-                  <TableHead>Actions</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {profilesWithUsers.length === 0 ? (
                   <TableRow>
-                    <TableCell colSpan={7} className="py-6 text-center text-gray-500">
+                    <TableCell colSpan={6} className="py-6 text-center text-gray-500">
                       Aucun profil alimentaire disponible
                     </TableCell>
                   </TableRow>
@@ -118,18 +117,6 @@ export default async function AlimentairePlanPage() {
                       <TableCell>{profile.age}</TableCell>
                       <TableCell>{profile.weight}</TableCell>
                       <TableCell>{new Date(profile.createdAt).toLocaleDateString()}</TableCell>
-                      <TableCell>
-                        {/* Transmet le profil à la modal avec les propriétés définies explicitement */}
-                        <CalorieCalculatorModal 
-                          profileData={{
-                            id: profile.id,
-                            size: profile.size,
-                            age: profile.age,
-                            weight: profile.weight,
-                            userId: profile.userId
-                          }} 
-                        />
-                      </TableCell>
                     </TableRow>
                   ))
                 )}

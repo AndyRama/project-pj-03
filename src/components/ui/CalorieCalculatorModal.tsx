@@ -156,15 +156,14 @@ export function CalorieCalculatorModal({ profileData }: CalorieCalculatorModalPr
     setIsOpen(open);
     if (open) {
       setActiveTab("calculator");
+      setResult(null);
     }
   };
 
   return (
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
-        <Button variant={profileData ? "outline" : "default"}>
-          {profileData ? "Modifier le profil" : "Calculatrice de besoins caloriques"}
-        </Button>
+        <Button>Calculatrice de calories</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[600px]">
         <DialogHeader>
