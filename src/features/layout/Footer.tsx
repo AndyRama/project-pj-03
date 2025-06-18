@@ -44,7 +44,7 @@ export const Footer = () => {
             <div className="space-y-1 ">
               <Typography variant="h2" className="text-orange-500">{SiteConfig.title}</Typography>
               <Typography >{SiteConfig.company.name}</Typography>
-              <Typography >{SiteConfig.company.address}</Typography>
+              {/* <Typography >{SiteConfig.company.address}</Typography> */}
             </div>
 
             <div className="mt-4 flex pb-10">
