@@ -7,9 +7,10 @@ import { useEffect } from "react";
 import type { PropsWithChildren } from "react";
 import { Sheet, SheetTrigger, SheetContent } from "../../components/ui/sheet";
 import { Menu } from "react-feather";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+// import Link from "next/link";
+// import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
+import { AuthButtonClient } from "../auth/AuthButtonClient";
 
 function useBoundedScroll(threshold: number) {
   const { scrollY } = useScroll();
@@ -56,13 +57,13 @@ export function LandingHeader({ children }: PropsWithChildren) {
     [0, 0, 1],
   );
 
-  const topRoutes = [
-    { path: "/", label: "Accueil" },
-    { path: "/posts", label: "Blog" },
-    { path: "/contact", label: "Contact" },
-    { path: "/prestations", label: "Prestations" },
-    { path: "/team", label: "Team" },
-  ];
+  // const topRoutes = [
+    // { path: "/", label: "Accueil" },
+    // { path: "/posts", label: "Blog" },
+    // { path: "/contact", label: "Contact" },
+    // { path: "/prestations", label: "Prestations" },
+    // { path: "/team", label: "Team" },
+  // ];
 
   return (
     <motion.header
@@ -87,7 +88,7 @@ export function LandingHeader({ children }: PropsWithChildren) {
             {SiteConfig.title}
           </motion.p>
         </div>
-        <motion.nav
+        {/* <motion.nav
           style={{
             opacity: useTransform(
               scrollYBoundedProgressDelayed,
@@ -106,16 +107,17 @@ export function LandingHeader({ children }: PropsWithChildren) {
               {route.label}
             </Link>
           ))}
-        </motion.nav>
+        </motion.nav> */}
         <div className="hidden lg:contents">
-          <Link href="/#concept">
+          {/* <Link href="/#concept">
             <Button
               size="sm"
               className="mr-4 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
             >
-              Rejoignez-nous !
+              Log In
             </Button>
-          </Link>
+          </Link> */}
+          <AuthButtonClient />
         </div>
 
         <div className="z-20 flex items-center gap-2 px-4 lg:hidden">
@@ -150,7 +152,7 @@ export function LandingHeader({ children }: PropsWithChildren) {
                     Menu Principal
                   </Typography>
                 </div>
-                <hr />
+                {/* <hr />
                 {topRoutes.map((route) => (
                   <Link
                     href={route.path}
@@ -159,17 +161,17 @@ export function LandingHeader({ children }: PropsWithChildren) {
                   >
                     {route.label}
                   </Link>
-                ))}
+                ))} */}
               </div>
-              <hr />
-              <Link href="/#concept">
+              {/* <hr /> */}
+              {/* <Link href="/#concept">
                 <Button
                   size="sm"
                   className="mr-4 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
                 >
                   Rejoignez-nous !
                 </Button>
-              </Link>
+              </Link> */}
             </SheetContent>
           </Sheet>
         </div>
