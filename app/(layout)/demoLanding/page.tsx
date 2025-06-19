@@ -7,13 +7,13 @@ import { EmailFormSection } from "@/features/email/EmailFormSection";
 import { FeaturesSection } from "@/features/landing/FeatureSection";
 import { FeatureProgram } from "@/features/landing/FeatureProgram";
 import { Hero } from "@/features/landing/Hero";
-import { LandingHeader } from "@/features/landing/LandingHeader";
-import { SectionDivider } from "@/features/landing/SectionDivider";
+// import { LandingHeader } from "@/features/landing/LandingHeader";
+// import { SectionDivider } from "@/features/landing/SectionDivider";
 // import CardGrid from "@/features/landing/CardGrid";
 import RecentPosts from "@/features/landing/RecentPosts";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
-import { Footer } from "@/features/layout/Footer";
-import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
+// import { Footer } from "@/features/layout/Footer";
+// import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
 import { Pricing } from "@/features/prestations/pricing/PricingSection";
 
 
@@ -34,10 +34,18 @@ export default function Page() {
         viewport={{ once: true }}
       />
 
-      <LandingHeader />
+      {/* <LandingHeader /> */}
 
       <Hero />
 
+      <div className="flex flex-col items-center gap-2">
+        <Typography variant="p" className="max-w-xl font-bold text-orange-500">
+          Retour de ma formation
+        </Typography>
+        <Typography variant="h2" className="m-auto max-w-xl text-center">
+          Ce qu'ils pensent de mes <u>services </u>!
+        </Typography>
+      </div>
        <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -439,7 +447,7 @@ export default function Page() {
         </div>
       </motion.div>
 
-      <SectionDivider />
+      {/* <SectionDivider /> */}
 
       {/* Reviews Grid Section */}
       <motion.div
@@ -450,14 +458,6 @@ export default function Page() {
       >
         <div className="transform-gpu blur-3xl">
           <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 sm:hidden md:opacity-50"></div>
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          <Typography variant="p" className="max-w-xl font-bold text-orange-500">
-            Retour de ma formation
-          </Typography>
-          <Typography variant="h2" className="m-auto max-w-xl text-center">
-            Ce qu'ils pensent de mes <u>services </u>!
-          </Typography>
         </div>
         <div className="transform-gpu blur-3xl">
           <div className="md:content absolute left-0 -z-20 hidden h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
@@ -493,9 +493,9 @@ export default function Page() {
 
       <EmailFormSection />
 
-      <Footer />
+      {/* <Footer /> */}
 
-      <FloatingLegalFooter />
+      {/* <FloatingLegalFooter /> */}
     </motion.div>
   );
 }
