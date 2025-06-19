@@ -1,8 +1,9 @@
 import React from 'react'
+
 import { FaInstagramSquare, FaFacebook } from 'react-icons/fa'
 import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
-// import { SiteConfig } from "@/site-config";
+import { SiteConfig } from "@/site-config";
 import Link from "next/link";
 
 const footerContent = {
@@ -11,24 +12,22 @@ const footerContent = {
       heading: 'Site Map',
       links: [
         { href: '/', label: 'Accueil' },
-        { href: '/contact', label: 'Contact' },
+        { href: '/posts', label: 'Blog', badge: 'Nouveau' },
+        { href: '/account', label: 'Compte' },
+      ],
+    },
+    {
+      heading: '',
+      links: [
         { href: '/prestations', label: 'Prestations' },
         { href: '/team', label: 'Team', badge: 'Nouveau' },
       ],
     },
     {
-      heading: 'Ressources',
+      heading: 'Ressource',
       links: [
-        { href: '/posts', label: 'Blog', badge: 'Nouveau' },
         { href: '/prestations/#E-Books', label: 'E-Books'},
         { href: '/prestations/#pack', label: 'Packs',badge: 'Nouveau' },
-      ],
-    },
-    {
-      heading: 'Compte',
-      links: [
-        { href: '/account', label: 'User' },
-        { href: '/dashboard', label: 'Admin'},
       ],
     },
   ],
@@ -41,10 +40,9 @@ export const Footer = () => {
       <Layout className="mt-12 pb-12">
         <LayoutContent className="flex justify-around max-sm:flex-col">
           <div className="flex flex-col gap-4 ">
-            {/* <div className="space-y-1 ">
+            <div className="space-y-1 ">
               <Typography variant="h2" className="text-orange-500">{SiteConfig.title}</Typography>
-              <Typography >{SiteConfig.company.name}</Typography>
-            </div> */}
+            </div>
 
             <div className="mt-4 flex pb-10">
               <Link href="https://www.instagram.com/unlcoaching.school/" aria-label="Instagram" className="mr-4 text-2xl hover:text-orange-500  ">

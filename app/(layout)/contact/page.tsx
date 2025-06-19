@@ -2,7 +2,7 @@
 
 // import { useState } from "react";
 import SubHero from "@/features/landing/SubHero";
-import CardContact from "@/features/contact/card/CardContact";
+// import CardContact from "@/features/contact/card/CardContact";
 // import ContactForm from "@/features/contact/card/ContactForm";
 
 export default function Page() {
@@ -12,7 +12,7 @@ export default function Page() {
     <>
       <SubHero className={""} title={"contacter"} subTitle={"Pour me"} />
 
-      <CardContact/>
+      {/* <CardContact/> */}
 
       {/* <div className="mt-10 flex justify-center lg:justify-end">
         <button 
