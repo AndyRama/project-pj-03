@@ -1,12 +1,12 @@
 import { CircleSvg } from "@/components/svg/CircleSvg";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Heart } from "lucide-react";
+import { Heart, ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { Typography } from "../../components/ui/typography";
-import { ReviewSmall } from "./review/ReviewSmall";
+// import { ReviewSmall } from "./review/ReviewSmall";
 
-export const Hero = () => {
+export const Hero1 = () => {
   return (
     <main>
       {/* Image - main - bg-cover */}
@@ -16,12 +16,12 @@ export const Hero = () => {
         style={{ backgroundImage: `url('/images/salle-de-sport.jpg')` }}
       >
         <div className="relative m-auto flex min-h-[400px] w-full max-w-7xl items-center gap-4 px-4 max-md:flex-col">
-          <div className="relative mt-20 flex flex-1 flex-col items-start gap-8 md:gap-4 lg:gap-8">
+          <div className="relative mt-0 flex flex-1 flex-col items-start gap-8 md:gap-4 lg:gap-8">
             <HeroStatistics />
             <HeroTitle />
             <HeroDescription />
             <HeroButton />
-            <HeroReviews />
+            {/* <HeroReviews /> */}
           </div>
           <HeroImage />
         </div>
@@ -78,11 +78,10 @@ const HeroTitle = () => {
 const HeroDescription = () => (
   <>
     <Typography variant="large" className="text-white">
-      Allier entraînement rigoureux et nutrition équilibrée  
-      <br />
-      pour un mode de vie sain et durable.      
+      Méthode militaire + Expertise compétition IFBB = Résultats garantis.  <br />  Plus de 500 transformations réussies avec Jeremy Prat.
+      sain et durable.
     </Typography>
-    {/* <div className="flex flex-wrap gap-6 text-sm">
+    <div className="flex flex-wrap gap-6 text-sm">
       <div className="flex items-center space-x-2">
         <CheckCircle className="size-5 text-orange-500" />
         <span>Résultats en 90 jours</span>
@@ -95,14 +94,14 @@ const HeroDescription = () => (
         <CheckCircle className="size-5 text-orange-500" />
         <span>Garantie résultats</span>
       </div>
-    </div> */}
+    </div>
   </>
 );
 
 const HeroButton = () => (
   <>
-    {/* <div className="flex flex-row"> */}
-      {/* <Link
+    <div className="flex flex-row">
+      <Link
         href="/#premium"
         className={cn(
           buttonVariants({ size: "md", variant: "default" }),
@@ -111,7 +110,7 @@ const HeroButton = () => (
       >
         Démarrer ma transformation
         <ArrowRight size={20} className="mr-2 hover:bg-orange-500" />
-      </Link> */}
+      </Link>
       <Link
         href="/team"
         className={cn(
@@ -120,26 +119,26 @@ const HeroButton = () => (
         )}
       >
         <Heart size={20} className="mr-2 hover:bg-orange-500" />
-         de la team !
+        Voir les resultats
       </Link>
-    {/* </div> */}
+    </div>
   </>
 );
 
-const HeroReviews = () => (
-  <ReviewSmall
-    stars={5}
-    avatars={[
-      "https://i.pravatar.cc/300?u=1",
-      "https://i.pravatar.cc/300?u=2",
-      "https://i.pravatar.cc/300?u=3",
-      "https://i.pravatar.cc/300?u=4",
-      "https://i.pravatar.cc/300?u=100",
-    ]}
-  >
-    3500+ followers <br /> sur instagram
-  </ReviewSmall>
-);
+// const HeroReviews = () => (
+//   <ReviewSmall
+//     stars={5}
+//     avatars={[
+//       "https://i.pravatar.cc/300?u=1",
+//       "https://i.pravatar.cc/300?u=2",
+//       "https://i.pravatar.cc/300?u=3",
+//       "https://i.pravatar.cc/300?u=4",
+//       "https://i.pravatar.cc/300?u=100",
+//     ]}
+//   >
+//     3500+ followers <br /> sur instagram
+//   </ReviewSmall>
+// );
 
 const HeroImage = () => (
   <div className="xl:mt-30 mt-20 flex-1 justify-end md:flex">
