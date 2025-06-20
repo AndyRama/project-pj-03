@@ -33,7 +33,7 @@ export async function GET() {
     });
    
     // Also try to fetch from Cal.com if we have an API key
-    let calReservations = [];
+    let calReservations: { id: string; title: string; date: string; clientName: string; status: string; videoCallUrl: string | null; }[] = [];
     const apiKey = process.env.CAL_API_KEY;
    
     if (apiKey) {
@@ -48,15 +48,26 @@ export async function GET() {
        
         if (response.ok) {
           const data = await response.json();
-          // Process Cal.com data and convert to our format
-          calReservations = (data.data || data).map((booking: CalBooking) => ({
-            id: booking.uid || booking.id || "",
-            title: booking.title || "Rendez-vous",
-            date: new Date(booking.startTime || booking.date || Date.now()).toISOString(),
-            clientName: booking.attendees?.[0]?.name || "Client",
-            status: booking.status || "ACCEPTED",
-            videoCallUrl: booking.videoCallUrl || booking.conferenceData?.entryPoints?.[0]?.uri || null,
-          }));
+          
+          // Vérifier que nous avons bien un tableau avant d'utiliser .map()
+          const bookingsData = data.data || data;
+          
+          if (Array.isArray(bookingsData)) {
+            // Process Cal.com data and convert to our format
+            calReservations = bookingsData.map((booking: CalBooking) => ({
+              id: booking.uid || booking.id || "",
+              title: booking.title || "Rendez-vous",
+              date: new Date(booking.startTime || booking.date || Date.now()).toISOString(),
+              clientName: booking.attendees?.[0]?.name || "Client",
+              status: booking.status || "ACCEPTED",
+              videoCallUrl: booking.videoCallUrl || booking.conferenceData?.entryPoints?.[0]?.uri || null,
+            }));
+          } else {
+            logger.warn("Cal.com API response is not an array:", bookingsData);
+            calReservations = [];
+          }
+        } else {
+          logger.warn(`Cal.com API responded with status: ${response.status}`);
         }
       } catch (calError) {
         logger.error("Error fetching from Cal.com", calError);
@@ -69,7 +80,7 @@ export async function GET() {
    
     // Transform all data to match the expected format
     const formattedReservations = allReservations.map(reservation => ({
-      id: reservation.uid || reservation.id,
+      id: ('uid' in reservation && reservation.uid) ? reservation.uid : reservation.id,
       title: reservation.title,
       date: reservation.date instanceof Date ? reservation.date.toISOString() : reservation.date,
       clientName: reservation.clientName,
