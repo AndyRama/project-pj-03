@@ -12,7 +12,7 @@ export const Hero = () => {
       {/* Image - main - bg-cover */}
       <div
         // eslint-disable-next-line tailwindcss/enforces-negative-arbitrary-values
-        className="-mt-[40px] h-[178vh] bg-cover bg-fixed md:mt-0 md:h-[110vh]"
+        className="-mt-[40px] h-[178vh] bg-cover bg-fixed md:mt-20 md:h-[110vh]"
         style={{ backgroundImage: `url('/images/salle-de-sport.jpg')` }}
       >
         <div className="relative m-auto flex min-h-[400px] w-full max-w-7xl items-center gap-4 px-4 max-md:flex-col">
@@ -59,19 +59,21 @@ const StatisticBlock = ({
   </span>
 );
 
-const HeroTitle = () => (
-  <Typography variant="h1" className="text-3xl !leading-tight">
-    <span className="inline-block -rotate-2 text-5xl text-white md:text-6xl">
-      Jeremy Prat <br />
-      <span className="relative inline-block">
-        <span className="text-5xl text-white md:text-6xl">Coaching </span>
-        {/* <br /> */}
-        <span className="text-5xl md:text-6xl"></span>
-        <CircleSvg className="fill-primary" />
+const HeroTitle = () => {
+  return (
+    <Typography variant="h1" className="text-3xl !leading-tight">
+      <span className="inline-block -rotate-2 text-5xl text-white md:text-6xl">
+        Jeremy Prat <br />
+        <span className="relative inline-block">
+          <span className="text-5xl text-white md:text-6xl">Coaching</span>
+          {/* <br /> */}
+          <span className="text-5xl md:text-6xl">Personnel</span>
+          <CircleSvg className="fill-primary" />
+        </span>
       </span>
-    </span>
-  </Typography>
-);
+    </Typography>
+  );
+};
 
 const HeroDescription = () => (
   <>
