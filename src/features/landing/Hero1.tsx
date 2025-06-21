@@ -36,7 +36,8 @@ const HeroStatistics = () => (
       <span className="inline-block text-white md:text-center">
         <br />
         <StatisticBlock value="+350" label="Transformations" label1="réussit" />
-        <StatisticBlock value="+8" label="Années " label1="expériences" />
+        <StatisticBlock value="95%" label=" taux" label1="de réussite" />
+        <StatisticBlock value="5⭐ " label="Satisfaction " label1="" />
       </span>
     </Typography>
   </>
