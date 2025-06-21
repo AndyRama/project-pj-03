@@ -5,7 +5,6 @@ import { Heart, ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { Typography } from "../../components/ui/typography";
 import { ReviewRow } from "./review/ReviewRow";
-// import { ReviewSmall } from "./review/ReviewSmall";
 
 export const Hero1 = () => {
   return (
@@ -22,7 +21,7 @@ export const Hero1 = () => {
             <HeroTitle />
             <HeroDescription />
             <HeroButton />
-            {/* <HeroReviews /> */}
+            <ReviewRow reviews={[]} />
           </div>
           <HeroImage />
         </div>
