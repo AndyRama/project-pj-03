@@ -65,7 +65,7 @@ const HeroTitle = () => {
       <span className="inline-block -rotate-2 text-5xl text-white md:text-6xl">
         Jeremy Prat <br />
         <span className="relative inline-block">
-          <span className="text-5xl text-white md:text-6xl">Coaching</span>
+          <span className="text-5xl text-white md:text-6xl">Coaching </span>
           {/* <br /> */}
           <span className="text-5xl md:text-6xl">Personnel</span>
           <CircleSvg className="fill-primary" />
@@ -116,7 +116,7 @@ const HeroButton = () => (
         href="/team"
         className={cn(
           buttonVariants({ size: "md", variant: "invert" }),
-          "text-white border hover:border-orange-500 hover:text-orange-500",
+          "border bg-none hover:border-orange-500 text-orange-500",
         )}
       >
         <Heart size={20} className="mr-2 hover:bg-orange-500" />
