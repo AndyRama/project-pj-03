@@ -21,7 +21,17 @@ export const Hero1 = () => {
             <HeroTitle />
             <HeroDescription />
             <HeroButton />
-            <ReviewRow reviews={[]} />
+            <ReviewRow
+              reviews={[
+                {
+                  image: "https://i.pravatar.cc/300?u=b3",
+                  name: "Marie D.",
+                  review:
+                    "J'ai perdu 12 kg en 4 mois et retrouvé confiance en moi !",
+                  role: "34 ans",
+                },
+              ]}
+            />
           </div>
           <HeroImage />
         </div>
@@ -125,17 +135,7 @@ const HeroButton = () => (
   </>
 );
 
- <ReviewRow
-    reviews={[
-      {
-        image: "https://i.pravatar.cc/300?u=b3",
-        name: "Marie D.",
-        review:
-          "J'ai perdu 12 kg en 4 mois et retrouvé confiance en moi !",
-        role: "34 ans",
-      },
-    ]}
-  />
+
 
 const HeroImage = () => (
   <div className="xl:mt-30 mt-20 flex-1 justify-end md:flex">
