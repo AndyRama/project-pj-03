@@ -32,7 +32,7 @@ export const Hero1 = () => {
 
 const HeroStatistics = () => (
   <>
-    <Typography variant="h3" className="text-lg !leading-tight">
+    <Typography variant="h3" className="text-md !leading-tight">
       <span className="inline-block text-white md:text-center">
         <br />
         <StatisticBlock value="+350" label="Transformations" label1="réussit" />
