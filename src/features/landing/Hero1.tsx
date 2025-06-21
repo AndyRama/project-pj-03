@@ -102,7 +102,7 @@ const HeroButton = () => (
   <>
     <div className="flex flex-row">
       <Link
-        href="https://claude.ai/public/artifacts/9c11b699-da14-4662-85e2-76e348563182"
+        href="#"
         className={cn(
           buttonVariants({ size: "md", variant: "default" }),
           "text-white border hover:border-orange-500 hover:text-orange-500 mr-4",
