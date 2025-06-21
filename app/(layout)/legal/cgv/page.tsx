@@ -264,7 +264,7 @@ const CvgPage = () => {
           </li>
           <li>
             <Typography variant="p">
-              <strong>Exercice.</strong> Pour exercer le droit de rétractation, le Client notifie à contact@team-ricco.com, sa décision de rétractation du présent
+              <strong>Exercice.</strong> Pour exercer le droit de rétractation, le Client notifie à contact@unlcoaching.com, sa décision de rétractation du présent
                contrat au moyen d'une déclaration dénuée d'ambiguïté. En cas de rétractation, la Société rembourse le prix réglé au plus tard quatorze jours à compter
                du jour après réception de la décision de rétractation.
             </Typography>

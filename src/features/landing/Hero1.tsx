@@ -80,7 +80,6 @@ const HeroDescription = () => (
   <>
     <Typography variant="large" className="text-white">
       Méthode militaire + Expertise compétition IFBB = Résultats garantis.  <br />  Plus de 500 transformations réussies avec Jeremy Prat.
-      sain et durable.
     </Typography>
     <div className="flex flex-wrap gap-6 text-sm">
       <div className="flex items-center space-x-2">

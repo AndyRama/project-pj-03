@@ -181,7 +181,7 @@ const TermsPage = () => {
         <Typography variant="p">
           Pour toute question, veuillez nous contacter à l'adresse suivante :{' '}
           <Link href="mailto:contact@unlcoaching.com" className="text-blue-500 hover:underline">
-            contact@unlcoaching.fr
+            contact@unlcoaching.com
           </Link>
         </Typography>
       </section>
