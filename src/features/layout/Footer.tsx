@@ -17,7 +17,7 @@ const footerContent = {
       ],
     },
     {
-      heading: '',
+      heading: 'Services',
       links: [
         { href: '/prestations', label: 'Prestations' },
         { href: '/team', label: 'Team', badge: 'Nouveau' },

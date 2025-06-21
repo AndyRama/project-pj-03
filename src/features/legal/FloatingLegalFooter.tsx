@@ -18,7 +18,7 @@ export const FloatingLegalFooter: React.FC = () => {
           Tous droits réservés. Crée avec{" "}
           <BiSolidHeart className="mx-1 inline-block text-red-400" />
           par{" "}
-          <Link href="andyramaroson.com" className="text-orange-500">
+          <Link href="https://lemurian.vercel.app/" className="text-orange-500">
             Andy Ramaroson
           </Link>
         </Typography>
