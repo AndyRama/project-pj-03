@@ -66,7 +66,7 @@ const HeroTitle = () => {
       <span className="inline-block -rotate-2 text-5xl text-white md:text-6xl">
         Jeremy Prat <br />
         <span className="relative inline-block">
-          <span className="text-5xl text-white md:text-6xl">Coaching</span>
+          <span className="text-5xl text-white md:text-6xl">Coaching </span>
           {/* <br /> */}
           <span className="text-5xl md:text-6xl">Personnel</span>
           <CircleSvg className="fill-primary" />
