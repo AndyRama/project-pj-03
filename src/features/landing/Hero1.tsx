@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { Heart, ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { Typography } from "../../components/ui/typography";
+import { ReviewRow } from "./review/ReviewRow";
 // import { ReviewSmall } from "./review/ReviewSmall";
 
 export const Hero1 = () => {
@@ -125,20 +126,17 @@ const HeroButton = () => (
   </>
 );
 
-// const HeroReviews = () => (
-//   <ReviewSmall
-//     stars={5}
-//     avatars={[
-//       "https://i.pravatar.cc/300?u=1",
-//       "https://i.pravatar.cc/300?u=2",
-//       "https://i.pravatar.cc/300?u=3",
-//       "https://i.pravatar.cc/300?u=4",
-//       "https://i.pravatar.cc/300?u=100",
-//     ]}
-//   >
-//     3500+ followers <br /> sur instagram
-//   </ReviewSmall>
-// );
+ <ReviewRow
+    reviews={[
+      {
+        image: "https://i.pravatar.cc/300?u=b3",
+        name: "Marie D.",
+        review:
+          "J'ai perdu 12 kg en 4 mois et retrouvé confiance en moi !",
+        role: "34 ans",
+      },
+    ]}
+  />
 
 const HeroImage = () => (
   <div className="xl:mt-30 mt-20 flex-1 justify-end md:flex">
