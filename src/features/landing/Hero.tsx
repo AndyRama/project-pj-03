@@ -103,7 +103,7 @@ const HeroButton = () => (
   <>
     <div className="flex flex-row">
       <Link
-        href="/#premium"
+        href="/#Demarrer"
         className={cn(
           buttonVariants({ size: "md", variant: "default" }),
           "text-white border hover:border-orange-500 hover:text-orange-500 mr-4",
@@ -114,6 +114,7 @@ const HeroButton = () => (
       </Link>
       <Link
         href="/team"
+        target="_blank"
         className={cn(
           buttonVariants({ size: "md", variant: "default" }),
           "text-white border hover:border-orange-500 hover:text-orange-500 mr-4",

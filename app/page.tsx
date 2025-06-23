@@ -40,7 +40,7 @@ export default function HomePage() {
 
       <BeforeAfterCard/>
 
-       <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
+       <LayoutContent id="Demarrer" className="mx-auto mb-8 w-full dark:prose-invert">
         {/* Pricing Pack */}
         <Pricing
           cards={[
