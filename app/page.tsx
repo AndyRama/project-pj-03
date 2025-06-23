@@ -218,7 +218,7 @@ export default function HomePage() {
         </div> 
       </motion.div>
 
-      <SectionDivider />
+      {/* <SectionDivider /> */}
 
 
       <SectionDivider />
@@ -330,7 +330,7 @@ export default function HomePage() {
         </div>
       </motion.div> */}
 
-      <SectionDivider />
+      {/* <SectionDivider /> */}
 
       {/* Reviews Grid Section */}
       <motion.div
