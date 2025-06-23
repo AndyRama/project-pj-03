@@ -1,11 +1,10 @@
 import { CircleSvg } from "@/components/svg/CircleSvg";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Heart } from "lucide-react";
+import { Heart, ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { Typography } from "../../components/ui/typography";
 import { ReviewSmall } from "./review/ReviewSmall";
-import { Heart, ArrowRight, CheckCircle } from "lucide-react";
 
 export const Hero = () => {
   return (
