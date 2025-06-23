@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
 import { EmailFormSection } from "@/features/email/EmailFormSection";
@@ -11,7 +12,6 @@ import CardGrid from "@/features/landing/CardGrid";
 import RecentPosts from "@/features/landing/RecentPosts";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
 import { Footer } from "@/features/layout/Footer";
-import Image from "next/image";
 import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
 import BeforeAfterCard from "@/features/landing/BeforAfterCard";
 import { LayoutContent } from "@/features/page/layout";
@@ -40,15 +40,15 @@ export default function HomePage() {
 
       <BeforeAfterCard/>
 
-       <LayoutContent id="Demarrer" className="mx-auto mb-8 w-full dark:prose-invert">
+       <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
         {/* Pricing Pack */}
         <Pricing
           cards={[
             {
               isPopular: true,
               type: "monthly",
-              id: "premium",
-              title: "Pro",
+              id: "Demarrer",
+              title: "Perte de poids",
               subtitle: "(6 * 160€ / 6 mois)",
               price: 160,
               barredPrice: 180,
@@ -62,14 +62,14 @@ export default function HomePage() {
                 "Communication WhatsApp & Email avec visio ou call chaque mois.",
                 "Acces à mon application de training.",
               ],
-              cta: "Choisir ce plan ",
+              cta: "Je demarre ma transformation",
               ctaSubtitle: "",
               priceId: "",
             },
             {
               isPopular: false,
               type: "monthly",
-              id: "premium",
+              id: "Demarrer",
               title: "Intermédiaire (6 mois)",
               subtitle: "(6 * 180€ / 6 mois)",
               price: 180,
@@ -84,7 +84,7 @@ export default function HomePage() {
                 "Communication WhatsApp & Email avec visio ou call chaque mois.",
                 "Acces à mon application de training.",
               ],
-              cta: "Choisir ce plan ",
+              cta: "Je demarre ma transformation",
               ctaSubtitle: "",
               priceId: "",
             },          
