@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
 import { EmailFormSection } from "@/features/email/EmailFormSection";
 import { FeaturesSection } from "@/features/landing/FeatureSection";
-import { FeatureProgram } from "@/features/landing/FeatureProgram";
+// import { FeatureProgram } from "@/features/landing/FeatureProgram";
 import { Hero1 } from "@/features/landing/Hero1";
 import RecentPosts from "@/features/landing/RecentPosts";
 import { ReviewRow } from "@/features/landing/review/ReviewRow";
