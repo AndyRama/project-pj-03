@@ -408,7 +408,27 @@ export default function HomePage() {
           ]}
         />
       </motion.div>
+      
+      {/* Final CTA Section */}
+      <section className="bg-gradient-to-r from-orange-500 to-orange-600 px-4 py-16">
+        <div className="mx-auto max-w-4xl text-center">
+          <Typography variant="h2" className="mb-6 text-white">
+            Prêt à Transformer Votre Corps ?
+          </Typography>
+          <Typography variant="large" className="mb-8 text-orange-100">
+            Rejoignez plus de 500 personnes qui ont déjà transformé leur vie avec mes programmes
+          </Typography>
+          
+          <div className="mb-8 inline-block rounded-xl bg-white/10 p-6 backdrop-blur-sm">
+            <p className="font-semibold text-white">⏰ Offre limitée : -50€ sur tous les programmes</p>
+            <p className="text-orange-100">Plus que 48h pour en profiter !</p>
+          </div>
 
+          <button className="rounded-lg bg-white px-12 py-4 text-xl font-bold text-orange-500 transition-all hover:scale-105 hover:bg-gray-100">
+            Commencer Ma Transformation Maintenant
+          </button>
+        </div>
+      </section>
       
       {/* Blog Content */}
       <motion.div
