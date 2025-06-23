@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
 import { EmailFormSection } from "@/features/email/EmailFormSection";
 import { FeaturesSection } from "@/features/landing/FeatureSection";
-import { FeatureProgram } from "@/features/landing/FeatureProgram";
 import { Hero } from "@/features/landing/Hero";
 import { LandingHeader } from "@/features/landing/LandingHeader";
 import { SectionDivider } from "@/features/landing/SectionDivider";
@@ -14,6 +13,8 @@ import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
 import { Footer } from "@/features/layout/Footer";
 import Image from "next/image";
 import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
+import BeforeAfterCard from "@/features/landing/BeforAfterCard";
+import { LayoutContent } from "@/features/page/layout";
 
 export default function HomePage() {
   return (
@@ -35,6 +36,142 @@ export default function HomePage() {
       <LandingHeader />
 
       <Hero />
+
+      <BeforeAfterCard/>
+
+       <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
+        {/* Pricing Pack */}
+        <Pricing
+          cards={[
+            {
+              isPopular: true,
+              type: "monthly",
+              id: "premium",
+              title: "Débutant (4 mois)",
+              subtitle: "(3 * 150€ / 3 mois)",
+              price: 150,
+              barredPrice: 169,
+              currency: "€",
+              features: [
+                "Pack adapté aux débutants dans la musculation.",
+                "Programme de musculation personnalisé en fonction de tes objectifs.",
+                "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                "Plan alimentaire adapté à tes besoins.",
+                "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                "Communication WhatsApp & Email avec visio ou call chaque mois.",
+                "Acces à mon application de training.",
+              ],
+              cta: "Choisir ce plan ",
+              ctaSubtitle: "",
+              priceId: "",
+            },
+            {
+              isPopular: false,
+              type: "monthly",
+              id: "premium",
+              title: "Intermédiaire (4 mois)",
+              subtitle: "(3 * 150€ / 3 mois)",
+              price: 150,
+              barredPrice: 169,
+              currency: "€",
+              features: [
+                "Pack adapté aux débutants dans la musculation.",
+                "Programme de musculation personnalisé en fonction de tes objectifs.",
+                "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                "Plan alimentaire adapté à tes besoins.",
+                "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                "Communication WhatsApp & Email avec visio ou call chaque mois.",
+                "Acces à mon application de training.",
+              ],
+              cta: "Choisir ce plan ",
+              ctaSubtitle: "",
+              priceId: "",
+            },
+            {
+              isPopular: true,
+              type: "monthly",
+              id: "premium",
+              title: "Confirmé (4 mois)",
+              subtitle: "(3 * 150€ / 3 mois)",
+              price: 150,
+              barredPrice: 169,
+              currency: "€",
+              features: [
+                "Pack adapté aux débutants dans la musculation.",
+                "Programme de musculation personnalisé en fonction de tes objectifs.",
+                "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                "Plan alimentaire adapté à tes besoins.",
+                "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                "Communication WhatsApp & Email avec visio ou call chaque mois.",
+                "Acces à mon application de training.",
+              ],
+              cta: "Choisir ce plan ",
+              ctaSubtitle: "",
+              priceId: "",
+            },
+            {
+              isPopular: true,
+              type: "monthly",
+              id: "premium",
+              title: "Débutant (1 mois)",
+              subtitle: "(1 * 150€ / 1 mois)",
+              price: 150,
+              barredPrice: 169,
+              currency: "€",
+              features: [
+                "Pack adapté aux initiés ayant déjà des bases en musculation.",
+                "Programme de musculation personnalisé en fonction de tes objectifs.",
+                "Plan alimentaire adapté à tes besoins.",
+                "Accompagnement sur les divers TCA ou problématique de santé.",
+                "Bilan mensuel par email après 4 semaines.",
+              ],
+              cta: "Choisir ce plan ",
+              ctaSubtitle: "",
+              priceId: "",
+            },
+            {
+              isPopular: true,
+              type: "monthly",
+              id: "premium",
+              title: "Intermédiaire (1 mois)",
+              subtitle: "(1 * 150€ / 1 mois)",
+              price: 150,
+              barredPrice: 169,
+              currency: "€",
+              features: [
+                "Pack adapté aux initiés ayant déjà des bases en musculation.",
+                "Programme de musculation personnalisé en fonction de tes objectifs.",
+                "Plan alimentaire adapté à tes besoins.",
+                "Accompagnement sur les divers TCA ou problématique de santé.",
+                "Bilan mensuel par email après 4 semaines.",
+              ],
+              cta: "Choisir ce plan ",
+              ctaSubtitle: "",
+              priceId: "",
+            },
+            {
+              isPopular: true,
+              type: "monthly",
+              id: "premium",
+              title: "Confirmé (1mois)",
+              subtitle: "(1 * 150€ / 1 mois)",
+              price: 150,
+              barredPrice: 169,
+              currency: "€",
+              features: [
+                "Pack adapté aux initiés ayant déjà des bases en musculation.",
+                "Programme de musculation personnalisé en fonction de tes objectifs.",
+                "Plan alimentaire adapté à tes besoins.",
+                "Accompagnement sur les divers TCA ou problématique de santé.",
+                "Bilan mensuel par email après 4 semaines.",
+              ],
+              cta: "Choisir ce plan ",
+              ctaSubtitle: "",
+              priceId: "",
+            },
+          ]}
+        />
+      </LayoutContent>      
 
       {/* Section "Qui suis-je ?" et "Philosophie" */}
       <motion.div
@@ -164,37 +301,11 @@ export default function HomePage() {
 
       <SectionDivider />
 
-      {/* Blog Content */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <div className="flex flex-col items-center gap-2">
-          <Typography variant="p" className="max-w-xl font-bold text-orange-500">
-            Recentes
-          </Typography>
-          <Typography variant="h2" className="max-w-xl">
-            Blog
-          </Typography>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="mt-28"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <RecentPosts />
-      </motion.div>
 
       <SectionDivider />
 
       {/* FeaturedProgram Section */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -208,9 +319,9 @@ export default function HomePage() {
             Mes services
           </Typography>
         </div>
-      </motion.div>
+      </motion.div> */}
 
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -298,7 +409,7 @@ export default function HomePage() {
         <div className="transform-gpu blur-3xl">
           <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
         </div>
-      </motion.div>
+      </motion.div> */}
 
       <SectionDivider />
 
@@ -379,11 +490,40 @@ export default function HomePage() {
         />
       </motion.div>
 
+      
+      {/* Blog Content */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <div className="flex flex-col items-center gap-2">
+          <Typography variant="p" className="max-w-xl font-bold text-orange-500">
+            Recentes
+          </Typography>
+          <Typography variant="h2" className="max-w-xl">
+            Blog
+          </Typography>
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="mt-28"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <RecentPosts />
+      </motion.div>
+
       <EmailFormSection />
 
       <Footer />
 
       <FloatingLegalFooter />
+
     </motion.div>
   );
 }
