@@ -96,7 +96,7 @@ export default function Page() {
         <div className="transform-gpu blur-3xl">
           <div className="md:content absolute left-0 -z-20 hidden h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
         </div>
-        <FeatureProgram
+        {/* <FeatureProgram
           features={[
             {
               badge: "Débutant",
@@ -171,82 +171,13 @@ export default function Page() {
               ),
             },
           ]}
-        />
+        /> */}
         <div className="transform-gpu blur-3xl">
           <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
         </div>
       </motion.div>
 
-      {/* Section "Qui suis-je ?" et "Philosophie" */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <div className="transform-gpu blur-3xl">
-          <div className="md:content absolute left-0 -z-20 hidden h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-        </div>
-        <FeaturesSection
-          features={[
-            {
-              badge: "Votre coach",
-              title: "Jeremy Prat",
-              description:
-                "Bienvenue dans mon univers, je suis Jeremy, un ancien militaire qui a trouvé sa passion dans le coaching sportif et athlète de haut niveau en tant qu'athlète compétitif en Men's Physique IFBB.",
-              description1:
-                "Fort de mon expérience dans l'armée, j'ai forgé ma détermination et mon engagement envers l'excellence, que ce soit sur le plan physique ou mental.",
-              description2:
-                "Mon parcours m'a conduit à briller sur des scènes nationales et internationales telles que le championnat de France et la Diamond Cup, où j'ai pu démontrer mon savoir-faire et ma passion pour le fitness. Ma mission est simple: vous aider à réaliser vos objectifs de fitness, qu'ils soient modestes ou ambitieux.",
-              component: (
-                <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 1 }}
-                  viewport={{ once: true }}
-                >
-                  <Image
-                    src="/images/jeremy2.jpg"
-                    alt=""
-                    width={200}
-                    height={100}
-                    className="h-auto w-full rounded-[10px] object-cover"
-                  />
-                </motion.div>
-              ),
-            },
-            {
-              badge: "Mes valeurs",
-              title: "Philosophie",
-              description:
-                "Allier entraînement rigoureux et nutrition équilibrée pour un mode de vie sain et durable. Je crois fermement que la réussite en matière de fitness réside dans un équilibre entre un entraînement bien structuré et une alimentation adaptée.",
-              description1: "Ma passion pour le fitness et la santé globale m'a amené à devenir coach sportif, spécialisé dans les transformations physiques, la perte de poids, la préparation aux compétitions, et plus encore.",
-              description2: "",
-              component: (
-                <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <Image
-                    src="/images/colaborate.jpg"
-                    alt=""
-                    width={200}
-                    height={100}
-                    className="h-auto w-full rounded-[10px] object-cover"
-                  />
-                </motion.div>
-              ),
-            },
-          ]}
-        />
-        <div className="transform-gpu blur-3xl">
-          <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-        </div>
-      </motion.div>
-
-      <Pricing
+            <Pricing
         cards={[
           {
             isPopular: true,
@@ -371,6 +302,74 @@ export default function Page() {
         ]}
       />
 
+      {/* Section "Qui suis-je ?" et "Philosophie" */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <div className="transform-gpu blur-3xl">
+          <div className="md:content absolute left-0 -z-20 hidden h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+        </div>
+        <FeaturesSection
+          features={[
+            {
+              badge: "Votre coach",
+              title: "Jeremy Prat",
+              description:
+                "Bienvenue dans mon univers, je suis Jeremy, un ancien militaire qui a trouvé sa passion dans le coaching sportif et athlète de haut niveau en tant qu'athlète compétitif en Men's Physique IFBB.",
+              description1:
+                "Fort de mon expérience dans l'armée, j'ai forgé ma détermination et mon engagement envers l'excellence, que ce soit sur le plan physique ou mental.",
+              description2:
+                "Mon parcours m'a conduit à briller sur des scènes nationales et internationales telles que le championnat de France et la Diamond Cup, où j'ai pu démontrer mon savoir-faire et ma passion pour le fitness. Ma mission est simple: vous aider à réaliser vos objectifs de fitness, qu'ils soient modestes ou ambitieux.",
+              component: (
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 1 }}
+                  viewport={{ once: true }}
+                >
+                  <Image
+                    src="/images/jeremy2.jpg"
+                    alt=""
+                    width={200}
+                    height={100}
+                    className="h-auto w-full rounded-[10px] object-cover"
+                  />
+                </motion.div>
+              ),
+            },
+            {
+              badge: "Mes valeurs",
+              title: "Philosophie",
+              description:
+                "Allier entraînement rigoureux et nutrition équilibrée pour un mode de vie sain et durable. Je crois fermement que la réussite en matière de fitness réside dans un équilibre entre un entraînement bien structuré et une alimentation adaptée.",
+              description1: "Ma passion pour le fitness et la santé globale m'a amené à devenir coach sportif, spécialisé dans les transformations physiques, la perte de poids, la préparation aux compétitions, et plus encore.",
+              description2: "",
+              component: (
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <Image
+                    src="/images/colaborate.jpg"
+                    alt=""
+                    width={200}
+                    height={100}
+                    className="h-auto w-full rounded-[10px] object-cover"
+                  />
+                </motion.div>
+              ),
+            },
+          ]}
+        />
+        <div className="transform-gpu blur-3xl">
+          <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
+        </div>
+      </motion.div>
 
       <div className="transform-gpu blur-3xl">
         <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
@@ -412,7 +411,7 @@ export default function Page() {
 
 
       {/* Reviews Grid Section */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -424,7 +423,10 @@ export default function Page() {
         <div className="transform-gpu blur-3xl">
           <div className="md:content absolute left-0 -z-20 hidden h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
         </div>
-      </motion.div>
+      </motion.div> */}
+
+
+      <EmailFormSection />
 
       {/* Blog Content */}
       <motion.div
@@ -452,9 +454,6 @@ export default function Page() {
       >
         <RecentPosts />
       </motion.div>
-
-      <EmailFormSection />
-
     </motion.div>
   );
 }
