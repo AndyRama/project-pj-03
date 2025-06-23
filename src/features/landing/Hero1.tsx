@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { Heart, ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { Typography } from "../../components/ui/typography";
-import { ReviewRow } from "./review/ReviewRow";
+// import { ReviewRow } from "./review/ReviewRow";
 
 export const Hero1 = () => {
   return (
@@ -21,17 +21,6 @@ export const Hero1 = () => {
             <HeroTitle />
             <HeroDescription />
             <HeroButton />
-            <ReviewRow
-              reviews={[
-                {
-                  image: "https://i.pravatar.cc/300?u=b3",
-                  name: "Marie D.",
-                  review:
-                    "J'ai perdu 12 kg en 4 mois et retrouvé confiance en moi !",
-                  role: "34 ans",
-                },
-              ]}
-            />
           </div>
           <HeroImage />
         </div>
@@ -46,7 +35,6 @@ const HeroStatistics = () => (
       <span className="inline-block text-white md:text-center">
         <br />
         <StatisticBlock value="+350" label="Transformations" label1="réussit" />
-        <StatisticBlock value="95%" label=" taux" label1="de réussite" />
         <StatisticBlock value="5⭐ " label="Satisfaction " label1="" />
       </span>
     </Typography>

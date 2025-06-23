@@ -36,7 +36,7 @@ const HeroStatistics = () => (
       <span className="inline-block text-white md:text-center">
         <br />
         <StatisticBlock value="+350" label="Transformations" label1="réussit" />
-        <StatisticBlock value="+8" label="Années " label1="expériences" />
+        <StatisticBlock value="5⭐ " label="Satisfaction " label1="" />
       </span>
     </Typography>
   </>
@@ -82,7 +82,7 @@ const HeroDescription = () => (
       <br />
       pour un mode de vie sain et durable.      
     </Typography>
-    {/* <div className="flex flex-wrap gap-6 text-sm">
+    <div className="flex flex-wrap gap-6 text-sm">
       <div className="flex items-center space-x-2">
         <CheckCircle className="size-5 text-orange-500" />
         <span>Résultats en 90 jours</span>
@@ -95,14 +95,14 @@ const HeroDescription = () => (
         <CheckCircle className="size-5 text-orange-500" />
         <span>Garantie résultats</span>
       </div>
-    </div> */}
+    </div>
   </>
 );
 
 const HeroButton = () => (
   <>
-    {/* <div className="flex flex-row"> */}
-      {/* <Link
+    <div className="flex flex-row">
+      <Link
         href="/#premium"
         className={cn(
           buttonVariants({ size: "md", variant: "default" }),
@@ -111,7 +111,7 @@ const HeroButton = () => (
       >
         Démarrer ma transformation
         <ArrowRight size={20} className="mr-2 hover:bg-orange-500" />
-      </Link> */}
+      </Link>
       <Link
         href="/team"
         className={cn(
@@ -122,7 +122,7 @@ const HeroButton = () => (
         <Heart size={20} className="mr-2 hover:bg-orange-500" />
          de la team !
       </Link>
-    {/* </div> */}
+    </div>
   </>
 );
 
