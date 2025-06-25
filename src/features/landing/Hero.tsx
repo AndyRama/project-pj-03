@@ -103,7 +103,7 @@ const HeroButton = () => (
         target="_blank"
         className={cn(
           buttonVariants({ size: "md", variant: "default" }),
-          "hover:border-orange-500 hover:text-orange-500  text-white",
+          "border-orange-500 hover:text-orange-500  text-white bg-none",
         )}
       >
         <Heart size={20} className="mr-2 " />

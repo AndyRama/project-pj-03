@@ -15,8 +15,7 @@ import {
 import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth/helper";
 import { redirect } from "next/navigation";
-import { CalorieCalculatorModal } from "@/components/ui/CalorieCalculatorModal";
-import { Button } from "@/components/ui/button";
+// import { CalorieCalculatorModal } from "@/components/ui/CalorieCalculatorModal";
 
 // Base type for AlimentaireProfile model
 type AlimentaireProfile = {
@@ -66,27 +65,12 @@ export default async function AlimentairePlanPage() {
   } catch (error) {
     console.error("Error fetching alimentaire profiles:", error);
   }
-  
-  // Récupère le profil de l'utilisateur connecté s'il existe
-  const userProfile = profilesWithUsers.find(profile => profile.userId === user.id);
-  
+    
   return (
     <div className="mx-auto p-4">
       <Layout>
         <LayoutHeader className="flex items-center justify-between">
           <LayoutTitle>Plan Alimentaire | Tableau des utilisateurs</LayoutTitle>
-          <div className="flex items-center gap-4">
-            {/* Bouton simple pour ouvrir la calculatrice */}
-            <CalorieCalculatorModal 
-              profileData={userProfile ? {
-                id: userProfile.id,
-                size: userProfile.size,
-                age: userProfile.age,
-                weight: userProfile.weight,
-                userId: userProfile.userId
-              } : null} 
-            />
-          </div>
         </LayoutHeader>
         <LayoutContent>
           <div className="rounded-md border">
