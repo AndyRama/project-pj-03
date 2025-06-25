@@ -40,8 +40,8 @@ export default function HomePage() {
 
       <BeforeAfterCard/>
 
-       <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
-        {/* Pricing Pack */}
+      {/* Pricing Pack */}
+      <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
         <Pricing
           cards={[
             {
@@ -218,119 +218,7 @@ export default function HomePage() {
         </div> 
       </motion.div>
 
-      {/* <SectionDivider /> */}
-
-
       <SectionDivider />
-
-      {/* FeaturedProgram Section */}
-      {/* <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <div className="flex flex-col items-center gap-2" id="concept">
-          <Typography variant="p" className="max-w-xl font-bold text-orange-500">
-            Programmes
-          </Typography>
-          <Typography variant="h2" className="max-w-xl">
-            Mes services
-          </Typography>
-        </div>
-      </motion.div> */}
-
-      {/* <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-      <div className="transform-gpu blur-3xl">
-        <div className="md:content absolute left-0 -z-20 hidden h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-      </div>
-        <FeatureProgram
-          features={[
-            {
-              badge: "Débutant",
-              title: "Pack 1 Musculation | Homme Femme",
-              description:
-                "Coaching spécialisé pour les athlètes : si la compétition, le dépassement de soi et la discipline sont essentiels à votre vie et à votre bien-être, se fixer des objectifs concrets est un moyen efficace de les atteindre. Je vous propose un suivi musculation et alimentaire personnalisés pour relever les défis que vous vous fixerez.",
-              component: (
-                <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 1 }}
-                  viewport={{ once: true }}
-                >
-                  <Image
-                    src="/images/post3.jpg"
-                    alt=""
-                    width={200}
-                    height={100}
-                    className="h-auto w-full rounded-[8px] object-cover"
-                  />
-                </motion.div>
-              ),
-              description1: "",
-              description2: "",
-            },
-            {
-              badge: "Intermédiaire",
-              title: "Pack 2 Musculation | Homme Femme",
-              description:
-                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus pariatur soluta corrupti quisquam illo ducimus adipisci recusandae possimus tempora esse, aspernatur repudiandae cupiditate ipsum enim, quibusdam porro odio sit. Quis!",
-              description1: "",
-              description2: "",
-              component: (
-                <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <Image
-                    src="/images/post5.jpg"
-                    alt=""
-                    width={200}
-                    height={100}
-                    className="h-auto w-full rounded-[8px] object-cover"
-                  />
-                </motion.div>
-              ),
-            },
-            {
-              badge: "Confirmé",
-              title: "Pack 3 Musculation | Homme Femme",
-              description:
-                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus pariatur soluta corrupti quisquam illo ducimus adipisci recusandae possimus tempora esse, aspernatur repudiandae cupiditate ipsum enim, quibusdam porro odio sit. Quis!",
-              description1: "",
-              description2: "",
-              component: (
-                <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.4 }}
-                  viewport={{ once: true }}
-                >
-                  <Image
-                    src="/images/post4.jpg"
-                    alt=""
-                    width={200}
-                    height={100}
-                    className="h-auto w-full rounded-[8px] object-cover"
-                  />
-                </motion.div>
-              ),
-            },
-          ]}
-        />
-        <div className="transform-gpu blur-3xl">
-          <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-        </div>
-      </motion.div> */}
-
-      {/* <SectionDivider /> */}
 
       {/* Reviews Grid Section */}
       <motion.div
@@ -408,6 +296,8 @@ export default function HomePage() {
           ]}
         />
       </motion.div>
+      
+       <SectionDivider />
       
       {/* Final CTA Section */}
       <section className="bg-gradient-to-r from-orange-500 to-orange-600 px-4 py-16">

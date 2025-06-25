@@ -15,7 +15,7 @@ export const Hero = () => {
         className="-mt-[40px] h-[178vh] bg-cover bg-fixed md:h-[110vh]"
         style={{ backgroundImage: `url('/images/salle-de-sport.jpg')` }}
       >
-        <div className="relative m-auto flex min-h-[400px] w-full max-w-7xl items-center gap-4 px-4 max-md:flex-col">
+        <div className="relative m-auto mt-20 flex min-h-[400px] w-full max-w-7xl items-center gap-4 px-4 max-md:flex-col md:mt-0">
           <div className="relative flex flex-1 flex-col items-start gap-8 md:gap-4 lg:gap-8">
             <HeroStatistics />
             <HeroTitle />
@@ -36,7 +36,7 @@ const HeroStatistics = () => (
       <span className="inline-block text-white md:text-center">
         <br />
         <StatisticBlock value="+350" label="Transformations" label1="réussit" />
-        <StatisticBlock value="5⭐ " label="Satisfaction " label1="" />
+        <StatisticBlock value="5⭐" label="Satisfaction " label1="" />
       </span>
     </Typography>
   </>
@@ -103,7 +103,7 @@ const HeroButton = () => (
         target="_blank"
         className={cn(
           buttonVariants({ size: "md", variant: "default" }),
-          "text-white border hover:border-orange-500 hover:text-orange-500 mr-4",
+          "border border-orange-500 text-orange-500 hover:text-white",
         )}
       >
         <Heart size={20} className="mr-2 hover:bg-orange-500" />

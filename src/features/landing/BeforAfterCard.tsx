@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Layout } from "@/features/page/layout";
 import { Card, CardHeader } from "@/components/ui/card";
 import type { ComponentPropsWithoutRef } from "react";
+import { Typography } from "@/components/ui/typography";
 // import { Typography } from "@/components/ui/typography";
 
 export type StoryCardProps = {
@@ -201,6 +202,13 @@ export const StoryCardGrid: React.FC = () => {
   return (
     <Layout>
       <div className="container mx-auto mb-2 justify-center rounded-md md:flex md:px-4">
+        <Typography
+          variant="small"
+          className="font-extrabold uppercase text-primary"
+        >
+          Exemple de 
+        </Typography>
+        <Typography variant="h2">Avant / Après</Typography>
         <div className="px-4 md:w-4/12">
           {storyContent.column1.imgs.map((card, index) => (
             <StoryCard
