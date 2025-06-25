@@ -1,7 +1,7 @@
 import { CircleSvg } from "@/components/svg/CircleSvg";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Heart, ArrowRight, CheckCircle } from "lucide-react";
+import { Heart, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Typography } from "../../components/ui/typography";
 import { ReviewSmall } from "./review/ReviewSmall";
@@ -82,20 +82,6 @@ const HeroDescription = () => (
       <br />
       pour un mode de vie sain et durable.      
     </Typography>
-    <div className="flex flex-wrap gap-6 text-sm">
-      <div className="flex items-center space-x-2">
-        <CheckCircle className="size-5 text-orange-500" />
-        <span>Résultats en 90 jours</span>
-      </div>
-      <div className="flex items-center space-x-2">
-        <CheckCircle className="size-5 text-orange-500" />
-        <span>Suivi personnalisé</span>
-      </div>
-      <div className="flex items-center space-x-2">
-        <CheckCircle className="size-5 text-orange-500" />
-        <span>Garantie résultats</span>
-      </div>
-    </div>
   </>
 );
 
