@@ -6,15 +6,15 @@ export const ACCOUNT_LINKS: NavigationLinkGroups[] = [
     title: "Informations Personnelles",
     links: [
       { 
-        url: "/account/checkout",
-        title: "Get Started",
-        icon: <Sparkles />        
-       },
-      { 
         url: "/account",
         title: "Profile",
         icon: <User2 />
-
+        
+      },
+      { 
+        url: "/account/checkout",
+        title: "Get Started",
+        icon: <Sparkles />        
        },
       {
         url: "/account/delete",
