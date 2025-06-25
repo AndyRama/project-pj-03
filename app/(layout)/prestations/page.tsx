@@ -14,8 +14,8 @@ export default function page() {
     <>
       <SubHero className="" title={"Prestations"} subTitle={"Toutes mes"} />
       <Layout>
-        {/* Pricing Pack */}
         <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
+           {/* Pricing Pack */}
           <Pricing
             cards={[
               {
@@ -64,8 +64,7 @@ export default function page() {
               },          
             ]}
           />
-      {/* </LayoutContent>       */}
-
+          
           <PricingDetails />
 
           {/* Pricing Ebook */}
