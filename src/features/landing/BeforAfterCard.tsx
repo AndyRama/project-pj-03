@@ -62,7 +62,7 @@ export const StoryCardGrid: React.FC = () => {
 
   const storyContent = {
     column1: {
-      imgs: [
+      initialImgs: [
         {
           img: "/images/story1.png",
           alt: "Team",
@@ -77,6 +77,8 @@ export const StoryCardGrid: React.FC = () => {
           height: 1413,
           tailwindClass: "pb-10",
         },
+      ],
+      hiddenImgs: [
         {
           img: "/images/story3.jpg",
           alt: "Woman making a plan",
@@ -87,7 +89,7 @@ export const StoryCardGrid: React.FC = () => {
       ],
     },
     column2: {
-      imgs: [
+      initialImgs: [
         {
           img: "/images/story4.jpg",
           alt: "White curvy building",
@@ -102,6 +104,8 @@ export const StoryCardGrid: React.FC = () => {
           height: 1413,
           tailwindClass: "h-full lg:h-100 pb-10",
         },
+      ],
+      hiddenImgs: [
         {
           img: "/images/story6.jpg",
           alt: "White curvy building",
@@ -119,7 +123,7 @@ export const StoryCardGrid: React.FC = () => {
       ],
     },
     column3: {
-      imgs: [
+      initialImgs: [
         {
           img: "/images/story8.jpg",
           alt: "Man writing a plan",
@@ -134,6 +138,8 @@ export const StoryCardGrid: React.FC = () => {
           height: 1413,
           tailwindClass: "pb-10 h-106",
         },
+      ],
+      hiddenImgs: [
         {
           img: "/images/story13.jpg",
           alt: "Production",
@@ -145,25 +151,7 @@ export const StoryCardGrid: React.FC = () => {
     },
   };
 
-  // Créer un tableau plat de toutes les images avec leurs colonnes d'origine
-  const allImages = [
-    ...storyContent.column1.imgs.map((img, index) => ({ ...img, column: 1, originalIndex: index })),
-    ...storyContent.column2.imgs.map((img, index) => ({ ...img, column: 2, originalIndex: index })),
-    ...storyContent.column3.imgs.map((img, index) => ({ ...img, column: 3, originalIndex: index })),
-  ];
 
-  const visibleImages = showAll ? allImages : allImages.slice(0, 6);
-
-  // Organiser les images visibles par colonne
-  const organizeByColumns = (images: typeof allImages) => {
-    const columns: { [key: string]: typeof allImages } = { '1': [], '2': [], '3': [] };
-    images.forEach(img => {
-      columns[String(img.column)].push(img);
-    });
-    return columns;
-  };
-
-  const visibleColumns = organizeByColumns(visibleImages);
 
   return (
     <Layout>
@@ -180,10 +168,21 @@ export const StoryCardGrid: React.FC = () => {
         
         <div className="md:flex md:px-4">
           <div className="px-4 md:w-4/12">
-            {visibleColumns[1].map((card, index) => (
+            {storyContent.column1.initialImgs.map((card, index) => (
               <StoryCard
-                key={`${card.column}-${card.originalIndex}`}
+                key={index}
                 index={index}
+                alt={card.alt}
+                width={card.width}
+                height={card.height}
+                img={card.img}
+                tailwindClass={card.tailwindClass}
+              />
+            ))}
+            {showAll && storyContent.column1.hiddenImgs.map((card, index) => (
+              <StoryCard
+                key={`hidden-${index}`}
+                index={index + storyContent.column1.initialImgs.length}
                 alt={card.alt}
                 width={card.width}
                 height={card.height}
@@ -193,10 +192,21 @@ export const StoryCardGrid: React.FC = () => {
             ))}
           </div>
           <div className="px-4 md:w-4/12">
-            {visibleColumns[2].map((card, index) => (
+            {storyContent.column2.initialImgs.map((card, index) => (
               <StoryCard
-                key={`${card.column}-${card.originalIndex}`}
+                key={index + storyContent.column1.initialImgs.length}
                 index={index}
+                alt={card.alt}
+                width={card.width}
+                height={card.height}
+                img={card.img}
+                tailwindClass={card.tailwindClass}
+              />
+            ))}
+            {showAll && storyContent.column2.hiddenImgs.map((card, index) => (
+              <StoryCard
+                key={`hidden-${index + storyContent.column1.initialImgs.length}`}
+                index={index + storyContent.column2.initialImgs.length}
                 alt={card.alt}
                 width={card.width}
                 height={card.height}
@@ -206,10 +216,29 @@ export const StoryCardGrid: React.FC = () => {
             ))}
           </div>
           <div className="px-4 md:w-4/12">
-            {visibleColumns[3].map((card, index) => (
+            {storyContent.column3.initialImgs.map((card, index) => (
               <StoryCard
-                key={`${card.column}-${card.originalIndex}`}
+                key={
+                  index +
+                  storyContent.column1.initialImgs.length +
+                  storyContent.column2.initialImgs.length
+                }
                 index={index}
+                alt={card.alt}
+                width={card.width}
+                height={card.height}
+                img={card.img}
+                tailwindClass={card.tailwindClass}
+              />
+            ))}
+            {showAll && storyContent.column3.hiddenImgs.map((card, index) => (
+              <StoryCard
+                key={`hidden-${
+                  index +
+                  storyContent.column1.initialImgs.length +
+                  storyContent.column2.initialImgs.length
+                }`}
+                index={index + storyContent.column3.initialImgs.length}
                 alt={card.alt}
                 width={card.width}
                 height={card.height}
@@ -220,7 +249,7 @@ export const StoryCardGrid: React.FC = () => {
           </div>
         </div>
 
-        {!showAll && allImages.length > 6 && (
+        {!showAll && (
           <div className="mt-8 text-center">
             <Button
               onClick={() => setShowAll(true)}

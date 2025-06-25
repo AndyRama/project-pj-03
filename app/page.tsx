@@ -319,6 +319,8 @@ export default function HomePage() {
           </button>
         </div>
       </section>
+
+      <SectionDivider />
       
       {/* Blog Content */}
       <motion.div
