@@ -13,7 +13,7 @@ import RecentPosts from "@/features/landing/RecentPosts";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
 import { Footer } from "@/features/layout/Footer";
 import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
-import BeforeAfterCardv2 from "@/features/landing/BeforAfterCardv2";
+import BeforeAfterCard from "@/features/landing/BeforAfterCard";
 import { LayoutContent } from "@/features/page/layout";
 import { Pricing } from "@/features/prestations/pricing/PricingSection";
 
@@ -38,7 +38,7 @@ export default function HomePage() {
 
       <Hero />
 
-      <BeforeAfterCardv2/>
+      <BeforeAfterCard/>
 
       {/* Pricing Pack */}
       <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
