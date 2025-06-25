@@ -5,7 +5,7 @@ import {
   Settings,
   TextSelect,
   SlidersHorizontal,
-  CalendarClock,
+  // CalendarClock,
   BookOpen,
   } from "lucide-react";
 
@@ -23,11 +23,6 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
   {
     title: "Services",
     links: [
-      {
-        title: "Agenda visio",
-        icon: <CalendarClock />,
-        url: "/agenda",
-      },
       {
         title: "Plan alimentaire",
         icon: <TextSelect />,
@@ -53,11 +48,6 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
   {
     title: "Ressources",
     links: [
-      {
-        title: "Courses*",
-        icon: <BookOpen />,
-        url: "/courses",
-      },
       {
         title: "Article*",
         icon: <BookOpen />,

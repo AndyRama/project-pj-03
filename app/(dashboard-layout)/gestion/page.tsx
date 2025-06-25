@@ -41,7 +41,7 @@ export default async function RoutePage(props: PageParams) {
                 <CardTitle>{service.title}</CardTitle>
                 <CardDescription>{service.description}</CardDescription>
                 <div className="flex flex-row gap-2">
-                  <Button variant="invert" size="sm" asChild className="rounded-[10px] hover:border hover:border-orange-600 hover:text-orange-600">
+                  <Button variant="default" size="sm" asChild className="rounded-[10px] hover:border hover:border-orange-600 hover:text-orange-600">
                     <Link href={service.link} target="_blank" rel="noopener noreferrer">
                       {service.title.split(" ")[1]}
                     </Link>
