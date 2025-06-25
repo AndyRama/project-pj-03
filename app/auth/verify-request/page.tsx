@@ -18,10 +18,10 @@ export default async function AuthNewUserPage() {
       <div className="flex h-full items-center justify-center">
         <Card className="w-full max-w-md">
           <CardHeader>
-            <CardTitle>Almost There!</CardTitle>
+            <CardTitle>Presque terminé !</CardTitle>
             <CardDescription>
-              To complete the verification, head over to your email inbox.
-              You'll find a magic link from us. Click on it, and you're all set!
+              Pour finaliser la vérification, rendez-vous dans votre boîte mail.
+              Vous y trouverez un lien magique de notre part. Cliquez dessus, et le tour est joué !
             </CardDescription>
           </CardHeader>
         </Card>

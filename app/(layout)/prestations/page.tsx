@@ -14,18 +14,18 @@ export default function page() {
     <>
       <SubHero className="" title={"Prestations"} subTitle={"Toutes mes"} />
       <Layout>
+        {/* Pricing Pack */}
         <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
-          {/* Pricing Pack */}
           <Pricing
             cards={[
               {
                 isPopular: true,
                 type: "monthly",
-                id: "premium",
-                title: "Débutant (4 mois)",
-                subtitle: "(3 * 150€ / 3 mois)",
-                price: 150,
-                barredPrice: 169,
+                id: "Demarrer",
+                title: "Perte de poids",
+                subtitle: "(6 * 160€ / 6 mois)",
+                price: 160,
+                barredPrice: 180,
                 currency: "€",
                 features: [
                   "Pack adapté aux débutants dans la musculation.",
@@ -36,18 +36,18 @@ export default function page() {
                   "Communication WhatsApp & Email avec visio ou call chaque mois.",
                   "Acces à mon application de training.",
                 ],
-                cta: "Choisir ce plan ",
+                cta: "Je demarre ma transformation",
                 ctaSubtitle: "",
                 priceId: "",
               },
               {
                 isPopular: false,
                 type: "monthly",
-                id: "premium",
-                title: "Intermédiaire (4 mois)",
-                subtitle: "(3 * 150€ / 3 mois)",
-                price: 150,
-                barredPrice: 169,
+                id: "Demarrer",
+                title: "Intermédiaire (6 mois)",
+                subtitle: "(6 * 180€ / 6 mois)",
+                price: 180,
+                barredPrice: 200,
                 currency: "€",
                 features: [
                   "Pack adapté aux débutants dans la musculation.",
@@ -58,94 +58,13 @@ export default function page() {
                   "Communication WhatsApp & Email avec visio ou call chaque mois.",
                   "Acces à mon application de training.",
                 ],
-                cta: "Choisir ce plan ",
+                cta: "Je demarre ma transformation",
                 ctaSubtitle: "",
                 priceId: "",
-              },
-              {
-                isPopular: true,
-                type: "monthly",
-                id: "premium",
-                title: "Confirmé (4 mois)",
-                subtitle: "(3 * 150€ / 3 mois)",
-                price: 150,
-                barredPrice: 169,
-                currency: "€",
-                features: [
-                  "Pack adapté aux débutants dans la musculation.",
-                  "Programme de musculation personnalisé en fonction de tes objectifs.",
-                  "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
-                  "Plan alimentaire adapté à tes besoins.",
-                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
-                  "Communication WhatsApp & Email avec visio ou call chaque mois.",
-                  "Acces à mon application de training.",
-                ],
-                cta: "Choisir ce plan ",
-                ctaSubtitle: "",
-                priceId: "",
-              },
-              {
-                isPopular: true,
-                type: "monthly",
-                id: "premium",
-                title: "Débutant (1 mois)",
-                subtitle: "(1 * 150€ / 1 mois)",
-                price: 150,
-                barredPrice: 169,
-                currency: "€",
-                features: [
-                  "Pack adapté aux initiés ayant déjà des bases en musculation.",
-                  "Programme de musculation personnalisé en fonction de tes objectifs.",
-                  "Plan alimentaire adapté à tes besoins.",
-                  "Accompagnement sur les divers TCA ou problématique de santé.",
-                  "Bilan mensuel par email après 4 semaines.",
-                ],
-                cta: "Choisir ce plan ",
-                ctaSubtitle: "",
-                priceId: "",
-              },
-              {
-                isPopular: true,
-                type: "monthly",
-                id: "premium",
-                title: "Intermédiaire (1 mois)",
-                subtitle: "(1 * 150€ / 1 mois)",
-                price: 150,
-                barredPrice: 169,
-                currency: "€",
-                features: [
-                  "Pack adapté aux initiés ayant déjà des bases en musculation.",
-                  "Programme de musculation personnalisé en fonction de tes objectifs.",
-                  "Plan alimentaire adapté à tes besoins.",
-                  "Accompagnement sur les divers TCA ou problématique de santé.",
-                  "Bilan mensuel par email après 4 semaines.",
-                ],
-                cta: "Choisir ce plan ",
-                ctaSubtitle: "",
-                priceId: "",
-              },
-              {
-                isPopular: true,
-                type: "monthly",
-                id: "premium",
-                title: "Confirmé (1mois)",
-                subtitle: "(1 * 150€ / 1 mois)",
-                price: 150,
-                barredPrice: 169,
-                currency: "€",
-                features: [
-                  "Pack adapté aux initiés ayant déjà des bases en musculation.",
-                  "Programme de musculation personnalisé en fonction de tes objectifs.",
-                  "Plan alimentaire adapté à tes besoins.",
-                  "Accompagnement sur les divers TCA ou problématique de santé.",
-                  "Bilan mensuel par email après 4 semaines.",
-                ],
-                cta: "Choisir ce plan ",
-                ctaSubtitle: "",
-                priceId: "",
-              },
+              },          
             ]}
           />
+      {/* </LayoutContent>       */}
 
           <PricingDetails />
 

@@ -27,8 +27,8 @@ export default function NewUserPage(props: PageParams) {
       <Header />
       <Layout>
         <LayoutHeader>
-          <LayoutTitle>Successfully login</LayoutTitle>
-          <LayoutDescription>You can now use the app</LayoutDescription>
+          <LayoutTitle>Connection réussit avec succès</LayoutTitle>
+          <LayoutDescription>Vous pouvez désormais utiliser l'application</LayoutDescription>
         </LayoutHeader>
         <LayoutContent>
           <Link href="/" className={buttonVariants({ size: "lg" })}>

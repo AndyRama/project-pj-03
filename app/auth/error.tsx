@@ -5,7 +5,7 @@ import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { logger } from "@/lib/logger";
 import type { ErrorParams } from "@/types/next";
 import { useEffect } from "react";
-import { LogoSvg } from"@/components/svg/Logo";
+import { LogoSvg } from"@/components/svg/LogoSvg";
 
 export default function RouteError({ error, reset }: ErrorParams) {
   useEffect(() => {
@@ -18,11 +18,11 @@ export default function RouteError({ error, reset }: ErrorParams) {
       <CardHeader>
         <LogoSvg/>
         <CardTitle>
-          Sorry, something went wrong. Please try again later.
+          Désolé, une erreur s'est produite. Veuillez réessayer ultérieurement.
         </CardTitle>
       </CardHeader>
       <CardFooter>
-        <Button onClick={reset}>Try again</Button>
+        <Button onClick={reset}>Essayer à nouveau</Button>
       </CardFooter>
     </Card>
   );

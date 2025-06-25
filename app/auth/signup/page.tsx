@@ -1,4 +1,4 @@
-import { LogoSvg } from "@/components/svg/Logo";
+import { LogoSvg } from "@/components/svg/LogoSvg";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Loader } from "@/components/ui/loader";
 import { Typography } from "@/components/ui/typography";
