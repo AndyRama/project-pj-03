@@ -83,7 +83,7 @@ export const StoryCardGrid: React.FC = () => {
       initialImgs: [
         {
           img: "/images/story1.png",
-          imgAfter: "/images/story2.jpg", 
+          imgAfter: "/images/story1.png", 
           alt: "Team",
           width: 1188,
           height: 1413,
@@ -91,7 +91,7 @@ export const StoryCardGrid: React.FC = () => {
         },
         {
           img: "/images/story2.jpg",
-          imgAfter: "/images/story3.jpg", 
+          imgAfter: "/images/story2.jpg", 
           alt: "Woman making a plan",
           width: 1188,
           height: 1413,
@@ -101,7 +101,7 @@ export const StoryCardGrid: React.FC = () => {
       hiddenImgs: [
         {
           img: "/images/story3.jpg",
-          imgAfter: "/images/story4.jpg", 
+          imgAfter: "/images/story3.jpg", 
           alt: "Woman making a plan",
           width: 1188,
           height: 1413,
@@ -113,7 +113,7 @@ export const StoryCardGrid: React.FC = () => {
       initialImgs: [
         {
           img: "/images/story4.jpg",
-          imgAfter: "/images/story5.jpg", 
+          imgAfter: "/images/story4.jpg", 
           alt: "White curvy building",
           width: 1188,
           height: 1413,
@@ -121,7 +121,7 @@ export const StoryCardGrid: React.FC = () => {
         },
         {
           img: "/images/story5.jpg",
-          imgAfter: "/images/story6.jpg", 
+          imgAfter: "/images/story5.jpg", 
           alt: "White curvy building",
           width: 1188,
           height: 1413,
@@ -131,7 +131,7 @@ export const StoryCardGrid: React.FC = () => {
       hiddenImgs: [
         {
           img: "/images/story6.jpg",
-          imgAfter: "/images/story7.jpg", 
+          imgAfter: "/images/story6.jpg", 
           alt: "White curvy building",
           width: 1188,
           height: 1413,
@@ -139,7 +139,7 @@ export const StoryCardGrid: React.FC = () => {
         },
         {
           img: "/images/story7.jpg",
-          imgAfter: "/images/story8.jpg", 
+          imgAfter: "/images/story7.jpg", 
           alt: "Team meeting",
           width: 1188,
           height: 1413,
