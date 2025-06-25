@@ -17,7 +17,7 @@ import {
 import type { PageParams } from "@/types/next";
 import Link from "next/link";
 import { getError } from "./auth-error-mapping";
-import { LogoSvg } from "@/components/svg/Logo";
+import { LogoSvg } from "@/components/svg/LogoSvg";
 
 
 export default async function AuthErrorPage(props: PageParams<{}>) {

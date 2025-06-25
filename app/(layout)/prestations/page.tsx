@@ -5,7 +5,7 @@ import { PricingEbook } from "@/features/prestations/ebook/PricingSectionEbook";
 import { FAQSection } from "@/features/landing/FAQSection";
 import { SubHero } from "@/features/landing/SubHero";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
-import { PricingDetails } from "@/features/prestations/pricing/PricingDetails";
+// import { PricingDetails } from "@/features/prestations/pricing/PricingDetails";
 import { PricingDetailsPlus } from "@/features/prestations/pricing/PricingDetailsPlus";
 import { EmailFormSection } from "@/features/email/EmailFormSection";
 
@@ -65,7 +65,7 @@ export default function page() {
             ]}
           />
           
-          <PricingDetails />
+          {/* <PricingDetails /> */}
 
           {/* Pricing Ebook */}
           <PricingEbook
