@@ -16,8 +16,8 @@ export default async function RouteLayout(
       <LayoutHeader>
         <LayoutTitle>Bienvenue sur Unlcoaching</LayoutTitle>
         <LayoutDescription>
-          Merci d'avoir souscrit a notre service de coaching et affin d'elaborer votre plan allimentaire
-          J'aurai besoins de quelque information personel a veuille a remplir le formulaire puis prendre rdv en viso
+          Merci d'avoir souscrit à notre service de coaching et afin d'élaborer votre plan allimentaire. <br/>
+          J'aurai besoins de quelques informations personel pour le réaliser veuille  completer le formulaire puis prendre un rendez-vous.
         </LayoutDescription>
       </LayoutHeader>
       <LayoutContent className="flex items-start gap-4 max-lg:flex-col">
