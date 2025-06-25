@@ -96,7 +96,7 @@ const HeroButton = () => (
         )}
       >
         Démarrer ma transformation
-        <ArrowRight size={20} className="mr-2 hover:bg-orange-500" />
+        <ArrowRight size={20} className="mr-2" />
       </Link>
       <Link
         href="/team"
@@ -106,7 +106,7 @@ const HeroButton = () => (
           "hover:border-orange-500 hover:text-orange-500  text-white",
         )}
       >
-        <Heart size={20} className="mr-2 hover:bg-orange-500" />
+        <Heart size={20} className="mr-2 " />
          de la team !
       </Link>
     </div>

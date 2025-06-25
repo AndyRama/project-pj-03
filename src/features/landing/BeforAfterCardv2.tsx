@@ -151,7 +151,7 @@ export const StoryCardGrid: React.FC = () => {
       initialImgs: [
         {
           img: "/images/story8.jpg",
-          imgAfter: "/images/story9.jpg", 
+          imgAfter: "/images/story8.jpg", 
           alt: "Man writing a plan",
           width: 1188,
           height: 1413,
@@ -159,7 +159,7 @@ export const StoryCardGrid: React.FC = () => {
         },
         {
           img: "/images/story9.jpg",
-          imgAfter: "/images/story13.jpg", 
+          imgAfter: "/images/story9.jpg", 
           alt: "Production",
           width: 1188,
           height: 1413,
@@ -169,7 +169,7 @@ export const StoryCardGrid: React.FC = () => {
       hiddenImgs: [
         {
           img: "/images/story13.jpg",
-          imgAfter: "/images/story8.jpg", 
+          imgAfter: "/images/story13.jpg", 
           alt: "Production",
           width: 1188,
           height: 1413,
@@ -183,7 +183,7 @@ export const StoryCardGrid: React.FC = () => {
 
   return (
     <Layout>
-      <div className="container mx-auto mb-2 justify-center rounded-md">
+      <div className="container mx-auto mb-2 mt-0 justify-center rounded-md lg:mt-20">
         <div className="mb-8 text-center">
           <Typography
             variant="small"
