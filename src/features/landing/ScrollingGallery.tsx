@@ -87,6 +87,7 @@ export default function  ScrollingGallery() {
   const column3Images = createColumn(2);
 
   return (
+    
     <div className="w-full overflow-hidden bg-black">
       <div className="flex h-screen">
         {/* Colonne 1 - Défilement lent */}
