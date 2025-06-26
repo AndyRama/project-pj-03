@@ -41,7 +41,10 @@ export default function HomePage() {
 
       <Hero />
 
-      {/* <ScrollingGallery/> */}
+      <LayoutContent className="w-max-6xl mx-auto mb-8 dark:prose-invert">
+        <ScrollingGallery/>
+      </LayoutContent>
+
 
       <BeforeAfterCardv2/>
 
