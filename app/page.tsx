@@ -18,6 +18,7 @@ import { LayoutContent } from "@/features/page/layout";
 import { Pricing } from "@/features/prestations/pricing/PricingSection";
 import { FAQSection } from "@/features/landing/FAQSection";
 import { PricingEbook } from "@/features/prestations/ebook/PricingSectionEbook";
+import ScrollingGallery from "@/features/landing/ScrollingGallery";
 
 export default function HomePage() {
   return (
@@ -39,6 +40,8 @@ export default function HomePage() {
       <LandingHeader />
 
       <Hero />
+
+      <ScrollingGallery/>
 
       <BeforeAfterCardv2/>
 
