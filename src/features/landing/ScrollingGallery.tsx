@@ -88,7 +88,7 @@ export default function  ScrollingGallery() {
 
   return (
     
-    <div className="w-full overflow-hidden bg-black">
+    <div className="w-full overflow-hidden">
       <div className="flex h-screen">
         {/* Colonne 1 - Défilement lent */}
         <div className="relative flex-1 overflow-hidden">
