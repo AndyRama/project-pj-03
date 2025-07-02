@@ -21,7 +21,8 @@ import { PricingEbook } from "@/features/prestations/ebook/PricingSectionEbook";
 import ServicesCarousel from "@/features/landing/RefonteLanding/ServicesCarousel";
 import TransformationCard from "@/features/landing/RefonteLanding/TransformationCard";
 import BoostActivity from "@/features/landing/RefonteLanding/BoostActivity";
-import CardDescription from "@/features/landing/RefonteLanding/CardDescriptionImage";
+import CardDescriptionImage from "@/features/landing/RefonteLanding/CardDescriptionImage";
+import {CardDescription} from "@/features/landing/RefonteLanding/CardDescription";
 // import ScrollingGallery from "@/features/landing/ScrollingGallery";
 
 
@@ -62,7 +63,7 @@ export default function HomePage() {
 
       <SectionDivider/>
 
-      <CardDescription/>
+      <CardDescriptionImage/>
 
       {/* <SectionDivider/> */}
 
@@ -123,6 +124,10 @@ export default function HomePage() {
       <BoostActivity/>
 
       <SectionDivider/>
+
+      <CardDescription/>
+
+      <SectionDivider/> 
 
       {/* Section "Qui suis-je ?" et "Philosophie" */}
       <motion.div
