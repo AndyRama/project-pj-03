@@ -23,11 +23,11 @@ export default function TransformationCard() {
             <div className="space-y-3 lg:space-y-4">
               <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
                 Ta transformation physique guidée par la 
-                <span className="text-orange-500"> méthode Unlcoaching</span>
+                <span className="text-red-500"> méthode Ricco</span>
               </h1>
               
               <p className="text-lg leading-relaxed text-gray-300 lg:text-xl">
-                Notre méthode Team Unlcoaching : le Triangle Performance au service de tes 
+                Notre méthode Team Ricco : le Triangle Performance au service de tes 
                 objectifs de transformation durable.
               </p>
             </div>
@@ -42,7 +42,7 @@ export default function TransformationCard() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <div className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-orange-500">
+                  <div className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-red-500">
                     <svg 
                       className="size-3 text-white" 
                       fill="none" 
@@ -71,7 +71,7 @@ export default function TransformationCard() {
               transition={{ duration: 0.6, delay: 0.5 }}
             >
               <motion.button
-                className="rounded-lg bg-orange-600 px-6 py-3 text-base font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-orange-700 hover:shadow-xl lg:px-8 lg:py-4 lg:text-lg"
+                className="rounded-lg bg-red-600 px-6 py-3 text-base font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-red-700 hover:shadow-xl lg:px-8 lg:py-4 lg:text-lg"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -101,11 +101,11 @@ export default function TransformationCard() {
               </div>
 
               {/* Overlay gradient */}
-              {/* <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/50 via-transparent to-transparent"></div> */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
               
               {/* Decorative elements */}
-              {/* <div className="absolute -right-3 -top-3 size-12 rounded-full bg-orange-500/20 blur-xl sm:size-16 lg:size-20"></div> */}
-              {/* <div className="absolute -bottom-4 -left-4 size-16 rounded-full bg-orange-600/10 blur-2xl sm:size-20 lg:size-24"></div> */}
+              <div className="absolute -right-3 -top-3 size-12 rounded-full bg-red-500/20 blur-xl sm:size-16 lg:size-20"></div>
+              <div className="absolute -bottom-4 -left-4 size-16 rounded-full bg-red-600/10 blur-2xl sm:size-20 lg:size-24"></div>
             </div>
           </motion.div>
         </div>
