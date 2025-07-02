@@ -18,6 +18,7 @@ import { LayoutContent } from "@/features/page/layout";
 import { Pricing } from "@/features/prestations/pricing/PricingSection";
 import { FAQSection } from "@/features/landing/FAQSection";
 import { PricingEbook } from "@/features/prestations/ebook/PricingSectionEbook";
+import ServicesCarousel from "@/features/landing/RefonteLanding/ServicesCarousel";
 // import ScrollingGallery from "@/features/landing/ScrollingGallery";
 
 export default function HomePage() {
@@ -42,6 +43,8 @@ export default function HomePage() {
       <Hero />
 
       {/* <ScrollingGallery/> */}
+
+      <ServicesCarousel/>
 
       <BeforeAfterCardv2/>
 
