@@ -62,9 +62,9 @@ export default function HomePage() {
 
       <SectionDivider/>
 
-      <BoostActivity/>
+      <CardDescription/>
 
-      <SectionDivider/>
+      {/* <SectionDivider/> */}
 
        {/* Pricing Pack */}
       <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
@@ -120,7 +120,7 @@ export default function HomePage() {
 
       <SectionDivider/>
 
-      <CardDescription/>
+      <BoostActivity/>
 
       <SectionDivider/>
 

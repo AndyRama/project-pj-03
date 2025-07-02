@@ -11,7 +11,7 @@ export default function TransformationCard() {
 	return (
 		<div className="relative w-full overflow-hidden ">
 			<div className="relative z-10 mx-auto max-w-7xl px-4 py-16">
-				<div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
+				<div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 lg:gap-12">
 
 					{/* Content Section - Always first on mobile, first on desktop */}
 					<motion.div
