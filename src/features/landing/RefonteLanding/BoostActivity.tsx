@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import CoachImg from "@/public/images/jeremy2.jpg"; 
+// import CoachImg from "@/public/images/jeremy2.jpg"; 
 
 export default function BoostActivity() {
   const features = [
@@ -22,7 +22,7 @@ export default function BoostActivity() {
         >
           <div className="overflow-hidden rounded-2xl shadow-xl">
             <Image
-              src={CoachImg}
+              src="/public/images/jeremy2.jpg"
               alt="Coach Jeremy"
               className="h-auto w-full object-cover"
               width={600}
