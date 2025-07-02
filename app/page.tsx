@@ -60,7 +60,11 @@ export default function HomePage() {
 
       <BoostActivity/>
 
+      <SectionDivider/>
+
       <CardDescription/>
+
+      <SectionDivider/>
 
       <BeforeAfterCardv2/>
 

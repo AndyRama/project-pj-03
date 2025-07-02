@@ -4,7 +4,7 @@ import ScrollingGallery from "@/features/landing/ScrollingGallery";
 
 export default function CardDescription() {
 	return (
-		<div className="relative w-full overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+		<div className="relative w-full overflow-hidden ">
 			<div className="relative z-10 mx-auto max-w-7xl px-4 py-16">
 				<div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
 
@@ -18,7 +18,7 @@ export default function CardDescription() {
 						<div className="space-y-3 lg:space-y-4">
 							<h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
 								Rejoins la Team
-								<span className="text-orange-500">Unlcoaching</span>
+								<span className="text-orange-500"> Unlcoaching</span>
 							</h1>
 
 							<p className="text-lg leading-relaxed text-gray-300 lg:text-xl">
@@ -34,7 +34,7 @@ export default function CardDescription() {
 							transition={{ duration: 0.6, delay: 0.5 }}
 						>
 							<motion.button
-								className="rounded-lg bg-orange-600 px-6 py-3 text-base font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-orange-700 hover:shadow-xl lg:px-8 lg:py-4 lg:text-lg"
+								className="rounded-md bg-orange-600 px-6 py-3 text-base font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-orange-700 hover:shadow-xl lg:px-8 lg:py-4 lg:text-lg"
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}
 							>
@@ -51,7 +51,7 @@ export default function CardDescription() {
 						transition={{ duration: 0.8, delay: 0.2 }}
 					>
 						<div className="relative">
-							<div className="aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl sm:aspect-[3/2] lg:aspect-[4/3]">
+							<div className="aspect-[4/3] overflow-hidden rounded-md shadow-2xl sm:aspect-[3/2] lg:aspect-[4/3]">
 								<ScrollingGallery />
 							</div>
 						</div>

@@ -95,11 +95,11 @@ export default function ServicesCarousel() {
           }}
         >
           <span className="mr-8 text-6xl font-black text-white">NOS SERVICES</span>
-          <span className="mr-8 text-6xl font-black text-orange-600">•</span>
+          <span className="mr-8 text-6xl font-black text-orange-500">•</span>
           <span className="mr-8 text-6xl font-black text-white">NOS SERVICES</span>
-          <span className="mr-8 text-6xl font-black text-orange-600">•</span>
+          <span className="mr-8 text-6xl font-black text-orange-500">•</span>
           <span className="mr-8 text-6xl font-black text-white">NOS SERVICES</span>
-          <span className="mr-8 text-6xl font-black text-orange-600">•</span>
+          <span className="mr-8 text-6xl font-black text-orange-500">•</span>
         </motion.div>
       </div>
 
@@ -121,7 +121,7 @@ export default function ServicesCarousel() {
               className="w-1/3 flex-none px-3"
             >
               <div className="flex h-80 flex-col items-center rounded-2xl border-2 border-gray-200 bg-white p-8 text-center transition-colors duration-300 hover:border-orange-300">
-                <div className="mb-6 flex size-16 items-center justify-center rounded-full bg-orange-700 text-white">
+                <div className="mb-6 flex size-16 items-center justify-center rounded-full bg-orange-600 text-white">
                   {service.icon}
                 </div>
                 <h3 className="mb-2 text-xl font-bold text-gray-900">
@@ -147,8 +147,8 @@ export default function ServicesCarousel() {
             onClick={() => handleTabClick(index)}
             className={`h-2 w-12 rounded-full transition-colors duration-300 ${
               activeTab === index 
-                ? 'bg-orange-700' 
-                : 'bg-orange-200 hover:bg-orange-300'
+                ? 'bg-orange-600' 
+                : 'bg-orange-300 hover:bg-orange-400'
             }`}
           />
         ))}
