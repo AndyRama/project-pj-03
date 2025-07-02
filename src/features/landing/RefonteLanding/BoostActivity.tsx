@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import CoachImg from "@/public/coach.jpg"; // Remplace par ton image locale
+import CoachImg from "@/public/images/jeremy2.jpg"; 
 
 export default function BoostActivity() {
   const features = [
     "Stratégies marketing et vente éprouvées",
     "Structuration optimale de tes offres et de ton business",
     "Développement de ta posture d'expert et de ton personal branding",
-    "Accompagnement exclusif par Ricco"
+    "Accompagnement exclusif par Jeremy"
   ];
 
   return (
@@ -23,7 +23,7 @@ export default function BoostActivity() {
           <div className="overflow-hidden rounded-2xl shadow-xl">
             <Image
               src={CoachImg}
-              alt="Coach Ricco"
+              alt="Coach Jeremy"
               className="h-auto w-full object-cover"
               width={600}
               height={500}
