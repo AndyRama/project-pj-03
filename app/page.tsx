@@ -20,6 +20,7 @@ import { FAQSection } from "@/features/landing/FAQSection";
 import { PricingEbook } from "@/features/prestations/ebook/PricingSectionEbook";
 import ServicesCarousel from "@/features/landing/RefonteLanding/ServicesCarousel";
 import TransformationCard from "@/features/landing/RefonteLanding/TransformationCard";
+import BoostActivity from "@/features/landing/RefonteLanding/BoostActivity";
 // import ScrollingGallery from "@/features/landing/ScrollingGallery";
 
 export default function HomePage() {
@@ -54,6 +55,8 @@ export default function HomePage() {
       <TransformationCard/>
 
       <SectionDivider/>
+
+      <BoostActivity/>
 
       <BeforeAfterCardv2/>
 
