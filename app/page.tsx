@@ -23,8 +23,6 @@ import TransformationCard from "@/features/landing/RefonteLanding/Transformation
 import BoostActivity from "@/features/landing/RefonteLanding/BoostActivity";
 import CardDescriptionImage from "@/features/landing/RefonteLanding/CardDescriptionImage";
 import {CardDescription} from "@/features/landing/RefonteLanding/CardDescription";
-// import ScrollingGallery from "@/features/landing/ScrollingGallery";
-
 
 export default function HomePage() {
   return (
@@ -46,8 +44,6 @@ export default function HomePage() {
       <LandingHeader />
 
       <Hero />
-
-      {/* <ScrollingGallery/> */}
 
       <SectionDivider/>
 
