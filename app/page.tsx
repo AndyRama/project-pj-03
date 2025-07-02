@@ -58,17 +58,15 @@ export default function HomePage() {
 
       <SectionDivider/>
 
+      <BeforeAfterCardv2/>
+
+      <SectionDivider/>
+
       <BoostActivity/>
 
       <SectionDivider/>
 
-      <CardDescription/>
-
-      <SectionDivider/>
-
-      <BeforeAfterCardv2/>
-
-      {/* Pricing Pack */}
+       {/* Pricing Pack */}
       <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
         <Pricing
           cards={[
@@ -119,6 +117,12 @@ export default function HomePage() {
           ]}
         />
       </LayoutContent>      
+
+      <SectionDivider/>
+
+      <CardDescription/>
+
+      <SectionDivider/>
 
       {/* Section "Qui suis-je ?" et "Philosophie" */}
       <motion.div
