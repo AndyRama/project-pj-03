@@ -11,7 +11,7 @@ export default function BoostActivity() {
   ];
 
   return (
-    <section className="bg-[#f9f9f9] px-6 py-16 lg:px-12">
+    <section className="px-6 py-16 lg:px-12">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-2">
         
         {/* Image */}
@@ -22,7 +22,7 @@ export default function BoostActivity() {
         >
           <div className="overflow-hidden rounded-2xl shadow-xl">
             <Image
-              src="/public/images/jeremy2.jpg"
+              src="images/jeremy2.jpg"
               alt="Coach Jeremy"
               className="h-auto w-full object-cover"
               width={600}
@@ -39,18 +39,18 @@ export default function BoostActivity() {
           transition={{ duration: 0.8 }}
           className="space-y-6"
         >
-          <h2 className="text-4xl font-extrabold leading-snug text-gray-900 lg:text-5xl">
+          <h2 className="text-4xl font-extrabold leading-snug text-white lg:text-5xl">
             Propulse ta carrière de <br />
-            <span className="text-black">coach sportif.</span>
+            <span className="text-white">coach sportif.</span>
           </h2>
 
-          <p className="text-lg text-gray-700">
+          <p className="text-lg text-white">
             Développe et structure ton business de coaching sportif pour un succès durable.
           </p>
 
           <ul className="space-y-3">
             {features.map((feature, index) => (
-              <li key={index} className="flex items-start gap-3 text-gray-800">
+              <li key={index} className="flex items-start gap-3 text-white">
                 <span className="mt-1 text-red-700">
                   <svg className="size-5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" clipRule="evenodd" />
