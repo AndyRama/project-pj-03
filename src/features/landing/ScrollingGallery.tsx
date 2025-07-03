@@ -5,7 +5,7 @@ export default function  ScrollingGallery() {
   const images = [
     {
       id: 1,
-      src: "https://team-ricco.com/wp-content/uploads/2025/06/DSC00295-Coach-Ricco-683x1024.jpg",
+      src: "/public/images/coaching.jpg",
       alt: "Coach Ricco DSC00295",
       width: 683,
       height: 1024

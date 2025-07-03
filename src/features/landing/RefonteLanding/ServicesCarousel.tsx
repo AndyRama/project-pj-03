@@ -12,7 +12,7 @@ export default function ServicesCarousel() {
       subtitle: "AESCEND",
       description: "Boosts tes performances et ta récupération avec notre gamme premium de compléments.",
       hoverTitle: "Booster Tes Performances",
-      hoverImage:"/images/jeremy4.jpg",
+      hoverImage:"/images/jeremy.jpg",
       icon: (
         <svg className="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
@@ -27,7 +27,7 @@ export default function ServicesCarousel() {
       subtitle: "Exclusifs",
       description: "Accède à notre chaîne YouTube, podcast, et rejoins une communauté motivée.",
       hoverTitle: "Rejoindre La Communauté",
-      hoverImage:"",
+      hoverImage:"/images/jeremy4.jpg",
       icon: (
         <svg className="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
@@ -42,7 +42,7 @@ export default function ServicesCarousel() {
       subtitle: "Physique",
       description: "Programmes sur mesure, suivi expert et méthode unique pour des résultats visibles et durables.",
       hoverTitle: "Transformer Mon Physique",
-      hoverImage:"",
+      hoverImage:"/images/jeremy.jpg",
       icon: (
         <svg className="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
@@ -59,7 +59,7 @@ export default function ServicesCarousel() {
       subtitle: "PREMIUM",
       description: "Plans alimentaires adaptés à tes objectifs avec suivi nutritionnel complet.",
       hoverTitle: "Optimiser Ma Nutrition",
-      hoverImage:"",
+      hoverImage:"/images/jeremy2.jpg",
       icon: (
         <svg className="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
@@ -88,7 +88,7 @@ export default function ServicesCarousel() {
   };
 
   return (
-    <div className="max-w-7xlpx-4 mx-auto min-h-screen w-full py-12">
+    <div className="mx-auto w-full max-w-6xl px-4 py-12">
       {/* Animated "NOS SERVICES" Header */}
       <div className="relative mb-12 overflow-hidden">
         <motion.div 
