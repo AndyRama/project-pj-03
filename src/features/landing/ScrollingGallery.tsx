@@ -12,35 +12,35 @@ export default function  ScrollingGallery() {
     },
     {
       id: 2,
-      src: "https://team-ricco.com/wp-content/uploads/2025/06/Seance-Push-683x1024.jpg",
+      src: "/images/story19.jpg",
       alt: "Séance Push",
       width: 683,
       height: 1024
     },
     {
       id: 3,
-      src: "https://team-ricco.com/wp-content/uploads/2025/06/DSC00298-Coach-Ricco-683x1024.jpg",
+      src: "/images/story20.jpg",
       alt: "Coach Ricco DSC00298",
       width: 683,
       height: 1024
     },
     {
       id: 4,
-      src: "https://team-ricco.com/wp-content/uploads/2025/06/Seance-Dos-Biceps-683x1024.jpg",
+      src: "/images/story1.png",
       alt: "Séance Dos Biceps",
       width: 683,
       height: 1024
     },
     {
       id: 5,
-      src: "https://team-ricco.com/wp-content/uploads/2025/06/Coach-Ricco-IMG1270-796x1024.jpg",
+      src:"/images/story3.jpg",
       alt: "Coach Ricco IMG1270",
       width: 796,
       height: 1024
     },
     {
       id: 6,
-      src: "https://team-ricco.com/wp-content/uploads/2025/06/AESCEND-Background-1024x683.jpg",
+      src: "/images/story5.jpg",
       alt: "AESCEND Background",
       width: 1024,
       height: 683
