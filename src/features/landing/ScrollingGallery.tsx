@@ -40,28 +40,28 @@ export default function  ScrollingGallery() {
     },
     {
       id: 6,
-      src: "/images/story5.jpg",
+      src: "/images/story7.jpg",
       alt: "AESCEND Background",
       width: 1024,
       height: 683
     },
     {
       id: 7,
-      src: "https://team-ricco.com/wp-content/uploads/2025/06/DSC01288-Coach-Ricco-1024x683.jpg",
+      src: "/images/story8.jpg",
       alt: "Coach Ricco DSC01288",
       width: 1024,
       height: 683
     },
     {
       id: 8,
-      src: "https://team-ricco.com/wp-content/uploads/2025/05/Coach-Ricco-IMG11320.jpg",
+      src: "/images/story9.jpg",
       alt: "Coach Ricco IMG11320",
       width: 341,
       height: 512
     },
     {
       id: 9,
-      src: "https://team-ricco.com/wp-content/uploads/2025/05/Coach-Ricco-IMG1300-1024x664.jpg",
+      src: "/images/story5.jpg",
       alt: "Coach Ricco IMG1300",
       width: 1024,
       height: 664
