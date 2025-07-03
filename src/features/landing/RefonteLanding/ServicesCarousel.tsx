@@ -12,7 +12,7 @@ export default function ServicesCarousel() {
       subtitle: "AESCEND",
       description: "Boosts tes performances et ta récupération avec notre gamme premium de compléments.",
       hoverTitle: "Booster Tes Performances",
-      hoverImage:"/public/images/jeremy4.jpg",
+      hoverImage:"/images/jeremy4.jpg",
       icon: (
         <svg className="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
@@ -88,7 +88,7 @@ export default function ServicesCarousel() {
   };
 
   return (
-    <div className="mx-auto min-h-screen w-full max-w-7xl bg-gray-900 px-4 py-12">
+    <div className="max-w-7xlpx-4 mx-auto min-h-screen w-full py-12">
       {/* Animated "NOS SERVICES" Header */}
       <div className="relative mb-12 overflow-hidden">
         <motion.div 
@@ -108,6 +108,7 @@ export default function ServicesCarousel() {
           <span className="mr-8 text-6xl font-black text-orange-500">•</span>
           <span className="mr-8 text-6xl font-black text-white">NOS SERVICES</span>
           <span className="mr-8 text-6xl font-black text-orange-500">•</span>
+          <span className="mr-8 text-6xl font-black text-white">NOS SERVICES</span>
         </motion.div>
       </div>
 
