@@ -47,7 +47,7 @@ export const CardDescription = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0, transition: { delay: index * 0.2, duration: 0.5 } }}
               viewport={{ once: true }}
-              className="flex flex-col items-center rounded-lg border border-orange-500 p-6 text-center shadow-md"
+              className="flex flex-col items-center rounded-[10px] border border-orange-500 p-6 text-center shadow-md"
             >
               <feature.icon className="mb-4 text-4xl text-orange-500" />
               <Typography variant="h3">{feature.title}</Typography>

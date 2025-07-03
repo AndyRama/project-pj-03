@@ -119,14 +119,14 @@ export default function HomePage() {
 
       <BoostActivity/>
 
-      <SectionDivider/>
+      {/* <SectionDivider/> */}
 
       <CardDescription/>
 
       <SectionDivider/> 
 
       {/* Section "Qui suis-je ?" et "Philosophie" */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -192,9 +192,9 @@ export default function HomePage() {
         <div className="transform-gpu blur-3xl">
           <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
         </div>
-      </motion.div>
+      </motion.div> */}
 
-      <SectionDivider />
+      {/* <SectionDivider /> */}
 
       {/* CardGrid Section */}
       <motion.div

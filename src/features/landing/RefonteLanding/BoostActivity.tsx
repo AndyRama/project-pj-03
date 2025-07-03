@@ -40,7 +40,7 @@ export default function BoostActivity() {
           className="space-y-6"
         >
           <h2 className="text-4xl font-extrabold leading-snug text-white lg:text-5xl">
-            Propulse ta carrière de <br />
+            Propulse ta carrière de
             <span className="text-white">coach sportif.</span>
           </h2>
 
