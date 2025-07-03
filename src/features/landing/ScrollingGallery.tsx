@@ -5,7 +5,7 @@ export default function  ScrollingGallery() {
   const images = [
     {
       id: 1,
-      src: "/public/images/coaching.jpg",
+      src: "/images/coaching.jpg",
       alt: "Coach Ricco DSC00295",
       width: 683,
       height: 1024
