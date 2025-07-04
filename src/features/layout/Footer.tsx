@@ -32,7 +32,7 @@ const footerContent = {
         {
       heading: 'Compte',
       links: [
-        { href: '/account', label: 'Compte' },
+        { href: '/account', label: 'User' },
       ],
     },
   ],
