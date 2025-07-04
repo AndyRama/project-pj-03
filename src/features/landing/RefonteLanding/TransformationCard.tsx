@@ -89,7 +89,7 @@ export default function TransformationCard() {
 					>
 						<div className="relative">
 							{/* Image container with proper aspect ratio */}
-							<div className="hidden overflow-hidden rounded-2xl shadow-2xl md:aspect-[4/3] lg:aspect-[4/3]">
+							<div className="aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl sm:hidden">
 								<img
 									src="/images/jeremy.jpg"
 									alt="Coach et client dans la salle de sport"

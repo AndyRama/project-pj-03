@@ -13,7 +13,6 @@ const footerContent = {
       links: [
         { href: '/', label: 'Accueil' },
         { href: '/posts', label: 'Blog', badge: 'Nouveau' },
-        { href: '/account', label: 'Compte' },
       ],
     },
     {
@@ -28,6 +27,12 @@ const footerContent = {
       links: [
         { href: '/prestations/#E-Books', label: 'E-Books'},
         { href: '/prestations/#pack', label: 'Packs',badge: 'Nouveau' },
+      ],
+    },
+        {
+      heading: 'Compte',
+      links: [
+        { href: '/account', label: 'Compte' },
       ],
     },
   ],
