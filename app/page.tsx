@@ -76,7 +76,7 @@ export default function HomePage() {
         <Pricing
           cards={[
             {
-              isPopular: true,
+              isPopular: false,
               type: "monthly",
               id: "Demarrer",
               title: "Perte de poids",
@@ -98,7 +98,7 @@ export default function HomePage() {
               priceId: "",
             },
             {
-              isPopular: false,
+              isPopular: true,
               type: "monthly",
               id: "Demarrer",
               title: "Intermédiaire (6 mois)",
@@ -148,8 +148,6 @@ export default function HomePage() {
       <SectionDivider/>
 
       <BoostActivity/>
-
-      {/* <SectionDivider/> */}
 
       <CardDescription/>
 
