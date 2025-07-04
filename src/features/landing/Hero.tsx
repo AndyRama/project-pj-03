@@ -36,7 +36,7 @@ const HeroStatistics = () => (
       <span className="inline-block text-white md:text-center">
         <br />
         <StatisticBlock value="+350" label="Transformations" label1="réussit" />
-        <StatisticBlock value="5⭐" label="Satisfaction " label1="" />
+        <StatisticBlock value="+ 5⭐" label="Satisfaction " label1="" />
       </span>
     </Typography>
   </>
@@ -96,7 +96,7 @@ const HeroButton = () => (
         Démarrer ma transformation
         <ArrowRight size={20} className="mr-2" />
       </Link>
-      <div className="md:content hidden">
+      <div className="content sm:hidden">
         <Link
           href="/team"
           target="_blank"

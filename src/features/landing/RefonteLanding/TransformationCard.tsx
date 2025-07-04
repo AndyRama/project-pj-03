@@ -71,7 +71,7 @@ export default function TransformationCard() {
 							transition={{ duration: 0.6, delay: 0.5 }}
 						>
 							<motion.button
-								className="rounded-md bg-orange-600 px-6 py-3 text-base font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-xl lg:px-8 lg:py-4 lg:text-lg"
+								className="rounded-[10px] bg-orange-600 px-6 py-3 text-base font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-xl lg:px-8 lg:py-4 lg:text-lg"
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}
 							>
@@ -89,7 +89,7 @@ export default function TransformationCard() {
 					>
 						<div className="relative">
 							{/* Image container with proper aspect ratio */}
-							<div className="hidden overflow-hidden rounded-2xl shadow-2xl md:aspect-[4/3] lg:aspect-[4/3]">
+							<div className="aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl sm:hidden lg:aspect-[4/3]">
 								<img
 									src="/images/jeremy.jpg"
 									alt="Coach et client dans la salle de sport"
