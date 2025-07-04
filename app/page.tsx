@@ -19,6 +19,7 @@ import { Pricing } from "@/features/prestations/pricing/PricingSection";
 import { FAQSection } from "@/features/landing/FAQSection";
 import { PricingEbook } from "@/features/prestations/ebook/PricingSectionEbook";
 import ServicesCarousel from "@/features/landing/RefonteLanding/ServicesCarousel";
+import ServiceSingleCard from "@/features/landing/RefonteLanding/ServicesSingleCard";
 import TransformationCard from "@/features/landing/RefonteLanding/TransformationCard";
 import BoostActivity from "@/features/landing/RefonteLanding/BoostActivity";
 import CardDescriptionImage from "@/features/landing/RefonteLanding/CardDescriptionImage";
@@ -47,7 +48,14 @@ export default function HomePage() {
 
       <SectionDivider/>
 
-      <ServicesCarousel/>
+      {/* Services Section - Responsive */}
+      <div className="sm:block md:hidden">
+        <ServiceSingleCard/>
+      </div>
+      
+      <div className="hidden md:block">
+        <ServicesCarousel/>
+      </div>
 
       <SectionDivider/>
 
