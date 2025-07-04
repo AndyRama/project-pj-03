@@ -78,9 +78,7 @@ const HeroTitle = () => {
 const HeroDescription = () => (
   <>
     <Typography variant="large" className="text-white">
-      Allier entraînement rigoureux et nutrition équilibrée  
-      <br />
-      pour un mode de vie sain et durable.      
+      Allier entraînement rigoureux et nutrition équilibrée pour un mode de vie sain et durable.      
     </Typography>
   </>
 );
