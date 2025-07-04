@@ -127,7 +127,7 @@ export default function ServicesCarousel() {
           {services.concat(services).map((service, index) => (
             <div 
               key={`${service.id}-${index}`}
-              className="w-1/1 flex-none px-3 md:w-1/3"
+              className="w-full flex-none px-3 md:w-1/3"
             >
               <div className="group relative h-80 overflow-hidden rounded-2xl">
                 {/* Default State */}

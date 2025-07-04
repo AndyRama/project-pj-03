@@ -110,7 +110,29 @@ export default function HomePage() {
               cta: "Je demarre ma transformation",
               ctaSubtitle: "",
               priceId: "",
-            },          
+            },   
+            {
+              isPopular: false,
+              type: "monthly",
+              id: "Demarrer",
+              title: "Intermédiaire (6 mois)",
+              subtitle: "(6 * 180€ / 6 mois)",
+              price: 180,
+              barredPrice: 200,
+              currency: "€",
+              features: [
+                "Pack adapté aux débutants dans la musculation.",
+                "Programme de musculation personnalisé en fonction de tes objectifs.",
+                "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                "Plan alimentaire adapté à tes besoins.",
+                "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                "Communication WhatsApp & Email avec visio ou call chaque mois.",
+                "Acces à mon application de training.",
+              ],
+              cta: "Je demarre ma transformation",
+              ctaSubtitle: "test",
+              priceId: "",
+            },         
           ]}
         />
       </LayoutContent>      
