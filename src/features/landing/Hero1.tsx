@@ -113,7 +113,7 @@ const HeroButton = () => (
         href="/team"
         className={cn(
           buttonVariants({ size: "md", variant: "invert" }),
-          "bg-tranparent hover:text-white border border-orange-500 text-orange-500",
+          "hidden md:content bg-tranparent hover:text-white border border-orange-500 text-orange-500",
         )}
       >
         <Heart size={20} className="mr-2 hover:bg-orange-500" />
