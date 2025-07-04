@@ -96,7 +96,7 @@ const HeroButton = () => (
         Démarrer ma transformation
         <ArrowRight size={20} className="mr-2" />
       </Link>
-      <div className="content sm:hidden">
+      <div className="md:content hidden">
         <Link
           href="/team"
           target="_blank"

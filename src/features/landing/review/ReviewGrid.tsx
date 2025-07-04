@@ -8,7 +8,7 @@ export type ReviewGridProps = {
 
 export const ReviewGrid = (props: ReviewGridProps) => {
   return (
-    <SectionLayout className="m-auto max-w-5xl columns-1 gap-4 md:columns-2 xl:columns-3">
+    <SectionLayout className="m-auto max-w-5xl columns-1 gap-4 px-4 md:columns-2 md:px-0 xl:columns-3">
       {props.reviews.map((review) => (
         <ReviewItem
           {...review}
