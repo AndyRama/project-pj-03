@@ -12,7 +12,7 @@ export const Hero = () => {
       {/* Image - main - bg-cover */}
       <div
         // eslint-disable-next-line tailwindcss/enforces-negative-arbitrary-values
-        className="-mt-[40px] h-[178vh] bg-cover bg-fixed md:h-[110vh]"
+        className="-mt-[40px] h-[120vh] bg-cover bg-fixed md:h-[178vh]"
         style={{ backgroundImage: `url('/images/salle-de-sport.jpg')` }}
       >
         <div className="relative m-auto mt-20 flex min-h-[400px] w-full max-w-7xl items-center gap-4 px-4 max-md:flex-col md:mt-0">
