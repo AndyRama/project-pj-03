@@ -65,7 +65,21 @@ export default function  ScrollingGallery() {
       alt: "Coach Ricco IMG1300",
       width: 1024,
       height: 664
-    }
+    },
+    {
+      id: 10,
+      src: "/images/story20.jpg",
+      alt: "Coach Ricco DSC00298",
+      width: 683,
+      height: 1024
+    },
+    {
+      id: 11,
+      src: "/images/story1.png",
+      alt: "Séance Dos Biceps",
+      width: 683,
+      height: 1024
+    },
   ];
 
   // Fonction pour créer des colonnes avec des images répétées
