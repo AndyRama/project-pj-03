@@ -33,7 +33,7 @@ export const CardDescription = () => {
     <SectionLayout
       variant="default"
       size="lg"
-      className="flex flex-col items-center justify-center gap-4"
+      className="flex flex-col items-center justify-center gap-4 px-4 md:px-0"
     >
       <div className="flex w-full flex-col items-center gap-3 lg:gap-4 xl:gap-6">
         <Typography 

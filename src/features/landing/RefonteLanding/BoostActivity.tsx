@@ -41,7 +41,7 @@ export default function BoostActivity() {
         >
           <h2 className="text-4xl font-extrabold leading-snug text-white lg:text-5xl">
             Propulse ta carrière de
-            <span className="text-white">coach sportif.</span>
+            <span className="text-orange-500"> coach sportif.</span>
           </h2>
 
           <p className="text-lg text-white">
@@ -51,7 +51,7 @@ export default function BoostActivity() {
           <ul className="space-y-3">
             {features.map((feature, index) => (
               <li key={index} className="flex items-start gap-3 text-white">
-                <span className="mt-1 text-orange-500">
+                <span className="mt-1 text-orange-600">
                   <svg className="size-5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" clipRule="evenodd" />
                   </svg>
@@ -64,7 +64,7 @@ export default function BoostActivity() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-4 inline-block rounded-full bg-orange-500 px-6 py-3 text-sm font-bold tracking-wide text-white transition hover:bg-orange-600"
+            className="mt-4 inline-block rounded-full bg-orange-600 px-6 py-3 text-sm font-bold tracking-wide text-white transition hover:bg-orange-700"
           >
             BOOSTER MON ACTIVITÉ DE COACH
           </motion.button>
