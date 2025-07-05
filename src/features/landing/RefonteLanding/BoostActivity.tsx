@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function BoostActivity() {
   const features = [
-    "Stratégies marketing et vente éprouvées",
-    "Structuration optimale de tes offres et de ton business",
-    "Développement de ta posture d'expert et de ton personal branding",
-    "Accompagnement exclusif par Jeremy"
+    "Des stratégies de marketing et de vente testées pour développer efficacement ton activité.",
+    "Une structuration claire et performante de tes offres et de ton modèle économique.",
+    "Un accompagnement sur ta posture d’expert et la construction d’un personal branding fort.",
+    "Un suivi personnalisé et exclusif par Jérémy, coach expert dans le domaine."
   ];
 
   return (

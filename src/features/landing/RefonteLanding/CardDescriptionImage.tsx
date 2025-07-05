@@ -22,8 +22,7 @@ export default function CardDescription() {
 							</h1>
 
 							<p className="text-lg leading-relaxed text-gray-300 lg:text-xl">
-								Notre méthode Team Unlcoaching : le Triangle Performance au service de tes
-								objectifs de transformation durable.
+								Rejoins la Team Unlcoaching et transforme durablement ton corps et ton esprit grâce à une méthode structurée, personnalisée et axée sur des résultats concrets.
 							</p>
 						</div>
 

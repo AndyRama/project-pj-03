@@ -5,26 +5,30 @@ import { SectionLayout } from "./../SectionLayout";
 import { motion } from "framer-motion";
 import { Users, Target, Pyramid, Heart } from 'lucide-react';
 
-const features = [
+export const features = [
   {
-    icon: Pyramid ,
-    title: "Méthode Globale & Scientifique ",
-    description: "Notre approche unique pour la transformation physique intègre ton aspect physiologique, psychologique et physique pour des résultats complets. ",
+    icon: Pyramid,
+    title: "Méthode Globale & Scientifique",
+    description:
+      "Notre approche unique pour la transformation physique intègre ton aspect physiologique, psychologique et physique pour des résultats complets.",
   },
   {
-    icon: Target ,
+    icon: Target,
     title: "Accompagnement Personnalisé",
-    description: "Bénéficie d'un programme 100% personnalisé, adapté à tes objectifs et ton quotidien, garantissant des résultats concrets et durables. ",
+    description:
+      "Bénéficie d'un programme 100% personnalisé, adapté à tes objectifs et ton quotidien, garantissant des résultats concrets et durables.",
   },
   {
     icon: Heart,
     title: "Coaching Expert à votre écoute",
-    description: "Un coach passionnés à tes côtés, Jéremy , pour un accompagnement engagé et basé sur le terrain.",
+    description:
+      "Un coach passionné à tes côtés, Jérémy, pour un accompagnement engagé et basé sur le terrain.",
   },
   {
     icon: Users,
-    title: "Transformations Prouvées ",
-    description: "Rejoins les +350 personnes qui ont changé leur vie. Notre méthode prouve son efficacité pour une transformation physique durable. ",
+    title: "Transformations Prouvées",
+    description:
+      "Rejoins les +350 personnes qui ont changé leur vie. Notre méthode prouve son efficacité pour une transformation physique durable.",
   },
 ];
 

@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 export default function TransformationCard() {
 	const features = [
-		"Plans d'entraînement et nutrition 100% personnalisés.",
-		"Suivi hebdomadaire individuel et support quotidien.",
-		"Accès à notre application dédiée et communauté premium",
-		"Approche holistique : Physique, Mental, Physiologique."
+		"Des plans d'entraînement et de nutrition 100 % sur mesure, adaptés à tes besoins.",
+		"Un suivi hebdomadaire personnalisé avec un accompagnement quotidien motivant.",
+		"Un accès exclusif à notre application mobile et à une communauté engagée.",
+		"Une approche holistique complète : physique, mental et physiologique alignés."
 	];
 
 	return (
@@ -89,7 +89,7 @@ export default function TransformationCard() {
 					>
 						<div className="relative">
 							{/* Image container with proper aspect ratio */}
-							<div className="aspect-[4/3] overflow-hidden rounded-[10px] shadow-2xl ">
+							<div className="aspect-[4/4] overflow-hidden rounded-[10px] shadow-2xl ">
 								<img
 									src="/images/jeremy.jpg"
 									alt="Coach et client dans la salle de sport"
