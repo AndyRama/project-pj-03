@@ -16,7 +16,7 @@ export const Hero1 = () => {
         style={{ backgroundImage: `url('/images/salle-de-sport.jpg')` }}
       >
         <div className="relative m-auto flex min-h-[400px] w-full max-w-7xl items-center gap-4 px-4 max-md:flex-col">
-          <div className="relative flex flex-1 flex-col items-start gap-8 md:gap-4 lg:gap-8">
+          <div className="relative mt-0 flex flex-1 flex-col items-start gap-8 md:gap-4 lg:mt-32 lg:gap-8">
             <HeroStatistics />
             <HeroTitle />
             <HeroDescription />
@@ -126,7 +126,7 @@ const HeroButton = () => (
 
 
 const HeroImage = () => (
-  <div className="xl:mt-30 mt-20 flex-1 justify-end md:flex">
+  <div className="lg:mt-30 mt-20 flex-1 justify-end md:flex">
     <img
       src="/images/jeremy.jpg"
       className="w-[350px] max-w-lg rounded-[10px] object-contain sm:w-[480px] md:w-full"
