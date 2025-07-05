@@ -4,7 +4,7 @@ export default function TransformationCard() {
 	const features = [
 		"Des plans d'entraînement et de nutrition 100 % sur mesure, adaptés à tes besoins.",
 		"Un suivi hebdomadaire personnalisé avec un accompagnement quotidien motivant.",
-		"Un accès exclusif à notre application mobile et à une communauté engagée.",
+		"Un accès exclusif à notre application et à une communauté engagée.",
 		"Une approche holistique complète : physique, mental et physiologique alignés."
 	];
 
@@ -22,13 +22,13 @@ export default function TransformationCard() {
 					>
 						<div className="space-y-3 lg:space-y-4">
 							<h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
-								Ta transformation physique guidée par la
-								<span className="text-orange-500"> méthode Unlcoaching</span>
+								Ta transformation physique guidée par la méthode
+								<span className="text-orange-500">  d'Unlcoaching</span>
 							</h1>
 
 							<p className="text-lg leading-relaxed text-gray-300 lg:text-xl">
-								Notre méthode Team Unlcoaching : le Triangle Performance au service de tes
-								objectifs de transformation durable.
+								Notre méthode Unlcoaching pour des performances et un objectifs simple u
+								ne transformation durable.
 							</p>
 						</div>
 
