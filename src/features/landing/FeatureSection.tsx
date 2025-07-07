@@ -64,7 +64,7 @@ export const FeatureLine = (props: FeatureLineProps) => {
           }}
           viewport={{ once: true }}
         >
-          <Badge color="pink">{props.badge}</Badge>
+          <Badge color="orange">{props.badge}</Badge>
         </motion.div>
 
         <motion.div
@@ -88,7 +88,7 @@ export const FeatureLine = (props: FeatureLineProps) => {
           }}
           viewport={{ once: true }}
         >
-          <ClientMarkdown className="prose-lg">
+          <ClientMarkdown className="prose-md md:prose-lg">
             {props.description}
           </ClientMarkdown>
         </motion.div>
@@ -102,7 +102,7 @@ export const FeatureLine = (props: FeatureLineProps) => {
           }}
           viewport={{ once: true }}
         >
-          <ClientMarkdown className="prose-lg">
+          <ClientMarkdown className="prose-md md:prose-lg">
             {props.description1}
           </ClientMarkdown>
         </motion.div>
@@ -116,7 +116,7 @@ export const FeatureLine = (props: FeatureLineProps) => {
           }}
           viewport={{ once: true }}
         >
-          <ClientMarkdown className="prose-lg">
+          <ClientMarkdown className="prose-md md:prose-lg">
             {props.description2}
           </ClientMarkdown>
         </motion.div>
