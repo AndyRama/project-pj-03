@@ -60,7 +60,7 @@ const CvgPage = () => {
           <li>
             <Typography variant="p">
               <strong>La « Société » </strong>
-              désigne Coach Jeremy Prat, représentée par Emeric Le Saec, en sa qualité de chef d'entreprise, dont le siège social est situé à 239 AVENUE PASTEUR , 33600 PESSAC France.
+              désigne Coach Jeremy Prat, en sa qualité de chef d'entreprise, dont le siège social est situé à 239 AVENUE PASTEUR , 33600 PESSAC France.
             </Typography>
           </li>
           <li>
