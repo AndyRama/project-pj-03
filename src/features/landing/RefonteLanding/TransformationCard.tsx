@@ -5,7 +5,7 @@ export default function TransformationCard() {
 		"Un accompagnement mensuel sur mesure avec un coach disponible et inspirant",
 		"une communication 7jrs/7 24h/24 via what's app",
 		"10 ans d'expèriences qui te permettront sur le long therme de révéler ton plein potentiel",
-		"Une planification 100% personnalisé accompagné d'un plan nutrition et d'une programmation sportive qui répondra à tes attentes "
+		"Une planification 100% personnalisée accompagné d'un plan nutrition et d'une programmation sportive qui répondra à tes attentes "
 	];
 
 	return (
@@ -91,7 +91,7 @@ export default function TransformationCard() {
 							{/* Image container with proper aspect ratio */}
 							<div className="aspect-[4/4] overflow-hidden rounded-[10px] shadow-2xl ">
 								<img
-									src="/images/jeremy.jpg"
+									src="/images/kelly.jpg"
 									alt="Coach et client dans la salle de sport"
 									className="size-full"
 								/>

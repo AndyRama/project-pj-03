@@ -82,7 +82,7 @@ export default function TestPage() {
               title: "Perte de poids",
               subtitle: "(6 * 160€ / 6 mois)",
               price: 160,
-              barredPrice: 180,
+              barredPrice: 210,
               currency: "€",
               features: [
                 "Pack adapté aux débutants comme confirmés .",
@@ -102,8 +102,8 @@ export default function TestPage() {
               id: "Demarrer",
               title: "Transformation physique (Musculation)",
               subtitle: "(6 * 160€ / 6 mois)",
-              price: 180,
-              barredPrice: 200,
+              price: 160,
+              barredPrice: 210,
               currency: "€",
               features: [
                 "Pack adapté aux débutants comme confirmés en musculation.",
@@ -124,7 +124,7 @@ export default function TestPage() {
               title: "Préparation compétition",
               subtitle: "(6 * 180€ / 6 mois)",
               price: 180,
-              barredPrice: 200,
+              barredPrice: 230,
               currency: "€",
               features: [
                 "Pack adapté aux débutants dans la musculation.",
@@ -415,7 +415,7 @@ export default function TestPage() {
             type: "monthly",
             id: "premium",
             title: "Ebook 1",
-            subtitle: "Savoir gérer le TCA",
+            subtitle: "Savoir gérer les TCA",
             price: "Free",
             barredPrice: 0,
             currency: "€",
