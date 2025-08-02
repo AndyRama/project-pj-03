@@ -87,15 +87,46 @@ export default function TransformationCard() {
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.8, delay: 0.2 }}
 					>
-						<div className="relative">
+						{/* <div className="relative"> */}
 							{/* Image container with proper aspect ratio */}
-							<div className="aspect-[4/4] overflow-hidden rounded-[10px] shadow-2xl ">
+							{/* <div className="aspect-[4/4] overflow-hidden rounded-[10px] shadow-2xl ">
 								<img
-									src="/images/kelly.jpg"
+									src="/images/jeremy.jpg"
 									alt="Coach et client dans la salle de sport"
 									className="size-full"
 								/>
 							</div>
+						</div> */}
+						 {/* Right Section: Four Images */}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="relative aspect-square overflow-hidden rounded-lg">
+              	<img
+									src="/images/jeremy.jpg"
+									alt="Coach et client dans la salle de sport"
+									className="size-full"
+								/>
+            </div>
+            <div className="relative aspect-square overflow-hidden rounded-lg">
+           	<img
+									src="/images/jeremy.jpg"
+									alt="Coach et client dans la salle de sport"
+									className="size-full"
+								/>
+            </div>
+            <div className="relative aspect-square overflow-hidden rounded-lg">
+            	<img
+									src="/images/jeremy.jpg"
+									alt="Coach et client dans la salle de sport"
+									className="size-full"
+								/>
+            </div>
+            <div className="relative aspect-square overflow-hidden rounded-lg">
+           	<img
+									src="/images/jeremy.jpg"
+									alt="Coach et client dans la salle de sport"
+									className="size-full"
+								/>
+            </div>
 						</div>
 					</motion.div>
 				</div>
