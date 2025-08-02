@@ -8,7 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 import { AlertTriangle } from "lucide-react";
 import Link from "next/link";
 import { ProviderButton } from "./ProviderButton";
-// import { MagicLinkForm } from "./MagicLinkForm";
+import { MagicLinkForm } from "./MagicLinkForm";
 import { SignInCredentialsAndMagicLinkForm } from "./SignInCredentialsAndMagicLinkForm";
 
 export const SignInProviders = () => {
@@ -49,13 +49,13 @@ export const SignInProviders = () => {
 
   return (
     <div className="flex flex-col gap-4">
-      {/* {providers.resend && !providers.credentials ? (
+      {providers.resend && !providers.credentials ? (
         <>
           <Typography variant="small">Magic link ✨</Typography>
           <MagicLinkForm />
           <Divider>or</Divider>
         </>
-      ) : null} */}
+      ) : null}
 
       {providers.credentials ? (
         <>
