@@ -23,7 +23,7 @@ import CardDescriptionImage from "@/features/landing/RefonteLanding/CardDescript
 import {CardDescription} from "@/features/landing/RefonteLanding/CardDescription";
 import ServicesCarousel from "@/features/landing/RefonteLanding/ServicesCarousel";
 import ServiceSingleCard from "@/features/landing/RefonteLanding/ServicesSingleCard";
-import BoostActivity from "@/features/landing/RefonteLanding/BoostActivity";
+// import BoostActivity from "@/features/landing/RefonteLanding/BoostActivity";
 
 export default function TestPage() {
   return (
@@ -147,7 +147,7 @@ export default function TestPage() {
 
       <SectionDivider/>
 
-      <BoostActivity/>
+      {/* <BoostActivity/> */}
 
       <CardDescription/>
 
