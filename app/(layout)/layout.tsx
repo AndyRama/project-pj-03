@@ -7,7 +7,7 @@ export default function RouteLayout(props: PropsWithChildren) {
   return (
     <div className="flex min-h-full flex-col">
       <Header />
-      <div className="mt-32 min-h-full flex-1">{props.children}</div>
+      <div className="mt-20 min-h-full flex-1">{props.children}</div>
       <Footer />
       <FloatingLegalFooter />
     </div>
