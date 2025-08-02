@@ -21,8 +21,8 @@ export default function TransformationCard() {
 						transition={{ duration: 0.8 }}
 					>
 						<div className="space-y-3 lg:space-y-4">
-							<h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
-								Atteins ton meilleur potentiel accompagné par l'equipe
+							<h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-4xl">
+								  Libère ton plein potentiel accompagné par l'équipe
 								<span className="text-orange-500">  d'Unlcoaching</span>
 							</h1>
 

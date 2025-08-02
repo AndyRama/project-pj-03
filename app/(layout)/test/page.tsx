@@ -20,9 +20,9 @@ import { FAQSection } from "@/features/landing/FAQSection";
 import { PricingEbook } from "@/features/prestations/ebook/PricingSectionEbook";
 import TransformationCard from "@/features/landing/RefonteLanding/TransformationCard";
 import CardDescriptionImage from "@/features/landing/RefonteLanding/CardDescriptionImage";
-import {CardDescription} from "@/features/landing/RefonteLanding/CardDescription";
-import ServicesCarousel from "@/features/landing/RefonteLanding/ServicesCarousel";
-import ServiceSingleCard from "@/features/landing/RefonteLanding/ServicesSingleCard";
+// import {CardDescription} from "@/features/landing/RefonteLanding/CardDescription";
+// import ServicesCarousel from "@/features/landing/RefonteLanding/ServicesCarousel";
+// import ServiceSingleCard from "@/features/landing/RefonteLanding/ServicesSingleCard";
 // import BoostActivity from "@/features/landing/RefonteLanding/BoostActivity";
 
 export default function TestPage() {
