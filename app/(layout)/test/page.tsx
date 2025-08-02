@@ -49,13 +49,13 @@ export default function TestPage() {
       <SectionDivider/>
 
       {/* Services Section - Responsive */}
-      <div className="sm:block md:hidden">
+      {/* <div className="sm:block md:hidden">
         <ServiceSingleCard/>
       </div>
       
       <div className="hidden md:block">
         <ServicesCarousel/>
-      </div>
+      </div> */}
 
       {/* <SectionDivider/> */}
 
