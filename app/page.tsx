@@ -36,7 +36,7 @@ export default function HomePage() {
     >
       {/* Spacer en haut */}
       <motion.div 
-        className="mt-16 lg:mt-32"
+        className="mt-16 lg:mt-20"
         initial={{ y: -50, opacity: 0 }} 
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}

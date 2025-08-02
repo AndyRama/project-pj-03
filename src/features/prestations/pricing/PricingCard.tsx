@@ -80,7 +80,7 @@ export const PricingCard = (props: PricingCardProps) => {
       </CardHeader>
       <CardFooter className="flex flex-col items-stretch gap-2">
         <Typography variant="muted" className="text-white">
-          {props.ctaSubtitle}
+          {/* {props.ctaSubtitle} */}
         </Typography>
       </CardFooter>
     </Card>
