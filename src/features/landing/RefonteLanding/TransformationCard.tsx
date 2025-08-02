@@ -101,28 +101,28 @@ export default function TransformationCard() {
           <div className="grid grid-cols-2 gap-4">
             <div className="relative aspect-square overflow-hidden rounded-lg">
               	<img
-									src="/images/jeremy.jpg"
+									src="/images/kelly.jpg"
 									alt="Coach et client dans la salle de sport"
 									className="size-full"
 								/>
             </div>
             <div className="relative aspect-square overflow-hidden rounded-lg">
            	<img
-									src="/images/jeremy.jpg"
+									src="/images/justine.jpg"
 									alt="Coach et client dans la salle de sport"
 									className="size-full"
 								/>
             </div>
             <div className="relative aspect-square overflow-hidden rounded-lg">
             	<img
-									src="/images/jeremy.jpg"
+									src="/images/david.jpg"
 									alt="Coach et client dans la salle de sport"
 									className="size-full"
 								/>
             </div>
             <div className="relative aspect-square overflow-hidden rounded-lg">
            	<img
-									src="/images/jeremy.jpg"
+									src="/images/mamie.jpg"
 									alt="Coach et client dans la salle de sport"
 									className="size-full"
 								/>
