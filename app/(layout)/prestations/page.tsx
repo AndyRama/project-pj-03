@@ -21,7 +21,7 @@ export default function page() {
               {
                 isPopular: true,
                 type: "monthly",
-                id: "Demarrer",
+                id: "Démarrer",
                 title: "Perte de poids",
                 subtitle: "(6 * 160€ / 6 mois)",
                 price: 160,

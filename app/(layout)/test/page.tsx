@@ -85,13 +85,12 @@ export default function TestPage() {
               barredPrice: 180,
               currency: "€",
               features: [
-                "Pack adapté aux débutants dans la musculation.",
-                "Programme de musculation personnalisé en fonction de tes objectifs.",
+                "Pack adapté aux débutants comme confirmés .",
+                "Programme de perte de poids personnalisé en fonction de tes objectifs.",
                 "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
                 "Plan alimentaire adapté à tes besoins.",
                 "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
                 "Communication WhatsApp & Email avec visio ou call chaque mois.",
-                "Acces à mon application de training.",
               ],
               cta: "Je demarre ma transformation",
               ctaSubtitle: "",
@@ -101,19 +100,18 @@ export default function TestPage() {
               isPopular: true,
               type: "monthly",
               id: "Demarrer",
-              title: "Intermédiaire (6 mois)",
-              subtitle: "(6 * 180€ / 6 mois)",
+              title: "Transformation physique (Musculation)",
+              subtitle: "(6 * 160€ / 6 mois)",
               price: 180,
               barredPrice: 200,
               currency: "€",
               features: [
-                "Pack adapté aux débutants dans la musculation.",
+                "Pack adapté aux débutants comme confirmés en musculation.",
                 "Programme de musculation personnalisé en fonction de tes objectifs.",
                 "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
-                "Plan alimentaire adapté à tes besoins.",
+                "Plan alimentaire adapté à tes besoins(sèche, prise de masse).",
                 "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
                 "Communication WhatsApp & Email avec visio ou call chaque mois.",
-                "Acces à mon application de training.",
               ],
               cta: "Je demarre ma transformation",
               ctaSubtitle: "",
@@ -123,19 +121,18 @@ export default function TestPage() {
               isPopular: false,
               type: "monthly",
               id: "Demarrer",
-              title: "Intermédiaire (6 mois)",
+              title: "Préparation compétition",
               subtitle: "(6 * 180€ / 6 mois)",
               price: 180,
               barredPrice: 200,
               currency: "€",
               features: [
                 "Pack adapté aux débutants dans la musculation.",
-                "Programme de musculation personnalisé en fonction de tes objectifs.",
+                "Programme de musculation ou préparation physique personnalisé en fonction de tes objectifs ou du type de sport pratiqué.",
                 "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
                 "Plan alimentaire adapté à tes besoins.",
                 "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
                 "Communication WhatsApp & Email avec visio ou call chaque mois.",
-                "Acces à mon application de training.",
               ],
               cta: "Je demarre ma transformation",
               ctaSubtitle: "test",
@@ -149,9 +146,9 @@ export default function TestPage() {
 
       {/* <BoostActivity/> */}
 
-      <CardDescription/>
+      {/* <CardDescription/> */}
 
-      <SectionDivider/> 
+      {/* <SectionDivider/>  */}
 
       {/* Section "Qui suis-je ?" et "Philosophie" */}
       {/* <motion.div
@@ -418,7 +415,7 @@ export default function TestPage() {
             type: "monthly",
             id: "premium",
             title: "Ebook 1",
-            subtitle: "Nutrition & Alimentation",
+            subtitle: "Savoir gérer le TCA",
             price: "Free",
             barredPrice: 0,
             currency: "€",

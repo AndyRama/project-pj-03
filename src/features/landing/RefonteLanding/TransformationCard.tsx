@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 export default function TransformationCard() {
 	const features = [
-		"Des plans d'entraînement et de nutrition 100 % sur mesure, adaptés à tes besoins.",
-		"Un suivi hebdomadaire personnalisé avec un accompagnement quotidien motivant.",
-		"Un accès exclusif à notre application et à une communauté engagée.",
-		"Une approche holistique complète : physique, mental et physiologique alignés."
+		"Un accompagnement mensuel sur mesure avec un coach disponible et inspirant",
+		"une communication 7jrs/7 24h/24 via what's app",
+		"10 ans d'expèriences qui te permettront sur le long therme de révéler ton plein potentiel",
+		"Une planification 100% personnalisé accompagné d'un plan nutrition et d'une programmation sportive qui répondra à tes attentes "
 	];
 
 	return (
@@ -22,14 +22,14 @@ export default function TransformationCard() {
 					>
 						<div className="space-y-3 lg:space-y-4">
 							<h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
-								Ta transformation physique guidée par la méthode
+								Atteins ton meilleur potentiel accompagné par l'equipe
 								<span className="text-orange-500">  d'Unlcoaching</span>
 							</h1>
 
-							<p className="text-lg leading-relaxed text-gray-300 lg:text-xl">
+							{/* <p className="text-lg leading-relaxed text-gray-300 lg:text-xl">
 								Notre méthode Unlcoaching pour des performances et un objectifs simple u
 								ne transformation durable.
-							</p>
+							</p> */}
 						</div>
 
 						{/* Features List */}
