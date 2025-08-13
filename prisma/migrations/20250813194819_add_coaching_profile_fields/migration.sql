@@ -1,0 +1,15 @@
+-- AlterTable
+ALTER TABLE "public"."AlimentaireProfile" ADD COLUMN     "chest" DOUBLE PRECISION,
+ADD COLUMN     "firstName" TEXT,
+ADD COLUMN     "glutes" DOUBLE PRECISION,
+ADD COLUMN     "hoursActivityPerWeek" TEXT,
+ADD COLUMN     "leftArm" DOUBLE PRECISION,
+ADD COLUMN     "leftThigh" DOUBLE PRECISION,
+ADD COLUMN     "pathology" TEXT,
+ADD COLUMN     "profession" TEXT,
+ADD COLUMN     "rightArm" DOUBLE PRECISION,
+ADD COLUMN     "rightThigh" DOUBLE PRECISION,
+ADD COLUMN     "shoulders" DOUBLE PRECISION,
+ADD COLUMN     "sleepHours" TEXT,
+ADD COLUMN     "stepsPerWeek" TEXT,
+ADD COLUMN     "waist" DOUBLE PRECISION;

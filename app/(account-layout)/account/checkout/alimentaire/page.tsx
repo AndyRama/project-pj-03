@@ -9,9 +9,24 @@ export default async function RoutePage(props: PageParams<{}>) {
   return (
     <SettingsAlimentaireForm
       defaultValues={{
+        firstName: "",
         age: "",
-        size: "",
-        weight: "",
-      }} userId={""} profileId={undefined}    />
+        profession: "",
+        pathology: "",
+        hoursActivityPerWeek: "",
+        stepsPerWeek: "",
+        leftArm: "",
+        rightArm: "",
+        glutes: "",
+        leftThigh: "",
+        rightThigh: "",
+        shoulders: "",
+        chest: "",
+        waist: "",
+        sleepHours: "",
+      }} 
+      userId={""} 
+      profileId={undefined}    
+    />
   );
 }
