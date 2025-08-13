@@ -100,7 +100,7 @@ export const SettingsAlimentaireForm = ({
         {/* Informations personnelles */}
         <Card className="border-orange-500">
           <CardHeader className="bg-gradient-to-r from-orange-50 to-orange-100">
-            <CardTitle className="text-orange-500">Informations personnelles</CardTitle>
+            <CardTitle className="py-4 text-center text-orange-500">Informations personnelles</CardTitle>
             <CardDescription>Renseignez vos informations de base</CardDescription>
           </CardHeader>
           <CardContent className="pt-6">
@@ -150,7 +150,7 @@ export const SettingsAlimentaireForm = ({
         {/* Activité physique */}
         <Card className="border-orange-500">
           <CardHeader className="bg-gradient-to-r from-orange-50 to-orange-100">
-            <CardTitle className="text-orange-500">Activité physique</CardTitle>
+            <CardTitle className="py-4 text-center text-orange-500">Activité physique</CardTitle>
             <CardDescription>Informations sur votre niveau d'activité</CardDescription>
           </CardHeader>
           <CardContent className="pt-6">
@@ -183,7 +183,7 @@ export const SettingsAlimentaireForm = ({
         {/* Mensurations */}
         <Card className="border-orange-500">
           <CardHeader className="bg-gradient-to-r from-orange-50 to-orange-100">
-            <CardTitle className="text-orange-500">Mensurations</CardTitle>
+            <CardTitle className="py-4 text-center text-orange-500">Mensurations</CardTitle>
             <CardDescription>Prenez vos mesures corporelles en centimètres</CardDescription>
           </CardHeader>
           <CardContent className="pt-6">
@@ -220,7 +220,7 @@ export const SettingsAlimentaireForm = ({
         {/* Sommeil */}
         <Card className="border-orange-500">
           <CardHeader className="bg-gradient-to-r from-orange-50 to-orange-100">
-            <CardTitle className="text-orange-500">Heures de sommeil</CardTitle>
+            <CardTitle className="py-4 text-center text-orange-500">Heures de sommeil</CardTitle>
             <CardDescription>Décrivez vos habitudes de sommeil</CardDescription>
           </CardHeader>
           <CardContent className="pt-6">
