@@ -92,21 +92,15 @@ export const SettingsAlimentaireForm = ({
   
   return (
     <div className="mx-auto max-w-4xl">
-      {/* En-tête avec style orange/noir */}
-      <div className="mb-6 rounded-t-lg bg-gradient-to-r from-orange-500 to-orange-600 p-6 text-white">
-        <h1 className="text-center text-3xl font-bold">UNL</h1>
-        <h2 className="mt-1 text-center text-xl font-semibold">COACHING</h2>
-      </div>
-
       <FormUnsavedBar
         form={form}
         onSubmit={async (v) => mutation.mutateAsync(v)}
         className="flex w-full flex-col gap-6"
       >
         {/* Informations personnelles */}
-        <Card className="border-orange-200">
+        <Card className="border-orange-500">
           <CardHeader className="bg-gradient-to-r from-orange-50 to-orange-100">
-            <CardTitle className="text-orange-800">Informations personnelles</CardTitle>
+            <CardTitle className="text-orange-500">Informations personnelles</CardTitle>
             <CardDescription>Renseignez vos informations de base</CardDescription>
           </CardHeader>
           <CardContent className="pt-6">
@@ -154,9 +148,9 @@ export const SettingsAlimentaireForm = ({
         </Card>
 
         {/* Activité physique */}
-        <Card className="border-orange-200">
+        <Card className="border-orange-500">
           <CardHeader className="bg-gradient-to-r from-orange-50 to-orange-100">
-            <CardTitle className="text-orange-800">Activité physique</CardTitle>
+            <CardTitle className="text-orange-500">Activité physique</CardTitle>
             <CardDescription>Informations sur votre niveau d'activité</CardDescription>
           </CardHeader>
           <CardContent className="pt-6">
@@ -187,9 +181,9 @@ export const SettingsAlimentaireForm = ({
         </Card>
 
         {/* Mensurations */}
-        <Card className="border-orange-200">
+        <Card className="border-orange-500">
           <CardHeader className="bg-gradient-to-r from-orange-50 to-orange-100">
-            <CardTitle className="text-orange-800">Mensurations</CardTitle>
+            <CardTitle className="text-orange-500">Mensurations</CardTitle>
             <CardDescription>Prenez vos mesures corporelles en centimètres</CardDescription>
           </CardHeader>
           <CardContent className="pt-6">
@@ -224,9 +218,9 @@ export const SettingsAlimentaireForm = ({
         </Card>
 
         {/* Sommeil */}
-        <Card className="border-orange-200">
+        <Card className="border-orange-500">
           <CardHeader className="bg-gradient-to-r from-orange-50 to-orange-100">
-            <CardTitle className="text-orange-800">Heures de sommeil</CardTitle>
+            <CardTitle className="text-orange-500">Heures de sommeil</CardTitle>
             <CardDescription>Décrivez vos habitudes de sommeil</CardDescription>
           </CardHeader>
           <CardContent className="pt-6">
