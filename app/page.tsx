@@ -6,21 +6,20 @@ import { Typography } from "@/components/ui/typography";
 import { EmailFormSection } from "@/features/email/EmailFormSection";
 import { FeaturesSection } from "@/features/landing/FeatureSection";
 import { Hero } from "@/features/landing/Hero";
-import { LandingHeader } from "@/features/landing/LandingHeader";
+// import { LandingHeader } from "@/features/landing/LandingHeader";
 import { SectionDivider } from "@/features/landing/SectionDivider";
 import CardGrid from "@/features/landing/CardGrid";
 import RecentPosts from "@/features/landing/RecentPosts";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
-import { Footer } from "@/features/layout/Footer";
-import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
+// import { Footer } from "@/features/layout/Footer";
+// import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
 import BeforeAfterCardv2 from "@/features/landing/BeforAfterCardv2";
 import { LayoutContent } from "@/features/page/layout";
 import { Pricing } from "@/features/prestations/pricing/PricingSection";
 import { FAQSection } from "@/features/landing/FAQSection";
 import { PricingEbook } from "@/features/prestations/ebook/PricingSectionEbook";
-import { FeatureProgram } from "@/features/landing/FeatureProgram";
-// import TransformationCard from "@/features/landing/RefonteLanding/TransformationCard";
-// import CardDescriptionImage from "@/features/landing/RefonteLanding/CardDescriptionImage";
+import TransformationCard from "@/features/landing/RefonteLanding/TransformationCard";
+import CardDescriptionImage from "@/features/landing/RefonteLanding/CardDescriptionImage";
 // import {CardDescription} from "@/features/landing/RefonteLanding/CardDescription";
 // import ServicesCarousel from "@/features/landing/RefonteLanding/ServicesCarousel";
 // import ServiceSingleCard from "@/features/landing/RefonteLanding/ServicesSingleCard";
@@ -36,14 +35,14 @@ export default function HomePage() {
     >
       {/* Spacer en haut */}
       <motion.div 
-        className="mt-16 lg:mt-20"
+        className="mt-0"
         initial={{ y: -50, opacity: 0 }} 
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       />
 
-      <LandingHeader />
+      {/* <LandingHeader /> */}
 
       <Hero />
 
@@ -60,10 +59,99 @@ export default function HomePage() {
 
       {/* <SectionDivider/> */}
 
-      {/* <TransformationCard/> */}
-      
+      <TransformationCard/>
+
+      <SectionDivider/>
+
+      <BeforeAfterCardv2/>
+
+      <SectionDivider/>
+
+      <CardDescriptionImage/>
+
+      {/* <SectionDivider/> */}
+
+       {/* Pricing Pack */}
+      <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
+        <Pricing
+          cards={[
+            {
+              isPopular: false,
+              type: "monthly",
+              id: "Demarrer",
+              title: "Perte de poids",
+              subtitle: "(6 * 160€ / 6 mois)",
+              price: 160,
+              barredPrice: 210,
+              currency: "€",
+              features: [
+                "Pack adapté aux débutants comme confirmés .",
+                "Programme de perte de poids personnalisé en fonction de tes objectifs.",
+                "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                "Plan alimentaire adapté à tes besoins.",
+                "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                "Communication WhatsApp & Email avec visio ou call chaque mois.",
+              ],
+              cta: "Je demarre ma transformation",
+              ctaSubtitle: "",
+              priceId: "",
+            },
+            {
+              isPopular: true,
+              type: "monthly",
+              id: "Demarrer",
+              title: "Transformation physique (Musculation)",
+              subtitle: "(6 * 160€ / 6 mois)",
+              price: 160,
+              barredPrice: 210,
+              currency: "€",
+              features: [
+                "Pack adapté aux débutants comme confirmés en musculation.",
+                "Programme de musculation personnalisé en fonction de tes objectifs.",
+                "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                "Plan alimentaire adapté à tes besoins(sèche, prise de masse).",
+                "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                "Communication WhatsApp & Email avec visio ou call chaque mois.",
+              ],
+              cta: "Je demarre ma transformation",
+              ctaSubtitle: "",
+              priceId: "",
+            },   
+            {
+              isPopular: false,
+              type: "monthly",
+              id: "Demarrer",
+              title: "Préparation compétition",
+              subtitle: "(6 * 180€ / 6 mois)",
+              price: 180,
+              barredPrice: 230,
+              currency: "€",
+              features: [
+                "Pack adapté aux débutants dans la musculation.",
+                "Programme de musculation ou préparation physique personnalisé en fonction de tes objectifs ou du type de sport pratiqué.",
+                "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                "Plan alimentaire adapté à tes besoins.",
+                "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                "Communication WhatsApp & Email avec visio ou call chaque mois.",
+              ],
+              cta: "Je demarre ma transformation",
+              ctaSubtitle: "test",
+              priceId: "",
+            },         
+          ]}
+        />
+      </LayoutContent>      
+
+      <SectionDivider/>
+
+      {/* <BoostActivity/> */}
+
+      {/* <CardDescription/> */}
+
+      {/* <SectionDivider/>  */}
+
       {/* Section "Qui suis-je ?" et "Philosophie" */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -129,9 +217,9 @@ export default function HomePage() {
         <div className="transform-gpu blur-3xl">
           <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
         </div>
-      </motion.div>
+      </motion.div> */}
 
-      <SectionDivider/>
+      {/* <SectionDivider /> */}
 
       {/* CardGrid Section */}
       <motion.div
@@ -187,100 +275,6 @@ export default function HomePage() {
           <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
         </div> 
       </motion.div>
-
-      <SectionDivider />
-
-      <BeforeAfterCardv2/>
-
-      <SectionDivider/>
-
-      <FeatureProgram features={[]}/>
-
-      {/* <CardDescriptionImage/> */}
-
-      {/* <SectionDivider/> */}
-
-       {/* Pricing Pack */}
-      <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
-        <Pricing
-          cards={[
-            {
-              isPopular: false,
-              type: "monthly",
-              id: "Demarrer",
-              title: "Perte de poids",
-              subtitle: "(6 * 160€ / 6 mois)",
-              price: 160,
-              barredPrice: 180,
-              currency: "€",
-              features: [
-                "Pack adapté aux débutants dans la musculation.",
-                "Programme de musculation personnalisé en fonction de tes objectifs.",
-                "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
-                "Plan alimentaire adapté à tes besoins.",
-                "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
-                "Communication WhatsApp & Email avec visio ou call chaque mois.",
-                "Acces à mon application de training.",
-              ],
-              cta: "Je demarre ma transformation",
-              ctaSubtitle: "",
-              priceId: "",
-            },
-            {
-              isPopular: true,
-              type: "monthly",
-              id: "Demarrer",
-              title: "Intermédiaire (6 mois)",
-              subtitle: "(6 * 180€ / 6 mois)",
-              price: 180,
-              barredPrice: 200,
-              currency: "€",
-              features: [
-                "Pack adapté aux débutants dans la musculation.",
-                "Programme de musculation personnalisé en fonction de tes objectifs.",
-                "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
-                "Plan alimentaire adapté à tes besoins.",
-                "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
-                "Communication WhatsApp & Email avec visio ou call chaque mois.",
-                "Acces à mon application de training.",
-              ],
-              cta: "Je demarre ma transformation",
-              ctaSubtitle: "",
-              priceId: "",
-            },   
-            {
-              isPopular: false,
-              type: "monthly",
-              id: "Demarrer",
-              title: "Intermédiaire (6 mois)",
-              subtitle: "(6 * 180€ / 6 mois)",
-              price: 180,
-              barredPrice: 200,
-              currency: "€",
-              features: [
-                "Pack adapté aux débutants dans la musculation.",
-                "Programme de musculation personnalisé en fonction de tes objectifs.",
-                "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
-                "Plan alimentaire adapté à tes besoins.",
-                "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
-                "Communication WhatsApp & Email avec visio ou call chaque mois.",
-                "Acces à mon application de training.",
-              ],
-              cta: "Je demarre ma transformation",
-              ctaSubtitle: "test",
-              priceId: "",
-            },         
-          ]}
-        />
-      </LayoutContent>      
-
-      <SectionDivider/>
-
-      {/* <BoostActivity/> */}
-
-      {/* <CardDescription/> */}
-
-      {/* <SectionDivider/>  */}
 
       <SectionDivider />
 
@@ -421,7 +415,7 @@ export default function HomePage() {
             type: "monthly",
             id: "premium",
             title: "Ebook 1",
-            subtitle: "Nutrition & Alimentation",
+            subtitle: "Savoir gérer les TCA",
             price: "Free",
             barredPrice: 0,
             currency: "€",
@@ -506,9 +500,9 @@ export default function HomePage() {
 
       <EmailFormSection />
 
-      <Footer />
+      {/* <Footer /> */}
 
-      <FloatingLegalFooter />
+      {/* <FloatingLegalFooter /> */}
 
     </motion.div>
   );
