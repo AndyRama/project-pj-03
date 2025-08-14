@@ -55,7 +55,7 @@ export default function HomePage() {
       <CardDescriptionImage/>
 
        {/* Pricing Pack */}
-      <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
+      <LayoutContent id="begin" className="mx-auto mb-8 w-full dark:prose-invert">
         <Pricing
           cards={[
             {
