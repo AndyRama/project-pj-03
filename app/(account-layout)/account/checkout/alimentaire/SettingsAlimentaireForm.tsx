@@ -98,7 +98,7 @@ export const SettingsAlimentaireForm = ({
       >
         {/* Informations personnelles */}
         <Card className="border-orange-500">
-          <CardHeader className="py-4 text-center ">
+          <CardHeader className="mb-0 py-4 text-center ">
             <CardTitle className=" text-orange-500">Informations personnelles</CardTitle>
             <CardDescription>Renseignez vos informations de base</CardDescription>
           </CardHeader>
@@ -148,7 +148,7 @@ export const SettingsAlimentaireForm = ({
 
         {/* Activité physique */}
         <Card className="border-orange-500">
-          <CardHeader className="py-4 text-center">
+          <CardHeader className="mb-0 py-4 text-center">
             <CardTitle className=" text-orange-500">Activité physique</CardTitle>
             <CardDescription>Informations sur votre niveau d'activité</CardDescription>
           </CardHeader>
@@ -181,7 +181,7 @@ export const SettingsAlimentaireForm = ({
 
         {/* Mensurations */}
         <Card className="border-orange-500">
-          <CardHeader className="py-4 text-center">
+          <CardHeader className="mb-0 py-4 text-center">
             <CardTitle className=" text-orange-500">Mensurations</CardTitle>
             <CardDescription>Prenez vos mesures corporelles en centimètres</CardDescription>
           </CardHeader>
@@ -218,7 +218,7 @@ export const SettingsAlimentaireForm = ({
 
         {/* Sommeil */}
         <Card className="border-orange-500">
-          <CardHeader className="py-4 text-center">
+          <CardHeader className="mb-0 py-4 text-center">
             <CardTitle className=" text-orange-500">Heures de sommeil</CardTitle>
             <CardDescription>Décrivez vos habitudes de sommeil</CardDescription>
           </CardHeader>

@@ -6,13 +6,13 @@ import { Typography } from "@/components/ui/typography";
 import { EmailFormSection } from "@/features/email/EmailFormSection";
 import { FeaturesSection } from "@/features/landing/FeatureSection";
 import { Hero } from "@/features/landing/Hero";
-// import { LandingHeader } from "@/features/landing/LandingHeader";
+import { LandingHeader } from "@/features/landing/LandingHeader";
 import { SectionDivider } from "@/features/landing/SectionDivider";
 import CardGrid from "@/features/landing/CardGrid";
 import RecentPosts from "@/features/landing/RecentPosts";
 import { ReviewGrid } from "@/features/landing/review/ReviewGrid";
-// import { Footer } from "@/features/layout/Footer";
-// import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
+import { Footer } from "@/features/layout/Footer";
+import { FloatingLegalFooter } from "@/features/legal/FloatingLegalFooter";
 import BeforeAfterCardv2 from "@/features/landing/BeforAfterCardv2";
 import { LayoutContent } from "@/features/page/layout";
 import { Pricing } from "@/features/prestations/pricing/PricingSection";
@@ -42,7 +42,7 @@ export default function HomePage() {
         viewport={{ once: true }}
       />
 
-      {/* <LandingHeader /> */}
+      <LandingHeader />
 
       <Hero />
 
@@ -500,9 +500,9 @@ export default function HomePage() {
 
       <EmailFormSection />
 
-      {/* <Footer /> */}
+      <Footer />
 
-      {/* <FloatingLegalFooter /> */}
+      <FloatingLegalFooter />
 
     </motion.div>
   );
