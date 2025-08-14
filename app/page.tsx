@@ -20,10 +20,6 @@ import { FAQSection } from "@/features/landing/FAQSection";
 import { PricingEbook } from "@/features/prestations/ebook/PricingSectionEbook";
 import TransformationCard from "@/features/landing/RefonteLanding/TransformationCard";
 import CardDescriptionImage from "@/features/landing/RefonteLanding/CardDescriptionImage";
-// import {CardDescription} from "@/features/landing/RefonteLanding/CardDescription";
-// import ServicesCarousel from "@/features/landing/RefonteLanding/ServicesCarousel";
-// import ServiceSingleCard from "@/features/landing/RefonteLanding/ServicesSingleCard";
-// import BoostActivity from "@/features/landing/RefonteLanding/BoostActivity";
 
 export default function HomePage() {
   return (
@@ -48,17 +44,6 @@ export default function HomePage() {
 
       <SectionDivider/>
 
-      {/* Services Section - Responsive */}
-      {/* <div className="sm:block md:hidden">
-        <ServiceSingleCard/>
-      </div>
-      
-      <div className="hidden md:block">
-        <ServicesCarousel/>
-      </div> */}
-
-      {/* <SectionDivider/> */}
-
       <TransformationCard/>
 
       <SectionDivider/>
@@ -68,8 +53,6 @@ export default function HomePage() {
       <SectionDivider/>
 
       <CardDescriptionImage/>
-
-      {/* <SectionDivider/> */}
 
        {/* Pricing Pack */}
       <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
@@ -143,83 +126,6 @@ export default function HomePage() {
       </LayoutContent>      
 
       <SectionDivider/>
-
-      {/* <BoostActivity/> */}
-
-      {/* <CardDescription/> */}
-
-      {/* <SectionDivider/>  */}
-
-      {/* Section "Qui suis-je ?" et "Philosophie" */}
-      {/* <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-      <div className="transform-gpu blur-3xl">
-        <div className="md:content absolute left-0 -z-20 hidden h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-      </div>
-        <FeaturesSection
-          features={[
-            {
-              badge: "Mes valeurs",
-              title: "Qui suis-je ?",
-              description:
-                "Bienvenue dans mon univers, je suis Jeremy, un ancien militaire qui a trouvé sa passion dans le coaching sportif et athlète de haut niveau en tant qu'athlète compétitif en Men's Physique IFBB.",
-              description1:
-                "Fort de mon expérience dans l'armée, j'ai forgé ma détermination et mon engagement envers l'excellence, que ce soit sur le plan physique ou mental.",
-              description2:
-                "Mon parcours m'a conduit à briller sur des scènes nationales et internationales telles que le championnat de France et la Diamond Cup, où j'ai pu démontrer mon savoir-faire et ma passion pour le fitness. Ma mission est simple: vous aider à réaliser vos objectifs de fitness, qu'ils soient modestes ou ambitieux.",
-              component: (
-                <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 1 }}
-                  viewport={{ once: true }}
-                >
-                  <Image
-                    src="/images/jeremy2.jpg"
-                    alt=""
-                    width={200}
-                    height={100}
-                    className="h-auto w-full rounded-[10px] object-cover"
-                  />
-                </motion.div>
-              ),
-            },
-            {
-              badge: "Mes valeurs",
-              title: "Philosophie",
-              description:
-                "Allier entraînement rigoureux et nutrition équilibrée pour un mode de vie sain et durable. Je crois fermement que la réussite en matière de fitness réside dans un équilibre entre un entraînement bien structuré et une alimentation adaptée.",
-              description1: "",
-              description2: "",
-              component: (
-                <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <Image
-                    src="/images/colaborate.jpg"
-                    alt=""
-                    width={200}
-                    height={100}
-                    className="h-auto w-full rounded-[10px] object-cover"
-                  />
-                </motion.div>
-              ),
-            },
-          ]}
-        />
-        <div className="transform-gpu blur-3xl">
-          <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-        </div>
-      </motion.div> */}
-
-      {/* <SectionDivider /> */}
 
       {/* CardGrid Section */}
       <motion.div
