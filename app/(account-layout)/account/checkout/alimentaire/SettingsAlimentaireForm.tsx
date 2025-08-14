@@ -69,7 +69,6 @@ export const SettingsAlimentaireForm = ({
   });
 
   const personalInfoFields = [
-    { name: "firstName", label: "Prénom", placeholder: "Votre prénom", type: "text" },
     { name: "age", label: "Âge", placeholder: "Votre âge", type: "number" },
     { name: "profession", label: "Profession", placeholder: "Votre profession", type: "text" },
   ];
@@ -99,8 +98,8 @@ export const SettingsAlimentaireForm = ({
       >
         {/* Informations personnelles */}
         <Card className="border-orange-500">
-          <CardHeader className="bg-gradient-to-r from-orange-50 to-orange-100">
-            <CardTitle className="py-4 text-center text-orange-500">Informations personnelles</CardTitle>
+          <CardHeader className="py-4 text-center ">
+            <CardTitle className=" text-orange-500">Informations personnelles</CardTitle>
             <CardDescription>Renseignez vos informations de base</CardDescription>
           </CardHeader>
           <CardContent className="pt-6">
@@ -149,8 +148,8 @@ export const SettingsAlimentaireForm = ({
 
         {/* Activité physique */}
         <Card className="border-orange-500">
-          <CardHeader className="bg-gradient-to-r from-orange-50 to-orange-100">
-            <CardTitle className="py-4 text-center text-orange-500">Activité physique</CardTitle>
+          <CardHeader className="py-4 text-center">
+            <CardTitle className=" text-orange-500">Activité physique</CardTitle>
             <CardDescription>Informations sur votre niveau d'activité</CardDescription>
           </CardHeader>
           <CardContent className="pt-6">
@@ -182,8 +181,8 @@ export const SettingsAlimentaireForm = ({
 
         {/* Mensurations */}
         <Card className="border-orange-500">
-          <CardHeader className="bg-gradient-to-r from-orange-50 to-orange-100">
-            <CardTitle className="py-4 text-center text-orange-500">Mensurations</CardTitle>
+          <CardHeader className="py-4 text-center">
+            <CardTitle className=" text-orange-500">Mensurations</CardTitle>
             <CardDescription>Prenez vos mesures corporelles en centimètres</CardDescription>
           </CardHeader>
           <CardContent className="pt-6">
@@ -219,8 +218,8 @@ export const SettingsAlimentaireForm = ({
 
         {/* Sommeil */}
         <Card className="border-orange-500">
-          <CardHeader className="bg-gradient-to-r from-orange-50 to-orange-100">
-            <CardTitle className="py-4 text-center text-orange-500">Heures de sommeil</CardTitle>
+          <CardHeader className="py-4 text-center">
+            <CardTitle className=" text-orange-500">Heures de sommeil</CardTitle>
             <CardDescription>Décrivez vos habitudes de sommeil</CardDescription>
           </CardHeader>
           <CardContent className="pt-6">

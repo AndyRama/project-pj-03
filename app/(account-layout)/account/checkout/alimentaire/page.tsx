@@ -9,7 +9,6 @@ export default async function RoutePage(props: PageParams<{}>) {
   return (
     <SettingsAlimentaireForm
       defaultValues={{
-        firstName: "",
         age: "",
         profession: "",
         pathology: "",

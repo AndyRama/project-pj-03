@@ -36,7 +36,6 @@ export const updateSettingsAction = authAction
 
       const profileData = {
         // Personal information
-        firstName: input.firstName,
         age: parseInt(input.age),
         profession: input.profession,
         pathology: input.pathology || null,
@@ -121,7 +120,6 @@ export const getAlimentaireProfileAction = authAction
 
       if (!profile) {
         return {
-          firstName: "",
           age: "",
           profession: "",
           pathology: "",
@@ -140,7 +138,6 @@ export const getAlimentaireProfileAction = authAction
       }
 
       return {
-        firstName: profile.firstName || "",
         age: profile.age?.toString() || "",
         profession: profile.profession || "",
         pathology: profile.pathology || "",

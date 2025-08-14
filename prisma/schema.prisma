@@ -100,7 +100,6 @@ model AlimentaireProfile {
   weight    Float
   
   // New personal information fields
-  firstName String?
   profession String?
   pathology String?
   

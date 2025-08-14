@@ -2,7 +2,6 @@ import { z } from "zod";
 
 export const SettingsAlimentaireFormSchema = z.object({
   // Personal information
-  firstName: z.string().min(1, { message: "Le prénom est obligatoire" }),
   age: z.string().refine((val: string) => !isNaN(Number(val)) && Number(val) > 0 && Number(val) <= 120, {
     message: "L'âge doit être un nombre positif entre 1 et 120",
   }),
