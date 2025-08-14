@@ -57,7 +57,7 @@ export default function HomePage() {
 
       {/* Pricing Pack */}
       <LayoutContent
-        id="begin"
+        // id="begin"
         className="mx-auto mb-8 w-full dark:prose-invert"
       >
         <Pricing
@@ -65,7 +65,7 @@ export default function HomePage() {
             {
               isPopular: false,
               type: "monthly",
-              id: "Demarrer",
+              id: "begin",
               title: "Perte de poids",
               subtitle: "(6 * 160€ / 6 mois)",
               price: 160,
@@ -86,7 +86,7 @@ export default function HomePage() {
             {
               isPopular: true,
               type: "monthly",
-              id: "Demarrer",
+              id: "begin",
               title: "Transformation physique (Musculation)",
               subtitle: "(6 * 160€ / 6 mois)",
               price: 160,
@@ -107,7 +107,7 @@ export default function HomePage() {
             {
               isPopular: false,
               type: "monthly",
-              id: "Demarrer",
+              id: "begin",
               title: "Préparation compétition",
               subtitle: "(6 * 180€ / 6 mois)",
               price: 180,
