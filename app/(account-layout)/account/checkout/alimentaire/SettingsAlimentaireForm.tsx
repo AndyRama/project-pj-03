@@ -102,7 +102,7 @@ export const SettingsAlimentaireForm = ({
             <CardTitle className=" text-orange-500">Informations personnelles</CardTitle>
             <CardDescription>Renseignez vos informations de base</CardDescription>
           </CardHeader>
-          <CardContent className="pt-6">
+          <CardContent className="pt-4">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               {personalInfoFields.map(({ name, label, placeholder, type }) => (
                 <FormField
@@ -111,7 +111,7 @@ export const SettingsAlimentaireForm = ({
                   name={name as keyof SettingsAlimentaireFormType}
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="font-medium text-gray-700">{label}</FormLabel>
+                      <FormLabel className="font-medium text-white">{label}</FormLabel>
                       <FormControl>
                         <Input
                           type={type}
@@ -130,7 +130,7 @@ export const SettingsAlimentaireForm = ({
                 name="pathology"
                 render={({ field }) => (
                   <FormItem className="md:col-span-2">
-                    <FormLabel className="font-medium text-gray-700">Pathologie, maladie</FormLabel>
+                    <FormLabel className="font-medium text-white">Pathologie, maladie</FormLabel>
                     <FormControl>
                       <Textarea
                         placeholder="Aucune pathologie ou décrivez vos conditions médicales"
@@ -152,7 +152,7 @@ export const SettingsAlimentaireForm = ({
             <CardTitle className=" text-orange-500">Activité physique</CardTitle>
             <CardDescription>Informations sur votre niveau d'activité</CardDescription>
           </CardHeader>
-          <CardContent className="pt-6">
+          <CardContent className="pt-4">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               {activityFields.map(({ name, label, placeholder, type }) => (
                 <FormField
@@ -161,7 +161,7 @@ export const SettingsAlimentaireForm = ({
                   name={name as keyof SettingsAlimentaireFormType}
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="font-medium text-gray-700">{label}</FormLabel>
+                      <FormLabel className="font-medium text-white">{label}</FormLabel>
                       <FormControl>
                         <Input
                           type={type}
@@ -185,7 +185,7 @@ export const SettingsAlimentaireForm = ({
             <CardTitle className=" text-orange-500">Mensurations</CardTitle>
             <CardDescription>Prenez vos mesures corporelles en centimètres</CardDescription>
           </CardHeader>
-          <CardContent className="pt-6">
+          <CardContent className="pt-4">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
               {measurementFields.map(({ name, label, placeholder, type, step }) => (
                 <FormField
@@ -194,7 +194,7 @@ export const SettingsAlimentaireForm = ({
                   name={name as keyof SettingsAlimentaireFormType}
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="font-medium text-gray-700">{label}</FormLabel>
+                      <FormLabel className="font-medium text-white">{label}</FormLabel>
                       <FormControl>
                         <Input
                           type={type}
@@ -222,13 +222,13 @@ export const SettingsAlimentaireForm = ({
             <CardTitle className=" text-orange-500">Heures de sommeil</CardTitle>
             <CardDescription>Décrivez vos habitudes de sommeil</CardDescription>
           </CardHeader>
-          <CardContent className="pt-6">
+          <CardContent className="pt-4">
             <FormField
               control={form.control}
               name="sleepHours"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-medium text-gray-700">Heures de sommeil</FormLabel>
+                  <FormLabel className="font-medium text-white">Heures de sommeil</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="Ex: 5h30-6h quand je vais à la salle, 7h30-9h jours où j'y vais pas"

@@ -57,7 +57,7 @@ export default function HomePage() {
 
       {/* Pricing Pack */}
       <LayoutContent
-        // id="begin"
+        id="begin"
         className="mx-auto mb-8 w-full dark:prose-invert"
       >
         <Pricing
