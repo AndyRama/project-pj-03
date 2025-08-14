@@ -20,19 +20,20 @@ import { FAQSection } from "@/features/landing/FAQSection";
 import { PricingEbook } from "@/features/prestations/ebook/PricingSectionEbook";
 import TransformationCard from "@/features/landing/RefonteLanding/TransformationCard";
 import CardDescriptionImage from "@/features/landing/RefonteLanding/CardDescriptionImage";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <motion.div 
+    <motion.div
       className="relative flex h-fit flex-col bg-background text-foreground"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
       {/* Spacer en haut */}
-      <motion.div 
+      <motion.div
         className="mt-0"
-        initial={{ y: -50, opacity: 0 }} 
+        initial={{ y: -50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
@@ -42,20 +43,23 @@ export default function HomePage() {
 
       <Hero />
 
-      <SectionDivider/>
+      <SectionDivider />
 
-      <TransformationCard/>
+      <TransformationCard />
 
-      <SectionDivider/>
+      <SectionDivider />
 
-      <BeforeAfterCardv2/>
+      <BeforeAfterCardv2 />
 
-      <SectionDivider/>
+      <SectionDivider />
 
-      <CardDescriptionImage/>
+      <CardDescriptionImage />
 
-       {/* Pricing Pack */}
-      <LayoutContent id="begin" className="mx-auto mb-8 w-full dark:prose-invert">
+      {/* Pricing Pack */}
+      <LayoutContent
+        id="begin"
+        className="mx-auto mb-8 w-full dark:prose-invert"
+      >
         <Pricing
           cards={[
             {
@@ -99,7 +103,7 @@ export default function HomePage() {
               cta: "Je demarre ma transformation",
               ctaSubtitle: "",
               priceId: "",
-            },   
+            },
             {
               isPopular: false,
               type: "monthly",
@@ -120,12 +124,12 @@ export default function HomePage() {
               cta: "Je demarre ma transformation",
               ctaSubtitle: "test",
               priceId: "",
-            },         
+            },
           ]}
         />
-      </LayoutContent>      
+      </LayoutContent>
 
-      <SectionDivider/>
+      <SectionDivider />
 
       {/* CardGrid Section */}
       <motion.div
@@ -137,7 +141,7 @@ export default function HomePage() {
         <CardGrid />
       </motion.div>
 
-      <SectionDivider />   
+      <SectionDivider />
 
       {/* Section "Mon approche" */}
       <motion.div
@@ -148,7 +152,7 @@ export default function HomePage() {
       >
         <div className="transform-gpu blur-3xl">
           <div className="md:content absolute left-0 -z-20 hidden h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-        </div>   
+        </div>
         <FeaturesSection
           features={[
             {
@@ -179,7 +183,7 @@ export default function HomePage() {
         />
         <div className="transform-gpu blur-3xl">
           <div className="absolute right-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 md:opacity-50"></div>
-        </div> 
+        </div>
       </motion.div>
 
       <SectionDivider />
@@ -195,7 +199,10 @@ export default function HomePage() {
           <div className="absolute left-0 -z-20 h-48 w-56 bg-gradient-to-tr from-orange-500 to-orange-800 opacity-30 sm:hidden md:opacity-50"></div>
         </div>
         <div className="flex flex-col items-center gap-2">
-          <Typography variant="p" className="max-w-xl font-bold text-orange-500">
+          <Typography
+            variant="p"
+            className="max-w-xl font-bold text-orange-500"
+          >
             Retour de ma formation
           </Typography>
           <Typography variant="h2" className="m-auto max-w-xl text-center">
@@ -260,9 +267,9 @@ export default function HomePage() {
           ]}
         />
       </motion.div>
-      
-       <SectionDivider />
-      
+
+      <SectionDivider />
+
       {/* Final CTA Section */}
       <section className="bg-gradient-to-r from-orange-500 to-orange-600 px-4 py-16">
         <div className="mx-auto max-w-4xl text-center">
@@ -270,22 +277,26 @@ export default function HomePage() {
             Prêt à Transformer Votre Corps ?
           </Typography>
           <Typography variant="large" className="mb-8 text-orange-100">
-            Rejoignez plus de 500 personnes qui ont déjà transformé leur vie avec mes programmes
+            Rejoignez plus de 500 personnes qui ont déjà transformé leur vie
+            avec mes programmes
           </Typography>
-          
+
           <div className="mb-8 inline-block rounded-xl bg-white/10 p-6 backdrop-blur-sm">
-            <p className="font-semibold text-white">⏰ Offre limitée : -50€ sur tous les programmes</p>
+            <p className="font-semibold text-white">
+              ⏰ Offre limitée : -50€ sur tous les programmes
+            </p>
             <p className="text-orange-100">Plus que 48h pour en profiter !</p>
           </div>
-
-          <button className="rounded-lg bg-white px-12 py-4 text-xl font-bold text-orange-500 transition-all hover:scale-105 hover:bg-gray-100">
-            Commencer Ma Transformation Maintenant
-          </button>
+          <Link href="/#begin">
+            <button className="rounded-lg bg-white px-12 py-4 text-xl font-bold text-orange-500 transition-all hover:scale-105 hover:bg-gray-100">
+              Commencer Ma Transformation Maintenant
+            </button>
+          </Link>
         </div>
       </section>
 
       <SectionDivider />
-      
+
       {/* Blog Content */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -294,7 +305,10 @@ export default function HomePage() {
         viewport={{ once: true }}
       >
         <div className="flex flex-col items-center gap-2">
-          <Typography variant="p" className="max-w-xl font-bold text-orange-500">
+          <Typography
+            variant="p"
+            className="max-w-xl font-bold text-orange-500"
+          >
             Recentes
           </Typography>
           <Typography variant="h2" className="max-w-xl">
@@ -384,8 +398,7 @@ export default function HomePage() {
               "Nous proposons une gamme de services, y compris des séances de coaching individuel, des programmes de remise en forme, et un blog regorgeant de conseils sur la nutrition, l'entraînement et le développement personnel.",
           },
           {
-            question:
-              "Comment puis-je m'inscrire à un programme de coaching ?",
+            question: "Comment puis-je m'inscrire à un programme de coaching ?",
             answer:
               "Vous pouvez vous inscrire à un programme en visitant notre page d'accueil et en sélectionnant l'option 'S'inscrire'. Vous serez guidé à travers un processus simple pour choisir le programme qui correspond le mieux à vos besoins.",
           },
@@ -409,7 +422,6 @@ export default function HomePage() {
       <Footer />
 
       <FloatingLegalFooter />
-
     </motion.div>
   );
 }

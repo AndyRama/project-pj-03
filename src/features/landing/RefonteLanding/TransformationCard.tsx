@@ -21,15 +21,10 @@ export default function TransformationCard() {
             transition={{ duration: 0.8 }}
           >
             <div className="space-y-3 lg:space-y-4">
-              <h1 className="text-2xl font-bold leading-tight text-white md:text-3xl lg:text-4xl">
+              <h2 className="text-2xl font-bold leading-tight text-white md:text-3xl lg:text-4xl">
                 Libère ton plein potentiel accompagné par l'équipe
                 <span className="text-orange-500"> d'Unlcoaching</span>
-              </h1>
-
-              {/* <p className="text-lg leading-relaxed text-gray-300 lg:text-xl">
-								Notre méthode Unlcoaching pour des performances et un objectifs simple u
-								ne transformation durable.
-							</p> */}
+              </h2>
             </div>
 
             {/* Features List */}
@@ -70,7 +65,7 @@ export default function TransformationCard() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              <Link href="#begin">
+              <Link href="/#begin">
                 <motion.button
                   className="rounded-[10px] bg-orange-600 px-6 py-3 text-base font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-xl lg:px-8 lg:py-4 lg:text-lg"
                   whileHover={{ scale: 1.05 }}
