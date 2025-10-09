@@ -63,13 +63,13 @@ export default function HomePage() {
         <Pricing
           cards={[
             {
-              isPopular: false,
+              isPopular: true,
               type: "monthly",
-              id: "begin",
+              id: "Démarrer",
               title: "Perte de poids",
               subtitle: "(6 * 160€ / 6 mois)",
               price: 160,
-              barredPrice: 210,
+              barredPrice: 180,
               currency: "€",
               features: [
                 "Pack adapté aux débutants comme confirmés .",
@@ -79,18 +79,18 @@ export default function HomePage() {
                 "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
                 "Communication WhatsApp & Email avec visio ou call chaque mois.",
               ],
-              cta: "Je demarre ma transformation",
+              cta: "Je demarre mon régime",
               ctaSubtitle: "",
-              priceId: "",
+              priceId: "prod_TCjZqOgYXqVhcr",
             },
             {
               isPopular: true,
               type: "monthly",
-              id: "begin",
+              id: "Demarrer",
               title: "Transformation physique (Musculation)",
               subtitle: "(6 * 160€ / 6 mois)",
               price: 160,
-              barredPrice: 210,
+              barredPrice: 180,
               currency: "€",
               features: [
                 "Pack adapté aux débutants comme confirmés en musculation.",
@@ -100,33 +100,34 @@ export default function HomePage() {
                 "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
                 "Communication WhatsApp & Email avec visio ou call chaque mois.",
               ],
-              cta: "Je demarre ma transformation",
+              cta: "Je demarre ma musculation",
               ctaSubtitle: "",
-              priceId: "",
-            },
+              priceId: "prod_TCkQQi3le9C6vp",
+            },   
             {
               isPopular: false,
               type: "monthly",
-              id: "begin",
-              title: "Préparation compétition",
+              id: "Demarrer",
+              title: "Intermédiaire (6 mois)",
               subtitle: "(6 * 180€ / 6 mois)",
               price: 180,
-              barredPrice: 230,
+              barredPrice: 200,
               currency: "€",
               features: [
                 "Pack adapté aux débutants dans la musculation.",
                 "Programme de musculation ou préparation physique personnalisé en fonction de tes objectifs ou du type de sport pratiqué.",
                 "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
                 "Plan alimentaire adapté à tes besoins.",
-                "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                "Bilan mensuel photo + mensuration avec un suivi plus approfondi.",
                 "Communication WhatsApp & Email avec visio ou call chaque mois.",
               ],
               cta: "Je demarre ma transformation",
-              ctaSubtitle: "test",
-              priceId: "",
-            },
+              ctaSubtitle: "",
+              priceId: "prod_TCkXd4nuD0CAy2",
+            },        
           ]}
-        />
+      />
+
       </LayoutContent>
 
       <SectionDivider />

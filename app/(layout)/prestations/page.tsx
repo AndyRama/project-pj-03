@@ -15,7 +15,6 @@ export default function page() {
       <SubHero className="" title={"Prestations"} subTitle={"Toutes mes"} />
       <Layout>
         <LayoutContent className="mx-auto mb-8 w-full dark:prose-invert">
-           {/* Pricing Pack */}
           <Pricing
             cards={[
               {
@@ -28,18 +27,38 @@ export default function page() {
                 barredPrice: 180,
                 currency: "€",
                 features: [
-                  "Pack adapté aux débutants dans la musculation.",
-                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Pack adapté aux débutants comme confirmés .",
+                  "Programme de perte de poids personnalisé en fonction de tes objectifs.",
                   "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
                   "Plan alimentaire adapté à tes besoins.",
                   "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
                   "Communication WhatsApp & Email avec visio ou call chaque mois.",
-                  "Acces à mon application de training.",
                 ],
-                cta: "Je demarre ma transformation",
+                cta: "Je demarre mon régime",
                 ctaSubtitle: "",
-                priceId: "",
+                priceId: "prod_TCjZqOgYXqVhcr",
               },
+              {
+                isPopular: true,
+                type: "monthly",
+                id: "Demarrer",
+                title: "Transformation physique (Musculation)",
+                subtitle: "(6 * 160€ / 6 mois)",
+                price: 160,
+                barredPrice: 180,
+                currency: "€",
+                features: [
+                  "Pack adapté aux débutants comme confirmés en musculation.",
+                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
+                  "Plan alimentaire adapté à tes besoins(sèche, prise de masse).",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                  "Communication WhatsApp & Email avec visio ou call chaque mois.",
+                ],
+                cta: "Je demarre ma musculation",
+                ctaSubtitle: "",
+                priceId: "prod_TCkQQi3le9C6vp",
+              },   
               {
                 isPopular: false,
                 type: "monthly",
@@ -51,17 +70,16 @@ export default function page() {
                 currency: "€",
                 features: [
                   "Pack adapté aux débutants dans la musculation.",
-                  "Programme de musculation personnalisé en fonction de tes objectifs.",
+                  "Programme de musculation ou préparation physique personnalisé en fonction de tes objectifs ou du type de sport pratiqué.",
                   "Accompagnement sur les divers troubles du comportements (TCA) ou problématique de santé.",
                   "Plan alimentaire adapté à tes besoins.",
-                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi",
+                  "Bilan mensuel photo + mensuration avec un suivi plus approfondi.",
                   "Communication WhatsApp & Email avec visio ou call chaque mois.",
-                  "Acces à mon application de training.",
                 ],
                 cta: "Je demarre ma transformation",
                 ctaSubtitle: "",
-                priceId: "",
-              },          
+                priceId: "prod_TCkXd4nuD0CAy2",
+              },        
             ]}
           />
           
