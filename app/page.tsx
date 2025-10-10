@@ -65,7 +65,7 @@ export default function HomePage() {
             {
               isPopular: true,
               type: "monthly",
-              id: "Démarrer",
+              id: "https://buy.stripe.com/28E4gB0IM3HB6YaeDR9AA00",
               title: "Perte de poids",
               subtitle: "(6 * 160€ / 6 mois)",
               price: 160,
@@ -81,12 +81,12 @@ export default function HomePage() {
               ],
               cta: "Je demarre mon régime",
               ctaSubtitle: "",
-              priceId: "https://buy.stripe.com/28E4gB0IM3HB6YaeDR9AA00",
+              priceId: "prod_TCjZqOgYXqVhcr",
             },
             {
               isPopular: true,
               type: "monthly",
-              id: "Demarrer",
+              id: "https://buy.stripe.com/28E4gB0IM3HB6YaeDR9AA00",
               title: "Transformation physique (Musculation)",
               subtitle: "(6 * 160€ / 6 mois)",
               price: 160,
@@ -107,7 +107,7 @@ export default function HomePage() {
             {
               isPopular: false,
               type: "monthly",
-              id: "Demarrer",
+              id: "https://buy.stripe.com/28E4gB0IM3HB6YaeDR9AA00",
               title: "Intermédiaire (6 mois)",
               subtitle: "(6 * 180€ / 6 mois)",
               price: 180,
