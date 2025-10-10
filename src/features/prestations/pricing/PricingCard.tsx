@@ -69,7 +69,7 @@ export const PricingCard = (props: PricingCardProps) => {
             </li>
           ))}
         </ul>
-        <Link href={"/" + props.id} target="_blank" rel="noreferrer" className="mt-20 w-full">
+        <Link href={props.id} target="_blank" rel="noreferrer" className="mt-20 w-full">
           <Button
             variant={props.isPopular ? "default" : "outline"}
             size="lg"
@@ -81,7 +81,7 @@ export const PricingCard = (props: PricingCardProps) => {
       </CardHeader>
       <CardFooter className="flex flex-col items-stretch gap-2">
         <Typography variant="muted" className="text-white">
-          {/* {props.ctaSubtitle} */}
+          {props.ctaSubtitle}
         </Typography>
       </CardFooter>
     </Card>
