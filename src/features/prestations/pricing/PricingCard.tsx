@@ -11,6 +11,7 @@ export type PricingCardProps = {
   isPopular?: boolean;
   type: "monthly" | "yearly" | "one-time";
   id: string;
+  link: string;
   title: string;
   subtitle: string;
   price: number;
@@ -69,7 +70,7 @@ export const PricingCard = (props: PricingCardProps) => {
             </li>
           ))}
         </ul>
-        <Link href={props.id} target="_blank" rel="noreferrer" className="mt-20 w-full">
+        <Link href={props.link} target="_blank" rel="noreferrer" className="mt-20 w-full">
           <Button
             variant={props.isPopular ? "default" : "outline"}
             size="lg"

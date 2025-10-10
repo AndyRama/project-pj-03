@@ -65,7 +65,8 @@ export default function HomePage() {
             {
               isPopular: true,
               type: "monthly",
-              id: "https://buy.stripe.com/28E4gB0IM3HB6YaeDR9AA00",
+              id: "",
+              link: "https://buy.stripe.com/test_28E4gB0IM3HB6YaeDR9AA00",
               title: "Perte de poids",
               subtitle: "(6 * 160€ / 6 mois)",
               price: 160,
@@ -86,7 +87,8 @@ export default function HomePage() {
             {
               isPopular: true,
               type: "monthly",
-              id: "https://buy.stripe.com/28E4gB0IM3HB6YaeDR9AA00",
+              id: "",
+              link: "https://buy.stripe.com/test_28E4gB0IM3HB6YaeDR9AA00",
               title: "Transformation physique (Musculation)",
               subtitle: "(6 * 160€ / 6 mois)",
               price: 160,
@@ -107,7 +109,8 @@ export default function HomePage() {
             {
               isPopular: false,
               type: "monthly",
-              id: "https://buy.stripe.com/28E4gB0IM3HB6YaeDR9AA00",
+              id: "",
+              link: "https://buy.stripe.com/test_28E4gB0IM3HB6YaeDR9AA00",
               title: "Intermédiaire (6 mois)",
               subtitle: "(6 * 180€ / 6 mois)",
               price: 180,
