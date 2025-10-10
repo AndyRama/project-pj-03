@@ -1,10 +1,11 @@
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card, CardFooter, CardHeader } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Typography } from "@/components/ui/typography";
-import { BuyButton } from "@/features/stripe/BuyButton";
 import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 export type PricingCardProps = {
   isPopular?: boolean;
@@ -58,7 +59,6 @@ export const PricingCard = (props: PricingCardProps) => {
         <Typography variant="p" className="text-lg text-white">
           {props.subtitle}
         </Typography>
-
         <ul className="flex w-full flex-col gap-3 lg:gap-4">
           {props.features.map((feature, i) => (
             <li key={i} className="flex items-center gap-2 text-white">
@@ -69,14 +69,15 @@ export const PricingCard = (props: PricingCardProps) => {
             </li>
           ))}
         </ul>
-        <BuyButton
-          variant={props.isPopular ? "default" : "outline"}
-          priceId={props.priceId}
-          size="md"
-          className="mt-20 w-full rounded-[10px] bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
-        >
-          {props.cta}
-        </BuyButton>
+        <Link href={"/" + props.id} target="_blank" rel="noreferrer" className="mt-20 w-full">
+          <Button
+            variant={props.isPopular ? "default" : "outline"}
+            size="lg"
+            className="w-full rounded-[10px] bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
+          >
+            {props.cta}
+          </Button>
+        </Link>
       </CardHeader>
       <CardFooter className="flex flex-col items-stretch gap-2">
         <Typography variant="muted" className="text-white">

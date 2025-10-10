@@ -33,7 +33,7 @@ const footerContent = {
       heading: 'Compte',
       links: [
         { href: '/account', label: 'User' },
-        { href: 'https://www.websitecarbon.com/website/unlcoaching-com', label: 'Co²' },
+        // { href: 'https://www.websitecarbon.com/website/unlcoaching-com', label: 'Co²' },
       ],
     },
   ],

@@ -81,7 +81,7 @@ export default function HomePage() {
               ],
               cta: "Je demarre mon régime",
               ctaSubtitle: "",
-              priceId: "prod_TCjZqOgYXqVhcr",
+              priceId: "https://buy.stripe.com/28E4gB0IM3HB6YaeDR9AA00",
             },
             {
               isPopular: true,
