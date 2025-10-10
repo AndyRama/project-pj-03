@@ -20,7 +20,7 @@ export default function page() {
                 isPopular: true,
                 type: "monthly",
                 id: "",
-                link: "https://buy.stripe.com/test_28E4gB0IM3HB6YaeDR9AA00",
+                link: "https://buy.stripe.com/28E4gB0IM3HB6YaeDR9AA00",
                 title: "Perte de poids",
                 subtitle: "(6 * 160€ / 6 mois)",
                 price: 160,
