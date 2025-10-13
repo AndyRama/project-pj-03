@@ -145,7 +145,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
                     variant="h3"
                     className="text-left text-lg !leading-tight"
                   >
-                    Menu Principal
+                    Menu
                   </Typography>
                 </div>
                 <hr />

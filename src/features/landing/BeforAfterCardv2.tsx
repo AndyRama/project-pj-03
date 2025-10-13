@@ -288,8 +288,9 @@ export const StoryCardGrid: React.FC = () => {
             <Button
               onClick={() => setShowAll(true)}
               variant="outline"
-              className="border-primary px-8 py-2 text-primary transition-colors hover:bg-primary hover:text-white"
+              className="mr-4 border bg-orange-500 px-8 py-2 text-base font-bold text-white shadow-md transition-all duration-300 hover:scale-105 hover:border-orange-500 hover:bg-orange-600 hover:shadow-lg"
             >
+              mr-4
               Voir plus
             </Button>
           </div>

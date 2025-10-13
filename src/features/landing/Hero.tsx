@@ -1,7 +1,7 @@
 import { CircleSvg } from "@/components/svg/CircleSvg";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Heart, ArrowRight } from "lucide-react";
+import { Heart } from "lucide-react";
 import Link from "next/link";
 import { Typography } from "../../components/ui/typography";
 import { ReviewSmall } from "./review/ReviewSmall";
@@ -66,7 +66,7 @@ const HeroTitle = () => {
         Jeremy Prat <br />
         <span className="relative inline-block">
           <span className="text-5xl text-white md:text-6xl">Coaching </span>
-          {/* <br /> */}
+          <br />
           <span className="text-5xl md:text-6xl">Personnel</span>
           <CircleSvg className="fill-primary" />
         </span>
@@ -90,11 +90,10 @@ const HeroButton = () => (
         href="/#begin"
         className={cn(
           buttonVariants({ size: "md", variant: "default" }),
-          "text-white border hover:border-orange-500 hover:text-orange-500 mr-4",
+          "text-base font-bold text-white border shadow-md transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-lg bg-orange-600 hover:border-orange-500 mr-4",
         )}
       >
-        Démarrer ma transformation
-        <ArrowRight size={20} className="mr-2" />
+        Mon programme
       </Link>
       <div className="hidden md:block">
         <Link
@@ -102,7 +101,7 @@ const HeroButton = () => (
           target="_blank"
           className={cn(
             buttonVariants({ size: "md", variant: "default" }),
-            "border-orange-500 hover:text-orange-500  text-white bg-none",
+            "text-base font-bold text-white border shadow-md transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-lg bg-orange-600 hover:border-orange-500 mr-4",
           )}
           >
           <Heart size={20} className="mr-2 " />

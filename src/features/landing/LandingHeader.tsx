@@ -8,7 +8,7 @@ import type { PropsWithChildren } from "react";
 import { Sheet, SheetTrigger, SheetContent } from "../../components/ui/sheet";
 import { Menu } from "react-feather";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { AuthButtonClient } from "../auth/AuthButtonClient";
 
@@ -108,14 +108,14 @@ export function LandingHeader({ children }: PropsWithChildren) {
           ))}
         </motion.nav>
         <div className="hidden lg:contents">
-          <Link href="/#concept">
+          {/* <Link href="/#concept">
             <Button
               size="sm"
               className="mr-4 border text-sm font-medium hover:border-orange-500 hover:text-[#FDAB04]"
             >
               Log In
             </Button>
-          </Link>
+          </Link> */}
           <AuthButtonClient />
         </div>
 
