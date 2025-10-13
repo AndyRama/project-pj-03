@@ -17,7 +17,7 @@ export default function page() {
           <Pricing
             cards={[
               {
-                isPopular: true,
+                isPopular: false,
                 type: "monthly",
                 id: "",
                 link: "https://buy.stripe.com/test_28E4gB0IM3HB6YaeDR9AA00",
@@ -35,7 +35,7 @@ export default function page() {
                   "Communication WhatsApp & Email avec visio ou call chaque mois.",
                 ],
                 cta: "Je demarre mon régime",
-                ctaSubtitle: "(6 * 160€ / 6 mois)",
+                ctaSubtitle: "",
                 priceId: "prod_TCjZqOgYXqVhcr",
               },
               {
@@ -57,7 +57,7 @@ export default function page() {
                   "Communication WhatsApp & Email avec visio ou call chaque mois.",
                 ],
                 cta: "Je demarre ma musculation",
-                ctaSubtitle: "(6 * 160€ / 6 mois)",
+                ctaSubtitle: "",
                 priceId: "prod_TCkQQi3le9C6vp",
               },   
               {
@@ -79,7 +79,7 @@ export default function page() {
                   "Communication WhatsApp & Email avec visio ou call chaque mois.",
                 ],
                 cta: "Je demarre ma transformation",
-                ctaSubtitle: "(6 * 180€ / 6 mois)",
+                ctaSubtitle: "",
                 priceId: "prod_TCkXd4nuD0CAy2",
               },        
             ]}
@@ -125,7 +125,7 @@ export default function page() {
                 link: "#",
               },
               {
-                isPopular: true,
+                isPopular: false,
                 type: "monthly",
                 id: "premium",
                 title: "Ebook 3",

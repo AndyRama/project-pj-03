@@ -124,7 +124,7 @@ export default function HomePage() {
                 "Bilan mensuel photo + mensuration avec un suivi plus approfondi.",
                 "Communication WhatsApp & Email avec visio ou call chaque mois.",
               ],
-              cta: "Je demarre ma transformation",
+              cta: "Je demarre mon programme",
               ctaSubtitle: "",
               priceId: "prod_TCkXd4nuD0CAy2",
             },        
