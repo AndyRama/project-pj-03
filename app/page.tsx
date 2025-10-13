@@ -63,7 +63,7 @@ export default function HomePage() {
         <Pricing
           cards={[
             {
-              isPopular: true,
+              isPopular: false,
               type: "monthly",
               id: "",
               link: "https://buy.stripe.com/28E4gB0IM3HB6YaeDR9AA00",

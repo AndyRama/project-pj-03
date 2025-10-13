@@ -74,7 +74,7 @@ export const PricingCard = (props: PricingCardProps) => {
           <Button
             variant={props.isPopular ? "default" : "outline"}
             size="lg"
-            className="w-full rounded-[10px] bg-gradient-to-r from-orange-400 to-orange-700 text-black hover:bg-transparent hover:text-white"
+            className="w-full rounded-[10px] border bg-orange-600 text-base font-bold text-white shadow-md transition-all duration-300 hover:scale-105 hover:border-orange-500 hover:bg-orange-600 hover:shadow-lg"
           >
             {props.cta}
           </Button>

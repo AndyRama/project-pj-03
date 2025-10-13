@@ -35,7 +35,7 @@ export default function CardDescription() {
             >
               <Link href="/#begin">
                 <motion.button
-                  className="rounded-md bg-orange-600 px-6 py-3 text-base font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-orange-700 hover:shadow-xl lg:px-8 lg:py-4 lg:text-lg"
+                  className="rounded-[10px]] bg-orange-600 px-6 py-3 text-base font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-orange-700 hover:shadow-xl lg:px-8 lg:py-4 lg:text-lg"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
