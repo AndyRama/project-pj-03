@@ -110,7 +110,7 @@ export default function HomePage() {
               isPopular: false,
               type: "monthly",
               id: "",
-              link: "https://buy.stripe.com/28E4gB0IM3HB6YaeDR9AA00",
+              link: "https://buy.stripe.com/4gMeVfgHK5PJ96i7bp9AA01",
               title: "Intermédiaire (6 mois)",
               subtitle: "(6 * 180€ / 6 mois)",
               price: 180,
