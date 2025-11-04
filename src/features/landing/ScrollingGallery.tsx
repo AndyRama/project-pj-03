@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-export default function  ScrollingGallery() {
+export default function ScrollingGallery() {
 
   const images = [
     {
@@ -104,16 +104,18 @@ export default function  ScrollingGallery() {
   return (
     
     <div className="w-full overflow-hidden">
-      <div className="flex h-screen">
+      <div className="flex h-screen gap-4">
         {/* Colonne 1 - Défilement lent */}
         <div className="relative flex-1 overflow-hidden">
           <div className="animate-scroll-slow flex flex-col space-y-4">
             {column1Images.map((image) => (
-              <div key={image.uniqueId} className="shrink-0">
+              <div key={image.uniqueId} className="w-48 shrink-0">
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  className="h-auto w-full rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-105"
+                  width={192}
+                  height={Math.round(192 * (image.height / image.width))}
+                  className="rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-105"
                   loading="lazy"
                 />
               </div>
@@ -122,14 +124,16 @@ export default function  ScrollingGallery() {
         </div>
 
         {/* Colonne 2 - Défilement moyen */}
-        <div className="relative mx-4 flex-1 overflow-hidden">
+        <div className="relative flex-1 overflow-hidden">
           <div className="animate-scroll-medium flex flex-col space-y-4">
             {column2Images.map((image) => (
-              <div key={image.uniqueId} className="shrink-0">
+              <div key={image.uniqueId} className="w-48 shrink-0">
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  className="h-auto w-full rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-105"
+                  width={192}
+                  height={Math.round(192 * (image.height / image.width))}
+                  className="rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-105"
                   loading="lazy"
                 />
               </div>
@@ -141,11 +145,13 @@ export default function  ScrollingGallery() {
         <div className="relative flex-1 overflow-hidden">
           <div className="animate-scroll-fast flex flex-col space-y-4">
             {column3Images.map((image) => (
-              <div key={image.uniqueId} className="shrink-0">
+              <div key={image.uniqueId} className="w-48 shrink-0">
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  className="h-auto w-full rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-105"
+                  width={192}
+                  height={Math.round(192 * (image.height / image.width))}
+                  className="rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-105"
                   loading="lazy"
                 />
               </div>
