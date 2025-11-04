@@ -16,6 +16,16 @@ module.exports = {
   },
   // Activer la compression
   compress: true,
+    // Minification avec SWC (plus rapide)
+  swcMinify: true,
+  
+  // Optimiser le bundle
+  productionBrowserSourceMaps: false,
+  
+  // Optimisation des polyfills
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 }
 
 module.exports = withPlausibleProxy()(nextConfig);

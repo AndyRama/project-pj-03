@@ -102,7 +102,7 @@ const ProfileCard = ({
   cta: string;
   link: string;
 }) => (
-  <div className="group rounded-md border-2 border-orange-500/30 bg-gradient-to-br from-gray-900 to-black p-8 transition-all hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/20">
+  <div className="group rounded-[12px] border-2 border-orange-600/30 bg-gradient-to-br from-gray-900 to-black p-8 transition-all hover:border-orange-600 hover:shadow-2xl hover:shadow-orange-600/20">
     <div className="mb-4 text-5xl">{emoji}</div>
     <Typography variant="h3" className="mb-6 text-2xl font-bold text-white">
       {title}
@@ -110,12 +110,12 @@ const ProfileCard = ({
     <ul className="mb-6 space-y-3">
       {benefits.map((benefit, index) => (
         <li key={index} className="flex items-start text-gray-300">
-          <span className="mr-2 text-orange-500">▸</span>
+          <span className="mr-2 text-orange-600">▸</span>
           <span>{benefit}</span>
         </li>
       ))}
     </ul>
-    <div className="mb-6 rounded-lg bg-orange-500/10 p-3">
+    <div className="mb-6 rounded-lg bg-orange-600/10 p-3">
       <Typography className="font-semibold text-orange-500">
         {program}
       </Typography>
@@ -124,7 +124,7 @@ const ProfileCard = ({
       href={link}
       className={cn(
         buttonVariants({ size: "lg", variant: "default" }),
-        "w-full bg-orange-600 rounded-md font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-orange-500 hover:shadow-lg hover:shadow-orange-500/50",
+        "w-full bg-orange-700 rounded-md font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-600/50",
       )}
     >
       {cta}
@@ -151,8 +151,8 @@ const ForWhoNotFor = () => (
         <span>Tu veux juste un PDF générique sans accompagnement réel</span>
       </li>
     </ul>
-    <div className="rounded-lg border-l-4 border-orange-500 bg-black/50 p-4">
-      <Typography className="font-bold text-orange-500">
+    <div className="rounded-lg border-l-4 border-orange-600 bg-black/50 p-4">
+      <Typography className="font-bold text-orange-600">
         💯 Je bosse uniquement avec des personnes DÉTERMINÉES qui veulent des résultats RÉELS et DURABLES.
       </Typography>
       <Typography className="mt-2 text-sm text-gray-400">

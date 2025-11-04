@@ -91,36 +91,36 @@ export default function TransformationCard() {
                 <Image
                   src="/images/kelly.jpg"
                   alt="Coach et client dans la salle de sport"
-                  className="size-full"
-                  width={292}
-                  height={519}
+                  className="size-full object-cover"
+                  width={384}
+                  height={683}
                 />
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
                 <Image
                   src="/images/justine.jpg"
                   alt="Coach et client dans la salle de sport"
-                  className="size-full"
-                  width={292}
-                  height={519}
+                  className="size-full object-cover"
+                  width={384}
+                  height={407}
                 />
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
                 <Image
                   src="/images/david.jpg"
                   alt="Coach et client dans la salle de sport"
-                  className="size-full"
-                  width={292}
-                  height={519}
+                  className="size-full object-cover"
+                  width={384}
+                  height={512}
                 />
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
                 <Image
                   src="/images/mamie.jpg"
                   alt="Coach et client dans la salle de sport"
-                  className="size-full"
-                  width={292}
-                  height={519}
+                  className="size-full object-cover"
+                  width={384}
+                  height={512}
                 />
               </div>
             </div>

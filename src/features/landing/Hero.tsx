@@ -91,7 +91,7 @@ const HeroButton = () => (
         href="/#begin"
         className={cn(
           buttonVariants({ size: "md", variant: "default" }),
-          "text-base font-bold text-white border shadow-md transition-all duration-300 hover:scale-105 hover:bg-orange-500 hover:shadow-lg bg-orange-500 mr-4",
+          "text-base font-bold text-white border shadow-md transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-lg bg-orange-600 mr-4",
         )}
       >
         Mon programme
