@@ -102,7 +102,7 @@ const ProfileCard = ({
   cta: string;
   link: string;
 }) => (
-  <div className="group rounded-xl border-2 border-orange-500/30 bg-gradient-to-br from-gray-900 to-black p-8 transition-all hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/20">
+  <div className="group rounded-md border-2 border-orange-500/30 bg-gradient-to-br from-gray-900 to-black p-8 transition-all hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/20">
     <div className="mb-4 text-5xl">{emoji}</div>
     <Typography variant="h3" className="mb-6 text-2xl font-bold text-white">
       {title}
@@ -124,7 +124,7 @@ const ProfileCard = ({
       href={link}
       className={cn(
         buttonVariants({ size: "lg", variant: "default" }),
-        "w-full bg-orange-600 font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-orange-500 hover:shadow-lg hover:shadow-orange-500/50",
+        "w-full bg-orange-600 rounded-md font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-orange-500 hover:shadow-lg hover:shadow-orange-500/50",
       )}
     >
       {cta}

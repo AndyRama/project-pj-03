@@ -93,7 +93,7 @@ export const RecentPosts = () => {
       attributes: {
         title: 'Guide complet des compléments alimentaires dans le sport ',
         description: 'Découvrez notre guide complet sur les compléments alimentaires pour sportifs. Types, bienfaits, précautions et conseils pour optimiser vos performances en toute sécurité et apprenez à choisir les compléments adaptés à vos objectifs et à votre pratique.',
-        date: '2024-11-15',
+        date: '2024-11-11',
         coverUrl: '/images/post1.jpg',
       },
       slug: '2024-11-11_Guide-complet-des-complements-alimentaire-dans-le-sport',

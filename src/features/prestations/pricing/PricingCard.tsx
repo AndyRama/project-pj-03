@@ -47,11 +47,8 @@ export const PricingCard = (props: PricingCardProps) => {
         <p className="text-center text-xl font-bold uppercase text-white">
           {props.title}
         </p>
-        {/* <p className="gap-1 text-center text-lg text-orange-500">
-          
-        </p> */}
         <Separator className="bg-white" />
-        <div className="flex items-end justify-center gap-2">
+        <div className="mt-4 flex items-end justify-center gap-2">
           <p className="text-2xl text-orange-500 md:text-3xl">
             {props.price}€
             <span className="text-md">/ Mois</span>

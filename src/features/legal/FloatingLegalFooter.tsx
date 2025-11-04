@@ -12,13 +12,13 @@ export const FloatingLegalFooter: React.FC = () => {
       <div className="mx-auto items-center text-center text-sm">
         <Typography variant="muted" className="italic">
           &copy; {new Date().getFullYear()}{" "}   
-          <Link href="/" className="text-orange-500">
+          <Link href="/" className="text-underline-offset-2 text-orange-500 underline">
             Unlcoaching{" "}
           </Link>
           Tous droits réservés. Crée avec{" "}
           <BiSolidHeart className="mx-1 inline-block text-red-400" />
           par{" "}
-          <Link href="https://lemurian.vercel.app/" className="text-orange-500">
+          <Link href="https://lemurian.vercel.app/" className="text-underline-offset-2 text-orange-500 underline">
             Andy Ramaroson
           </Link>
         </Typography>
