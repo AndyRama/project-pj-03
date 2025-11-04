@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { FaInstagramSquare, FaFacebook } from 'react-icons/fa'
 import { Typography } from "@/components/ui/typography";
 import { Layout, LayoutContent } from "@/features/page/layout";
@@ -29,11 +28,11 @@ const footerContent = {
         { href: '/prestations/#pack', label: 'Packs',badge: 'Nouveau' },
       ],
     },
-        {
+    {
       heading: 'Compte',
       links: [
         { href: '/account', label: 'User' },
-        // { href: 'https://www.websitecarbon.com/website/unlcoaching-com', label: 'Co²' },
+        { href: 'https://www.websitecarbon.com/website/unlcoaching-com', label: 'Co²' },
       ],
     },
   ],
@@ -49,7 +48,6 @@ export const Footer = () => {
             <div className="space-y-1 ">
               <Typography variant="h2" className="text-orange-500">{SiteConfig.title}</Typography>
             </div>
-
             <div className="mt-4 flex pb-10">
               <Link href="https://www.instagram.com/unlcoaching.school/" aria-label="Instagram" className="mr-4 text-2xl hover:text-orange-500  ">
                 <FaInstagramSquare />
@@ -59,7 +57,6 @@ export const Footer = () => {
               </Link>
             </div>           
           </div>
-
           <div className=" max-sm-mx-auto justify-beteween grid grid-cols-2 gap-4 md:grid-cols-4">
             {footerContent.footerLinks.map((item) => (
               <div key={item.heading}>
@@ -73,7 +70,7 @@ export const Footer = () => {
                       >
                         {link.label}
                         {link.badge && (
-                          <span className="ml-2 rounded-full border border-orange-500 bg-orange-100 px-1 py-0.5 text-[10px] text-orange-500 ">
+                          <span className="ml-2 rounded-full border border-orange-700 bg-orange-50 px-1 py-0.5 text-[10px] font-semibold text-orange-800">
                             {link.badge}
                           </span>
                         )}

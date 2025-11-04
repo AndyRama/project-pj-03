@@ -68,7 +68,7 @@ export default function TransformationCard() {
             >
               <Link href="/#begin">
                 <motion.button
-                  className="rounded-[10px] bg-orange-600 px-6 py-3 text-base font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-xl lg:px-8 lg:py-4 lg:text-lg"
+                  className="rounded-[10px] bg-orange-700 px-6 py-3 text-base font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-orange-800 hover:shadow-xl lg:px-8 lg:py-4 lg:text-lg"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -93,7 +93,7 @@ export default function TransformationCard() {
                   alt="Coach et client dans la salle de sport"
                   className="size-full object-cover"
                   width={384}
-                  height={683}
+                  height={384}
                 />
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
@@ -102,7 +102,7 @@ export default function TransformationCard() {
                   alt="Coach et client dans la salle de sport"
                   className="size-full object-cover"
                   width={384}
-                  height={407}
+                  height={384}
                 />
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
@@ -111,7 +111,7 @@ export default function TransformationCard() {
                   alt="Coach et client dans la salle de sport"
                   className="size-full object-cover"
                   width={384}
-                  height={512}
+                  height={384}
                 />
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
@@ -120,7 +120,7 @@ export default function TransformationCard() {
                   alt="Coach et client dans la salle de sport"
                   className="size-full object-cover"
                   width={384}
-                  height={512}
+                  height={384}
                 />
               </div>
             </div>
