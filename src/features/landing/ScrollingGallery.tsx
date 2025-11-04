@@ -1,82 +1,83 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function  ScrollingGallery() {
-  // Images du carrousel basées sur le HTML fourni
+
   const images = [
     {
       id: 1,
       src: "/images/coaching.jpg",
-      alt: "Coach Ricco DSC00295",
+      alt: "Coach Jeremy aide et encouragement",
       width: 683,
       height: 1024
     },
     {
       id: 2,
       src: "/images/story19.jpg",
-      alt: "Séance Push",
+      alt: "Photo groupe collectif",
       width: 683,
       height: 1024
     },
     {
       id: 3,
       src: "/images/story20.jpg",
-      alt: "Coach Ricco DSC00298",
+      alt: "Entrainement corde musculation",
       width: 683,
       height: 1024
     },
     {
       id: 4,
       src: "/images/story1.png",
-      alt: "Séance Dos Biceps",
+      alt: "Jeremy Soutient une éleve en coaching",
       width: 683,
       height: 1024
     },
     {
       id: 5,
       src:"/images/story3.jpg",
-      alt: "Coach Ricco IMG1270",
+      alt: "No pain no gain",
       width: 796,
       height: 1024
     },
     {
       id: 6,
       src: "/images/story7.jpg",
-      alt: "AESCEND Background",
+      alt: "Preparation fitness France",
       width: 1024,
       height: 683
     },
     {
       id: 7,
       src: "/images/story8.jpg",
-      alt: "Coach Ricco DSC01288",
+      alt: "Séance d'étirements",
       width: 1024,
       height: 683
     },
     {
       id: 8,
       src: "/images/story9.jpg",
-      alt: "Coach Ricco IMG11320",
+      alt: "Jeremy et Benjamin, coaching en salle",
       width: 341,
       height: 512
     },
     {
       id: 9,
       src: "/images/story5.jpg",
-      alt: "Coach Ricco IMG1300",
+      alt: "Jeremy entrainement musculation",
       width: 1024,
       height: 664
     },
     {
       id: 10,
       src: "/images/story20.jpg",
-      alt: "Coach Ricco DSC00298",
+      alt: "Entrainement corde musculation",
       width: 683,
       height: 1024
     },
     {
       id: 11,
       src: "/images/story1.png",
-      alt: "Séance Dos Biceps",
+      alt: "Jeremy Soutient une éleve en coaching",
       width: 683,
       height: 1024
     },
@@ -109,7 +110,7 @@ export default function  ScrollingGallery() {
           <div className="animate-scroll-slow flex flex-col space-y-4">
             {column1Images.map((image) => (
               <div key={image.uniqueId} className="shrink-0">
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
                   className="h-auto w-full rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-105"
@@ -125,7 +126,7 @@ export default function  ScrollingGallery() {
           <div className="animate-scroll-medium flex flex-col space-y-4">
             {column2Images.map((image) => (
               <div key={image.uniqueId} className="shrink-0">
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
                   className="h-auto w-full rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-105"
@@ -141,7 +142,7 @@ export default function  ScrollingGallery() {
           <div className="animate-scroll-fast flex flex-col space-y-4">
             {column3Images.map((image) => (
               <div key={image.uniqueId} className="shrink-0">
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
                   className="h-auto w-full rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-105"
