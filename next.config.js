@@ -10,4 +10,12 @@ const nextConfig = {
   },
 };
 
+module.exports = {
+  experimental: {
+    optimizeCss: true, // Active l'optimisation CSS
+  },
+  // Activer la compression
+  compress: true,
+}
+
 module.exports = withPlausibleProxy()(nextConfig);

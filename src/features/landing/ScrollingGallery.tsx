@@ -8,78 +8,95 @@ export default function ScrollingGallery() {
       id: 1,
       src: "/images/coaching.jpg",
       alt: "Coach Jeremy aide et encouragement",
-      width: 683,
-      height: 1024
+      width: 240,
+      height: 427
     },
     {
       id: 2,
       src: "/images/story19.jpg",
       alt: "Photo groupe collectif",
-      width: 683,
-      height: 1024
+      width: 240,
+      height: 427
     },
     {
       id: 3,
       src: "/images/story20.jpg",
       alt: "Entrainement corde musculation",
-      width: 683,
-      height: 1024
+      width: 240,
+      height: 427
     },
     {
       id: 4,
       src: "/images/story1.png",
       alt: "Jeremy Soutient une éleve en coaching",
-      width: 683,
-      height: 1024
+      width: 240,
+      height: 427
     },
     {
       id: 5,
       src:"/images/story3.jpg",
       alt: "No pain no gain",
-      width: 796,
-      height: 1024
+      width: 240,
+      height: 427
     },
     {
       id: 6,
       src: "/images/story7.jpg",
       alt: "Preparation fitness France",
-      width: 1024,
-      height: 683
-    },
+      width: 240,
+      height: 427    },
     {
       id: 7,
       src: "/images/story8.jpg",
       alt: "Séance d'étirements",
-      width: 1024,
-      height: 683
-    },
+      width: 240,
+      height: 427    },
     {
       id: 8,
       src: "/images/story9.jpg",
       alt: "Jeremy et Benjamin, coaching en salle",
-      width: 341,
-      height: 512
-    },
+      width: 240,
+      height: 427    },
     {
       id: 9,
       src: "/images/story5.jpg",
       alt: "Jeremy entrainement musculation",
-      width: 1024,
-      height: 664
-    },
+      width: 240,
+      height: 427    },
     {
       id: 10,
       src: "/images/story20.jpg",
       alt: "Entrainement corde musculation",
-      width: 683,
-      height: 1024
+      width: 240,
+      height: 427
     },
     {
       id: 11,
       src: "/images/story1.png",
       alt: "Jeremy Soutient une éleve en coaching",
-      width: 683,
-      height: 1024
+      width: 240,
+      height: 427
+    },
+    {
+      id: 12,
+      src: "/images/coaching.jpg",
+      alt: "Coach Jeremy aide et encouragement",
+      width: 240,
+      height: 427
+    },
+    {
+      id: 13,
+      src: "/images/story19.jpg",
+      alt: "Photo groupe collectif",
+      width: 240,
+      height: 427
+    },
+    {
+      id: 14,
+      src: "/images/story20.jpg",
+      alt: "Entrainement corde musculation",
+      width: 240,
+      height: 427
     },
   ];
 
