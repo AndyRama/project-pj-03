@@ -15,10 +15,10 @@ export default function CardDescription() {
             transition={{ duration: 0.8 }}
           >
             <div className="space-y-3 lg:space-y-4">
-              <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
                 Rejoins la Team
                 <span className="text-orange-500"> Unlcoaching</span>
-              </h1>
+              </h2>
 
               <p className="text-lg leading-relaxed text-gray-300 lg:text-xl">
                 Rejoins la Team Unlcoaching et transforme durablement ton corps

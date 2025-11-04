@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function TransformationCard() {
@@ -97,28 +98,28 @@ export default function TransformationCard() {
             {/* Right Section: Four Images */}
             <div className="grid grid-cols-2 gap-4">
               <div className="relative aspect-square overflow-hidden rounded-lg">
-                <img
+                <Image
                   src="/images/kelly.jpg"
                   alt="Coach et client dans la salle de sport"
                   className="size-full"
                 />
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
-                <img
+                <Image
                   src="/images/justine.jpg"
                   alt="Coach et client dans la salle de sport"
                   className="size-full"
                 />
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
-                <img
+                <Image
                   src="/images/david.jpg"
                   alt="Coach et client dans la salle de sport"
                   className="size-full"
                 />
               </div>
               <div className="relative aspect-square overflow-hidden rounded-lg">
-                <img
+                <Image
                   src="/images/mamie.jpg"
                   alt="Coach et client dans la salle de sport"
                   className="size-full"

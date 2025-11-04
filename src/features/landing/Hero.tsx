@@ -3,6 +3,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Heart } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Typography } from "../../components/ui/typography";
 import { ReviewSmall } from "./review/ReviewSmall";
 
@@ -103,7 +104,7 @@ const HeroButton = () => (
             buttonVariants({ size: "md", variant: "default" }),
             "text-base font-bold text-white border shadow-md transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-lg bg-orange-600 hover:border-orange-500 mr-4",
           )}
-          >
+        >
           <Heart size={20} className="mr-2 " />
           de la team !
         </Link>
@@ -129,8 +130,10 @@ const HeroReviews = () => (
 
 const HeroImage = () => (
   <div className="xl:mt-30 mt-20 flex-1 justify-end md:flex">
-    <img
+    <Image
       src="/images/jeremy.jpg"
+      width={480}
+      height={640}
       className="w-[350px] max-w-lg rounded-[10px] object-contain sm:w-[480px] md:w-full"
       alt="Hero image profile Jeremy Prat"
     />
