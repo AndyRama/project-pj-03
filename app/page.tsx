@@ -22,7 +22,7 @@ import { PricingEbook } from "@/features/prestations/ebook/PricingSectionEbook";
 import TransformationCard from "@/features/landing/RefonteLanding/TransformationCard";
 import CardDescriptionImage from "@/features/landing/RefonteLanding/CardDescriptionImage";
 import { ForWhoSection } from "@/features/landing/ForWhoSection";
-import {AboutJeremySection} from "@/features/landing/WhoIam"; 
+// import {AboutJeremySection} from "@/features/landing/WhoIam"; 
 
 export default function HomePage() {
   return (
@@ -47,7 +47,7 @@ export default function HomePage() {
 
       <ForWhoSection />
 
-      <AboutJeremySection />
+      {/* <AboutJeremySection /> */}
 
       <TransformationCard />
 
