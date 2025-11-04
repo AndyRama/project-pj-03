@@ -180,7 +180,7 @@ export const PricingDetailsPlus: React.FC<{ className?: string }> = ({ className
           <div className="mt-10 text-center">
             <button
               onClick={() => setShowAll((prev) => !prev)}
-              className="rounded-[10px] bg-orange-500 px-4 py-2 text-white hover:bg-orange-600"
+              className="rounded-[10px] bg-orange-600 px-4 py-2 text-white hover:bg-orange-700"
             >
               {showAll ? "Voir moins" : "Voir plus"}
             </button>

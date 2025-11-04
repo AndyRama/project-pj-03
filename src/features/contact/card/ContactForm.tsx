@@ -134,7 +134,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className }) => {
               <div className="mb-6 block">
                 <input
                   type="submit"
-                  className="cursor-pointer rounded-md bg-orange-600
+                  className="cursor-pointer rounded-md bg-orange-700
                   px-5 py-4 text-[11.5px] font-bold uppercase
                   tracking-[2px] text-white transition-all duration-300 ease-in-out
                   hover:bg-white hover:text-orange-600 hover:shadow-2xl"

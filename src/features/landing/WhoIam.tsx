@@ -192,7 +192,7 @@ const JeremyCTA = () => (
 			href="/#begin"
 			className={cn(
 				buttonVariants({ size: "lg", variant: "default" }),
-				"w-full rounded-full bg-orange-600 px-8 py-4 text-lg font-bold text-white transition-all duration-300 hover:bg-orange-500 hover:shadow-lg hover:shadow-orange-500/30 md:w-auto",
+				"w-full rounded-full bg-orange-700 px-8 py-4 text-lg font-bold text-white transition-all duration-300 hover:bg-orange-800 hover:shadow-lg hover:shadow-orange-500/30 md:w-auto",
 			)}
 		>
 			Réserver mon appel découverte GRATUIT

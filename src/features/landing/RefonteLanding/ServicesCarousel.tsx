@@ -132,7 +132,7 @@ export default function ServicesCarousel() {
               <div className="group relative h-80 overflow-hidden rounded-2xl">
                 {/* Default State */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border-2 border-gray-200 bg-white p-8 text-center transition-all duration-500 group-hover:scale-95 group-hover:opacity-0">
-                  <div className="mb-6 flex size-16 items-center justify-center rounded-full bg-orange-600 text-2xl text-white">
+                  <div className="mb-6 flex size-16 items-center justify-center rounded-full bg-orange-700 text-2xl text-white">
                     {service.icon}
                   </div>
                   <h3 className="mb-2 text-xl font-bold text-gray-900">

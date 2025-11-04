@@ -64,7 +64,7 @@ export default function BoostActivity() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-4 inline-block rounded-md bg-orange-600 px-6 py-3 text-sm font-bold tracking-wide text-white transition hover:bg-orange-700"
+            className="mt-4 inline-block rounded-md bg-orange-700 px-6 py-3 text-sm font-bold tracking-wide text-white transition hover:bg-orange-800"
           >
             BOOSTER MON ACTIVITÉ DE COACH
           </motion.button>

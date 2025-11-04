@@ -91,7 +91,7 @@ const HeroButton = () => (
         href="/#begin"
         className={cn(
           buttonVariants({ size: "md", variant: "default" }),
-          "text-base font-bold text-white border shadow-md transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-lg bg-orange-600 mr-4",
+          "text-base font-bold text-white border shadow-md transition-all duration-300 hover:scale-105 hover:bg-orange-800 hover:shadow-lg bg-orange-700 mr-4",
         )}
       >
         Mon programme
@@ -102,7 +102,7 @@ const HeroButton = () => (
           target="_blank"
           className={cn(
             buttonVariants({ size: "md", variant: "default" }),
-            "text-base font-bold text-white border shadow-md transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-lg bg-orange-600 hover:border-orange-500 mr-4",
+            "text-base font-bold text-white border shadow-md transition-all duration-300 hover:scale-105 hover:bg-orange-800 hover:shadow-lg bg-orange-700 hover:border-orange-500 mr-4",
           )}
         >
           <Heart size={20} className="mr-2 " />

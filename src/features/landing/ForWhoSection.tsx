@@ -116,7 +116,7 @@ const ProfileCard = ({
         </li>
       ))}
     </ul>
-    <div className="mb-6 rounded-lg bg-orange-600/10 p-3">
+    <div className="mb-6 rounded-lg bg-orange-700/10 p-3">
       <Typography className="font-semibold text-orange-500">
         {program}
       </Typography>
@@ -125,7 +125,7 @@ const ProfileCard = ({
       href={link}
       className={cn(
         buttonVariants({ size: "lg", variant: "default" }),
-        "w-full bg-orange-700 rounded-md font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-600/50",
+        "w-full bg-orange-700 rounded-md font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-orange-800 hover:shadow-lg hover:shadow-orange-800/50",
       )}
     >
       {cta}

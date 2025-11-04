@@ -125,7 +125,7 @@ export default function ServicesSingleCard() {
           >
             {/* Default State */}
             <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border-2 border-gray-200 bg-white p-8 text-center transition-all duration-500 group-hover:scale-95 group-hover:opacity-0">
-              <div className="mb-6 flex size-16 items-center justify-center rounded-full bg-orange-600 text-2xl text-white">
+              <div className="mb-6 flex size-16 items-center justify-center rounded-full bg-orange-700 text-2xl text-white">
                 {services[currentIndex].icon}
               </div>
               <h3 className="mb-2 text-xl font-bold text-gray-900">
@@ -181,7 +181,7 @@ export default function ServicesSingleCard() {
             onClick={() => handleTabClick(index)}
             className={`h-2 w-12 rounded-full transition-colors duration-300 ${
               activeTab === index 
-                ? 'bg-orange-600' 
+                ? 'bg-orange-700' 
                 : 'bg-orange-300 hover:bg-orange-400'
             }`}
           />
