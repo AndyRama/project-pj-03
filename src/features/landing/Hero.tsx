@@ -1,5 +1,6 @@
 import { CircleSvg } from "@/components/svg/CircleSvg";
 import { buttonVariants } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { Heart } from "lucide-react";
 import Link from "next/link";
@@ -21,6 +22,8 @@ export const Hero = () => {
             <HeroTitle />
             <HeroDescription />
             <HeroButton />
+            <HeroCredibilityCounters />
+            <HeroReassuranceBadges />
             <HeroReviews />
           </div>
           <HeroImage />
@@ -35,8 +38,8 @@ const HeroStatistics = () => (
     <Typography variant="h3" className="text-lg !leading-tight">
       <span className="inline-block text-white md:text-center">
         <br />
-        <StatisticBlock value="+350" label="Transformations" label1="réussit" />
-        <StatisticBlock value="+ 5⭐" label="Satisfaction " label1="" />
+        <StatisticBlock value="+350" label="Transformations" label1="réussies" />
+        <StatisticBlock value="+ 5⭐" label="Satisfaction" label1="" />
       </span>
     </Typography>
   </>
@@ -78,7 +81,7 @@ const HeroTitle = () => {
 const HeroDescription = () => (
   <>
     <Typography variant="large" className="text-white">
-      Allier entraînement rigoureux et nutrition équilibrée pour un mode de vie sain et durable.      
+      Allier entraînement rigoureux et nutrition équilibrée pour un mode de vie sain et durable.
     </Typography>
   </>
 );
@@ -103,13 +106,47 @@ const HeroButton = () => (
             buttonVariants({ size: "md", variant: "default" }),
             "text-base font-bold text-white border shadow-md transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-lg bg-orange-600 hover:border-orange-500 mr-4",
           )}
-          >
-          <Heart size={20} className="mr-2 " />
+        >
+          <Heart size={20} className="mr-2" />
           de la team !
         </Link>
       </div>
     </div>
   </>
+);
+
+const HeroCredibilityCounters = () => (
+  <div className="flex flex-wrap gap-6">
+    <div className="text-center">
+      <p className="text-3xl font-bold text-orange-500">200+</p>
+      <p className="text-sm text-white">Transformations</p>
+    </div>
+    <div className="text-center">
+      <p className="text-3xl font-bold text-orange-500">4.9/5</p>
+      <p className="text-sm text-white">Note Google</p>
+    </div>
+    <div className="text-center">
+      <p className="text-3xl font-bold text-orange-500">10 ans</p>
+      <p className="text-sm text-white">d'expérience</p>
+    </div>
+  </div>
+);
+
+const HeroReassuranceBadges = () => (
+  <div className="flex flex-wrap gap-3">
+    <Badge className="border-0 bg-white/90 text-gray-800 shadow-md hover:bg-white">
+      ✓ Diplômé BPJEPS
+    </Badge>
+    <Badge className="border-0 bg-white/90 text-gray-800 shadow-md hover:bg-white">
+      ✓ 1ère séance offerte
+    </Badge>
+    <Badge className="border-0 bg-white/90 text-gray-800 shadow-md hover:bg-white">
+      ✓ Satisfait ou remboursé 30j
+    </Badge>
+    <Badge className="border-0 bg-white/90 text-gray-800 shadow-md hover:bg-white">
+      ✓ Suivi 7j/7
+    </Badge>
+  </div>
 );
 
 const HeroReviews = () => (

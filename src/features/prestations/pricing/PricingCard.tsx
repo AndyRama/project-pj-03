@@ -39,17 +39,17 @@ export const PricingCard = (props: PricingCardProps) => {
       {props.isPopular ? (
         <div className="absolute inset-x-0 top-0 flex items-center justify-center">
           <Badge className="-translate-y-1/2 bg-orange-500 text-white">
-            Nouveauté
+            Populaire
           </Badge>
         </div>
       ) : null}
       <CardHeader className="flex flex-col items-center gap-1">
         <p className="text-center text-xl font-bold uppercase text-white">
-          Programme niveau
-        </p>
-        <p className="gap-1 text-center text-lg text-orange-500">
           {props.title}
         </p>
+        {/* <p className="gap-1 text-center text-lg text-orange-500">
+          
+        </p> */}
         <Separator className="bg-white" />
         <div className="flex items-end justify-center gap-2">
           <p className="text-2xl text-orange-500 md:text-3xl">

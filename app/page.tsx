@@ -104,7 +104,7 @@ export default function HomePage() {
               "Accès prioritaire et suivi renforcé.",
             ],
             cta: "Je démarre ma transformation",
-            ctaSubtitle: "Engagement 6 mois - Le plus populaire",
+            ctaSubtitle: "Engagement 6 mois",
             priceId: "prod_TCkXd4nuD0CAy2",
           },
           {
