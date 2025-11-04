@@ -34,7 +34,7 @@ const AboutJeremyImages = () => (
   <div>
     <div className="mb-6 overflow-hidden rounded-xl shadow-2xl">
       <Image
-        src="/images/jeremy-pro.jpg"
+        src="/images/jeremy5.jpg"
         alt="Jeremy Prat - Coach Sportif"
         width={600}
         height={800}
@@ -49,17 +49,17 @@ const AboutJeremyImages = () => (
 const AboutJeremyTransformation = () => (
   <div className="mt-6">
     <Typography className="mb-3 text-center text-sm text-gray-600">
-      Ma propre transformation il y a 12 ans
+      Ma propre transformation il y a 15 ans
     </Typography>
     <div className="grid grid-cols-2 gap-4">
       <TransformationImage
-        src="/images/jeremy-avant.jpg"
+        src="/images/jeremy2.jpg"
         alt="Jeremy avant"
         label="AVANT"
         labelColor="bg-red-500"
       />
       <TransformationImage
-        src="/images/jeremy-apres.jpg"
+        src="/images/jeremy4.jpg"
         alt="Jeremy après"
         label="APRÈS"
         labelColor="bg-green-500"
