@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
 import { EmailFormSection } from "@/features/email/EmailFormSection";
@@ -20,8 +21,8 @@ import { FAQSection } from "@/features/landing/FAQSection";
 import { PricingEbook } from "@/features/prestations/ebook/PricingSectionEbook";
 import TransformationCard from "@/features/landing/RefonteLanding/TransformationCard";
 import CardDescriptionImage from "@/features/landing/RefonteLanding/CardDescriptionImage";
-import Link from "next/link";
 import { ForWhoSection } from "@/features/landing/ForWhoSection";
+import {AboutJeremySection} from "@/features/landing/WhoIam"; 
 
 export default function HomePage() {
   return (
@@ -44,9 +45,9 @@ export default function HomePage() {
 
       <Hero />
 
-      <SectionDivider />
-
       <ForWhoSection />
+
+      <AboutJeremySection />
 
       <TransformationCard />
 
