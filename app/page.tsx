@@ -48,8 +48,6 @@ export default function HomePage() {
 
       <ForWhoSection />
 
-      <SectionDivider />
-
       <TransformationCard />
 
       <SectionDivider />
@@ -108,7 +106,7 @@ export default function HomePage() {
               "Communication WhatsApp & Email avec visio ou call chaque mois.",
               "Accès prioritaire et suivi renforcé.",
             ],
-            cta: "Je démarre ma transformation",
+            cta: "Je démarre mon programme",
             ctaSubtitle: "Engagement 6 mois",
             priceId: "prod_TCkXd4nuD0CAy2",
           },
@@ -117,7 +115,7 @@ export default function HomePage() {
             type: "monthly",
             id: "",
             link: "https://buy.stripe.com/28E4gB0IM3HB6YaeDR9AA00",
-            title: "TRANSFORMATION VIP - 12 mois",
+            title: "COMPETITION VIP - 12 mois",
             subtitle: "(12 × 150€ = 1 800€)",
             price: 150,
             barredPrice: 180,
