@@ -21,6 +21,7 @@ import { PricingEbook } from "@/features/prestations/ebook/PricingSectionEbook";
 import TransformationCard from "@/features/landing/RefonteLanding/TransformationCard";
 import CardDescriptionImage from "@/features/landing/RefonteLanding/CardDescriptionImage";
 import Link from "next/link";
+import { ForWhoSection } from "@/features/landing/ForWhoSection";
 
 export default function HomePage() {
   return (
@@ -42,6 +43,10 @@ export default function HomePage() {
       <LandingHeader />
 
       <Hero />
+
+      <SectionDivider />
+
+      <ForWhoSection />
 
       <SectionDivider />
 
