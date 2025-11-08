@@ -299,7 +299,7 @@ export default function HomePage() {
             <p className="text-orange-100">Plus que 48h pour en profiter !</p>
           </div>
           <Link href="/#begin">
-            <button className="rounded-lg bg-white px-12 py-4 text-xl font-bold text-orange-500 transition-all hover:scale-105 hover:bg-gray-100">
+            <button className="rounded-lg bg-white px-12 py-4 text-xl font-bold text-orange-700 transition-all hover:scale-105 hover:bg-gray-100">
               Commencer Ma Transformation Maintenant
             </button>
           </Link>

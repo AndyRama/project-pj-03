@@ -2,7 +2,6 @@ import { Typography } from "@/components/ui/typography";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-// using native anchor tags instead of next/link to avoid Next.js dependency
 
 export const ForWhoSection = () => {
   return (
