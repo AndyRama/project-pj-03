@@ -1,7 +1,7 @@
 import { env } from "@/lib/env";
 import { logger } from "@/lib/logger";
 import { stripe } from "@/lib/stripe";
-import { headers } from "next/dist/client/components/headers";
+import { headers } from "next/headers"
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import type Stripe from "stripe";
@@ -24,7 +24,7 @@ import {
  */
 export const POST = async (req: NextRequest) => {
   const body = await req.text();
-  const headerList = headers();
+  const headerList = await headers();
 
   const stripeSignature = headerList.get("stripe-signature");
 
