@@ -1,3 +1,6 @@
+/** @type {import('next').NextConfig} */
+const { withPlausibleProxy } = require("next-plausible");
+
 const nextConfig = {
   output: 'standalone',
   
@@ -10,7 +13,7 @@ const nextConfig = {
   },
   
   experimental: {
-    // optimizeCss: true, // ⚠️ COMMENTÉ temporairement
+    // optimizeCss: true, // Désactivé temporairement
   },
   
   compress: true,
