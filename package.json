@@ -69,6 +69,7 @@
     "next-plausible": "^3.12.5",
     "next-safe-action": "^7.10.8",
     "next-themes": "^0.3.0",
+    "nodemailer": "^7.0.11",
     "nprogress": "^0.2.0",
     "nuqs": "^1.20.0",
     "react": "^18.3.1",
@@ -130,6 +131,7 @@
     "@types/mdx": "^2.0.13",
     "@types/ms": "^2.1.0",
     "@types/node": "^20.19.25",
+    "@types/nodemailer": "^7.0.4",
     "@types/normalize-package-data": "^2.4.4",
     "@types/nprogress": "^0.2.3",
     "@types/prismjs": "^1.26.5",
@@ -160,5 +162,20 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^7.18.0",
     "unified": "^11.0.5"
+  },
+  "overrides": {
+    "react-email": {
+      "next": "15.1.9",
+      "esbuild": "0.25.12",
+      "glob": "10.5.0",
+      "@react-email/components": {
+        "@react-email/code-block": {
+          "prismjs": "1.30.0"
+        }
+      }
+    },
+    "@next/eslint-plugin-next": {
+      "glob": "10.5.0"
+    }
   }
 }
