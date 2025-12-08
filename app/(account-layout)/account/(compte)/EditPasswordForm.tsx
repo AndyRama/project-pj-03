@@ -33,7 +33,7 @@ export const EditPasswordForm = () => {
   return (
     <Form
       form={form}
-      onSubmit={async (v) => onSubmit(v)}
+      onSubmit={async (v: EditPasswordFormType) => onSubmit(v)}
       className="flex flex-col gap-4"
     >
       <FormField
