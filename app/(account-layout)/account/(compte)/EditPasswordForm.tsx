@@ -11,80 +11,100 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { InlineTooltip } from "@/components/ui/tooltip";
 import { SubmitButton } from "@/features/form/SubmitButton";
+import type { User } from "@prisma/client";
+import { useMutation } from "@tanstack/react-query";
+import { BadgeCheck } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { editPasswordAction } from "./edit-profile.action";
-import type { EditPasswordFormType } from "./edit-profile.schema";
-import { EditPasswordFormSchema } from "./edit-profile.schema";
+import { createVerifyEmailAction } from "../verify-email/verify-email.action";
+import { updateProfileAction } from "./edit-profile.action";
+import type { ProfileFormType } from "./edit-profile.schema";
+import { ProfileFormSchema } from "./edit-profile.schema";
 
-export const EditPasswordForm = () => {
-  const form = useForm<EditPasswordFormType>({
-    resolver: zodResolver(EditPasswordFormSchema),
+type EditProfileFormProps = {
+  defaultValues: User;
+};
+
+export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
+  const form = useForm<ProfileFormType>({
+    resolver: zodResolver(ProfileFormSchema),
     defaultValues: {
-      currentPassword: "",
-      newPassword: "",
-      confirmPassword: "",
+      name: defaultValues.name,
+      email: defaultValues.email,
     },
   });
+  
+  const router = useRouter();
 
-  const onSubmit = async (values: EditPasswordFormType) => {
-    const result = await editPasswordAction(values);
+  const updateProfileMutation = useMutation({
+    mutationFn: async (values: ProfileFormType) => {
+      const result = await updateProfileAction(values);
 
-    if (result?.serverError) {
-      toast.error(result.serverError);
-      return;
-    }
+      if (values.email !== defaultValues.email) {
+        await createVerifyEmailAction("");
+        toast.success(
+          "You have updated your email. We have sent you a new email verification link.",
+        );
+        router.push("/");
+        return;
+      }
 
-    toast.success("Password updated");
-    form.reset();
-  };
+      if (!result?.data) {
+        toast.error(result?.serverError);
+        return;
+      }
+
+      toast.success("Profile updated");
+      router.refresh();
+    },
+  });
 
   return (
     <Form
       form={form}
-      onSubmit={onSubmit}
+      onSubmit={async (v: ProfileFormType) => updateProfileMutation.mutateAsync(v)}
+      disabled={updateProfileMutation.isPending}
       className="flex flex-col gap-4"
     >
       <FormField
         control={form.control}
-        name="currentPassword"
+        name="name"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Current Password</FormLabel>
+            <FormLabel>Name</FormLabel>
             <FormControl>
-              <Input type="password" {...field} />
+              <Input placeholder="" {...field} value={field.value ?? ""} />
             </FormControl>
+
             <FormMessage />
           </FormItem>
         )}
       />
       <FormField
         control={form.control}
-        name="newPassword"
+        name="email"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>New Password</FormLabel>
+            <FormLabel className="flex items-center gap-1">
+              <span>Email</span>
+              {defaultValues.emailVerified ? (
+                <InlineTooltip title="Email verified. If you change your email, you will need to verify it again.">
+                  <BadgeCheck size={16} />
+                </InlineTooltip>
+              ) : null}
+            </FormLabel>
             <FormControl>
-              <Input type="password" {...field} />
+              <Input placeholder="" {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
         )}
       />
-      <FormField
-        control={form.control}
-        name="confirmPassword"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Confirm new Password</FormLabel>
-            <FormControl>
-              <Input type="password" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-      <SubmitButton className="w-fit self-end">Save</SubmitButton>
+      <SubmitButton className="w-fit self-end" size="sm">
+        Save
+      </SubmitButton>
     </Form>
   );
 };
