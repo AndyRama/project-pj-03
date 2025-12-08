@@ -3,7 +3,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
-  // Form,
   FormControl,
   FormField,
   FormItem,
@@ -108,7 +107,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
         size="sm"
         disabled={updateProfileMutation.isPending}
       >
-        save
+        Save
       </SubmitButton>
     </form>
   );
