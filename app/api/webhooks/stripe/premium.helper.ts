@@ -66,17 +66,28 @@ export const getPlanFromLineItem = async (
     | Stripe.InvoiceLineItem[]
     | Stripe.SubscriptionItem[],
 ): Promise<UserPlan> => {
-  if (!lineItems) {
+  if (!lineItems || lineItems.length === 0) {
     return "FREE";
   }
 
-  const productId = lineItems[0].price?.product;
+  const firstItem = lineItems[0];
+  
+  // Gérer les différents types de line items
+  let productId: string | Stripe.Product | Stripe.DeletedProduct | null = null;
 
-  if (!productId) {
+  if ('price' in firstItem && firstItem.price) {
+    // LineItem ou SubscriptionItem
+    productId = firstItem.price.product;
+  } else if ('plan' in firstItem && firstItem.plan) {
+    // InvoiceLineItem
+    productId = firstItem.plan.product;
+  }
+
+  if (!productId || typeof productId !== 'string') {
     return "FREE";
   }
 
-  const product = await stripe.products.retrieve(productId as string);
+  const product = await stripe.products.retrieve(productId);
 
   const safePlan = PlanSchema.safeParse(product.metadata.plan);
 
