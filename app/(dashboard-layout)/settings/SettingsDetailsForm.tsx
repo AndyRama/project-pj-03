@@ -1,5 +1,7 @@
 "use client";
 
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Card,
   CardContent,
@@ -12,7 +14,6 @@ import {
   FormField,
   FormItem,
   FormMessage,
-  useZodForm,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { FormUnsavedBar } from "@/features/form/FormUnsavedBar";
@@ -30,10 +31,11 @@ type ProductFormProps = {
 };
 
 export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
-  const form = useZodForm({
-    schema: SettingsDetailsFormSchema,
+  const form = useForm<SettingsDetailsFormType>({
+    resolver: zodResolver(SettingsDetailsFormSchema),
     defaultValues,
   });
+
   const router = useRouter();
 
   const mutation = useMutation({
@@ -53,7 +55,7 @@ export const SettingsDetailsForm = ({ defaultValues }: ProductFormProps) => {
   return (
     <FormUnsavedBar
       form={form}
-      onSubmit={async (v) => mutation.mutateAsync(v)}
+      onSubmit={async (v: SettingsDetailsFormType) => mutation.mutateAsync(v)}
       className="flex w-full flex-col gap-6 lg:gap-8"
     >
       <Card className="p-4">
