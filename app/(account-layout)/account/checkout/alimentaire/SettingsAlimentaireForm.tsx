@@ -1,5 +1,7 @@
 "use client";
 
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Card,
   CardContent,
@@ -13,7 +15,6 @@ import {
   FormItem,
   FormMessage,
   FormLabel,
-  useZodForm,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -38,10 +39,11 @@ export const SettingsAlimentaireForm = ({
   userId, 
   profileId 
 }: ProductFormProps) => {
-  const form = useZodForm({
-    schema: SettingsAlimentaireFormSchema,
+  const form = useForm<SettingsAlimentaireFormType>({
+    resolver: zodResolver(SettingsAlimentaireFormSchema),
     defaultValues,
   });
+
   const router = useRouter();
 
   const mutation = useMutation({
@@ -93,7 +95,7 @@ export const SettingsAlimentaireForm = ({
     <div className="mx-auto max-w-4xl">
       <FormUnsavedBar
         form={form}
-        onSubmit={async (v) => mutation.mutateAsync(v)}
+        onSubmit={async (v: SettingsAlimentaireFormType) => mutation.mutateAsync(v)}
         className="flex w-full flex-col gap-6"
       >
         {/* Informations personnelles */}
