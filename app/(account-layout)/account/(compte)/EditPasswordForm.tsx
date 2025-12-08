@@ -1,5 +1,7 @@
 "use client";
 
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
   FormControl,
@@ -7,7 +9,6 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-  useZodForm,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { SubmitButton } from "@/features/form/SubmitButton";
@@ -17,23 +18,31 @@ import type { EditPasswordFormType } from "./edit-profile.schema";
 import { EditPasswordFormSchema } from "./edit-profile.schema";
 
 export const EditPasswordForm = () => {
-  const form = useZodForm({
-    schema: EditPasswordFormSchema,
+  const form = useForm<EditPasswordFormType>({
+    resolver: zodResolver(EditPasswordFormSchema),
+    defaultValues: {
+      currentPassword: "",
+      newPassword: "",
+      confirmPassword: "",
+    },
   });
 
   const onSubmit = async (values: EditPasswordFormType) => {
     const result = await editPasswordAction(values);
+
     if (result?.serverError) {
       toast.error(result.serverError);
       return;
     }
+
     toast.success("Password updated");
+    form.reset();
   };
 
   return (
     <Form
       form={form}
-      onSubmit={async (v: EditPasswordFormType) => onSubmit(v)}
+      onSubmit={onSubmit}
       className="flex flex-col gap-4"
     >
       <FormField
@@ -45,7 +54,6 @@ export const EditPasswordForm = () => {
             <FormControl>
               <Input type="password" {...field} />
             </FormControl>
-
             <FormMessage />
           </FormItem>
         )}
@@ -59,7 +67,6 @@ export const EditPasswordForm = () => {
             <FormControl>
               <Input type="password" {...field} />
             </FormControl>
-
             <FormMessage />
           </FormItem>
         )}
@@ -73,12 +80,10 @@ export const EditPasswordForm = () => {
             <FormControl>
               <Input type="password" {...field} />
             </FormControl>
-
             <FormMessage />
           </FormItem>
         )}
       />
-
       <SubmitButton className="w-fit self-end">Save</SubmitButton>
     </Form>
   );
