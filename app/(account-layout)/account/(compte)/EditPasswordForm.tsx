@@ -10,59 +10,35 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { InlineTooltip } from "@/components/ui/tooltip";
 import { SubmitButton } from "@/features/form/SubmitButton";
-import type { User } from "@prisma/client";
-import { useMutation } from "@tanstack/react-query";
-import { BadgeCheck } from "lucide-react";
-import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { createVerifyEmailAction } from "../verify-email/verify-email.action";
-import { updateProfileAction } from "./edit-profile.action";
-import type { ProfileFormType } from "./edit-profile.schema";
-import { ProfileFormSchema } from "./edit-profile.schema";
+import { editPasswordAction } from "./edit-profile.action";
+import type { EditPasswordFormType } from "./edit-profile.schema";
+import { EditPasswordFormSchema } from "./edit-profile.schema";
 
-type EditProfileFormProps = {
-  defaultValues: User;
-};
-
-export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
-  const form = useForm<ProfileFormType>({
-    resolver: zodResolver(ProfileFormSchema),
+export const EditPasswordForm = () => {
+  const form = useForm<EditPasswordFormType>({
+    resolver: zodResolver(EditPasswordFormSchema),
     defaultValues: {
-      name: defaultValues.name,
-      email: defaultValues.email,
-    },
-  });
-  
-  const router = useRouter();
-
-  const updateProfileMutation = useMutation({
-    mutationFn: async (values: ProfileFormType) => {
-      const result = await updateProfileAction(values);
-
-      if (values.email !== defaultValues.email) {
-        await createVerifyEmailAction("");
-        toast.success(
-          "You have updated your email. We have sent you a new email verification link.",
-        );
-        router.push("/");
-        return;
-      }
-
-      if (!result?.data) {
-        toast.error(result?.serverError);
-        return;
-      }
-
-      toast.success("Profile updated");
-      router.refresh();
+      currentPassword: "",
+      newPassword: "",
+      confirmPassword: "",
     },
   });
 
-  const handleFormSubmit = form.handleSubmit((values: ProfileFormType) => {
-    updateProfileMutation.mutateAsync(values);
-  });
+  const onSubmit = async (values: EditPasswordFormType) => {
+    const result = await editPasswordAction(values);
+
+    if (result?.serverError) {
+      toast.error(result.serverError);
+      return;
+    }
+
+    toast.success("Password updated");
+    form.reset();
+  };
+
+  const handleFormSubmit = form.handleSubmit(onSubmit);
 
   return (
     <form
@@ -71,12 +47,12 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
     >
       <FormField
         control={form.control}
-        name="name"
+        name="currentPassword"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Name</FormLabel>
+            <FormLabel>Current Password</FormLabel>
             <FormControl>
-              <Input placeholder="" {...field} value={field.value ?? ""} />
+              <Input type="password" {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -84,31 +60,31 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
       />
       <FormField
         control={form.control}
-        name="email"
+        name="newPassword"
         render={({ field }) => (
           <FormItem>
-            <FormLabel className="flex items-center gap-1">
-              <span>Email</span>
-              {defaultValues.emailVerified ? (
-                <InlineTooltip title="Email verified. If you change your email, you will need to verify it again.">
-                  <BadgeCheck size={16} />
-                </InlineTooltip>
-              ) : null}
-            </FormLabel>
+            <FormLabel>New Password</FormLabel>
             <FormControl>
-              <Input placeholder="" {...field} />
+              <Input type="password" {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
         )}
       />
-      <SubmitButton 
-        className="w-fit self-end" 
-        size="sm"
-        disabled={updateProfileMutation.isPending}
-      >
-        save
-      </SubmitButton>
+      <FormField
+        control={form.control}
+        name="confirmPassword"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Confirm new Password</FormLabel>
+            <FormControl>
+              <Input type="password" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+      <SubmitButton className="w-fit self-end">Save</SubmitButton>
     </form>
   );
 };
