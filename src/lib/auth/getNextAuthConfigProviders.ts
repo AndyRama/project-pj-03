@@ -3,7 +3,8 @@ import MagicLinkMail from "@email/MagicLinkEmail";
 import type { NextAuthConfig } from "next-auth";
 import GitHub from "next-auth/providers/github";
 import Google from "next-auth/providers/google";
-import Resend from "next-auth/providers/resend";
+import Email from "next-auth/providers/email"; // ✅ Changé de Resend à Email
+import { Resend } from "resend"; // ✅ Ajouté pour utiliser Resend manuellement
 import { env } from "../env";
 import { logger } from "../logger";
 import { sendEmail } from "../mail/sendEmail";
@@ -11,10 +12,13 @@ import { getCredentialsProvider } from "./credentials-provider";
 
 type Providers = NonNullable<NextAuthConfig["providers"]>;
 
+// ✅ Initialiser Resend en dehors du provider
+const resend = new Resend(env.RESEND_API_KEY);
+
 export const getNextAuthConfigProviders = (): Providers => {
   const providers: Providers = [
-    Resend({
-      apiKey: env.RESEND_API_KEY,
+    Email({ // ✅ Utiliser Email provider au lieu de Resend
+      from: SiteConfig.email.from,
       sendVerificationRequest: async ({ identifier: email, url }) => {
         const result = await sendEmail({
           from: SiteConfig.email.from,
@@ -26,7 +30,7 @@ export const getNextAuthConfigProviders = (): Providers => {
         });
 
         if (result.error) {
-          logger.error("Auth Resend Provider Error", result.error);
+          logger.error("Auth Email Provider Error", result.error);
           throw new Error(`Failed to send email: ${result.error}`);
         }
       },
