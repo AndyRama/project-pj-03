@@ -17,7 +17,7 @@ import {
   useForm,
   useFormContext,
 } from "react-hook-form";
-import type { TypeOf, ZodSchema } from "zod";
+import type { z } from "zod";
 import { Label } from "./label";
 
 type FormProps<T extends FieldValues> = Omit<
@@ -182,7 +182,7 @@ const FormMessage = React.forwardRef<
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, children, ...props }, ref) => {
   const { error, formMessageId } = useFormField();
-  const body = error ? String(error.message) : children;
+  const body = error ? String(error?.message) : children;
 
   if (!body) {
     return null;
@@ -201,21 +201,22 @@ const FormMessage = React.forwardRef<
 });
 FormMessage.displayName = "FormMessage";
 
-type UseZodFormProps<Z extends ZodSchema> = Exclude<
-  UseFormProps<TypeOf<Z>>,
+type UseZodFormProps<T extends z.ZodType<any, any, any>> = Omit<
+  UseFormProps<z.infer<T>>,
   "resolver"
 > & {
-  schema: Z;
+  schema: T;
 };
 
-const useZodForm = <Z extends ZodSchema>({
+const useZodForm = <T extends z.ZodType<any, any, any>>({
   schema,
   ...formProps
-}: UseZodFormProps<Z>) =>
-  useForm({
+}: UseZodFormProps<T>) => {
+  return useForm<z.infer<T>>({
     ...formProps,
     resolver: zodResolver(schema),
   });
+};
 
 export {
   Form,
