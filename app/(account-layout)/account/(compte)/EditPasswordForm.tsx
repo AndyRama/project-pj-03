@@ -107,7 +107,7 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
         size="sm"
         disabled={updateProfileMutation.isPending}
       >
-        Save
+        save
       </SubmitButton>
     </form>
   );
