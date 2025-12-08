@@ -1,13 +1,13 @@
 "use client";
 
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import {
-  Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
-  useZodForm,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { InlineTooltip } from "@/components/ui/tooltip";
@@ -27,10 +27,14 @@ type EditProfileFormProps = {
 };
 
 export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
-  const form = useZodForm({
-    schema: ProfileFormSchema,
-    defaultValues: defaultValues,
+  const form = useForm<ProfileFormType>({
+    resolver: zodResolver(ProfileFormSchema),
+    defaultValues: {
+      name: defaultValues.name,
+      email: defaultValues.email,
+    },
   });
+  
   const router = useRouter();
 
   const updateProfileMutation = useMutation({
@@ -56,11 +60,13 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
     },
   });
 
+  const handleFormSubmit = form.handleSubmit((values: ProfileFormType) => {
+    updateProfileMutation.mutateAsync(values);
+  });
+
   return (
-    <Form
-      form={form}
-      onSubmit={async (v) => updateProfileMutation.mutateAsync(v)}
-      disabled={updateProfileMutation.isPending}
+    <form
+      onSubmit={handleFormSubmit}
       className="flex flex-col gap-4"
     >
       <FormField
@@ -72,7 +78,6 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
             <FormControl>
               <Input placeholder="" {...field} value={field.value ?? ""} />
             </FormControl>
-
             <FormMessage />
           </FormItem>
         )}
@@ -97,9 +102,13 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
           </FormItem>
         )}
       />
-      <SubmitButton className="w-fit self-end" size="sm">
+      <SubmitButton 
+        className="w-fit self-end" 
+        size="sm"
+        disabled={updateProfileMutation.isPending}
+      >
         Save
       </SubmitButton>
-    </Form>
+    </form>
   );
 };
