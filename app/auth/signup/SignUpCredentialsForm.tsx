@@ -1,14 +1,14 @@
 "use client";
 
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import {
-  Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
-  useZodForm,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useMutation } from "@tanstack/react-query";
@@ -19,8 +19,14 @@ import type { LoginCredentialsFormType } from "./signup.schema";
 import { LoginCredentialsFormScheme } from "./signup.schema";
 
 export const SignUpCredentialsForm = () => {
-  const form = useZodForm({
-    schema: LoginCredentialsFormScheme,
+  const form = useForm<LoginCredentialsFormType>({
+    resolver: zodResolver(LoginCredentialsFormScheme),
+    defaultValues: {
+      name: "",
+      email: "",
+      password: "",
+      verifyPassword: "",
+    },
   });
 
   const submitMutation = useMutation({
@@ -35,7 +41,6 @@ export const SignUpCredentialsForm = () => {
       await signIn("credentials", {
         email: values.email,
         password: values.password,
-
         callbackUrl: `${window.location.origin}/`,
       });
     },
@@ -52,12 +57,11 @@ export const SignUpCredentialsForm = () => {
     return submitMutation.mutateAsync(values);
   }
 
+  const handleFormSubmit = form.handleSubmit(onSubmit);
+
   return (
-    <Form
-      form={form}
-      onSubmit={async (values) => {
-        return onSubmit(values);
-      }}
+    <form
+      onSubmit={handleFormSubmit}
       className="max-w-lg space-y-4"
     >
       <FormField
@@ -113,9 +117,9 @@ export const SignUpCredentialsForm = () => {
         )}
       />
 
-      <Button type="submit" className="w-full">
-        Submit
+      <Button type="submit" className="w-full" disabled={submitMutation.isPending}>
+        {submitMutation.isPending ? "Creating account..." : "Submit"}
       </Button>
-    </Form>
+    </form>
   );
 };

@@ -1,14 +1,14 @@
 "use client";
 
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import {
-  Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
-  useZodForm,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Typography } from "@/components/ui/typography";
@@ -25,9 +25,14 @@ const LoginCredentialsFormScheme = z.object({
 type LoginCredentialsFormType = z.infer<typeof LoginCredentialsFormScheme>;
 
 export const SignInCredentialsAndMagicLinkForm = () => {
-  const form = useZodForm({
-    schema: LoginCredentialsFormScheme,
+  const form = useForm<LoginCredentialsFormType>({
+    resolver: zodResolver(LoginCredentialsFormScheme),
+    defaultValues: {
+      email: "",
+      password: "",
+    },
   });
+
   const searchParams = useSearchParams();
   const [isUsingCredentials, setIsUsingCredentials] = useLocalStorage(
     "sign-in-with-credentials",
@@ -41,13 +46,18 @@ export const SignInCredentialsAndMagicLinkForm = () => {
         password: values.password,
         callbackUrl: searchParams.get("callbackUrl") ?? undefined,
       });
-
-      
+    } else {
+      await signIn("email", {
+        email: values.email,
+        callbackUrl: searchParams.get("callbackUrl") ?? undefined,
+      });
     }
   }
 
+  const handleFormSubmit = form.handleSubmit(onSubmit);
+
   return (
-    <Form form={form} onSubmit={onSubmit} className="max-w-lg space-y-4">
+    <form onSubmit={handleFormSubmit} className="max-w-lg space-y-4">
       <FormField
         control={form.control}
         name="email"
@@ -110,6 +120,6 @@ export const SignInCredentialsAndMagicLinkForm = () => {
           </Typography>
         </Typography>
       )}
-    </Form>
+    </form>
   );
 };
