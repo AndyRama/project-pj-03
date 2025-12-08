@@ -61,11 +61,13 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
     },
   });
 
+  const handleFormSubmit = form.handleSubmit((values: ProfileFormType) => {
+    updateProfileMutation.mutateAsync(values);
+  });
+
   return (
-    <Form
-      form={form}
-      onSubmit={async (v: ProfileFormType) => updateProfileMutation.mutateAsync(v)}
-      disabled={updateProfileMutation.isPending}
+    <form
+      onSubmit={handleFormSubmit}
       className="flex flex-col gap-4"
     >
       <FormField
@@ -77,7 +79,6 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
             <FormControl>
               <Input placeholder="" {...field} value={field.value ?? ""} />
             </FormControl>
-
             <FormMessage />
           </FormItem>
         )}
@@ -102,9 +103,13 @@ export const EditProfileForm = ({ defaultValues }: EditProfileFormProps) => {
           </FormItem>
         )}
       />
-      <SubmitButton className="w-fit self-end" size="sm">
+      <SubmitButton 
+        className="w-fit self-end" 
+        size="sm"
+        disabled={updateProfileMutation.isPending}
+      >
         Save
       </SubmitButton>
-    </Form>
+    </form>
   );
 };
