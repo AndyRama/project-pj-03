@@ -58,7 +58,7 @@ export default async function RoutePage(props: PageParams<{}>) {
           {activeTags && activeTags.length > 0 && (
             <LayoutTitle>
               <LayoutDescription className="text-orange-500">
-                Filtré par : {activeTags.join(", ")}
+                {/* Filtré par : {activeTags.join(", ")} */}
               </LayoutDescription>
             </LayoutTitle>
           )}
