@@ -43,7 +43,7 @@ html.dark {
     overflow: auto;
     background: #161b22;
     border: 2px solid #161b22;
-    @apply ring ring-2 ring-primary/80;
+    @apply ring-2 ring-primary/80;
   }
   :not(pre) > code[class*="language-"] {
     padding: 0.1em 0.3em;
@@ -181,7 +181,7 @@ html.light {
     overflow: auto;
     background: #f6f8fa;
     border: 2px solid #f6f8fa;
-    @apply ring ring-2 ring-primary/80;
+    @apply ring-2 ring-primary/80;
   }
   :not(pre) > code[class*="language-"] {
     padding: 0.1em 0.3em;

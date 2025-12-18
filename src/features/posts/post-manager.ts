@@ -94,4 +94,3 @@ export async function getLastPost(): Promise<Post | null> {
   const posts = await getPosts();
   return posts.length > 0 ? posts[posts.length - 1] : null;
 }
-
