@@ -12,7 +12,7 @@ export function Page404() {
         <Typography variant="code">404</Typography>
         <Typography variant="h1">Page non trouvée</Typography>
         <Typography>
-          Désolé, nous n'avons pas pu trouver la page que vous recherchez.
+          Désolé, nous n'avons pas pu trouver la page que vous recherchez maintenant.
         </Typography>
       </div>
       <div className="flex items-center gap-4">
