@@ -9,7 +9,7 @@ export const getServerUrl = () => {
   }
 
   // If we are in production, we return the production URL.
-  if (process.env.VERCEL_ENV === "production") {
+  if (process.env.NODE_ENV === "production") {
     return SiteConfig.prodUrl;
   }
 

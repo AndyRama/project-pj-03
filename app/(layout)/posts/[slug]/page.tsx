@@ -64,7 +64,7 @@ export default async function RoutePage(props: PostParams) {
 
   if (
     post.attributes.status === "draft" &&
-    process.env.VERCEL_ENV === "production"
+    process.env.NODE_ENV === "production"
   ) {
     logger.warn(`Post "${post.attributes.title}" is a draft`);
     notFound();
