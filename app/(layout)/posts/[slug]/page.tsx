@@ -17,23 +17,27 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-// import { calculateReadingTime } from "../../../../src/features/posts/calculate-reading-time";
-import type { PostParams } from "../../../../src/features/posts/post-manager";
-import {
-  getCurrentPost,
-  getPosts,
-} from "../../../../src/features/posts/post-manager";
 import CardCategorie from "@/features/landing/CardCategorie";
 import RecentPosts from "@/features/landing/RecentPosts";
 import { EmailFormSection } from "@/features/email/EmailFormSection";
+import type { PostParams } from "@/features/posts/post-manager";
+import {
+  getCurrentPost,
+  getPosts,
+} from "@/features/posts/post-manager";
 
 export async function generateMetadata({
   params,
 }: PostParams): Promise<Metadata> {
-  const post = await getCurrentPost(params.slug);
+  // Await params before accessing
+  const { slug } = await params;
+  const post = await getCurrentPost(slug);
 
   if (!post) {
-    notFound();
+    return {
+      title: "Post not found",
+      description: "The requested post could not be found",
+    };
   }
 
   return {
@@ -56,12 +60,16 @@ export async function generateStaticParams() {
 }
 
 export default async function RoutePage(props: PostParams) {
-  const post = await getCurrentPost(props.params.slug);
+  // Await params before accessing
+  const params = await props.params;
+  const post = await getCurrentPost(params.slug);
 
   if (!post) {
+    logger.error(`Post not found for slug: ${params.slug}`);
     notFound();
   }
 
+  // Check draft status
   if (
     post.attributes.status === "draft" &&
     process.env.NODE_ENV === "production"
@@ -70,8 +78,8 @@ export default async function RoutePage(props: PostParams) {
     notFound();
   }
 
-  // Assuming tags are in post.attributes.tags
-  const postTags = post.attributes.tags;
+  // Get post tags
+  const postTags = post.attributes.tags || [];
 
   return (
     <>
@@ -92,12 +100,11 @@ export default async function RoutePage(props: PostParams) {
           </LayoutDescription>
 
           <LayoutDescription className="mt-4 text-center drop-shadow-sm">
-            {postTags?.length ? (
+            {postTags.length > 0 ? (
               <div className="flex flex-wrap justify-center gap-2 p-4">
                 {postTags.map((tag: string, index: number) => (
                   <span key={tag}>
                     <Link
-                      key={tag}
                       href={{
                         pathname: `/posts`,
                         query: {
@@ -112,13 +119,13 @@ export default async function RoutePage(props: PostParams) {
                         {tag}
                       </Badge>
                     </Link>
-                    {index < postTags.length - 1 ? ` | ` : ``}
+                    {index < postTags.length - 1 && ` | `}
                   </span>
                 ))}
               </div>
             ) : (
-              <Typography variant="link" as={Link} href="#">
-                aucune categories
+              <Typography variant="muted">
+                Aucune catégorie
               </Typography>
             )}
           </LayoutDescription>
@@ -131,15 +138,15 @@ export default async function RoutePage(props: PostParams) {
           }}
           className="h-[400px] overflow-hidden rounded-lg md:h-[600px]"
         >
-          {post.attributes.status === "draft" ? (
+          {post.attributes.status === "draft" && (
             <Badge className="w-fit" variant="secondary">
               Draft
             </Badge>
-          ) : null}
+          )}
         </LayoutHeader>
         <Separator />
         <LayoutContent>
-          <div className="justify-center md:flex md:flex-row ">
+          <div className="justify-center md:flex md:flex-row">
             <div className="flex-col">
               <CardCategorie className="mb-10 hidden h-[400px] md:flex" />
             </div>
@@ -151,7 +158,7 @@ export default async function RoutePage(props: PostParams) {
         </LayoutContent>
         <div className="flex flex-col items-center gap-2">
           <Typography variant="p" className="max-w-xl font-bold text-orange-500">
-            Recentes
+            Récentes
           </Typography>
           <Typography variant="h2" className="max-w-xl">
             Blog
