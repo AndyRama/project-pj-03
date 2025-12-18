@@ -15,7 +15,7 @@ export default async function RouteLayout(props: LayoutParams<{}>) {
   // Check if user has SUPER_ADMIN plan
   const isSuperAdmin = user.plan === "SUPER_ADMIN";
   
-  // If not SUPER_ADMIN, redirect to account page
+  // If not SUPER_ADMIN, redirect to account
   if (!isSuperAdmin) {
     redirect("/account");
   }
