@@ -49,7 +49,7 @@ export const PostCard = (props: PostCardProps) => {
           <Link href={`/posts/${props.post.slug}`} className="rounded-[5px] border border-gray-600 px-4 text-white hover:border-orange-500 xl:px-8">
             Lire l&apos;article 
           </Link>
-          {/* <span className="text-orange-500 ">Lecture 5 min</span> */}
+          <span className="text-orange-500 ">Lecture 5 min</span>
         </div>
       </CardContent>
     </Card>

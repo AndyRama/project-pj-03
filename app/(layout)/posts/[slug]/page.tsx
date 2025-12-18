@@ -17,7 +17,7 @@ import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-// import { calculateReadingTime } from "../../../../src/features/posts/calculate-reading-time";
+import { calculateReadingTime } from "../../../../src/features/posts/calculate-reading-time";
 import type { PostParams } from "../../../../src/features/posts/post-manager";
 import {
   getCurrentPost,
