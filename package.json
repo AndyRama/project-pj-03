@@ -160,5 +160,8 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^7.18.0",
     "unified": "^11.0.5"
+  },
+  "engines": {
+    "node": ">=20.9.0"
   }
 }
