@@ -7,7 +7,7 @@ type PromoModalProps = {
 
 const PromoModal = ({ isOpen, onClose }: PromoModalProps) => {
   const [copied, setCopied] = React.useState(false);
-  const promoCode = "KKPETS3";
+  const promoCode = "CODEPROMO";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(promoCode);
