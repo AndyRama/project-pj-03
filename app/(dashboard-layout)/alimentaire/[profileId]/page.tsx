@@ -1,3 +1,6 @@
+// Fichier: app/alimentaire/[profileId]/page.tsx
+// Page de détails d'un profil alimentaire - Design noir/orange optimisé
+
 import {
   Layout,
   LayoutContent,
@@ -18,6 +21,7 @@ import { redirect, notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import type { PageParams } from "@/types/next";
+import { MeasurementChart } from "./MeasurementChart";
 
 type AlimentaireDetailPageProps = PageParams<{
   profileId: string;
@@ -75,28 +79,61 @@ export default async function AlimentaireDetailPage({
         </LayoutHeader>
 
         <LayoutContent className="space-y-6">
-          {/* Informations générales */}
-          <Card className="border-orange-500">
-            <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
-              <CardTitle className="text-orange-500">Informations générales</CardTitle>
-            </CardHeader>
-            <CardContent className="pt-6">
-              <div className="grid gap-6 md:grid-cols-3">
-                <InfoItem label="Âge" value={`${profile.age} ans`} />
-                <InfoItem label="Profession" value={profile.profession || 'N/A'} />
-                <InfoItem label="Date d'inscription" value={new Date(profile.createdAt).toLocaleDateString('fr-FR')} />
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Pathologie */}
-          {profile.pathology && (
-            <Card className="border-orange-500">
+          {/* Première ligne : Infos générales + Graphique */}
+          <div className="grid gap-6 lg:grid-cols-3">
+            {/* Informations générales - 2 colonnes */}
+            <Card className="border-orange-500 lg:col-span-2">
               <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
-                <CardTitle className="text-orange-500">Pathologie / Conditions médicales</CardTitle>
+                <CardTitle className="text-orange-500">Informations générales</CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
-                <p className="whitespace-pre-wrap text-muted-foreground">{profile.pathology}</p>
+                <div className="grid gap-6 md:grid-cols-3">
+                  <InfoItem label="Âge" value={`${profile.age} ans`} />
+                  <InfoItem label="Profession" value={profile.profession || 'N/A'} />
+                  <InfoItem label="Date d'inscription" value={new Date(profile.createdAt).toLocaleDateString('fr-FR')} />
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Graphique - 1 colonne */}
+            <Card className="border-orange-500">
+              <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
+                <CardTitle className="text-orange-500">Répartition</CardTitle>
+              </CardHeader>
+              <CardContent className="pt-6">
+                <MeasurementChart
+                  leftArm={profile.leftArm}
+                  rightArm={profile.rightArm}
+                  shoulders={profile.shoulders}
+                  chest={profile.chest}
+                  waist={profile.waist}
+                  glutes={profile.glutes}
+                />
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Pathologie + Sommeil combinés */}
+          {(profile.pathology || profile.sleepHours) && (
+            <Card className="border-orange-500">
+              <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
+                <CardTitle className="text-orange-500">Pathologie & Sommeil</CardTitle>
+              </CardHeader>
+              <CardContent className="pt-6">
+                <div className="grid gap-6 md:grid-cols-2">
+                  {profile.pathology && (
+                    <div>
+                      <p className="mb-2 text-sm font-medium text-muted-foreground">Pathologie / Conditions médicales</p>
+                      <p className="whitespace-pre-wrap text-sm">{profile.pathology}</p>
+                    </div>
+                  )}
+                  {profile.sleepHours && (
+                    <div>
+                      <p className="mb-2 text-sm font-medium text-muted-foreground">Habitudes de sommeil</p>
+                      <p className="whitespace-pre-wrap text-sm">{profile.sleepHours}</p>
+                    </div>
+                  )}
+                </div>
               </CardContent>
             </Card>
           )}
@@ -141,18 +178,6 @@ export default async function AlimentaireDetailPage({
               </div>
             </CardContent>
           </Card>
-
-          {/* Sommeil */}
-          {profile.sleepHours && (
-            <Card className="border-orange-500">
-              <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
-                <CardTitle className="text-orange-500">Habitudes de sommeil</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-6">
-                <p className="whitespace-pre-wrap text-muted-foreground">{profile.sleepHours}</p>
-              </CardContent>
-            </Card>
-          )}
 
           {/* Dernière mise à jour */}
           <div className="text-center text-sm text-muted-foreground">
