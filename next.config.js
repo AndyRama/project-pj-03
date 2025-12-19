@@ -11,7 +11,6 @@ const nextConfig = {
 };
 
 module.exports = {
-  output: 'standalone', 
   experimental: {
     optimizeCss: true, // Active l'optimisation CSS
   },

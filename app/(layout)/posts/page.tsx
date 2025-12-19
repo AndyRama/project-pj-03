@@ -53,8 +53,9 @@ export default async function RoutePage(props: PageParams<{}>) {
         title="Derniers articles"
         subTitle="Mon blog"
       />
-      <Layout>
-        <LayoutHeader>
+      <Layout>        
+        {/* Section des tags */}
+        <LayoutContent className="content mx-auto max-w-7xl flex-wrap items-center gap-2 px-2">
           {activeTags && activeTags.length > 0 && (
             <LayoutTitle>
               <LayoutDescription className="text-orange-500">
@@ -62,10 +63,6 @@ export default async function RoutePage(props: PageParams<{}>) {
               </LayoutDescription>
             </LayoutTitle>
           )}
-        </LayoutHeader>
-        
-        {/* Section des tags */}
-        <LayoutContent className="content mx-auto max-w-7xl flex-wrap items-center gap-2 px-2">
           {/* Bouton "Tous" pour réinitialiser les filtres */}
           <Link
             href={{
