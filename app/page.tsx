@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -22,9 +23,11 @@ import { PricingEbook } from "@/features/prestations/ebook/PricingSectionEbook";
 import TransformationCard from "@/features/landing/RefonteLanding/TransformationCard";
 import CardDescriptionImage from "@/features/landing/RefonteLanding/CardDescriptionImage";
 import { ForWhoSection } from "@/features/landing/ForWhoSection";
-// import {AboutJeremySection} from "@/features/landing/WhoIam"; 
+import PromoModal from "@/features/landing/Promodal"; 
 
 export default function HomePage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <motion.div
       className="relative flex h-fit flex-col bg-background text-foreground"
@@ -291,20 +294,26 @@ export default function HomePage() {
             Rejoignez plus de 500 personnes qui ont déjà transformé leur vie
             avec mes programmes
           </Typography>
-
           <div className="mb-8 inline-block rounded-xl bg-white/10 p-6 backdrop-blur-sm">
             <p className="font-semibold text-white">
-              ⏰ Offre limitée : -50€ sur tous les programmes
+              ⏰ Offre limitée : -80€ sur les programmes STARTER et PREMIUM
             </p>
-            <p className="text-orange-100">Plus que 48h pour en profiter !</p>
+            <p className="text-orange-100">Plus que 22j pour en profiter !</p>
           </div>
-          <Link href="/#begin">
-            <button className="rounded-lg bg-white px-12 py-4 text-xl font-bold text-orange-700 transition-all hover:scale-105 hover:bg-gray-100">
-              Commencer Ma Transformation Maintenant
-            </button>
-          </Link>
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="rounded-lg bg-white px-12 py-4 text-xl font-bold text-orange-700 transition-all hover:scale-105 hover:bg-gray-100"
+          >
+            Commencer Ma Transformation Maintenant
+          </button>
         </div>
       </section>
+
+      {/* Modal */}
+      <PromoModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
 
       <SectionDivider />
 
