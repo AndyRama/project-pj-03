@@ -8,7 +8,6 @@ import {
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -17,7 +16,7 @@ import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth/helper";
 import { redirect, notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, User, Activity, Ruler, Moon, Calendar } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import type { PageParams } from "@/types/next";
 
 type AlimentaireDetailPageProps = PageParams<{
@@ -46,7 +45,6 @@ export default async function AlimentaireDetailPage({
         select: {
           name: true,
           email: true,
-          image: true,
         },
       },
     },
@@ -57,146 +55,88 @@ export default async function AlimentaireDetailPage({
   }
 
   return (
-    <div className="mx-auto max-w-6xl p-4">
+    <div className="mx-auto max-w-7xl p-4">
       <Layout>
         <LayoutHeader>
           <div className="flex items-center gap-4">
             <Link href="/alimentaire">
               <Button variant="outline" size="sm" className="gap-2">
-                <ArrowLeft className="h-4 w-4" />
+                <ArrowLeft className="size-4" />
                 Retour
               </Button>
             </Link>
             <div>
               <LayoutTitle>Détails du profil alimentaire</LayoutTitle>
               <LayoutDescription>
-                Consulter les informations complètes du client
+                {profile.user?.name || 'Utilisateur'} - {profile.user?.email || 'N/A'}
               </LayoutDescription>
             </div>
           </div>
         </LayoutHeader>
 
         <LayoutContent className="space-y-6">
-          {/* Informations utilisateur */}
-          <Card>
-            <CardHeader className="border-b bg-orange-50">
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-600">
-                  <User className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <CardTitle className="text-orange-600">
-                    {profile.user?.name || 'Utilisateur'}
-                  </CardTitle>
-                  <CardDescription>{profile.user?.email || 'N/A'}</CardDescription>
-                </div>
-              </div>
+          {/* Informations générales */}
+          <Card className="border-orange-500">
+            <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
+              <CardTitle className="text-orange-500">Informations générales</CardTitle>
             </CardHeader>
             <CardContent className="pt-6">
-              <div className="grid gap-4 md:grid-cols-3">
-                <div>
-                  <p className="text-sm font-medium text-muted-foreground">Âge</p>
-                  <p className="mt-1 text-2xl font-bold">{profile.age} ans</p>
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-muted-foreground">Profession</p>
-                  <p className="mt-1 text-lg font-semibold">{profile.profession || 'N/A'}</p>
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-muted-foreground">Date d'inscription</p>
-                  <p className="mt-1 flex items-center gap-2 text-lg font-semibold">
-                    <Calendar className="h-4 w-4" />
-                    {new Date(profile.createdAt).toLocaleDateString('fr-FR', {
-                      day: 'numeric',
-                      month: 'long',
-                      year: 'numeric'
-                    })}
-                  </p>
-                </div>
+              <div className="grid gap-6 md:grid-cols-3">
+                <InfoItem label="Âge" value={`${profile.age} ans`} />
+                <InfoItem label="Profession" value={profile.profession || 'N/A'} />
+                <InfoItem label="Date d'inscription" value={new Date(profile.createdAt).toLocaleDateString('fr-FR')} />
               </div>
             </CardContent>
           </Card>
 
           {/* Pathologie */}
           {profile.pathology && (
-            <Card className="border-orange-200">
-              <CardHeader>
-                <CardTitle className="text-orange-600">Pathologie / Conditions médicales</CardTitle>
+            <Card className="border-orange-500">
+              <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
+                <CardTitle className="text-orange-500">Pathologie / Conditions médicales</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="whitespace-pre-wrap rounded-lg bg-orange-50 p-4 text-sm">
-                  {profile.pathology}
-                </p>
+              <CardContent className="pt-6">
+                <p className="whitespace-pre-wrap text-muted-foreground">{profile.pathology}</p>
               </CardContent>
             </Card>
           )}
 
           {/* Activité physique */}
-          <Card>
-            <CardHeader className="border-b bg-blue-50">
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600">
-                  <Activity className="h-5 w-5 text-white" />
-                </div>
-                <CardTitle className="text-blue-600">Activité physique</CardTitle>
-              </div>
+          <Card className="border-orange-500">
+            <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
+              <CardTitle className="text-orange-500">Activité physique</CardTitle>
             </CardHeader>
             <CardContent className="pt-6">
               <div className="grid gap-6 md:grid-cols-2">
-                <div className="rounded-lg border p-4">
-                  <p className="text-sm font-medium text-muted-foreground">
-                    Heures d'activité par semaine
-                  </p>
-                  <p className="mt-2 text-xl font-bold text-blue-600">
-                    {profile.hoursActivityPerWeek || 'N/A'}
-                  </p>
-                </div>
-                <div className="rounded-lg border p-4">
-                  <p className="text-sm font-medium text-muted-foreground">
-                    Pas par semaine
-                  </p>
-                  <p className="mt-2 text-xl font-bold text-blue-600">
-                    {profile.stepsPerWeek || 'N/A'}
-                  </p>
-                </div>
+                <InfoItem label="Heures d'activité / semaine" value={profile.hoursActivityPerWeek || 'N/A'} />
+                <InfoItem label="Pas / semaine" value={profile.stepsPerWeek || 'N/A'} />
               </div>
             </CardContent>
           </Card>
 
           {/* Mensurations */}
-          <Card>
-            <CardHeader className="border-b bg-purple-50">
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-600">
-                  <Ruler className="h-5 w-5 text-white" />
-                </div>
-                <CardTitle className="text-purple-600">Mensurations corporelles</CardTitle>
-              </div>
+          <Card className="border-orange-500">
+            <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
+              <CardTitle className="text-orange-500">Mensurations corporelles</CardTitle>
             </CardHeader>
             <CardContent className="pt-6">
-              <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4">
-                {profile.leftArm && <MeasurementCard label="Bras gauche" value={profile.leftArm} unit="cm" />}
-                {profile.rightArm && <MeasurementCard label="Bras droit" value={profile.rightArm} unit="cm" />}
-                {profile.shoulders && <MeasurementCard label="Épaules" value={profile.shoulders} unit="cm" />}
-                {profile.chest && <MeasurementCard label="Poitrine" value={profile.chest} unit="cm" />}
-                {profile.waist && <MeasurementCard label="Taille" value={profile.waist} unit="cm" />}
-                {profile.glutes && <MeasurementCard label="Fessiers" value={profile.glutes} unit="cm" />}
-                {profile.leftThigh && <MeasurementCard label="Jambe gauche" value={profile.leftThigh} unit="cm" />}
-                {profile.rightThigh && <MeasurementCard label="Jambe droite" value={profile.rightThigh} unit="cm" />}
-              </div>
-              
-              <div className="mt-6 grid gap-4 md:grid-cols-2">
-                <div className="rounded-lg border bg-purple-50 p-4">
-                  <p className="text-sm font-medium text-muted-foreground">Taille</p>
-                  <p className="mt-2 text-2xl font-bold text-purple-600">
-                    {profile.size} cm
-                  </p>
+              <div className="space-y-6">
+                {/* Mesures principales */}
+                <div className="grid gap-4 md:grid-cols-2">
+                  <MeasurementBox label="Taille" value={profile.size} unit="cm" />
+                  <MeasurementBox label="Poids" value={profile.weight} unit="kg" />
                 </div>
-                <div className="rounded-lg border bg-purple-50 p-4">
-                  <p className="text-sm font-medium text-muted-foreground">Poids</p>
-                  <p className="mt-2 text-2xl font-bold text-purple-600">
-                    {profile.weight} kg
-                  </p>
+
+                {/* Mesures détaillées */}
+                <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4">
+                  {profile.leftArm && <MeasurementItem label="Bras gauche" value={profile.leftArm} />}
+                  {profile.rightArm && <MeasurementItem label="Bras droit" value={profile.rightArm} />}
+                  {profile.shoulders && <MeasurementItem label="Épaules" value={profile.shoulders} />}
+                  {profile.chest && <MeasurementItem label="Poitrine" value={profile.chest} />}
+                  {profile.waist && <MeasurementItem label="Taille" value={profile.waist} />}
+                  {profile.glutes && <MeasurementItem label="Fessiers" value={profile.glutes} />}
+                  {profile.leftThigh && <MeasurementItem label="Jambe gauche" value={profile.leftThigh} />}
+                  {profile.rightThigh && <MeasurementItem label="Jambe droite" value={profile.rightThigh} />}
                 </div>
               </div>
             </CardContent>
@@ -204,59 +144,62 @@ export default async function AlimentaireDetailPage({
 
           {/* Sommeil */}
           {profile.sleepHours && (
-            <Card>
-              <CardHeader className="border-b bg-indigo-50">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-600">
-                    <Moon className="h-5 w-5 text-white" />
-                  </div>
-                  <CardTitle className="text-indigo-600">Habitudes de sommeil</CardTitle>
-                </div>
+            <Card className="border-orange-500">
+              <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
+                <CardTitle className="text-orange-500">Habitudes de sommeil</CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
-                <p className="whitespace-pre-wrap rounded-lg bg-indigo-50 p-4">
-                  {profile.sleepHours}
-                </p>
+                <p className="whitespace-pre-wrap text-muted-foreground">{profile.sleepHours}</p>
               </CardContent>
             </Card>
           )}
 
           {/* Dernière mise à jour */}
-          <Card className="border-dashed">
-            <CardContent className="pt-6">
-              <p className="text-center text-sm text-muted-foreground">
-                Dernière mise à jour le{' '}
-                {new Date(profile.updatedAt).toLocaleDateString('fr-FR', {
-                  day: 'numeric',
-                  month: 'long',
-                  year: 'numeric',
-                  hour: '2-digit',
-                  minute: '2-digit'
-                })}
-              </p>
-            </CardContent>
-          </Card>
+          <div className="text-center text-sm text-muted-foreground">
+            Dernière mise à jour le{' '}
+            {new Date(profile.updatedAt).toLocaleDateString('fr-FR', {
+              day: 'numeric',
+              month: 'long',
+              year: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit'
+            })}
+          </div>
         </LayoutContent>
       </Layout>
     </div>
   );
 }
 
-// Composant pour afficher une mesure
-function MeasurementCard({ 
-  label, 
-  value, 
-  unit 
-}: { 
-  label: string; 
-  value: number; // Float est compatible avec number en TypeScript
-  unit: string;
-}) {
+// Composant pour afficher une information simple
+function InfoItem({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-lg border p-4 transition-all hover:border-purple-300 hover:shadow-md">
+    <div>
+      <p className="text-sm font-medium text-muted-foreground">{label}</p>
+      <p className="mt-1 text-lg font-semibold">{value}</p>
+    </div>
+  );
+}
+
+// Composant pour les mesures principales (taille/poids)
+function MeasurementBox({ label, value, unit }: { label: string; value: number; unit: string }) {
+  return (
+    <div className="rounded-lg border border-orange-500/20 bg-orange-500/5 p-4">
+      <p className="text-sm font-medium text-muted-foreground">{label}</p>
+      <p className="mt-2 text-2xl font-bold text-orange-500">
+        {value} <span className="text-base font-normal">{unit}</span>
+      </p>
+    </div>
+  );
+}
+
+// Composant pour afficher une mesure détaillée
+function MeasurementItem({ label, value }: { label: string; value: number }) {
+  return (
+    <div className="rounded-lg border p-3">
       <p className="text-xs font-medium text-muted-foreground">{label}</p>
-      <p className="mt-1 text-lg font-bold text-purple-600">
-        {value} <span className="text-sm font-normal">{unit}</span>
+      <p className="mt-1 text-base font-semibold">
+        {value} <span className="text-sm font-normal text-muted-foreground">cm</span>
       </p>
     </div>
   );
