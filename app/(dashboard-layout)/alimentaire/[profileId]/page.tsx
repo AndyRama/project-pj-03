@@ -61,9 +61,9 @@ export default async function AlimentaireDetailPage({
       <Layout>
         <LayoutHeader>
           <div className="flex items-center gap-4">
-            <Link href="/admin/alimentaire">
+            <Link href="/alimentaire">
               <Button variant="outline" size="sm" className="gap-2">
-                <ArrowLeft className="size-4" />
+                <ArrowLeft className="h-4 w-4" />
                 Retour
               </Button>
             </Link>
@@ -81,8 +81,8 @@ export default async function AlimentaireDetailPage({
           <Card>
             <CardHeader className="border-b bg-orange-50">
               <div className="flex items-center gap-3">
-                <div className="flex size-12 items-center justify-center rounded-full bg-orange-600">
-                  <User className="size-6 text-white" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-600">
+                  <User className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <CardTitle className="text-orange-600">
@@ -105,7 +105,7 @@ export default async function AlimentaireDetailPage({
                 <div>
                   <p className="text-sm font-medium text-muted-foreground">Date d'inscription</p>
                   <p className="mt-1 flex items-center gap-2 text-lg font-semibold">
-                    <Calendar className="size-4" />
+                    <Calendar className="h-4 w-4" />
                     {new Date(profile.createdAt).toLocaleDateString('fr-FR', {
                       day: 'numeric',
                       month: 'long',
@@ -135,8 +135,8 @@ export default async function AlimentaireDetailPage({
           <Card>
             <CardHeader className="border-b bg-blue-50">
               <div className="flex items-center gap-3">
-                <div className="flex size-10 items-center justify-center rounded-full bg-blue-600">
-                  <Activity className="size-5 text-white" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600">
+                  <Activity className="h-5 w-5 text-white" />
                 </div>
                 <CardTitle className="text-blue-600">Activité physique</CardTitle>
               </div>
@@ -167,8 +167,8 @@ export default async function AlimentaireDetailPage({
           <Card>
             <CardHeader className="border-b bg-purple-50">
               <div className="flex items-center gap-3">
-                <div className="flex size-10 items-center justify-center rounded-full bg-purple-600">
-                  <Ruler className="size-5 text-white" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-600">
+                  <Ruler className="h-5 w-5 text-white" />
                 </div>
                 <CardTitle className="text-purple-600">Mensurations corporelles</CardTitle>
               </div>
@@ -207,8 +207,8 @@ export default async function AlimentaireDetailPage({
             <Card>
               <CardHeader className="border-b bg-indigo-50">
                 <div className="flex items-center gap-3">
-                  <div className="flex size-10 items-center justify-center rounded-full bg-indigo-600">
-                    <Moon className="size-5 text-white" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-600">
+                    <Moon className="h-5 w-5 text-white" />
                   </div>
                   <CardTitle className="text-indigo-600">Habitudes de sommeil</CardTitle>
                 </div>

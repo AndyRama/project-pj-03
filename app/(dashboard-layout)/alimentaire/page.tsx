@@ -104,54 +104,33 @@ export default async function AlimentairePlanPage() {
                 ) : (
                   profilesWithUsers.map((profile) => (
                     <TableRow key={profile.id} className="hover:bg-muted/50">
-                      <TableCell className="font-medium">
+                      <TableCell className="font-medium" title={profile.user?.name || 'N/A'}>
                         {truncateText(profile.user?.name || 'N/A', 20)}
                       </TableCell>
-                      <TableCell>
+                      <TableCell title={profile.user?.email || 'N/A'}>
                         {truncateText(profile.user?.email || 'N/A', 25)}
                       </TableCell>
                       <TableCell>{profile.age} ans</TableCell>
-                      <TableCell>
+                      <TableCell title={profile.profession || 'N/A'}>
                         {truncateText(profile.profession || 'N/A', 20)}
                       </TableCell>
-                      <TableCell>
-                        <span 
-                          className="inline-block max-w-[150px] truncate"
-                          title={profile.pathology || 'Aucune'}
-                        >
-                          {truncateText(profile.pathology || 'Aucune', 20)}
-                        </span>
+                      <TableCell title={profile.pathology || 'Aucune'}>
+                        {truncateText(profile.pathology || 'Aucune', 20)}
                       </TableCell>
-                      <TableCell>{profile.hoursActivityPerWeek || 'N/A'}</TableCell>
-                      <TableCell>{truncateText(profile.stepsPerWeek || 'N/A', 15)}</TableCell>
-                      <TableCell>
-                        <span 
-                          className="inline-block max-w-[120px] truncate"
-                          title={profile.sleepHours || 'N/A'}
-                        >
-                          {truncateText(profile.sleepHours || 'N/A', 15)}
-                        </span>
+                      <TableCell title={profile.hoursActivityPerWeek || 'N/A'}>
+                        {truncateText(profile.hoursActivityPerWeek || 'N/A', 15)}
+                      </TableCell>
+                      <TableCell title={profile.stepsPerWeek || 'N/A'}>
+                        {truncateText(profile.stepsPerWeek || 'N/A', 15)}
+                      </TableCell>
+                      <TableCell title={profile.sleepHours || 'N/A'}>
+                        {truncateText(profile.sleepHours || 'N/A', 15)}
                       </TableCell>
                       <TableCell>
                         {new Date(profile.createdAt).toLocaleDateString('fr-FR')}
                       </TableCell>
                       <TableCell className="text-center">
-                        <Link href={`/admin/alimentaire/${profile.id}`}>
-                          <Button 
-                            variant="outline" 
-                            size="sm"
-                            className="gap-2 hover:bg-orange-50 hover:text-orange-600"
-                          >
-                            <Eye className="size-4" />
-                            Voir
-                          </Button>
-                        </Link>
-                      </TableCell>
-                      <TableCell>
-                        {new Date(profile.createdAt).toLocaleDateString('fr-FR')}
-                      </TableCell>
-                      <TableCell className="text-center">
-                        <Link href={`/admin/alimentaire/${profile.id}`}>
+                        <Link href={`/alimentaire/${profile.id}`}>
                           <Button 
                             variant="outline" 
                             size="sm"
