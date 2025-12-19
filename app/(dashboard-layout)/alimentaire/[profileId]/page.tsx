@@ -1,4 +1,3 @@
-
 import {
   Layout,
   LayoutContent,
@@ -250,7 +249,7 @@ function MeasurementCard({
   unit 
 }: { 
   label: string; 
-  value: number; 
+  value: number; // Float est compatible avec number en TypeScript
   unit: string;
 }) {
   return (

@@ -1,5 +1,3 @@
-
-
 import {
   Layout,
   LayoutContent,
@@ -20,34 +18,19 @@ import { auth } from "@/lib/auth/helper";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { Eye } from "lucide-react";
+import type { Prisma } from "@prisma/client";
 
-// Type étendu avec les informations utilisateur - correspond au retour de Prisma
-type AlimentaireProfileWithUser = {
-  id: string;
-  createdAt: Date;
-  updatedAt: Date;
-  size: number;
-  age: number;
-  weight: number;
-  profession: string | null;
-  pathology: string | null;
-  hoursActivityPerWeek: string | null;
-  stepsPerWeek: string | null;
-  leftArm: number | null;
-  rightArm: number | null;
-  glutes: number | null;
-  leftThigh: number | null;
-  rightThigh: number | null;
-  shoulders: number | null;
-  chest: number | null;
-  waist: number | null;
-  sleepHours: string | null;
-  userId: string;
-  user: {
-    name: string | null;
-    email: string | null;
-  } | null;
-};
+// Type pour le profil avec user - utilise le type généré par Prisma
+type ProfileWithUser = Prisma.AlimentaireProfileGetPayload<{
+  include: {
+    user: {
+      select: {
+        name: true;
+        email: true;
+      };
+    };
+  };
+}>;
 
 // Fonction utilitaire pour tronquer le texte
 const truncateText = (text: string | null, maxLength: number = 30): string => {
@@ -64,7 +47,7 @@ export default async function AlimentairePlanPage() {
     redirect("/auth/signin");
   }
   
-  let profilesWithUsers: AlimentaireProfileWithUser[] = [];
+  let profilesWithUsers: ProfileWithUser[] = [];
  
   try {
     // Récupération des profils avec les données utilisateur
@@ -159,7 +142,22 @@ export default async function AlimentairePlanPage() {
                             size="sm"
                             className="gap-2 hover:bg-orange-50 hover:text-orange-600"
                           >
-                            <Eye className="h-4 w-4" />
+                            <Eye className="size-4" />
+                            Voir
+                          </Button>
+                        </Link>
+                      </TableCell>
+                      <TableCell>
+                        {new Date(profile.createdAt).toLocaleDateString('fr-FR')}
+                      </TableCell>
+                      <TableCell className="text-center">
+                        <Link href={`/admin/alimentaire/${profile.id}`}>
+                          <Button 
+                            variant="outline" 
+                            size="sm"
+                            className="gap-2 hover:bg-orange-50 hover:text-orange-600"
+                          >
+                            <Eye className="size-4" />
                             Voir
                           </Button>
                         </Link>

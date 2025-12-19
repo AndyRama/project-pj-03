@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 type PromoModalProps = {
   isOpen: boolean;
@@ -7,7 +8,7 @@ type PromoModalProps = {
 
 const PromoModal = ({ isOpen, onClose }: PromoModalProps) => {
   const [copied, setCopied] = React.useState(false);
-  const promoCode = "CODEPROMO";
+  const promoCode = "KKPETS3";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(promoCode);
@@ -77,12 +78,13 @@ const PromoModal = ({ isOpen, onClose }: PromoModalProps) => {
             </div>
 
             {/* CTA Button */}
-            <button
-              onClick={onClose}
-              className="w-full rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-3 font-bold text-white transition-all hover:scale-105"
-            >
-              Commencer Ma Transformation
-            </button>
+            <Link href="/#begin" onClick={onClose}>
+              <button
+                className="w-full rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-3 font-bold text-white transition-all hover:scale-105"
+              >
+                Commencer Ma Transformation
+              </button>
+            </Link>
           </div>
         </div>
       </div>
