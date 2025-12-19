@@ -1,6 +1,11 @@
 import React from 'react';
 
-const PromoModal = ({ isOpen, onClose }) => {
+type PromoModalProps = {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const PromoModal = ({ isOpen, onClose }: PromoModalProps) => {
   const [copied, setCopied] = React.useState(false);
   const promoCode = "KKPETS3";
 
@@ -21,7 +26,7 @@ const PromoModal = ({ isOpen, onClose }) => {
       />
       
       {/* Modal */}
-      <div className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 transform px-4">
+      <div className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 px-4">
         <div className="relative rounded-2xl bg-white p-8 shadow-2xl">
           {/* Close button */}
           <button
@@ -29,14 +34,14 @@ const PromoModal = ({ isOpen, onClose }) => {
             className="absolute right-4 top-4 text-gray-400 transition-colors hover:text-gray-600"
             aria-label="Fermer"
           >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
           {/* Content */}
           <div className="text-center">
-            <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-orange-100">
+            <div className="mb-4 inline-flex size-16 items-center justify-center rounded-full bg-orange-100">
               <span className="text-3xl">🎉</span>
             </div>
             
