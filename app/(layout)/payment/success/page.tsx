@@ -35,7 +35,7 @@ export default function SuccessPaymentPage() {
             <Link href="/" className={buttonVariants({ size: "md"})}>
               Crée un compte
             </Link>
-            <Link href="/account/checkout" className={`${buttonVariants({ size: "md", variant: "outline" })} mr-4`}>
+            <Link href="/account/formulaire" className={`${buttonVariants({ size: "md", variant: "outline" })} mr-4`}>
               Formulaire
             </Link>            
           </LayoutContent>

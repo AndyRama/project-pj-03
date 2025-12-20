@@ -15,16 +15,14 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const services = [
-  { title: "n8n", description: "creation de workflow automatisation", link: "#" },
-  { title: "Wisewand", description: "creation d'article optimiser SEO", link: "https://wisewand.ai/?fpr=andy78" },
-  { title: "Gmail", description: "Adresse: dr.sarah.johson@gmail.com", link: "https://mail.google.com/" },
-  { title: "cal.com", description: "Pour la gestion du calendrier et événement", link: "https://cal.com/" },
+  { title: "Github", description: "Dépôt du code source de l'application", link: "https://github.com/" },
+  { title: "Gmail", description: "Adresse: unlcoachingpersonel@gmail.com", link: "https://mail.google.com/" },
+  { title: "Hostinger", description: "Herbergement du site", link: "https://hostinger.fr/" },
   { title: "Namecheap", description: "Permet de gérer le nom de domaine", link: "https://www.namecheap.com/" },
   { title: "NeonDb", description: "Pour la base de donnée de l'application", link: "https://neon.tech/" },
-  { title: "Github", description: "Dépôt du code source de l'application", link: "https://github.com/" },
-  { title: "Vercel", description: "Gestion de l'hébergement", link: "https://vercel.com/" },
   { title: "Resend", description: "Emailing pour l'application", link: "https://resend.com/" },
   { title: "Stripe", description: "Paiement avec module Stripe", link: "https://stripe.com/" },
+  { title: "Wisewand", description: "creation d'article optimiser SEO", link: "https://wisewand.ai/?fpr=andy78" },
 ];
 
 export default async function RoutePage(props: PageParams) {
