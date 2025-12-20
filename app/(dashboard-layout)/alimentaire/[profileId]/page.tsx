@@ -1,6 +1,3 @@
-// Fichier: app/alimentaire/[profileId]/page.tsx
-// Page de détails d'un profil alimentaire - Design noir/orange optimisé
-
 import {
   Layout,
   LayoutContent,
@@ -27,18 +24,18 @@ type AlimentaireDetailPageProps = PageParams<{
   profileId: string;
 }>;
 
-export default async function AlimentaireDetailPage({ 
-  params 
+export default async function AlimentaireDetailPage({
+  params
 }: AlimentaireDetailPageProps) {
   // Vérification de l'authentification
   const user = await auth();
- 
+
   if (!user?.id) {
     redirect("/auth/signin");
   }
 
   const { profileId } = await params;
-  
+
   // Récupération du profil avec les données utilisateur
   const profile = await prisma.alimentaireProfile.findUnique({
     where: {
@@ -96,9 +93,9 @@ export default async function AlimentaireDetailPage({
             </Card>
 
             {/* Graphique - 1 colonne */}
-            <Card className="border-orange-500">
+            <Card className="border-orange-500 lg:col-span-2">
               <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
-                <CardTitle className="text-orange-500">Répartition</CardTitle>
+                <CardTitle className="text-orange-500">Statistiques d'entraînement</CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
                 <MeasurementChart
@@ -108,6 +105,13 @@ export default async function AlimentaireDetailPage({
                   chest={profile.chest}
                   waist={profile.waist}
                   glutes={profile.glutes}
+                  leftThigh={profile.leftThigh}
+                  rightThigh={profile.rightThigh}
+                  size={profile.size}
+                  weight={profile.weight}
+                  age={profile.age}
+                  hoursActivityPerWeek={profile.hoursActivityPerWeek}
+                  stepsPerWeek={profile.stepsPerWeek}
                 />
               </CardContent>
             </Card>
