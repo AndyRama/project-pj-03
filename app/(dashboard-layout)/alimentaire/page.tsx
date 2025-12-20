@@ -13,14 +13,15 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth/helper";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { Eye } from "lucide-react";
+import { Eye, Users, Calendar, TrendingUp, Activity } from "lucide-react";
 import type { Prisma } from "@prisma/client";
 
-// Type pour le profil avec user - utilise le type généré par Prisma
+// Type pour le profil avec user
 type ProfileWithUser = Prisma.AlimentaireProfileGetPayload<{
   include: {
     user: {
@@ -39,8 +40,32 @@ const truncateText = (text: string | null, maxLength: number = 30): string => {
   return `${text.substring(0, maxLength)}...`;
 };
 
+// Fonction pour calculer le nombre de profils créés cette semaine
+const getProfilesThisWeek = (profiles: ProfileWithUser[]): number => {
+  const now = new Date();
+  const oneWeekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+  
+  return profiles.filter(profile => 
+    new Date(profile.createdAt) >= oneWeekAgo
+  ).length;
+};
+
+// Fonction pour calculer la moyenne des heures d'activité
+const getAverageActivity = (profiles: ProfileWithUser[]): string => {
+  const profilesWithActivity = profiles.filter(p => p.hoursActivityPerWeek);
+  
+  if (profilesWithActivity.length === 0) return "N/A";
+  
+  // Extraction de la première valeur numérique trouvée dans la chaîne
+  const totalHours = profilesWithActivity.reduce((acc, p) => {
+    const match = p.hoursActivityPerWeek?.match(/\d+/);
+    return acc + (match ? parseInt(match[0]) : 0);
+  }, 0);
+  
+  return `${Math.round(totalHours / profilesWithActivity.length)}h`;
+};
+
 export default async function AlimentairePlanPage() {
-  // Vérification de l'authentification
   const user = await auth();
  
   if (!user?.id) {
@@ -50,7 +75,6 @@ export default async function AlimentairePlanPage() {
   let profilesWithUsers: ProfileWithUser[] = [];
  
   try {
-    // Récupération des profils avec les données utilisateur
     profilesWithUsers = await prisma.alimentaireProfile.findMany({
       orderBy: {
         createdAt: 'desc'
@@ -71,13 +95,88 @@ export default async function AlimentairePlanPage() {
   return (
     <div className="mx-auto p-4">
       <Layout>
-        <LayoutHeader className="flex items-center justify-between">
+        <LayoutHeader>
           <LayoutTitle>Plan Alimentaire | Tableau des utilisateurs</LayoutTitle>
-          <div className="text-sm text-muted-foreground">
-            {profilesWithUsers.length} profil{profilesWithUsers.length > 1 ? 's' : ''}
-          </div>
         </LayoutHeader>
+        
         <LayoutContent>
+          {/* Statistiques */}
+          {profilesWithUsers.length > 0 && (
+            <div className="mb-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              <Card className="border-orange-200">
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                  <CardTitle className="text-sm font-medium">
+                    Total des profils
+                  </CardTitle>
+                  <Users className="size-4 text-orange-600" />
+                </CardHeader>
+                <CardContent>
+                  <div className="text-2xl font-bold text-orange-600">
+                    {profilesWithUsers.length}
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Profils enregistrés
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-orange-200">
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                  <CardTitle className="text-sm font-medium">
+                    Cette semaine
+                  </CardTitle>
+                  <Calendar className="size-4 text-orange-600" />
+                </CardHeader>
+                <CardContent>
+                  <div className="text-2xl font-bold text-orange-600">
+                    {getProfilesThisWeek(profilesWithUsers)}
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Nouveaux profils
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-orange-200">
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                  <CardTitle className="text-sm font-medium">
+                    Âge moyen
+                  </CardTitle>
+                  <TrendingUp className="size-4 text-orange-600" />
+                </CardHeader>
+                <CardContent>
+                  <div className="text-2xl font-bold text-orange-600">
+                    {Math.round(
+                      profilesWithUsers.reduce((acc, p) => acc + p.age, 0) / 
+                      profilesWithUsers.length
+                    )} ans
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Moyenne d'âge
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-orange-200">
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                  <CardTitle className="text-sm font-medium">
+                    Activité moyenne
+                  </CardTitle>
+                  <Activity className="size-4 text-orange-600" />
+                </CardHeader>
+                <CardContent>
+                  <div className="text-2xl font-bold text-orange-600">
+                    {getAverageActivity(profilesWithUsers)}
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Par semaine
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          )}
+
+          {/* Tableau */}
           <div className="overflow-x-auto rounded-md border">
             <Table>
               <TableHeader>
@@ -147,39 +246,6 @@ export default async function AlimentairePlanPage() {
               </TableBody>
             </Table>
           </div>
-
-          {/* Statistiques rapides */}
-          {profilesWithUsers.length > 0 && (
-            <div className="mt-6 grid gap-4 md:grid-cols-3">
-              <div className="rounded-lg border bg-card p-4">
-                <div className="text-sm font-medium text-muted-foreground">
-                  Total des profils
-                </div>
-                <div className="mt-2 text-2xl font-bold text-orange-600">
-                  {profilesWithUsers.length}
-                </div>
-              </div>
-              <div className="rounded-lg border bg-card p-4">
-                <div className="text-sm font-medium text-muted-foreground">
-                  Âge moyen
-                </div>
-                <div className="mt-2 text-2xl font-bold text-orange-600">
-                  {Math.round(
-                    profilesWithUsers.reduce((acc, p) => acc + p.age, 0) / 
-                    profilesWithUsers.length
-                  )} ans
-                </div>
-              </div>
-              <div className="rounded-lg border bg-card p-4">
-                <div className="text-sm font-medium text-muted-foreground">
-                  Dernier ajout
-                </div>
-                <div className="mt-2 text-2xl font-bold text-orange-600">
-                  {new Date(profilesWithUsers[0].createdAt).toLocaleDateString('fr-FR')}
-                </div>
-              </div>
-            </div>
-          )}
         </LayoutContent>
       </Layout>
     </div> 
