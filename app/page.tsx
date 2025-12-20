@@ -262,21 +262,21 @@ export default function HomePage() {
               name: "Sophie L.",
               review:
                 "Je recommande Jeremy à 100 % ! Il ne s'agit pas juste d'un coach qui donne des exercices, mais d'un vrai accompagnateur. Grâce à lui, j'ai perdu 10 kg en 5 mois et j'ai adopté de nouvelles habitudes de vie que je n'aurais jamais imaginées.",
-              role: "Social Media Manager",
+              role: "32 ans",
             },
             {
               image: "https://i.pravatar.cc/300?u=b5",
-              name: "Élodie C.",
+              name: "Marc C.",
               review:
                 "Je cherchais un coach pour me remettre en forme et perdre du poids avant mon mariage, et Jeremy a été incroyable ! En seulement 3 mois, j'ai perdu 7 kg et je me sens plus forte et plus confiante que jamais. Ses conseils nutritionnels sont un vrai plus.",
               role: "25 ans",
             },
             {
               image: "https://i.pravatar.cc/300?u=b6",
-              name: "Lucas M.",
+              name: "Cmaille M.",
               review:
                 "Je pensais qu'il était trop tard pour moi pour me remettre au sport, mais Jeremy m'a prouvé le contraire. J'ai perdu 5 kg en douceur et gagné en endurance. Ses packs sont bien pensés, accessibles, et il est toujours disponible pour répondre à mes questions.",
-              role: "50 ans",
+              role: "39 ans",
             },
           ]}
         />

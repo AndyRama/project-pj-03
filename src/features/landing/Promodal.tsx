@@ -58,7 +58,7 @@ const PromoModal = ({ isOpen, onClose }: PromoModalProps) => {
             <div className="mb-6 rounded-lg border-2 border-dashed border-orange-300 bg-orange-50 p-4">
               <p className="mb-2 text-sm font-medium text-gray-700">Code promo :</p>
               <div className="flex items-center justify-center gap-3">
-                <span className="text-3xl font-bold tracking-wider text-orange-600">
+                <span className="text-2xl font-bold tracking-wider text-orange-600">
                   {promoCode}
                 </span>
                 <button
