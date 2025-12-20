@@ -68,9 +68,9 @@ export default async function AlimentaireDetailPage({
             </Link>
             <div>
               <LayoutTitle>Détails du profil alimentaire</LayoutTitle>
-              <LayoutDescription>
+              {/* <LayoutDescription>
                 {profile.user?.name || 'Utilisateur'} - {profile.user?.email || 'N/A'}
-              </LayoutDescription>
+              </LayoutDescription> */}
             </div>
           </div>
         </LayoutHeader>
