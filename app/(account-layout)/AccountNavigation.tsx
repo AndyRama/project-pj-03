@@ -31,7 +31,7 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
             </Link>
           </div>
           <nav className="flex flex-1 items-center justify-end space-x-1">
-            {isEmailNotVerified && <VerifyEmailButton />}
+            <div className="rounded-md">{isEmailNotVerified && <VerifyEmailButton />}</div>
             <AuthButton />
             <MobileDropdownMenu className="lg:hidden" links={ACCOUNT_LINKS} />
           </nav>
