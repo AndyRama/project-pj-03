@@ -3,7 +3,6 @@ import {
   LayoutContent,
   LayoutHeader,
   LayoutTitle,
-  LayoutDescription,
 } from "@/features/page/layout";
 import {
   Card,
@@ -67,10 +66,7 @@ export default async function AlimentaireDetailPage({
               </Button>
             </Link>
             <div>
-              <LayoutTitle>Détails du profil alimentaire <span className="content lg:hidden"> {profile.user?.name || 'Utilisateur'} </span> </LayoutTitle>
-              {/* <LayoutDescription>
-                {profile.user?.name || 'Utilisateur'} - {profile.user?.email || 'N/A'}
-              </LayoutDescription> */}
+              <LayoutTitle>Détails du profil alimentaire</LayoutTitle>
             </div>
           </div>
         </LayoutHeader>
@@ -85,7 +81,7 @@ export default async function AlimentaireDetailPage({
               </CardHeader>
               <CardContent className="pt-6">
                 <div className="flex flex-col gap-6">
-                  <InfoItem label="Nom - Prénoms" value={`${profile.user}`} />
+                  <InfoItem label="Nom - Prénoms" value={profile.user?.name || 'N/A'} />
                   <InfoItem label="Âge" value={`${profile.age} ans`} />
                   <InfoItem label="Profession" value={profile.profession || 'N/A'} />
                   <InfoItem label="Date d'inscription" value={new Date(profile.createdAt).toLocaleDateString('fr-FR')} />
