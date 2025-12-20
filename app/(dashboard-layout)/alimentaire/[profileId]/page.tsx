@@ -67,7 +67,7 @@ export default async function AlimentaireDetailPage({
               </Button>
             </Link>
             <div>
-              <LayoutTitle>Détails du profil alimentaire</LayoutTitle>
+              <LayoutTitle>Détails du profil alimentaire <span className="content lg:hidden"> {profile.user?.name || 'Utilisateur'} </span> </LayoutTitle>
               {/* <LayoutDescription>
                 {profile.user?.name || 'Utilisateur'} - {profile.user?.email || 'N/A'}
               </LayoutDescription> */}
