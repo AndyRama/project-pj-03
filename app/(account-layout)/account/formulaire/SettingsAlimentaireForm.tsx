@@ -67,7 +67,7 @@ export const SettingsAlimentaireForm = ({
     { name: "age", label: "Âge", placeholder: "Votre âge", type: "number" },
     { name: "profession", label: "Profession", placeholder: "Votre profession", type: "text" },
     { name: "size", label: "Taille (cm)", placeholder: "Ex: 175", type: "number", step: "0.1" },
-    { name: "weight", label: "Poids (kg)", placeholder: "Ex: 70", type: "number", step: "0.1" },
+    { name: "weight", label: "Poids (kg)", placeholder: "Ex: 60", type: "number", step: "0.1" },
   ];
 
   const activityFields = [
