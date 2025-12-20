@@ -16,7 +16,7 @@ const SUBSCRIBERS: { date: string; amount: number }[] = [
   { date: "2026-05-02", amount: 60 },
   { date: "2026-06-02", amount: 65 },
   { date: "2026-07-02", amount: 70 },
-]6
+]
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TooltipChart, TooltipChartItem } from "@/features/chart/TooltipChart";
