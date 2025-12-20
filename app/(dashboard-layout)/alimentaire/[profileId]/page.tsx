@@ -76,15 +76,15 @@ export default async function AlimentaireDetailPage({
         </LayoutHeader>
 
         <LayoutContent className="space-y-6">
-          {/* Première ligne : Infos générales + Graphique */}
+          {/* Première ligne : Infos générales (1/3) + Statistiques (2/3) */}
           <div className="grid gap-6 lg:grid-cols-3">
-            {/* Informations générales - 2 colonnes */}
-            <Card className="border-orange-500 lg:col-span-2">
+            {/* Informations générales - 1/3 - EN COLONNE */}
+            <Card className="border-orange-500">
               <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
                 <CardTitle className="text-orange-500">Informations générales</CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
-                <div className="grid gap-6 md:grid-cols-3">
+                <div className="flex flex-col gap-6">
                   <InfoItem label="Âge" value={`${profile.age} ans`} />
                   <InfoItem label="Profession" value={profile.profession || 'N/A'} />
                   <InfoItem label="Date d'inscription" value={new Date(profile.createdAt).toLocaleDateString('fr-FR')} />
@@ -92,7 +92,7 @@ export default async function AlimentaireDetailPage({
               </CardContent>
             </Card>
 
-            {/* Graphique - 1 colonne */}
+            {/* Statistiques d'entraînement - 2/3 */}
             <Card className="border-orange-500 lg:col-span-2">
               <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
                 <CardTitle className="text-orange-500">Statistiques d'entraînement</CardTitle>
@@ -117,7 +117,7 @@ export default async function AlimentaireDetailPage({
             </Card>
           </div>
 
-          {/* Pathologie + Sommeil combinés */}
+          {/* Pathologie + Sommeil - MÊME LARGEUR que la ligne au-dessus */}
           {(profile.pathology || profile.sleepHours) && (
             <Card className="border-orange-500">
               <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
