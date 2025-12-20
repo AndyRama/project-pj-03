@@ -186,10 +186,10 @@ export default async function AlimentairePlanPage() {
                   <TableHead className="w-[80px]">Âge</TableHead>
                   <TableHead className="w-[150px]">Profession</TableHead>
                   <TableHead className="w-[150px]">Pathologie</TableHead>
-                  <TableHead className="w-[120px]">Activité/sem</TableHead>
+                  <TableHead className="w-[120px]">Acti./sem</TableHead>
                   <TableHead className="w-[120px]">Pas/sem</TableHead>
                   <TableHead className="w-[120px]">Sommeil</TableHead>
-                  <TableHead className="w-[120px]">Date création</TableHead>
+                  <TableHead className="w-[120px]">Date</TableHead>
                   <TableHead className="w-[100px] text-center">Actions</TableHead>
                 </TableRow>
               </TableHeader>

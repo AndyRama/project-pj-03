@@ -298,11 +298,11 @@ export default function HomePage() {
             <p className="font-semibold text-white">
               ⏰ Offre limitée : -80€ sur tous les programmes 
             </p>
-            <p className="text-orange-100">Plus que 22j pour en profiter !</p>
+            <p className="text-orange-100">Plus que jours pour profiter de l'offre !</p>
           </div>
           <button 
             onClick={() => setIsModalOpen(true)}
-            className="rounded-lg bg-white px-12 py-4 text-xl font-bold text-orange-700 transition-all hover:scale-105 hover:bg-gray-100"
+            className="rounded-[10px] bg-white px-12 py-4 text-xl font-bold text-orange-700 transition-all hover:scale-105 hover:bg-gray-100"
           >
             Commencer Ma Transformation Maintenant
           </button>
