@@ -73,7 +73,7 @@ export default function HomePage() {
             isPopular: false,
             type: "monthly",
             id: "",
-            link: "https://buy.stripe.com/28E4gB0IM3HB6YaeDR9AA00",
+            link: "https://buy.stripe.com/aFaeVffDG0vpciu0N19AA03",
             title: "STARTER - 3 mois",
             subtitle: "(3 × 160€ = 480€)",
             price: 160,
@@ -89,13 +89,13 @@ export default function HomePage() {
             ],
             cta: "Je démarre mon programme",
             ctaSubtitle: "Engagement 3 mois",
-            priceId: "https://buy.stripe.com/aFaeVffDG0vpciu0N19AA03",
+            priceId: "",
           },
           {
             isPopular: true,
             type: "monthly",
             id: "",
-            link: "https://buy.stripe.com/4gMeVfgHK5PJ96i7bp9AA01",
+            link: "https://buy.stripe.com/14A00l8be2Dx5U69jx9AA04",
             title: "PREMIUM - 6 mois",
             subtitle: "(6 × 180€ = 1 080€)",
             price: 180,
@@ -112,13 +112,13 @@ export default function HomePage() {
             ],
             cta: "Je démarre mon programme",
             ctaSubtitle: "Engagement 6 mois",
-            priceId: "https://buy.stripe.com/14A00l8be2Dx5U69jx9AA04",
+            priceId: "",
           },
           {
             isPopular: false,
             type: "monthly",
             id: "",
-            link: "https://buy.stripe.com/28E4gB0IM3HB6YaeDR9AA00",
+            link: "https://buy.stripe.com/4gMaEZbnqemfbeq9jx9AA05",
             title: "COMPETITION VIP - 12 mois",
             subtitle: "(12 × 150€ = 1 800€)",
             price: 150,
@@ -136,7 +136,7 @@ export default function HomePage() {
             ],
             cta: "Je m'engage sur 12 mois",
             ctaSubtitle: "Meilleur tarif - 150€/mois",
-            priceId: "https://buy.stripe.com/4gMaEZbnqemfbeq9jx9AA05",
+            priceId: "",
           },
         ]}
       />
@@ -291,12 +291,12 @@ export default function HomePage() {
             Prêt à Transformer Votre Corps ?
           </Typography>
           <Typography variant="large" className="mb-8 text-orange-100">
-            Rejoignez plus de 500 personnes qui ont déjà transformé leur vie
+            Rejoignez plus de 350 personnes qui ont déjà transformé leur vie
             avec mes programmes
           </Typography>
           <div className="mb-8 inline-block rounded-xl bg-white/10 p-6 backdrop-blur-sm">
             <p className="font-semibold text-white">
-              ⏰ Offre limitée : -80€ sur les programmes STARTER et PREMIUM
+              ⏰ Offre limitée : -80€ sur tous les programmes 
             </p>
             <p className="text-orange-100">Plus que 22j pour en profiter !</p>
           </div>
