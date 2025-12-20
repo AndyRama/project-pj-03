@@ -89,7 +89,7 @@ export default function HomePage() {
             ],
             cta: "Je démarre mon programme",
             ctaSubtitle: "Engagement 3 mois",
-            priceId: "prod_TCjZqOgYXqVhcr",
+            priceId: "https://buy.stripe.com/aFaeVffDG0vpciu0N19AA03",
           },
           {
             isPopular: true,
@@ -112,7 +112,7 @@ export default function HomePage() {
             ],
             cta: "Je démarre mon programme",
             ctaSubtitle: "Engagement 6 mois",
-            priceId: "prod_TCkXd4nuD0CAy2",
+            priceId: "https://buy.stripe.com/14A00l8be2Dx5U69jx9AA04",
           },
           {
             isPopular: false,
@@ -136,7 +136,7 @@ export default function HomePage() {
             ],
             cta: "Je m'engage sur 12 mois",
             ctaSubtitle: "Meilleur tarif - 150€/mois",
-            priceId: "prod_TCkQQi3le9C6vp",
+            priceId: "https://buy.stripe.com/4gMaEZbnqemfbeq9jx9AA05",
           },
         ]}
       />
