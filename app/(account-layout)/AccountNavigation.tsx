@@ -9,10 +9,12 @@ import { MobileDropdownMenu } from "../../src/features/navigation/MobileDropdown
 import { ACCOUNT_LINKS } from "./account-links";
 import { auth } from "@/lib/auth/helper";
 import { AuthButton } from "@/features/auth/AuthButton";
+import { VerifyEmailButton } from "./account/verify-email/VerifyEmailButton";
 
 export const AccountNavigation = async (props: PropsWithChildren) => {
   const user = await auth();
-
+  const isEmailNotVerified = user?.email && !user.emailVerified;
+  
   return (
     <div className="flex min-h-full flex-col">
       <header className="w-full border-b bg-background max-lg:sticky max-lg:top-0 max-lg:z-40">
@@ -29,6 +31,7 @@ export const AccountNavigation = async (props: PropsWithChildren) => {
             </Link>
           </div>
           <nav className="flex flex-1 items-center justify-end space-x-1">
+            {isEmailNotVerified && <VerifyEmailButton />}
             <AuthButton />
             <MobileDropdownMenu className="lg:hidden" links={ACCOUNT_LINKS} />
           </nav>
