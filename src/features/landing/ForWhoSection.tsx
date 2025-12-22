@@ -36,7 +36,7 @@ const ForWhoGrid = () => {
         "Des résultats visibles ET durables",
         "Tu apprends à manger sans culpabiliser",
       ],
-      program: "Programme Fat Loss → 3 à 6 mois",
+      program: "Programme Pertes de poids  → 3 à 6 mois",
       cta: "Je veux perdre du poids",
       link: "/#begin",
     },
@@ -48,7 +48,7 @@ const ForWhoGrid = () => {
         "Programme d'entraînement progressif et intelligent",
         "Nutrition optimisée pour la prise de masse",
       ],
-      program: "Programme Mass Building → 4 à 8 mois",
+      program: "Programme Prise de masse → 4 à 8 mois",
       cta: "Je veux me muscler",
       link: "/#begin",
     },
@@ -57,7 +57,7 @@ const ForWhoGrid = () => {
       title: "Tu veux te REMETTRE EN FORME",
       benefits: [
         "Retrouver ton énergie et ta mobilité",
-        "Peu importe ton niveau, on commence où tu es",
+        "Peu importe ton niveau, on commence là où tu en es",
         "Progresser à TON rythme, sans te blesser",
       ],
       program: "Programme Remise en Forme → 2 à 4 mois",
@@ -144,7 +144,7 @@ const ForWhoNotFor = () => (
       </li>
       <li className="flex items-start">
         <span className="mr-2 text-red-500">✗</span>
-        <span>Tu n'es pas prêt à t'investir à 100% dans ta transformation</span>
+        <span>Tu n'es pas prêt(e) à t'investir à 100% dans ta transformation</span>
       </li>
       <li className="flex items-start">
         <span className="mr-2 text-red-500">✗</span>
@@ -153,7 +153,7 @@ const ForWhoNotFor = () => (
     </ul>
     <div className="rounded-lg border-l-4 border-orange-600 bg-black/50 p-4">
       <Typography className="font-bold text-orange-600">
-        💯 Je bosse uniquement avec des personnes DÉTERMINÉES qui veulent des résultats RÉELS et DURABLES.
+        💯 Je travaille uniquement avec des personnes DÉTERMINÉES qui veulent des résultats RÉELS et DURABLES.
       </Typography>
       <Typography className="mt-2 text-sm text-gray-400">
         Si c'est ton cas, on va cartonner ensemble.
