@@ -5,11 +5,10 @@ import Link from "next/link";
 export default function TransformationCard() {
   const features = [
     "Un accompagnement mensuel sur mesure avec un coach disponible et inspirant",
-    "une communication 7jrs/7 24h/24 via what's app",
-    "10 ans d'expèriences qui te permettront sur le long therme de révéler ton plein potentiel",
-    "Une planification 100% personnalisée accompagné d'un plan nutrition et d'une programmation sportive qui répondra à tes attentes ",
+    "Une communication 7j/7 24h/24 via WhatsApp",
+    "10 ans d'expérience qui te permettront sur le long terme de révéler ton plein potentiel",
+    "Une planification 100% personnalisée accompagnée d'un plan nutrition et d'une programmation sportive qui répondra à tes attentes",
   ];
-
   return (
     <div className="relative w-full overflow-hidden ">
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-16">
