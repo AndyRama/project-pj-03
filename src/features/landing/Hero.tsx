@@ -36,7 +36,7 @@ const HeroStatistics = () => (
     <Typography variant="h3" className="text-lg !leading-tight">
       <span className="inline-block text-white md:text-center">
         <br />
-        <StatisticBlock value="+350" label="Transformations" label1="réussit" />
+        <StatisticBlock value="+350" label="Transformations" label1="réussies" />
         <StatisticBlock value="+ 5⭐" label="Satisfaction " label1="" />
       </span>
     </Typography>
@@ -121,7 +121,7 @@ const HeroReviews = () => (
       "https://i.pravatar.cc/300?u=2",
       "https://i.pravatar.cc/300?u=3",
       "https://i.pravatar.cc/300?u=4",
-      "https://i.pravatar.cc/300?u=100",
+      "https://i.pravatar.cc/300?u=5",
     ]}
   >
     3500+ followers <br /> sur instagram
