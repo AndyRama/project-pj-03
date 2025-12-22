@@ -61,6 +61,7 @@ export function HeaderBase({ children }: PropsWithChildren) {
     { path: "/posts", label: "Blog" },
     { path: "/prestations", label: "Prestations" },
     { path: "/team", label: "Team" },
+    { path: "/#", label: "Avant/Après" },
   ];
 
   return (

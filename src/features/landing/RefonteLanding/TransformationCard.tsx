@@ -7,7 +7,7 @@ export default function TransformationCard() {
     "Un accompagnement mensuel sur mesure avec un coach disponible et inspirant",
     "Une communication 7j/7 24h/24 via WhatsApp",
     "10 ans d'expérience qui te permettront sur le long terme de révéler ton plein potentiel",
-    "Une planification 100% personnalisée accompagnée d'un plan nutrition et d'une programmation sportive qui répondra à tes attentes",
+    "Une planification 100% personnalisée accompagnée d'un plan nutrition et d'une programmation sportive qui répondront à tes attentes",
   ];
   return (
     <div className="relative w-full overflow-hidden ">
