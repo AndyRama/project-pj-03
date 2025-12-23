@@ -156,6 +156,9 @@ export default async function RoutePage(props: PostParams) {
             />
           </div>
         </LayoutContent>
+
+        <EmailFormSection />
+        
         <div className="flex flex-col items-center gap-2">
           <Typography variant="p" className="max-w-xl font-bold text-orange-500">
             Récentes
@@ -168,7 +171,6 @@ export default async function RoutePage(props: PostParams) {
           <RecentPosts />
         </div>
       </Layout>
-      <EmailFormSection />
     </>
   );
 }
