@@ -13,7 +13,7 @@ import {
   LayoutTitle,
 } from "@/features/page/layout";
 import { FileQuestion } from "lucide-react";
-import { StoryCard } from "@/feature/landing/BeforAfterCardv2";
+import { StoryCard } from "@/features/landing/BeforAfterCardv2";
 import { useState } from "react";
 
 type TransformationCategory = 
