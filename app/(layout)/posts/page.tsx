@@ -7,7 +7,7 @@ import {
   Layout,
   LayoutContent,
   LayoutDescription,
-  LayoutHeader,
+  // LayoutHeader,
   LayoutTitle,
 } from "@/features/page/layout";
 import type { PageParams } from "@/types/next";

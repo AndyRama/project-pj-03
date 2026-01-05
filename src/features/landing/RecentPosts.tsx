@@ -5,6 +5,8 @@ import { Layout } from '@/features/page/layout';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Typography } from '@/components/ui/typography';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { formatDate } from '@/lib/format/date';
 
@@ -64,39 +66,39 @@ export const RecentPosts = () => {
   const posts: Post[] = [
     {
       attributes: {
-        title: 'Le sommeil est capital dans la pratique sportive.',
-        description: 'Découvrez pourquoi le sommeil est un pilier essentiel pour optimiser vos performances sportives. Explorez ses bienfaits sur la récupération, la progression et l’équilibre général, et apprenez à améliorer votre qualité de sommeil pour atteindre vos objectifs.',
-        date: '2024-11-12',
+        title: 'Le sommeil est capital dans la pratique sportive',
+        description: 'Découvrez pourquoi le sommeil est un pilier essentiel pour optimiser vos performances sportives. Explorez ses bienfaits sur la récupération, la progression et l\'équilibre général.',
+        date: '2025-10-12',
         coverUrl: '/images/post4.jpg',
       },
-      slug: '2024-11-12_Le_sommeil_est_capital_dans_la_pratique_sportive',
-    },
-    {
-      attributes: {
-        title: 'Comment perdre du poids de manière saine et durable',
-        description: 'Explorez nos conseils pour perdre du poids de façon saine et durable. Découvrez des stratégies éprouvées pour allier alimentation équilibrée, activité physique adaptée et habitudes de vie saines, tout en préservant votre bien-être.',
-        date: '2024-11-13',
-        coverUrl: '/images/post2.jpg',
-      },
-      slug: '2024-11-13_Comment_perdre_du_poids_de_maniere_saine_et_durable',
+      slug: '2025-10-12_Le_sommeil_est_capital_dans_la_pratique_sportive',
     },
     {
       attributes: {
         title: 'La salle de sport quand on débute',
-        description: 'Découvrez notre guide complet pour bien commencer à la salle de sport. Conseils pratiques, erreurs à éviter et astuces pour rester motivé, tout ce qu’il faut savoir pour transformer votre première expérience en réussite !',
-        date: '2024-11-14',
+        description: 'Découvrez notre guide complet pour bien commencer à la salle de sport. Conseils pratiques, erreurs à éviter et astuces pour rester motivé, tout ce qu\'il faut savoir pour transformer votre première expérience en réussite !',
+        date: '2025-11-14',
         coverUrl: '/images/salle-de-sport.jpg',
       },
-      slug: '2024-11-14_La-salle-de-sport-quand-on-debute',
+      slug: '2025-11-14_La_salle_de_sport_quand_on_debute',
     },
     {
       attributes: {
-        title: 'Guide complet des compléments alimentaires dans le sport ',
-        description: 'Découvrez notre guide complet sur les compléments alimentaires pour sportifs. Types, bienfaits, précautions et conseils pour optimiser vos performances en toute sécurité et apprenez à choisir les compléments adaptés à vos objectifs et à votre pratique.',
-        date: '2024-11-11',
+        title: 'Guide complet des compléments alimentaires dans le sport',
+        description: 'Découvrez notre guide complet sur les compléments alimentaires pour sportifs. Types, bienfaits, précautions et conseils pour optimiser vos performances en toute sécurité.',
+        date: '2025-12-11',
         coverUrl: '/images/post1.jpg',
       },
-      slug: '2024-11-11_Guide-complet-des-complements-alimentaire-dans-le-sport',
+      slug: '2025-12-11_Guide_complet_des_complements_alimentaires_dans_le_sport',
+    },
+    {
+      attributes: {
+        title: 'Comment perdre du poids de manière saine et durable',
+        description: 'Explorez nos conseils pour perdre du poids de façon saine et durable. Découvrez des stratégies éprouvées pour allier alimentation équilibrée, activité physique adaptée et habitudes de vie saines.',
+        date: '2025-09-13',
+        coverUrl: '/images/post2.jpg',
+      },
+      slug: '2025-09-13_Comment_perdre_du_poids_de_maniere_saine_et_durable',
     },
   ];
 
@@ -109,6 +111,18 @@ export const RecentPosts = () => {
           {posts.map((post, index) => (
             <RecentPostCard key={index} post={post} />
           ))}
+        </div>
+        
+        <div className="mt-12 flex justify-center">
+          <Link
+            href="/blog"
+            className={cn(
+              buttonVariants({ size: "lg", variant: "default" }),
+              "text-base font-bold text-white border shadow-md transition-all duration-300 hover:scale-105 hover:bg-orange-800 hover:shadow-lg bg-orange-700",
+            )}
+          >
+            Voir tous les articles
+          </Link>
         </div>
       </div>
     </Layout>

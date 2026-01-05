@@ -51,7 +51,7 @@ const PromoModal = ({ isOpen, onClose }: PromoModalProps) => {
             </h2>
             
             <p className="mb-6 text-gray-600">
-              Économisez <span className="font-bold text-orange-600">80€</span> sur tous les programmes
+              Économisez <span className="font-bold text-orange-600">50€</span> sur tous les offres premium et compétition.
             </p>
 
             {/* Promo Code Box */}
@@ -73,7 +73,7 @@ const PromoModal = ({ isOpen, onClose }: PromoModalProps) => {
             {/* Timer */}
             <div className="mb-6 rounded-lg bg-red-50 p-3">
               <p className="text-sm font-semibold text-red-600">
-                ⏰ Plus que 48h pour en profiter !
+                ⏰ Plus que quelques jours pour en profiter !
               </p>
             </div>
 
@@ -82,7 +82,7 @@ const PromoModal = ({ isOpen, onClose }: PromoModalProps) => {
               <button
                 className="w-full rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-3 font-bold text-white transition-all hover:scale-105"
               >
-                Commencer Ma Transformation
+                Commencer ma transformation
               </button>
             </Link>
           </div>
