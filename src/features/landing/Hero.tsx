@@ -16,8 +16,8 @@ export const Hero = () => {
         className="-mt-[40px] mb-48 h-[120vh] bg-cover bg-fixed md:mb-0 md:h-screen"
         style={{ backgroundImage: `url('/images/salle-de-sport.jpg')` }}
       >
-        <div className="relative m-auto mt-32 flex min-h-[400px] w-full max-w-7xl items-center gap-4 px-4 max-md:flex-col md:mt-20">
-          <div className="relative flex flex-1 flex-col items-start gap-8 md:gap-4 lg:gap-8">
+        <div className="relative m-auto mt-32 flex min-h-[400px] w-full max-w-7xl items-center gap-4 px-4 max-md:flex-col md:mt-20 md:gap-8 lg:gap-12">
+          <div className="relative flex flex-1 flex-col items-start gap-8 md:gap-4 lg:gap-8 z-10">
             <HeroStatistics />
             <HeroTitle />
             <HeroDescription />
@@ -129,12 +129,12 @@ const HeroReviews = () => (
 );
 
 const HeroImage = () => (
-  <div className="xl:mt-30 mt-20 flex-1 justify-end md:flex">
+  <div className="xl:mt-30 mt-20 flex-1 justify-end md:flex md:shrink-0">
     <Image
       src="/images/jeremy.jpg"
       width={480}
       height={640}
-      className="w-[350px] max-w-lg rounded-[10px] object-contain sm:w-[480px] md:w-full"
+      className="w-[350px] max-w-lg rounded-[10px] object-contain sm:w-[480px] md:w-[400px] lg:w-[480px]"
       alt="Hero image profile Jeremy Prat"
     />
   </div>
