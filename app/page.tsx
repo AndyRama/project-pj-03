@@ -87,7 +87,7 @@ export default function HomePage() {
               "Bilan mensuel photo + mensurations avec suivi approfondi.",
               "Communication WhatsApp & Email avec visio ou call chaque mois.",
             ],
-            cta: "Je démarre mon programme",
+            cta: "Je démarre le programme",
             ctaSubtitle: "Engagement 3 mois",
             priceId: "",
           },
@@ -110,7 +110,7 @@ export default function HomePage() {
               "Communication WhatsApp & Email avec visio ou call chaque mois.",
               "Accès prioritaire et suivi renforcé.",
             ],
-            cta: "Je démarre mon programme",
+            cta: "Je démarre le programme",
             ctaSubtitle: "Engagement 6 mois",
             priceId: "",
           },
@@ -296,7 +296,7 @@ export default function HomePage() {
           </Typography>
           <div className="mb-8 inline-block rounded-xl bg-white/10 p-6 backdrop-blur-sm">
             <p className="font-semibold text-white">
-              ⏰ Offre limitée : -80€ sur tous les programmes 
+              ⏰ Offre limitée : -50€ sur tous les programmes 
             </p>
             <p className="text-orange-100">Plus que jours pour profiter de l'offre !</p>
           </div>
