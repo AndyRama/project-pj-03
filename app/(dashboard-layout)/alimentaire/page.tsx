@@ -105,10 +105,10 @@ export default async function AlimentairePlanPage() {
             <div className="mb-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               <Card className="border-orange-200">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">
+                  <CardTitle className="py-2 text-sm font-medium">
                     Total des profils
                   </CardTitle>
-                  <Users className="size-4 text-orange-600" />
+                  <Users className="size-4 py-2 text-orange-600" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold text-orange-600">
@@ -122,10 +122,10 @@ export default async function AlimentairePlanPage() {
 
               <Card className="border-orange-200">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">
+                  <CardTitle className="py-2 text-sm font-medium">
                     Cette semaine
                   </CardTitle>
-                  <Calendar className="size-4 text-orange-600" />
+                  <Calendar className="size-4 py-2 text-orange-600" />
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold text-orange-600">
