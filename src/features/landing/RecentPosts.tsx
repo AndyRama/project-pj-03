@@ -68,37 +68,37 @@ export const RecentPosts = () => {
       attributes: {
         title: 'Le sommeil est capital dans la pratique sportive',
         description: 'Découvrez pourquoi le sommeil est un pilier essentiel pour optimiser vos performances sportives. Explorez ses bienfaits sur la récupération, la progression et l\'équilibre général.',
-        date: '2025-10-12',
+        date: '2026-02-16',
         coverUrl: '/images/post4.jpg',
       },
-      slug: '2025-10-12_Le_sommeil_est_capital_dans_la_pratique_sportive',
+      slug: '2026-02-16_Le_sommeil_est_capital_dans_la_pratique_sportive',
     },
     {
       attributes: {
         title: 'La salle de sport quand on débute',
         description: 'Découvrez notre guide complet pour bien commencer à la salle de sport. Conseils pratiques, erreurs à éviter et astuces pour rester motivé, tout ce qu\'il faut savoir pour transformer votre première expérience en réussite !',
-        date: '2025-11-14',
+        date: '2026-02-09',
         coverUrl: '/images/salle-de-sport.jpg',
       },
-      slug: '2025-11-14_La_salle_de_sport_quand_on_debute',
+      slug: '2026-02-09_La_salle_de_sport_quand_on_debute',
     },
     {
       attributes: {
         title: 'Guide complet des compléments alimentaires dans le sport',
         description: 'Découvrez notre guide complet sur les compléments alimentaires pour sportifs. Types, bienfaits, précautions et conseils pour optimiser vos performances en toute sécurité.',
-        date: '2025-12-11',
+        date: '2026-02-02',
         coverUrl: '/images/post1.jpg',
       },
-      slug: '2025-12-11_Guide_complet_des_complements_alimentaires_dans_le_sport',
+      slug: '2026-02-02_Guide_complet_des_complements_alimentaires_dans_le_sport',
     },
     {
       attributes: {
         title: 'Comment perdre du poids de manière saine et durable',
         description: 'Explorez nos conseils pour perdre du poids de façon saine et durable. Découvrez des stratégies éprouvées pour allier alimentation équilibrée, activité physique adaptée et habitudes de vie saines.',
-        date: '2025-09-13',
+        date: '2026-02-02',
         coverUrl: '/images/post2.jpg',
       },
-      slug: '2025-09-13_Comment_perdre_du_poids_de_maniere_saine_et_durable',
+      slug: '2026-02-02_Comment_perdre_du_poids_de_maniere_saine_et_durable',
     },
   ];
 

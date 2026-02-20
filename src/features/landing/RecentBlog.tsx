@@ -7,7 +7,7 @@ import { PostCard } from '../posts/PostCard';
 import { Post } from '../posts/post-manager';
 
 function RecentBlog() {
-  const posts: Post[] = []; // Declare the 'posts' variable as an array of type 'Post'
+  const posts: Post[] = []; 
 
   return (
     <div>
