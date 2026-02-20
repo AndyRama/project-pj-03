@@ -66,27 +66,27 @@ export const RecentPosts = () => {
   const posts: Post[] = [
     {
       attributes: {
-        title: 'Le sommeil est capital dans la pratique sportive',
+        title: 'Pourquoi les regimes echouent et comment reussir votre transformation en 2026',
         description: 'Découvrez pourquoi le sommeil est un pilier essentiel pour optimiser vos performances sportives. Explorez ses bienfaits sur la récupération, la progression et l\'équilibre général.',
-        date: '2026-02-16',
+        date: '2026-02-19',
         coverUrl: '/images/post4.jpg',
       },
-      slug: '2026-02-16_Le_sommeil_est_capital_dans_la_pratique_sportive',
+      slug: '2026-02-19_Pourquoi_les_regimes_echouent_et_comment_reussir_votre_transformation_en_2026',
     },
     {
       attributes: {
-        title: 'La salle de sport quand on débute',
+        title: 'Guide complet des complements alimentaire dans le sport',
         description: 'Découvrez notre guide complet pour bien commencer à la salle de sport. Conseils pratiques, erreurs à éviter et astuces pour rester motivé, tout ce qu\'il faut savoir pour transformer votre première expérience en réussite !',
-        date: '2026-02-09',
+        date: '2026-02-20',
         coverUrl: '/images/salle-de-sport.jpg',
       },
-      slug: '2026-02-09_La_salle_de_sport_quand_on_debute',
+      slug: '2026-02-20_Guide_complet_des_complements_alimentaire_dans_le_sport',
     },
     {
       attributes: {
         title: 'La salle de sport quand on debute',
         description: "Découvrez notre guide complet pour bien commencer à la salle de sport. Conseils pratiques, erreurs à éviter et astuces pour rester motivé, tout ce qu'il faut savoir pour transformer votre première expérience en réussite !",
-        date: '2026-02-20',
+        date: '2026-02-09',
         coverUrl: '/images/post1.jpg',
       },
       slug: '2026-02-09_La_salle_de_sport_quand_on_debute',
