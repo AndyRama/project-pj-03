@@ -22,7 +22,7 @@ import RecentPosts from "@/features/landing/RecentPosts";
 import { EmailFormSection } from "@/features/email/EmailFormSection";
 import type { PostParams } from "@/features/posts/post-manager";
 import {
-  getLastPost,
+  getCurrentPost,
   getPosts,
 } from "@/features/posts/post-manager";
 
@@ -31,7 +31,7 @@ export async function generateMetadata({
 }: PostParams): Promise<Metadata> {
   // Await params before accessing
   const { slug } = await params;
-  const post = await getLastPost(slug);
+  const post = await getCurrentPost(slug);
 
   if (!post) {
     return {
@@ -62,7 +62,7 @@ export async function generateStaticParams() {
 export default async function RoutePage(props: PostParams) {
   // Await params before accessing
   const params = await props.params;
-  const post = await getLastPost(params.slug);
+  const post = await getCurrentPost(params.slug);
 
   if (!post) {
     logger.error(`Post not found for slug: ${params.slug}`);
