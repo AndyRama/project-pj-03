@@ -114,7 +114,7 @@ export const RecentPosts = () => {
           
           <div className="mt-8 flex justify-end">
             <Link
-              href="/blog"
+              href="/posts"
               className={cn(
                 buttonVariants({ size: "lg", variant: "default" }),
                 "text-base font-bold text-white shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg bg-orange-600 hover:bg-orange-700",
