@@ -155,9 +155,9 @@ export default async function RoutePage(props: PostParams) {
               source={post.content}
             />
           </div>
+          <EmailFormSection />
         </LayoutContent>
 
-        <EmailFormSection />
         
         <div className="flex flex-col items-center gap-2">
           <Typography variant="p" className="max-w-xl font-bold text-orange-500">
