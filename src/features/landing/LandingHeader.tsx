@@ -62,7 +62,7 @@ export function LandingHeader({ children }: PropsWithChildren) {
     { path: "/posts", label: "Blog" },
     { path: "/prestations", label: "Prestations" },
     { path: "/team", label: "Team" },
-    { path: "/#", label: "Avant/Après" },
+    { path: "/avant-apres", label: "Avant/Après" },
   ];
 
   return (
