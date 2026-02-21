@@ -90,6 +90,7 @@ export const getCurrentPost = async (slug: string) => {
   const posts = await getPosts();
   return posts.find((p) => p.slug === slug);
 };
+
 export async function getLastPost(slug: string): Promise<Post | null> {
   const posts = await getPosts();
   return posts.length > 0 ? posts[posts.length - 1] : null;
