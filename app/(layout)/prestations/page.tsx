@@ -65,7 +65,7 @@ export default function page() {
                 isPopular: false,
                 type: "monthly",
                 id: "",
-                link: "https://buy.stripe.com/4gMaEZbnqemfbeq9jx9AA05",
+                link: "https://buy.stripe.com/6oU00l1MQdib0zMbrF9AA08",
                 title: "COMPETITION VIP - 12 mois",
                 subtitle: "(12 × 150€ = 1 800€)",
                 price: 150,
