@@ -42,7 +42,7 @@ export default function page() {
                 isPopular: true,
                 type: "monthly",
                 id: "",
-                link: "https://buy.stripe.com/14A00l8be2Dx5U69jx9AA04",
+                link: "https://buy.stripe.com/dRm14p0IMdib0zM53h9AA07",
                 title: "PREMIUM - 6 mois",
                 subtitle: "(6 × 180€ = 1 080€)",
                 price: 180,
