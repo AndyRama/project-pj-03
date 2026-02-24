@@ -20,10 +20,10 @@ export default async function RoutePage(props: PageParams<{}>) {
         </Link> */}
       </LayoutHeader>
       <LayoutContent>
-        <div className="space-y-8 text-foreground">
+        <div className="space-y-4 text-foreground">
           <section>
             <h2 className="mb-4 text-2xl font-bold">
-              Analyse Stratégique du Planning de Contenu 2026
+              Analyse Stratégique du Planning de Contenu 2026 - 2027
             </h2>
 
             <div className="space-y-6">

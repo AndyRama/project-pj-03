@@ -15,8 +15,8 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const services = [
-  { title: "Github", description: "Dépôt du code source de l'application", link: "https://github.com/" },
-  { title: "Gmail", description: "Adresse: unlcoachingpersonel@gmail.com", link: "https://mail.google.com/" },
+  // { title: "Github", description: "Dépôt du code source de l'application", link: "https://github.com/" },
+  // { title: "Gmail", description: "Adresse: unlcoachingpersonel@gmail.com", link: "https://mail.google.com/" },
   { title: "Hostinger", description: "Herbergement du site", link: "https://hostinger.fr/" },
   { title: "Namecheap", description: "Permet de gérer le nom de domaine", link: "https://www.namecheap.com/" },
   { title: "NeonDb", description: "Pour la base de donnée de l'application", link: "https://neon.tech/" },
