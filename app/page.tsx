@@ -365,7 +365,7 @@ export default function HomePage() {
             cta: "Télécharger",
             ctaSubtitle: "",
             priceId: "",
-            link: "/images/E-bookFree.pdf",
+            link: "/pdf/E-bookFree.pdf",
           },
           {
             isPopular: true,
