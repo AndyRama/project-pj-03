@@ -3,7 +3,6 @@ import {
   LayoutContent,
   LayoutHeader,
   LayoutTitle,
-  LayoutActions,
 } from "@/features/page/layout";
 import type { PageParams } from "@/types/next";
 import Link from "next/link";
@@ -13,12 +12,10 @@ export default async function RoutePage(props: PageParams<{}>) {
     <Layout>
       <LayoutHeader>
         <LayoutTitle>Dashboard | Planning publication</LayoutTitle>
-      </LayoutHeader>
-      <LayoutActions className="hidden gap-6 lg:flex">
         <Link href="/pdf/Planification Contenu Coach Sportif Bordeaux.pdf">
           Planning
         </Link>
-      </LayoutActions>
+      </LayoutHeader>
       <LayoutContent>
         <div className="space-y-8 text-foreground">
           <section>
