@@ -12,9 +12,12 @@ export default async function RoutePage(props: PageParams<{}>) {
     <Layout>
       <LayoutHeader>
         <LayoutTitle>Dashboard | Planning publication</LayoutTitle>
-        <Link href="/pdf/Planification Contenu Coach Sportif Bordeaux.pdf">
-          Planning
+        <Link className="font-semibold text-orange-500" href="/pdf/Planification Contenu Coach Sportif Bordeaux.pdf" target="_blank">
+          lien planning publication
         </Link>
+				{/* <Link className="font-semibold text-orange-500" href="/pdf/Planification Contenu Coach Sportif Bordeaux.pdf" target="_blank">
+          
+        </Link> */}
       </LayoutHeader>
       <LayoutContent>
         <div className="space-y-8 text-foreground">
