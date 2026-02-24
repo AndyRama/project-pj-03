@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function InformationCards() {
   return (
-    <div className="flex w-full items-center gap-4 max-lg:flex-col lg:gap-8">
+    <div className="mb-4 flex w-full items-center gap-4 max-lg:flex-col lg:gap-8">
       <Card className="w-full flex-1">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 p-4 pb-2">
           <CardTitle className="text-sm font-medium">Total Ventes en ligne</CardTitle>
@@ -13,7 +13,7 @@ export default function InformationCards() {
         <CardContent>
           <div className="text-2xl font-bold">+ 26</div>
           <p className="text-xs text-muted-foreground">
-            +12.5% depuis le mois dernier
+            + 12.5% depuis le mois dernier
           </p>
         </CardContent>
       </Card>
@@ -24,7 +24,7 @@ export default function InformationCards() {
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">+ 26</div>
-          <p className="text-xs text-muted-foreground">+15.2% depuis le mois dernier</p>
+          <p className="text-xs text-muted-foreground">+ 15.2% depuis le mois dernier</p>
         </CardContent>
       </Card>
       <Card className="w-full flex-1">
@@ -34,7 +34,7 @@ export default function InformationCards() {
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">+ 9</div>
-          <p className="text-xs text-muted-foreground">+25% pour le prochain mois</p>
+          <p className="text-xs text-muted-foreground">+ 25% pour le prochain mois</p>
         </CardContent>
       </Card>
     </div>

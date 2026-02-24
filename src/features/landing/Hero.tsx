@@ -1,9 +1,9 @@
+import Link from "next/link";
+import Image from "next/image";
 import { CircleSvg } from "@/components/svg/CircleSvg";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Heart } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
 import { Typography } from "../../components/ui/typography";
 import { ReviewSmall } from "./review/ReviewSmall";
 
@@ -16,7 +16,7 @@ export const Hero = () => {
         className="-mt-[40px] h-auto min-h-screen bg-cover bg-fixed bg-center md:min-h-screen lg:bg-center"
         style={{ backgroundImage: `url('/images/salle-de-sport.jpg')` }}
       >
-        <div className="relative m-auto flex min-h-screen w-full max-w-7xl flex-col items-center gap-8 px-4 pb-12 pt-24 md:min-h-screen md:flex-row md:items-center md:gap-8 md:pt-0 lg:gap-12 lg:px-8">
+        <div className="relative m-auto mt-20 flex min-h-screen w-full max-w-7xl flex-col items-center gap-8 px-4 pb-12 pt-24 md:min-h-screen md:flex-row md:items-center md:gap-8 md:pt-0 lg:gap-12 lg:px-8">
           <div className="relative z-10 mt-16 flex w-full flex-1 flex-col items-start gap-4 md:gap-6 lg:gap-8">
             <HeroStatistics />
             <HeroTitle />
