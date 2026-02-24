@@ -31,6 +31,16 @@ export const DASHBOARD_LINKS: NavigationLinkGroups[] = [
     ],
   },
   {
+    title: "Publications",
+    links: [
+      {
+        title: "Plannig publication",
+        icon: <TextSelect />,
+        url: "/blog",
+      },
+    ],
+  },
+  {
     title: "Application",
     links: [
       {
