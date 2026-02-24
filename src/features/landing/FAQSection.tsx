@@ -1,5 +1,4 @@
 "use client";
-
 import {
   Accordion,
   AccordionContent,
@@ -9,16 +8,13 @@ import {
 import { Typography } from "@/components/ui/typography";
 import { ClientMarkdown } from "../markdown/ClientMarkdown";
 import { SectionLayout } from "./SectionLayout";
-
 type Faq = {
   question: string;
   answer: string;
 };
-
 export type FeaturesPreviewProps = {
   faq: Faq[];
 };
-
 export const FAQSection = (props: FeaturesPreviewProps) => {
   return (
     <>
@@ -35,7 +31,10 @@ export const FAQSection = (props: FeaturesPreviewProps) => {
           </Typography>
         </div>
         <div className="flex-1">
-          <Accordion type="single" collapsible>
+          <Accordion
+            type="multiple"
+            defaultValue={props.faq.map((_, i) => `item-${i}`)}
+          >
             {props.faq.map((e, i) => {
               return (
                 <AccordionItem value={`item-${i}`} key={i}>
