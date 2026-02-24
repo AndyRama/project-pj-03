@@ -11,7 +11,7 @@ export default function InformationCards() {
           <ReceiptEuro  className="size-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">26</div>
+          <div className="text-2xl font-bold">+ 26</div>
           <p className="text-xs text-muted-foreground">
             +12.5% depuis le mois dernier
           </p>
@@ -23,7 +23,7 @@ export default function InformationCards() {
           <FilePen className="size-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">+ 29</div>
+          <div className="text-2xl font-bold">+ 26</div>
           <p className="text-xs text-muted-foreground">+15.2% depuis le mois dernier</p>
         </CardContent>
       </Card>
@@ -33,7 +33,7 @@ export default function InformationCards() {
           <TrendingUp  className="size-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">+ 8</div>
+          <div className="text-2xl font-bold">+ 9</div>
           <p className="text-xs text-muted-foreground">+25% pour le prochain mois</p>
         </CardContent>
       </Card>

@@ -11,7 +11,7 @@ export default function InformationCards() {
           <ReceiptEuro  className="size-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">8</div>
+          <div className="text-2xl font-bold">+ 8</div>
           <p className="text-xs text-muted-foreground">
             +12.5% depuis le mois dernier
           </p>
