@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import Link from "next/link";
 import { Typography } from "@/components/ui/typography";
 import { SectionLayout } from '@/features/landing/SectionLayout';
 
