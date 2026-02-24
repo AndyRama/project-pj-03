@@ -29,7 +29,7 @@ export const EmailFormSection = () => {
               actualité.
             </span>
           </Typography>
-          <div className="mx-auto mt-6 w-full max-w-md rounded-[10px] text-black hover:border-orange-500">
+          <div className="mx-auto mt-6 w-full max-w-md rounded-[10px] text-white hover:border-orange-500">
             <EmailForm
               submitButtonLabel="Join"
               successMessage="Merci d'avoir rejoint la communauté!"

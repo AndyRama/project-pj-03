@@ -19,20 +19,20 @@ const footerContent = {
       links: [
         { href: '/prestations', label: 'Prestations' },
         { href: '/team', label: 'Team' },
+        { href: '/avant-apres', label: 'Transformations', badge: 'Nouveau' },
       ],
     },
     {
       heading: 'Ressource',
       links: [
         { href: '/prestations/#E-Books', label: 'E-Books'},
-        { href: '/prestations/#pack', label: 'Packs',badge: 'Nouveau' },
+        { href: '/prestations/#pack', label: 'Packs', badge: 'Nouveau' },
       ],
     },
     {
       heading: 'Compte',
       links: [
         { href: '/account', label: 'User' },
-        // { href: 'https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fwww.unlcoaching.com%2F&strategy=desktop&category=performance&category=accessibility&category=best-practices&category=seo&utm_source=lh-chrome-ext#', label: 'Performance', target: '_blank' },
       ],
     },
   ],

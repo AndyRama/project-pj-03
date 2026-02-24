@@ -91,7 +91,7 @@ export const EmailForm = ({
                   <FormItem className="relative w-full">
                     <FormControl>
                       <Input
-                        className="border-accent-foreground/20 bg-accent px-4 py-6 text-lg focus-visible:ring-foreground"
+                        className="rounded-md border-accent-foreground/20 bg-accent px-4 py-6 text-lg focus-visible:ring-foreground"
                         placeholder="Ton email"
                         {...field}
                       />
@@ -101,7 +101,7 @@ export const EmailForm = ({
                 )}
               />
               <LoadingButton
-                className="px-4 py-6 text-lg font-normal"
+                className="rounded-md px-4 py-6 text-lg font-normal"
                 variant="invert"
                 loading={submit.isPending}
               >
