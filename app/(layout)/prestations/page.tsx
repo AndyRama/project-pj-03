@@ -20,7 +20,7 @@ export default function page() {
                 isPopular: false,
                 type: "monthly",
                 id: "",
-                link: "https://buy.stripe.com/aFaeVffDG0vpciu0N19AA03",
+                link: "https://buy.stripe.com/14AeVfgHKce796i8ft9AA06",
                 title: "STARTER - 3 mois",
                 subtitle: "(3 × 160€ = 480€)",
                 price: 160,
