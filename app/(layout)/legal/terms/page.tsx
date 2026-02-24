@@ -61,7 +61,19 @@ const TermsPage = () => {
             Hébergeur
           </Typography>
           <Typography variant="p">
-            Unlcoaching.fr est hébergé par Vercel Inc, dont le siège social est situé au Vercel Inc. 340 S Lemon Ave #4133WALNUT, California 91789
+            Unlcoaching.fr est hébergé par Hostinger, La société HOSTINGER INTERNATIONAL LTD, dont le siège social se situe 61 Lordou Vironos Street, 6023 Larnaca, Chypre, joignable par le moyen suivant : https://www.hostinger.fr/contact.
+          </Typography>
+        </section>
+
+        <hr className="my-6" />
+
+        {/* Réalisations */}
+        <section className="mb-8">
+          <Typography variant="h2" className="mb-4 text-2xl font-semibold">
+            Création du site
+          </Typography>
+          <Typography variant="p">
+           Développement et design du site ont été réalisés par Andy Ramaroson, développeur web freelance. Pour toute question concernant le site ou pour des demandes de collaboration, n'hésitez pas à le contacter à l'adresse suivante : {'andyramaroson@gmail.com '}
           </Typography>
         </section>
 
@@ -171,7 +183,7 @@ const TermsPage = () => {
               <strong>Crédits photos :</strong> © https://unsplash.com/
             </Typography>
             <Typography variant="p">
-              <strong>Photographe :</strong> xxxxxxxxxxxx
+              <strong>Photographe :</strong> Jeremy Prat
             </Typography>
           </div>
         </section>
