@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const ForWhoSection = () => {
   return (
-    <section className="bg-black px-4 py-16 md:py-24">
+    <section className="px-4 py-16 md:py-24">
       <div className="m-auto max-w-6xl">
         <ForWhoHeader />
         <ForWhoGrid />
