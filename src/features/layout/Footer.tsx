@@ -19,7 +19,7 @@ const footerContent = {
       links: [
         { href: '/prestations', label: 'Prestations' },
         { href: '/team', label: 'Team' },
-        { href: '/avant-apres', label: 'Transformations', badge: 'Nouveau' },
+        { href: '/avant-apres', label: 'Avant-après', badge: 'Nouveau' },
       ],
     },
     {

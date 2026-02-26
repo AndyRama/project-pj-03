@@ -155,7 +155,7 @@ export const StoryCardGrid: React.FC = () => {
 
   return (
     <Layout>
-      <div className="container mx-auto mb-2 justify-center rounded-md">
+      <div className="container mx-auto mb-2 justify-center rounded-md bg-black">
         <div className="mb-8 text-center">
           <Typography
             variant="small"
