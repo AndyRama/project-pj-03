@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Image from "next/image";
-// import Link from "next/link";
 import { motion } from "framer-motion";
 import { Typography } from "@/components/ui/typography";
 import { EmailFormSection } from "@/features/email/EmailFormSection";
@@ -372,7 +371,7 @@ export default function HomePage() {
             type: "monthly",
             id: "premium",
             title: "Ebook 2",
-            subtitle: "esprit & mental",
+            subtitle: "nutrition complet",
             price: "Free",
             barredPrice: 0,
             currency: "€",
@@ -382,14 +381,14 @@ export default function HomePage() {
             cta: "Télécharger",
             ctaSubtitle: "",
             priceId: "",
-            link: "#",
+            link: "/pdf/Guide_Nutrition_Complet",
           },
           {
             isPopular: true,
             type: "monthly",
             id: "premium",
             title: "Ebook 3",
-            subtitle: "compétition",
+            subtitle: "esprit & mental",
             price: "Free",
             barredPrice: 0,
             currency: "€",
