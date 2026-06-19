@@ -76,7 +76,7 @@ export default async function AlimentaireDetailPage({
           <div className="grid gap-6 lg:grid-cols-3">
             {/* Informations générales - 1/3 - EN COLONNE */}
             <Card className="border-orange-500">
-              <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
+              <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent px-4">
                 <CardTitle className="px-6 text-orange-500">Informations générales</CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
@@ -91,7 +91,7 @@ export default async function AlimentaireDetailPage({
 
             {/* Statistiques d'entraînement - 2/3 */}
             <Card className="border-orange-500 lg:col-span-2">
-              <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
+              <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent px-4">
                 <CardTitle className="px-6 text-orange-500">Statistiques d'entraînement</CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
@@ -117,7 +117,7 @@ export default async function AlimentaireDetailPage({
           {/* Pathologie + Sommeil - MÊME LARGEUR que la ligne au-dessus */}
           {(profile.pathology || profile.sleepHours) && (
             <Card className="border-orange-500">
-              <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
+              <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent px-4">
                 <CardTitle className="px-6 text-orange-500">Pathologie & Sommeil</CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
@@ -141,7 +141,7 @@ export default async function AlimentaireDetailPage({
 
           {/* Activité physique */}
           <Card className="border-orange-500">
-            <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
+            <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent px-4">
               <CardTitle className="px-6 text-orange-500">Activité physique</CardTitle>
             </CardHeader>
             <CardContent className="pt-6">
@@ -154,7 +154,7 @@ export default async function AlimentaireDetailPage({
 
           {/* Mensurations */}
           <Card className="border-orange-500">
-            <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent">
+            <CardHeader className="border-b border-orange-500/20 bg-gradient-to-r from-orange-500/10 to-transparent px-4">
               <CardTitle className="px-6 text-orange-500">Mensurations corporelles</CardTitle>
             </CardHeader>
             <CardContent className="pt-6">
